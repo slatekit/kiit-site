@@ -94,9 +94,9 @@ Many of these modules have their own project. See the guides for each respective
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="arch/orm"><img src="assets/media/img/white/layers.png" alt="" class="img-fluid"></a>
-              <div><a href="arch/orm"><h3>Data</h3></a></div>
-              <p>Light-weight, domain-driven entity framework with optional ORM. You can use the Entity Interfaces and code without the ORM. See {{% sk-link-arch page="orm" name="ORM" %}} 
+              <a href="arch/data"><img src="assets/media/img/white/layers.png" alt="" class="img-fluid"></a>
+              <div><a href="arch/data"><h3>Data</h3></a></div>
+              <p>Light-weight, domain-driven entity framework with optional ORM. You can use the Entity Interfaces and code without the ORM. See {{% sk-link-arch page="data" name="Data" %}} 
               </p>
             </div>
           </div>

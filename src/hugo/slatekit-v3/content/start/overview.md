@@ -6,13 +6,13 @@ section_header: Overview
 
 # Overiew
   <p>
-      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> based open-source set of libraries. It is comprised of several projects and modular components that collectively provide pre-built architecture that can be used to build any type of application on the JVM. Slate Kit can also be used as an open-source alternative to FireBase/Parse Beta* as the server-side backend for your mobile / web applications.
+      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> based open-source set of light-weight and modular libraries representing **architecture components and utilities**. It is comprised of several projects and modular components that collectively provide pre-built architecture that can be used to build applications for both the Server and Android, optimizing code/component reuse. There are also various interfaces to abstract over Cloud infrastrature such as files/queues to decouple / "unbundle" from Cloud Providers ( although AWS implementations are available by default ).
   </p>
 {{% break %}}
 
 # Goals
 <p>
-  The Slate Kit framework was designed for and extracted from a sizable and sophisticated production Android Application with a Server backend. Slate Kit is a Kotlin first framework architected with the explicit goals below in mind:
+  The Slate Kit framework was designed for and extracted from a sizable and sophisticated production Android Application with a Server backend. Slate Kit is a **Kotlin first** framework architected with the explicit goals below in mind:
 </p>
 <table class="table table-bordered table-striped">
     <tr><td><strong>Simple</strong></td><td>Designed with simplicity in mind, modular and very light-weight.</td></tr>
@@ -33,7 +33,7 @@ section_header: Overview
     <tr><td><strong>SMB</strong></td><td>For small to medium sized businesses, build backend applications with pre-built application/service templates/components</td></tr>
     <tr><td><strong>Mobile</strong></td><td> Set up the back-end for your mobile apps. Use Kotlin code for both Android and the Server</td></tr>
     <tr><td><strong>Personal</strong></td><td>Learn Kotlin, functional programming, for self-improvement or side projects</td></tr>
-    <tr><td><strong>Enterprise</strong></td><td>There are several components in Slate Kit that can currently be used in the Enterprise, such as the App, Utilities, CLI. However, Slate Kit is simpler and thus less comprehensive than enterprises offerings such as Spring.io, Vertx.io, Micronaut.io, all of which are very solid solutions and recommendations for the enterprise.</td></tr>
+    <tr><td><strong>Enterprise</strong></td><td>There are several components in Slate Kit that can currently be used in the Enterprise, such as the App, Utilities, CLI. However, Slate Kit is simpler and thus less comprehensive in some areas than enterprise offerings such as Spring.io, Vertx.io, Micronaut.io, all of which are very solid solutions and recommendations for the enterprise.</td></tr>
 </table>
 {{% section-end mod="start/overview" %}}
 
