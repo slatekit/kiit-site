@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    <base href="../../">
+          
+      
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/mobirise.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/fontawesome-all.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick-theme.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/animate.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/agency-2.css">
+
+
+    <link rel="stylesheet" href="assets/theme/css/about-1.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
+    <link rel="stylesheet" href="assets/app/syntax.css">
+          
+   
+    
+    <link rel="stylesheet" href="assets/app/app.css">
+
+
+    <title>Slate Kit: Files</title>
+</head>
+
+<body>
+
+    
+    <div class="se-pre-con"></div>
+
+    
+        
+        <div class="header-classic fixed-top navbar-light wow fadeInDown">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <nav class="navbar navbar-expand-lg navbar-classic">
+                            <a class="navbar-brand" href="#0">
+                                <img src="assets/img/saas-1/logo.png" alt=""></a>
+                            <button
+                                class="navbar-toggler collapsed"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbar-classic"
+                                aria-controls="navbar-classic"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="icon-bar top-bar mt-0"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbar-classic">
+                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+                                    
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Getting Started
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="start/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="start/hello_world">Hello World</a></li>
+            <li><a class="dropdown-item" href="start/generators">Generators</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Architecture Components
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/results">Results</a></li>
+            <li><a class="dropdown-item" href="arch/context">Context</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/app">App</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
+            <li><a class="dropdown-item" href="arch/cli">CLI</a></li>
+            <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="utils/overview">Utilities</a>
+    </li>
+    
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            More
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
+            <li><a class="dropdown-item" href="info/standards">Standards</a></li>
+            <li><a class="dropdown-item" href="info/contact">Contact</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://github.com/code-helix/slatekit">Github</a>
+    </li>
+</ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    
+    <section class="header wow fadeInUp">
+        <div class="container text-center">
+            <h2>Files</h2>
+        </div>
+    </section>
+    
+    <section class="sk-creative">
+      <div class="container">
+        
+
+<h1 id="overview">Overview</h1>
+
+<p>The Files component is an abstraction of file storage with a default implementation using <strong>AWS S3</strong>. This also provides a much simplified API while making the underlying implementation swappable.</p>
+
+<h1 id="index">Index</h1>
+
+<p><table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Section</strong></td>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1</strong></td>
+        <td><strong><a class="url-ch" href="arch/files#status">Status</a></strong></td>
+        <td>Current status of this component</td>
+    </tr>
+    <tr>
+        <td><strong>2</strong></td>
+        <td><strong><a class="url-ch" href="arch/files#install">Install</a></strong></td>
+        <td>Installation instructions and references to sources</td>
+    </tr>
+    <tr>
+        <td><strong>3</strong></td>
+        <td><strong><a class="url-ch" href="arch/files#requires">Requires</a></strong></td>
+        <td>Lists all the Slate Kit and third-party dependencies</td>
+    </tr>
+    <tr>
+        <td><strong>4</strong></td>
+        <td><strong><a class="url-ch" href="arch/files#sample">Import</a></strong></td>
+        <td>Packages to import</td>
+    </tr>
+    <tr>
+        <td><strong>5</strong></td>
+        <td><strong><a class="url-ch" href="arch/files#goals">Setup</a></strong></td>
+        <td>Set up of credentials, and configuration</td>
+    </tr>
+    <tr>
+        <td><strong>6</strong></td>
+        <td><strong><a class="url-ch" href="arch/files#concepts">Usage</a></strong></td>
+        <td>Usage and examples</td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="status">Status</h1>
+
+<p>This component is currently <strong>stable</strong>. Following limitations, current work, planned features apply.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Binary</strong></td>
+        <td>In-Progress</td>
+        <td>Ability to store/retrieve binary files. ( you can still use the underlying AWS provider to so )</td>
+    </tr>
+    <tr>
+        <td><strong>Names</strong></td>
+        <td>Upcoming</td>
+        <td>Ability to enforce a naming convention on the file names</td>
+    </tr>
+    <tr>
+        <td><strong>Async</strong></td>
+        <td>Upcoming</td>
+        <td>Async support via Kotlin suspend/coroutines and Java AWS 2.0 SDK</td>
+    </tr>
+    <tr>
+        <td><strong>URI</strong></td>
+        <td>Upcoming</td>
+        <td>Ability to use Slate Kit Uri for explicit references to file paths</td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="install">Install</h1>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="c1">// other repositories
+</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="c1">// other dependencies ...
+</span><span class="c1"></span>
+        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cloud:1.0.0&#39;</span>
+    <span class="o">}</span></code></pre></div>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <td><strong>package</strong></td>
+    <td>slatekit.cloud</td>
+  </tr>
+  <tr>
+    <td><strong>jar</strong></td>
+    <td>slatekit.cloud.jar</td>
+  </tr>
+  <tr>
+    <td><strong>git</strong></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cloud">slatekit/src/lib/kotlin/slatekit-cloud</a></td>
+  </tr>
+  <tr>
+    <td><strong>docs</strong></td>
+    <td><a class="url-ch" href="arch/files">Files</a></td>
+  </tr>
+  <tr>
+    <td><strong>uses</strong></td>
+    <td>slatekit.results, slatekit.core, slatekit.cloud</td>
+  </tr>
+  <tr>
+    <td><strong>license</strong></td>
+    <td>Apache 2.0</td>
+  </tr>
+  <tr>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Files.kt</a></td>
+  </tr>
+</table>
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="requires">Requires</h1>
+
+<p>This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><a href="arch/results" >Results</a></td>
+        <td>To model successes and failures with optional status codes</td>
+    </tr>
+    <tr>
+        <td><a href="http://www.slatekit.com/utils/overview" >Utils</a></td>
+        <td>Common utilities for both android + server</td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="imports">Imports</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="k">import</span> <span class="nn">slatekit.cloud.aws.AwsCloudFiles</span>
+    </code></pre></div>
+
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="setup">Setup</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="c1">// Not storing any key/secret in source code for security purposes
+</span><span class="c1"></span>    <span class="c1">// Setup 1: Use the default aws config file in &#34;{user_dir}/.aws/credentials&#34;
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">files1</span> <span class="p">=</span> <span class="n">AwsCloudFiles</span><span class="p">(</span><span class="s">&#34;app1-files-1&#34;</span><span class="p">,</span> <span class="s">&#34;slatekit&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+
+    <span class="c1">// Setup 2: Use the type safe config in &#34;{user_id}/myapp/conf/files.conf&#34;
+</span><span class="c1"></span>    <span class="c1">// Specify the api key section as &#34;sqs&#34;
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">files2</span> <span class="p">=</span> <span class="n">AwsCloudFiles</span><span class="p">(</span><span class="s">&#34;app1-files-1&#34;</span><span class="p">,</span> <span class="s">&#34;slatekit&#34;</span><span class="p">,</span><span class="k">false</span><span class="p">,</span> <span class="s">&#34;user://myapp/conf/files.conf&#34;</span><span class="p">,</span> <span class="s">&#34;s3&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Setup 2: Use the type safe config in &#34;{user_id}/myapp/conf/files.conf&#34;
+</span><span class="c1"></span>    <span class="c1">// Specify the api key section as &#34;sqs&#34;
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">files3</span> <span class="p">=</span> <span class="n">AwsCloudFiles</span><span class="p">(</span><span class="s">&#34;app1-files-1&#34;</span><span class="p">,</span> <span class="s">&#34;slatekit&#34;</span><span class="p">,</span><span class="k">false</span><span class="p">,</span> <span class="s">&#34;user://myapp/conf/files.conf&#34;</span><span class="p">,</span> <span class="s">&#34;s3-1&#34;</span><span class="p">)</span></code></pre></div>
+
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="usage">Usage</h1>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="c1">// Use case 1: Connect using parameters
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
+
+    <span class="c1">// Use case 2: create using just name and content
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 1&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 3: update using just name and content
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 2&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 4: create using folder and file name
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 1&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 5: update using folder and file name
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 2&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 6: get file as a text using just name
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">getAsText</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 7: get file using folder and file name
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">getAsText</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 8: download file to local folder
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;~/dev/temp/&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 9: download using folder and file name to local folder
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;~/dev/temp&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 10: delete file by just the name
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 11: delete using folder and name
+</span><span class="c1"></span>    <span class="n">files1</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">)</span>
+      </code></pre></div>
+<br/>
+
+<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+      </div>
+    </section>  
+    
+
+    
+    <section class="links">
+        <div class="container text-center">
+            <a href="#0">Twitter</a>
+            <a href="#0">Github</a>
+            <a href="#0">About</a>
+            <a href="#0">Contact</a>
+        </div>
+    </section>
+    
+
+    
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Made with love | Brex-Theme</p>
+        </div>
+    </footer>
+    
+
+    
+            
+    <script src="assets/theme/js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/theme/js/plugins/popper.min.js"></script>
+    <script src="assets/theme/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.waypoints.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.counterup.min.js"></script>
+    <script src="assets/theme/js/plugins/slick.js"></script>
+    <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/theme/js/plugins/wow.min.js"></script>
+    <script src="assets/theme/js/agency-1.js"></script>
+
+    <script src="assets/theme/js/sass-1.js"></script>
+</body>
+
+</html>

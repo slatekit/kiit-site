@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    <base href="../../">
+          
+      
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/mobirise.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/fontawesome-all.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick-theme.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/animate.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/agency-2.css">
+
+
+    <link rel="stylesheet" href="assets/theme/css/about-1.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
+    <link rel="stylesheet" href="assets/app/syntax.css">
+          
+   
+    
+    <link rel="stylesheet" href="assets/app/app.css">
+
+
+    <title>Slate Kit: Cache</title>
+</head>
+
+<body>
+
+    
+    <div class="se-pre-con"></div>
+
+    
+        
+        <div class="header-classic fixed-top navbar-light wow fadeInDown">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <nav class="navbar navbar-expand-lg navbar-classic">
+                            <a class="navbar-brand" href="#0">
+                                <img src="assets/img/saas-1/logo.png" alt=""></a>
+                            <button
+                                class="navbar-toggler collapsed"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbar-classic"
+                                aria-controls="navbar-classic"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="icon-bar top-bar mt-0"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbar-classic">
+                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+                                    
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Getting Started
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="start/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="start/hello_world">Hello World</a></li>
+            <li><a class="dropdown-item" href="start/generators">Generators</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Architecture Components
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/results">Results</a></li>
+            <li><a class="dropdown-item" href="arch/context">Context</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/app">App</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
+            <li><a class="dropdown-item" href="arch/cli">CLI</a></li>
+            <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="utils/overview">Utilities</a>
+    </li>
+    
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            More
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
+            <li><a class="dropdown-item" href="info/standards">Standards</a></li>
+            <li><a class="dropdown-item" href="info/contact">Contact</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://github.com/code-helix/slatekit">Github</a>
+    </li>
+</ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    
+    <section class="header wow fadeInUp">
+        <div class="container text-center">
+            <h2>Cache</h2>
+        </div>
+    </section>
+    
+    <section class="sk-creative">
+      <div class="container">
+        
+
+<h1 id="overview">Overview</h1>
+
+<p>The Slate Cache is a light-weight LRU ( Least Recently Used ) Cache for both Android and Server. While there are many comprehensive Cache solutions available for the JVM, this is designed to be an <strong>in-memory light-weight</strong> cache with an emphasis on <strong>diagnostics</strong> and <strong>async</strong> functionality via <strong>coroutines and channels</strong>.
+<br/><br/></p>
+
+<h1 id="goals">Goals</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Light-Weight</strong></td>
+        <td>Simple, light-weight with default implementations for sync and async based Caches.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics </strong> </td>
+        <td>Provides a reasonable level of diagnostics and cache metrics</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Coroutines</strong></td>
+        <td>Async based cache leverages Coroutines / Channels for write operations</td>
+    </tr>
+</table>
+<br/><br/>
+
+# Index
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Section</strong></td>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#status">Status</a></strong></td>
+        <td>Current status of this component</td>
+    </tr>
+    <tr>
+        <td><strong>2</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#install">Install</a></strong></td>
+        <td>Installation instructions and references to sources</td>
+    </tr>
+    <tr>
+        <td><strong>3</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#requires">Requires</a></strong></td>
+        <td>Lists all the Slate Kit and third-party dependencies</td>
+    </tr>
+    <tr>
+        <td><strong>4</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#sample">Sample</a></strong></td>
+        <td>Quick sample to show usage of the component</td>
+    </tr>
+    <tr>
+        <td><strong>6</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#concepts">Concepts</a></strong></td>
+        <td>Core concepts to understand in this component</td>
+    </tr>
+    <tr>
+        <td><strong>7</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#features">Features</a></strong></td>
+        <td>List all the features supported</td>
+    </tr>
+    <tr>
+        <td><strong>8</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#setup">Setup</a></strong></td>
+        <td>Set up and configure this component for use</td>
+    </tr>
+    <tr>
+        <td><strong>9</strong></td>
+        <td><strong><a class="url-ch" href="arch/cache#details">Details</a></strong></td>
+        <td>In-depth examples of the supported features</td>
+    </tr>
+</table>
+
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="status">Status</h1>
+
+<p>This component is currently stable. Future versions will include support for:
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Events</strong></td>
+        <td>Upcoming</td>
+        <td>An event emitter for changes to cache</td>
+    </tr>
+    <tr>
+        <td><strong>Refresh</strong></td>
+        <td>Upcoming</td>
+        <td>Automatic / scheduled refresh of cache items</td>
+    </tr>
+    <tr>
+        <td><strong>Stats</strong></td>
+        <td>Upcoming</td>
+        <td>Enhanced stats to capture evictions/clearing of cache</td>
+    </tr>
+</table>
+<br/><br/></p>
+
+<h1 id="install">Install</h1>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="c1">// other repositories
+</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="c1">// other dependencies ...
+</span><span class="c1"></span>
+        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cache:1.0.0&#39;</span>
+    <span class="o">}</span></code></pre></div>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <td><strong>package</strong></td>
+    <td>slatekit.cache</td>
+  </tr>
+  <tr>
+    <td><strong>jar</strong></td>
+    <td>slatekit.cache.jar</td>
+  </tr>
+  <tr>
+    <td><strong>git</strong></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache">slatekit/src/lib/kotlin/slatekit-cache</a></td>
+  </tr>
+  <tr>
+    <td><strong>docs</strong></td>
+    <td><a class="url-ch" href="arch/cache">Cache</a></td>
+  </tr>
+  <tr>
+    <td><strong>uses</strong></td>
+    <td>slatekit.results, slatekit.common</td>
+  </tr>
+  <tr>
+    <td><strong>license</strong></td>
+    <td>Apache 2.0</td>
+  </tr>
+  <tr>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
+  </tr>
+</table>
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="requires">Requires</h1>
+
+<p>This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="core/results">Slate Kit - Results</a></td>
+        <td>To model successes and failures with optional status codes</td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
+        <td>Common utilities for both android + server</td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="arch/tracking">Slate Kit - Tracking</a></td>
+        <td>Tracking and diagnostics</td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="sample">Sample</h1>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
+
+    <span class="c1">// SimpleCache is the underlying Cache implementation
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">raw</span><span class="p">:</span><span class="n">Cache</span> <span class="p">=</span> <span class="n">SimpleCache</span><span class="p">(</span><span class="n">CacheSettings</span><span class="p">(</span><span class="m">10</span><span class="p">))</span>
+
+    <span class="c1">// Synchronized cache wraps the raw cache
+</span><span class="c1"></span>    <span class="c1">// NOTE: Async cache via coroutines/channels avialable (see docs below)
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cache</span><span class="p">:</span><span class="n">SyncCache</span> <span class="p">=</span> <span class="n">SimpleSyncCache</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+
+    <span class="c1">// Writes
+</span><span class="c1"></span>    <span class="c1">// 1. Put new entry ( using a function to fetch )
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="s">&#34;promotion codes&#34;</span><span class="p">,</span> <span class="m">300</span><span class="p">)</span> <span class="p">{</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="c1">// 2. Force a refresh
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">refresh</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Reads
+</span><span class="c1"></span>    <span class="c1">// 1. Get existing cache item
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c1</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="k">get</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">Country</span><span class="p">&gt;&gt;(</span><span class="s">&#34;countries&#34;</span><span class="p">)</span>
+
+    <span class="c1">// 2. Get existing cache item or load it if expired
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c2</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrLoad</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Stats
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">stats</span><span class="p">().</span><span class="n">forEach</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;key    : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">key</span><span class="p">)</span>
+        
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;expiry.start   : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">expiry</span><span class="p">.</span><span class="n">started</span><span class="p">.</span><span class="n">toStringUtc</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;expiry.seconds : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">expiry</span><span class="p">.</span><span class="n">seconds</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;expiry.expires : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">expiry</span><span class="p">.</span><span class="n">expires</span><span class="p">.</span><span class="n">toStringUtc</span><span class="p">())</span>
+        
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;hits.count     : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">hits</span><span class="p">.</span><span class="n">count</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;hits.time      : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">hits</span><span class="p">.</span><span class="n">timestamp</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;value.created  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">created</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;value.updated  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">updated</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;value.applied  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">applied</span><span class="p">)</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;error.created  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">created</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;error.updated  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">updated</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;error.applied  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">applied</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;\n&#34;</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div>
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="features">Features</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>More</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Usage</strong></td>
+        <td>Usage of the features</td>
+        <td><a href="arch/cache/#usage" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>2. Stats</strong> </td>
+        <td>Gettign stats and cache diagnostics</td> 
+        <td><a href="arch/cache/#stats" class="more"><span class="btn btn-primary">more</span></a></td>                    
+    </tr>
+    <tr>
+        <td><strong>3. Sync</strong></td>
+        <td>How to convert raw text into parsed parameters</td>
+        <td><a href="arch/cache/#sync" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>4. Async</strong></td>
+        <td>Working with parsed commands as CLI Requests</td>
+        <td><a href="arch/cache/#asyc" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+</table>
+
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h2 id="usage">Usage</h2>
+
+<p>Showing simple usage of a <strong>synchronous</strong> cache implementation all operations on cache are using the <strong>@synchronized</strong> annotation on methods.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
+
+    <span class="c1">// SimpleCache is the underlying Cache implementation
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">raw</span><span class="p">:</span><span class="n">Cache</span> <span class="p">=</span> <span class="n">SimpleCache</span><span class="p">(</span><span class="n">CacheSettings</span><span class="p">(</span><span class="m">10</span><span class="p">))</span>
+
+    <span class="c1">// Synchronized cache wraps the raw cache
+</span><span class="c1"></span>    <span class="c1">// NOTE: Async cache via coroutines/channels avialable (see docs below)
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cache</span><span class="p">:</span><span class="n">SyncCache</span> <span class="p">=</span> <span class="n">SimpleSyncCache</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+
+    <span class="c1">// Writes: Both sync and async versions have these put/set/refresh methods
+</span><span class="c1"></span>    <span class="c1">// 1. Put new entry ( using a function to fetch )
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="s">&#34;promotion codes&#34;</span><span class="p">,</span> <span class="m">300</span><span class="p">)</span> <span class="p">{</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="c1">// 2. Update existing entry with value
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">))</span>
+
+    <span class="c1">// 3. Force a refresh
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">refresh</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Reads: 
+</span><span class="c1"></span>    <span class="c1">// NOTES:
+</span><span class="c1"></span>    <span class="c1">// 1. The sync version returns the value
+</span><span class="c1"></span>    <span class="c1">// 2. The async version returns a Deferred&lt;T&gt; 
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c1</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="k">get</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">Country</span><span class="p">&gt;&gt;(</span><span class="s">&#34;countries&#34;</span><span class="p">)</span>
+
+    <span class="c1">// 2. Get existing cache item or load it if expired
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c2</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrLoad</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// 3. Get after refreshing it first
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c3</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getFresh</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="n">println</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span></code></pre></div>
+
+
+
+
+<a href="arch/cache#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<h2 id="stats">Stats</h2>
+
+<p>The main difference in the stats for this component is that both the <strong>created, updated</strong> timestamps are maintained while also typically keeping track of the counts of <strong>accesses, hits, misses</strong>.</p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Term</strong></td>
+        <td><strong>Desc</strong></td>
+        <td><strong>Example</strong></td>
+        <td><strong>Ratio</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Accesses</strong></td>
+        <td>Number of times a cache item is accessed</td>
+        <td>100</td>
+        <td>n/a</td>
+    </tr>
+    <tr>
+        <td><strong>Hits</strong></td>
+        <td>Number of times a cache item is accessed and it exists</td>
+        <td>80</td>
+        <td>.8</td>
+    </tr>
+    <tr>
+        <td><strong>Misses</strong></td>
+        <td>Number of times a cache item is accessed but does not exist</td>
+        <td>20</td>
+        <td>.2</td>
+    </tr>
+</table>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="c1">// ... setup ( see above )
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">stats</span><span class="p">().</span><span class="n">forEach</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;key    : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;expiry.start   : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">expiry</span><span class="p">.</span><span class="n">started</span><span class="p">.</span><span class="n">toStringUtc</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;expiry.seconds : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">expiry</span><span class="p">.</span><span class="n">seconds</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;expiry.expires : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">expiry</span><span class="p">.</span><span class="n">expires</span><span class="p">.</span><span class="n">toStringUtc</span><span class="p">())</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;access.count     : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">reads</span><span class="o">?.</span><span class="n">count</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;access.time      : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">reads</span><span class="o">?.</span><span class="n">timestamp</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;hits.count     : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">hits</span><span class="p">.</span><span class="n">count</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;hits.time      : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">hits</span><span class="p">.</span><span class="n">timestamp</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;misses.count     : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">misses</span><span class="o">?.</span><span class="n">count</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;misses.time      : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">misses</span><span class="o">?.</span><span class="n">timestamp</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;value.created  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">created</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;value.updated  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">updated</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;value.applied  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">applied</span><span class="p">)</span>
+
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;error.created  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">created</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;error.updated  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">updated</span><span class="o">?.</span><span class="n">toStringUtc</span><span class="p">()</span> <span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;error.applied  : &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">applied</span><span class="p">)</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;\n&#34;</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div>
+
+
+
+<a href="arch/cache#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="sync">Sync</h2>
+
+<p>Showing usage of a <strong>synchronous</strong> cache implementation <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. All operations on cache are using the <strong>@synchronized</strong> annotation on methods. Synchronouse caches are implemented using the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SyncCache.kt" >SyncCache</a> interface.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
+
+    <span class="c1">// SimpleCache is the underlying Cache implementation
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">raw</span><span class="p">:</span><span class="n">Cache</span> <span class="p">=</span> <span class="n">SimpleCache</span><span class="p">(</span><span class="n">CacheSettings</span><span class="p">(</span><span class="m">10</span><span class="p">))</span>
+
+    <span class="c1">// Synchronized cache wraps the raw cache
+</span><span class="c1"></span>    <span class="c1">// NOTE: Async cache via coroutines/channels avialable (see docs below)
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cache</span><span class="p">:</span><span class="n">SyncCache</span> <span class="p">=</span> <span class="n">SimpleSyncCache</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+
+    <span class="c1">// Writes
+</span><span class="c1"></span>    <span class="c1">// 1. Put new entry ( using a function to fetch )
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="s">&#34;promotion codes&#34;</span><span class="p">,</span> <span class="m">300</span><span class="p">)</span> <span class="p">{</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="c1">// 2. Update existing entry with value
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">))</span>
+
+    <span class="c1">// 3. Force a refresh
+</span><span class="c1"></span>    <span class="n">cache</span><span class="p">.</span><span class="n">refresh</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Reads
+</span><span class="c1"></span>    <span class="c1">// 1. Get existing cache item
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c1</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="k">get</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">Country</span><span class="p">&gt;&gt;(</span><span class="s">&#34;countries&#34;</span><span class="p">)</span>
+
+    <span class="c1">// 2. Get existing cache item or load it if expired
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c2</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getOrLoad</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// 3. Get after refreshing it first
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">c3</span> <span class="p">=</span> <span class="n">cache</span><span class="p">.</span><span class="n">getFresh</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="n">println</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span></code></pre></div>
+
+
+
+<a href="arch/cache#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="async">Async</h2>
+
+<p>Async functionality is based on using Coroutines and Channels for writes.
+The <strong>async</strong> cache implementation is <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. Async caches are implemented using the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/AsyncCache.kt" >AsyncCache</a> interface. In this approach, concurrent writes are handling by creating a <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/CacheCommand.kt" >CacheCommand</a> representing the operation and sending them to a channel to be handled sequentially. Reads are handling by returning a kotlin <strong>Deferred[T]</strong>.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
+
+    <span class="k">val</span> <span class="py">logger</span> <span class="p">=</span> <span class="n">LoggerConsole</span><span class="p">()</span>
+    <span class="k">val</span> <span class="py">coordinator</span> <span class="p">=</span> <span class="n">ChannelCoordinator</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span> <span class="n">Paired</span><span class="p">(),</span> <span class="n">Channel</span><span class="p">&lt;</span><span class="n">CacheCommand</span><span class="p">&gt;(</span><span class="n">Channel</span><span class="p">.</span><span class="n">UNLIMITED</span><span class="p">))</span>
+    <span class="k">val</span> <span class="py">asyncCache</span><span class="p">:</span> <span class="n">AsyncCache</span> <span class="p">=</span> <span class="n">SimpleAsyncCache</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">coordinator</span><span class="p">)</span>
+
+    <span class="c1">// Writes
+</span><span class="c1"></span>    <span class="c1">// 1. Put new entry ( using a function to fetch )
+</span><span class="c1"></span>    <span class="n">asyncCache</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="s">&#34;promotion codes&#34;</span><span class="p">,</span> <span class="m">300</span><span class="p">)</span> <span class="p">{</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="c1">// 2. Update existing entry with value
+</span><span class="c1"></span>    <span class="n">asyncCache</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;p1&#34;</span><span class="p">,</span> <span class="s">&#34;p2&#34;</span><span class="p">))</span>
+
+    <span class="c1">// 3. Force a refresh
+</span><span class="c1"></span>    <span class="n">asyncCache</span><span class="p">.</span><span class="n">refresh</span><span class="p">(</span><span class="s">&#34;promos&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Reads
+</span><span class="c1"></span>    <span class="c1">// 1. Get existing cache item
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">a1</span> <span class="p">=</span> <span class="n">asyncCache</span><span class="p">.</span><span class="k">get</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">Country</span><span class="p">&gt;&gt;(</span><span class="s">&#34;countries&#34;</span><span class="p">).</span><span class="n">await</span><span class="p">()</span>
+
+    <span class="c1">// 2. Get existing cache item or load it if expired
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">a2</span> <span class="p">=</span> <span class="n">asyncCache</span><span class="p">.</span><span class="n">getOrLoad</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">).</span><span class="n">await</span><span class="p">()</span>
+
+    <span class="c1">// 3. Get after refreshing it first
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">a3</span> <span class="p">=</span> <span class="n">asyncCache</span><span class="p">.</span><span class="n">getFresh</span><span class="p">&lt;</span><span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;&gt;(</span><span class="s">&#34;promos&#34;</span><span class="p">).</span><span class="n">await</span><span class="p">()</span>
+     </code></pre></div>
+
+
+
+<a href="arch/cache#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+      </div>
+    </section>  
+    
+
+    
+    <section class="links">
+        <div class="container text-center">
+            <a href="#0">Twitter</a>
+            <a href="#0">Github</a>
+            <a href="#0">About</a>
+            <a href="#0">Contact</a>
+        </div>
+    </section>
+    
+
+    
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Made with love | Brex-Theme</p>
+        </div>
+    </footer>
+    
+
+    
+            
+    <script src="assets/theme/js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/theme/js/plugins/popper.min.js"></script>
+    <script src="assets/theme/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.waypoints.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.counterup.min.js"></script>
+    <script src="assets/theme/js/plugins/slick.js"></script>
+    <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/theme/js/plugins/wow.min.js"></script>
+    <script src="assets/theme/js/agency-1.js"></script>
+
+    <script src="assets/theme/js/sass-1.js"></script>
+</body>
+
+</html>
