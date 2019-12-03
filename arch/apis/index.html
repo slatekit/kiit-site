@@ -187,7 +187,7 @@
     </tr>
     <tr>
         <td><strong>1. Accessable</strong></td>
-        <td><strong>Write once</strong> and have APIs hosted and/or run anywhere ( e.g. <strong>Web, CLI, File/Queue</strong> sources )</td>
+        <td><strong>Write once</strong> and have APIs hosted and/or run anywhere ( e.g. <strong>Web, CLI, from File/Queue</strong> sources )</td>
     </tr>
     <tr>
         <td><strong>2. Discoverable</strong> </td>
@@ -195,7 +195,7 @@
     </tr>
     <tr>
         <td><strong>3. Natural</strong></td>
-        <td>Allow <strong>normal methods</strong> to be easily turned to API actions with <strong>strong types</strong> and <strong>automatic docs</strong> and accurate <a href="arch/results" >Results</a></td>
+        <td>Allow <strong>normal methods</strong> to be easily turned to API actions with <strong>strong types</strong>, <strong>automatic docs</strong> and accurate <a href="arch/results" >Results</a></td>
     </tr>
 </table>
 
@@ -371,7 +371,7 @@
 
 <h1 id="sample">Sample</h1>
 
-<p>This is a quick and simple example of creating an API using the Slate Kit <strong>Universal API paradigm</strong>.
+<p>This is a quick and simple example of creating an API using the Slate Kit <strong>Universal API paradigm</strong>. This API is then accessible on the CLI and Web
 <div class="alert alert-warning" role="alert">
   TIP: Slate Kit APIs have a 3 part routing convention: {AREA} / {API} / {ACTION}
 </div>
@@ -394,47 +394,6 @@
             <span class="k">return</span> <span class="n">Movie</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s">&#34;playing&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;cost&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getDateTime</span><span class="p">(</span><span class="s">&#34;released&#34;</span><span class="p">))</span>
         <span class="p">}</span>
     <span class="p">}</span></code></pre></div></p>
-
-<h3 id="web">Web</h3>
-
-<p>You can then access this API on the Web with a request like this:
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-     <span class="c1">// Similar to JSON RPC
-</span><span class="c1"></span>     <span class="n">POST</span> <span class="n">localhost</span><span class="p">:</span><span class="m">5000</span><span class="p">/</span><span class="n">app</span><span class="p">/</span><span class="n">movies</span><span class="p">/</span><span class="n">createSample</span> 
-     <span class="p">{</span>
-        <span class="s">&#34;title&#34;</span><span class="p">:</span> <span class="s">&#34;Dark Knight&#34;</span><span class="p">,</span>
-        <span class="s">&#34;playing&#34;</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
-        <span class="s">&#34;cost&#34;</span> <span class="p">:</span> <span class="m">12.50</span><span class="p">,</span>
-        <span class="s">&#34;released&#34;</span><span class="p">:</span> <span class="s">&#34;2018-07-18T00:00:00Z&#34;</span>
-     <span class="p">}</span></code></pre></div></p>
-
-<h3 id="cli">CLI</h3>
-
-<p>You can then access this API on the CLI by hosting it in the Slate Kit CLI component.
-The request would like this:
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-     <span class="p">:&gt;</span> <span class="n">app</span><span class="p">.</span><span class="n">movies</span><span class="p">.</span><span class="n">createSample</span> <span class="p">-</span><span class="n">title</span><span class="p">=</span><span class="s">&#34;Dark Knight&#34;</span> <span class="p">-</span><span class="n">playing</span><span class="p">=</span><span class="k">true</span> <span class="p">-</span><span class="n">cost</span><span class="p">=</span><span class="m">12.50</span> <span class="p">-</span><span class="n">released</span><span class="p">=</span><span class="s">&#34;2018-07-18T00:00:00Z&#34;</span>
-      </code></pre></div></p>
-
-<h3 id="file">File</h3>
-
-<p>You can then access this API on the Web with a request like this:
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     <span class="c1">// Assume file is ~/dev/slatekit/samples/apis/file-sample.json
-</span><span class="c1"></span>     <span class="p">{</span>
-        <span class="s">&#34;path&#34;</span><span class="p">:</span> <span class="s">&#34;/app/movies/createSample&#34;</span><span class="p">,</span>
-        <span class="s">&#34;source&#34;</span><span class="p">:</span> <span class="s">&#34;file&#34;</span><span class="p">,</span>
-        <span class="s">&#34;version&#34;</span><span class="p">:</span> <span class="s">&#34;1.0&#34;</span><span class="p">,</span>
-        <span class="s">&#34;tag&#34;</span> <span class="p">:</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-        <span class="s">&#34;timestamp&#34;</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
-        <span class="s">&#34;meta&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="p">}</span>
-        <span class="s">&#34;data&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s">&#34;title&#34;</span><span class="p">:</span> <span class="s">&#34;Dark Knight&#34;</span><span class="p">,</span>
-            <span class="s">&#34;playing&#34;</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
-            <span class="s">&#34;cost&#34;</span> <span class="p">:</span> <span class="m">12.50</span><span class="p">,</span>
-            <span class="s">&#34;released&#34;</span><span class="p">:</span> <span class="s">&#34;2018-07-18T00:00:00Z&#34;</span>
-         <span class="p">}</span>
-     <span class="p">}</span>
-      </code></pre></div></p>
 
 <br/>
 
@@ -513,10 +472,14 @@ The request would like this:
 
 <h2 id="setup">Setup</h2>
 
-<p>APIs are developed as normal Kotlin methods. The only difference is that they are enriched with annotations ( <strong>optional</strong> ) to provided metadata to the API Server indicated how they should be accessed and managed.
+<p>APIs are developed as normal Kotlin methods. The only difference is that they are enriched with annotations and/or configuration during registration, to provided metadata to the Slate Kit API Server indicated how they should be accessed and managed.
 <div class="alert alert-warning" role="alert">
   TIP: Annotations can be avoided and instead the configurations can be explicitly supplied during registration of the APIs into the API server ( see web/cli sections below for setting up the server)
-</div>
+</div></p>
+
+<h3 id="1-annotations">1: Annotations</h3>
+
+<p>This approach is convenient and puts all relevant metadata at the source.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
     <span class="k">import</span> <span class="nn">slatekit.apis.*</span>
     <span class="k">import</span> <span class="nn">slatekit.common.DateTime</span>
@@ -535,21 +498,53 @@ The request would like this:
         <span class="k">fun</span> <span class="nf">createWithRequest</span><span class="p">(</span><span class="n">req</span><span class="p">:</span><span class="n">Request</span><span class="p">):</span><span class="n">Movie</span> <span class="p">{</span>
             <span class="k">return</span> <span class="n">Movie</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s">&#34;playing&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;cost&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getDateTime</span><span class="p">(</span><span class="s">&#34;released&#34;</span><span class="p">))</span>
         <span class="p">}</span>
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></div></p>
+
+<h3 id="2-registration">2: Registration</h3>
+
+<p>This approach reduces the dependency on Slate Kit, and requires that the metadata be supplied during registration of the API, and all the actions assume that the annotation values are inherited from the parent Api metadata.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    <span class="k">import</span> <span class="nn">slatekit.apis.*</span>
+    <span class="k">import</span> <span class="nn">slatekit.common.DateTime</span>
+    <span class="k">import</span> <span class="nn">slatekit.common.Request</span>
+
+    <span class="k">class</span> <span class="nc">MovieApi</span> <span class="p">{</span>
+        <span class="c1">// Using explicit fields
+</span><span class="c1"></span>        <span class="k">fun</span> <span class="nf">createSample</span><span class="p">(</span><span class="n">title</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="n">playing</span><span class="p">:</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">cost</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">released</span><span class="p">:</span> <span class="n">DateTime</span><span class="p">):</span><span class="n">Movie</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">Movie</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">playing</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">released</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Using request object
+</span><span class="c1"></span>        <span class="k">fun</span> <span class="nf">createWithRequest</span><span class="p">(</span><span class="n">req</span><span class="p">:</span><span class="n">Request</span><span class="p">):</span><span class="n">Movie</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">Movie</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s">&#34;playing&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;cost&#34;</span><span class="p">),</span> <span class="n">req</span><span class="p">.</span><span class="n">getDateTime</span><span class="p">(</span><span class="s">&#34;released&#34;</span><span class="p">))</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// ... Registration code ( see other sections for more details )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">api</span> <span class="p">=</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">apis</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">Api</span><span class="p">(</span>
+                    <span class="n">instance</span> <span class="p">=</span> <span class="n">MovieApi</span><span class="p">(</span><span class="n">ctx</span><span class="p">),</span> 
+                    <span class="n">area</span> <span class="p">=</span> <span class="s">&#34;manage&#34;</span><span class="p">,</span> 
+                    <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;movies&#34;</span><span class="p">,</span> 
+                    <span class="n">auth</span> <span class="p">=</span> <span class="n">AuthMode</span><span class="p">.</span><span class="n">None</span>
+                <span class="p">)</span></code></pre></div></p>
+
 
 
 
 <a href="arch/apis#features" class="sk-back-to-details">Back to features</a>
 <a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
 
-<br/><br/><br/></p>
+<br/><br/><br/>
 
 <h2 id="routes">Routes</h2>
 
-<p>API routes consist of a <strong>3 part ( {AREA} / {API} / {ACTION} ) routing convention</strong> to enfore standards and simply the discovery of the routes.
+<p>API routes consist of a <strong>3 part ( {AREA} / {API} / {ACTION} ) routing convention</strong> to enfore standards and simplify the discovery of the routes.
 <div class="alert alert-warning" role="alert">
   TIP: Sample: /manage/movies/createSample
-</div>
+</div></p>
+
+<h3 id="1-parts">1. Parts</h3>
+
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Part</strong></td>
@@ -572,7 +567,12 @@ The request would like this:
         <td>Represents an action/endpoint on an API, and maps to a Kotlin method</td>
     </tr>
 </table>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+
+<br/><br/>
+
+<h3 id="2-example">2. Example</h3>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
      <span class="n">POST</span> <span class="n">localhost</span><span class="p">:</span><span class="m">5000</span><span class="p">/</span><span class="n">manage</span><span class="p">/</span><span class="n">movies</span><span class="p">/</span><span class="n">createSample</span> 
      <span class="p">{</span>
         <span class="s">&#34;title&#34;</span><span class="p">:</span> <span class="s">&#34;Dark Knight&#34;</span><span class="p">,</span>
@@ -580,19 +580,65 @@ The request would like this:
         <span class="s">&#34;cost&#34;</span> <span class="p">:</span> <span class="m">12.50</span><span class="p">,</span>
         <span class="s">&#34;released&#34;</span><span class="p">:</span> <span class="s">&#34;2018-07-18T00:00:00Z&#34;</span>
      <span class="p">}</span></code></pre></div>
+<br/><br/></p>
+
+<h3 id="3-discovery">3. Discovery</h3>
+
+<p>Because the routes are standardized on a 3 part heirarchical format, this makes discovery of all <strong>Areas, APIS, Actions, Inputs(for actions)</strong> incredibly straight-forward for both Web and CLI hosted APIs. You can drill down from areas into actions using an approach that resembles navigating a folder and showing the items.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Discover</strong></td>
+        <td><strong>CLI</strong></td>
+        <td><strong>Web</strong></td>
+        <td><strong>Note</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Areas</strong></td>
+        <td>?</td>
+        <td>/help</td>
+        <td>Lists <strong>Areas</strong> available. <br/>
+            E.g. manage, discover
+        </td>
+    </tr>
+    <tr>
+        <td><strong>APIs in Area</strong></td>
+        <td>manage?</td>
+        <td>/manage/help</td>
+        <td>Lists <strong>APIs</strong> available in the <strong>manage</strong> area<br/>
+            E.g. movies, concerts
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Actions on API</strong></td>
+        <td>manage.movies?</td>
+        <td>/manage/movies/help</td>
+        <td>Lists <strong>Actions</strong> available in <strong>manage/movies</strong> API<br/>
+            E.g. create, update, delete, disable
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Inputs on Action</strong></td>
+        <td>manage.movies.createSample?</td>
+        <td>/manage/movies/createSample/help</td>
+        <td>Lists <strong>Inputs</strong> for <strong>manage / movies /createSample</strong> Action<br/>
+            E.g. title=string, cost=double
+        </td>
+    </tr>
+</table></p>
+
 
 
 
 <a href="arch/apis#features" class="sk-back-to-details">Back to features</a>
 <a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
 
-<br/><br/><br/></p>
+<br/><br/><br/>
 
 <h2 id="config">Config</h2>
 
 <p>There are several annotation properties available to configure APIs and Actions.</p>
 
-<h3 id="api">API</h3>
+<h3 id="1-api">1. API</h3>
 
 <p>These are all the properties for the <strong>@Api</strong> annotation to put on a class to indicate it should be accessable as an Api.
 <table class="table table-bordered table-striped">
@@ -670,7 +716,7 @@ The request would like this:
     </tr>
 </table></p>
 
-<h3 id="action">Action</h3>
+<h3 id="2-action">2. Action</h3>
 
 <p>These are all the properties for the <strong>@Action</strong> annotation to be put on methods to indicate it should be available as an action/endpoint</p>
 
@@ -807,15 +853,34 @@ The request would like this:
 
 <h2 id="responses">Responses</h2>
 
-<p>There are 2 ways to returns responses/values from methods. The first is to simply return the exact value. The second is to wrap the value into a Slate Kit <a href="arch/results" >Result</a>.
+<p>There are 2 ways to returns responses/values from methods. The first is to simply return the exact value. The second is to wrap the value into a Slate Kit <a href="arch/results" >Result</a>.</p>
+
+<h3 id="1-result-model">1. Result model</h3>
+
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
-    <span class="c1">// Case 1: Return explicit value
+    <span class="c1">// Case 1: Return explicit value( will return an HTTP 200)
 </span><span class="c1"></span>    <span class="k">return</span> <span class="n">Movie</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">playing</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">released</span><span class="p">)</span>
 
     <span class="c1">// Case 2. Return value wrapped as Outcome&lt;Movie&gt; = Result&lt;Movie, Err&gt;
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">movie</span> <span class="p">=</span> <span class="n">Movie</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">playing</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">released</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
       </code></pre></div>
+
+<h3 id="2-response-json">2. Response JSON</h3>
+
+<p>JSON Responses from APIs always the following fields. The <strong>value</strong> field will represent the payload returned from your method. The <strong>success, code, msg, err</strong> fields are representing by the <a href="arch/results" >Result</a> component for modeling successes/failures.
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">    <span class="p">{</span>
+        <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">200001</span><span class="p">,</span>
+        <span class="nt">&#34;meta&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&#34;value&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+            <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="s2">&#34;2019-08-10&#34;</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;msg&#34;</span><span class="p">:</span> <span class="s2">&#34;Success&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;err&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&#34;tag&#34;</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">}</span></code></pre></div>
 
 
 
@@ -826,7 +891,7 @@ The request would like this:
 
 <h2 id="errors">Errors</h2>
 
-<p>You can accurately model successes and failures using <a href="arch/results" >Result</a>.
+<p>You can accurately model successes and failures using <a href="arch/results" >Result</a>. Result ( and the Outcome typealias ) help to model errors accurately which can then be easily converted to Http status codes and responses.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="n">@Action</span><span class="p">()</span>
     <span class="k">fun</span> <span class="nf">createSampleOutcome</span><span class="p">(</span><span class="n">req</span><span class="p">:</span><span class="n">Request</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="n">playing</span><span class="p">:</span><span class="n">Boolean</span><span class="p">,</span> <span class="n">cost</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="n">released</span><span class="p">:</span> <span class="n">DateTime</span><span class="p">):</span><span class="n">Outcome</span><span class="p">&lt;</span><span class="n">Movie</span><span class="p">&gt;</span> <span class="p">{</span>
@@ -864,10 +929,14 @@ The request would like this:
 
 <br/><br/><br/></p>
 
-<h2 id="web-1">Web</h2>
+<h2 id="web">Web</h2>
 
 <p>You can host Slate Kit APIs as Web APIs using the default Http Engine which is <strong>Ktor</strong>.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+<div class="alert alert-warning" role="alert">
+  Use the generator to create Slate Kit APIs
+</div></p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">fun</span> <span class="nf">runServer</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// ====================================
 </span><span class="c1"></span>        <span class="c1">// Slate Kit Setup
@@ -920,9 +989,12 @@ The request would like this:
 
 <br/><br/><br/></p>
 
-<h2 id="cli-1">CLI</h2>
+<h2 id="cli">CLI</h2>
 
-<p>You can host Slate Kit <strong>Universal APIs</strong> on the CLI using the Slate Kit <a href="arch/cli" >CLI</a>
+<p>You can host Slate Kit <strong>Universal APIs</strong> on the CLI using the Slate Kit <a href="arch/cli" >CLI</a></p>
+
+<h3 id="cli-setup">CLI Setup</h3>
+
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
     <span class="c1">// 1. The API keys( DocApi, SetupApi are authenticated using an sample API key )
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">keys</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">ApiKey</span><span class="p">(</span> <span class="n">name</span> <span class="p">=</span><span class="s">&#34;cli&#34;</span><span class="p">,</span> <span class="n">key</span> <span class="p">=</span> <span class="s">&#34;abc&#34;</span><span class="p">,</span> <span class="n">roles</span> <span class="p">=</span> <span class="s">&#34;dev,qa,ops,admin&#34;</span><span class="p">))</span>
@@ -954,6 +1026,14 @@ The request would like this:
 </span><span class="c1"></span>    <span class="k">return</span> <span class="n">cli</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
        </code></pre></div>
 
+<h3 id="cli-example">CLI Example</h3>
+
+<p>You can then access this API on the CLI by hosting it in the Slate Kit CLI component.
+The request would like this:
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+     <span class="p">:&gt;</span> <span class="n">app</span><span class="p">.</span><span class="n">movies</span><span class="p">.</span><span class="n">createSample</span> <span class="p">-</span><span class="n">title</span><span class="p">=</span><span class="s">&#34;Dark Knight&#34;</span> <span class="p">-</span><span class="n">playing</span><span class="p">=</span><span class="k">true</span> <span class="p">-</span><span class="n">cost</span><span class="p">=</span><span class="m">12.50</span> <span class="p">-</span><span class="n">released</span><span class="p">=</span><span class="s">&#34;2018-07-18T00:00:00Z&#34;</span>
+      </code></pre></div>
+
 
 
 <a href="arch/apis#features" class="sk-back-to-details">Back to features</a>
@@ -961,10 +1041,32 @@ The request would like this:
 
 <br/><br/><br/></p>
 
+<h2 id="file">File</h2>
+
+<p>You can then call this API from a request saved to a file
+<div class="alert alert-warning" role="alert">
+  TIP: Functionality is available but docs are not yet ready.
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     <span class="c1">// Assume file is ~/dev/slatekit/samples/apis/file-sample.json
+</span><span class="c1"></span>     <span class="p">{</span>
+        <span class="s">&#34;path&#34;</span><span class="p">:</span> <span class="s">&#34;/app/movies/createSample&#34;</span><span class="p">,</span>
+        <span class="s">&#34;source&#34;</span><span class="p">:</span> <span class="s">&#34;file&#34;</span><span class="p">,</span>
+        <span class="s">&#34;version&#34;</span><span class="p">:</span> <span class="s">&#34;1.0&#34;</span><span class="p">,</span>
+        <span class="s">&#34;tag&#34;</span> <span class="p">:</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
+        <span class="s">&#34;timestamp&#34;</span><span class="p">:</span> <span class="k">null</span><span class="p">,</span>
+        <span class="s">&#34;meta&#34;</span><span class="p">:</span> <span class="p">{</span> <span class="p">}</span>
+        <span class="s">&#34;data&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">&#34;title&#34;</span><span class="p">:</span> <span class="s">&#34;Dark Knight&#34;</span><span class="p">,</span>
+            <span class="s">&#34;playing&#34;</span><span class="p">:</span> <span class="k">true</span><span class="p">,</span>
+            <span class="s">&#34;cost&#34;</span> <span class="p">:</span> <span class="m">12.50</span><span class="p">,</span>
+            <span class="s">&#34;released&#34;</span><span class="p">:</span> <span class="s">&#34;2018-07-18T00:00:00Z&#34;</span>
+         <span class="p">}</span>
+     <span class="p">}</span>
+      </code></pre></div>
 <br/>
 
 <a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
+<br/><br/><br/><br/></p>
 
       </div>
     </section>  

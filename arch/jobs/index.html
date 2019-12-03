@@ -163,14 +163,13 @@
 
 <h1 id="overview">Overview</h1>
 
-<p>The Slate CLI is a Command Line Interface application that provides
-pre-built functionality for you to integrate your own commands in an interactie manner. This CLI offers 2 distinct approaches to integration. The first approach allows you to handle the raw text supplied in the CLI yourself and is the most flexible. The second approach provides a more connected, automatic by exposing, validating, and executing inputs against Slate Kit Universal APIs. You can create a CLI app quickly using the Slate Kit command line executable with command.
+<p>The Slate Jobs component is a background job/persistant task queue system for Kotlin and is similar to Ruby SideKiq, NodeJS Bull. It leverages Kotlin <strong>Coroutines and Channels</strong> for concurrency based operations.
 <br/><br/></p>
 
 <h1 id="create">Create</h1>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;SampleAPI&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    slatekit new job -name<span class="o">=</span><span class="s2">&#34;SampleJob&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
     </code></pre></div>
 <div class="alert alert-warning" role="alert">
   You can download the Slate Kit CLI tools 
@@ -178,9 +177,32 @@ pre-built functionality for you to integrate your own commands in an interactie 
 </div>
 <br/><br/></p>
 
+<h1 id="goals">Goals</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Job types</strong></td>
+        <td>Different types of jobs OneTime, Paged, Queued job types.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics</strong> </td>
+        <td>Multiple types of diagnostics and tracking of jobs statistics available</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Policies</strong></td>
+        <td>Policies as middleware and hooks to restrict, customize, or enhance jobs</td>
+    </tr>
+</table>
+
+<br/><br/>
+
 <h1 id="index">Index</h1>
 
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Section</strong></td>
         <td><strong>Component</strong></td>
@@ -208,39 +230,51 @@ pre-built functionality for you to integrate your own commands in an interactie 
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#goals">Goals</a></strong></td>
-        <td>Goals of this component and the problems it attempts to solve</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/jobs#concepts">Concepts</a></strong></td>
         <td>Core concepts to understand in this component</td>
     </tr>
     <tr>
-        <td><strong>7</strong></td>
+        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/jobs#features">Features</a></strong></td>
         <td>List all the features supported</td>
     </tr>
     <tr>
-        <td><strong>8</strong></td>
+        <td><strong>7</strong></td>
         <td><strong><a class="url-ch" href="arch/jobs#setup">Setup</a></strong></td>
         <td>Set up and configure this component for use</td>
     </tr>
     <tr>
-        <td><strong>9</strong></td>
+        <td><strong>8</strong></td>
         <td><strong><a class="url-ch" href="arch/jobs#details">Details</a></strong></td>
         <td>In-depth examples of the supported features</td>
     </tr>
 </table>
+
 <br/>
 
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 
 <h1 id="status">Status</h1>
 
-<p>This component is currently stable and there is a project generator for it ( see below ). <br/>
-A small future enhancement will add support for question and answer flow.
+<p>This component is currently stable and there is a project generator for it
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Periodic</strong></td>
+        <td>Upcoming</td>
+        <td>Support for periodic and scheduled jobs</td>
+    </tr>
+    <tr>
+        <td><strong>Flow</strong></td>
+        <td>Upcoming</td>
+        <td>Integration with Kotlin Flows</td>
+    </tr>
+</table>
 <br/>
 
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
@@ -256,25 +290,25 @@ A small future enhancement will add support for question and answer flow.
     <span class="n">dependencies</span> <span class="o">{</span>
         <span class="c1">// other dependencies ...
 </span><span class="c1"></span>
-        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cli:1.0.0&#39;</span>
+        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-jobs:1.0.0&#39;</span>
     <span class="o">}</span></code></pre></div>
 
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>package</strong></td>
-    <td>slatekit.app</td>
+    <td>slatekit.jobs</td>
   </tr>
   <tr>
     <td><strong>jar</strong></td>
-    <td>slatekit.app.jar</td>
+    <td>slatekit.jobs.jar</td>
   </tr>
   <tr>
     <td><strong>git</strong></td>
-    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app">slatekit/src/lib/kotlin/slatekit-cli</a></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs">slatekit/src/lib/kotlin/slatekit-jobs</a></td>
   </tr>
   <tr>
     <td><strong>docs</strong></td>
-    <td><a class="url-ch" href="core/app">App</a></td>
+    <td><a class="url-ch" href="arch/jobs">Jobs</a></td>
   </tr>
   <tr>
     <td><strong>uses</strong></td>
@@ -286,7 +320,7 @@ A small future enhancement will add support for question and answer flow.
   </tr>
   <tr>
       <td><strong>example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_CLI.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Jobs.kt</a></td>
   </tr>
 </table>
 <br/>
@@ -303,307 +337,657 @@ A small future enhancement will add support for question and answer flow.
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><a class="url-ch" href="core/results">Slate Kit - Results</a></td>
+        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
         <td>To model successes and failures with optional status codes</td>
     </tr>
     <tr>
-        <td><a class="url-ch" href="utils/utils.html">Slate Kit - Common</a></td>
+        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
         <td>Common utilities for both android + server</td>
     </tr>
-</table>
+    <tr>
+        <td><a class="url-ch" href="arch/queues">Queues</a></td>
+        <td>Persistent queues with AWS SQS as the default</td>
+    </tr>
+</table></p>
+
 <br/>
 
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 
 <h1 id="sample">Sample</h1>
 
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">quick_sample</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
+<p>This is a simple example of a Queued worker ( which takes it work from a Task which a unit-of-work stored in-memory or in persistent queue ).
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetterFromQueue</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">):</span><span class="n">WorkResult</span> <span class="p">{</span>
+
+        <span class="c1">// Get data out of the task
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">userId</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">toInt</span><span class="p">()</span>
+
+        <span class="c1">// Simulate getting the user and sending the newsletter
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">getUser</span><span class="p">(</span><span class="n">userId</span><span class="p">)</span>
+        <span class="n">send</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">job</span><span class="p">,</span> <span class="s">&#34;Latest News Letter!&#34;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="c1">// Acknowledge the task or abandon via task.fail()
+</span><span class="c1"></span>        <span class="n">task</span><span class="p">.</span><span class="n">done</span><span class="p">()</span>
+
+        <span class="c1">// Indicate that this can now handle more
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">WorkResult</span><span class="p">(</span><span class="n">WorkState</span><span class="p">.</span><span class="n">More</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div></p>
+
 <br/>
 
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
-
-<h1 id="goals">Goals</h1>
-
-<p><table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Goal</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1. Pre-Built CLI</strong></td>
-        <td>Support for raw text, parsing, looping, formats, param types</td>
-    </tr>
-    <tr>
-        <td><strong>2. Flexible Use</strong> </td>
-        <td>Handle raw requests or leverage existing integration</td><br />
-    </tr>
-    <tr>
-        <td><strong>3. API Support</strong></td>
-        <td>Slate Kit APIs are accessible on Web or CLI</td>
-    </tr>
-</table>
-<br/>
-
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 
 <h1 id="concepts">Concepts</h1>
 
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Component</strong></td>
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/CLI.kt" >CLI</a></strong></td>
-        <td>The main component managing the interaction</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Jobs.kt" >Jobs</a></strong></td>
+        <td>A registry of all the jobs being managed.</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/CliRequest.kt" >CliRequest</a></strong> </td>
-        <td>Represents the command entered</td><br />
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Job.kt" >Job</a></strong></td>
+        <td>The main component managing work between workers, queues, tasks, and policies.</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/CliResponse.kt" >CliResponse</a></strong></td>
-        <td>Represents the output of the operation</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/support/Coordinator.kt" >Coordinator</a></strong></td>
+        <td>Responsible for coordinating requests on Workers ( by default using Channels )</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-integration/src/main/kotlin/slatekit/integration/apis/CliApi.kt" >CliApi</a></strong></td>
-        <td>Extends the CLI by integrating it with Slate Kit APIs</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Workers.kt" >Workers</a></strong> </td>
+        <td>A collection of 1 or more workers ( linked to job )</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/Command.kt" >Command</a></strong></td>
-        <td>Reserved commands like <strong>about, version, help, quit, exit</strong>, etc</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Worker.kt" >Worker</a></strong> </td>
+        <td>Performs the actual work (on a possible Task)</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/args/Args.kt" >Input Param</a></strong></td>
-        <td>Parameter starting with <strong>-</strong> representing data for a command</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/WorkState.kt" >WorkState</a></strong></td>
+        <td>Represents the state of a single iteration of work done by a worker</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/args/Args.kt" >Meta Param</a></strong></td>
-        <td>Parameter starting with <strong>@</strong> representing metadata for a command </td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Task</a></strong></td>
+        <td>A single work item that can be performed by a worker</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/SysParam.kt" >System Param</a></strong></td>
-        <td>Parameter starting with <strong>$</strong> representing an instruction for the CLI</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Queue.kt" >Queue</a></strong></td>
+        <td>Represents a queue of Tasks either in-memory or persisted ( AWS SQS )</td>
     </tr>
     <tr>
-        <td><strong>9. Reference</strong></td>
-        <td>Reference to command originating from a file</td>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/JobAction.kt" >Action</a></strong></td>
+        <td>The Action(s) that can be performed on a Job/Worker: Start, Stop, Pause, Resume, Control, Process, Delay
+        </td>
+    </tr>
+    <tr>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Priority.kt" >Priority</a></strong></td>
+        <td>The priority level of a Queue</td>
+    </tr>
+    <tr>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-functions/src/main/kotlin/slatekit/functions/policy/Policy.kt" >Policy</a></strong></td>
+        <td>A form of middleware to inject into a Job to adjust behaviour</td>
+    </tr>
+    <tr>
+        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Status.kt" >Status</a></strong></td>
+        <td>The status ( idle, running, paused, stopped, completed ) of a worker or job.</td>
     </tr>
 </table>
+
 <br/>
 
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 
-<h1 id="features">Features</h1>
+<h1 id="guide">Guide</h1>
 
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
         <td><strong>More</strong></td>
     </tr>
     <tr>
-        <td><strong>1. Input</strong></td>
-        <td>Description of feature</td>
-        <td><a href="arch/jobs/#inputs" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>1. Setup</strong></td>
+        <td>How to setup a Worker</td>
+        <td><a href="arch/jobs/#setup" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>2. Reserved</strong> </td>
-        <td>List of reserved commands</td>
-        <td><a href="arch/jobs/#reserved" class="more"><span class="btn btn-primary">more</span></a></td><br />
+        <td><strong>2. Register</strong></td>
+        <td>How to set up a job and register it with Jobs system</td>
+        <td><a href="arch/jobs/#register" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>3. Args</strong></td>
-        <td>How to convert raw text into parsed parameters</td>
-        <td><a href="arch/jobs/#args" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>3. Usage</strong> </td>
+        <td>How to start, stop, pause resume jobs and check status.</td> 
+        <td><a href="arch/jobs/#usage" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
-        <td><strong>4. Requests</strong></td>
-        <td>Working with parsed commands as CLI Requests</td>
-        <td><a href="arch/jobs/#requests" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>4. Cycle</strong></td>
+        <td>The life-cycle of a worker</td>
+        <td><a href="arch/jobs/#cycle" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>5. Execute</strong></td>
-        <td>How to execute a request</td>
-        <td><a href="arch/jobs/#execute" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>5. Types</strong> </td>
+        <td>OneTime, Paged, Queued Job types</td> 
+        <td><a href="arch/jobs/#types" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
-        <td><strong>6. Responses</strong></td>
-        <td>Working with parsed commands as CLI Requests</td>
-        <td><a href="arch/jobs/#responses" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>6. Events</strong> </td>
+        <td>Subscribe to job events</td> 
+        <td><a href="arch/jobs/#events" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
-        <td><strong>7. Startup</strong></td>
-        <td>Load a command at start up</td>
-        <td><a href="arch/jobs/#startup" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>7. Workers</strong> </td>
+        <td>Access to the jobs workers</td> 
+        <td><a href="arch/jobs/#workers" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
-        <td><strong>8. From file</strong></td>
-        <td>Load a command from a file</td>
-        <td><a href="arch/jobs/#from-file" class="more"><span class="btn btn-primary">more</span></a></td>
-    </tr>
-    <tr>
-        <td><strong>9. API</strong></td>
-        <td>How to access APIs on the command line</td>
-        <td><a href="arch/jobs/#apis" class="more"><span class="btn btn-primary">more</span></a></td>
-    </tr>
-    <tr>
-        <td><strong>10. Scripts</strong></td>
-        <td>Run a series of commands in batch mode</td>
-        <td><a href="arch/jobs/#scripts" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><strong>8. Stats</strong> </td>
+        <td>Capturing job and worker statistics</td> 
+        <td><a href="arch/jobs/#stats" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
 </table>
+
 <br/>
 
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 
-<h2 id="inputs">Inputs</h2>
+<h2 id="identity">Identity</h2>
 
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
+<p>Every job must be set up with an <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Identity.kt" >Identity</a>. This identity is transfered down to all workers ( given a unique uuid per worker ) and is used to uniquely identity jobs and workers.</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    <span class="c1">// slatekit.common.Identity is used to identify the job.  
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s">&#34;demo&#34;</span><span class="p">,</span> <span class="s">&#34;newsletter&#34;</span><span class="p">,</span> <span class="n">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">)</span>
+
+    <span class="c1">// id.id   : {AREA}.{SERVICE}.{AGENT}.{ENV}.{INSTANCE}
+</span><span class="c1"></span>    <span class="c1">// id.id   : demo.newsletter.job.dev.09cd7588-24cb-425b-8cec-2494c4460387
+</span><span class="c1"></span>    <span class="c1">// id.name : demo.newsletter
+</span><span class="c1"></span>    <span class="c1">// id.full : demo.newsletter.job.dev
+</span><span class="c1"></span>    <span class="c1">// id.area : demo
+</span><span class="c1"></span>    <span class="c1">// id.svc  : newsletter
+</span><span class="c1"></span>    <span class="c1">// id.agent: Job
+</span><span class="c1"></span>    <span class="c1">// id.env  : dev
+</span><span class="c1"></span>    <span class="c1">// id.inst : 09cd7588-24cb-425b-8cec-2494c4460387
+</span><span class="c1"></span>    <span class="c1">// id.tags : []</span></code></pre></div>
+<br/><br/></p>
+
+<h2 id="setup">Setup</h2>
+
+<p>You can set up workers in various ways using either simple functions ( which get wrapped inside a Worker) or extending from the Worker class itself and implementing the <strong>work</strong> method. For full example, refer to <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Jobs.kt" >Example_Jobs.kt</a>
+<br/><br/></p>
+
+<h3 id="1-function">1. Function</h3>
+
+<p>You can declare a simple 0 parameter function to perform some work
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetter</span><span class="p">():</span><span class="n">WorkResult</span> <span class="p">{</span>
+        <span class="c1">// Perform the work ...
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">WorkResult</span><span class="p">(</span><span class="n">WorkState</span><span class="p">.</span><span class="n">Done</span><span class="p">)</span>
     <span class="p">}</span></code></pre></div>
+<br/><br/></p>
+
+<h3 id="2-function-with-task">2. Function with Task</h3>
+
+<p>You can declare a simple 1 parameter that takes in a <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Task</a> ( representing a unit of work ). This assumes you are sourcing the work from a Queue.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetter</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">):</span><span class="n">WorkResult</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>    <span class="c1">// abc123 
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">from</span><span class="p">)</span>  <span class="c1">// queue://notification
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">job</span><span class="p">)</span>   <span class="c1">// job1
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>  <span class="c1">// users.sendNewsletter
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="k">data</span><span class="p">)</span>  <span class="c1">// { ... } json payload
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">xid</span><span class="p">)</span>   <span class="c1">// 12345   correlation id
+</span><span class="c1"></span>        <span class="c1">// Perform the work ...
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">WorkResult</span><span class="p">(</span><span class="n">WorkState</span><span class="p">.</span><span class="n">Done</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div>
+<br/><br/></p>
+
+<h3 id="3-worker-class">3. Worker class</h3>
+
+<p>Finally, you can extend from the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Worker.kt" >Worker</a> class. This is the most comprehensive option as it gives you the ability to customize various life-cycel events ( see later section ). The life-cycle events go from <strong>init -&gt; work -&gt; done</strong>.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    <span class="c1">// slatekit.common.Identity is used to identify the job.  
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s">&#34;samples&#34;</span><span class="p">,</span> <span class="s">&#34;newsletter&#34;</span><span class="p">,</span> <span class="n">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Worker
+</span><span class="c1"></span>    <span class="k">class</span> <span class="nc">NewsLetterWorker</span> <span class="p">:</span> <span class="n">Worker</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// Initialization hook ( for setup / logs / alerts )
+</span><span class="c1"></span>        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">notify</span><span class="p">(</span><span class="s">&#34;initializing&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">((</span><span class="s">&#34;id&#34;</span> <span class="n">to</span> <span class="k">this</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">)))</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Implement your work here.
+</span><span class="c1"></span>        <span class="c1">// NOTE: If you are not using a queue, this task will be empty e.g. Task.empty
+</span><span class="c1"></span>        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">work</span><span class="p">(</span><span class="n">task</span><span class="p">:</span><span class="n">Task</span><span class="p">):</span> <span class="n">WorkResult</span> <span class="p">{</span>
+            <span class="c1">// Perform the work ...
+</span><span class="c1"></span>            <span class="k">return</span> <span class="n">WorkResult</span><span class="p">(</span><span class="n">WorkState</span><span class="p">.</span><span class="n">Done</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Transition hook for when the status is changed ( e.g. from Status.Running -&gt; Status.Paused )
+</span><span class="c1"></span>        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">move</span><span class="p">(</span><span class="n">state</span><span class="p">:</span> <span class="n">Status</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">notify</span><span class="p">(</span><span class="s">&#34;move&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;status&#34;</span> <span class="n">to</span> <span class="n">state</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Completion hook ( for logic / logs / alerts )
+</span><span class="c1"></span>        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">done</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">notify</span><span class="p">(</span><span class="s">&#34;done&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">((</span><span class="s">&#34;id&#34;</span> <span class="n">to</span> <span class="k">this</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">)))</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Failure hook ( for logic / logs / alerts )
+</span><span class="c1"></span>        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">fail</span><span class="p">(</span><span class="n">err</span><span class="p">:</span><span class="n">Throwable</span><span class="p">?)</span> <span class="p">{</span>
+            <span class="n">notify</span><span class="p">(</span><span class="s">&#34;failure&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">((</span><span class="s">&#34;id&#34;</span> <span class="n">to</span> <span class="k">this</span><span class="p">.</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">),</span> <span class="p">(</span><span class="s">&#34;err&#34;</span> <span class="n">to</span> <span class="p">(</span><span class="n">err</span><span class="o">?.</span><span class="n">message</span> <span class="o">?:</span> <span class="s">&#34;&#34;</span><span class="p">))))</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Initialization hook ( for setup / logs / alerts )
+</span><span class="c1"></span>        <span class="k">override</span> <span class="k">fun</span> <span class="nf">notify</span><span class="p">(</span><span class="n">desc</span><span class="p">:</span> <span class="n">String</span><span class="p">?,</span> <span class="n">extra</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Pair</span><span class="p">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;&gt;?)</span> <span class="p">{</span>
+            <span class="k">val</span> <span class="py">detail</span> <span class="p">=</span> <span class="n">extra</span><span class="o">?.</span><span class="n">joinToString</span><span class="p">(</span><span class="s">&#34;,&#34;</span><span class="p">)</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">first</span> <span class="p">+</span> <span class="s">&#34;=&#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">.</span><span class="n">second</span> <span class="p">}</span>
+            <span class="c1">// Simulate notification to email/alerts/etc
+</span><span class="c1"></span>            <span class="n">println</span><span class="p">(</span><span class="n">desc</span> <span class="p">+</span> <span class="n">detail</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></div>
+
 
 
 
 <a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
 
-<br/><br/><br/></p>
+<br/><br/><br/>
 
-<h2 id="reserved">Reserved</h2>
+<h2 id="register">Register</h2>
 
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+<p>Once you have a work function, you can register it as a new Job.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+
+    <span class="c1">// Identity
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s">&#34;samples&#34;</span><span class="p">,</span> <span class="s">&#34;newsletter&#34;</span><span class="p">,</span> <span class="n">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">)</span>
         
-    <span class="p">}</span></code></pre></div>
+    <span class="c1">// Queues
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">queue1</span> <span class="p">=</span> <span class="n">Queue</span><span class="p">(</span><span class="s">&#34;queue1&#34;</span><span class="p">,</span> <span class="n">Priority</span><span class="p">.</span><span class="n">Mid</span><span class="p">,</span> <span class="n">QueueSourceInMemory</span><span class="p">.</span><span class="n">stringQueue</span><span class="p">(</span><span class="m">5</span><span class="p">))</span>
+    <span class="k">val</span> <span class="py">queue2</span> <span class="p">=</span> <span class="n">Queue</span><span class="p">(</span><span class="s">&#34;queue2&#34;</span><span class="p">,</span> <span class="n">Priority</span><span class="p">.</span><span class="n">Mid</span><span class="p">,</span> <span class="n">QueueSourceInMemory</span><span class="p">.</span><span class="n">stringQueue</span><span class="p">(</span><span class="m">5</span><span class="p">))</span>
+
+    <span class="c1">// Registry
+</span><span class="c1"></span>    <span class="c1">// NOTE: Create an identity for each job using the id template above.
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">jobs</span> <span class="p">=</span> <span class="n">Jobs</span><span class="p">(</span>
+            <span class="n">listOf</span><span class="p">(</span><span class="n">queue1</span><span class="p">,</span> <span class="n">queue2</span><span class="p">),</span>
+            <span class="n">listOf</span><span class="p">(</span>
+                    <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job1&#34;</span><span class="p">),</span> <span class="o">::</span><span class="n">sendNewsLetter</span><span class="p">),</span>
+                    <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job2&#34;</span><span class="p">),</span> <span class="n">listOf</span><span class="p">(</span><span class="o">::</span><span class="n">sendNewsLetter</span><span class="p">,</span> <span class="o">::</span><span class="n">sendNewsLetterWithPaging</span><span class="p">)),</span>
+                    <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job3&#34;</span><span class="p">),</span> <span class="n">listOf</span><span class="p">(</span><span class="o">::</span><span class="n">sendNewsLetterWithPaging</span><span class="p">)),</span>
+                    <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job4&#34;</span><span class="p">),</span> <span class="n">listOf</span><span class="p">(</span><span class="o">::</span><span class="n">sendNewsLetterWithPaging</span><span class="p">)),</span>
+                    <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job5&#34;</span><span class="p">),</span> <span class="n">listOf</span><span class="p">(</span><span class="o">::</span><span class="n">sendNewsLetterFromQueue</span><span class="p">),</span> <span class="n">queue1</span><span class="p">),</span>
+                    <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job6&#34;</span><span class="p">),</span> <span class="n">listOf</span><span class="p">(</span><span class="n">NewsLetterWorker</span><span class="p">()),</span> <span class="n">queue2</span><span class="p">)</span>
+            <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1">// Run job named &#34;samples.job1&#34;
+</span><span class="c1"></span>    <span class="n">jobs</span><span class="p">.</span><span class="n">run</span><span class="p">(</span><span class="s">&#34;samples.job1&#34;</span><span class="p">)</span></code></pre></div>
+
 
 
 
 <a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
 
-<br/><br/><br/></p>
+<br/><br/><br/>
 
-<h2 id="args">Args</h2>
+<h2 id="actions">Usage</h2>
 
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
+<p>There are various operations on the job from checking the status, to management actions such as starting, stopping, etc.</p>
 
+<h3 id="1-actions">1. Actions</h3>
 
+<p>Jobs that are <strong>paged</strong> or <strong>queued</strong> can be <strong>gracefully</strong> started, stopped, paused, resumed. This is accomplished by sending Job Requests to the Job. These requests impact the status of the job and all its workers. These are methods available on the <strong>Job</strong> component itself.
+<div class="alert alert-warning" role="alert">
+  TIP: You can also issues individual actions/requests on 1 worker in the job by building up a JobRequest
+</div>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Purpose</strong></td>
+    </tr>
+    <tr>
+        <td><strong>start</strong></td>
+        <td>Starting</td>
+        <td>Starts the job and its associated workers</td>
+    </tr>
+    <tr>
+        <td><strong>stop</strong></td>
+        <td>Stopped</td>
+        <td>Stops the job and its associated workers</td>
+    </tr>
+    <tr>
+        <td><strong>pause</strong></td>
+        <td>Paused</td>
+        <td>Pauses the job and its associated workers</td>
+    </tr>
+    <tr>
+        <td><strong>resume</strong></td>
+        <td>Running</td>
+        <td>Resumes the jobs and its associated workers</td>
+    </tr>
+    <tr>
+        <td><strong>process</strong></td>
+        <td>Running</td>
+        <td>Issues a single process / work request </td>
+    </tr>
+</table></p>
 
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="c1">// Assume jobs are registered in the Jobs component.
+</span><span class="c1"></span>    <span class="c1">// ....
+</span><span class="c1"></span>    <span class="c1">// See registration section
+</span><span class="c1"></span>
+    <span class="c1">// Get a job by its name
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">job</span> <span class="p">=</span> <span class="n">jobs</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s">&#34;samples.job1&#34;</span><span class="p">)</span>
 
-<br/><br/><br/></p>
+    <span class="c1">// Perform operations
+</span><span class="c1"></span>    <span class="n">job</span><span class="o">?.</span><span class="n">let</span> <span class="p">{</span> <span class="n">job</span> <span class="p">-&gt;</span>
 
-<h2 id="requests">Requests</h2>
+        <span class="c1">// NOTES: 
+</span><span class="c1"></span>        <span class="c1">// 1. This does not immediately perform the action.
+</span><span class="c1"></span>        <span class="c1">// 2. A Job request is sent to the Job Channel 
+</span><span class="c1"></span>        <span class="c1">// 3. A Job then delegates the respective action to its workers
+</span><span class="c1"></span>        <span class="n">job</span><span class="p">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">stop</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">pause</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">resume</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">process</span><span class="p">()</span>
+    <span class="p">}</span>
+     </code></pre></div>
+<br/><br/></p>
 
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
+<h3 id="2-status">2. Status</h3>
 
+<p>You can check the status of the job. The Status range are available in <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Status.kt" >Status</a></p>
 
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="c1">// Get a job by its name
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">job</span> <span class="p">=</span> <span class="n">jobs</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s">&#34;samples.job1&#34;</span><span class="p">)</span>
 
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+    <span class="c1">// Check status
+</span><span class="c1"></span>    <span class="n">job</span><span class="o">?.</span><span class="n">let</span> <span class="p">{</span> <span class="n">job</span> <span class="p">-&gt;</span>
+        <span class="c1">// Get current status
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">status</span> <span class="p">=</span> <span class="n">job</span><span class="p">.</span><span class="n">status</span><span class="p">()</span>
 
-<br/><br/><br/></p>
+        <span class="c1">// Check status
+</span><span class="c1"></span>        <span class="n">job</span><span class="p">.</span><span class="n">isIdle</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">isRunning</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">isPaused</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">isStopped</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">isComplete</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">isFailed</span><span class="p">()</span>
+        <span class="n">job</span><span class="p">.</span><span class="n">isStoppedOrPaused</span><span class="p">()</span>
 
-<h2 id="execute">Execute</h2>
+        <span class="c1">// Check for specific status
+</span><span class="c1"></span>        <span class="n">job</span><span class="p">.</span><span class="n">isState</span><span class="p">(</span><span class="n">Status</span><span class="p">.</span><span class="n">Running</span><span class="p">)</span>
+        <span class="s">&#34;&#34;</span>
+    <span class="p">}</span>
+     </code></pre></div>
 
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
-<h2 id="responses">Responses</h2>
-
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
-<h2 id="startup">Startup</h2>
-
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
-<h2 id="from-file">From file</h2>
-
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
-<h2 id="apis">API</h2>
-
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
-<h2 id="scripts">Scripts</h2>
-
-<p>coming soon
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
 
 
 
 <a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
 
-<br/><br/><br/></p>
+<br/><br/><br/>
+
+<h2 id="cycle">Cycle</h2>
+
+<p>Workers have several life-cycle event methods. They are called in order and the status of the worker changes after the event.</p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Purpose</strong></td>
+    </tr>
+    <tr>
+        <td><strong>init</strong></td>
+        <td>Starting</td>
+        <td>initialization hook for the worker</td>
+    </tr>
+    <tr>
+        <td><strong>work</strong></td>
+        <td>Running</td>
+        <td>initialization hook for the worker</td>
+    </tr>
+    <tr>
+        <td><strong>fail</strong></td>
+        <td>Failed</td>
+        <td>Called in the event of an error/exception/failure</td>
+    </tr>
+    <tr>
+        <td><strong>done</strong></td>
+        <td>Complete</td>
+        <td>Called when the work method has issues Work.Done</td>
+    </tr>
+</table>
+
+
+
+
+<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<h2 id="types">Types</h2>
+
+<p>There are different types of jobs based on whether they run all their work in 1 go or perform work in batches/pages. This is <strong>(currently)</strong> not indicated explicitly at the function/worker level, but is based on what the function/work methods returns for the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/WorkState.kt" >WorkState</a>.
+<br/><br/></p>
+
+<h3 id="1-onetime">1. OneTime</h3>
+
+<p>A one time worker simply performs the long-running operation and returns a WorkResult indicating it&rsquo;s done.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetter</span><span class="p">():</span><span class="n">WorkResult</span> <span class="p">{</span>
+        <span class="c1">// Process the work
+</span><span class="c1"></span>        <span class="c1">// ...
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">WorkResult</span><span class="p">(</span><span class="n">WorkState</span><span class="p">.</span><span class="n">Done</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div>
+<br/><br/></p>
+
+<h3 id="2-paged">2. Paged</h3>
+
+<p>A paged worker runs performs work in batches or pages. After performing a batch of work, this paged worker must return a WorkState.Next.</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="c1">// This keeps track of the page/offset
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">offset</span> <span class="p">=</span> <span class="n">AtomicInteger</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">batchSize</span> <span class="p">=</span> <span class="m">4</span>
+    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetterWithPaging</span><span class="p">():</span><span class="n">WorkResult</span> <span class="p">{</span>
+        <span class="c1">// Process the work
+</span><span class="c1"></span>        <span class="c1">// ...
+</span><span class="c1"></span>
+        <span class="c1">// Increment the batch/page offset for next time
+</span><span class="c1"></span>        <span class="n">offset</span><span class="p">.</span><span class="n">addAndGet</span><span class="p">(</span><span class="n">batchSize</span><span class="p">)</span>
+
+        <span class="c1">// Indicate to the system this is paged and there is more to do.
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">WorkResult</span><span class="p">.</span><span class="n">next</span><span class="p">(</span>
+            <span class="n">offset</span> <span class="p">=</span> <span class="n">offset</span><span class="p">.</span><span class="k">get</span><span class="p">()</span> <span class="p">+</span> <span class="n">batchSize</span><span class="p">.</span><span class="n">toLong</span><span class="p">(),</span> 
+            <span class="n">processed</span> <span class="p">=</span> <span class="n">batchSize</span>
+            <span class="n">reference</span> <span class="p">=</span> <span class="s">&#34;newsletters&#34;</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+     </code></pre></div>
+<br/><br/></p>
+
+<h3 id="3-queued">3. Queued</h3>
+
+<p>A queued worker runs work via <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Tasks</a> from a Queue.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
+    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetterFromQueue</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">):</span><span class="n">WorkResult</span> <span class="p">{</span>
+
+        <span class="c1">// Get data out of the task
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">userId</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">toInt</span><span class="p">()</span>
+
+        <span class="c1">// Simulate getting the user and sending the newsletter
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">getUser</span><span class="p">(</span><span class="n">userId</span><span class="p">)</span>
+        <span class="n">send</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">job</span><span class="p">,</span> <span class="s">&#34;Latest News Letter!&#34;</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+        <span class="c1">// Acknowledge the task or abandon via task.fail()
+</span><span class="c1"></span>        <span class="n">task</span><span class="p">.</span><span class="n">done</span><span class="p">()</span>
+
+        <span class="c1">// Indicate that this can now handle more
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">WorkResult</span><span class="p">(</span><span class="n">WorkState</span><span class="p">.</span><span class="n">More</span><span class="p">)</span>
+    <span class="p">}</span>
+     </code></pre></div></p>
+
+
+
+
+<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<h2 id="events">Events</h2>
+
+<p>You can subscribe to various job events such as any Status changes or for a specific Status change.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="c1">// Subscribe to changes in status
+</span><span class="c1"></span>    <span class="n">job</span><span class="p">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Job: ${it.id} status changed to ${it.status().name}&#34;</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="c1">// Subscribe to change to Stopped status
+</span><span class="c1"></span>    <span class="n">job</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">Status</span><span class="p">.</span><span class="n">Stopped</span><span class="p">)</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Job: ${it.id} stopped!&#34;</span><span class="p">)</span>  <span class="p">}</span>
+     </code></pre></div>
+
+
+
+
+<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<h2 id="policies">Policies</h2>
+
+<p>You can set up custom policies which essentially represent middleware functions to execute at various times and/or conditions of workers and jobs.
+Policies are available in the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-functions/src/main/kotlin/slatekit/functions/policy" >slatekit-functions</a> project ( not yet documented).
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="c1">// There are 3 policies setup for this job:
+</span><span class="c1"></span>    <span class="c1">// 1. Every: for every 10 items processed, call the function supplied
+</span><span class="c1"></span>    <span class="c1">// 2. Limit: limit number of items to process to 12. ( useful for &#34;waves&#34;)
+</span><span class="c1"></span>    <span class="c1">// 3. Ratio: Ensure the job stops if the error (failed) job ratio hits 10%
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">job</span> <span class="p">=</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">jobs</span><span class="p">.</span><span class="n">Job</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">service</span> <span class="p">=</span> <span class="s">&#34;job7&#34;</span><span class="p">),</span> <span class="n">listOf</span><span class="p">(</span><span class="o">::</span><span class="n">sendNewsLetterWithPaging</span><span class="p">),</span> 
+        <span class="n">policies</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
+            <span class="n">Every</span><span class="p">(</span><span class="m">10</span><span class="p">,</span> <span class="p">{</span> <span class="n">req</span><span class="p">,</span> <span class="n">res</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Paged : &#34;</span> <span class="p">+</span> <span class="n">req</span><span class="p">.</span><span class="n">task</span><span class="p">.</span><span class="n">id</span> <span class="p">+</span> <span class="s">&#34;:&#34;</span> <span class="p">+</span> <span class="n">res</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="p">}),</span>
+            <span class="n">Limit</span><span class="p">(</span><span class="m">12</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="p">{</span> <span class="n">req</span> <span class="p">-&gt;</span> <span class="n">req</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span> <span class="p">}),</span>
+            <span class="n">Ratio</span><span class="p">(.</span><span class="m">1</span><span class="p">,</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">results</span><span class="p">.</span><span class="n">Status</span><span class="p">.</span><span class="n">Errored</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">),</span> <span class="p">{</span> <span class="n">req</span> <span class="p">-&gt;</span> <span class="n">req</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span> <span class="p">})</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+     </code></pre></div></p>
+
+
+
+
+<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<h2 id="workers">Workers</h2>
+
+<p>A job internally holds a collection of workers via <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Workers.kt" >Workers</a>. Each worker has an identity (based off the job&rsquo;s identity ) in order to uniquely identify it. You can get the ids of all the workers and get the worker context which holds various components like polices ( middleware ) and diagnostics/stats.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="c1">// Get the workers collection ( Workers )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">workers</span> <span class="p">=</span> <span class="n">job</span><span class="p">.</span><span class="n">workers</span>
+
+    <span class="c1">// Get all worker ids ( List&lt;Identity&gt; )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">workerIds</span> <span class="p">=</span> <span class="n">workers</span><span class="p">.</span><span class="n">getIds</span><span class="p">()</span>
+
+    <span class="c1">// Get the context for a specific worker ( WorkContext )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">workerContext</span> <span class="p">=</span> <span class="n">job</span><span class="p">.</span><span class="n">workers</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">workerIds</span><span class="p">.</span><span class="n">first</span><span class="p">())</span>
+
+    <span class="c1">// The worker performing work on tasks
+</span><span class="c1"></span>    <span class="n">workerContext</span><span class="o">?.</span><span class="n">let</span> <span class="p">{</span> <span class="n">ctx</span> <span class="p">-&gt;</span>
+
+        <span class="c1">// Identity of the worker parent ( Job.id )
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="n">ctx</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+
+        <span class="c1">// Worker itself
+</span><span class="c1"></span>        <span class="n">ctx</span><span class="p">.</span><span class="n">worker</span>
+
+        <span class="c1">// Worker middleware applied
+</span><span class="c1"></span>        <span class="n">ctx</span><span class="p">.</span><span class="n">policies</span>
+
+        <span class="c1">// Worker statistics
+</span><span class="c1"></span>        <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span>
+    <span class="p">}</span>
+     </code></pre></div></p>
+
+
+
+
+<a href="arch/jobs#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<h2 id="stats">Stats</h2>
+
+<p>Statistics are recorded at the worker level. There is ( currently ) no way aggregate statistics across all workers. But this can be done and/or integrated with a 3rd-party metrics library like <strong>Micrometer</strong>.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="c1">// Get the workers collection ( Workers )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">workers</span> <span class="p">=</span> <span class="n">job</span><span class="p">.</span><span class="n">workers</span>
+
+    <span class="c1">// Get all worker ids ( List&lt;Identity&gt; )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">workerIds</span> <span class="p">=</span> <span class="n">workers</span><span class="p">.</span><span class="n">getIds</span><span class="p">()</span>
+
+    <span class="c1">// Get the context for a specific worker ( WorkContext )
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">workerContext</span> <span class="p">=</span> <span class="n">job</span><span class="p">.</span><span class="n">workers</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">workerIds</span><span class="p">.</span><span class="n">first</span><span class="p">())</span>
+
+    <span class="c1">// The worker performing work on tasks
+</span><span class="c1"></span>    <span class="n">workerContext</span><span class="o">?.</span><span class="n">let</span> <span class="p">{</span> <span class="n">ctx</span> <span class="p">-&gt;</span>
+
+        <span class="c1">// Worker statistics
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">stats</span> <span class="p">=</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span>
+
+        <span class="c1">// Worker statistics
+</span><span class="c1"></span>        <span class="c1">// Calls: Simple counters to count calls to a worker
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;calls.totalRuns: &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">calls</span><span class="p">.</span><span class="n">totalRuns</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;calls.totalPassed: &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">calls</span><span class="p">.</span><span class="n">totalPassed</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;calls.totalFailed: &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">calls</span><span class="p">.</span><span class="n">totalFailed</span><span class="p">())</span>
+        
+        <span class="c1">// Counts: Counts the result success/failure categories
+</span><span class="c1"></span>        <span class="c1">// See slatekit.results.Status.kt for more info
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalProcessed : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalProcessed</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalSucceeded : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalSucceeded</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalDenied    : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalDenied</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalInvalid   : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalInvalid</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalIgnored   : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalIgnored</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalErrored   : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalErrored</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;counts.totalUnexpected: &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">counts</span><span class="p">.</span><span class="n">totalUnexpected</span><span class="p">())</span>
+
+        <span class="c1">// Lasts: Stores the last request/result of an call to work
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalProcessed : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastProcessed</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalSucceeded : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastSuccess</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalDenied    : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastDenied</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalInvalid   : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastInvalid</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalIgnored   : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastIgnored</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalErrored   : &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastErrored</span><span class="p">())</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;lasts.totalUnexpected: &#34;</span> <span class="p">+</span> <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">lasts</span><span class="o">?.</span><span class="n">lastUnexpected</span><span class="p">())</span>
+        
+        <span class="c1">// You can also hook up loggers and events
+</span><span class="c1"></span>        <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">logger</span>
+        <span class="n">ctx</span><span class="p">.</span><span class="n">stats</span><span class="p">.</span><span class="n">events</span>
+    <span class="p">}</span>
+     </code></pre></div>
 
 <br/>
 

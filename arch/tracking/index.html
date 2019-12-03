@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    <base href="../../">
+          
+      
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/mobirise.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/fontawesome-all.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick-theme.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/animate.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/agency-2.css">
+
+
+    <link rel="stylesheet" href="assets/theme/css/about-1.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
+    <link rel="stylesheet" href="assets/app/syntax.css">
+          
+   
+    
+    <link rel="stylesheet" href="assets/app/app.css">
+
+
+    <title>Slate Kit: Tracking</title>
+</head>
+
+<body>
+
+    
+    <div class="se-pre-con"></div>
+
+    
+        
+        <div class="header-classic fixed-top navbar-light wow fadeInDown">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <nav class="navbar navbar-expand-lg navbar-classic">
+                            <a class="navbar-brand" href="#0">
+                                <img src="assets/img/saas-1/logo.png" alt=""></a>
+                            <button
+                                class="navbar-toggler collapsed"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbar-classic"
+                                aria-controls="navbar-classic"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="icon-bar top-bar mt-0"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbar-classic">
+                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+                                    
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Getting Started
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="start/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="start/hello_world">Hello World</a></li>
+            <li><a class="dropdown-item" href="start/generators">Generators</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Architecture Components
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/results">Results</a></li>
+            <li><a class="dropdown-item" href="arch/context">Context</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/app">App</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
+            <li><a class="dropdown-item" href="arch/cli">CLI</a></li>
+            <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="">-------------------</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="utils/overview">Utilities</a>
+    </li>
+    
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            More
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
+            <li><a class="dropdown-item" href="info/standards">Standards</a></li>
+            <li><a class="dropdown-item" href="info/contact">Contact</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://github.com/code-helix/slatekit">Github</a>
+    </li>
+</ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    
+    <section class="header wow fadeInUp">
+        <div class="container text-center">
+            <h2>Tracking</h2>
+        </div>
+    </section>
+    
+    <section class="sk-creative">
+      <div class="container">
+        
+
+<h1 id="overview">Overview</h1>
+
+<p>The Tracking components in Slate Kit are useful for diagnostics, specifically for tracking, storing and viewing values and success/failure states. This are especially useful for jobs, reports, caching, and ETL (Extract, Transform, Load) operations. <strong>These are NOT a replacement for monitoring libraries like Micrometer</strong>.</p>
+
+<br/><br/>
+
+<h1 id="goals">Goals</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Supplemental</strong></td>
+        <td>Supplement the <a href="arch/results" >Results</a> for tracking logical categories of errors.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Inspection</strong> </td>
+        <td>Tracking and storing of complex objects/values for <strong>runtime level inspection</strong></td>
+    </tr>
+    <tr>
+        <td><strong>3. Structured</strong></td>
+        <td>Provides data structures to assist with <strong>structured</strong> logging and alerts</td>
+    </tr>
+</table>
+
+<br/><br/>
+
+<h1 id="index">Index</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Section</strong></td>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1</strong></td>
+        <td><strong><a class="url-ch" href="arch/tracking#status">Status</a></strong></td>
+        <td>Current status of this component</td>
+    </tr>
+    <tr>
+        <td><strong>2</strong></td>
+        <td><strong><a class="url-ch" href="arch/tracking#install">Install</a></strong></td>
+        <td>Installation instructions and references to sources</td>
+    </tr>
+    <tr>
+        <td><strong>3</strong></td>
+        <td><strong><a class="url-ch" href="arch/tracking#requires">Requires</a></strong></td>
+        <td>Lists all the Slate Kit and third-party dependencies</td>
+    </tr>
+    <tr>
+        <td><strong>4</strong></td>
+        <td><strong><a class="url-ch" href="arch/tracking#sample">Sample</a></strong></td>
+        <td>Quick sample to show usage of the component</td>
+    </tr>
+    <tr>
+        <td><strong>5</strong></td>
+        <td><strong><a class="url-ch" href="arch/tracking#features">Guide</a></strong></td>
+        <td>List all the features supported</td>
+    </tr>
+</table>
+
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="status">Status</h1>
+
+<p>This component is currently stable and can be used for both <strong>Android and Server</strong></p>
+
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="install">Install</h1>
+
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
+        <span class="c1">// other repositories
+</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="n">dependencies</span> <span class="o">{</span>
+        <span class="c1">// other dependencies ...
+</span><span class="c1"></span>
+        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-tracking:1.0.0&#39;</span>
+    <span class="o">}</span></code></pre></div>
+
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <td><strong>package</strong></td>
+    <td>slatekit.tracking</td>
+  </tr>
+  <tr>
+    <td><strong>jar</strong></td>
+    <td>slatekit.tracking.jar</td>
+  </tr>
+  <tr>
+    <td><strong>git</strong></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking">slatekit/src/lib/kotlin/slatekit-tracking</a></td>
+  </tr>
+  <tr>
+    <td><strong>docs</strong></td>
+    <td><a class="url-ch" href="arch/tracking">Tracking</a></td>
+  </tr>
+  <tr>
+    <td><strong>uses</strong></td>
+    <td>slatekit.results, slatekit.common</td>
+  </tr>
+  <tr>
+    <td><strong>license</strong></td>
+    <td>Apache 2.0</td>
+  </tr>
+  <tr>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Tracking.kt">Example_Tracking.kt</a></td>
+  </tr>
+</table>
+
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="requires">Requires</h1>
+
+<p>This component uses several components from the Slate Kit Utilities.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
+        <td>To model successes and failures with optional status codes</td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
+        <td>Common utilities for both android + server</td>
+    </tr>
+</table></p>
+
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="sample">Sample</h1>
+
+<p>The context can be constructed manually or using convenience methods that build the context from the command line args, and configs.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
+    <span class="k">import</span> <span class="nn">slatekit.common.CommonContext</span>
+
+    <span class="c1">// Create simple context
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">ctx1</span> <span class="p">=</span> <span class="n">CommonContext</span><span class="p">.</span><span class="n">simple</span><span class="p">(</span><span class="s">&#34;demoapp&#34;</span><span class="p">)</span></code></pre></div></p>
+
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="guide">Guide</h1>
+
+<p><table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>More</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Calls</strong></td>
+        <td>Tracks total processed, succeeded, failed operations.</td>
+        <td><a href="arch/tracking/#args" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>2. Counts</strong> </td>
+        <td>Tracks total successes and all error categories from <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
+        <td><a href="arch/tracking/#env" class="more"><span class="btn btn-primary">more</span></a></td><br />
+    </tr>
+    <tr>
+        <td><strong>3. Lasts</strong></td>
+        <td>Tracks the last request and response/result values grouped by <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
+        <td><a href="arch/tracking/#conf" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>4. Event</strong></td>
+        <td>Models a past event with fields and is used for structured logging.</td>
+        <td><a href="arch/tracking/#logs" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>5. Events</strong></td>
+        <td>Event handler for handling/tracking results based on <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
+        <td><a href="arch/tracking/#encrypt" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>6. Recorder</strong></td>
+        <td>Records diagnostics via the calls, counts, events, logger components.</td>
+        <td><a href="arch/tracking/#build" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>7. Updates</strong></td>
+        <td>Tracks an updating value by storing its create/update time, value and total changes.</td>
+        <td><a href="arch/tracking/#about" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="calls">Calls</h2>
+
+<p>This is a simple counter to keep track of the total times an operation is called / passed / failed. These can be integrated with more comprehensive Timers/Guages from such libraries as <strong>Micrometer</strong>. See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Calls.kt" >Calls</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s">&#34;beta&#34;</span><span class="p">,</span> <span class="s">&#34;setup&#34;</span><span class="p">,</span> <span class="n">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">calls</span> <span class="p">=</span> <span class="n">Calls</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+
+    <span class="c1">// Use case 1.1: Increment attempt
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">inc</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.2: Increment number of passed calls
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">passed</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.3: Increment number of failed calls
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">failed</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.4: Get the total number of times the operation was run
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">totalRuns</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.4a: Get the last error
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">totalPassed</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.4b: Get the last error
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">totalFailed</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.5: Determine if operation has run ( if totalPassed &gt; 0 )
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">hasRun</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.6: Get the last time the call was made
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">lastTime</span><span class="p">()</span>
+
+    <span class="c1">// Use case 1.7: Get the last error
+</span><span class="c1"></span>    <span class="n">calls</span><span class="p">.</span><span class="n">lastError</span><span class="p">()</span>
+         </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="counts">Counts</h2>
+
+<p>Counters count the totals across the logical errors groups from
+<a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a>. These can be integrated with more comprehensive Timers/Guages from such libraries as <strong>Micrometer</strong>. See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Counters.kt" >Counters</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    <span class="cm">/** 
+</span><span class="cm">     * Slate Kit heavily uses logical success / failure categories @see[slatekit.results.Status]
+</span><span class="cm">     * 1. Succeeded   -&gt; Success
+</span><span class="cm">     * 2. Pending     -&gt; In Progress
+</span><span class="cm">     * 3. Denied      -&gt; Security related
+</span><span class="cm">     * 4. Ignored     -&gt; Ignored items
+</span><span class="cm">     * 5. Invalid     -&gt; Invalid data
+</span><span class="cm">     * 6. Errored     -&gt; Expected errors
+</span><span class="cm">     * 7. Unexpected  -&gt; Unexpected errors
+</span><span class="cm">     * This counters component keeps track of various categories
+</span><span class="cm">     */</span>
+    <span class="k">val</span> <span class="py">counts</span> <span class="p">=</span> <span class="n">Counters</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">custom</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;deferred&#34;</span><span class="p">))</span>
+
+    <span class="c1">// Use case 2.1: Increment total processed
+</span><span class="c1"></span>    <span class="n">counts</span><span class="p">.</span><span class="n">incProcessed</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">incSucceeded</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">incDenied</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">incInvalid</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">incIgnored</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">incErrored</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">incUnexpected</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">inc</span><span class="p">(</span><span class="s">&#34;deferred&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 2.2: Increment total processed
+</span><span class="c1"></span>    <span class="n">counts</span><span class="p">.</span><span class="n">decProcessed</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">decSucceeded</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">decDenied</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">decInvalid</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">decIgnored</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">decErrored</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">decUnexpected</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">dec</span><span class="p">(</span><span class="s">&#34;deferred&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 2.3: Get totals
+</span><span class="c1"></span>    <span class="n">counts</span><span class="p">.</span><span class="n">totalProcessed</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalSucceeded</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalDenied</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalInvalid</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalIgnored</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalErrored</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalUnexpected</span><span class="p">()</span>
+    <span class="n">counts</span><span class="p">.</span><span class="n">totalCustom</span><span class="p">(</span><span class="s">&#34;deferred&#34;</span><span class="p">)</span>
+     </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="lasts">Lasts</h2>
+
+<p>Lasts track request and response/result values for <strong>inspecting</strong> values at runtime. These become useful during diagnosing specific requests/response that may match certain criteria and having access to the full object vs simply logging the data. See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Lasts.kt" >Lasts</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="c1">// Lets setup some example request / result types
+</span><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserRequest</span><span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">action</span><span class="p">:</span><span class="n">String</span><span class="p">)</span>
+    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserResult</span> <span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">action</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span><span class="n">String</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">sampleRequest</span> <span class="p">=</span> <span class="n">UserRequest</span><span class="p">(</span><span class="s">&#34;uuid123&#34;</span><span class="p">,</span> <span class="s">&#34;register&#34;</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">sampleResult</span> <span class="p">=</span> <span class="n">UserResult</span><span class="p">(</span><span class="s">&#34;uuid123&#34;</span><span class="p">,</span> <span class="s">&#34;registration&#34;</span><span class="p">,</span> <span class="s">&#34;registered as beta user&#34;</span><span class="p">)</span>
+
+    <span class="c1">// Use case 3.1: Track various states
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">lasts</span> <span class="p">=</span> <span class="n">Lasts</span><span class="p">&lt;</span><span class="n">UserRequest</span><span class="p">,</span> <span class="n">UserResult</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;(</span><span class="n">Identity</span><span class="p">.</span><span class="n">test</span><span class="p">(</span><span class="s">&#34;job1&#34;</span><span class="p">))</span>
+    <span class="n">lasts</span><span class="p">.</span><span class="n">succeeded</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">sampleResult</span><span class="p">)</span>
+    <span class="n">lasts</span><span class="p">.</span><span class="n">denied</span>    <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Not authorized&#34;</span><span class="p">))</span>
+    <span class="n">lasts</span><span class="p">.</span><span class="n">invalid</span>   <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Not a beta user&#34;</span><span class="p">))</span>
+    <span class="n">lasts</span><span class="p">.</span><span class="n">ignored</span>   <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;In active user&#34;</span><span class="p">))</span>
+    <span class="n">lasts</span><span class="p">.</span><span class="n">errored</span>   <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Unable to determine user type&#34;</span><span class="p">))</span>
+    <span class="n">lasts</span><span class="p">.</span><span class="n">unexpected</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Unexpected error while handling analytics&#34;</span><span class="p">))</span>
+
+    <span class="c1">// Use case 3.2: Get info
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">lasts</span><span class="p">.</span><span class="n">lastSuccess</span><span class="p">())</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lasts</span><span class="p">.</span><span class="n">lastDenied</span><span class="p">())</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lasts</span><span class="p">.</span><span class="n">lastInvalid</span><span class="p">())</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lasts</span><span class="p">.</span><span class="n">lastIgnored</span><span class="p">())</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lasts</span><span class="p">.</span><span class="n">lastErrored</span><span class="p">())</span>
+    <span class="n">println</span><span class="p">(</span><span class="n">lasts</span><span class="p">.</span><span class="n">lastUnexpected</span><span class="p">())</span>
+
+    <span class="c1">// Use case 3.3: Clear the tracking
+</span><span class="c1"></span>    <span class="n">lasts</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+    </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="event">Event</h2>
+
+<p>The event model is a general purpose data structure to represent a past event with extensible fields. This model can then be used for structured logging, alerts, and analytics. See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Event.kt" >Event</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+        
+    <span class="k">val</span> <span class="py">event</span> <span class="p">=</span> <span class="n">Event</span><span class="p">(</span>
+         <span class="n">area</span>  <span class="p">=</span> <span class="s">&#34;registration&#34;</span><span class="p">,</span>
+         <span class="n">name</span>  <span class="p">=</span> <span class="s">&#34;NEW_ANDROID_REGISTRATION&#34;</span><span class="p">,</span>
+         <span class="n">agent</span> <span class="p">=</span><span class="s">&#34;job&#34;</span><span class="p">,</span>
+         <span class="n">env</span>   <span class="p">=</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span>
+         <span class="n">uuid</span>  <span class="p">=</span> <span class="s">&#34;abc-123-xyz&#34;</span><span class="p">,</span>
+         <span class="n">desc</span>  <span class="p">=</span> <span class="s">&#34;User registration via mobile&#34;</span><span class="p">,</span>
+         <span class="n">status</span><span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">,</span>
+         <span class="n">target</span><span class="p">=</span> <span class="s">&#34;registration-alerts&#34;</span><span class="p">,</span>
+         <span class="n">tag</span>   <span class="p">=</span> <span class="s">&#34;a1b2c3&#34;</span><span class="p">,</span>
+         <span class="n">fields</span><span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
+             <span class="n">Triple</span><span class="p">(</span><span class="s">&#34;region&#34;</span> <span class="p">,</span> <span class="s">&#34;usa&#34;</span>     <span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">),</span>
+             <span class="n">Triple</span><span class="p">(</span><span class="s">&#34;device&#34;</span> <span class="p">,</span> <span class="s">&#34;android&#34;</span> <span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+         <span class="p">)</span>
+    <span class="p">)</span>
+    </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="events">Events</h2>
+
+<p>You have have to the logs/factory to create loggers.
+See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Events.kt" >Events</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+     <span class="c1">// Lets setup some example request / result types
+</span><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserRequest</span><span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">action</span><span class="p">:</span><span class="n">String</span><span class="p">)</span>
+    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserResult</span> <span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">action</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span><span class="n">String</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">sampleRequest</span> <span class="p">=</span> <span class="n">UserRequest</span><span class="p">(</span><span class="s">&#34;uuid123&#34;</span><span class="p">,</span> <span class="s">&#34;register&#34;</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">sampleResult</span> <span class="p">=</span> <span class="n">UserResult</span><span class="p">(</span><span class="s">&#34;uuid123&#34;</span><span class="p">,</span> <span class="s">&#34;registration&#34;</span><span class="p">,</span> <span class="s">&#34;registered as beta user&#34;</span><span class="p">)</span>
+
+    <span class="cm">/** Setup a simple Events class that can handle Requests/Results/Failures of type
+</span><span class="cm">     * request = UserRequest, result = UserResult, error = @see[slatekit.results.Err]
+</span><span class="cm">     * This also needs to be able to convert the request / result / failure to an event.
+</span><span class="cm">     */</span>
+    <span class="k">val</span> <span class="py">events</span> <span class="p">=</span> <span class="n">Events</span><span class="p">&lt;</span><span class="n">UserRequest</span><span class="p">,</span> <span class="n">UserResult</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;(</span>
+            <span class="n">successConverter</span> <span class="p">=</span> <span class="p">{</span> <span class="n">sender</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">res</span> <span class="p">-&gt;</span> <span class="n">event</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">uuid</span> <span class="p">=</span> <span class="n">res</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="n">res</span><span class="p">.</span><span class="n">msg</span><span class="p">)},</span>
+            <span class="n">failureConverter</span> <span class="p">=</span> <span class="p">{</span> <span class="n">sender</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">err</span> <span class="p">-&gt;</span> <span class="n">event</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">uuid</span> <span class="p">=</span> <span class="n">req</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Failed registering beta user&#34;</span><span class="p">,</span> <span class="n">status</span> <span class="p">=</span> <span class="n">err</span><span class="p">.</span><span class="n">status</span><span class="p">)}</span>
+    <span class="p">)</span>
+
+    <span class="c1">// Use case 4.2: Model a sample request and result using slatekit.results.Outcome and have the handler
+</span><span class="c1"></span>    <span class="c1">// process it accordingly based on its category
+</span><span class="c1"></span>    <span class="n">events</span><span class="p">.</span><span class="n">handle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="n">sampleResult</span><span class="p">))</span>
+    <span class="n">events</span><span class="p">.</span><span class="n">handle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Not authorized&#34;</span><span class="p">)))</span>
+    <span class="n">events</span><span class="p">.</span><span class="n">handle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">invalid</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Not a beta user&#34;</span><span class="p">)))</span>
+    <span class="n">events</span><span class="p">.</span><span class="n">handle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">ignored</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;In active user&#34;</span><span class="p">)))</span>
+    <span class="n">events</span><span class="p">.</span><span class="n">handle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">errored</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Unable to determine user type&#34;</span><span class="p">)))</span>
+    <span class="n">events</span><span class="p">.</span><span class="n">handle</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">unexpected</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Unexpected error while handling analytics&#34;</span><span class="p">)))</span>
+
+    </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="recorder">Recorder</h2>
+
+<p>The recorder component is a combination of all the above and can be used to record a request / result across calls, counts, lasts, events, logs.
+See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Recorder.kt" >Recorder</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    
+    <span class="k">val</span> <span class="py">recorder</span> <span class="p">=</span> <span class="n">Recorder</span><span class="p">&lt;</span><span class="n">UserRequest</span><span class="p">,</span> <span class="n">UserResult</span><span class="p">&gt;(</span><span class="n">Identity</span><span class="p">.</span><span class="n">test</span><span class="p">(</span><span class="s">&#34;job1&#34;</span><span class="p">),</span> <span class="n">LoggerConsole</span><span class="p">(),</span> <span class="n">calls</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">lasts</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+
+    <span class="c1">// Use case 5: Record the request / result in the recorder which will track the call, counts, lasts, and events
+</span><span class="c1"></span>    <span class="n">recorder</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="n">sampleResult</span><span class="p">))</span>
+    <span class="n">recorder</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Not authorized&#34;</span><span class="p">)))</span>
+    <span class="n">recorder</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">invalid</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Not a beta user&#34;</span><span class="p">)))</span>
+    <span class="n">recorder</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">ignored</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;In active user&#34;</span><span class="p">)))</span>
+    <span class="n">recorder</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">errored</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Unable to determine user type&#34;</span><span class="p">)))</span>
+    <span class="n">recorder</span><span class="p">.</span><span class="n">record</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">sampleRequest</span><span class="p">,</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">unexpected</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Unexpected error while handling analytics&#34;</span><span class="p">)))</span>
+     </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<h2 id="updates">Updates</h2>
+
+<p>Updates track the initial creation time, update time, total updates of some value T. See <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Updates.kt" >Updates</a> for more info.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
+    <span class="c1">// Initial settings
+</span><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserSettings</span><span class="p">(</span><span class="k">val</span> <span class="py">userId</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">isBetaTester</span><span class="p">:</span><span class="n">Boolean</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">settings</span> <span class="p">=</span> <span class="n">UserSettings</span><span class="p">(</span><span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+
+    <span class="c1">// Track as updates
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">updates</span> <span class="p">=</span> <span class="n">Updates</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">update1</span> <span class="p">=</span> <span class="n">updates</span><span class="p">.</span><span class="k">set</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+    <span class="k">val</span> <span class="py">update2</span> <span class="p">=</span> <span class="n">update1</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">it</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">isBetaTester</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">}</span>
+
+    <span class="n">println</span><span class="p">(</span><span class="n">update2</span><span class="p">.</span><span class="n">created</span><span class="p">)</span> <span class="c1">// initial creation time
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">update2</span><span class="p">.</span><span class="n">updated</span><span class="p">)</span> <span class="c1">// last update time
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">update2</span><span class="p">.</span><span class="n">applied</span><span class="p">)</span> <span class="c1">// total times changed
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">update2</span><span class="p">.</span><span class="n">current</span><span class="p">)</span> <span class="c1">// current value
+</span><span class="c1"></span>     </code></pre></div>
+
+
+
+<a href="arch/tracking#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/></p>
+
+<br/>
+
+<a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+      </div>
+    </section>  
+    
+
+    
+    <section class="links">
+        <div class="container text-center">
+            <a href="#0">Twitter</a>
+            <a href="#0">Github</a>
+            <a href="#0">About</a>
+            <a href="#0">Contact</a>
+        </div>
+    </section>
+    
+
+    
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Made with love | Brex-Theme</p>
+        </div>
+    </footer>
+    
+
+    
+            
+    <script src="assets/theme/js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/theme/js/plugins/popper.min.js"></script>
+    <script src="assets/theme/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.waypoints.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.counterup.min.js"></script>
+    <script src="assets/theme/js/plugins/slick.js"></script>
+    <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/theme/js/plugins/wow.min.js"></script>
+    <script src="assets/theme/js/agency-1.js"></script>
+
+    <script src="assets/theme/js/sass-1.js"></script>
+</body>
+
+</html>

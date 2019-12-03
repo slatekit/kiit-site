@@ -163,8 +163,35 @@
 
 <h1 id="overview">Overview</h1>
 
-<p><strong>Result[T, E]</strong> is a foundational component in <strong>Slate Kit</strong> for accurately modeling successes and failures using a functional approach to error handling. Result is not a brand new concept, it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google&rsquo;s GRPC codes ( See below ). The implementation here differs with the <strong>flexibility of the Error type</strong>, the addition of an optional <strong>Status Code</strong>, and support for <strong>logical grouping of errors</strong>.
+<p><strong>Result</strong> is a foundational component in Slate Kit for <strong>accurately modeling successes and failures</strong> using a functional approach to error handling. Result is <strong>not a new concept</strong> as it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google&rsquo;s GRPC codes ( See below ). The implementation here differs maily with the design/goals listed
+<br/><br/></p>
+
+<h1 id="goals">Goals</h1>
+
+<p>The design of this Result component reasonably differs from other implementations.
 <table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Design</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Flexible error</strong> </td>
+        <td>Error type on the Failure branch can be anything, Exception, Err, String. </td><br />
+    </tr>
+    <tr>
+        <td><strong>2. Status Codes</strong></td>
+        <td>Logical groups of status codes to categories errors, which can be converted to Http</td>
+    </tr>
+    <tr>
+        <td><strong>3. Sensible defaults</strong></td>
+        <td>Default Error types, and builders are provided to reduce custom errors / boiler-plate</td>
+    </tr>
+</table>
+<br/><br/></p>
+
+<h1 id="compare">Compare</h1>
+
+<p><table class="table table-bordered table-striped">
     <tr>
         <td><strong>#</strong></td>
         <td><strong>Language</strong></td>
@@ -382,32 +409,6 @@ Refer to the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib
         <span class="k">is</span> <span class="n">Status</span><span class="p">.</span><span class="n">Unexpected</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">addResult</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
     <span class="p">}</span>
         </code></pre></div>
-<br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
-
-<h1 id="goals">Goals</h1>
-
-<p>The design of this Result type invovles achieving these specific goals.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Goal</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1. Accuracy of models</strong></td>
-        <td>Accurate successes / failures, and functional error-handling with various ways to pattern match</td>
-    </tr>
-    <tr>
-        <td><strong>2. Flexible error type</strong> </td>
-        <td>Error type on the Failure branch can be anything, Exception, Err, String. Use exceptions or default types</td><br />
-    </tr>
-    <tr>
-        <td><strong>3. Support for Status Codes</strong></td>
-        <td>Logical groups of status to categories errors, these can also be converted to Http codes</td>
-    </tr>
-</table>
 <br/>
 
 <a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
@@ -669,20 +670,21 @@ Refer to the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib
     <span class="k">import</span> <span class="nn">slatekit.results.Err</span>
     <span class="k">import</span> <span class="nn">slatekit.results.ErrorList</span>
 
-    <span class="c1">// Simple string
+    <span class="c1">// Build Err using convenience methods
+</span><span class="c1"></span>    <span class="c1">// Simple string
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">err1</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">)</span>
 
     <span class="c1">// Exception
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err2</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">Exception</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">))</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err2</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">ex</span><span class="p">(</span><span class="n">Exception</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">))</span>
 
     <span class="c1">// Field: name / value
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err3</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">,</span> <span class="s">&#34;abc123@&#34;</span><span class="p">,</span> <span class="s">&#34;Invalid email&#34;</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err3</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">,</span> <span class="s">&#34;abc123@&#34;</span><span class="p">,</span> <span class="s">&#34;Invalid email&#34;</span><span class="p">)</span>
 
     <span class="c1">// String message from status code
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err4</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err4</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">code</span><span class="p">(</span><span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
 
     <span class="c1">// List of error strings
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err5</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err5</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">list</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
         <span class="s">&#34;username must be at least 8 chars&#34;</span><span class="p">,</span> 
         <span class="s">&#34;username must have 1 UPPERCASE letter&#34;</span><span class="p">),</span> 
     <span class="s">&#34;Username is invalid&#34;</span><span class="p">)</span>
