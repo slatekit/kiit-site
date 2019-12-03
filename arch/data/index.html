@@ -744,11 +744,16 @@ Future versions will include support for:
 
 <h2 id="schemas">Schemas</h2>
 
-<p>You can set up auto-mapping of models to/from records using the Slate Kit Model Schemas. This leverages Kotlins Property references for safely get the name/type information and stores the definition of a model. This model is then supplied to a Mapper to auto-map the model to Values for inserts/updates, and for mapping Records back to the instance.
+<p>You can set up auto-mapping of models to/from records using the Slate Kit Model Schemas. This leverages Kotlins Property references for safely get the name/type information and stores the definition of a model. This model is then supplied to a Mapper to auto-map the model to Values for inserts/updates, and for mapping Records back to the instance. There are 2 ways set up the schema, either explicitly construction or with annotations.</p>
+
+<h3 id="construct">Construct</h3>
+
+<p>Explicitly setup of a Model/Schema
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">import</span> <span class="nn">slatekit.meta.Schema</span>
 
-    <span class="c1">// Uses property references for strongly typed setup
+    <span class="c1">// OPTION 1: Explicit Schema Setup
+</span><span class="c1"></span>    <span class="c1">// Uses property references for strongly typed setup
 </span><span class="c1"></span>    <span class="c1">// Also, can use KType to get if field is required ( via isMarkedNullabel )
 </span><span class="c1"></span>    <span class="k">object</span> <span class="nc">UserSchema</span> <span class="p">:</span> <span class="n">Schema</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="s">&#34;user&#34;</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">val</span> <span class="py">id</span>         <span class="p">=</span> <span class="n">id</span>    <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">id</span>        <span class="p">)</span>
@@ -759,7 +764,7 @@ Future versions will include support for:
         <span class="k">val</span> <span class="py">salary</span>     <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">salary</span>    <span class="p">)</span>
         <span class="k">val</span> <span class="py">active</span>     <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">active</span>    <span class="p">)</span>
         <span class="k">val</span> <span class="py">registered</span> <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">registered</span><span class="p">)</span>
-    <span class="p">}</span>
+    <span class="p">}</span><span class="err">`````</span>
 
     <span class="c1">// Access the model which stores all the fields
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="n">UserSchema</span><span class="p">.</span><span class="n">model</span>
@@ -767,14 +772,60 @@ Future versions will include support for:
     <span class="c1">// Iterate over the models
 </span><span class="c1"></span>    <span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
         <span class="n">println</span><span class="p">(</span><span class="s">&#34;field: name=${it.name}, ${it.storedName}, ${it.isRequired}, ${it.dataTpe}&#34;</span><span class="p">)</span>
-    <span class="p">}</span></code></pre></div>
+    <span class="p">}</span></code></pre></div></p>
+
+<h3 id="annotations">Annotations</h3>
+
+<p>You can also use annotations at the source of the data model.
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
+    <span class="k">data</span> <span class="k">class</span> <span class="nc">User</span><span class="p">(</span>
+        <span class="n">@property</span><span class="p">:</span><span class="n">Id</span><span class="p">()</span>
+        <span class="k">override</span> <span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">Long</span> <span class="p">=</span> <span class="m">0L</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">email</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">first</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">last</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+        <span class="k">val</span> <span class="py">isMale</span><span class="p">:</span><span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+        <span class="k">val</span> <span class="py">age</span><span class="p">:</span><span class="n">Int</span> <span class="p">=</span> <span class="m">35</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+        <span class="k">val</span> <span class="py">active</span><span class="p">:</span><span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+        <span class="k">val</span> <span class="py">salary</span><span class="p">:</span><span class="n">Double</span> <span class="p">=</span> <span class="m">100.00</span><span class="p">,</span>
+
+        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+        <span class="k">val</span> <span class="py">registered</span><span class="p">:</span><span class="n">DateTime</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+
+    <span class="p">)</span> <span class="p">:</span> <span class="n">EntityWithId</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">{</span>
+
+        <span class="k">override</span> <span class="k">fun</span> <span class="nf">isPersisted</span><span class="p">():</span> <span class="n">Boolean</span> <span class="p">=</span> <span class="n">id</span> <span class="p">&gt;</span> <span class="m">0</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Access the model which stores all the fields
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="n">ModelMapper</span><span class="p">.</span><span class="n">loadSchema</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+
+    <span class="c1">// Iterate over the models
+</span><span class="c1"></span>    <span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s">&#34;field: name=${it.name}, ${it.storedName}, ${it.isRequired}, ${it.dataTpe}&#34;</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div></p>
+
 
 
 
 <a href="arch/data#features" class="sk-back-to-details">Back to features</a>
 <a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
 
-<br/><br/><br/></p>
+<br/><br/><br/>
 
 <h2 id="orm">ORM</h2>
 

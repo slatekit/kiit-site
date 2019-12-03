@@ -530,11 +530,15 @@ Entity Services expose CRUD operations on your data model in a "managed way" via
 {{% feature-end mod="arch/data" %}}
 
 ## Schemas {#schemas}
-You can set up auto-mapping of models to/from records using the Slate Kit Model Schemas. This leverages Kotlins Property references for safely get the name/type information and stores the definition of a model. This model is then supplied to a Mapper to auto-map the model to Values for inserts/updates, and for mapping Records back to the instance.
+You can set up auto-mapping of models to/from records using the Slate Kit Model Schemas. This leverages Kotlins Property references for safely get the name/type information and stores the definition of a model. This model is then supplied to a Mapper to auto-map the model to Values for inserts/updates, and for mapping Records back to the instance. There are 2 ways set up the schema, either explicitly construction or with annotations.
+
+### Construct
+Explicitly setup of a Model/Schema
 {{< highlight kotlin >}}
      
     import slatekit.meta.Schema
 
+    // OPTION 1: Explicit Schema Setup
     // Uses property references for strongly typed setup
     // Also, can use KType to get if field is required ( via isMarkedNullabel )
     object UserSchema : Schema<Long, User>(Long::class, User::class, "user") {
@@ -546,7 +550,7 @@ You can set up auto-mapping of models to/from records using the Slate Kit Model 
         val salary     = field (User::salary    )
         val active     = field (User::active    )
         val registered = field (User::registered)
-    }
+    }`````
 
     // Access the model which stores all the fields
     val model = UserSchema.model
@@ -557,6 +561,54 @@ You can set up auto-mapping of models to/from records using the Slate Kit Model 
     }
 
 {{< /highlight >}}
+
+### Annotations
+You can also use annotations at the source of the data model.
+{{< highlight kotlin >}}
+     
+    data class User(
+        @property:Id()
+        override val id:Long = 0L,
+
+        @property:Field(length = 30)
+        val email:String = "",
+
+        @property:Field(length = 30)
+        val first:String = "",
+
+        @property:Field(length = 30)
+        val last:String = "",
+
+        @property:Field()
+        val isMale:Boolean = false,
+
+        @property:Field()
+        val age:Int = 35,
+
+        @property:Field()
+        val active:Boolean = false,
+
+        @property:Field()
+        val salary:Double = 100.00,
+
+        @property:Field()
+        val registered:DateTime? = null
+
+    ) : EntityWithId<Long> {
+
+        override fun isPersisted(): Boolean = id > 0
+    }
+
+    // Access the model which stores all the fields
+    val model = ModelMapper.loadSchema(User::class)
+
+    // Iterate over the models
+    model.fields.forEach {
+        println("field: name=${it.name}, ${it.storedName}, ${it.isRequired}, ${it.dataTpe}")
+    }
+
+{{< /highlight >}}
+
 {{% feature-end mod="arch/data" %}}
 
 ## ORM {#orm}
