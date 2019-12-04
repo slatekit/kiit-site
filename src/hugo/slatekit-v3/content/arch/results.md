@@ -5,26 +5,30 @@ section_header: Results
 ---
 
 # Overview
-**Result** is a foundational component in Slate Kit for **accurately modeling successes and failures** using a functional approach to error handling. Result is **not a new concept** as it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes ( See below ). The implementation here differs maily with the design/goals listed 
+**Result** is a foundational component in Slate Kit for **accurately modeling successes and failures** using a functional approach to error handling. Result is **not a new concept** as it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes ( See below ). The implementation here differs mainly with the design/goals listed below.
 {{% break %}}
 
-# Goals
-The design of this Result component reasonably differs from other implementations.
+# Goals 
+
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong>1. Flexible error</strong> </td>
+        <td><strong>1. Accuracy</strong> </td>
+        <td>Accurate modeling of success/failures </td>                     
+    </tr>
+    <tr>
+        <td><strong>2. Flexible error</strong> </td>
         <td>Error type on the Failure branch can be anything, Exception, Err, String. </td>                     
     </tr>
     <tr>
-        <td><strong>2. Status Codes</strong></td>
+        <td><strong>3. Status Codes</strong></td>
         <td>Logical groups of status codes to categories errors, which can be converted to Http</td>
     </tr>
     <tr>
-        <td><strong>3. Sensible defaults</strong></td>
+        <td><strong>4. Sensible defaults</strong></td>
         <td>Default Error types, and builders are provided to reduce custom errors / boiler-plate</td>
     </tr>
 </table>
@@ -272,7 +276,7 @@ These are the main concepts / terms to know for using this component. All of the
 </table>
 {{% section-end mod="arch/results" %}}
 
-# Features
+# Guide
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>

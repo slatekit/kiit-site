@@ -5,7 +5,7 @@ section_header: Apis
 ---
 
 # Overview
-Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enriching normal Kotlin methods and making them easily discoverable and accessible across as range of hosts. This will resemble an **RPC** type approach, but contains some support ad concepts from **REST**. More specifically, APIs in Slate Kit can be hosted and made available as Web/HTTP APIs, on the CLI, or called from requests from queues or files for automation purposes. Under the hood, Slate Kit simply leverages existing HTTP servers ( currently **Ktor** ), to host, discover, manage, and access Slate Kit APIs. Our {{% sk-link-arch page="cli" name="CLI" %}} also supports the ability to host Slate Kit APIs. This specific approach to API development in Slate Kit is referred to as **Universal APIs**.
+Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enriching normal Kotlin methods and making them easily discoverable and accessible across a range of hosts. This will resemble an **RPC** type approach, but contains some support and concepts from **REST**. More specifically, APIs in Slate Kit can be hosted and made available as Web/HTTP APIs, on the CLI, or called from requests from queues or files for automation purposes. Under the hood, Slate Kit simply leverages existing HTTP servers ( currently **Ktor** ), to host, discover, manage, and access Slate Kit APIs. Our {{% sk-link-arch page="cli" name="CLI" %}} also supports the ability to host Slate Kit APIs. This specific approach to API development in Slate Kit is referred to as **Universal APIs**.
 {{% break %}}
 
 # Create
@@ -70,27 +70,22 @@ Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enr
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#goals">Goals</a></strong></td>
-        <td>Goals of this component and the problems it attempts to solve</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/apis#concepts">Concepts</a></strong></td>
         <td>Core concepts to understand in this component</td>
     </tr>
     <tr>
-        <td><strong>7</strong></td>
+        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/apis#features">Features</a></strong></td>
         <td>List all the features supported</td>
     </tr>
     <tr>
-        <td><strong>8</strong></td>
+        <td><strong>7</strong></td>
         <td><strong><a class="url-ch" href="arch/apis#setup">Setup</a></strong></td>
         <td>Set up and configure this component for use</td>
     </tr>
     <tr>
-        <td><strong>9</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#details">Details</a></strong></td>
+        <td><strong>8</strong></td>
+        <td><strong><a class="url-ch" href="arch/apis#feature">Features</a></strong></td>
         <td>In-depth examples of the supported features</td>
     </tr>
 </table>
@@ -206,7 +201,7 @@ This is a quick and simple example of creating an API using the Slate Kit **Univ
 {{% section-end mod="arch/apis" %}}
 
 
-# Features
+# Guide
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
