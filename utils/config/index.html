@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
     <link rel="stylesheet" href="assets/app/syntax.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Utilities</title>
 </head>
 
@@ -98,12 +99,12 @@
             Architecture Components
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="core/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
-            <li><a class="dropdown-item" href="arch/apis">APIs</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
     <li class="nav-item">
@@ -142,7 +143,7 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities: </h2>
+            <h2>Utilities</h2>
         </div>
     </section>
     
@@ -156,15 +157,15 @@
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
-      <td>Thin wrapper over typesafe config with decryption support, uri loading, and mapping of database connections and api keys</td>
+      <td>Thin wrapper on java properties based config with decryption support, uri loading, and mapping of database connections and api keys</td>
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -205,7 +206,7 @@
         <span class="c1">// other libraries
 </span><span class="c1"></span>
         <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
+</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
     <span class="o">}</span></code></pre></div>
 <br/><br/></p>
 
@@ -220,10 +221,11 @@
 <span class="k">import</span> <span class="nn">slatekit.results.Success</span>
 <span class="k">import</span> <span class="nn">slatekit.common.conf.ConfFuncs</span>
 <span class="k">import</span> <span class="nn">slatekit.common.conf.Config</span>
-<span class="k">import</span> <span class="nn">slatekit.common.db.DbCon</span>
-<span class="k">import</span> <span class="nn">slatekit.common.encrypt.B64Java8</span>
+<span class="k">import</span> <span class="nn">slatekit.common.data.DbCon</span>
+<span class="k">import</span> <span class="nn">slatekit.common.utils.B64Java8</span>
 <span class="k">import</span> <span class="nn">slatekit.common.encrypt.Encryptor</span>
-<span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span></code></pre></div>
+<span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span></code></pre></div>
 <br/><br/></p>
 
 <h2 id="setup">Setup</h2>
@@ -234,7 +236,7 @@
 <h2 id="usage">Usage</h2>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        <span class="c1">// CASE 1: Load up config from resources directory
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">conf</span> <span class="p">=</span> <span class="n">Config</span><span class="p">(</span><span class="s">&#34;env.dev.conf&#34;</span><span class="p">)</span>
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">conf</span> <span class="p">=</span> <span class="n">Config</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;env.dev.conf&#34;</span><span class="p">)</span>
 
         <span class="c1">// CASE 2: Get typed value: non-nullable
 </span><span class="c1"></span>        <span class="c1">// NOTE: default value for typed returned if unavailable

@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
     <link rel="stylesheet" href="assets/app/syntax.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Utilities</title>
 </head>
 
@@ -98,12 +99,12 @@
             Architecture Components
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="core/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
-            <li><a class="dropdown-item" href="arch/apis">APIs</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
     <li class="nav-item">
@@ -142,7 +143,7 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities: Args</h2>
+            <h2>Utilities</h2>
         </div>
     </section>
     
@@ -160,11 +161,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -205,132 +206,52 @@
         <span class="c1">// other libraries
 </span><span class="c1"></span>
         <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
+</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
     <span class="o">}</span></code></pre></div>
 <br/><br/></p>
 
 <h2 id="import">Import</h2>
 
-<p><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
 </span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.args.Args</span>
 <span class="k">import</span> <span class="nn">slatekit.common.args.ArgsSchema</span>
 
 
 <span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span>
+</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Success</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.getOrElse</span></code></pre></td></tr></table>
-</div>
-</div>
+<span class="k">import</span> <span class="nn">slatekit.results.getOrElse</span></code></pre></div>
 <br/><br/></p>
 
 <h2 id="setup">Setup</h2>
 
-<p><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></td></tr></table>
-</div>
-</div>
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
 <br/><br/></p>
 
 <h2 id="usage">Usage</h2>
 
-<p><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Example:
+<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Example:
 </span><span class="c1"></span>    <span class="c1">// Given on the the command line:
 </span><span class="c1"></span>    <span class="c1">// -log.level=info -env=dev -text=&#39;hello world&#39;
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;-log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">,</span> <span class="n">sep</span><span class="p">=</span><span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;-log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">)</span> <span class="p">)</span>
 
-    <span class="c1">// CASE 1: Parse using defaults. E.g. the key/value prefix = &#34;-&#34;, separator = &#34;:&#34;
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;-env:dev -text:&#39;hello world&#39; -batch:10&#34;</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="c1">// CASE 1: Parse using an action prefixed to the arguments
+</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;service.action -log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">)</span>
 
 
-    <span class="c1">// CASE 2: Custom prefix and sep e.g. &#34;!&#34; and separator &#34;=&#34;
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;!env=dev !text=&#39;hello word&#39; !batch=10 &#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;!&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;=&#34;</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="c1">// CASE 2: Custom prefix and sep e.g. &#34;!&#34; and separator &#34;:&#34;
+</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;!env=dev !text=&#39;hello word&#39; !batch:10 &#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;!&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="p">)</span>
 
 
     <span class="c1">// CASE 3a: Check for action/method call in the beginning
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;area.service.method -env=dev -text=&#39;hello word&#39; -batch=10&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;-&#34;</span><span class="p">,</span>
-                 <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 3b: Check for method call in the beginning
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;service.method -env=dev -text=&#39;hello word&#39; -batch=10&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;-&#34;</span><span class="p">,</span>
-                 <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
-
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">args</span> <span class="p">=</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;manage.movies.createSample -title=&#39;Dark Knight&#39; -date=&#39;2013-07-18&#39;&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span>
+    <span class="n">showResults</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
+    <span class="n">args</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">args</span> <span class="p">-&gt;</span>
+      <span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">)</span>
+      <span class="n">args</span><span class="p">.</span><span class="n">getLocalDate</span><span class="p">(</span><span class="s">&#34;date&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
 
     <span class="c1">// CASE 3c: Check for only action name in the beginning.
 </span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;method&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;-&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
@@ -357,12 +278,10 @@
 
 
     <span class="c1">// CASE 8: Build up the schema
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">schema</span> <span class="p">=</span> <span class="n">ArgsSchema</span><span class="p">().</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;env&#34;</span><span class="p">).</span><span class="n">flag</span><span class="p">(</span><span class="s">&#34;log&#34;</span><span class="p">).</span><span class="n">number</span><span class="p">(</span><span class="s">&#34;level&#34;</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">schema</span> <span class="p">=</span> <span class="n">ArgsSchema</span><span class="p">().</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;env&#34;</span><span class="p">,</span> <span class="s">&#34;env&#34;</span><span class="p">).</span><span class="n">flag</span><span class="p">(</span><span class="s">&#34;log&#34;</span><span class="p">,</span> <span class="s">&#34;log&#34;</span><span class="p">).</span><span class="n">number</span><span class="p">(</span><span class="s">&#34;level&#34;</span><span class="p">,</span> <span class="s">&#34;level&#34;</span><span class="p">)</span>
     <span class="n">print</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
 
-    </code></pre></td></tr></table>
-</div>
-</div>
+    </code></pre></div>
 <br/><br/></p>
 
 <h2 id="output">Output</h2>

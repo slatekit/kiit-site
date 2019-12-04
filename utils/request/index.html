@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
     <link rel="stylesheet" href="assets/app/syntax.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Utilities</title>
 </head>
 
@@ -98,12 +99,12 @@
             Architecture Components
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="core/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
-            <li><a class="dropdown-item" href="arch/apis">APIs</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
     <li class="nav-item">
@@ -142,7 +143,7 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities: </h2>
+            <h2>Utilities</h2>
         </div>
     </section>
     
@@ -156,15 +157,15 @@
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
-      <td>Models and abstracts a request that can represent either an HTTP request or a request from the CLI ( Command line ).</td>
+      <td>Models and abstracts a send that can represent either an HTTP send or a send from the CLI ( Command line ).</td>
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -205,22 +206,24 @@
         <span class="c1">// other libraries
 </span><span class="c1"></span>
         <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
+</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
     <span class="o">}</span></code></pre></div>
 <br/><br/></p>
 
 <h2 id="import">Import</h2>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.*</span>
+</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.apis.Verbs</span>
 <span class="k">import</span> <span class="nn">slatekit.common.requests.InputArgs</span>
 <span class="k">import</span> <span class="nn">slatekit.common.requests.Request</span>
-<span class="k">import</span> <span class="nn">slatekit.common.requests.SimpleRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.common.requests.Source</span>
+<span class="k">import</span> <span class="nn">slatekit.common.CommonRequest</span>
+<span class="k">import</span> <span class="nn">slatekit.common.Source</span>
 
 
 <span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span>
+</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+<span class="k">import</span> <span class="nn">slatekit.common.utils.Random</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Try</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
 <br/><br/></p>
@@ -236,7 +239,7 @@
 </span><span class="c1"></span>        <span class="c1">// HTTP Request and a CLI ( command line interface ) request.
 </span><span class="c1"></span>        <span class="c1">// This Request class along with its complementary Result class
 </span><span class="c1"></span>        <span class="c1">// provide the basis for much of the API support in Slate Kit.
-</span><span class="c1"></span>        <span class="c1">// APIs in Slate are protocol independent which basically means
+</span><span class="c1"></span>        <span class="c1">// APIs in Slate are source independent which basically means
 </span><span class="c1"></span>        <span class="c1">// that the APIs can be accessed as HTTP Endpoints or on the CLI
 </span><span class="c1"></span>        <span class="c1">//
 </span><span class="c1"></span>        <span class="c1">// ROUTING:
@@ -264,14 +267,14 @@
 </span><span class="c1"></span>        <span class="c1">// the request is appropriately built from either a CLI Command or the
 </span><span class="c1"></span>        <span class="c1">// SparkJava request ( with a thin abstraction layer ). The requests are
 </span><span class="c1"></span>        <span class="c1">// kept very simple/light for maximum performance and data is NEVER copied.
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">request</span><span class="p">:</span><span class="n">Request</span> <span class="p">=</span> <span class="n">SimpleRequest</span><span class="p">(</span>
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">request</span><span class="p">:</span><span class="n">Request</span> <span class="p">=</span> <span class="n">CommonRequest</span><span class="p">(</span>
                 <span class="n">path</span> <span class="p">=</span> <span class="s">&#34;app.users.activate&#34;</span><span class="p">,</span>
                 <span class="n">parts</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;app&#34;</span><span class="p">,</span> <span class="s">&#34;users&#34;</span><span class="p">,</span> <span class="s">&#34;activate&#34;</span><span class="p">),</span>
                 <span class="n">source</span> <span class="p">=</span> <span class="n">Source</span><span class="p">.</span><span class="n">CLI</span><span class="p">,</span>
-                <span class="n">verb</span> <span class="p">=</span> <span class="s">&#34;post&#34;</span><span class="p">,</span>
+                <span class="n">verb</span> <span class="p">=</span> <span class="n">Verbs</span><span class="p">.</span><span class="n">POST</span><span class="p">,</span>
                 <span class="n">meta</span> <span class="p">=</span> <span class="n">InputArgs</span><span class="p">(</span><span class="n">mapOf</span><span class="p">(</span><span class="s">&#34;api-key&#34;</span> <span class="n">to</span> <span class="s">&#34;ABC-123&#34;</span><span class="p">)),</span>
                 <span class="k">data</span> <span class="p">=</span> <span class="n">InputArgs</span><span class="p">(</span><span class="n">mapOf</span><span class="p">(</span><span class="s">&#34;userId&#34;</span> <span class="n">to</span> <span class="m">5001</span><span class="p">)),</span>
-                <span class="n">raw</span> <span class="p">=</span> <span class="s">&#34;the raw HTTP SparkJava request or CLI ShellCommand&#34;</span><span class="p">,</span>
+                <span class="n">raw</span> <span class="p">=</span> <span class="s">&#34;the raw HTTP SparkJava send or CLI ShellCommand&#34;</span><span class="p">,</span>
                 <span class="n">tag</span> <span class="p">=</span> <span class="n">Random</span><span class="p">.</span><span class="n">uuid</span><span class="p">()</span>
         <span class="p">)</span>
 
@@ -290,20 +293,20 @@
         <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">name</span>   <span class="p">)</span>
         <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">action</span> <span class="p">)</span>
 
-        <span class="c1">// CASE 4a: Get a header named &#34;api-key&#34;
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;api-key&#34;</span><span class="p">)</span> <span class="p">)</span>
+        <span class="c1">// CASE 4a: Get metadata named &#34;api-key&#34;
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;api-key&#34;</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 4b: Get a header named &#34;sample-id&#34; as integer
 </span><span class="c1"></span>        <span class="c1">// IF its not there, this will return a 0 as getInt
 </span><span class="c1"></span>        <span class="c1">// returns a non-nullable value
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;sample-id&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;sample-id&#34;</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 4c: Get a header named &#34;sample-id&#34; as nullable integer
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getIntOrNull</span><span class="p">(</span><span class="s">&#34;sample-id&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">getIntOrNull</span><span class="p">(</span><span class="s">&#34;sample-id&#34;</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 4d: Get a header named &#34;sample-id&#34; as integer with default
 </span><span class="c1"></span>        <span class="c1">// value if its not there
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getIntOrElse</span><span class="p">(</span><span class="s">&#34;sample-id&#34;</span><span class="p">,</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">getIntOrElse</span><span class="p">(</span><span class="s">&#34;sample-id&#34;</span><span class="p">,</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 5a: Get a parameter named &#34;userId&#34; as integer
 </span><span class="c1"></span>        <span class="c1">// IF its not there, this will return a 0 as getInt
@@ -312,14 +315,14 @@
 </span><span class="c1"></span>        <span class="c1">// otherwise, if the request is a post, the value is
 </span><span class="c1"></span>        <span class="c1">// first checked in the body ( json data ) before checking
 </span><span class="c1"></span>        <span class="c1">// the query params
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 5b: Get a parameter named &#34;userId&#34; as nullable integer
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getIntOrNull</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">getIntOrNull</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 5c: Get a parameter named &#34;userId&#34; as integer with default
 </span><span class="c1"></span>        <span class="c1">// value if its not there
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="n">meta</span><span class="o">?.</span><span class="n">getIntOrElse</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">,</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
+</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span> <span class="n">request</span><span class="p">.</span><span class="k">data</span><span class="p">.</span><span class="n">getIntOrElse</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">,</span> <span class="p">-</span><span class="m">1</span><span class="p">)</span> <span class="p">)</span>
 
         <span class="c1">// CASE 6: Get the verb ( only applicable to HTTP requests )
 </span><span class="c1"></span>        <span class="c1">// For the CLI - the verb will be &#34;cli&#34;

@@ -105,15 +105,10 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
             <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
-            <li><a class="dropdown-item" href="">-------------------</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
-            <li><a class="dropdown-item" href="">-------------------</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
             <li><a class="dropdown-item" href="arch/apis">API</a></li>
-            <li><a class="dropdown-item" href="arch/cli">CLI</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
-            <li><a class="dropdown-item" href="">-------------------</a></li>
             <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
@@ -163,27 +158,30 @@
 
 <h1 id="overview">Overview</h1>
 
-<p><strong>Result</strong> is a foundational component in Slate Kit for <strong>accurately modeling successes and failures</strong> using a functional approach to error handling. Result is <strong>not a new concept</strong> as it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google&rsquo;s GRPC codes ( See below ). The implementation here differs maily with the design/goals listed
+<p><strong>Result</strong> is a foundational component in Slate Kit for <strong>accurately modeling successes and failures</strong> using a functional approach to error handling. Result is <strong>not a new concept</strong> as it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google&rsquo;s GRPC codes ( See below ). The implementation here differs mainly with the design/goals listed below.
 <br/><br/></p>
 
 <h1 id="goals">Goals</h1>
 
-<p>The design of this Result component reasonably differs from other implementations.
-<table class="table table-bordered table-striped">
+<p><table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong>1. Flexible error</strong> </td>
+        <td><strong>1. Accuracy</strong> </td>
+        <td>Accurate modeling of success/failures </td><br />
+    </tr>
+    <tr>
+        <td><strong>2. Flexible error</strong> </td>
         <td>Error type on the Failure branch can be anything, Exception, Err, String. </td><br />
     </tr>
     <tr>
-        <td><strong>2. Status Codes</strong></td>
+        <td><strong>3. Status Codes</strong></td>
         <td>Logical groups of status codes to categories errors, which can be converted to Http</td>
     </tr>
     <tr>
-        <td><strong>3. Sensible defaults</strong></td>
+        <td><strong>4. Sensible defaults</strong></td>
         <td>Default Error types, and builders are provided to reduce custom errors / boiler-plate</td>
     </tr>
 </table>
@@ -469,7 +467,7 @@ Refer to the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib
 <a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
-<h1 id="features">Features</h1>
+<h1 id="guide">Guide</h1>
 
 <p><table class="table table-bordered table-striped">
     <tr>

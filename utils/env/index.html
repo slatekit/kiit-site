@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
     <link rel="stylesheet" href="assets/app/syntax.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Utilities</title>
 </head>
 
@@ -98,12 +99,12 @@
             Architecture Components
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="core/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
-            <li><a class="dropdown-item" href="arch/apis">APIs</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
     <li class="nav-item">
@@ -142,7 +143,7 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities: </h2>
+            <h2>Utilities</h2>
         </div>
     </section>
     
@@ -160,11 +161,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -205,7 +206,7 @@
         <span class="c1">// other libraries
 </span><span class="c1"></span>
         <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
+</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
     <span class="o">}</span></code></pre></div>
 <br/><br/></p>
 
@@ -217,7 +218,8 @@
 
 
 <span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span>
+</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Try</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
 <br/><br/></p>
@@ -232,15 +234,14 @@
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// CASE 1: Build a list of environments
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">envs1</span> <span class="p">=</span> <span class="n">Envs</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
             <span class="n">Env</span><span class="p">(</span><span class="s">&#34;loc&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Dev environment (local)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Dev environment (shared)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;qa1&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Qat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;QA environment  (current release)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;qa2&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Qat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;QA environment  (last release)&#34;</span><span class="p">),</span>
+            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Dev environment (dev)&#34;</span><span class="p">),</span>
+            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;qat&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Qat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;QAT environment (test)&#34;</span><span class="p">),</span>
             <span class="n">Env</span><span class="p">(</span><span class="s">&#34;stg&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Uat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;STG environment (demo)&#34;</span><span class="p">),</span>
             <span class="n">Env</span><span class="p">(</span><span class="s">&#34;pro&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Pro</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;LIVE environment&#34;</span><span class="p">)</span>
     <span class="p">))</span>
 
     <span class="c1">// CASE 2: Use the default list of environments ( same as above )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">envs</span> <span class="p">=</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">envs</span><span class="p">.</span><span class="n">Env</span><span class="p">.</span><span class="n">defaults</span><span class="p">()</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">envs</span> <span class="p">=</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">envs</span><span class="p">.</span><span class="n">Envs</span><span class="p">.</span><span class="n">defaults</span><span class="p">()</span>
 
     <span class="c1">// CASE 3: Get one of the environments by api
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">qa1</span> <span class="p">=</span> <span class="n">envs</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s">&#34;qa1&#34;</span><span class="p">)</span>

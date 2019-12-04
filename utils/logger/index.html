@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
     <link rel="stylesheet" href="assets/app/syntax.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Utilities</title>
 </head>
 
@@ -98,12 +99,12 @@
             Architecture Components
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="core/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
-            <li><a class="dropdown-item" href="arch/apis">APIs</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
     <li class="nav-item">
@@ -142,7 +143,7 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities: </h2>
+            <h2>Utilities</h2>
         </div>
     </section>
     
@@ -160,11 +161,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -205,7 +206,7 @@
         <span class="c1">// other libraries
 </span><span class="c1"></span>
         <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
+</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
     <span class="o">}</span></code></pre></div>
 <br/><br/></p>
 
@@ -217,7 +218,8 @@
 
 
 <span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span>
+</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Try</span>
 <span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
 <br/><br/></p>
@@ -233,13 +235,13 @@
 
 
   <span class="c1">// Setup a custom logger
-</span><span class="c1"></span>  <span class="k">class</span> <span class="nc">MyCustomLogger</span> <span class="p">:</span> <span class="n">Logger</span><span class="p">(</span><span class="n">Warn</span><span class="p">)</span>  <span class="p">{</span>
+</span><span class="c1"></span>  <span class="k">class</span> <span class="nc">MyCustomLogger</span> <span class="p">:</span> <span class="n">Logger</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Warn</span><span class="p">)</span>  <span class="p">{</span>
 
 
     <span class="k">override</span> <span class="k">val</span> <span class="py">logger</span><span class="p">:</span><span class="n">Logger</span><span class="p">?</span> <span class="p">=</span> <span class="n">LoggerConsole</span><span class="p">()</span>
 
 
-    <span class="k">override</span> <span class="k">fun</span> <span class="nf">performLog</span><span class="p">(</span><span class="n">entry</span><span class="p">:</span> <span class="n">LogEntry</span><span class="p">):</span> <span class="n">Unit</span>
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">performLog</span><span class="p">(</span><span class="n">entry</span><span class="p">:</span> <span class="n">LogEntry</span><span class="p">)</span>
     <span class="p">{</span>
       <span class="n">println</span><span class="p">(</span><span class="s">&#34;custom logger : &#34;</span> <span class="p">+</span> <span class="n">entry</span><span class="p">.</span><span class="n">level</span> <span class="p">+</span> <span class="s">&#34; : &#34;</span> <span class="p">+</span> <span class="n">entry</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
     <span class="p">}</span>
@@ -258,7 +260,7 @@
 </span><span class="c1"></span>    <span class="c1">// 1. message only
 </span><span class="c1"></span>    <span class="c1">// 2. message + exception
 </span><span class="c1"></span>    <span class="c1">// 3. message + exception + tag
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">logger</span> <span class="p">=</span> <span class="n">LoggerConsole</span><span class="p">(</span><span class="n">Debug</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">logger</span> <span class="p">=</span> <span class="n">LoggerConsole</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Debug</span><span class="p">)</span>
     <span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#34;debug with message only&#34;</span><span class="p">)</span>
     <span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="s">&#34;info with message and exception&#34;</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span>
     <span class="n">logger</span><span class="p">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#34;debug with message, exception, and tag&#34;</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span>
@@ -274,7 +276,7 @@
 
 
     <span class="c1">// CASE 3: Log explicitly using log method.
-</span><span class="c1"></span>    <span class="n">logger</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">Error</span><span class="p">,</span> <span class="s">&#34;error&#34;</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="n">logger</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">LogLevel</span><span class="p">.</span><span class="n">Error</span><span class="p">,</span> <span class="s">&#34;error&#34;</span><span class="p">,</span> <span class="n">ex</span><span class="p">)</span>
 
 
     <span class="c1">// CASE 4: You can extend a class with the LogSupportIn trait
