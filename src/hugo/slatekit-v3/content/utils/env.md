@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -70,7 +70,8 @@ import slatekit.common.envs.*
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 import slatekit.results.Try
 import slatekit.results.Success
 
@@ -98,15 +99,14 @@ n/a
     // CASE 1: Build a list of environments
     val envs1 = Envs(listOf(
             Env("loc", EnvMode.Dev , desc = "Dev environment (local)"),
-            Env("dev", EnvMode.Dev , desc = "Dev environment (shared)"),
-            Env("qa1", EnvMode.Qat , desc = "QA environment  (current release)"),
-            Env("qa2", EnvMode.Qat , desc = "QA environment  (last release)"),
+            Env("dev", EnvMode.Dev , desc = "Dev environment (dev)"),
+            Env("qat", EnvMode.Qat , desc = "QAT environment (test)"),
             Env("stg", EnvMode.Uat , desc = "STG environment (demo)"),
             Env("pro", EnvMode.Pro , desc = "LIVE environment")
     ))
 
     // CASE 2: Use the default list of environments ( same as above )
-    val envs = slatekit.common.envs.Env.defaults()
+    val envs = slatekit.common.envs.Envs.defaults()
 
     // CASE 3: Get one of the environments by api
     val qa1 = envs.get("qa1")

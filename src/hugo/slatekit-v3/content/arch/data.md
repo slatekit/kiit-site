@@ -543,14 +543,16 @@ Explicitly setup of a Model/Schema
     // Also, can use KType to get if field is required ( via isMarkedNullabel )
     object UserSchema : Schema<Long, User>(Long::class, User::class, "user") {
         val id         = id    (User::id        )
-        val email      = field (User::email     , min = 10, max = 50, indexed = true)
-        val first      = field (User::first     , min = 10, max = 50)
-        val last       = field (User::last      , min = 10, max = 50)
-        val age        = field (User::age       )
-        val salary     = field (User::salary    )
-        val active     = field (User::active    )
-        val registered = field (User::registered)
-    }`````
+        val email      = field  (User::email     , min = 10, max = 50, indexed = true)
+        val first      = field  (User::first     , min = 10, max = 50)
+        val last       = field  (User::last      , min = 10, max = 50)
+        val age        = field  (User::age       )
+        val salary     = field  (User::salary    )
+        val active     = field  (User::active    )
+        val registered = field  (User::registered)
+        val createdAt  = field  (User::updatedAt , category = FieldCategory.Meta)
+        val updatedAt  = field  (User::updatedAt , category = FieldCategory.Meta)
+    }
 
     // Access the model which stores all the fields
     val model = UserSchema.model

@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -65,24 +65,25 @@
 
 
 // required 
-import slatekit.common.Random.alpha3
-import slatekit.common.Random.alpha6
-import slatekit.common.Random.alphaN
-import slatekit.common.Random.alphaSym3
-import slatekit.common.Random.alphaSym6
-import slatekit.common.Random.alphaSymN
-import slatekit.common.Random.digits3
-import slatekit.common.Random.digits6
-import slatekit.common.Random.digitsN
-import slatekit.common.Random.string3
-import slatekit.common.Random.string6
-import slatekit.common.Random.uuid
-import slatekit.common.Random.stringN
+import slatekit.common.utils.Random.alpha3
+import slatekit.common.utils.Random.alpha6
+import slatekit.common.utils.Random.alphaN
+import slatekit.common.utils.Random.alphaSym3
+import slatekit.common.utils.Random.alphaSym6
+import slatekit.common.utils.Random.alphaSymN
+import slatekit.common.utils.Random.digits3
+import slatekit.common.utils.Random.digits6
+import slatekit.common.utils.Random.digitsN
+import slatekit.common.utils.Random.string3
+import slatekit.common.utils.Random.string6
+import slatekit.common.utils.Random.uuid
+import slatekit.common.utils.Random.stringN
 
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 import slatekit.results.Try
 import slatekit.results.Success
 

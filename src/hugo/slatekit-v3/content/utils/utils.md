@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -68,15 +68,16 @@
 import slatekit.common.utils.Require.requireOneOf
 import slatekit.common.utils.Require.requireText
 import slatekit.common.utils.Require.requireValidIndex
-import slatekit.common.*
 
 
 
 // optional 
-import slatekit.core.cmds.Cmd
-import slatekit.common.db.DbConString
+import slatekit.cmds.Command
+import slatekit.common.data.DbConString
 import slatekit.common.info.ApiKey
 import slatekit.common.info.ApiLogin
+import slatekit.cmds.CommandRequest
+import slatekit.common.io.Uris
 import slatekit.results.Try
 import slatekit.results.Success
 

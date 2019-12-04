@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -33,7 +33,7 @@
     </tr>
     <tr>
       <td><strong>example</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Todo.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Todo.kt</a></td>
+      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_NOTE.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_NOTE.kt</a></td>
     </tr>
     <tr>
       <td><strong>depends on</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -65,12 +65,13 @@
 
 
 // required 
-import slatekit.common.TODO
+import slatekit.common.NOTE
 
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 import slatekit.results.Success
 import slatekit.results.Try
 
@@ -99,18 +100,18 @@ n/a
     // to track code usages
 
     // Use case 1: Implement
-    TODO.IMPLEMENT("Component 1", "This code needs further error handling" )
+    NOTE.IMPLEMENT("Component 1", "This code needs further error handling" )
 
     // Use case 2: Supply a block of code to refactor
-    TODO.REFACTOR("Feature 2", "Refactor logic to handle empty values") {
+    NOTE.REFACTOR("Feature 2", "Refactor logic to handle empty values") {
       // Your code to refactor goes here
     }
 
     // Use case 3: Mark a bug
-    TODO.BUG("Component 3", "invalid data, bug fix needed", "JIRA:12434" )
+    NOTE.BUG("Component 3", "invalid data, bug fix needed", "JIRA:12434" )
 
     // Use case 4: Code removal tag
-    TODO.REMOVE("Story 123", "@kishore, this code no longer needed") {
+    NOTE.REMOVE("Story 123", "@kishore, this code no longer needed") {
       // Your code to remove here.
     }
     

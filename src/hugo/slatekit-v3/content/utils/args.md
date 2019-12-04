@@ -1,9 +1,4 @@
----
-title: "Args"
-date: 2019-03-17T13:02:30-04:00
-draft: true
-section_header: Args
----
+
 # Args
 
 <table class="table table-striped table-bordered">
@@ -14,11 +9,11 @@ section_header: Args
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -59,14 +54,14 @@ section_header: Args
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
 {{% break %}}
 
 ## Import
-{{< highlight kotlin "linenos=table">}}
+{{< highlight kotlin >}}
 
 
 // required 
@@ -75,7 +70,8 @@ import slatekit.common.args.ArgsSchema
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 import slatekit.results.Success
 import slatekit.results.Try
 import slatekit.results.getOrElse
@@ -87,7 +83,7 @@ import slatekit.results.getOrElse
 {{% break %}}
 
 ## Setup
-{{< highlight kotlin "linenos=table">}}
+{{< highlight kotlin >}}
 
 
 n/a
@@ -97,31 +93,29 @@ n/a
 {{% break %}}
 
 ## Usage
-{{< highlight kotlin "linenos=table">}}
+{{< highlight kotlin >}}
 
 
     // Example:
     // Given on the the command line:
     // -log.level=info -env=dev -text='hello world'
-    showResults( Args.parse( "-log.level=info -env=dev -text='hello world'", sep="=", hasAction = true ) )
+    showResults( Args.parse( "-log.level=info -env=dev -text='hello world'") )
 
-    // CASE 1: Parse using defaults. E.g. the key/value prefix = "-", separator = ":"
-    showResults( Args.parse( "-env:dev -text:'hello world' -batch:10" ) )
+    // CASE 1: Parse using an action prefixed to the arguments
+    showResults( Args.parse( "service.action -log.level=info -env=dev -text='hello world'", hasAction = true) )
 
 
-    // CASE 2: Custom prefix and sep e.g. "!" and separator "="
-    showResults( Args.parse( "!env=dev !text='hello word' !batch=10 ", prefix = "!", sep = "=" ) )
+    // CASE 2: Custom prefix and sep e.g. "!" and separator ":"
+    showResults( Args.parse( "!env=dev !text='hello word' !batch:10 ", prefix = "!", sep = ":") )
 
 
     // CASE 3a: Check for action/method call in the beginning
-    showResults( Args.parse( "area.service.method -env=dev -text='hello word' -batch=10", prefix = "-",
-                 sep = "=", hasAction = true ) )
-
-
-    // CASE 3b: Check for method call in the beginning
-    showResults( Args.parse( "service.method -env=dev -text='hello word' -batch=10", prefix = "-",
-                 sep = "=", hasAction = true ) )
-
+    val args = Args.parse( "manage.movies.createSample -title='Dark Knight' -date='2013-07-18'", hasAction = true )
+    showResults( args )
+    args.onSuccess { args ->
+      args.getString("title")
+      args.getLocalDate("date")
+    }
 
     // CASE 3c: Check for only action name in the beginning.
     showResults( Args.parse( "method", prefix = "-", sep = "=", hasAction = true ) )
@@ -148,7 +142,7 @@ n/a
 
 
     // CASE 8: Build up the schema
-    val schema = ArgsSchema().text("env").flag("log").number("level")
+    val schema = ArgsSchema().text("env", "env").flag("log", "log").number("level", "level")
     print(schema)
 
     

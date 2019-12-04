@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -70,7 +70,8 @@ import slatekit.common.log.*
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 import slatekit.results.Try
 import slatekit.results.Success
 
@@ -94,13 +95,13 @@ import slatekit.results.Success
 
 
   // Setup a custom logger
-  class MyCustomLogger : Logger(Warn)  {
+  class MyCustomLogger : Logger(LogLevel.Warn)  {
 
 
     override val logger:Logger? = LoggerConsole()
 
 
-    override fun performLog(entry: LogEntry): Unit
+    override fun performLog(entry: LogEntry)
     {
       println("custom logger : " + entry.level + " : " + entry.msg)
     }
@@ -124,7 +125,7 @@ import slatekit.results.Success
     // 1. message only
     // 2. message + exception
     // 3. message + exception + tag
-    val logger = LoggerConsole(Debug)
+    val logger = LoggerConsole(LogLevel.Debug)
     logger.debug("debug with message only")
     logger.info("info with message and exception", ex)
     logger.warn("debug with message, exception, and tag", ex)
@@ -140,7 +141,7 @@ import slatekit.results.Success
 
 
     // CASE 3: Log explicitly using log method.
-    logger.log(Error, "error", ex)
+    logger.log(LogLevel.Error, "error", ex)
 
 
     // CASE 4: You can extend a class with the LogSupportIn trait

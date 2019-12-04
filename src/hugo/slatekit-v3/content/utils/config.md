@@ -5,15 +5,15 @@
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
-      <td>Thin wrapper over typesafe config with decryption support, uri loading, and mapping of database connections and api keys</td>
+      <td>Thin wrapper on java properties based config with decryption support, uri loading, and mapping of database connections and api keys</td>
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -73,10 +73,11 @@ import slatekit.results.Try
 import slatekit.results.Success
 import slatekit.common.conf.ConfFuncs
 import slatekit.common.conf.Config
-import slatekit.common.db.DbCon
-import slatekit.common.encrypt.B64Java8
+import slatekit.common.data.DbCon
+import slatekit.common.utils.B64Java8
 import slatekit.common.encrypt.Encryptor
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 
 
 
@@ -99,7 +100,7 @@ n/a
 
 
         // CASE 1: Load up config from resources directory
-        val conf = Config("env.dev.conf")
+        val conf = Config.of("env.dev.conf")
 
         // CASE 2: Get typed value: non-nullable
         // NOTE: default value for typed returned if unavailable

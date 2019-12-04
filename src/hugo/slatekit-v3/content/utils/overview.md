@@ -81,14 +81,6 @@ Links to this modules info. Click on any component icon below for example on how
 
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="utils/data"><img src="assets/media/img/white/layers.png" width="60" alt=""></a>          
-              <a href="utils/data"><h3>Database</h3></a>
-              <p>JDBC database access and utility functions</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
               <a href="utils/datetime"><img src="assets/media/img/white/calendar.PNG" width="60" alt=""></a>            
               <a href="utils/datetime"><h3>DateTime</h3></a>
               <p>Easier Java 8 DateTime and Timezone usage</p>
@@ -177,14 +169,6 @@ Links to this modules info. Click on any component icon below for example on how
               <p>Abstracts and represents HTTP and CLI requests</p> 
             </div>
           </div>
-
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/results"><img src="assets/media/img/white/result.png" width="60" alt=""></a>           
-              <a href="utils/results"><h3>Result</h3></a>
-              <p>Models response with success and failures.</p> 
-            </div>
-          </div> 
           
 
           <div class="col-md-4 wow fadeInUp">

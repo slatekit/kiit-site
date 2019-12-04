@@ -5,15 +5,15 @@
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
-      <td>Models and abstracts a request that can represent either an HTTP request or a request from the CLI ( Command line ).</td>
+      <td>Models and abstracts a send that can represent either an HTTP send or a send from the CLI ( Command line ).</td>
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -65,15 +65,17 @@
 
 
 // required 
-import slatekit.common.*
+import slatekit.apis.Verbs
 import slatekit.common.requests.InputArgs
 import slatekit.common.requests.Request
-import slatekit.common.requests.SimpleRequest
-import slatekit.common.requests.Source
+import slatekit.common.CommonRequest
+import slatekit.common.Source
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
+import slatekit.common.utils.Random
 import slatekit.results.Try
 import slatekit.results.Success
 
@@ -100,7 +102,7 @@ n/a
         // HTTP Request and a CLI ( command line interface ) request.
         // This Request class along with its complementary Result class
         // provide the basis for much of the API support in Slate Kit.
-        // APIs in Slate are protocol independent which basically means
+        // APIs in Slate are source independent which basically means
         // that the APIs can be accessed as HTTP Endpoints or on the CLI
         //
         // ROUTING:
@@ -128,14 +130,14 @@ n/a
         // the request is appropriately built from either a CLI Command or the
         // SparkJava request ( with a thin abstraction layer ). The requests are
         // kept very simple/light for maximum performance and data is NEVER copied.
-        val request:Request = SimpleRequest(
+        val request:Request = CommonRequest(
                 path = "app.users.activate",
                 parts = listOf("app", "users", "activate"),
                 source = Source.CLI,
-                verb = "post",
+                verb = Verbs.POST,
                 meta = InputArgs(mapOf("api-key" to "ABC-123")),
                 data = InputArgs(mapOf("userId" to 5001)),
-                raw = "the raw HTTP SparkJava request or CLI ShellCommand",
+                raw = "the raw HTTP SparkJava send or CLI ShellCommand",
                 tag = Random.uuid()
         )
 
@@ -154,20 +156,20 @@ n/a
         println( request.name   )
         println( request.action )
 
-        // CASE 4a: Get a header named "api-key"
-        println( request.meta?.getString("api-key") )
+        // CASE 4a: Get metadata named "api-key"
+        println( request.meta.getString("api-key") )
 
         // CASE 4b: Get a header named "sample-id" as integer
         // IF its not there, this will return a 0 as getInt
         // returns a non-nullable value
-        println( request.meta?.getInt("sample-id") )
+        println( request.meta.getInt("sample-id") )
 
         // CASE 4c: Get a header named "sample-id" as nullable integer
-        println( request.meta?.getIntOrNull("sample-id") )
+        println( request.meta.getIntOrNull("sample-id") )
 
         // CASE 4d: Get a header named "sample-id" as integer with default
         // value if its not there
-        println( request.meta?.getIntOrElse("sample-id", -1) )
+        println( request.meta.getIntOrElse("sample-id", -1) )
 
         // CASE 5a: Get a parameter named "userId" as integer
         // IF its not there, this will return a 0 as getInt
@@ -176,14 +178,14 @@ n/a
         // otherwise, if the request is a post, the value is
         // first checked in the body ( json data ) before checking
         // the query params
-        println( request.meta?.getInt("userId") )
+        println( request.data.getInt("userId") )
 
         // CASE 5b: Get a parameter named "userId" as nullable integer
-        println( request.meta?.getIntOrNull("userId") )
+        println( request.data.getIntOrNull("userId") )
 
         // CASE 5c: Get a parameter named "userId" as integer with default
         // value if its not there
-        println( request.meta?.getIntOrElse("userId", -1) )
+        println( request.data.getIntOrElse("userId", -1) )
 
         // CASE 6: Get the verb ( only applicable to HTTP requests )
         // For the CLI - the verb will be "cli"

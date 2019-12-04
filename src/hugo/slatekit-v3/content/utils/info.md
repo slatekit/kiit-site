@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -68,14 +68,13 @@
 import slatekit.common.info.About
 import slatekit.common.info.Host
 import slatekit.common.info.Lang
-import slatekit.common.info.StartInfo
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
 import slatekit.results.Try
 import slatekit.results.Success
-import slatekit.common.envs.EnvMode
+import slatekit.cmds.CommandRequest
 
 
 
@@ -108,23 +107,15 @@ n/a
     lang.each { name, value -> println( "$name : $value" ) }
     println()
 
-
-    // CASE 3: Set startup info ( env, config, log, args)
-    val startup = StartInfo("-level=error", "{@app}-{@env}-{@date}.log", "{@app}.config", EnvMode.Qat.name)
-    startup.each { name, value -> println( "$name : $value" ) }
-    println()
-
-
-    // CASE 4: Set up info about your application.
+    // CASE 3: Set up info about your application.
     val app = About(
-      id = "slatekit.examples",
+      area = "product1",
       name = "My sample app",
       desc = "Sample app using Slate Kit",
       company = "slatekit",
       region = "usa.ny",
       version = "1.0.1.3",
       tags = "api,slate,app",
-      group = "product division",
       url = "http://products.myapp.com",
       contact = "kishore@codehelix.co",
       examples = "myapp.exe -env=dev -level=info"

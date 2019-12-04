@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -71,7 +71,8 @@ import slatekit.common.info.Folders
 // optional 
 import slatekit.results.Try
 import slatekit.results.Success
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
+import slatekit.cmds.CommandRequest
 
 
 
@@ -111,7 +112,7 @@ n/a
         val folders = Folders(
                 home = System.getProperty("user.dir"),
                 root = "company-1",
-                group = "department-1",
+                area = "department-1",
                 app = "app-1",
                 cache = "cache",
                 inputs = "input",
@@ -125,7 +126,7 @@ n/a
         // Same as Case 1 above but using a short-hand approach
         val folders2 = Folders.userDir(
                 root = "company-1",
-                group = "department-1",
+                area = "department-1",
                 app = "app-1"
         )
 

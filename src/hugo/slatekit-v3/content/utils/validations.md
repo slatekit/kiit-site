@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-03-22</td>
+      <td>2019-12-04</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.17</td>
+      <td>0.9.35</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
@@ -54,7 +54,7 @@
         // other libraries
 
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.17'
+        compile 'com.slatekit:slatekit-common:0.9.35'
     }
 
 {{< /highlight >}}
@@ -65,14 +65,11 @@
 
 
 // required 
-import slatekit.common.validations.RefField
-import slatekit.common.validations.Validator
 import slatekit.common.validations.ValidationFuncsExt
-import slatekit.common.validations.ValidationResults
 
 
 // optional 
-import slatekit.core.cmds.Cmd
+import slatekit.cmds.Command
 import slatekit.results.Try
 import slatekit.results.Success
 import slatekit.common.validations.ValidationFuncs.isEmpty
@@ -95,6 +92,7 @@ import slatekit.common.validations.ValidationFuncs.isNumeric
 import slatekit.common.validations.ValidationFuncs.isPhoneUS
 import slatekit.common.validations.ValidationFuncs.isUrl
 import slatekit.common.validations.ValidationFuncs.isZipCodeUS
+import slatekit.cmds.CommandRequest
 
 
 
@@ -158,10 +156,10 @@ n/a
   fun showValidationResult():Unit {
 
     println("CASE 3: Same checks above but these return a ValidationResult")
-    println( ValidationFuncsExt.isEmpty       (""      ,    RefField("Email"   ) , "Email is required"   ))
-    println( ValidationFuncsExt.isAlphaNumeric("abCD12",    RefField("Password") , "Password is invalid" ))
-    println( ValidationFuncsExt.isZipCodeUS   ("12345" ,    RefField("ZipCode" ) , "ZipCode is required" ))
-    println( ValidationFuncsExt.isMinLength   ("12"    , 3, RefField("Name"    ) , "Min 3 chars required"))
+    println( ValidationFuncsExt.isEmpty       (""      ,     "Email is required"   ))
+    println( ValidationFuncsExt.isAlphaNumeric("abCD12",     "Password is invalid" ))
+    println( ValidationFuncsExt.isZipCodeUS   ("12345" ,     "ZipCode is required" ))
+    println( ValidationFuncsExt.isMinLength   ("12"    , 3, "Min 3 chars required"))
     println()
   }
 
@@ -170,14 +168,13 @@ n/a
   fun showErrorCollection():Unit {
 
     val password = "abc123XYZ"
-    val reference = RefField("Email")
 
     println("CASE 4: Collect errors via thunks(0 parameter functions)")
     val errors = listOf (
-        { ValidationFuncsExt.isLength      ( password,   9 , reference, "Email must be 9 characters")          } ,
-        { ValidationFuncsExt.hasCharsLCase ( password, 3 , reference, "Email must have 3 lowercase letters") } ,
-        { ValidationFuncsExt.hasCharsUCase ( password, 3 , reference, "Email must have 3 uppercase letters") } ,
-        { ValidationFuncsExt.hasDigits     ( password, 3 , reference, "Email must have 3 digits")            }
+        { ValidationFuncsExt.isLength      ( password,   9 , "Email must be 9 characters")          } ,
+        { ValidationFuncsExt.hasCharsLCase ( password, 3 , "Email must have 3 lowercase letters") } ,
+        { ValidationFuncsExt.hasCharsUCase ( password, 3 , "Email must have 3 uppercase letters") } ,
+        { ValidationFuncsExt.hasDigits     ( password, 3 , "Email must have 3 digits")            }
       ).map    { rule -> rule() }
        .filter { result -> !result.success }
        .toList()
@@ -189,29 +186,7 @@ n/a
   // Case 5: Custom validator object
   data class User(val email:String, val password:String) { }
 
-  // Extend from Validation[T]
-  class UserValidator : Validator<User>() {
 
-    // Implement your validation here and collect errors
-    // The validation results represents a contain for success, message, code, and errors.
-    override fun validate(item:User): ValidationResults {
-
-      val password = "abc123XYZ"
-      val reference = RefField("Email")
-
-      println("Case 5: Custom validator object")
-      val errors = listOf(
-          { ValidationFuncsExt.isLength      ( password, 9   , reference, "Email must be 9 characters")          },
-          { ValidationFuncsExt.hasCharsLCase ( password, 3 , reference, "Email must have 3 lowercase letters") },
-          { ValidationFuncsExt.hasCharsUCase ( password, 3 , reference, "Email must have 3 uppercase letters") },
-          { ValidationFuncsExt.hasDigits     ( password, 3 , reference, "Email must have 3 digits")            }
-        ).map    { rule -> rule() }
-         .filter { result -> !result.success }
-         .toList()
-
-      return ValidationResults.build(errors)
-    }
-  }
   
 
 {{< /highlight >}}
