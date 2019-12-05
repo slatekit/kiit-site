@@ -62,26 +62,21 @@ The Context is a container for common application dependencies such as the parse
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#goals">Goals</a></strong></td>
-        <td>Goals of this component and the problems it attempts to solve</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/context#concepts">Concepts</a></strong></td>
         <td>Core concepts to understand in this component</td>
     </tr>
     <tr>
-        <td><strong>7</strong></td>
+        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/context#features">Features</a></strong></td>
         <td>List all the features supported</td>
     </tr>
     <tr>
-        <td><strong>8</strong></td>
+        <td><strong>7</strong></td>
         <td><strong><a class="url-ch" href="arch/context#setup">Setup</a></strong></td>
         <td>Set up and configure this component for use</td>
     </tr>
     <tr>
-        <td><strong>9</strong></td>
+        <td><strong>8</strong></td>
         <td><strong><a class="url-ch" href="arch/context#details">Details</a></strong></td>
         <td>In-depth examples of the supported features</td>
     </tr>
@@ -282,7 +277,7 @@ In this case, the AppRunner inspects the command line args, config settings from
 {{% section-end mod="arch/context" %}}
 
 
-# Features
+# Guide
 Most applications ( whether they are console, cli, jobs, server ) require basic boiler plate setup and access to services. This Context fills that need by providing these core services.
 <table class="table table-bordered table-striped">
     <tr>

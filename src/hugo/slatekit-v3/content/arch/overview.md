@@ -5,27 +5,9 @@ section_header: Archtecture Components
 ---
 
 # Overview
-Slate Kit offers <strong>several features</strong> designed as modular <strong>Architecture components</strong>. These are designed as a collection of Kotlin libraries that help you to quickly build fully featured, testable, 
+Slate Kit offers <strong>several features</strong> as modular <strong>Architecture components</strong>. These are designed as a collection of Kotlin libraries that help you to quickly build fully featured, testable, 
 and scalable applications on the JVM. Several of the modules can be used for both **Server and Android**. Click any of the modules below for more info.
  {{% break %}}
-
-# Install
-Many of these modules have their own project. See the guides for each respective project for more info. However, below is a quick sample of a gradle setup.
-{{< highlight kotlin >}}
-     
-    repositories {
-        maven { url  "https://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // For results ( modeling success/failures with optional status codes )
-        compile 'com.slatekit:slatekit-results:1.0.0'
-
-        // For app ( application template with args, cli, envs, logs, help )
-        compile 'com.slatekit:slatekit-app:1.0.0'
-    }
-
-{{< /highlight >}}
 
 <section id="services" class="integration">
   <div class="container">

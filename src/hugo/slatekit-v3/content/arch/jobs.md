@@ -5,7 +5,7 @@ section_header: Jobs
 ---
 
 # Overview
-The Slate Jobs component is a background job/persistant task queue system for Kotlin and is similar to Ruby SideKiq, NodeJS Bull. It leverages Kotlin **Coroutines and Channels** for concurrency based operations.
+The Slate Jobs component is a background job/persistant task queue system for Kotlin and is similar to Ruby SideKiq, NodeJS Bull. It leverages Kotlin **Coroutines and Channels** for concurrency based operations to gracefully **start, stop, pause, resume** jobs.
 {{% break %}}
 
 # Create
@@ -25,7 +25,7 @@ The Slate Jobs component is a background job/persistant task queue system for Ko
     </tr>
     <tr>
         <td><strong>1. Job types</strong></td>
-        <td>Different types of jobs OneTime, Paged, Queued job types.</td>
+        <td>Different types of jobs <strong>OneTime, Paged, Queued</strong> job types.</td>
     </tr>
     <tr>
         <td><strong>2. Diagnostics</strong> </td>
@@ -74,18 +74,8 @@ The Slate Jobs component is a background job/persistant task queue system for Ko
     </tr>
     <tr>
         <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#features">Features</a></strong></td>
+        <td><strong><a class="url-ch" href="arch/jobs#features">Guide</a></strong></td>
         <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
     </tr>
 </table>
 

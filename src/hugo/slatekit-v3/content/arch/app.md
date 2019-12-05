@@ -79,21 +79,16 @@ This component quickly gets a new application set up with all these features rea
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#goals">Goals</a></strong></td>
-        <td>Goals of this component and the problems it attempts to solve</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/app#concepts">Concepts</a></strong></td>
         <td>Core concepts to understand in this component</td>
     </tr>
     <tr>
-        <td><strong>7</strong></td>
+        <td><strong>6</strong></td>
         <td><strong><a class="url-ch" href="arch/app#details">Features</a></strong></td>
         <td>In-depth examples of the supported features</td>
     </tr>
     <tr>
-        <td><strong>8</strong></td>
+        <td><strong>7</strong></td>
         <td><strong><a class="url-ch" href="arch/app#details">How to</a></strong></td>
         <td>How to implement certain tasks, recipes, etc.</td>
     </tr>
@@ -102,7 +97,18 @@ This component quickly gets a new application set up with all these features rea
 
 # Status
 This component is currently stable and there is a project generator for it.
-A small future enhancement will optionally add support for Docker and gradle Docker configuration.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Docker</strong></td>
+        <td>Future</td>
+        <td>Support for generating Docker images</td>
+    </tr>
+</table>
 {{% section-end mod="arch/app" %}}
 
 # Install
@@ -193,7 +199,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 {{% section-end mod="arch/app" %}}
 
 
-# Features
+# Guide
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>

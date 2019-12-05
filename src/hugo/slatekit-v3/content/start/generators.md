@@ -18,7 +18,6 @@ A quick example is below:
 
 
 # Index
-Table of contents for this page
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Section</strong></td>
@@ -84,8 +83,29 @@ Table of contents for this page
 {{% break %}}
 
 # Status
-This component is currently stable and there is a project generator for it ( see below ). <br/>
-A small future enhancement will optionally add support for Docker and gradle Docker configuration.
+This component is currently stable with planned future features<br/>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Questions</strong></td>
+        <td>Future</td>
+        <td>Support for questions/answers</td>
+    </tr>
+    <tr>
+        <td><strong>Scripting</strong></td>
+        <td>Future</td>
+        <td>Support for scripting via either Kotlin Scripting or Gradle</td>
+    </tr>
+    <tr>
+        <td><strong>Git</strong></td>
+        <td>Future</td>
+        <td>Downloadable templates from Git or other external sources</td>
+    </tr>
+</table>
 {{% section-end mod="start/generators" %}}
 
 # Install

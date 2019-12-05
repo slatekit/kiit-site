@@ -5,8 +5,8 @@ section_header: Cli
 ---
 
 # Overview
-The Slate CLI is a Command Line Interface application that provides 
-pre-built functionality for you to integrate your own commands in an interactie manner. This CLI offers 2 distinct approaches to integration. The first approach allows you to handle the raw text supplied in the CLI yourself and is the most flexible. The second approach provides a more connected, automatic by exposing, validating, and executing inputs against Slate Kit Universal APIs. You can create a CLI app quickly using the Slate Kit command line executable with command.
+The Slate Kit CLI is a Command Line Interface application that provides 
+pre-built functionality for you to integrate your own commands in an interactie manner. This CLI offers 2 distinct approaches to integration. The first approach allows you to handle the raw text supplied in the CLI yourself and is the most flexible. The second approach provides a more connected, automatic experience by exposing, validating, and executing inputs against Slate Kit Universal APIs. You can create a CLI app quickly using the Slate Kit command line executable with the command below.
 {{% break %}}
 
 # Create
@@ -65,11 +65,6 @@ pre-built functionality for you to integrate your own commands in an interactie 
         <td><strong>4</strong></td>
         <td><strong><a class="url-ch" href="arch/cli#sample">Sample</a></strong></td>
         <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#goals">Goals</a></strong></td>
-        <td>Goals of this component and the problems it attempts to solve</td>
     </tr>
     <tr>
         <td><strong>6</strong></td>
@@ -256,7 +251,7 @@ You can create a custom CLI by extending the Slate Kit CLI component or the CliA
 </table>
 {{% section-end mod="arch/cli" %}}
 
-# Features
+# Guide
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
@@ -265,7 +260,7 @@ You can create a custom CLI by extending the Slate Kit CLI component or the CliA
     </tr>
     <tr>
         <td><strong>1. Input</strong></td>
-        <td>Description of feature</td>
+        <td>Handling text and inputs</td>
         <td><a href="arch/cli/#inputs" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
@@ -517,12 +512,12 @@ The most important and powerful feature of the CLI is integration with Slate Kit
 {{% feature-end mod="arch/cli" %}}
 
 ## From file {#from-file}
-{{% sk-tip-generic text="Functionality is available but docs are not yet ready." %}}
+{{% sk-coming-soon text="Functionality is available but docs are not yet ready." %}}
 
 {{% feature-end mod="arch/cli" %}}
 
 ## Scripts {#scripts}
-{{% sk-tip-generic text="Functionality is available but docs are not yet ready." %}}
+{{% sk-coming-soon text="Functionality is available but docs are not yet ready." %}}
 
 {{% feature-end mod="arch/cli" %}}
 

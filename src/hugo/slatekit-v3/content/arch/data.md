@@ -59,23 +59,8 @@ Slate Kit contains 3 modules for working with **data and databases**. These allo
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#features">Features</a></strong></td>
+        <td><strong><a class="url-ch" href="arch/data#features">Guide</a></strong></td>
         <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
     </tr>
 </table>
 
