@@ -51,7 +51,7 @@
             transition: left 0.4s ease-in-out;
             z-index: 11;
             font-family: 'Open Sans', sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             border-right: 1px solid #dee2e6;
             width: 230px;
         }
@@ -145,7 +145,7 @@
             color: #000000;
             color: #5a5e74;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: normal;
             padding-left: 20px;
         }
         .sidebar-section {
@@ -278,17 +278,17 @@
             <div class="sidebar-section">Overview</div>
             <ul style="display: block;">
                 <li>
-                   <a href="/docs/quickstart/libraries/">
+                   <a href="tests/sidebar#overview">
                    <span>About</span>
                    </a>
                 </li>
                 <li>
-                   <a href="/docs/quickstart/libraries/">
+                   <a href="tests/sidebar#goals">
                    <span>Goals</span>
                    </a>
                 </li>
                 <li>
-                   <a href="/docs/quickstart/linting/">
+                   <a href="tests/sidebar#status">
                    <span>Status</span>
                    </a>
                 </li>
@@ -298,17 +298,17 @@
             <div class="sidebar-section">Setup</div>
             <ul style="display: block;">
                 <li>
-                   <a href="/docs/quickstart/linting/">
+                   <a href="tests/sidebar#install">
                    <span>Install</span>
                    </a>
                 </li>
                 <li>
-                   <a href="/docs/quickstart/linting/">
+                   <a href="tests/sidebar#requires">
                    <span>Requires</span>
                    </a>
                 </li>
                 <li>
-                   <a href="/docs/quickstart/linting/">
+                   <a href="tests/sidebar#example">
                    <span>Example</span>
                    </a>
                 </li>
@@ -318,27 +318,27 @@
          <div class="sidebar-section">Guide</div>
          <ul  style="display: block;">
             <li>
-               <a href="/docs/" class="active">
+               <a href="tests/sidebar#args" class="active">
                <span>Args</span>
                </a>
             </li>
             <li>
-               <a href="/docs/quickstart/libraries/">
+               <a href="tests/sidebar#envs">
                <span>Env</span>
                </a>
             </li>
             <li>
-               <a href="/docs/quickstart/linting/">
+               <a href="tests/sidebar#conf">
                <span>Conf</span>
                </a>
             </li>
             <li>
-               <a href="/docs/quickstart/linting/">
+               <a href="tests/sidebar#logs">
                <span>Logs</span>
                </a>
             </li>
             <li>
-               <a href="/docs/quickstart/linting/">
+               <a href="tests/sidebar#help">
                <span>Help</span>
                </a>
             </li>
@@ -347,7 +347,7 @@
     </div>
 </div>
             </div>
-            <div class="col-lg-10 flex">
+            <div class="col-lg-9 flex">
                 <section class="features">
 
                     <div class="container-fluid text-center">
@@ -408,6 +408,55 @@ This component quickly gets a new application set up with all these features rea
 </table></p>
 
 <br/><br/>
+
+<h1 id="index">Index</h1>
+
+<p><table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Section</strong></td>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#status">Status</a></strong></td>
+        <td>Current status of this component</td>
+    </tr>
+    <tr>
+        <td><strong>2</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#install">Install</a></strong></td>
+        <td>Installation instructions and references to sources</td>
+    </tr>
+    <tr>
+        <td><strong>3</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#requires">Requires</a></strong></td>
+        <td>Lists all the Slate Kit and third-party dependencies</td>
+    </tr>
+    <tr>
+        <td><strong>4</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#sample">Sample</a></strong></td>
+        <td>Quick sample to show usage of the component</td>
+    </tr>
+    <tr>
+        <td><strong>5</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#concepts">Concepts</a></strong></td>
+        <td>Core concepts to understand in this component</td>
+    </tr>
+    <tr>
+        <td><strong>6</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#details">Features</a></strong></td>
+        <td>In-depth examples of the supported features</td>
+    </tr>
+    <tr>
+        <td><strong>7</strong></td>
+        <td><strong><a class="url-ch" href="arch/app#details">How to</a></strong></td>
+        <td>How to implement certain tasks, recipes, etc.</td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 
 <h1 id="status">Status</h1>
 
@@ -596,7 +645,7 @@ Also refer to the <a href="https://github.com/code-helix/slatekit/blob/master/sr
 </table>
 <br/></p>
 
-<h2 id="Args">Args</h2>
+<h2 id="args">Args</h2>
 
 <p>Command line arguments are parsed and supplied to your app. You can specify what the arguments are supported by specifying the schema.
 This leverages the <a href="http://www.slatekit.com/utils/args" >Args</a> component.
@@ -622,7 +671,7 @@ This leverages the <a href="http://www.slatekit.com/utils/args" >Args</a> compon
 
 <br/><br/><br/></p>
 
-<h2 id="Envs">Envs</h2>
+<h2 id="envs">Envs</h2>
 
 <p>Default environments and configs per environment are setup for applications and associated together.
 Refer to example app and or a generated application for more info.
@@ -679,7 +728,7 @@ This leverages the <a href="http://www.slatekit.com/utils/env" >Envs</a> and <a 
 
 <br/><br/><br/></p>
 
-<h2 id="Logs">Logs</h2>
+<h2 id="logs">Logs</h2>
 
 <p>Logback logging is setup for the application in <strong>/resources/logback.xml</strong>
 This leverages the <a href="http://www.slatekit.com/utils/logger" >Logs</a> component.
@@ -705,7 +754,7 @@ This leverages the <a href="http://www.slatekit.com/utils/logger" >Logs</a> comp
 
 <br/><br/><br/></p>
 
-<h2 id="Conf">Conf</h2>
+<h2 id="conf">Conf</h2>
 
 <p>Configuration settings are supported via normal Java Properties files stored in the <strong>resources</strong> folder.
 Configuration settings existing based on the names of the environments setup ( see above ).
@@ -733,7 +782,7 @@ You can specify the environment to load by setting <strong>env = name</strong>
 
 <br/><br/><br/></p>
 
-<h2 id="Help">Help</h2>
+<h2 id="help">Help</h2>
 
 <p>The application supports typing  <strong>-version</strong>,  <strong>-about</strong> and <strong>-help</strong> after your apps executable/jar.
 This will display info about the app and usage of command line args.
@@ -770,7 +819,7 @@ This leverages the <a href="http://www.slatekit.com/utils/args" >Args</a> compon
 
 <br/><br/><br/></p>
 
-<h2 id="Context">Context</h2>
+<h2 id="context">Context</h2>
 
 <p>The is an application context that stores all relevant info about the application such as the command line args,
 config, logs, encryptor, info about the app and more. You have access to this with in your app.
@@ -808,7 +857,7 @@ This leverages the <a href="arch/context" >Context</a> component. Here is an exa
 
 <br/><br/><br/></p>
 
-<h2 id="Cycle">Cycle</h2>
+<h2 id="cycle">Cycle</h2>
 
 <p>The application support 3 life-cycle events, <strong>init, exec, and done</strong>.
 You can use these template methods to insert your pre execution, execution, and post execution logic.
@@ -844,7 +893,7 @@ You can use these template methods to insert your pre execution, execution, and 
 
 <br/><br/><br/></p>
 
-<h2 id="Info">Info</h2>
+<h2 id="info">Info</h2>
 
 <p>The component can print diagnostic info during the start and end of your application life-cycle.
 This leverages the all the existing <a href="http://www.slatekit.com/utils/args" >Args</a>, <a href="http://www.slatekit.com/utils/env" >Env</a>, <a href="http://www.slatekit.com/utils/config" >Config</a>
@@ -899,6 +948,8 @@ components list earlier.
 <a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
+            </div>
+            <div class="col-sm-1 flex">
             </div>
         </div>
       </div>
