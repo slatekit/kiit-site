@@ -4,7 +4,7 @@ date: 2019-03-17T13:02:30-04:00
 section_header: App ( Side bar test )
 ---
 
-# Overview {#overview}
+# About {#about}
 The Slate App is a base application and template to build console, batch, cli and server applications.
 It has pre-built support for common features such as **command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics** and much more.
 This is accomplished by integrating some of the components and utilities available in the 
@@ -13,7 +13,6 @@ You can create a app quickly using the Slate Kit command line executable with th
 Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}.
 {{% break %}}
 
-# Create {#create}
 {{< highlight bash >}}
     
     slatekit new app -name="SampleApp" -package="mycompany.apps"
@@ -50,53 +49,10 @@ This component quickly gets a new application set up with all these features rea
 
 {{% break %}}   
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#details">Features</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/app#details">How to</a></strong></td>
-        <td>How to implement certain tasks, recipes, etc.</td>
-    </tr>
-</table>
-{{% section-end mod="arch/app" %}}
 
 # Status {#status}
 This component is currently stable and there is a project generator for it.
+Work in Progress, upcoming and planned features include:
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Feature</strong></td>
