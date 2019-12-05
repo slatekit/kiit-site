@@ -4,7 +4,7 @@ date: 2019-03-17T14:30:51-04:00
 section_header: App
 ---
 <br/>
-# Overview
+# Overview {#overview}
 The Slate App is a base application and template to build console, batch, cli and server applications.
 It has pre-built support for common features such as **command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics** and much more.
 This is accomplished by integrating some of the components and utilities available in the 
@@ -13,7 +13,7 @@ You can create a app quickly using the Slate Kit command line executable with th
 Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}.
 {{% break %}}
 
-# Create
+# Create {#create}
 {{< highlight bash >}}
     
     slatekit new app -name="SampleApp" -package="mycompany.apps"
@@ -22,7 +22,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 {{% sk-link-cli %}}
 {{% break %}}
 
-# Goals
+# Goals {#goals}
 We often have to create a new application which requires typically much boiler-plate code.
 These include environments, config files, argument parsing, logging setup, and application life-cycle events.
 This component quickly gets a new application set up with all these features ready.
@@ -95,7 +95,7 @@ This component quickly gets a new application set up with all these features rea
 </table>
 {{% section-end mod="arch/app" %}}
 
-# Status
+# Status {#status}
 This component is currently stable and there is a project generator for it.
 <table class="table table-bordered table-striped">
     <tr>
@@ -111,7 +111,7 @@ This component is currently stable and there is a project generator for it.
 </table>
 {{% section-end mod="arch/app" %}}
 
-# Install
+# Install {#install}
 Use the following settings in gradle for installing this component.
 {{< highlight groovy >}}
 
@@ -140,7 +140,7 @@ Use the following settings in gradle for installing this component.
 %}}
 {{% section-end mod="arch/app" %}}
 
-# Requires
+# Requires {#requires}
 This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
 <table class="table table-bordered table-striped">
     <tr>
@@ -158,7 +158,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 </table>
 {{% section-end mod="arch/app" %}}
 
-# Sample
+# Sample {#sample}
 You can generate a sample app using the slatekit executable. 
 Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}
 {{< highlight bash >}}
@@ -169,7 +169,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 {{% section-end mod="arch/app" %}}
 
 
-# Concepts
+# Concepts {#concepts}
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Concept</strong></td>
@@ -199,7 +199,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 {{% section-end mod="arch/app" %}}
 
 
-# Guide
+# Guide {#guide}
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
@@ -249,7 +249,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 </table>
 <br/>
 
-## Args {#Args}
+## Args {#args}
 Command line arguments are parsed and supplied to your app. You can specify what the arguments are supported by specifying the schema.
 This leverages the {{% sk-link-util page="args" name="Args" %}} component.
 {{< highlight kotlin >}}
@@ -270,7 +270,7 @@ This leverages the {{% sk-link-util page="args" name="Args" %}} component.
 {{< /highlight >}}
 {{% feature-end mod="arch/app" %}}
 
-## Envs {#Envs}
+## Envs {#envs}
 Default environments and configs per environment are setup for applications and associated together.
 Refer to example app and or a generated application for more info.
 This leverages the {{% sk-link-util page="env" name="Envs" %}} and {{% sk-link-util page="config" name="Config" %}} components
@@ -320,7 +320,7 @@ This leverages the {{% sk-link-util page="env" name="Envs" %}} and {{% sk-link-u
 </table>
 {{% feature-end mod="arch/app" %}}
 
-## Logs {#Logs}
+## Logs {#logs}
 Logback logging is setup for the application in <strong>/resources/logback.xml</strong>
 This leverages the {{% sk-link-util page="logger" name="Logs" %}} component.
 {{< highlight xml >}}
@@ -344,7 +344,7 @@ This leverages the {{% sk-link-util page="logger" name="Logs" %}} component.
 {{% feature-end mod="arch/app" %}}
 
 
-## Conf {#Conf}
+## Conf {#conf}
 Configuration settings are supported via normal Java Properties files stored in the <strong>resources</strong> folder.
 Configuration settings existing based on the names of the environments setup ( see above ). 
 This leverages the {{% sk-link-util page="config" name="Config" %}} component.
@@ -367,7 +367,7 @@ env = loc
 {{< /highlight >}}
 {{% feature-end mod="arch/app" %}}
 
-## Help {#Help}
+## Help {#help}
 The application supports typing  <strong>-version</strong>,  <strong>-about</strong> and <strong>-help</strong> after your apps executable/jar.
 This will display info about the app and usage of command line args.
 This leverages the {{% sk-link-util page="args" name="Args" %}} component.
@@ -400,7 +400,7 @@ myapp -help
 {{< /highlight >}}
 {{% feature-end mod="arch/app" %}}
 
-## Context {#Context}
+## Context {#context}
 The is an application context that stores all relevant info about the application such as the command line args,
 config, logs, encryptor, info about the app and more. You have access to this with in your app. 
 This can be either built up automatically by the application or you can supply it explicitly.
@@ -433,7 +433,7 @@ This leverages the {{% sk-link-arch page="context" name="Context" %}} component.
 {{< /highlight >}}
 {{% feature-end mod="arch/app" %}}
 
-## Cycle {#Cycle}
+## Cycle {#cycle}
 The application support 3 life-cycle events, <strong>init, exec, and done</strong>. 
 You can use these template methods to insert your pre execution, execution, and post execution logic.
 {{< highlight kotlin >}}
@@ -464,7 +464,7 @@ You can use these template methods to insert your pre execution, execution, and 
 {{< /highlight >}}
 {{% feature-end mod="arch/app" %}}
 
-## Info {#Info}
+## Info {#info}
 The component can print diagnostic info during the start and end of your application life-cycle.
 This leverages the all the existing {{% sk-link-util page="args" name="Args" %}}, {{% sk-link-util page="env" name="Env" %}}, {{% sk-link-util page="config" name="Config" %}}
 components list earlier.
