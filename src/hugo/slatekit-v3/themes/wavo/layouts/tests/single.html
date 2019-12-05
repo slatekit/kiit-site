@@ -28,6 +28,7 @@
             z-index: 11;
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
+            border-right: 1px solid #dee2e6;
         }
         .sidebar-brand {
             height: 88px;
@@ -117,7 +118,9 @@
         }
         .sidebar-nav .sidebar-nav-item ul li span {
             color: #000000;
+            color: #5a5e74;
             font-size: 16px;
+            font-weight: bold;
             padding-left: 30px;
         }
         .sidebar-section {
@@ -187,6 +190,15 @@
                 {{ partial "sidebar.html" . }}
             </div>
             <div class="col-md-8 col-lg-9">
+                <section class="features">
+
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a href="arch/results"><img  src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid"></a>
+                            <h1>App</h1>
+                        </div>
+                    </div>
+                </section>
                 {{ .Content }}
             </div>
             <div class="col-sm-1">
