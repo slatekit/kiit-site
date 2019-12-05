@@ -187,11 +187,12 @@
             </div>
             <div class="col-lg-9 flex">
                 <section class="features">
-
                     <div class="container-fluid text-center">
                         <div class="mx-auto">
-                            <a href="arch/results"><img  src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid"></a>
-                            <h1>App</h1>
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">App</h1>
                         </div>
                     </div>
                 </section>
@@ -226,6 +227,11 @@
     {{ partial "footer.html" . }}
 
     <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
 </body>
 
 </html>

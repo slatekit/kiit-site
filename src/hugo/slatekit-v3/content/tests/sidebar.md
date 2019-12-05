@@ -467,5 +467,49 @@ components list earlier.
 {{% sk-contact-us pretext="More docs coming later, but you can reach us at" linktext="git" %}}
 {{% section-end mod="arch/app" %}}
 
+<script>
+    var archComponent = {
+        name: "App",
+        page: "arch/app",
+        icon: "assets/media/img/white/desktop.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Overview",
+                    items: [
+                        { name:"About" , anchor: "#about" },
+                        { name:"Goals" , anchor: "#goals" },
+                        { name:"Status", anchor: "#status" }
+                    ]
+                },
+                {
+                    name: "Setup",
+                    items: [
+                        { name:"Install" , anchor: "#install" },
+                        { name:"Requires", anchor: "#requires" },
+                        { name:"Example" , anchor: "#example" }
+                    ]
+                },
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Args" , anchor: "#about" },
+                        { name:"Envs" , anchor: "#envs"  },
+                        { name:"Confs", anchor: "#confs" },
+                        { name:"Logs" , anchor: "#logs"  },
+                        { name:"Help" , anchor: "#help"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
+
 
   
