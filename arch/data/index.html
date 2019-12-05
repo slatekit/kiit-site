@@ -105,15 +105,10 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
             <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
-            <li><a class="dropdown-item" href="">-------------------</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
-            <li><a class="dropdown-item" href="">-------------------</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
             <li><a class="dropdown-item" href="arch/apis">API</a></li>
-            <li><a class="dropdown-item" href="arch/cli">CLI</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
-            <li><a class="dropdown-item" href="">-------------------</a></li>
             <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
@@ -219,23 +214,8 @@
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#features">Features</a></strong></td>
+        <td><strong><a class="url-ch" href="arch/data#features">Guide</a></strong></td>
         <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
     </tr>
 </table>
 
@@ -757,14 +737,16 @@ Future versions will include support for:
 </span><span class="c1"></span>    <span class="c1">// Also, can use KType to get if field is required ( via isMarkedNullabel )
 </span><span class="c1"></span>    <span class="k">object</span> <span class="nc">UserSchema</span> <span class="p">:</span> <span class="n">Schema</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="s">&#34;user&#34;</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">val</span> <span class="py">id</span>         <span class="p">=</span> <span class="n">id</span>    <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">id</span>        <span class="p">)</span>
-        <span class="k">val</span> <span class="py">email</span>      <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">email</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">,</span> <span class="n">indexed</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">first</span>      <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">first</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">last</span>       <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">last</span>      <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">age</span>        <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">age</span>       <span class="p">)</span>
-        <span class="k">val</span> <span class="py">salary</span>     <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">salary</span>    <span class="p">)</span>
-        <span class="k">val</span> <span class="py">active</span>     <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">active</span>    <span class="p">)</span>
-        <span class="k">val</span> <span class="py">registered</span> <span class="p">=</span> <span class="n">field</span> <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">registered</span><span class="p">)</span>
-    <span class="p">}</span><span class="err">`````</span>
+        <span class="k">val</span> <span class="py">email</span>      <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">email</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">,</span> <span class="n">indexed</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">first</span>      <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">first</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">last</span>       <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">last</span>      <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">age</span>        <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">age</span>       <span class="p">)</span>
+        <span class="k">val</span> <span class="py">salary</span>     <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">salary</span>    <span class="p">)</span>
+        <span class="k">val</span> <span class="py">active</span>     <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">active</span>    <span class="p">)</span>
+        <span class="k">val</span> <span class="py">registered</span> <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">registered</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">createdAt</span>  <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">updatedAt</span> <span class="p">,</span> <span class="n">category</span> <span class="p">=</span> <span class="n">FieldCategory</span><span class="p">.</span><span class="n">Meta</span><span class="p">)</span>
+        <span class="k">val</span> <span class="py">updatedAt</span>  <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">updatedAt</span> <span class="p">,</span> <span class="n">category</span> <span class="p">=</span> <span class="n">FieldCategory</span><span class="p">.</span><span class="n">Meta</span><span class="p">)</span>
+    <span class="p">}</span>
 
     <span class="c1">// Access the model which stores all the fields
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="n">UserSchema</span><span class="p">.</span><span class="n">model</span>
