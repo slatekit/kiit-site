@@ -1,9 +1,38 @@
+
+function buildArchMenuCommon() {
+    return [
+        {
+            name: "Overview",
+            items: [
+                { name:"About" , anchor: "#about" },
+                { name:"Goals" , anchor: "#goals" },
+                { name:"Status", anchor: "#status" }
+            ]
+        },
+        {
+            name: "Setup",
+            items: [
+                { name:"Install" , anchor: "#install" },
+                { name:"Requires", anchor: "#requires" },
+                { name:"Example" , anchor: "#example" }
+            ]
+        }
+    ];
+}
+
 function buildArchComponent(archComp) {
     // Set name, link, icon
     console.log("setting up component");
     $("#sk_arch_component_name").text(archComp.name);
     $("#sk_arch_component_img").attr("src",archComp.icon);
     $("#sk_arch_component_link").attr("href", archComp.page);
+
+    if(archComp.menu.useTemplate) {
+        var common = buildArchMenuCommon();
+        var all = common.concat(archComp.menu.sections);
+        archComp.menu.sections = all;
+    }
+
     var sections = "";
     for (ndxSection = 0; ndxSection < archComp.menu.sections.length; ndxSection++) { 
         var section = archComp.menu.sections[ndxSection]; 

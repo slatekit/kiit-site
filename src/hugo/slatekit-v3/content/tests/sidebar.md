@@ -477,22 +477,6 @@ components list earlier.
             useTemplate:true,
             sections: [
                 {
-                    name: "Overview",
-                    items: [
-                        { name:"About" , anchor: "#about" },
-                        { name:"Goals" , anchor: "#goals" },
-                        { name:"Status", anchor: "#status" }
-                    ]
-                },
-                {
-                    name: "Setup",
-                    items: [
-                        { name:"Install" , anchor: "#install" },
-                        { name:"Requires", anchor: "#requires" },
-                        { name:"Example" , anchor: "#example" }
-                    ]
-                },
-                {
                     name: "Guide",
                     items: [
                         { name:"Args" , anchor: "#about" },
