@@ -177,6 +177,113 @@ table tr td  {
 	opacity: .85;
 	margin-bottom: 0;
 }
+
+#sidebar-wrapper {
+    background: #F5F7F9;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    transition: left 0.4s ease-in-out;
+    z-index: 11;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-right: 1px solid #dee2e6;
+    width: 230px;
+}
+.sidebar-header {
+    height: 80px;
+    padding: 0 24px;
+    background: #F5F7F9;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.063rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+}
+.sidebar-nav {
+    margin-top: 24px;
+}
+.sidebar-nav ol, ul {
+    list-style: none;
+}
+.sidebar-nav .sidebar-nav-item > a {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 0px; 
+}
+.sidebar-nav .sidebar-nav-item > a {
+    color: #5a5e74;
+}
+.sidebar-nav .sidebar-nav-item > a:visited {
+    color: #5a5e74;
+}
+.sidebar-nav .sidebar-nav-item > a:hover {
+    color: #5a5e74;
+}
+.sidebar-nav .sidebar-nav-item > a:active, .sidebar-nav .sidebar-nav-item > a:focus {
+    color: #5a5e74;
+}
+.sidebar-nav .sidebar-nav-item > a:hover {
+    text-decoration: none;
+}
+.sidebar-nav .sidebar-nav-item > a .fa {
+    transition: all .3s; 
+}
+.sidebar-nav .sidebar-nav-item.active > a {
+    padding-left: 20px;
+    border-left: 4px solid #61A8FF;
+}
+.sidebar-nav .sidebar-nav-item ul {
+    display: none;
+    padding: 16px 20px;
+}
+.sidebar-nav .sidebar-nav-item {
+}
+.sidebar-nav .sidebar-nav-item ul li {
+    color: #007bff;
+    padding-top:10px;
+}
+.sidebar-nav .sidebar-nav-item ul li span {
+    color: #5a5e74;
+    font-size: 16px;
+    font-weight: normal;
+    padding-left: 20px;
+}
+.sidebar-section {
+    padding-left: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #585CE9;
+}
 /*
 table tr td  {
 	font-family: 'Open Sans', sans-serif;

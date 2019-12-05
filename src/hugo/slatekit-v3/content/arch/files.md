@@ -7,45 +7,6 @@ section_header: Files
 # Overview
 The Files component is an abstraction of file storage with a default implementation using **AWS S3**. This also provides a much simplified API while making the underlying implementation swappable.
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/files#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/files#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/files#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/files#sample">Import</a></strong></td>
-        <td>Packages to import</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/files#goals">Setup</a></strong></td>
-        <td>Set up of credentials, and configuration</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/files#concepts">Usage</a></strong></td>
-        <td>Usage and examples</td>
-    </tr>
-</table>
-{{% section-end mod="arch/files" %}}
 
 # Status
 This component is currently **stable**. Following limitations, current work, planned features apply.
@@ -102,7 +63,7 @@ This component is currently **stable**. Following limitations, current work, pla
     url="arch/files"
     uses="slatekit.results, slatekit.core, slatekit.cloud"
     exampleUrl=""
-    exampleFileName="Example_Files.kt"
+    exampleFileName="Example_Cloud_Files.kt"
 %}}
 {{% section-end mod="arch/files" %}}
 
@@ -191,4 +152,29 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{< /highlight >}}
 {{% section-end mod="arch/files" %}}
+
+<script>
+    var archComponent = {
+        name: "Files",
+        page: "arch/files",
+        icon: "assets/media/img/white/folders.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Usage" , anchor: "#usage"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

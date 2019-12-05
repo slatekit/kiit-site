@@ -2,6 +2,7 @@
 title: "Features"
 date: 2019-03-17T14:30:52-04:00
 section_header: Archtecture Components
+layout : "overview"
 ---
 
 # Overview

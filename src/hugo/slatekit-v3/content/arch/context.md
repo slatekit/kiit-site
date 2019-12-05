@@ -33,56 +33,6 @@ The Context is a container for common application dependencies such as the parse
 
 {{% break %}}
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#features">Features</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/context#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-</table>
-
-{{% section-end mod="arch/context" %}}
 
 # Status
 This component is currently stable, has default implementations, and can be used for both **Android and Server**
@@ -396,4 +346,34 @@ See {{% sk-link-util page="encrypt" name="Encryptor" %}} for more info.
 {{% feature-end mod="arch/context" %}}
 
 {{% section-end mod="arch/context" %}}
+
+<script>
+    var archComponent = {
+        name: "Context",
+        page: "arch/context",
+        icon: "assets/media/img/white/connected.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Args" , anchor: "#args" },
+                        { name:"Env" , anchor: "#env"  },
+                        { name:"Conf", anchor: "#conf" },
+                        { name:"Logs" , anchor: "#logs"  },
+                        { name:"Encrypt" , anchor: "#encrypt"  },
+                        { name:"Build" , anchor: "#build"  },
+                        { name:"About" , anchor: "#about"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

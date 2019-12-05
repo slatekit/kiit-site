@@ -146,22 +146,43 @@
         
         
     
-    <section class="header wow fadeInUp">
-        <div class="container text-center">
-            <h2>Apis</h2>
-        </div>
-    </section>
     
-    <section class="sk-creative">
-      <div class="container">
+    
+    
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-none d-sm-block">
+                <div id="sidebar-wrapper">
+   <div class="sidebar-header">
+      <a class="brand" href="/">
+      <span>Index</span>
+      </a>
+      <button type="button" id="main-toggle" class="sidebar-toggle">
+      <span class="close"></span>
+      </button>
+   </div>
+   <div id="sk_arch_component_menu_sections" class="sidebar-nav">
         
+    </div>
+</div>
+            </div>
+            <div class="col-lg-9 flex">
+                <section class="features">
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">App</h1>
+                        </div>
+                    </div>
+                </section>
+                
 
 <h1 id="overview">Overview</h1>
 
 <p>Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enriching normal Kotlin methods and making them easily discoverable and accessible across a range of hosts. This will resemble an <strong>RPC</strong> type approach, but contains some support and concepts from <strong>REST</strong>. More specifically, APIs in Slate Kit can be hosted and made available as Web/HTTP APIs, on the CLI, or called from requests from queues or files for automation purposes. Under the hood, Slate Kit simply leverages existing HTTP servers ( currently <strong>Ktor</strong> ), to host, discover, manage, and access Slate Kit APIs. Our <a href="arch/cli" >CLI</a> also supports the ability to host Slate Kit APIs. This specific approach to API development in Slate Kit is referred to as <strong>Universal APIs</strong>.
 <br/><br/></p>
-
-<h1 id="create">Create</h1>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
     slatekit new api -name<span class="o">=</span><span class="s2">&#34;SampleAPI&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
@@ -195,61 +216,6 @@
 </table>
 
 <br/><br/>
-
-<h1 id="index">Index</h1>
-
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#features">Features</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#feature">Features</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-</table>
-
-<br/>
-
-<a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
 
 <h1 id="status">Status</h1>
 
@@ -1058,8 +1024,43 @@ The request would like this:
 <a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
+<script>
+    var archComponent = {
+        name: "APIs",
+        page: "arch/apis",
+        icon: "assets/media/img/white/webapi.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Routes" , anchor: "#routes"  },
+                        { name:"Config", anchor: "#config" },
+                        { name:"Request" , anchor: "#requests"  },
+                        { name:"Response" , anchor: "#response"  },
+                        { name:"Errors" , anchor: "#errors"  },
+                        { name:"Hooks" , anchor: "#middleware"  },
+                        { name:"Web" , anchor: "#web"  },
+                        { name:"CLI" , anchor: "#cli"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
+
+            </div>
+            <div class="col-sm-1 flex">
+            </div>
+        </div>
       </div>
-    </section>  
     
 
     
@@ -1092,8 +1093,14 @@ The request would like this:
     <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
     <script src="assets/theme/js/plugins/wow.min.js"></script>
     <script src="assets/theme/js/agency-1.js"></script>
+    <script src="assets/app/slatekit.js"></script>
 
     <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
 </body>
 
 </html>

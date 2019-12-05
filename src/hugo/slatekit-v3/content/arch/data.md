@@ -30,41 +30,6 @@ Slate Kit contains 3 modules for working with **data and databases**. These allo
 
 {{% break %}}
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/data#features">Guide</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-</table>
-
-{{% section-end mod="arch/data" %}}
 
 # Status
 This component is currently stable and works with **MySql**. 
@@ -206,7 +171,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
     <tr>
         <td><strong>7. Vendors</strong></td>
         <td>Support for different databases and setup</td>
-        <td><a href="arch/data/#services" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/data/#vendors" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>8. Schemas</strong></td>
@@ -645,4 +610,38 @@ Functionality available, docs coming soon.
 {{% feature-end mod="arch/data" %}}
 
 {{% section-end mod="arch/data" %}}
+
+<script>
+    var archComponent = {
+        name: "Data",
+        page: "arch/data",
+        icon: "assets/media/img/white/layers.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Connections" , anchor: "#connections" },
+                        { name:"Databases" , anchor: "#databases"  },
+                        { name:"Records", anchor: "#records" },
+                        { name:"Mappers" , anchor: "#mappers"  },
+                        { name:"Repos" , anchor: "#repos"  },
+                        { name:"Services" , anchor: "#services"  },
+                        { name:"Vendors" , anchor: "#vendors"  },
+                        { name:"Schemas" , anchor: "#schemas"  },
+                        { name:"ORM" , anchor: "#orm"  },
+                        { name:"Events" , anchor: "#events"  },
+                        { name:"Migrations" , anchor: "#migrations"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

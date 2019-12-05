@@ -39,55 +39,6 @@ pre-built functionality for you to integrate your own commands in an interactie 
 </table>
 {{% break %}}
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#features">Features</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>9</strong></td>
-        <td><strong><a class="url-ch" href="arch/cli#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-</table>
-{{% section-end mod="arch/cli" %}}
 
 # Status
 This component is currently stable and there is a project generator for it.
@@ -259,7 +210,7 @@ You can create a custom CLI by extending the Slate Kit CLI component or the CliA
         <td><strong>More</strong></td>
     </tr>
     <tr>
-        <td><strong>1. Input</strong></td>
+        <td><strong>1. Inputs</strong></td>
         <td>Handling text and inputs</td>
         <td><a href="arch/cli/#inputs" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
@@ -522,4 +473,35 @@ The most important and powerful feature of the CLI is integration with Slate Kit
 {{% feature-end mod="arch/cli" %}}
 
 {{% section-end mod="arch/cli" %}}
+
+<script>
+    var archComponent = {
+        name: "CLI",
+        page: "arch/cli",
+        icon: "assets/media/img/white/terminal.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Inputs" , anchor: "#inputs" },
+                        { name:"Reserved" , anchor: "#reserved"  },
+                        { name:"Args", anchor: "#args" },
+                        { name:"Requests" , anchor: "#requests"  },
+                        { name:"Execute" , anchor: "#execute"  },
+                        { name:"Responses" , anchor: "#responses"  },
+                        { name:"Startup" , anchor: "#startup"  },
+                        { name:"APIs" , anchor: "#apis"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

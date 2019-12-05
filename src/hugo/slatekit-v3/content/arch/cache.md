@@ -30,56 +30,6 @@ The Slate Cache is a light-weight LRU ( Least Recently Used ) Cache for both And
 
 {{% break %}}
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#features">Features</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>9</strong></td>
-        <td><strong><a class="url-ch" href="arch/cache#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-</table>
-
-{{% section-end mod="arch/cache" %}}
 
 # Status
 This component is currently stable. Future versions will include support for:
@@ -233,7 +183,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
     <tr>
         <td><strong>4. Async</strong></td>
         <td>Working with parsed commands as CLI Requests</td>
-        <td><a href="arch/cache/#asyc" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/cache/#async" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
 </table>
 
@@ -423,3 +373,29 @@ The **async** cache implementation is {{% sk-link-code component="cache" filepat
 
 {{% section-end mod="arch/cache" %}}
 
+<script>
+    var archComponent = {
+        name: "Cache",
+        page: "arch/cache",
+        icon: "assets/media/img/white/lightning.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Usage" , anchor: "#usage" },
+                        { name:"Stats" , anchor: "#stats"  },
+                        { name:"Sync", anchor: "#sync" },
+                        { name:"Async" , anchor: "#async"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>

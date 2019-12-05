@@ -7,45 +7,6 @@ section_header: Queues
 # Overview
 The Files component is an abstraction of persistent queues with a default implementation using **AWS SQS**. This also provides a much simplified API while making the underlying implementation swappable.
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/queues#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/queues#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/queues#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/queues#sample">Import</a></strong></td>
-        <td>Packages to import</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/queues#goals">Setup</a></strong></td>
-        <td>Set up of credentials, and configuration</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/queues#concepts">Usage</a></strong></td>
-        <td>Usage and examples</td>
-    </tr>
-</table>
-{{% section-end mod="arch/queues" %}}
 
 # Status
 This component is currently **stable**. Following limitations, current work, planned features apply.
@@ -59,11 +20,6 @@ This component is currently **stable**. Following limitations, current work, pla
         <td>**Meta**</td>
         <td>Upcoming</td>
         <td>Ability to easily default / inject meta data for every entry.</td>
-    </tr>
-    <tr>
-        <td>**Async**</td>
-        <td>Upcoming</td>
-        <td>Async support via Kotlin suspend/coroutines and Java AWS 2.0 SDK</td>
     </tr>
     <tr>
         <td>**URI**</td>
@@ -198,4 +154,29 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{< /highlight >}}
 {{% section-end mod="arch/queues" %}}
+
+<script>
+    var archComponent = {
+        name: "Queues",
+        page: "arch/queues",
+        icon: "assets/media/img/white/queue.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Usage" , anchor: "#usage" }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

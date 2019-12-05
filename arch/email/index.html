@@ -146,63 +146,42 @@
         
         
     
-    <section class="header wow fadeInUp">
-        <div class="container text-center">
-            <h2>Email</h2>
-        </div>
-    </section>
     
-    <section class="sk-creative">
-      <div class="container">
+    
+    
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-none d-sm-block">
+                <div id="sidebar-wrapper">
+   <div class="sidebar-header">
+      <a class="brand" href="/">
+      <span>Index</span>
+      </a>
+      <button type="button" id="main-toggle" class="sidebar-toggle">
+      <span class="close"></span>
+      </button>
+   </div>
+   <div id="sk_arch_component_menu_sections" class="sidebar-nav">
         
+    </div>
+</div>
+            </div>
+            <div class="col-lg-9 flex">
+                <section class="features">
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">App</h1>
+                        </div>
+                    </div>
+                </section>
+                
 
 <h1 id="overview">Overview</h1>
 
 <p>The Email component is an abstraction of an Email Service with support for simple templates and a default implementation for sending emails using <strong>SendGrid</strong>.</p>
-
-<h1 id="index">Index</h1>
-
-<p><table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#sample">Import</a></strong></td>
-        <td>Packages to import</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#goals">Setup</a></strong></td>
-        <td>Set up of credentials, and configuration</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#concepts">Usage</a></strong></td>
-        <td>Usage and examples</td>
-    </tr>
-</table>
-<br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
 
 <h1 id="status">Status</h1>
 
@@ -375,8 +354,36 @@
 <a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
+<script>
+    var archComponent = {
+        name: "Email",
+        page: "arch/email",
+        icon: "assets/media/img/white/email.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Usage" , anchor: "#usage"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
+
+            </div>
+            <div class="col-sm-1 flex">
+            </div>
+        </div>
       </div>
-    </section>  
     
 
     
@@ -409,8 +416,14 @@
     <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
     <script src="assets/theme/js/plugins/wow.min.js"></script>
     <script src="assets/theme/js/agency-1.js"></script>
+    <script src="assets/app/slatekit.js"></script>
 
     <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
 </body>
 
 </html>

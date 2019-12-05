@@ -31,41 +31,6 @@ The Tracking components in Slate Kit are useful for diagnostics, specifically fo
 
 {{% break %}}
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/tracking#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/tracking#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/tracking#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/tracking#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/tracking#features">Guide</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-</table>
-
-{{% section-end mod="arch/tracking" %}}
 
 # Status
 This component is currently stable and can be used for both **Android and Server**
@@ -145,37 +110,37 @@ The context can be constructed manually or using convenience methods that build 
     <tr>
         <td><strong>1. Calls</strong></td>
         <td>Tracks total processed, succeeded, failed operations.</td>
-        <td><a href="arch/tracking/#args" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/tracking/#calls" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>2. Counts</strong> </td>
         <td>Tracks total successes and all error categories from {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}}</td> 
-        <td><a href="arch/tracking/#env" class="more"><span class="btn btn-primary">more</span></a></td>                    
+        <td><a href="arch/tracking/#counts" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
         <td><strong>3. Lasts</strong></td>
         <td>Tracks the last request and response/result values grouped by {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}}</td>
-        <td><a href="arch/tracking/#conf" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/tracking/#lasts" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>4. Event</strong></td>
         <td>Models a past event with fields and is used for structured logging.</td>
-        <td><a href="arch/tracking/#logs" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/tracking/#event" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>5. Events</strong></td>
         <td>Event handler for handling/tracking results based on {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}}</td>
-        <td><a href="arch/tracking/#encrypt" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/tracking/#events" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>6. Recorder</strong></td>
         <td>Records diagnostics via the calls, counts, events, logger components.</td>
-        <td><a href="arch/tracking/#build" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/tracking/#recorder" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>7. Updates</strong></td>
         <td>Tracks an updating value by storing its create/update time, value and total changes.</td>
-        <td><a href="arch/tracking/#about" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/tracking/#updates" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
 </table>
 {{% section-end mod="arch/tracking" %}}
@@ -403,4 +368,34 @@ Updates track the initial creation time, update time, total updates of some valu
 {{% feature-end mod="arch/tracking" %}}
 
 {{% section-end mod="arch/tracking" %}}
+
+<script>
+    var archComponent = {
+        name: "Tracking",
+        page: "arch/tracking",
+        icon: "assets/media/img/white/diagnostic.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Calls" , anchor: "#calls" },
+                        { name:"Counts" , anchor: "#counts"  },
+                        { name:"Lasts" , anchor: "#lasts"  },
+                        { name:"Event" , anchor: "#event"  },
+                        { name:"Events" , anchor: "#events"  },
+                        { name:"Recorder" , anchor: "#recorder"  },
+                        { name:"Updates" , anchor: "#updates"  },
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

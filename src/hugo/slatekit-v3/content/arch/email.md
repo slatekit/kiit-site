@@ -7,45 +7,6 @@ section_header: Email
 # Overview
 The Email component is an abstraction of an Email Service with support for simple templates and a default implementation for sending emails using **SendGrid**. 
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#sample">Import</a></strong></td>
-        <td>Packages to import</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#goals">Setup</a></strong></td>
-        <td>Set up of credentials, and configuration</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/email#concepts">Usage</a></strong></td>
-        <td>Usage and examples</td>
-    </tr>
-</table>
-{{% section-end mod="arch/email" %}}
 
 # Status
 This component is currently **stable**. Following limitations, current work, planned features apply.
@@ -131,7 +92,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{% section-end mod="arch/email" %}}
 
-# Setup
+# Setup {#setup}
 {{< highlight kotlin >}}
         
     // Setup 1: Getting key from config
@@ -165,7 +126,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{% section-end mod="arch/email" %}}
 
-# Usage
+# Usage {#usage}
 {{< highlight kotlin >}}
         
     // Use case 1: Send a confirmation code to the U.S. to verify a users phone number.
@@ -185,4 +146,29 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{< /highlight >}}
 {{% section-end mod="arch/email" %}}
+
+<script>
+    var archComponent = {
+        name: "Email",
+        page: "arch/email",
+        icon: "assets/media/img/white/email.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Usage" , anchor: "#usage"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

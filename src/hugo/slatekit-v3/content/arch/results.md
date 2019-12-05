@@ -81,60 +81,6 @@ section_header: Results
 </table>
 {{% break %}}
 
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#goals">Goals</a></strong></td>
-        <td>Goals of this component and the problems it attempts to solve</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#features">Features</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>9</strong></td>
-        <td><strong><a class="url-ch" href="arch/results#details">Details</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-</table>
-{{% section-end mod="arch/results" %}}
 
 # Status
 This component is currently stable, has 0 dependencies and can be used for both **Android and Server**
@@ -636,4 +582,37 @@ Status codes not only serve to logically categories successes/failures but becom
 {{% feature-end mod="arch/results" %}}
 
 {{% section-end mod="arch/results" %}}
+
+<script>
+    var archComponent = {
+        name: "Result",
+        page: "arch/results",
+        icon: "assets/media/img/white/target.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Create" , anchor: "#creation" },
+                        { name:"Values" , anchor: "#values"  },
+                        { name:"Check", anchor: "#check" },
+                        { name:"Errors" , anchor: "#errors"  },
+                        { name:"Status" , anchor: "#status"  },
+                        { name:"Aliases" , anchor: "#aliases"  },
+                        { name:"Builders" , anchor: "#builders"  },
+                        { name:"Outcome" , anchor: "#outcome"  },
+                        { name:"Try" , anchor: "#try"  },
+                        { name:"Http" , anchor: "#http"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

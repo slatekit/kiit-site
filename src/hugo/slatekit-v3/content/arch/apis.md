@@ -8,7 +8,6 @@ section_header: Apis
 Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enriching normal Kotlin methods and making them easily discoverable and accessible across a range of hosts. This will resemble an **RPC** type approach, but contains some support and concepts from **REST**. More specifically, APIs in Slate Kit can be hosted and made available as Web/HTTP APIs, on the CLI, or called from requests from queues or files for automation purposes. Under the hood, Slate Kit simply leverages existing HTTP servers ( currently **Ktor** ), to host, discover, manage, and access Slate Kit APIs. Our {{% sk-link-arch page="cli" name="CLI" %}} also supports the ability to host Slate Kit APIs. This specific approach to API development in Slate Kit is referred to as **Universal APIs**.
 {{% break %}}
 
-# Create
 {{< highlight bash >}}
     
     slatekit new api -name="SampleAPI" -package="mycompany.apps"
@@ -40,57 +39,6 @@ Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enr
 
 {{% break %}}
 
-
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#features">Features</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-    <tr>
-        <td><strong>7</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#setup">Setup</a></strong></td>
-        <td>Set up and configure this component for use</td>
-    </tr>
-    <tr>
-        <td><strong>8</strong></td>
-        <td><strong><a class="url-ch" href="arch/apis#feature">Features</a></strong></td>
-        <td>In-depth examples of the supported features</td>
-    </tr>
-</table>
-
-{{% section-end mod="arch/apis" %}}
 
 # Status
 This component is currently stable and uses JetBrains **Ktor** as the underlying HTTP server for hosting Slate Kit APIs as Web/HTTP APIs. 
@@ -809,4 +757,36 @@ You can then call this API from a request saved to a file
       
 {{< /highlight >}}
 {{% section-end mod="arch/apis" %}}
+
+<script>
+    var archComponent = {
+        name: "APIs",
+        page: "arch/apis",
+        icon: "assets/media/img/white/webapi.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Routes" , anchor: "#routes"  },
+                        { name:"Config", anchor: "#config" },
+                        { name:"Request" , anchor: "#requests"  },
+                        { name:"Response" , anchor: "#response"  },
+                        { name:"Errors" , anchor: "#errors"  },
+                        { name:"Hooks" , anchor: "#middleware"  },
+                        { name:"Web" , anchor: "#web"  },
+                        { name:"CLI" , anchor: "#cli"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 

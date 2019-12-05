@@ -8,7 +8,6 @@ section_header: Jobs
 The Slate Jobs component is a background job/persistant task queue system for Kotlin and is similar to Ruby SideKiq, NodeJS Bull. It leverages Kotlin **Coroutines and Channels** for concurrency based operations to gracefully **start, stop, pause, resume** jobs.
 {{% break %}}
 
-# Create
 {{< highlight bash >}}
     
     slatekit new job -name="SampleJob" -package="mycompany.apps"
@@ -39,47 +38,6 @@ The Slate Jobs component is a background job/persistant task queue system for Ko
 
 {{% break %}}
 
-
-# Index
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Section</strong></td>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#status">Status</a></strong></td>
-        <td>Current status of this component</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#install">Install</a></strong></td>
-        <td>Installation instructions and references to sources</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#requires">Requires</a></strong></td>
-        <td>Lists all the Slate Kit and third-party dependencies</td>
-    </tr>
-    <tr>
-        <td><strong>4</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#sample">Sample</a></strong></td>
-        <td>Quick sample to show usage of the component</td>
-    </tr>
-    <tr>
-        <td><strong>5</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#concepts">Concepts</a></strong></td>
-        <td>Core concepts to understand in this component</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
-        <td><strong><a class="url-ch" href="arch/jobs#features">Guide</a></strong></td>
-        <td>List all the features supported</td>
-    </tr>
-</table>
-
-{{% section-end mod="arch/jobs" %}}
 
 # Status
 This component is currently stable and there is a project generator for it
@@ -748,4 +706,35 @@ Statistics are recorded at the worker level. There is ( currently ) no way aggre
 {{< /highlight >}}
 
 {{% section-end mod="arch/jobs" %}}
+
+<script>
+    var archComponent = {
+        name: "Jobs",
+        page: "arch/jobs",
+        icon: "assets/media/img/white/gears.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Register" , anchor: "#register" },
+                        { name:"Usage" , anchor: "#usage" },
+                        { name:"Cycle" , anchor: "#cycle" },
+                        { name:"Types" , anchor: "#types" },
+                        { name:"Events" , anchor: "#events"  },
+                        { name:"Workers" , anchor: "#workers"  },
+                        { name:"Stats" , anchor: "#stats"  },
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 
