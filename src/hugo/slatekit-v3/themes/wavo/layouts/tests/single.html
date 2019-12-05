@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Tests2</title>
     <style>
+        h1 {
+            color: #494e6b;
+        }
         #sidebar-wrapper {
             background: #F5F7F9;
             left: 0;
@@ -186,10 +189,10 @@
 
       <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 flex">
+            <div class="col-sm-2 d-none d-sm-block">
                 {{ partial "sidebar.html" . }}
             </div>
-            <div class="col-md-8 col-lg-9">
+            <div class="col-lg-10 flex">
                 <section class="features">
 
                     <div class="container-fluid text-center">
@@ -201,10 +204,7 @@
                 </section>
                 {{ .Content }}
             </div>
-            <div class="col-sm-1">
-            </div>
         </div>
-        
       </div>
     
 
