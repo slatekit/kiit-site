@@ -38,6 +38,118 @@
     <link rel="stylesheet" href="assets/app/syntax.css">
     <link rel="stylesheet" href="assets/app/slatekit.css">
     <title>Slate Kit: Tests2</title>
+    <style>
+        #sidebar-wrapper {
+            background: #F5F7F9;
+            left: 0;
+            height: 100%;
+            overflow-y: auto;
+            position: fixed;
+            transition: left 0.4s ease-in-out;
+            width: 250px;
+            z-index: 11;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+        }
+        .sidebar-brand {
+            height: 88px;
+            padding: 0 24px;
+            background: #F5F7F9;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            justify-content: space-between;
+            -ms-flex-pack: space-between;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.063rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #fff;
+        }
+        .sidebar-doc-versions {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sidebar-nav {
+            margin-top: 24px;
+        }
+        .sidebar-nav ol, ul {
+            list-style: none;
+        }
+        .sidebar-nav .sidebar-nav-item > a {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            justify-content: space-between;
+            -ms-flex-pack: space-between;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+            height: 48px;
+            padding: 0 0px; 
+        }
+        .sidebar-nav .sidebar-nav-item > a {
+            color: #000000; 
+        }
+        .sidebar-nav .sidebar-nav-item > a:visited {
+            color: #000000; 
+        }
+        .sidebar-nav .sidebar-nav-item > a:hover {
+            color: #000000; 
+        }
+        .sidebar-nav .sidebar-nav-item > a:active, .sidebar-nav .sidebar-nav-item > a:focus {
+            color: #000000; 
+        }
+        .sidebar-nav .sidebar-nav-item > a:hover {
+            text-decoration: none;
+        }
+        .sidebar-nav .sidebar-nav-item > a .fa {
+            transition: all .3s; 
+        }
+        .sidebar-nav .sidebar-nav-item.active > a {
+            padding-left: 20px;
+            border-left: 4px solid #61A8FF;
+        }
+        .sidebar-nav .sidebar-nav-item ul {
+            display: none;
+            padding: 16px 20px;
+        }
+        .sidebar-nav .sidebar-nav-item {
+        }
+        .sidebar-nav .sidebar-nav-item ul li {
+            color: #007bff;
+            padding-top:10px;
+        }
+        .sidebar-nav .sidebar-nav-item ul li span {
+            color: #000000;
+            font-size: 16px;
+            padding-left: 30px;
+        }
+        .sidebar-section {
+            padding-left: 20px;
+            width:250px;
+            font-weight: bold;
+            color: #ffffff;
+            background: #585CE9;
+        }
+    </style>
 </head>
 
 <body>
@@ -142,62 +254,98 @@
         
         
     
-    <section class="header wow fadeInUp">
-        <div class="container text-center">
-            <h2>Tests</h2>
-        </div>
-    </section>
-    
-        
+      
+
       <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2 sidebar">
-                <div class="sidebar-sticky" style="position: sticky;">
-                    <ul class="nav flex-column">
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">
-                          Overview
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="tests/sidebar#Create">
-                          Create
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="tests/sidebar#Goals">
-                          Goals
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="tests/sidebar#status">
-                          Status
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="tests/sidebar#Install">
-                          Install
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="tests/sidebar#Requires">
-                          Requires
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="tests/sidebar#Sample">
-                          Sample
-                        </a>
-                      </li>
-                    </ul>
-                    
-                </div>
+            <div class="col-md-2 flex">
+                <div id="sidebar-wrapper">
+   <div class="sidebar-brand">
+      <a class="brand" href="/">
+      <span>Index</span>
+      </a>
+      <button type="button" id="main-toggle" class="sidebar-toggle">
+      <span class="close"></span>
+      </button>
+   </div>
+   <div class="sidebar-nav">
+        <div class="sidebar-nav-item">
+            <div class="sidebar-section">Overview</div>
+            <ul style="display: block;">
+                <li>
+                   <a href="/docs/quickstart/libraries/">
+                   <span>About</span>
+                   </a>
+                </li>
+                <li>
+                   <a href="/docs/quickstart/libraries/">
+                   <span>Goals</span>
+                   </a>
+                </li>
+                <li>
+                   <a href="/docs/quickstart/linting/">
+                   <span>Status</span>
+                   </a>
+                </li>
+            </ul>
+      </div>
+      <div class="sidebar-nav-item">
+            <div class="sidebar-section">Setup</div>
+            <ul style="display: block;">
+                <li>
+                   <a href="/docs/quickstart/linting/">
+                   <span>Install</span>
+                   </a>
+                </li>
+                <li>
+                   <a href="/docs/quickstart/linting/">
+                   <span>Requires</span>
+                   </a>
+                </li>
+                <li>
+                   <a href="/docs/quickstart/linting/">
+                   <span>Example</span>
+                   </a>
+                </li>
+            </ul>
+      </div>
+      <div class="sidebar-nav-item">
+         <div class="sidebar-section">Guide</div>
+         <ul  style="display: block;">
+            <li>
+               <a href="/docs/" class="active">
+               <span>Args</span>
+               </a>
+            </li>
+            <li>
+               <a href="/docs/quickstart/libraries/">
+               <span>Env</span>
+               </a>
+            </li>
+            <li>
+               <a href="/docs/quickstart/linting/">
+               <span>Conf</span>
+               </a>
+            </li>
+            <li>
+               <a href="/docs/quickstart/linting/">
+               <span>Logs</span>
+               </a>
+            </li>
+            <li>
+               <a href="/docs/quickstart/linting/">
+               <span>Help</span>
+               </a>
+            </li>
+         </ul>
+      </div>
+    </div>
+</div>
             </div>
-            <div class="col-md-9 col-lg-10">
-                <br/><br/>
+            <div class="col-md-8 col-lg-9">
                 
 
-<h1 id="overview">Overview</h1>
+<h1 id="overiew">Overview</h1>
 
 <p>The Slate App is a base application and template to build console, batch, cli and server applications.
 It has pre-built support for common features such as <strong>command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics</strong> and much more.
@@ -780,6 +928,8 @@ components list earlier.
 <a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
+            </div>
+            <div class="col-sm-1">
             </div>
         </div>
         
