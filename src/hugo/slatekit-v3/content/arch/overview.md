@@ -102,6 +102,14 @@ and scalable applications on the JVM. Several of the modules can be used for bot
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
+              <a href="arch/generators"><img src="assets/media/img/white/prototype.png" alt="" class="img-fluid"></a>
+              <div><a href="arch/generators"><h3>Generator</h3></a></div>
+              <p>Command Line Project generator with extensible templates to quickly create new Slate Kit or custom apps. See {{% sk-link-arch page="generators" name="Generators" %}} 
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp">
+            <div class="box text-center">
               <a href="arch/jobs"><img src="assets/media/img/white/gears.png" alt="" class="img-fluid"></a>
               <div><a href="arch/jobs"><h3>Jobs</h3></a></div>
               <p>Background Jobs/Task queue system for one-off, paged, and queued jobs with middleware support and diagnostics.
@@ -152,9 +160,9 @@ and scalable applications on the JVM. Several of the modules can be used for bot
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="arch/tracking"><img src="assets/media/img/white/diagnostic.png" style="width:50px;" alt="" class="img-fluid"></a>
+              <a href="arch/tracking"><img src="assets/media/img/white/diagnostic.png" style="width:60px;" alt="" class="img-fluid"></a>
               <div><a href="arch/tracking"><h3>Tracking</h3></a></div>
-              <p>Support for diagnostics and tracking of values and recording of events. See {{% sk-link-arch page="tracking" name="Tracking" %}} 
+              <p>Support for diagnostics and tracking of runtime values and recording of events. This supplements typical metrics libraries. See {{% sk-link-arch page="tracking" name="Tracking" %}} 
               </p>
             </div>
           </div>

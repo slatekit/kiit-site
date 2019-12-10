@@ -63,7 +63,7 @@ This component is currently **stable**. Following limitations, current work, pla
     url="arch/queues"
     uses="slatekit.results, slatekit.core, slatekit.cloud"
     exampleUrl=""
-    exampleFileName="Example_Files.kt"
+    exampleFileName="Example_Cloud_Queues.kt"
 %}}
 {{% section-end mod="arch/queues" %}}
 
