@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    <base href="../../">
+          
+      
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/mobirise.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/fontawesome-all.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/slick-theme.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/theme/css/plugins/owl.theme.default.min.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/plugins/animate.css">
+    
+    <link rel="stylesheet" href="assets/theme/css/agency-2.css">
+
+
+    <link rel="stylesheet" href="assets/theme/css/about-1.css">
+    <link rel="stylesheet" href="assets/app/slatekit.css">
+    <link rel="stylesheet" href="assets/app/syntax.css">
+          
+   
+    
+    <link rel="stylesheet" href="assets/app/app.css">
+
+
+    <title>Slate Kit: Generators</title>
+</head>
+
+<body>
+
+    
+    <div class="se-pre-con"></div>
+
+    
+        
+        <div class="header-classic fixed-top navbar-light wow fadeInDown">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <nav class="navbar navbar-expand-lg navbar-classic">
+                            <a class="navbar-brand" href="#0">
+                                <img src="assets/img/saas-1/logo.png" alt=""></a>
+                            <button
+                                class="navbar-toggler collapsed"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#navbar-classic"
+                                aria-controls="navbar-classic"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="icon-bar top-bar mt-0"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbar-classic">
+                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
+                                    
+    <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/start/overview">Overview</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Getting Started
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="start/setup">Setup</a></li>
+            <li><a class="dropdown-item" href="start/hello_world">Hello World</a></li>
+            <li><a class="dropdown-item" href="start/generators">Generators</a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Architecture Components
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="arch/results">Results</a></li>
+            <li><a class="dropdown-item" href="arch/app">App</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
+            <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="utils/overview">Utilities</a>
+    </li>
+    
+    <li class="nav-item dropdown">
+        <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="menu-1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            More
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="menu-1">
+            <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
+            <li><a class="dropdown-item" href="info/standards">Standards</a></li>
+            <li><a class="dropdown-item" href="info/contact">Contact</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="https://github.com/code-helix/slatekit">Github</a>
+    </li>
+</ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    
+    
+    
+    
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-none d-sm-block">
+                <div id="sidebar-wrapper">
+   <div class="sidebar-header">
+      <a class="brand" href="/">
+      <span>Index</span>
+      </a>
+      
+      </button>
+   </div>
+   <div id="sk_arch_component_menu_sections" class="sidebar-nav">
+        
+    </div>
+</div>
+            </div>
+            <div class="col-lg-9 flex">
+                <section class="features">
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">App</h1>
+                        </div>
+                    </div>
+                </section>
+                
+
+<h1 id="overview">Overview</h1>
+
+<p>Slate Kit comes with a command line executable to serve as a project generator.
+This is simply a Kotlin executable jar packaged as a Java Application via gradle that can be executed on the command line with bash/batch scripts. The application takes a template comprised of a instructions, along with files/folders that are copied to a new destinated folder representing the app to create. The files contain placeholder values that replaced the name of the app aamong other things. This is a minimal version of <strong>nodejs yeoman</strong> or <strong>python cookie-cutter</strong>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/><br/></p>
+
+<h1 id="goals">Goals</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Templated</strong></td>
+        <td>Template out different project types for fast setup</td>
+    </tr>
+    <tr>
+        <td><strong>2. Consistency</strong> </td>
+        <td>Create consistent/standardized applications</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Extensible</strong></td>
+        <td>Extend the default generator with new packages/templates</td>
+    </tr>
+</table>
+
+<br/><br/>
+
+<h1 id="status">Status</h1>
+
+<p>This component is currently stable with planned future features<br/>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Feature</strong></td>
+        <td><strong>Status</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Questions</strong></td>
+        <td>Future</td>
+        <td>Support for questions/answers</td>
+    </tr>
+    <tr>
+        <td><strong>Scripting</strong></td>
+        <td>Future</td>
+        <td>Support for scripting via either Kotlin Scripting or Gradle</td>
+    </tr>
+    <tr>
+        <td><strong>Settings</strong></td>
+        <td>Future</td>
+        <td>Additional settings ( e.g. to set version of Kotlin, Slate Kit, Java)</td>
+    </tr>
+    <tr>
+        <td><strong>Git</strong></td>
+        <td>Future</td>
+        <td>Downloadable templates from Git or other external sources</td>
+    </tr>
+</table>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="install">Install</h1>
+
+<p>You can install the slatekit application/command line tool from <a href="slatekit" >slatekit</a>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="c1">// For mac,nix
+</span><span class="c1"></span>    <span class="n">slatekit</span>
+    
+    <span class="c1">// For windows
+</span><span class="c1"></span>    <span class="n">slatekit</span><span class="o">.</span><span class="na">bat</span> 
+
+    <span class="n">slatekit</span> <span class="o">-</span><span class="n">version</span>
+    <span class="n">slatekit</span> <span class="o">-</span><span class="n">help</span></code></pre></div>
+<table class="table table-bordered table-striped">
+  <tr>
+    <td><strong>package</strong></td>
+    <td>slatekit.generator</td>
+  </tr>
+  <tr>
+    <td><strong>jar</strong></td>
+    <td>slatekit.generator.jar</td>
+  </tr>
+  <tr>
+    <td><strong>git</strong></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-generator">slatekit/src/lib/kotlin/slatekit-generator</a></td>
+  </tr>
+  <tr>
+    <td><strong>docs</strong></td>
+    <td><a class="url-ch" href="arch/generator">Generator</a></td>
+  </tr>
+  <tr>
+    <td><strong>uses</strong></td>
+    <td>slatekit.results, slatekit.common</td>
+  </tr>
+  <tr>
+    <td><strong>license</strong></td>
+    <td>Apache 2.0</td>
+  </tr>
+  <tr>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Generator.kt</a></td>
+  </tr>
+</table>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="requires">Requires</h1>
+
+<p>This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
+        <td>To model successes and failures with optional status codes</td>
+    </tr>
+    <tr>
+        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
+        <td>Common utilities for both android + server</td>
+    </tr>
+</table></p>
+
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
+<h1 id="guide">Guide</h1>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Section</strong></td>
+        <td><strong>Component</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#status">Status</a></strong></td>
+        <td>Current status of this component</td>
+    </tr>
+    <tr>
+        <td><strong>2</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#install">Install</a></strong></td>
+        <td>Installation instructions and references to sources</td>
+    </tr>
+    <tr>
+        <td><strong>3</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#requires">Requires</a></strong></td>
+        <td>Lists all the Slate Kit and third-party dependencies</td>
+    </tr>
+    <tr>
+        <td><strong>4</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#app">APP</a></strong></td>
+        <td>Generate a new console application</td>
+    </tr>
+    <tr>
+        <td><strong>5</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#api">API</a></strong></td>
+        <td>Generate a new HTTP API</td>
+    </tr>
+    <tr>
+        <td><strong>6</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#cli">CLI</a></strong></td>
+        <td>Generate a new console CLI (command line interface) application</td>
+    </tr>
+    <tr>
+        <td><strong>7</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#job">JOB</a></strong></td>
+        <td>Generate a new backgroun job</td>
+    </tr>
+    <tr>
+        <td><strong>8</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#lib">LIB</a></strong></td>
+        <td>Generate a new reusable library</td>
+    </tr>
+    <tr>
+        <td><strong>9</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#orm">ORM</a></strong></td>
+        <td>Generate a new Domain Driven Database/Entites/ORM project</td>
+    </tr>
+    <tr>
+        <td><strong>10</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#orm">Custom</a></strong></td>
+        <td>Create custom templates</td>
+    </tr>
+    <tr>
+        <td><strong>11</strong></td>
+        <td><strong><a class="url-ch" href="arch/generators#orm">Help</a></strong></td>
+        <td>More info and help on the generators</td>
+    </tr>
+</table>
+
+<br/><br/>
+
+<h2 id="setup">Setup</h2>
+
+<p>Download
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Step</strong></td>
+        <td><strong>Sample</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Download</strong></td>
+        <td><strong>~/tools/slatekit</strong></td>
+        <td>Download tools to your local folder </td>
+    </tr>
+    <tr>
+        <td><strong>Path</strong></td>
+        <td><strong>~/tools/slatekit</strong></td>
+        <td>Optional: Modify your path and include the directory where slatekit scripts are located.</td>
+    </tr>
+</table></p>
+
+<br/><br/>
+
+<h2 id="package">Package</h2>
+
+<p>Project templates
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">    
+    <span class="p">{</span>
+        <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;app&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;Generates a slatekit.app console application&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;https://www.slatekit.com&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;contact&#34;</span><span class="p">:</span> <span class="s2">&#34;https://www.slatekit.com&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;slatekit&#34;</span><span class="p">,</span> <span class="s2">&#34;app&#34;</span><span class="p">],</span>
+        <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;application&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;actions&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;copy&#34;</span><span class="p">,</span> <span class="nt">&#34;doc&#34;</span><span class="p">:</span> <span class="s2">&#34;Build&#34;</span><span class="p">,</span> <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;/build.txt&#34;</span>   <span class="p">,</span> <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;/build.gradle&#34;</span>                <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;copy&#34;</span><span class="p">,</span> <span class="nt">&#34;doc&#34;</span><span class="p">:</span> <span class="s2">&#34;Build&#34;</span><span class="p">,</span> <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;/settings.txt&#34;</span><span class="p">,</span> <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;/settings.gradle&#34;</span>             <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;copy&#34;</span><span class="p">,</span> <span class="nt">&#34;doc&#34;</span><span class="p">:</span> <span class="s2">&#34;Code&#34;</span> <span class="p">,</span> <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;/src/Run.txt&#34;</span> <span class="p">,</span> <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;/src/main/kotlin/${app.packagePath}/Run.kt&#34;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;copy&#34;</span><span class="p">,</span> <span class="nt">&#34;doc&#34;</span><span class="p">:</span> <span class="s2">&#34;Code&#34;</span> <span class="p">,</span> <span class="nt">&#34;source&#34;</span><span class="p">:</span> <span class="s2">&#34;/src/App.txt&#34;</span> <span class="p">,</span> <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;/src/main/kotlin/${app.packagePath}/App.kt&#34;</span> <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;common&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+        <span class="nt">&#34;conf&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+     </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>You can generate a new project by running slatekit with the appropriate commands. Sample structure is shown below
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="c1"># name = name of application / folder name</span>
+    <span class="c1"># package = the kotlin package name for the app</span>
+    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="app">APP</h2>
+
+<p><p>
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as <strong>command line args</strong>, <strong>environment selection</strong>, 
+<strong>configs per environment</strong>, <strong>logging</strong>, <strong>life-cycle events</strong>, <strong>diagnostics</strong> and much more.
+
+You can create a app quickly using the Slate Kit command line executable with the following inputs.
+Also refer to the <a href="Example_App.html" >Example_App.kt</a>.
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="api">API</h2>
+
+<p><p>
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as <strong>command line args</strong>, <strong>environment selection</strong>, 
+<strong>configs per environment</strong>, <strong>logging</strong>, <strong>life-cycle events</strong>, <strong>diagnostics</strong> and much more.
+
+You can create a app quickly using the Slate Kit command line executable with the following inputs.
+Also refer to the <a href="Example_App.html" >Example_App.kt</a>.
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new api -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="cli">CLI</h2>
+
+<p><p>
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as <strong>command line args</strong>, <strong>environment selection</strong>, 
+<strong>configs per environment</strong>, <strong>logging</strong>, <strong>life-cycle events</strong>, <strong>diagnostics</strong> and much more.
+
+You can create a app quickly using the Slate Kit command line executable with the following inputs.
+Also refer to the <a href="Example_App.html" >Example_App.kt</a>.
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="job">JOB</h2>
+
+<p><p>
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as <strong>command line args</strong>, <strong>environment selection</strong>, 
+<strong>configs per environment</strong>, <strong>logging</strong>, <strong>life-cycle events</strong>, <strong>diagnostics</strong> and much more.
+
+You can create a app quickly using the Slate Kit command line executable with the following inputs.
+Also refer to the <a href="Example_App.html" >Example_App.kt</a>.
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new job -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="lib">LIB</h2>
+
+<p><p>
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as <strong>command line args</strong>, <strong>environment selection</strong>, 
+<strong>configs per environment</strong>, <strong>logging</strong>, <strong>life-cycle events</strong>, <strong>diagnostics</strong> and much more.
+
+You can create a app quickly using the Slate Kit command line executable with the following inputs.
+Also refer to the <a href="Example_App.html" >Example_App.kt</a>.
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new job -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="orm">ORM</h2>
+
+<p><p>
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as <strong>command line args</strong>, <strong>environment selection</strong>, 
+<strong>configs per environment</strong>, <strong>logging</strong>, <strong>life-cycle events</strong>, <strong>diagnostics</strong> and much more.
+
+You can create a app quickly using the Slate Kit command line executable with the following inputs.
+Also refer to the <a href="Example_App.html" >Example_App.kt</a>.
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new orm -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="custom">Custom</h2>
+
+<p><p>
+The command line generator can be extended with custom templates.
+You have to create various configuration files and instructions similar to the existing ones.
+Refer to a sample configuration for the <strong>App</strong> for more info
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new my_service_template -name<span class="o">=</span><span class="s2">&#34;Service1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.services&#34;</span>
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h2 id="help">Help</h2>
+
+<p><p>
+You can also get help on the command for each project type. Run the following commands
+</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
+    slatekit new app -help
+    slatekit new api -help
+    slatekit new cli -help
+    slatekit new job -help
+    slatekit new lib -help
+    slatekit new orm -help
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<script>
+    var archComponent = {
+        name: "Generators",
+        page: "arch/generators",
+        icon: "assets/media/img/white/prototype.png",
+        menu: {
+            mode: "normal",
+            useTemplate:true,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Setup" , anchor: "#setup" },
+                        { name:"Package" , anchor: "#package" },
+                        { name:"Variables" , anchor: "#vars" },
+                        { name:"Usage" , anchor: "#usage" },
+                        { name:"App" , anchor: "#app" },
+                        { name:"API" , anchor: "#api"  },
+                        { name:"CLI" , anchor: "#cli"  },
+                        { name:"Job" , anchor: "#job"  },
+                        { name:"Lib" , anchor: "#lib"  },
+                        { name:"ORM" , anchor: "#orm"  },
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
+
+            </div>
+            <div class="col-sm-1 flex">
+            </div>
+        </div>
+      </div>
+    
+
+    
+    <section class="links">
+        <div class="container text-center">
+            <a href="#0">Twitter</a>
+            <a href="#0">Github</a>
+            <a href="#0">About</a>
+            <a href="#0">Contact</a>
+        </div>
+    </section>
+    
+
+    
+    <footer class="footer">
+        <div class="container text-center">
+            <p>Made with love | Brex-Theme</p>
+        </div>
+    </footer>
+    
+
+    
+            
+    <script src="assets/theme/js/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/theme/js/plugins/popper.min.js"></script>
+    <script src="assets/theme/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.waypoints.min.js"></script>
+    <script src="assets/theme/js/plugins/jquery.counterup.min.js"></script>
+    <script src="assets/theme/js/plugins/slick.js"></script>
+    <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
+    <script src="assets/theme/js/plugins/wow.min.js"></script>
+    <script src="assets/theme/js/agency-1.js"></script>
+    <script src="assets/app/slatekit.js"></script>
+
+    <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
+</body>
+
+</html>

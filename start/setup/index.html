@@ -151,7 +151,7 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Hello World</h2>
+            <h2>Setup</h2>
         </div>
     </section>
     
@@ -161,37 +161,88 @@
 
 <h1 id="overview">Overview</h1>
 
-<p>Slate Kit comes with a command line project generation tool which is available below. More information on setting up the generator is at <a href="start/generators" >Generators</a>.
-You can create a new app quickly using the commands below.
-<div class="alert alert-warning" role="alert">
-  You can download the Slate Kit Project Generator at 
-  <a href="https://github.com/code-helix/slatekit-tools" >slatekit-tools</a>
-</div></p>
+<p>Slate Kit can be setup fairly easily. Most of the dependencies are on Java / Gradle. Also refer to <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> for more info.</p>
 
 <br/><br/>
 
-<h1 id="hello-world">Hello World</h1>
+<h1 id="required">Required</h1>
 
-<p>The Slate Kit application leverages several of the utilities to provide a pre-built standalone application with support for command line args, environments, confs, logging, help usage and more. This is just 1 type of project you can create.</p>
+<p><p>Installation of Java, Kotlin, Gradle and Slate Kit is fairly easy. We recommend the following installation steps and centralized location for simplicity.
+</p>
+<table class="table table-bordered table-striped">
+    <tr class="">
+        <td><strong>Tech</strong></td>
+        <td><strong>Version</strong></td>
+        <td><strong>Download</strong></td>
+        <td><strong>Instructions</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Java</strong></td>
+        <td>1.8</td>
+        <td><a class="url-ch" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">download</a></td>
+        <td ><br />
+            <ul>
+                <li>Install java 1.8.0 to example: <strong>
+                /usr/bin/java or C:\tools\Java\jdk1.8.0</strong></li>
+                <li>Add home env variable: <strong>JAVA_HOME=C:\tools\Java\jdk1.8.0 ( Windows )</strong></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Kotlin</strong></td>
+        <td>1.3.21</td>
+        <td><a class="url-ch" href="https://kotlinlang.org/">visit kotlin</a></td>
+        <td >
+            <ul>
+                <li>Install Kotlin via the gradel plugin</li>
+                <li>Add <strong>&ldquo;org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.21&rdquo;</strong> to your build script</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Gradle</strong></td>
+        <td>3.5</td>
+        <td><a class="url-ch" href="https://gradle.org/install">download</a></td>
+        <td >
+            <ul>
+                <li>Install Gradle e.g. <strong>/usr/local/bin/gradle or c:\tools\gradle ( Windows )</strong></li>
+                <li>Add <strong>/usr/local/bin/gradle or C:\tools\gradle\bin ( Windows)</strong> to your system PATH variable.</li>
+                <li>You can also use the gradle-wrapper.jar if you are familiar with gradle</li>
+            </ul>
+        </td>
+    </tr>
+</table></p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    ./slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-    </code></pre></div>
-<br/><br/></p>
+<br/><br/>
 
-<h1 id="create">Create</h1>
+<h1 id="suggested">Suggested</h1>
 
-<p>You can create several different project types using the generator.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new env -name<span class="o">=</span><span class="s2">&#34;MyApp2&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
-    slatekit new lib -name<span class="o">=</span><span class="s2">&#34;MyLib1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.libs&#34;</span>
-    slatekit new orm -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    </code></pre></div>
-<br/><br/></p>
+<p><p>The software below is recommended but not required.
+Slate Kit supports MySql with support for PostGres and Sql Server coming later. Having the MySql Java Connector will
+help with the sample apps and is also needed for the ORM ( entities ).
+</p>
+<table class="table table-bordered table-striped">
+    <tr class="">
+        <td><strong>Tech</strong></td>
+        <td><strong>Version</strong></td>
+        <td><strong>About</strong></td>
+        <td><strong>Link</strong></td>
+    </tr>
+    <tr>
+        <td><strong>IntelliJ</strong></td>
+        <td>Refer to JetBrains</td>
+        <td>IDE</td>
+        <td><a class="url-ch" href="https://www.jetbrains.com/idea/download/">download</a></td>
+    </tr>
+    <tr>
+        <td><strong>Slate Kit</strong></td>
+        <td>1.0.0</td>
+        <td><a href="start/generators" >Generators</a></td>
+        <td><a class="url-ch" href="https://github.com/code-helix/slatekit-tools">Slate Kit Tools</a></td>
+    </tr>
+</table></p>
+
+<br/><br/>
 
       </div>
     </section>  
