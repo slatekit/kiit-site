@@ -18,7 +18,7 @@ This is simply a Kotlin executable jar packaged as a Java Application via gradle
 
 
 # Setup
-The Slate Kit project generator is simply a bash script ( packaged as a Java application ) via gradle. It simply contains 3 things:
+The Slate Kit project generator is a java app ( packaged as a Java application via gradle ) and is composed of containing 3 things:
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Item</strong></td>
