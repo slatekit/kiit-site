@@ -27,13 +27,13 @@ The Slate Kit application leverages several of the utilities to provide a pre-bu
 You can create several different project types using the generator.
 {{< highlight bash >}}
     
-    slatekit new app -name="MyApp1" -package="company1.apps"
-    slatekit new api -name="MyAPI1" -package="company1.apis"
-    slatekit new cli -name="MyCLI1" -package="company1.apps"
-    slatekit new env -name="MyApp2" -package="company1.apps"
-    slatekit new job -name="MyJob1" -package="company1.jobs"
-    slatekit new lib -name="MyLib1" -package="company1.libs"
-    slatekit new orm -name="MyApp1" -package="company1.apps"
+    ./slatekit new app -name="MyApp1" -package="company1.apps"
+    ./slatekit new api -name="MyAPI1" -package="company1.apis"
+    ./slatekit new cli -name="MyCLI1" -package="company1.apps"
+    ./slatekit new env -name="MyApp2" -package="company1.apps"
+    ./slatekit new job -name="MyJob1" -package="company1.jobs"
+    ./slatekit new lib -name="MyLib1" -package="company1.libs"
+    ./slatekit new orm -name="MyApp1" -package="company1.apps"
     
 {{< /highlight >}}
 {{% break %}}
