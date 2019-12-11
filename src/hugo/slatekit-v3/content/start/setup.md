@@ -34,7 +34,7 @@ Slate Kit can be setup fairly easily. Most of the dependencies are on Java / Gra
     </tr>
     <tr>
         <td><strong>Kotlin</strong></td>
-        <td>1.3.21</td>
+        <td>>= 1.3.21</td>
         <td><a class="url-ch" href="https://kotlinlang.org/">visit kotlin</a></td>
         <td >
             <ul>
@@ -45,7 +45,7 @@ Slate Kit can be setup fairly easily. Most of the dependencies are on Java / Gra
     </tr>
     <tr>
         <td><strong>Gradle</strong></td>
-        <td>3.5</td>
+        <td>>= 3.5</td>
         <td><a class="url-ch" href="https://gradle.org/install">download</a></td>
         <td >
             <ul>
