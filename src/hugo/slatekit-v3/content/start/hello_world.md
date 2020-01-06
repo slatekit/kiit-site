@@ -19,6 +19,9 @@ The Slate Kit application leverages several of the utilities to provide a pre-bu
     slatekit new app -name="Sample1" -package="mycompany.apps"
     
 {{< /highlight >}}
+<div class="alert alert-warning" role="alert">
+    <strong>Tip:</strong> You must be run using <strong>./slatekit</strong> if slatekit is not in your path
+</div>
 {{% break %}}
 
 
@@ -35,6 +38,9 @@ You can create several different project types using the generator.
     slatekit new orm -name="MyApp3" -package="company1.data"
     
 {{< /highlight >}}
+<div class="alert alert-warning" role="alert">
+    <strong>Tip:</strong> See the {{% sk-link-arch page="generators" name="Generators" %}} page for more info on using the Slate Kit CLI tool for generating various project types.
+</div>
 {{% break %}}
 
 

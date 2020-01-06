@@ -6,7 +6,7 @@ section_header: Overview
 
 # Overiew
   <p>
-      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> based open-source set of light-weight and modular libraries representing **architecture components and utilities**. It is comprised of several projects and modular components that collectively provide pre-built architecture that can be used to build applications for both the Server and Android, optimizing code/component reuse. There are also various interfaces to abstract over Cloud infrastrature such as files/queues to decouple / "unbundle" from Cloud Providers ( although AWS implementations are available by default ).
+      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> based open-source tool-kit containing **architecture components and utilities**. It is comprised of several projects and modular components that collectively provide pre-built architecture that can be used to build applications for both Server and Android, optimizing for code/component reuse. There are also various interfaces to abstract over Cloud infrastrature such as files/queues to decouple / "unbundle" from Cloud Providers ( although AWS implementations are available by default ).
   </p>
 {{% break %}}
 
@@ -17,10 +17,10 @@ section_header: Overview
 <table class="table table-bordered table-striped">
     <tr><td><strong>Simple</strong></td><td>Designed with simplicity in mind, modular and very light-weight.</td></tr>
     <tr><td><strong>Kotlin</strong></td><td>100% Kotlin, emphasis on functional, immutable code (pragmatically, without pure FP)</td></tr>
-    <tr><td><strong>Shared</strong></td><td>Resonably light-weight, yet suitable for most needs on both Android and Server.</td></tr>
+    <tr><td><strong>Shared</strong></td><td>Full-Stack, resonably light-weight and suitable for most needs on both Android and Server.</td></tr>
     <tr><td><strong>Platforms</strong></td><td>Long-term goals of making this support Kotlin Multi-Platform/Native</td></tr>
     <tr><td><strong>Costs</strong></td><td>Reducing costs with rapid development, full-stack / sharable code for both Server and Android.</td></tr>
-    <tr><td><strong>Portability</strong></td><td>Reasonable abstractions for Cloud components for portability.</td></tr>
+    <tr><td><strong>Portability</strong></td><td>Reasonable abstractions of Cloud components for portability between cloud providers</td></tr>
 </table>
 {{% section-end mod="start/overview" %}}
 
@@ -29,7 +29,7 @@ section_header: Overview
   Slate Kit can be used to quickly build well structured and scalable architecture and applications for different target groups.
 </p>
 <table class="table table-bordered table-striped">
-    <tr><td><strong>Startups</strong></td><td> Start with a strong base architecture to quickly build high-quality MVPs that can scale</td></tr>
+    <tr><td><strong>Startups</strong></td><td> Start with a strong base architecture to quickly build high-quality MVPs (Minimum Viable Products) that can scale</td></tr>
     <tr><td><strong>SMB</strong></td><td>For small to medium sized businesses, build backend applications with pre-built application/service templates/components</td></tr>
     <tr><td><strong>Mobile</strong></td><td> Set up the back-end for your mobile apps. Use Kotlin code for both Android and the Server</td></tr>
     <tr><td><strong>Personal</strong></td><td>Learn Kotlin, functional programming, for self-improvement or side projects</td></tr>
@@ -71,7 +71,7 @@ section_header: Overview
         <td><strong>4</strong></td>
         <td><strong>Entities</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Support for MySql ( see {{% sk-link-arch name="orm" %}} )</td>
+        <td>Support for MySql ( see {{% sk-link-arch name="data" %}} docs )PostGres & Mongo coming soon</td>
     </tr>
     <tr>
         <td><strong>5</strong></td>
@@ -119,7 +119,7 @@ section_header: Overview
         <td><strong>12</strong></td>
         <td><strong>Dates</strong></td>
         <td><strong>Aliased</strong></td>
-        <td>310 BP is used instead of java.time or joda time</td>
+        <td>ThreeTen BP is used for Full-Stack / Android alignment</td>
     </tr>
 </table>
 {{% section-end mod="start/overview" %}}
@@ -202,7 +202,7 @@ These are some of the main architecture components available in Slate Kit.
 {{% section-end mod="start/overview" %}}
 
 ## Performance
-Performance details of the various modules will be coming soon. However, for the most part, the modules are thin layers over existing items and are expected to not impact performance and or be fairly negligable. For example, the thin abstractions over Cloud Queues/Files such as AWS S3/SQS. 
+Performance details of the various modules will be coming soon and available/documented within each applicable module such as Jobs, APIs, Queues, etc. Generally speaking, most modules are thin layers over existing items and are expected to not impact performance and or be fairly negligable such as the thin abstractions over Cloud Queues/Files such as AWS S3/SQS.
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Type</strong></td>
@@ -226,19 +226,19 @@ Performance details of the various modules will be coming soon. However, for the
         <td><strong>APIs</strong></td>
         <td>Web/Http APIs</td>
         <td>{{% sk-link-arch page="apis" name="APIs" %}}</td>
-        <td>Docs coming soon</td>
+        <td>Built on top of Ktor. See module for upcoming docs on performance</td>
     </tr>
     <tr>
         <td><strong>Jobs</strong></td>
         <td>Background jobs</td>
         <td>{{% sk-link-arch page="jobs" name="jobs" %}}</td>
-        <td>Docs coming soon</td>
+        <td>Built using Kotlin Coroutines and Channels. See module for upcoming docs on performance</td>
     </tr>
 </table>
 {{% section-end mod="start/overview" %}}
 
 ## Security
-Security details and documentation will be coming soon. They are applicable to specific components such as sensitive configuration settings, which can be secured via encryption or loading of values from environment variables to avoid storing values in source code. 
+Security details of the various modules will be coming soon and available/documented within each applicable module such as App, CLI, Jobs, APIs, Queues, etc. Generally speaking, most modules security revolve around protecting sensitive configuration settings, data during transmission and authentication / authorization for runnable services such as the App, CLI, APIs.
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Type</strong></td>
@@ -249,7 +249,7 @@ Security details and documentation will be coming soon. They are applicable to s
     <tr>
         <td><strong>Configs</strong></td>
         <td>Config settings</td>
-        <td>{{% sk-link-util page="conf" name="conf" %}}</td>
+        <td>{{% sk-link-util page="conf" name="Conf" %}}</td>
         <td>Settings can be encrypted or loaded from env vars</td>
     </tr>
     <tr>
@@ -265,10 +265,28 @@ Security details and documentation will be coming soon. They are applicable to s
         <td>Also refer to AWS SQS docs</td>
     </tr>
     <tr>
+        <td><strong>App</strong></td>
+        <td>Runnable App</td>
+        <td>{{% sk-link-arch page="app" name="App" %}}</td>
+        <td>See module docs for more info</td>
+    </tr>
+    <tr>
         <td><strong>APIs</strong></td>
         <td>Web/Http APIs</td>
         <td>{{% sk-link-arch page="apis" name="APIs" %}}</td>
-        <td>Docs coming soon</td>
+        <td>See module docs for more info</td>
+    </tr>
+    <tr>
+        <td><strong>CLI</strong></td>
+        <td>CLI</td>
+        <td>{{% sk-link-arch page="cli" name="CLI" %}}</td>
+        <td>See module docs for more info</td>
+    </tr>
+    <tr>
+        <td><strong>Data</strong></td>
+        <td>Sql</td>
+        <td>{{% sk-link-arch page="data" name="Data" %}}</td>
+        <td>See module docs for more info</td>
     </tr>
 </table>
 {{% section-end mod="start/overview" %}}
