@@ -75,6 +75,11 @@ There is an emphasis towards <strong>pragmatic</strong> functional programming, 
     </tr>
     <tr>
         <td><strong>6</strong></td>
+        <td><strong>Pattern Match</strong></td>
+        <td>Use Kotlin when for pattern matching where applicable</td>
+    </tr>
+    <tr>
+        <td><strong>7</strong></td>
         <td><strong>Concurrency</strong></td>
         <td>Use Kotlin Coroutines where applicable</td>
     </tr>

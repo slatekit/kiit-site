@@ -25,7 +25,7 @@ The Slate Kit project generator is a java app ( packaged as a Java application v
     </tr>
     <tr>
         <td><strong>1</strong></td>
-        <td><strong>scripts</strong></td>
+        <td><strong>Scripts</strong></td>
         <td><strong>slatekit and slatekit.bat</strong></td>
         <td>For running the commands</td>
     </tr>
@@ -59,7 +59,7 @@ The Slate Kit project generator is a java app ( packaged as a Java application v
         <td><strong>1</strong></td>
         <td><strong>Download</strong></td>
         <td>
-            Download the generator by git cloning the tools git repo to your local machine.
+            Download the Slate Kit tools by git cloning the tools git repo to your local machine.
             <br/>
             E.g. sample folder could be <strong>~/tools/slatekit</strong>
         </td>
@@ -68,8 +68,11 @@ The Slate Kit project generator is a java app ( packaged as a Java application v
         <td><strong>2</strong></td>
         <td><strong>Path</strong></td>
         <td>
-            Add the path to Slate Kit <strong>~/tools/slatekit</strong> to your <strong>PATH</strong> ( e.g. <strong>~/.bash_profile or /etc/paths </strong>)
-            {{% sk-tip-generic text="This allow you to avoid prefixing slatekit with ./ as in ./slatekit ..." %}}
+            The generator is 1 project in tools and is stored in a sub directory called generator. <br/>
+            Add the path to Slate Kit Generator<strong>~/tools/slatekit/generator</strong> to your <strong>PATH</strong> ( e.g. <strong>~/.bash_profile or /etc/paths </strong>)
+            <div class="alert alert-warning" role="alert">
+    <strong>Tip:</strong> This allow you to avoid prefixing slatekit with <strong>./</strong> as in <strong>./slatekit </strong> and simply using <strong>slatekit</strong>
+</div>
         </td>
     </tr>
     <tr>
@@ -85,13 +88,14 @@ The Slate Kit project generator is a java app ( packaged as a Java application v
             </ol>
             {{< highlight props >}}
     // Path to the templates
-    generation.source = usr://tools/slatekit/templates
+    generation.source = ~/tools/slatekit/templates
 
     // Path to the generated projects
-    generation.output = usr://tools/slatekit/gen
+    generation.output = ~/tools/slatekit/gen
     {{< /highlight >}}
-
-    {{% sk-tip-generic text="This step will not be needed in a future version" %}}
+<div class="alert alert-warning" role="alert">
+    <strong>Tip:</strong> This step will not be needed in a future version
+</div>
         </td>
     </tr>
 </table>
@@ -120,7 +124,7 @@ You can generate a new project by running slatekit with the appropriate commands
     # @name = name of application / folder name
     # @package = the kotlin package name for the app
     
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
     :> slatekit new app -name="MyApp1" -package="mycompany.apps"
     
 {{< /highlight >}}
@@ -130,7 +134,7 @@ You can generate a new project by running slatekit with the appropriate commands
         <td><strong>2</strong></td>
         <td><strong>Build</strong></td>
         <td>
-            The new project will be created in the **SLATE_KIT_HOME/gen** folder.
+            The new project will be created in the <strong>SLATE_KIT_HOME/generator/gen</strong> folder.
 You can then cd into that to build it.
             <br/><br/>
 {{< highlight bash >}}
@@ -159,30 +163,42 @@ You can then cd into that to build it.
 
 
 # Future
-These are variables/inputs that will be added in the future to further customize the project generation.
+These are the features to be added in the future to further enhance/customize the project generation.
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
+        <td><strong>Type</strong></td>
         <td><strong>Desc</strong></td>
         <td><strong>Example</strong></td>
     </tr>
     <tr>
         <td><strong>gen.output</strong></td>
-        <td><strong>Output directory of generated project</strong></td>
+        <td><strong>Variable</strong></td>
+        <td><strong>Customize the output directory of generated project</strong></td>
         <td>~/myapps/app1 </td>
     </tr>
     <tr>
         <td><strong>sk.version</strong></td>
-        <td><strong>Slate Kit Version</strong></td>
+        <td><strong>Variable</strong></td>
+        <td><strong>Customize the Slate Kit Version</strong></td>
         <td>1.0.1 </td>
     </tr>
     <tr>
         <td><strong>kt.version</strong></td>
-        <td><strong>Kotlin Version</strong></td>
+        <td><strong>Variable</strong></td>
+        <td><strong>Customize the Kotlin Version</strong></td>
         <td>1.3.6</td>
     </tr>
+    <tr>
+        <td><strong>Templates</strong></td>
+        <td><strong>Feature</strong></td>
+        <td><strong>Downloading of templates from Git or remote sources</strong></td>
+        <td>n/a</td>
+    </tr>
 </table>
-
+<div class="alert alert-warning" role="alert">
+    <strong>Tip:</strong> The tool does <strong>NOT</strong> currently support downloading of templates from Git or online from a central repository. You must issue a Git checkout/update to get/use the latest templates.
+</div>
 {{% section-end mod="arch/generators" %}}
 
 # Generators
@@ -193,7 +209,7 @@ These are all the types of project generators available by default from Slate Ki
 Generates a new Slate Kit stand-alone application with support command line args, environments, configs, logging, help usage and more. Refer to the {{% sk-link-arch page="app" name="App" %}} component and example: {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
 
     :> slatekit new app -name="MyApp1" -package="company1.apps"
     
@@ -211,7 +227,7 @@ Generates a new API project for hosting HTTP/Web APIs. APIs in Slate Kit are con
 Also refer to the {{% sk-link-arch page="apis" name="APIs" %}} component.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
     
     slatekit new api -name="MyAPI1" -package="company1.apis"
     
@@ -222,8 +238,9 @@ Also refer to the {{% sk-link-arch page="apis" name="APIs" %}} component.
     
 {{< /highlight >}}
 
-{{% sk-tip-generic text="A postman script is also generated in the root folder You can import this into PostMan and easily test the API actions/endpoints" %}}
-
+<div class="alert alert-warning" role="alert">
+    <strong>Tip:</strong> A postman script named <strong>samples-postman.json</strong> is also created in the root folder of the generated project. You can import this into PostMan and easily test the API actions/endpoints
+</div>
 {{% section-end mod="arch/generators" %}}
 
 
@@ -232,7 +249,7 @@ Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can
 Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and example: {{% sk-link-example file="Example_CLI.kt" name="Example_CLI.kt" %}}.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
     
     slatekit new cli -name="MyCLI1" -package="company1.apps"
     
@@ -250,7 +267,7 @@ Generates a new background job that can be gracefully started, stopped, paused, 
 Refer to the {{% sk-link-arch page="job" name="Job" %}} component and example: {{% sk-link-example file="Example_Jobs.kt" name="Example_Jobs.kt" %}}.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
     
     slatekit new job -name="MyJob1" -package="company1.jobs"
     
@@ -282,7 +299,7 @@ For the Job, you can run the different job types by passing **-job.name** to the
 Generates an empty gradle library project with some Slate Kit library references.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
     
     slatekit new lib -name="MyLib1" -package="company1.libs"
     
@@ -299,7 +316,7 @@ Generates an empty gradle library project with some Slate Kit library references
 
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit
+    :> cd ~/tools/slatekit/generator
     
     slatekit new sql -name="MyApp1" -package="company1.apps"
     

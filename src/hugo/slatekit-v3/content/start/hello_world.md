@@ -39,7 +39,7 @@ You can create several different project types using the generator.
     
 {{< /highlight >}}
 <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> See the {{% sk-link-arch page="generators" name="Generators" %}} page for more info on using the Slate Kit CLI tool for generating various project types.
+    <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the Slate Kit CLI tool for generating various project types.
 </div>
 {{% break %}}
 
