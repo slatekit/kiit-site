@@ -96,6 +96,7 @@ Future versions will include support for:
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities"
     gitAlias="slatekit/src/lib/kotlin/slatekit-entities"
     url="arch/data"
+    bintray="slatekit-entities"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_Entities.kt"

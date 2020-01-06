@@ -85,12 +85,13 @@ coming soon
 
 {{< /highlight >}}
 {{% sk-module 
-    name="App"
-    package="slatekit.app"
-    jar="slatekit.app.jar"
+    name="Server"
+    package="slatekit.server"
+    jar="slatekit.server.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-app"
-    url="core/app"
+    gitAlias="slatekit/src/lib/kotlin/slatekit-server"
+    url="core/server"
+    bintray="slatekit-server"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_App.kt"

@@ -94,6 +94,7 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-apis/src/main/kotlin/slatekit/apis"
     gitAlias="slatekit/src/lib/kotlin/slatekit-apis"
     url="arch/apis"
+    bintray="slatekit-apis"
     uses="slatekit.results, slatekit.common"
     exampleUrl="Example_APIs.kt"
     exampleFileName="Example_APIs.kt"

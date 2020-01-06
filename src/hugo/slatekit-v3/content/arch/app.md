@@ -89,6 +89,7 @@ Use the following settings in gradle for installing this component.
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app/src/main/kotlin/slatekit/app"
     gitAlias="slatekit/src/lib/kotlin/slatekit-app"
     url="arch/app"
+    bintray="slatekit-app"
     uses="slatekit.results, slatekit.common"
     exampleUrl="Example_App.kt"
     exampleFileName="Example_App.kt"

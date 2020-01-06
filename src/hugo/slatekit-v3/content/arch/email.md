@@ -50,15 +50,16 @@ This component is currently **stable**. Following limitations, current work, pla
 
 {{< /highlight >}}
 {{% sk-module 
-    name="Files"
-    package="slatekit.cloud"
-    jar="slatekit.cloud.jar"
+    name="Email"
+    package="slatekit.notifications"
+    jar="slatekit.notifications.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-cloud"
+    gitAlias="slatekit/src/lib/kotlin/slatekit-notifications"
     url="arch/email"
-    uses="slatekit.results, slatekit.core, slatekit.cloud"
+    bintray="slatekit-notifications"
+    uses="slatekit.results, slatekit.core, slatekit.notifications"
     exampleUrl=""
-    exampleFileName="Example_Files.kt"
+    exampleFileName="Example_Email.kt"
 %}}
 {{% section-end mod="arch/email" %}}
 

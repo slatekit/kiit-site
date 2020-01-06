@@ -79,6 +79,7 @@ This component is currently stable. Future versions will include support for:
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache"
     gitAlias="slatekit/src/lib/kotlin/slatekit-cache"
     url="arch/cache"
+    bintray="slatekit-cache"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_Cache.kt"

@@ -61,12 +61,13 @@ A small future enhancement will add support for question and answer flow.
 
 {{< /highlight >}}
 {{% sk-module 
-    name="App"
-    package="slatekit.app"
-    jar="slatekit.app.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app"
+    name="Cli"
+    package="slatekit.cli"
+    jar="slatekit.cli.jar"
+    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli"
     gitAlias="slatekit/src/lib/kotlin/slatekit-cli"
-    url="core/app"
+    url="core/cli"
+    bintray="slatekit-cli"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_CLI.kt"

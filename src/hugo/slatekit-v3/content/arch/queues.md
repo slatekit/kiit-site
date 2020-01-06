@@ -61,6 +61,7 @@ This component is currently **stable**. Following limitations, current work, pla
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
     gitAlias="slatekit/src/lib/kotlin/slatekit-cloud"
     url="arch/queues"
+    bintray="slatekit-cloud"
     uses="slatekit.results, slatekit.core, slatekit.cloud"
     exampleUrl=""
     exampleFileName="Example_Cloud_Queues.kt"

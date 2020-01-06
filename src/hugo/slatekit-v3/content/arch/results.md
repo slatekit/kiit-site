@@ -84,6 +84,7 @@ section_header: Results
 
 # Status
 This component is currently stable, has 0 dependencies and can be used for both **Android and Server**
+
 {{% section-end mod="arch/results" %}}
 
 # Install
@@ -103,13 +104,14 @@ Use the following settings in gradle for installing this component.
 
 {{< /highlight >}}
 {{% sk-module 
-    name="App"
-    package="slatekit.result"
+    name="Results"
+    package="slatekit.results"
     jar="slatekit.result.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results"
     gitAlias="slatekit/src/lib/kotlin/slatekit-result"
     url="arch/results"
     uses="n/a"
+    bintray="slatekit-results"
     exampleUrl="Example_Results.kt"
     exampleFileName="Example_Results.kt"
 %}}
