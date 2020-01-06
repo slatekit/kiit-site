@@ -74,7 +74,10 @@
                                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
                                     
     <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/start/overview">Overview</a>
     </li>
     <li class="nav-item dropdown">
         <a
@@ -84,10 +87,10 @@
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false">
-            Getting Started
+            Start
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="start/overview">Overview</a></li>
+            <li><a class="dropdown-item" href="start/setup">Setup</a></li>
             <li><a class="dropdown-item" href="start/hello_world">Hello World</a></li>
             <li><a class="dropdown-item" href="start/generators">Generators</a></li>
         </ul>
@@ -100,15 +103,15 @@
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false">
-            Architecture Components
+            Components
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
             <li><a class="dropdown-item" href="arch/overview">Overview</a></li>
             <li><a class="dropdown-item" href="arch/results">Results</a></li>
-            <li><a class="dropdown-item" href="arch/context">Context</a></li>
             <li><a class="dropdown-item" href="arch/app">App</a></li>
-            <li><a class="dropdown-item" href="arch/apis">APIs</a></li>
+            <li><a class="dropdown-item" href="arch/apis">API</a></li>
             <li><a class="dropdown-item" href="arch/jobs">Jobs</a></li>
+            <li><a class="dropdown-item" href="arch/overview">More...</a></li>
         </ul>
     </li>
     <li class="nav-item">
@@ -157,7 +160,7 @@
 
 <h1 id="contact">Contact</h1>
 
-<p>Slate Kit is built and maintained by a small group of engineers. It has been in production for a few years and is actively maintained. Much of the usage of Slate Kit has been for prior internal and current projects. Prioritization and work on issues is based on our availablility. Releases of Slate Kit occurr roughly every 2 weeks to 1 month for planned releases. We are considering offering premium support ( see below ). Feel free to contact us using all the various channels below!
+<p>Slate Kit is built and maintained by a small group of engineers. It has been in production for a few years and is actively maintained. Much of the usage of Slate Kit has been for prior internal and current projects. Prioritization and work on issues is based on our availablility. See our release cycle below for more info. We are considering adding premium support ( see below ) in the future. Feel free to contact us using all the various channels below!
 <br/><br/></p>
 
 <section id="services" class="integration">
@@ -209,9 +212,46 @@
     </div>
 </section>
 
+<h1 id="releases">Releases</h1>
+
+<p>Releases occur roughly every 2 weeks to 1 month for planned releases and uses Semantic Versioning in format **MAJOR.MINOR.PATCH**
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Type</strong></td>
+        <td><strong>Cycle</strong></td>
+        <td><strong>Version</strong></td>
+        <td><strong>Note(s)</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Hot-Fix</strong></td>
+        <td>On Demand</td>
+        <td>1.0.<strong>2</strong></td>
+        <td>Typically critical issues</td>
+    </tr>
+    <tr>
+        <td><strong>Patches</strong></td>
+        <td>~ 2 Weeks</td>
+        <td>1.0.<strong>3</strong></td>
+        <td>Roughly every 2 weeks or sooner</td>
+    </tr>
+    <tr>
+        <td><strong>Features</strong></td>
+        <td>~ 1 Month</td>
+        <td>1.<strong>1</strong>.0</td>
+        <td>These are small or moderate changes and/or new features</td>
+    </tr>
+    <tr>
+        <td><strong>Major</strong></td>
+        <td>~ 3 Months</td>
+        <td><strong>2</strong>.0.0</td>
+        <td>Major releases with new features and potentially breaking changes/ redesigns</td>
+    </tr>
+</table>
+<br/><br/></p>
+
 <h1 id="support">Support</h1>
 
-<p>We work on tickets based off availability. However, we may open up a premium/paid service to provide support for prioritized / expedited fixes, enhancements. Please contact us for more info if you are interested in premium support.
+<p>We prioritize issues/tickets so they fall into one of the release schedules listed above ( e.g. hot-fixes, patches, minor features, major upgrades). However, we may open up some type of premium/paid service expedited features, enhancements and or fixes. This is still TBD(to be determined). Please contact us for more info if you are interested in premium support.
 <br/><br/></p>
 
 <h1 id="discuss">Discuss</h1>
@@ -258,6 +298,7 @@
     <script src="assets/theme/js/plugins/owl.carousel.min.js"></script>
     <script src="assets/theme/js/plugins/wow.min.js"></script>
     <script src="assets/theme/js/agency-1.js"></script>
+    <script src="assets/app/slatekit.js"></script>
 
     <script src="assets/theme/js/sass-1.js"></script>
 </body>
