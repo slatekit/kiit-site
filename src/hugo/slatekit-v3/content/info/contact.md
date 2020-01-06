@@ -7,7 +7,7 @@ section_header: Contact
 
 
 # Contact
-Slate Kit is built and maintained by a small group of engineers. It has been in production for a few years and is actively maintained. Much of the usage of Slate Kit has been for prior internal and current projects. Prioritization and work on issues is based on our availablility. Releases of Slate Kit occurr roughly every 2 weeks to 1 month for planned releases. We are considering offering premium support ( see below ). Feel free to contact us using all the various channels below! 
+Slate Kit is built and maintained by a small group of engineers. It has been in production for a few years and is actively maintained. Much of the usage of Slate Kit has been for prior internal and current projects. Prioritization and work on issues is based on our availablility. See our release cycle below for more info. We are considering adding premium support ( see below ) in the future. Feel free to contact us using all the various channels below! 
 {{% break %}}
 
 <section id="services" class="integration">
@@ -60,8 +60,13 @@ Slate Kit is built and maintained by a small group of engineers. It has been in 
 </section>
 
 
+# Releases
+{{% sk-release-cycle %}} 
+{{% break %}}
+
+
 # Support
-We work on tickets based off availability. However, we may open up a premium/paid service to provide support for prioritized / expedited fixes, enhancements. Please contact us for more info if you are interested in premium support.
+We prioritize issues/tickets so they fall into one of the release schedules listed above ( e.g. hot-fixes, patches, minor features, major upgrades). However, we may open up some type of premium/paid service expedited features, enhancements and or fixes. This is still TBD(to be determined). Please contact us for more info if you are interested in premium support.
 {{% break %}}
 
 # Discuss

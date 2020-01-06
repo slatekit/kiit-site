@@ -115,6 +115,12 @@ section_header: Overview
         <td><strong>Abstracted</strong></td>
         <td>Slack Web Hooks ( see {{% sk-link-arch name="alerts" %}} )</td>
     </tr>
+    <tr>
+        <td><strong>12</strong></td>
+        <td><strong>Dates</strong></td>
+        <td><strong>Aliased</strong></td>
+        <td>310 BP is used instead of java.time or joda time</td>
+    </tr>
 </table>
 {{% section-end mod="start/overview" %}}
 
@@ -180,7 +186,7 @@ These are some of the main architecture components available in Slate Kit.
     <td class="text-center"><img src="assets/media/img/white/mobile.png" width="50" alt=""></td>
     <td><strong><a class="url-ch" href="features.html">Mobile</strong></td>
     <td>Mobile / Web Features</td>
-    <td>Mobile and web features for most applications, such as Users, Devices, Registration, Invites, Settings and more.</td>
+    <td>Mobile and web features for most applications, such as Users, Devices, Registration, Invites, Settings and more. ( Coming later )</td>
   </tr>
 </table>
 {{% section-end mod="start/overview" %}}
@@ -189,3 +195,81 @@ These are some of the main architecture components available in Slate Kit.
 ## Philosophy
 {{% sk-philosophy %}}
 {{% section-end mod="start/overview" %}}
+
+
+## Releases
+{{% sk-release-cycle %}} 
+{{% section-end mod="start/overview" %}}
+
+## Performance
+Performance details of the various modules will be coming soon. However, for the most part, the modules are thin layers over existing items and are expected to not impact performance and or be fairly negligable. For example, the thin abstractions over Cloud Queues/Files such as AWS S3/SQS. 
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Type</strong></td>
+        <td><strong>Security</strong></td>
+        <td><strong>Link(s)</strong></td>
+        <td><strong>Note(s)</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Files</strong></td>
+        <td>AWS S3</td>
+        <td>{{% sk-link-arch page="queues" name="Files" %}}</td>
+        <td>Also refer to AWS S3 docs</td>
+    </tr>
+    <tr>
+        <td><strong>Queues</strong></td>
+        <td>AWS SQS</td>
+        <td>{{% sk-link-arch page="queues" name="Queues" %}}</td>
+        <td>Also refer to AWS SQS docs</td>
+    </tr>
+    <tr>
+        <td><strong>APIs</strong></td>
+        <td>Web/Http APIs</td>
+        <td>{{% sk-link-arch page="apis" name="APIs" %}}</td>
+        <td>Docs coming soon</td>
+    </tr>
+    <tr>
+        <td><strong>Jobs</strong></td>
+        <td>Background jobs</td>
+        <td>{{% sk-link-arch page="jobs" name="jobs" %}}</td>
+        <td>Docs coming soon</td>
+    </tr>
+</table>
+{{% section-end mod="start/overview" %}}
+
+## Security
+Security details and documentation will be coming soon. They are applicable to specific components such as sensitive configuration settings, which can be secured via encryption or loading of values from environment variables to avoid storing values in source code. 
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Type</strong></td>
+        <td><strong>Security</strong></td>
+        <td><strong>Link(s)</strong></td>
+        <td><strong>Note(s)</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Configs</strong></td>
+        <td>Config settings</td>
+        <td>{{% sk-link-util page="conf" name="conf" %}}</td>
+        <td>Settings can be encrypted or loaded from env vars</td>
+    </tr>
+    <tr>
+        <td><strong>Files</strong></td>
+        <td>AWS S3</td>
+        <td>{{% sk-link-arch page="queues" name="Files" %}}</td>
+        <td>Also refer to AWS S3 docs</td>
+    </tr>
+    <tr>
+        <td><strong>Queues</strong></td>
+        <td>AWS SQS</td>
+        <td>{{% sk-link-arch page="queues" name="Queues" %}}</td>
+        <td>Also refer to AWS SQS docs</td>
+    </tr>
+    <tr>
+        <td><strong>APIs</strong></td>
+        <td>Web/Http APIs</td>
+        <td>{{% sk-link-arch page="apis" name="APIs" %}}</td>
+        <td>Docs coming soon</td>
+    </tr>
+</table>
+{{% section-end mod="start/overview" %}}
+

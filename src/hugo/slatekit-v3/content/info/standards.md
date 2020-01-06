@@ -42,7 +42,6 @@ There are thin abstractions over some infrastructure services such as Files, que
 Refer to {{% sk-link href="start/overview#tech" text="infrastructure" %}}
 {{% break %}}
 
-
 # Code
 There is an emphasis towards <strong>pragmatic</strong> functional programming, without going towards a <strong>pure</strong> functional programming style. A heavy emphasis towards simplicity and readability over conciseness and cleverness. Generally speaking the following approaches are followed:
 
