@@ -38,7 +38,7 @@
           
    
     
-    <link rel="stylesheet" href="assets/app/app.css">
+   
 
 
     <title>Slate Kit: Jobs</title>
@@ -270,28 +270,25 @@
     <td>slatekit.jobs.jar</td>
   </tr>
   <tr>
-    <td><strong>git</strong></td>
+    <td><strong>source</strong></td>
     <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs">slatekit/src/lib/kotlin/slatekit-jobs</a></td>
   </tr>
   <tr>
-    <td><strong>docs</strong></td>
-    <td><a class="url-ch" href="arch/jobs">Jobs</a></td>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Jobs.kt</a></td>
   </tr>
+  
   <tr>
     <td><strong>version</strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-jobs/images/download.svg" /></td>
   </tr>
   <tr>
-    <td><strong>uses</strong></td>
-    <td>slatekit.results, slatekit.common</td>
-  </tr>
-  <tr>
     <td><strong>license</strong></td>
-    <td>Apache 2.0</td>
+    <td><img src="https://img.shields.io/badge/license-LGPL__v3-green.svg?style=flat" /></td>
   </tr>
   <tr>
-      <td><strong>example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Jobs.kt</a></td>
+    <td><strong>requires</strong></td>
+    <td>slatekit.results, slatekit.common</td>
   </tr>
 </table>
 <br/>
@@ -326,7 +323,7 @@
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
 
-<h1 id="sample">Sample</h1>
+<h1 id="example">Example</h1>
 
 <p>This is a simple example of a Queued worker ( which takes it work from a Task which a unit-of-work stored in-memory or in persistent queue ).
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
@@ -461,6 +458,11 @@
         <td><strong>8. Stats</strong> </td>
         <td>Capturing job and worker statistics</td> 
         <td><a href="arch/jobs/#stats" class="more"><span class="btn btn-primary">more</span></a></td>                    
+    </tr>
+    <tr>
+        <td><strong>9. Load</strong> </td>
+        <td>Performance and load</td> 
+        <td><a href="arch/jobs/#load" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
 </table>
 
@@ -965,6 +967,15 @@ Policies are available in the <a href="https://github.com/code-helix/slatekit/tr
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
 
+<h2 id="load">Load</h2>
+
+<p>Performance and load docs coming soon</p>
+
+<br/>
+
+<a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
 <script>
     var archComponent = {
         name: "Jobs",
@@ -985,6 +996,7 @@ Policies are available in the <a href="https://github.com/code-helix/slatekit/tr
                         { name:"Events" , anchor: "#events"  },
                         { name:"Workers" , anchor: "#workers"  },
                         { name:"Stats" , anchor: "#stats"  },
+                        { name:"Load" , anchor: "#load"  }
                     ]
                 }
             ]

@@ -38,7 +38,7 @@
           
    
     
-    <link rel="stylesheet" href="assets/app/app.css">
+   
 
 
     <title>Slate Kit: Cache</title>
@@ -262,28 +262,25 @@
     <td>slatekit.cache.jar</td>
   </tr>
   <tr>
-    <td><strong>git</strong></td>
+    <td><strong>source</strong></td>
     <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache">slatekit/src/lib/kotlin/slatekit-cache</a></td>
   </tr>
   <tr>
-    <td><strong>docs</strong></td>
-    <td><a class="url-ch" href="arch/cache">Cache</a></td>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
   </tr>
+  
   <tr>
     <td><strong>version</strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-cache/images/download.svg" /></td>
   </tr>
   <tr>
-    <td><strong>uses</strong></td>
-    <td>slatekit.results, slatekit.common</td>
-  </tr>
-  <tr>
     <td><strong>license</strong></td>
-    <td>Apache 2.0</td>
+    <td><img src="https://img.shields.io/badge/license-Apache2-green.svg?style=flat" /></td>
   </tr>
   <tr>
-      <td><strong>example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
+    <td><strong>requires</strong></td>
+    <td>slatekit.results, slatekit.common</td>
   </tr>
 </table>
 <br/>
@@ -317,7 +314,7 @@
 <a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
-<h1 id="sample">Sample</h1>
+<h1 id="example">Example</h1>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
     <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
@@ -395,6 +392,11 @@
         <td><strong>4. Async</strong></td>
         <td>Working with parsed commands as CLI Requests</td>
         <td><a href="arch/cache/#async" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>5. Load</strong></td>
+        <td>Performance and load metrics</td>
+        <td><a href="arch/cache/#load" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
 </table>
 
@@ -603,6 +605,23 @@ The <strong>async</strong> cache implementation is <a href="https://github.com/c
 <a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
 
+<h2 id="load">Load</h2>
+
+<p>Performance and load docs coming soon</p>
+
+
+
+
+<a href="arch/cache#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+
+<br/><br/><br/>
+
+<br/>
+
+<a href="arch/cache#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/>
+
 <script>
     var archComponent = {
         name: "Cache",
@@ -618,7 +637,8 @@ The <strong>async</strong> cache implementation is <a href="https://github.com/c
                         { name:"Usage" , anchor: "#usage" },
                         { name:"Stats" , anchor: "#stats"  },
                         { name:"Sync", anchor: "#sync" },
-                        { name:"Async" , anchor: "#async"  }
+                        { name:"Async" , anchor: "#async"  },
+                        { name:"Load" , anchor: "#load"  }
                     ]
                 }
             ]

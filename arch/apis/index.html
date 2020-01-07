@@ -38,7 +38,7 @@
           
    
     
-    <link rel="stylesheet" href="assets/app/app.css">
+   
 
 
     <title>Slate Kit: Apis</title>
@@ -282,28 +282,25 @@
     <td>slatekit.apis.jar</td>
   </tr>
   <tr>
-    <td><strong>git</strong></td>
+    <td><strong>source</strong></td>
     <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-apis/src/main/kotlin/slatekit/apis">slatekit/src/lib/kotlin/slatekit-apis</a></td>
   </tr>
   <tr>
-    <td><strong>docs</strong></td>
-    <td><a class="url-ch" href="arch/apis">APIs</a></td>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_APIs.kt">Example_APIs.kt</a></td>
   </tr>
+  
   <tr>
     <td><strong>version</strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-apis/images/download.svg" /></td>
   </tr>
   <tr>
-    <td><strong>uses</strong></td>
-    <td>slatekit.results, slatekit.common</td>
-  </tr>
-  <tr>
     <td><strong>license</strong></td>
-    <td>Apache 2.0</td>
+    <td><img src="https://img.shields.io/badge/license-LGPL__v3-green.svg?style=flat" /></td>
   </tr>
   <tr>
-      <td><strong>example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_APIs.kt">Example_APIs.kt</a></td>
+    <td><strong>requires</strong></td>
+    <td>slatekit.results, slatekit.common</td>
   </tr>
 </table>
 
@@ -335,7 +332,7 @@
 <a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
 
-<h1 id="sample">Sample</h1>
+<h1 id="example">Example</h1>
 
 <p>This is a quick and simple example of creating an API using the Slate Kit <strong>Universal API paradigm</strong>. This API is then accessible on the CLI and Web
 <div class="alert alert-warning" role="alert">
@@ -420,12 +417,22 @@
         <td><a href="arch/apis/#cli" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>10. Files</strong></td>
+        <td><strong>10. Security</strong></td>
+        <td>Authentication and security</td>
+        <td><a href="arch/apis/#security" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>11. Load</strong></td>
+        <td>Performance and load</td>
+        <td><a href="arch/apis/#load" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>12. Files</strong></td>
         <td>How to handle requests from Files</td>
         <td><a href="arch/apis/#files" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>11. REST</strong></td>
+        <td><strong>13. REST</strong></td>
         <td>How to set up partial REST compatible actions</td>
         <td><a href="arch/apis/#rest" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
@@ -1034,6 +1041,14 @@ The request would like this:
 <a href="arch/apis#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
+<h2 id="security">Security</h2>
+
+<p>Authentication and security docs coming soon</p>
+
+<h2 id="load">Load</h2>
+
+<p>Performance and load docs coming soon</p>
+
 <script>
     var archComponent = {
         name: "APIs",
@@ -1054,7 +1069,9 @@ The request would like this:
                         { name:"Errors" , anchor: "#errors"  },
                         { name:"Hooks" , anchor: "#middleware"  },
                         { name:"Web" , anchor: "#web"  },
-                        { name:"CLI" , anchor: "#cli"  }
+                        { name:"CLI" , anchor: "#cli"  },
+                        { name:"Security" , anchor: "#security"  },
+                        { name:"Load" , anchor: "#load"  }
                     ]
                 }
             ]

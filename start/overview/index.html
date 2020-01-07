@@ -38,7 +38,7 @@
           
    
     
-    <link rel="stylesheet" href="assets/app/app.css">
+   
 
 
     <title>Slate Kit: Info</title>
@@ -58,7 +58,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <nav class="navbar navbar-expand-lg navbar-classic">
                             <a class="navbar-brand" href="#0">
-                                <img src="assets/img/saas-1/logo.png" alt=""></a>
+                                <img src="assets/theme/img/saas-1/logo2.png" alt=""></a>
                             <button
                                 class="navbar-toggler collapsed"
                                 type="button"
@@ -211,79 +211,66 @@
 </p>
 <table class="table table-bordered table-striped">
     <tr>
-        <td><strong>Item</strong></td>
         <td><strong>Infrastructure</strong></td>
         <td><strong>Usage</strong></td>
         <td>Provider</td>
     </tr>
     <tr>
-        <td><strong>1</strong></td>
         <td><strong>Files</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>AWS S3 ( see <a href="arch/" >files</a> )</td>
+        <td>AWS S3 ( see <a href="arch/files" >files</a> )</td>
     </tr>
     <tr>
-        <td><strong>2</strong></td>
         <td><strong>Queues</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>AWS SQS ( see <a href="arch/" >queues</a> )</td>
+        <td>AWS SQS ( see <a href="arch/queues" >queues</a> )</td>
     </tr>
     <tr>
-        <td><strong>3</strong></td>
         <td><strong>Documents</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>AWS Dynamo ( see <a href="arch/" >docs</a> )</td>
+        <td>AWS Dynamo ( see <a href="arch/docs" >docs</a> )</td>
     </tr>
     <tr>
-        <td><strong>4</strong></td>
         <td><strong>Entities</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Support for MySql ( see <a href="arch/" >data</a> docs )PostGres &amp; Mongo coming soon</td>
+        <td>Support for MySql ( see <a href="arch/data" >data</a> docs )PostGres &amp; Mongo coming soon</td>
     </tr>
     <tr>
-        <td><strong>5</strong></td>
         <td><strong>Http Server</strong></td>
         <td><strong>Direct Usage</strong></td>
         <td>Ktor ( from JetBrains ) - used as the API server</td>
     </tr>
     <tr>
-        <td><strong>6</strong></td>
         <td><strong>Http Client </strong></td>
         <td><strong>Partially Abstracted</strong></td>
-        <td>OkHttp ( see <a href="arch/" >HttpRPC</a> )</td>
+        <td>OkHttp </td>
     </tr>
     <tr>
-        <td><strong>7</strong></td>
         <td><strong>Metrics</strong></td>
         <td><strong>Partially Abstracted</strong></td>
-        <td>Micrometer.io ( see <a href="arch/" >tracking</a> )</td>
+        <td>Micrometer.io ( see <a href="arch/tracking" >tracking</a> )</td>
     </tr>
     <tr>
-        <td><strong>8</strong></td>
         <td><strong>Logs</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Logback ( see <a href="http://www.slatekit.com/utils/" >logs</a> )</td>
+        <td>Logback ( see <a href="http://www.slatekit.com/utils/logger" >logger</a> )</td>
     </tr>
     <tr>
-        <td><strong>9</strong></td>
         <td><strong>SMS</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Twilio ( see <a href="arch/" >sms</a> )</td>
+        <td>Twilio ( see <a href="arch/sms" >sms</a> )</td>
     </tr>
     <tr>
-        <td><strong>10</strong></td>
         <td><strong>Email</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>SendGrid ( see <a href="arch/" >email</a> )</td>
+        <td>SendGrid ( see <a href="arch/email" >email</a> )</td>
     </tr>
     <tr>
-        <td><strong>11</strong></td>
         <td><strong>Alerts</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Slack Web Hooks ( see <a href="arch/" >alerts</a> )</td>
+        <td>Slack Web Hooks ( see <a href="arch/alerts" >alerts</a> )</td>
     </tr>
     <tr>
-        <td><strong>12</strong></td>
         <td><strong>Dates</strong></td>
         <td><strong>Aliased</strong></td>
         <td>ThreeTen BP is used for Full-Stack / Android alignment</td>
@@ -297,6 +284,7 @@
 <h1 id="components">Components</h1>
 
 <p>These are the main architecture components available in Slate Kit.
+<div class="col-sm-12 d-none d-sm-block">
 <table class="table table-bordered table-striped">
   <tr>
     <td ><strong>Component</strong></td>
@@ -443,6 +431,7 @@
     <td>Utility Components</td>
   </tr>
 </table>
+</div>
 <br/>
 
 <a href="start/overview#overview" class="sk-back-to-top">Back to top </a>
@@ -465,7 +454,7 @@ Philosophy, design goals, approaches and standards
     </tr>
     <tr>
       <td><strong>Standards</strong></td>
-      <td>Check our <a class="url-ch" href="more/standards">coding standards</a></td>
+      <td>Check our <a class="url-ch" href="info/standards">coding standards</a></td>
     </tr>
     <tr>
       <td><strong>Approach</strong></td>
@@ -549,31 +538,26 @@ Philosophy, design goals, approaches and standards
     <tr>
         <td><strong>Type</strong></td>
         <td><strong>Security</strong></td>
-        <td><strong>Link(s)</strong></td>
         <td><strong>Note(s)</strong></td>
     </tr>
     <tr>
-        <td><strong>Files</strong></td>
-        <td>AWS S3</td>
         <td><a href="arch/queues" >Files</a></td>
+        <td>AWS S3</td>
         <td>Also refer to AWS S3 docs</td>
     </tr>
     <tr>
-        <td><strong>Queues</strong></td>
-        <td>AWS SQS</td>
         <td><a href="arch/queues" >Queues</a></td>
+        <td>AWS SQS</td>
         <td>Also refer to AWS SQS docs</td>
     </tr>
     <tr>
-        <td><strong>APIs</strong></td>
-        <td>Web/Http APIs</td>
         <td><a href="arch/apis" >APIs</a></td>
+        <td>Web/Http APIs</td>
         <td>Built on top of Ktor. See module for upcoming docs on performance</td>
     </tr>
     <tr>
-        <td><strong>Jobs</strong></td>
+        <td><a href="arch/jobs" >Jobs</a></td>
         <td>Background jobs</td>
-        <td><a href="arch/jobs" >jobs</a></td>
         <td>Built using Kotlin Coroutines and Channels. See module for upcoming docs on performance</td>
     </tr>
 </table>
@@ -589,49 +573,41 @@ Philosophy, design goals, approaches and standards
     <tr>
         <td><strong>Type</strong></td>
         <td><strong>Security</strong></td>
-        <td><strong>Link(s)</strong></td>
         <td><strong>Note(s)</strong></td>
     </tr>
     <tr>
-        <td><strong>Configs</strong></td>
-        <td>Config settings</td>
         <td><a href="http://www.slatekit.com/utils/conf" >Conf</a></td>
+        <td>Config settings</td>
         <td>Settings can be encrypted or loaded from env vars</td>
     </tr>
     <tr>
-        <td><strong>Files</strong></td>
+        <td><a href="arch/files" >Files</a></td>
         <td>AWS S3</td>
-        <td><a href="arch/queues" >Files</a></td>
         <td>Also refer to AWS S3 docs</td>
     </tr>
     <tr>
-        <td><strong>Queues</strong></td>
-        <td>AWS SQS</td>
         <td><a href="arch/queues" >Queues</a></td>
+        <td>AWS SQS</td>
         <td>Also refer to AWS SQS docs</td>
     </tr>
     <tr>
-        <td><strong>App</strong></td>
-        <td>Runnable App</td>
         <td><a href="arch/app" >App</a></td>
+        <td>Runnable App</td>
         <td>See module docs for more info</td>
     </tr>
     <tr>
-        <td><strong>APIs</strong></td>
-        <td>Web/Http APIs</td>
         <td><a href="arch/apis" >APIs</a></td>
+        <td>Web/Http APIs</td>
         <td>See module docs for more info</td>
     </tr>
     <tr>
-        <td><strong>CLI</strong></td>
-        <td>CLI</td>
         <td><a href="arch/cli" >CLI</a></td>
+        <td>CLI</td>
         <td>See module docs for more info</td>
     </tr>
     <tr>
-        <td><strong>Data</strong></td>
-        <td>Sql</td>
         <td><a href="arch/data" >Data</a></td>
+        <td>Sql</td>
         <td>See module docs for more info</td>
     </tr>
 </table>
