@@ -9,27 +9,29 @@
     <td>{{.Get "jar" }}</td>
   </tr>
   <tr>
-    <td><strong>git</strong></td>
+    <td><strong>source</strong></td>
     <td><a class="url-ch" href="{{.Get "git" }}">{{.Get "gitAlias" }}</a></td>
   </tr>
+  <tr>
+      <td><strong>example</strong></td>
+      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/{{.Get "exampleUrl" }}">{{.Get "exampleFileName" }}</a></td>
+  </tr>
+  <!--
   <tr>
     <td><strong>docs</strong></td>
     <td><a class="url-ch" href="{{.Get "url" }}">{{.Get "name" }}</a></td>
   </tr>
+  -->
   <tr>
     <td><strong>version</strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/{{.Get "bintray" }}/images/download.svg" /></td>
   </tr>
   <tr>
-    <td><strong>uses</strong></td>
-    <td>{{.Get "uses" }}</td>
-  </tr>
-  <tr>
     <td><strong>license</strong></td>
-    <td>{{.Get "license" | default "Apache 2.0" }}</td>
+    <td><img src="https://img.shields.io/badge/license-{{.Get "license" | default "Apache2" }}-green.svg?style=flat" /></td>
   </tr>
   <tr>
-      <td><strong>example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/{{.Get "exampleUrl" }}">{{.Get "exampleFileName" }}</a></td>
+    <td><strong>requires</strong></td>
+    <td>{{.Get "uses" }}</td>
   </tr>
 </table>

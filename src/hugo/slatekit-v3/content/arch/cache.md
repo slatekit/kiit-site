@@ -108,7 +108,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 </table>
 {{% section-end mod="arch/cache" %}}
 
-# Sample
+# Example {#example}
 {{< highlight kotlin >}}
     
     import slatekit.cache.*

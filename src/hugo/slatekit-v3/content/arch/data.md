@@ -121,7 +121,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 </table>
 {{% section-end mod="arch/data" %}}
 
-# Sample
+# Example {#example}
 {{< highlight kotlin >}}
 
     fun quick_sample() {

@@ -121,7 +121,7 @@ Use the following settings in gradle for installing this component.
 This component has **0 dependencies** and does **NOT** use any other Slate Kit components.
 {{% section-end mod="arch/results" %}}
 
-# Sample
+# Example {#example}
 Here are some examples showing the usage of Result by creating, checking, and pattern matching the values.
 Refer to the {{% sk-link-code component="examples" filepath="examples/Example_Results.kt" name="Example_Result.kt" %}} 
 {{< highlight kotlin >}}

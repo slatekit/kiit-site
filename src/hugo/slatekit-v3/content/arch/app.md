@@ -114,7 +114,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 </table>
 {{% section-end mod="arch/app" %}}
 
-# Sample {#sample}
+# Example {#example}
 You can generate a sample app using the slatekit executable. 
 Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}
 {{< highlight bash >}}

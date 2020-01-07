@@ -115,7 +115,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 </table>
 {{% section-end mod="core/cli" %}}
 
-# Sample
+# Example {#example}
 coming soon
 {{< highlight kotlin >}}
 

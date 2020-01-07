@@ -100,7 +100,7 @@ This component uses several components from the Slate Kit Utilities.
 
 {{% section-end mod="arch/context" %}}
 
-# Sample
+# Example {#example}
 The context can be constructed manually or using convenience methods that build the context from the command line args, and configs.
 {{< highlight kotlin >}}
     

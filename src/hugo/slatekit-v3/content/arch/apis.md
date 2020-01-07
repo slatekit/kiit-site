@@ -96,6 +96,7 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
     url="arch/apis"
     bintray="slatekit-apis"
     uses="slatekit.results, slatekit.common"
+    license="LGPL__v3"
     exampleUrl="Example_APIs.kt"
     exampleFileName="Example_APIs.kt"
 %}}
@@ -121,7 +122,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{% section-end mod="arch/apis" %}}
 
-# Sample
+# Example {#example}
 This is a quick and simple example of creating an API using the Slate Kit **Universal API paradigm**. This API is then accessible on the CLI and Web
 {{% sk-tip-generic text="Slate Kit APIs have a 3 part routing convention: {AREA} / {API} / {ACTION}" %}}
 {{< highlight kotlin >}}

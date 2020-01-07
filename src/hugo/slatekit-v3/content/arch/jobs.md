@@ -84,6 +84,7 @@ This component is currently stable and there is a project generator for it
     url="arch/jobs"
     bintray="slatekit-jobs"
     uses="slatekit.results, slatekit.common"
+    license="LGPL__v3"
     exampleUrl=""
     exampleFileName="Example_Jobs.kt"
 %}}
@@ -112,7 +113,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 
 {{% section-end mod="arch/jobs" %}}
 
-# Sample
+# Example {#example}
 This is a simple example of a Queued worker ( which takes it work from a Task which a unit-of-work stored in-memory or in persistent queue ).
 {{< highlight kotlin >}}
      

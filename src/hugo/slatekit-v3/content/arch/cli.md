@@ -92,7 +92,7 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
 </table>
 {{% section-end mod="arch/cli" %}}
 
-# Sample
+# Example {#example}
 You can create a custom CLI by extending the Slate Kit CLI component or the CliAPI component which integrates nicely with Slate Kit {{% sk-link-arch page="apis" name="APIs" %}}
 {{< highlight kotlin >}}
      
