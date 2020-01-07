@@ -15,44 +15,44 @@ Slate Kit is built and maintained by a small group of engineers. It has been in 
       <div class="row text-center">
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="core/kotlin-result.html"><img src="assets/media/img/git.png" alt="" ></a>
-              <div><a href="core/kotlin-apis.html"><h3>Git</h3></a></div>
+              <a href="https://github.com/code-helix/slatekit"><img src="assets/media/img/git.png" alt="" ></a>
+              <div><a href="https://github.com/code-helix/slatekit"><h3>Git</h3></a></div>
               <p>See all the source code and modules {{% sk-contact-git %}}</p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="core/kotlin-apis.html"><img src="assets/media/img/twitter.png" ></a>
-              <div><a href="core/kotlin-apis.html"><h3>Twitter</h3></a></div>
-              <p>Follow up on updates {{% sk-contact-git %}}</p>
+              <a href="https://twitter.com/slatekit"><img src="assets/media/img/twitter.png" ></a>
+              <div><a href="https://twitter.com/slatekit"><h3>Twitter</h3></a></div>
+              <p>Follow updates {{% sk-contact-twitter %}}</p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="core/kotlin-result.html"><img src="assets/media/img/white/error.png" alt="" ></a>
-              <div><a href="core/kotlin-apis.html"><h3>Issues</h3></a></div>
-              <p>Log your issues  {{% sk-contact-git %}}</p>
+              <a href="https://github.com/code-helix/slatekit/issues"><img src="assets/media/img/white/error.png" alt="" ></a>
+              <div><a href="https://github.com/code-helix/slatekit/issues"><h3>Issues</h3></a></div>
+              <p>Log your issues <a href="https://github.com/code-helix/slatekit/issues">Git / Issues</a></p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="core/kotlin-app.html"><img src="assets/media/img/gitter.png" ></a>
-              <div><a href="core/kotlin-app.html"><h3>Discuss</h3></a></div>
-              <p>Discuss and join conversations {{% sk-contact-git %}}</p>
+              <a href="https://gitter.im/code-helix/slatekit"><img src="assets/media/img/gitter.png" ></a>
+              <div><a href="https://gitter.im/code-helix/slatekit"><h3>Discuss</h3></a></div>
+              <p>Discuss and join conversations <a href="https://gitter.im/code-helix/slatekit">Gitter/Slate Kit</a></p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="core/kotlin-app.html"><img src="assets/media/img/white/email.png" ></a>
-              <div><a href="core/kotlin-app.html"><h3>Email</h3></a></div>
-              <p>Contact us for more info {{% sk-contact-git %}}</p>
+              <a href="mailto:slatekit@codehelix.co"><img src="assets/media/img/white/email.png" ></a>
+              <div><a href="mailto:slatekit@codehelix.co"><h3>Email</h3></a></div>
+              <p>You can contact us at <a href="mailto:slatekit@codehelix.co">slatekit@codehelix.co</a></p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="core/kotlin-app.html"><img src="assets/media/img/white/desktop.png" ></a>
-              <div><a href="core/kotlin-app.html"><h3>Conference</h3></a></div>
-              <p>Join our (upcoming) conference calls {{% sk-contact-git %}}</p>
+              <a href=""><img src="assets/media/img/white/desktop.png" ></a>
+              <div><a href=""><h3>Conference</h3></a></div>
+              <p>Join our (upcoming) conference calls. Schedule is TBD</p>
             </div>
           </div>
         </div>
