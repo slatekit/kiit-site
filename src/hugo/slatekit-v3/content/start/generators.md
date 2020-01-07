@@ -264,7 +264,7 @@ Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and examp
 
 ## JOB {#job}
 Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in "pages", or process items from queues.
-Refer to the {{% sk-link-arch page="job" name="Job" %}} component and example: {{% sk-link-example file="Example_Jobs.kt" name="Example_Jobs.kt" %}}.
+Refer to the {{% sk-link-arch page="jobs" name="Jobs" %}} component and example: {{% sk-link-example file="Example_Jobs.kt" name="Example_Jobs.kt" %}}.
 
 {{< highlight bash >}}
     :> cd ~/tools/slatekit/generator

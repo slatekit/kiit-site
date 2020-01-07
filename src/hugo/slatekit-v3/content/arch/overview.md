@@ -47,7 +47,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="cli"><img src="assets/media/img/white/terminal.png" alt="" class="img-fluid"></a>
+              <a href="arch/cli"><img src="assets/media/img/white/terminal.png" alt="" class="img-fluid"></a>
               <div><a href="arch/cli"><h3>CLI</h3></a></div>
               <p>Command line interface to handle actions in an interactive way. Has customization and formatting features. See {{% sk-link-arch page="cli" name="CLI" %}} </a>.
               </p>

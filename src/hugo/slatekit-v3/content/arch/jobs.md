@@ -244,6 +244,11 @@ This is a simple example of a Queued worker ( which takes it work from a Task wh
         <td>Capturing job and worker statistics</td> 
         <td><a href="arch/jobs/#stats" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
+    <tr>
+        <td><strong>9. Load</strong> </td>
+        <td>Performance and load</td> 
+        <td><a href="arch/jobs/#load" class="more"><span class="btn btn-primary">more</span></a></td>                    
+    </tr>
 </table>
 
 {{% section-end mod="arch/jobs" %}}
@@ -708,6 +713,11 @@ Statistics are recorded at the worker level. There is ( currently ) no way aggre
 
 {{% section-end mod="arch/jobs" %}}
 
+## Load {#load}
+Performance and load docs coming soon
+
+{{% section-end mod="arch/jobs" %}}
+
 <script>
     var archComponent = {
         name: "Jobs",
@@ -728,6 +738,7 @@ Statistics are recorded at the worker level. There is ( currently ) no way aggre
                         { name:"Events" , anchor: "#events"  },
                         { name:"Workers" , anchor: "#workers"  },
                         { name:"Stats" , anchor: "#stats"  },
+                        { name:"Load" , anchor: "#load"  }
                     ]
                 }
             ]

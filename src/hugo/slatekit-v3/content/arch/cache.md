@@ -186,6 +186,11 @@ This component uses the following other <strong>Slate Kit</strong> and/or third-
         <td>Working with parsed commands as CLI Requests</td>
         <td><a href="arch/cache/#async" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
+    <tr>
+        <td><strong>5. Load</strong></td>
+        <td>Performance and load metrics</td>
+        <td><a href="arch/cache/#load" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
 </table>
 
 {{% section-end mod="arch/cache" %}}
@@ -374,6 +379,13 @@ The **async** cache implementation is {{% sk-link-code component="cache" filepat
 
 {{% section-end mod="arch/cache" %}}
 
+## Load {#load}
+Performance and load docs coming soon
+
+{{% feature-end mod="arch/cache" %}}
+
+{{% section-end mod="arch/cache" %}}
+
 <script>
     var archComponent = {
         name: "Cache",
@@ -389,7 +401,8 @@ The **async** cache implementation is {{% sk-link-code component="cache" filepat
                         { name:"Usage" , anchor: "#usage" },
                         { name:"Stats" , anchor: "#stats"  },
                         { name:"Sync", anchor: "#sync" },
-                        { name:"Async" , anchor: "#async"  }
+                        { name:"Async" , anchor: "#async"  },
+                        { name:"Load" , anchor: "#load"  }
                     ]
                 }
             ]

@@ -60,7 +60,7 @@ There is an emphasis towards <strong>pragmatic</strong> functional programming, 
         <td><strong>3</strong></td>
         <td><strong>Errors</strong></td>
         <td>Prefer functional error-handling via the
-            {{% sk-link-arch name="results" %}} type and its aliases <strong>Outcome, Try, Notice, Validated</strong> over exceptions.
+            {{% sk-link-arch page="results" name="results" %}} type and its aliases <strong>Outcome, Try, Notice, Validated</strong> over exceptions.
         </td>
     </tr>
     <tr>

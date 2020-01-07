@@ -200,7 +200,12 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
     <tr>
         <td><strong>Info</strong></td>
         <td>Startup info and diagnostics</td>
-        <td><a href="arch/app#Info" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/app#info" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>>
+    <tr>
+        <td><strong>Security</strong></td>
+        <td>Setting up a secure application </td>
+        <td><a href="arch/app#security" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
 </table>
 <br/>
@@ -463,6 +468,11 @@ components list earlier.
 {{< /highlight >}}
 {{% feature-end mod="arch/app" %}}
 
+## Security {#security}
+Sensitive configuration settings can be secured by encrypting the settings, or loading them from environment variables. Check the {{% sk-link-util page="config" name="Config" %}} component for more info.
+
+{{% feature-end mod="arch/app" %}}
+
 <script>
     var archComponent = {
         name: "App",
@@ -479,7 +489,8 @@ components list earlier.
                         { name:"Envs" , anchor: "#envs"  },
                         { name:"Confs", anchor: "#confs" },
                         { name:"Logs" , anchor: "#logs"  },
-                        { name:"Help" , anchor: "#help"  }
+                        { name:"Info" , anchor: "#info"  },
+                        { name:"Security" , anchor: "#security"  }
                     ]
                 }
             ]

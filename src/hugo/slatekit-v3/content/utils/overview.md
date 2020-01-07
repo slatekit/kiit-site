@@ -4,7 +4,7 @@ date: 2019-03-17T14:30:52-04:00
 draft: true
 ---
 # Overview
-Slate Kit <strong>Utilities</strong> supplement the existing Kotlin standard library by offering a powerful set of general purpose Kotlin components that can be used for any application. Many of these components are located in the <a class="url-ch" href="#project">SlateKit.Common</a> project. However, there are a few components located in other projects. Refer to each utility component for more info.
+Slate Kit <strong>Utilities</strong> supplement the existing Kotlin standard library by offering a powerful set of general purpose Kotlin components that can be used for any application. Many of these components are located in the {{% sk-link-code component="common" filepath="common" name="slatekit-common" %}} project. However, there are a few components located in other projects. Refer to each utility component for more info.
 {{% break %}}
 
 ## Setup
@@ -33,10 +33,10 @@ Links to this modules info. Click on any component icon below for example on how
     jar="slatekit.common.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common"
     gitAlias="slatekit-common"
-    url="utils/utils.html"
+    url="utils/overview"
     uses="slatekit-results"
     license="Apache 2.0"
-    exampleUrl="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples"
+    exampleUrl=""
     exampleFileName="All Examples"
 %}}
 
@@ -108,7 +108,7 @@ Links to this modules info. Click on any component icon below for example on how
 
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="utils/env"><img src="assets/media/img/white/folders.png" width="60" alt=""></a>          
+              <a href="utils/folders"><img src="assets/media/img/white/folders.png" width="60" alt=""></a>          
               <a href="utils/folders"><h3>Folders</h3></a>
               <p>Standardized runtime app folders and structure.</p>
             </div>
@@ -182,7 +182,7 @@ Links to this modules info. Click on any component icon below for example on how
 
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="utils/serialization"><img src="assets/media/img/white/print.png" width="60" alt=""></a>     
+              <a href="utils/smartstrings"><img src="assets/media/img/white/print.png" width="60" alt=""></a>     
               <a href="utils/smartstrings"><h3>Smart Strings</h3></a>
               <p>Store, validate, describe strongly formatted strings</p>
             </div>
@@ -227,8 +227,8 @@ Links to this modules info. Click on any component icon below for example on how
 
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href=""><img src="assets/media/img/white/gears.png" width="60" alt=""></a>         
-              <a href=""><h3>Extensions</h3></a>
+              <a href="utils/extensions"><img src="assets/media/img/white/gears.png" width="60" alt=""></a>         
+              <a href="utils/extensions"><h3>Extensions</h3></a>
               <p>Extension methods for various Kotlin types and classes</p>
             </div>
           </div>

@@ -44,79 +44,66 @@ section_header: Overview
 </p>
 <table class="table table-bordered table-striped">
     <tr>
-        <td><strong>Item</strong></td>
         <td><strong>Infrastructure</strong></td>
         <td><strong>Usage</strong></td>
         <td>Provider</td>
     </tr>
     <tr>
-        <td><strong>1</strong></td>
         <td><strong>Files</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>AWS S3 ( see {{% sk-link-arch name="files" %}} )</td>
+        <td>AWS S3 ( see {{% sk-link-arch page="files" name="files" %}} )</td>
     </tr>
     <tr>
-        <td><strong>2</strong></td>
         <td><strong>Queues</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>AWS SQS ( see {{% sk-link-arch name="queues" %}} )</td>
+        <td>AWS SQS ( see {{% sk-link-arch page="queues" name="queues" %}} )</td>
     </tr>
     <tr>
-        <td><strong>3</strong></td>
         <td><strong>Documents</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>AWS Dynamo ( see {{% sk-link-arch name="docs" %}} )</td>
+        <td>AWS Dynamo ( see {{% sk-link-arch page="docs" name="docs" %}} )</td>
     </tr>
     <tr>
-        <td><strong>4</strong></td>
         <td><strong>Entities</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Support for MySql ( see {{% sk-link-arch name="data" %}} docs )PostGres & Mongo coming soon</td>
+        <td>Support for MySql ( see {{% sk-link-arch page="data" name="data" %}} docs )PostGres & Mongo coming soon</td>
     </tr>
     <tr>
-        <td><strong>5</strong></td>
         <td><strong>Http Server</strong></td>
         <td><strong>Direct Usage</strong></td>
         <td>Ktor ( from JetBrains ) - used as the API server</td>
     </tr>
     <tr>
-        <td><strong>6</strong></td>
         <td><strong>Http Client </strong></td>
         <td><strong>Partially Abstracted</strong></td>
-        <td>OkHttp ( see {{% sk-link-arch name="HttpRPC" %}} )</td>
+        <td>OkHttp </td>
     </tr>
     <tr>
-        <td><strong>7</strong></td>
         <td><strong>Metrics</strong></td>
         <td><strong>Partially Abstracted</strong></td>
-        <td>Micrometer.io ( see {{% sk-link-arch name="tracking" %}} )</td>
+        <td>Micrometer.io ( see {{% sk-link-arch page="tracking" name="tracking" %}} )</td>
     </tr>
     <tr>
-        <td><strong>8</strong></td>
         <td><strong>Logs</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Logback ( see {{% sk-link-util name="logs" %}} )</td>
+        <td>Logback ( see {{% sk-link-util page="logger" name="logger" %}} )</td>
     </tr>
     <tr>
-        <td><strong>9</strong></td>
         <td><strong>SMS</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Twilio ( see {{% sk-link-arch name="sms" %}} )</td>
+        <td>Twilio ( see {{% sk-link-arch page="sms" name="sms" %}} )</td>
     </tr>
     <tr>
-        <td><strong>10</strong></td>
         <td><strong>Email</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>SendGrid ( see {{% sk-link-arch name="email" %}} )</td>
+        <td>SendGrid ( see {{% sk-link-arch page="email" name="email" %}} )</td>
     </tr>
     <tr>
-        <td><strong>11</strong></td>
         <td><strong>Alerts</strong></td>
         <td><strong>Abstracted</strong></td>
-        <td>Slack Web Hooks ( see {{% sk-link-arch name="alerts" %}} )</td>
+        <td>Slack Web Hooks ( see {{% sk-link-arch page="alerts" name="alerts" %}} )</td>
     </tr>
     <tr>
-        <td><strong>12</strong></td>
         <td><strong>Dates</strong></td>
         <td><strong>Aliased</strong></td>
         <td>ThreeTen BP is used for Full-Stack / Android alignment</td>
@@ -146,31 +133,26 @@ Performance details of the various modules will be coming soon and available/doc
     <tr>
         <td><strong>Type</strong></td>
         <td><strong>Security</strong></td>
-        <td><strong>Link(s)</strong></td>
         <td><strong>Note(s)</strong></td>
     </tr>
     <tr>
-        <td><strong>Files</strong></td>
-        <td>AWS S3</td>
         <td>{{% sk-link-arch page="queues" name="Files" %}}</td>
+        <td>AWS S3</td>
         <td>Also refer to AWS S3 docs</td>
     </tr>
     <tr>
-        <td><strong>Queues</strong></td>
-        <td>AWS SQS</td>
         <td>{{% sk-link-arch page="queues" name="Queues" %}}</td>
+        <td>AWS SQS</td>
         <td>Also refer to AWS SQS docs</td>
     </tr>
     <tr>
-        <td><strong>APIs</strong></td>
-        <td>Web/Http APIs</td>
         <td>{{% sk-link-arch page="apis" name="APIs" %}}</td>
+        <td>Web/Http APIs</td>
         <td>Built on top of Ktor. See module for upcoming docs on performance</td>
     </tr>
     <tr>
-        <td><strong>Jobs</strong></td>
+        <td>{{% sk-link-arch page="jobs" name="Jobs" %}}</td>
         <td>Background jobs</td>
-        <td>{{% sk-link-arch page="jobs" name="jobs" %}}</td>
         <td>Built using Kotlin Coroutines and Channels. See module for upcoming docs on performance</td>
     </tr>
 </table>
@@ -182,49 +164,41 @@ Security details of the various modules will be coming soon and available/docume
     <tr>
         <td><strong>Type</strong></td>
         <td><strong>Security</strong></td>
-        <td><strong>Link(s)</strong></td>
         <td><strong>Note(s)</strong></td>
     </tr>
     <tr>
-        <td><strong>Configs</strong></td>
-        <td>Config settings</td>
         <td>{{% sk-link-util page="conf" name="Conf" %}}</td>
+        <td>Config settings</td>
         <td>Settings can be encrypted or loaded from env vars</td>
     </tr>
     <tr>
-        <td><strong>Files</strong></td>
+        <td>{{% sk-link-arch page="files" name="Files" %}}</td>
         <td>AWS S3</td>
-        <td>{{% sk-link-arch page="queues" name="Files" %}}</td>
         <td>Also refer to AWS S3 docs</td>
     </tr>
     <tr>
-        <td><strong>Queues</strong></td>
-        <td>AWS SQS</td>
         <td>{{% sk-link-arch page="queues" name="Queues" %}}</td>
+        <td>AWS SQS</td>
         <td>Also refer to AWS SQS docs</td>
     </tr>
     <tr>
-        <td><strong>App</strong></td>
-        <td>Runnable App</td>
         <td>{{% sk-link-arch page="app" name="App" %}}</td>
+        <td>Runnable App</td>
         <td>See module docs for more info</td>
     </tr>
     <tr>
-        <td><strong>APIs</strong></td>
-        <td>Web/Http APIs</td>
         <td>{{% sk-link-arch page="apis" name="APIs" %}}</td>
+        <td>Web/Http APIs</td>
         <td>See module docs for more info</td>
     </tr>
     <tr>
-        <td><strong>CLI</strong></td>
-        <td>CLI</td>
         <td>{{% sk-link-arch page="cli" name="CLI" %}}</td>
+        <td>CLI</td>
         <td>See module docs for more info</td>
     </tr>
     <tr>
-        <td><strong>Data</strong></td>
-        <td>Sql</td>
         <td>{{% sk-link-arch page="data" name="Data" %}}</td>
+        <td>Sql</td>
         <td>See module docs for more info</td>
     </tr>
 </table>

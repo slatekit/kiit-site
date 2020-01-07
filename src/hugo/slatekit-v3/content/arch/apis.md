@@ -203,12 +203,22 @@ This is a quick and simple example of creating an API using the Slate Kit **Univ
         <td><a href="arch/apis/#cli" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>10. Files</strong></td>
+        <td><strong>10. Security</strong></td>
+        <td>Authentication and security</td>
+        <td><a href="arch/apis/#security" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>11. Load</strong></td>
+        <td>Performance and load</td>
+        <td><a href="arch/apis/#load" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>12. Files</strong></td>
         <td>How to handle requests from Files</td>
         <td><a href="arch/apis/#files" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>11. REST</strong></td>
+        <td><strong>13. REST</strong></td>
         <td>How to set up partial REST compatible actions</td>
         <td><a href="arch/apis/#rest" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
@@ -759,6 +769,12 @@ You can then call this API from a request saved to a file
 {{< /highlight >}}
 {{% section-end mod="arch/apis" %}}
 
+## Security {#security}
+Authentication and security docs coming soon
+
+## Load {#load}
+Performance and load docs coming soon
+
 <script>
     var archComponent = {
         name: "APIs",
@@ -779,7 +795,9 @@ You can then call this API from a request saved to a file
                         { name:"Errors" , anchor: "#errors"  },
                         { name:"Hooks" , anchor: "#middleware"  },
                         { name:"Web" , anchor: "#web"  },
-                        { name:"CLI" , anchor: "#cli"  }
+                        { name:"CLI" , anchor: "#cli"  },
+                        { name:"Security" , anchor: "#security"  },
+                        { name:"Load" , anchor: "#load"  }
                     ]
                 }
             ]
