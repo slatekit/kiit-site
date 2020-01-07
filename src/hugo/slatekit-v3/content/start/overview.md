@@ -126,69 +126,8 @@ section_header: Overview
 
 
 # Components
-These are some of the main architecture components available in Slate Kit.
-<table class="table table-bordered table-striped">
-  <tr>
-    <td ><strong>Component</strong></td>
-    <td ><strong>Visit</strong></td>
-    <td ><strong>About</strong></td>
-    <td ><strong>Description</strong></td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/desktop.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="kotlin-core-app.html">App</a></strong></td>
-    <td>Base Application</td>
-    <td>A powerful base app with support for command line args, environment selection, configs per environment, logging, life-cycle events, encryption, diagnostics and more</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/webapi.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="kotlin-core-apis.html">API</a></strong></td>
-    <td>Protocol Independent APIs</td>
-    <td>Easily build protocol independent APIs using simple classes/methods with annotations, that can be hosted / run on both Slate Command Line Shell and/or as Web APIs in the Slate Server </td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/terminal.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="kotlin-mod-shell.html">CLI</a></strong></td>
-    <td>Command Line Interface</td>
-    <td>A command line interface shell that you can extend to host your "Protocol Independent APIs" and/or hook into to handle and execute any user commands in a shell.</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/gears.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="arch/jobs">Jobs</a></strong></td>
-    <td>Background Jobs</td>
-    <td>Backgrounds Jobs / Task Queue library to process one-time, paged, and queue based jobs.</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/layers.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="arch/orm">ORM</a></strong></td>
-    <td>Domain-Driven ORM</td>
-    <td>A simple, light-weight, Domain-Driven ORM to map your entities to and from database tables. MySql is currently supported with support for PostGres coming soon.</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/server.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="kotlin-core-server.html">Server</a></strong></td>
-    <td>Web API Server</td>
-    <td>A Web API server built using Akka Http that can host your "Protocol Independent APIs". You can extend this server and register your own APIs.</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/build.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="infra.html">Architecture</a></strong></td>
-    <td>Architecture Components</td>
-    <td>Architectural abstractions and implementations for Files, Queues, Tasks and more. Files and Queues are abstracted with default implementations for AWS S3, SQS.</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/multitool.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="utils.html">Utilities</a></strong></td>
-    <td>Utility Components</td>
-    <td>Many useful utility components and code that can be used for any application. All these are located in the Slate.Common project and independent and modular.</td>
-  </tr>
-  <tr>
-    <td class="text-center"><img src="assets/media/img/white/mobile.png" width="50" alt=""></td>
-    <td><strong><a class="url-ch" href="features.html">Mobile</strong></td>
-    <td>Mobile / Web Features</td>
-    <td>Mobile and web features for most applications, such as Users, Devices, Registration, Invites, Settings and more. ( Coming later )</td>
-  </tr>
-</table>
+These are the main architecture components available in Slate Kit.
+{{% sk-modules %}}
 {{% section-end mod="start/overview" %}}
 
 
