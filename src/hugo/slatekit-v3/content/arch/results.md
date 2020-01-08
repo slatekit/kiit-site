@@ -182,8 +182,52 @@ Refer to the {{% sk-link-code component="examples" filepath="examples/Example_Re
 {{< /highlight >}}
 {{% section-end mod="arch/results" %}}
 
-
 # Concepts
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>More</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Terms</strong></td>
+        <td>Terms and concepts in Result</td>
+        <td><a href="arch/results/#terms" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>2. Result</strong></td>
+        <td>The core component for modeling successes and failures</td>
+        <td><a href="arch/results/#result" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>3. Status</strong></td>
+        <td>Status codes and logical grouping of states</td>
+        <td><a href="arch/results/#status" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>4. Builders</strong> </td>
+        <td>Several easy ways to build success or different category of errors</td> 
+        <td><a href="arch/results/#builders" class="more"><span class="btn btn-primary">more</span></a></td>                    
+    </tr>
+    <tr>
+        <td><strong>5. Aliases</strong></td>
+        <td>Type aliases to default the error type for simplicity</td>
+        <td><a href="arch/results/#aliases" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>6. Errors</strong></td>
+        <td>Define your error types or use pre-built ones</td>
+        <td><a href="arch/results/#errors" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>7. Conversion</strong></td>
+        <td>Convert Successes / Failures to compatible protocol values</td>
+        <td><a href="arch/results/#conversion" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+</table>
+{{% section-end mod="arch/results" %}}
+
+## Terms {#terms}
 These are the main concepts / terms to know for using this component. All of these are explained further below in the details section. You can find links to the source code here.
 <table class="table table-bordered table-striped">
     <tr>
@@ -234,6 +278,157 @@ These are the main concepts / terms to know for using this component. All of the
 </table>
 {{% section-end mod="arch/results" %}}
 
+## Result {#result}
+Place holder
+{{< highlight kotlin >}}
+    
+    place holder
+     
+{{< /highlight >}}
+{{% feature-end mod="arch/results" %}}
+
+## Status {#status}
+The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} Code component on the Result type. The status is applicable for both the Success / Failure branch. There are also default codes for most common errors. {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}. The Status Codes provide a few main benefits:
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>1. Categorization</strong></td>
+        <td>Categorize errors into logical groups.</td>
+        <td>E.g. Succeeded, Invalid, Denied, etc.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Reduce boiler-plate</strong></td>
+        <td>Removes boiler-plate code of creating small custom error types.</td>
+        <td>E.g. Outcomes.denied("No access to resource")</td>
+    </tr>
+    <tr>
+        <td><strong>3. Conversion</strong></td>
+        <td>Provides a reasonable way to conver to HTTP codes</td>
+        <td>E.g. Succeeded -> HTTP 200 range</td>
+    </tr>
+</table>
+{{< highlight kotlin >}}
+
+    package slatekit.results
+
+    sealed class Status {
+        abstract val code: Int
+        abstract val msg: String
+    
+        data class Succeeded(override val code: Int, override val msg: String) : Status()
+        data class Pending  (override val code: Int, override val msg: String) : Status()
+        data class Denied   (override val code: Int, override val msg: String) : Status()
+        data class Ignored  (override val code: Int, override val msg: String) : Status()
+        data class Invalid  (override val code: Int, override val msg: String) : Status()
+        data class Errored  (override val code: Int, override val msg: String) : Status()
+        data class Unexpected(override val code: Int, override val msg: String) : Status()
+    }
+
+{{< /highlight >}}
+
+
+{{% feature-end mod="arch/results" %}}
+
+## Builders {#aliases}
+Typically, errors fall into various categories, and you may want to use specific messages, or other data to build up the errors. In order to facilitate these there are {{% sk-link-code component="result" filepath="results/builders/Builder.kt" name="Builders" %}} available for convenience to construct appropriate error types.
+{{< highlight kotlin >}}
+
+    ...
+    fun <T> denied(): Result<T, E> = Failure(errorFromStr(null, Codes.DENIED), Codes.DENIED)
+    fun <T> denied(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.DENIED), Codes.DENIED)
+    fun <T> denied(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.DENIED), Codes.DENIED)
+    fun <T> denied(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.DENIED), Codes.DENIED)
+
+    fun <T> ignored(): Result<T, E> = Failure(errorFromStr(null, Codes.IGNORED), Codes.IGNORED)
+    fun <T> ignored(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.IGNORED), Codes.IGNORED)
+    fun <T> ignored(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.IGNORED), Codes.IGNORED)
+    fun <T> ignored(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.IGNORED), Codes.IGNORED)
+
+    fun <T> invalid(): Result<T, E> = Failure(errorFromStr(null, Codes.INVALID), Codes.INVALID)
+    fun <T> invalid(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.INVALID), Codes.INVALID)
+    fun <T> invalid(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.INVALID), Codes.INVALID)
+    fun <T> invalid(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.INVALID), Codes.INVALID)
+
+    ...
+
+{{< /highlight >}}
+{{% feature-end mod="arch/results" %}}
+
+## Aliases {#aliases}
+There are a few type {{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}}  for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types.
+{{< highlight kotlin >}}
+    import slatekit.results.* 
+    import slatekit.results.builders.Outcomes
+    import slatekit.results.builders.Tries
+    
+    // Try<T> = Result<T, Exception>
+    val res1 = Tries.of { "1".toInt() }
+
+    // Outcome<T> = Result<T, Err>
+    val res2 = Outcomes.of { "1".toInt() }
+
+    // Notice<T> = Result<T, String>
+    val res3 = Notices.of { "1".toInt() }
+
+    // Validated<T> = Result<T, ErrorList>
+    val res4:Validated<String> = Failure(Err.ErrorList(listOf(
+            Err.on("email", "abc123 is not a valid email", "Invalid email"),
+            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
+    ), "Please correct the errors"))
+      
+{{< /highlight >}}
+{{% feature-end mod="arch/results" %}}
+
+
+## Errors {#errors}
+Unlike Kotlin / Swift Result error types, the {{% sk-link-code component="result" filepath="results/Err.kt" name="Err" %}}  type on the Failure branch can be anything. It is not defaulted to **Exception**. In this way, this is conceptually similar to an Scala / Haskell Either. 
+{{< highlight kotlin >}}
+    
+    import slatekit.results.Err
+    import slatekit.results.ErrorList
+
+    // Build Err from various sources using convenience methods
+    // From simple string
+    val err1 = Err.of("Invalid email")
+
+    // From Exception
+    val err2 = Err.ex(Exception("Invalid email"))
+
+    // From field name / value
+    val err3 = Err.on("email", "abc123@", "Invalid email")
+
+    // From status code
+    val err4 = Err.code(Codes.INVALID)
+
+    // From list of error strings
+    val err5 = Err.list(listOf(
+            "username must be at least 8 chars",
+            "username must have 1 UPPERCASE letter"),
+            "Username is invalid")
+
+    // From list of Err types
+    val err6 = Err.ErrorList(listOf(
+            Err.on("email", "abc123 is not a valid email", "Invalid email"),
+            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
+    ), "Please correct the errors")
+
+    // Create the Failure branch from the errors
+    val result:Result<UUID, Err> = Failure(err6)
+     
+{{< /highlight >}}
+
+{{% feature-end mod="arch/results" %}}
+
+
+## Conversions {#conversions}
+Place holder
+{{< highlight kotlin >}}
+    
+    place holder
+     
+{{< /highlight >}}
+
+{{% feature-end mod="arch/results" %}}
+
 # Guide
 <table class="table table-bordered table-striped">
     <tr>
@@ -244,55 +439,35 @@ These are the main concepts / terms to know for using this component. All of the
     <tr>
         <td><strong>1. Create</strong></td>
         <td>Create successes, failures in various ways</td>
-        <td><a href="arch/results/#creation" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/results/#create" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>2. Get</strong></td>
+        <td><strong>2. Access</strong></td>
         <td>Get values safely using available operations</td>
-        <td><a href="arch/results/#creation" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/results/#access" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>3. Check</strong></td>
         <td>Check for values or use pattern matching</td>
-        <td><a href="arch/results/#creation" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/results/#check" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>4. Errors</strong></td>
-        <td>Define your error types or use pre-built ones</td>
-        <td><a href="arch/results/#errors" class="more"><span class="btn btn-primary">more</span></a></td>
-    </tr>
-    <tr>
-        <td><strong>5. Status</strong></td>
-        <td>Use status codes for logical grouping</td>
-        <td><a href="arch/results/#errors" class="more"><span class="btn btn-primary">more</span></a></td>
-    </tr>
-    <tr>
-        <td><strong>6. Aliases</strong></td>
-        <td>Type aliases to default the error type</td>
-        <td><a href="arch/results/#errors" class="more"><span class="btn btn-primary">more</span></a></td>
-    </tr>
-    <tr>
-        <td><strong>7. Builders</strong> </td>
-        <td>Several easy ways to build success or different category of errors</td> 
-        <td><a href="arch/results/#builders" class="more"><span class="btn btn-primary">more</span></a></td>                    
-    </tr>
-    <tr>
-        <td><strong>8. Outcome</strong></td>
+        <td><strong>4. Outcome</strong></td>
         <td>A type alias for **Result[T, Err]** where Err is an error interface</td>
         <td><a href="arch/results/#outcome" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>9. Try</strong></td>
+        <td><strong>5. Try</strong></td>
         <td>A type alias for **Result[T, Exception]** to work with Exceptions</td>
         <td><a href="arch/results/#try" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>10. Validated</strong></td>
+        <td><strong>6. Validated</strong></td>
         <td>A type alias for **Result[T, Err.ErrorList]** to collect errors</td>
         <td><a href="arch/results/#validated" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>11. HTTP Support</strong></td>
+        <td><strong>7. HTTP Support</strong></td>
         <td>Convert Successes / Failures to compatible HTTP codes</td>
         <td><a href="arch/results/#http" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
@@ -300,7 +475,7 @@ These are the main concepts / terms to know for using this component. All of the
 {{% section-end mod="arch/results" %}}
 
 
-## Creation {#creation}
+## Create {#create}
 There various ways to create successes / failures, and these will be similar to Kotlin / Swift Result type usage. 
 {{< highlight kotlin >}}
       
@@ -331,7 +506,7 @@ There various ways to create successes / failures, and these will be similar to 
 {{< /highlight >}}
 {{% feature-end mod="arch/results" %}}
 
-## Get {#values}
+## Access {#access}
 Result offers the typical functional ways to safely get the value
 {{< highlight kotlin >}}
       
@@ -413,136 +588,6 @@ There are 3 ways to check / pattern match the result type and its actual branch/
         else                  -> println("Other!!")
     }
      
-{{< /highlight >}}
-{{% feature-end mod="arch/results" %}}
-
-## Errors {#errors}
-Unlike Kotlin / Swift Result error types, the {{% sk-link-code component="result" filepath="results/Err.kt" name="Err" %}}  type on the Failure branch can be anything. It is not defaulted to **Exception**. In this way, this is conceptually similar to an Scala / Haskell Either. 
-{{< highlight kotlin >}}
-    
-    import slatekit.results.Err
-    import slatekit.results.ErrorList
-
-    // Build Err from various sources using convenience methods
-    // From simple string
-    val err1 = Err.of("Invalid email")
-
-    // From Exception
-    val err2 = Err.ex(Exception("Invalid email"))
-
-    // From field name / value
-    val err3 = Err.on("email", "abc123@", "Invalid email")
-
-    // From status code
-    val err4 = Err.code(Codes.INVALID)
-
-    // From list of error strings
-    val err5 = Err.list(listOf(
-            "username must be at least 8 chars",
-            "username must have 1 UPPERCASE letter"),
-            "Username is invalid")
-
-    // From list of Err types
-    val err6 = Err.ErrorList(listOf(
-            Err.on("email", "abc123 is not a valid email", "Invalid email"),
-            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
-    ), "Please correct the errors")
-
-    // Create the Failure branch from the errors
-    val result:Result<UUID, Err> = Failure(err6)
-     
-{{< /highlight >}}
-{{% feature-end mod="arch/results" %}}
-
-## Status {#status}
-The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} Code component on the Result type. The status is applicable for both the Success / Failure branch. There are also default codes for most common errors. {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}. The Status Codes provide a few main benefits:
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>1. Categorization</strong></td>
-        <td>Categorize errors into logical groups.</td>
-        <td>E.g. Succeeded, Invalid, Denied, etc.</td>
-    </tr>
-    <tr>
-        <td><strong>2. Reduce boiler-plate</strong></td>
-        <td>Removes boiler-plate code of creating small custom error types.</td>
-        <td>E.g. Outcomes.denied("No access to resource")</td>
-    </tr>
-    <tr>
-        <td><strong>3. Conversion</strong></td>
-        <td>Provides a reasonable way to conver to HTTP codes</td>
-        <td>E.g. Succeeded -> HTTP 200 range</td>
-    </tr>
-</table>
-{{< highlight kotlin >}}
-
-    package slatekit.results
-
-    sealed class Status {
-        abstract val code: Int
-        abstract val msg: String
-    
-        data class Succeeded(override val code: Int, override val msg: String) : Status()
-        data class Pending  (override val code: Int, override val msg: String) : Status()
-        data class Denied   (override val code: Int, override val msg: String) : Status()
-        data class Ignored  (override val code: Int, override val msg: String) : Status()
-        data class Invalid  (override val code: Int, override val msg: String) : Status()
-        data class Errored  (override val code: Int, override val msg: String) : Status()
-        data class Unexpected(override val code: Int, override val msg: String) : Status()
-    }
-
-{{< /highlight >}}
-
-
-{{% feature-end mod="arch/results" %}}
-
-## Aliases {#aliases}
-There are a few type {{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}}  for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types.
-{{< highlight kotlin >}}
-    import slatekit.results.* 
-    import slatekit.results.builders.Outcomes
-    import slatekit.results.builders.Tries
-    
-    // Try<T> = Result<T, Exception>
-    val res1 = Tries.of { "1".toInt() }
-
-    // Outcome<T> = Result<T, Err>
-    val res2 = Outcomes.of { "1".toInt() }
-
-    // Notice<T> = Result<T, String>
-    val res3 = Notices.of { "1".toInt() }
-
-    // Validated<T> = Result<T, ErrorList>
-    val res4:Validated<String> = Failure(Err.ErrorList(listOf(
-            Err.on("email", "abc123 is not a valid email", "Invalid email"),
-            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
-    ), "Please correct the errors"))
-      
-{{< /highlight >}}
-{{% feature-end mod="arch/results" %}}
-
-
-## Builders {#aliases}
-Typically, errors fall into various categories, and you may want to use specific messages, or other data to build up the errors. In order to facilitate these there are {{% sk-link-code component="result" filepath="results/builders/Builder.kt" name="Builders" %}} available for convenience to construct appropriate error types.
-{{< highlight kotlin >}}
-
-    ...
-    fun <T> denied(): Result<T, E> = Failure(errorFromStr(null, Codes.DENIED), Codes.DENIED)
-    fun <T> denied(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.DENIED), Codes.DENIED)
-    fun <T> denied(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.DENIED), Codes.DENIED)
-    fun <T> denied(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.DENIED), Codes.DENIED)
-
-    fun <T> ignored(): Result<T, E> = Failure(errorFromStr(null, Codes.IGNORED), Codes.IGNORED)
-    fun <T> ignored(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.IGNORED), Codes.IGNORED)
-    fun <T> ignored(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.IGNORED), Codes.IGNORED)
-    fun <T> ignored(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.IGNORED), Codes.IGNORED)
-
-    fun <T> invalid(): Result<T, E> = Failure(errorFromStr(null, Codes.INVALID), Codes.INVALID)
-    fun <T> invalid(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.INVALID), Codes.INVALID)
-    fun <T> invalid(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.INVALID), Codes.INVALID)
-    fun <T> invalid(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.INVALID), Codes.INVALID)
-
-    ...
-
 {{< /highlight >}}
 {{% feature-end mod="arch/results" %}}
 
@@ -639,17 +684,25 @@ Status codes not only serve to logically categories successes/failures but becom
             useTemplate:true,
             sections: [
                 {
+                    name: "Concepts",
+                    items: [
+                        { name:"Terms" , anchor: "#concepts" },
+                        { name:"Result" , anchor: "#result"  },
+                        { name:"Status" , anchor: "#status"  },
+                        { name:"Builders" , anchor: "#builders"  },
+                        { name:"Aliases" , anchor: "#aliases"  },
+                        { name:"Errors" , anchor: "#errors"  },
+                        { name:"Conversion" , anchor: "#conversion"  }
+                    ]
+                },
+                {
                     name: "Guide",
                     items: [
                         { name:"Create" , anchor: "#creation" },
-                        { name:"Values" , anchor: "#values"  },
+                        { name:"Access" , anchor: "#values"  },
                         { name:"Check", anchor: "#check" },
-                        { name:"Errors" , anchor: "#errors"  },
-                        { name:"Status" , anchor: "#status"  },
-                        { name:"Aliases" , anchor: "#aliases"  },
-                        { name:"Builders" , anchor: "#builders"  },
-                        { name:"Outcome" , anchor: "#outcome"  },
                         { name:"Try" , anchor: "#try"  },
+                        { name:"Outcome" , anchor: "#outcome"  },
                         { name:"Validated" , anchor: "#validated"  },
                         { name:"Http" , anchor: "#http"  }
                     ]
