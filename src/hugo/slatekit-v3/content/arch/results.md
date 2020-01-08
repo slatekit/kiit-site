@@ -281,7 +281,12 @@ These are the main concepts / terms to know for using this component. All of the
         <td><a href="arch/results/#try" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>10. HTTP Support</strong></td>
+        <td><strong>10. Validated</strong></td>
+        <td>A type alias for **Result[T, Err.ErrorList]** to collect errors</td>
+        <td><a href="arch/results/#validated" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>11. HTTP Support</strong></td>
         <td>Convert Successes / Failures to compatible HTTP codes</td>
         <td><a href="arch/results/#http" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
@@ -536,7 +541,7 @@ Typically, errors fall into various categories, and you may want to use specific
 {{% feature-end mod="arch/results" %}}
 
 ## Outcome {#outcome}
-The **Outcome** is simply a type alias for **Result[T, Err]** and allows you to use Result as **Outcome[T]**. This also comes with a {{% sk-link-code component="result" filepath="results/builders/Outcomes.kt" name="Outcomes" %}} builder to construct Successes / Failures easily.
+The **Outcome** class is simply a type alias for **Result[T, Err]** and allows you to use Result as **Outcome[T]**. This {{% sk-link-code component="result" filepath="results/builders/Outcomes.kt" name="Outcomes" %}} has builder methods to construct Successes / Failures easily.
 {{< highlight kotlin >}}
     import slatekit.results.* 
     import slatekit.results.builders.Outcomes
@@ -554,7 +559,7 @@ The **Outcome** is simply a type alias for **Result[T, Err]** and allows you to 
 {{% feature-end mod="arch/results" %}}
 
 ## Try {#try}
-The **Try** is simply a type alias for **Result[T, Exception]** and allows you to use Result as **Try[T]**. This also comes with a {{% sk-link-code component="result" filepath="results/builders/Tries.kt" name="Tries" %}} builder to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
+The **Try** class is simply a type alias for **Result[T, Exception]** and allows you to use Result as **Try[T]**. This has {{% sk-link-code component="result" filepath="results/builders/Tries.kt" name="Tries" %}} builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
 {{< highlight kotlin >}}
      
     import slatekit.results.* 
@@ -566,6 +571,35 @@ The **Try** is simply a type alias for **Result[T, Exception]** and allows you t
     // DeniedException will checked and converted to Status.Denied
     val converted2:Try<Long> = Tries.attemptWithStatus<Long> {
         throw DeniedException("Token invalid")
+    }
+
+{{< /highlight >}}
+{{% feature-end mod="arch/results" %}}
+
+## Validated {#validated}
+The **Validated** class is simply a type alias for **Result[T, Err.ErrorList]** and allows you to use collect a list of **Err**. 
+{{< highlight kotlin >}}
+     
+    import slatekit.results.* 
+    import slatekit.results.builders.Tries
+    import slatekit.common.validations.Validations
+
+    // Model to validate
+    val user = User(0, "batman_gotham", "batman", "", true, 34)
+    
+    // Validated<User> = Result<User, Err.ErrorList>
+    val validated = Validations.collect<User,String, Err>(user) {
+        listOf(
+                isNotEmpty(user.firstName),
+                isNotEmpty(user.lastName),
+                isEmail(user.email)
+        )
+    }
+
+    // Print first error
+    when(validated) {
+        is Success -> println("User model is valid") 
+        is Failure -> println("User model failed with : " + validated.error.errors.first().msg)
     }
 
 {{< /highlight >}}
@@ -610,6 +644,7 @@ Status codes not only serve to logically categories successes/failures but becom
                         { name:"Builders" , anchor: "#builders"  },
                         { name:"Outcome" , anchor: "#outcome"  },
                         { name:"Try" , anchor: "#try"  },
+                        { name:"Validated" , anchor: "#validated"  },
                         { name:"Http" , anchor: "#http"  }
                     ]
                 }
