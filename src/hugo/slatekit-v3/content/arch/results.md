@@ -16,19 +16,23 @@ section_header: Results
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong>1. Accuracy</strong> </td>
+        <td><strong>1. Safety</strong> </td>
+        <td>Safely accessing values via explict checks for success/failure</td>
+    </tr>
+    <tr>
+        <td><strong>2. Accuracy</strong> </td>
         <td>Accurate modeling of success/failures </td>                     
     </tr>
     <tr>
-        <td><strong>2. Flexible error</strong> </td>
+        <td><strong>3. Flexible error</strong> </td>
         <td>Error type on the Failure branch can be anything, Exception, Err, String. </td>                     
     </tr>
     <tr>
-        <td><strong>3. Status Codes</strong></td>
+        <td><strong>4. Status Codes</strong></td>
         <td>Logical groups of status codes to categories errors, which can be converted to Http</td>
     </tr>
     <tr>
-        <td><strong>4. Sensible defaults</strong></td>
+        <td><strong>5. Sensible defaults</strong></td>
         <td>Default Error types, and builders are provided to reduce custom errors / boiler-plate</td>
     </tr>
 </table>
@@ -129,7 +133,7 @@ Refer to the {{% sk-link-code component="examples" filepath="examples/Example_Re
     import slatekit.results.*
 
     // Create success explicitly
-    val start:Result<Int,Err> = Success(10 )
+    val start: Result<Int, Err> = Success(10)
 
     // Properties
     println(start.success)     // true
@@ -138,28 +142,28 @@ Refer to the {{% sk-link-code component="examples" filepath="examples/Example_Re
 
     // Safely operate on values with map/flatMap
     val addResult = start.map { it + 1 }
-    val subResult = start.flatMap { Success(it - 1 ) }
+    val subResult = start.flatMap { Success(it - 1) }
 
     // Check values
-    println( addResult.contains(11) )
-    println( addResult.exists{ it == 11 } )
+    println(addResult.contains(11))
+    println(addResult.exists { it == 11 })
 
     // Get values
-    println( addResult.getOrNull() )
-    println( addResult.getOrElse { 0 })
+    println(addResult.getOrNull())
+    println(addResult.getOrElse { 0 })
 
     // On conditions
     subResult.onSuccess { println(it) } // 9
     subResult.onFailure { println(it) } // N/A
 
     // Pattern match on branches ( Success / Failure )
-    when(addResult) {
+    when (addResult) {
         is Success -> println("Value is : ${addResult.value}") // 11
         is Failure -> println("Error is : ${addResult.error}") // N/A
     }
 
     // Pattern match on status
-    when(addResult.status) {
+    when (addResult.status) {
         is Status.Succeeded  -> println(addResult.msg)
         is Status.Pending    -> println(addResult.msg)
         is Status.Denied     -> println(addResult.msg)
@@ -369,13 +373,13 @@ There are 3 ways to check / pattern match the result type and its actual branch/
     // Check if the value matches the one provided
     result.contains(2)        // false
 
-    // Pattern match scenario 1: "Top-Level" on Success/Failure (Binary true / false )
+    // Pattern match 1: "Top-Level" on Success/Failure (Binary true / false )
     when(result) {
         is Success -> println(result.value)  // 42
         is Failure -> println(result.error)  // Err
     }
 
-    // Pattern match scenario 2: "Mid-level" on Status ( 7 logical groups )
+    // Pattern match 2: "Mid-level" on Status ( 7 logical groups )
     // NOTE: The status property is available on both the Success/Failure branches
     when(result.status) {
         is Status.Succeeded  -> println(result.msg) // Success!
@@ -387,15 +391,15 @@ There are 3 ways to check / pattern match the result type and its actual branch/
         is Status.Unexpected -> println(result.msg) // Unexpected errors
     }
 
-    // Pattern match scenario 3: "Low-Level" on numeric code
+    // Pattern match 3: "Low-Level" on numeric code
     when(result.status.code) {
-        Codes.SUCCESS.code    -> "OK"
-        Codes.QUEUED.code     -> "Pending"
-        Codes.UPDATED.code    -> "User updated"
-        Codes.DENIED.code     -> "Log in again"
-        Codes.DEPRECATED.code -> "No longer supported"
-        Codes.CONFLICT.code   -> "Email already exists"
-        else                  -> "Other!!"
+        Codes.SUCCESS.code    -> println("OK")
+        Codes.QUEUED.code     -> println("Pending")
+        Codes.UPDATED.code    -> println("User updated")
+        Codes.DENIED.code     -> println("Log in again")
+        Codes.DEPRECATED.code -> println("No longer supported")
+        Codes.CONFLICT.code   -> println("Email already exists")
+        else                  -> println("Other!!")
     }
      
 {{< /highlight >}}
@@ -408,29 +412,29 @@ Unlike Kotlin / Swift Result error types, the {{% sk-link-code component="result
     import slatekit.results.Err
     import slatekit.results.ErrorList
 
-    // Build Err using convenience methods
-    // Simple string
+    // Build Err from various sources using convenience methods
+    // From simple string
     val err1 = Err.of("Invalid email")
 
-    // Exception
+    // From Exception
     val err2 = Err.ex(Exception("Invalid email"))
 
-    // Field: name / value
+    // From field name / value
     val err3 = Err.on("email", "abc123@", "Invalid email")
 
-    // String message from status code
+    // From status code
     val err4 = Err.code(Codes.INVALID)
 
-    // List of error strings
+    // From list of error strings
     val err5 = Err.list(listOf(
-        "username must be at least 8 chars", 
-        "username must have 1 UPPERCASE letter"), 
-    "Username is invalid")
+            "username must be at least 8 chars",
+            "username must have 1 UPPERCASE letter"),
+            "Username is invalid")
 
-    // List of Err types
-    val err6 = ErrorList(listOf(
-            Err.of("email", "abc123 is not a valid email", "Invalid email"),
-            Err.of("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
+    // From list of Err types
+    val err6 = Err.ErrorList(listOf(
+            Err.on("email", "abc123 is not a valid email", "Invalid email"),
+            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
     ), "Please correct the errors")
 
     // Create the Failure branch from the errors
@@ -488,18 +492,18 @@ There are a few type {{% sk-link-code component="result" filepath="results/Alias
     import slatekit.results.builders.Tries
     
     // Try<T> = Result<T, Exception>
-    val res1 = Tries.attempt { "1".toInt() }
+    val res1 = Tries.of { "1".toInt() }
 
     // Outcome<T> = Result<T, Err>
     val res2 = Outcomes.of { "1".toInt() }
 
     // Notice<T> = Result<T, String>
-    val res3 = Notices.notice { "1".toInt() }
+    val res3 = Notices.of { "1".toInt() }
 
     // Validated<T> = Result<T, ErrorList>
-    val res4:Validated<String> = Failure(ErrorList(listOf(
-            Err.of("email", "abc123 is not a valid email", "Invalid email"),
-            Err.of("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
+    val res4:Validated<String> = Failure(Err.ErrorList(listOf(
+            Err.on("email", "abc123 is not a valid email", "Invalid email"),
+            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
     ), "Please correct the errors"))
       
 {{< /highlight >}}
