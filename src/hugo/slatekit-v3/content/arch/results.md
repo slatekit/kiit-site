@@ -5,11 +5,17 @@ section_header: Results
 ---
 
 # Overview
-**Result** is a foundational component in Slate Kit for **accurately modeling successes and failures** using a functional approach to error handling. Result is **not a new concept** as it currently exists in various forms in other languages ( see below). In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes ( See below ). The implementation here differs mainly with the design/goals listed below.
+**Result** is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. 
+Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
+In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.
+With result you can safely access the value of a successful or failed operation, accurately represent failures 
+from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
+The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.
+
 {{% break %}}
 
-# Goals 
-
+# Goals
+The biggest differences between **Slate Kit Result** and other implementations are items 3, 4, 5 below.
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
@@ -50,19 +56,19 @@ section_header: Results
         <td><strong>1</strong></td>
         <td><strong>Kotlin</td>
         <td><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a></td>
-        <td>Error type is Exception and currently for internal use</td>
+        <td>The Kotlin Result Error type is Exception and currently for internal use</td>
     </tr>
     <tr>
         <td><strong>2</strong></td>
         <td><strong>Swift</td>
         <td><a href="https://developer.apple.com/documentation/swift/result">Result</a></td>
-        <td>Very similar conceptually</td>
+        <td>Very similar to Kotlin</td>
     </tr>
     <tr>
         <td><strong>3</strong></td>
         <td><strong>Rust</td>
         <td><a href="https://doc.rust-lang.org/std/result/">Result</a></td>
-        <td>Branches are Ok / Err rather than Success / Failure</td>
+        <td>The Rust result branches are Ok / Err rather than Success / Failure.</td>
     </tr>
     <tr>
         <td><strong>4</strong></td>
