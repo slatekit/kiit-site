@@ -132,8 +132,9 @@ This component has **0 dependencies** and does **NOT** use any other Slate Kit c
 {{% section-end mod="arch/results" %}}
 
 # Example {#example}
-Here are some examples showing the usage of Result by creating, checking, and pattern matching the values.
-Refer to the {{% sk-link-code component="examples" filepath="examples/Example_Results.kt" name="Example_Result.kt" %}} 
+Short example take from {{% sk-link-code component="examples" filepath="examples/Example_Results.kt" name="Example_Result.kt" %}},
+showing the usage of Result by creating, checking, and pattern matching the values.
+
 {{< highlight kotlin >}}
        
     import slatekit.results.*
@@ -279,20 +280,44 @@ These are the main concepts / terms to know for using this component. All of the
 {{% section-end mod="arch/results" %}}
 
 ## Result {#result}
-Place holder
+{{% sk-link-code component="result" filepath="results/Result.kt" name="Result" %}} is the main component base class with only 2 implementations
+**Success** and **Failure**. **Success** stores the successful value of an operation, and **Failure** stores the error of an operation. 
+Result has 2 type parameters **T** and **E**. <br/>
+**T** is used to represent the type of value ( Int, User, etc ) that the Success branch will store on the successful result of an operation.<br/>
+**E** is used to represent the type of error ( String, Exception, etc ) that the Failure branch will store on the failed result of an operation.<br/> 
+The branches are also sensiblly defaulted with **Status** codes to make them optional.
 {{< highlight kotlin >}}
     
-    place holder
+    import slatekit.results.*
+
+    // Result base class
+    sealed class Result<out T, out E> {
+        // implementation
+    }
+
+    // Success branch ( type T to store value of successful operation )
+    data class Success<out T>(val value: T, override val status: Status = Codes.SUCCESS) 
+        : Result<T, Nothing>() {
+        // implementation
+    }
+
+    // Failure branch ( type E to store error of failed operation )
+    data class Failure<out E>(val error: E, override val status: Status = Codes.ERRORED) 
+        : Result<Nothing, E>() {
+        // implementation
+    }
      
 {{< /highlight >}}
 {{% feature-end mod="arch/results" %}}
 
 ## Status {#status}
-The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} Code component on the Result type. The status is applicable for both the Success / Failure branch. There are also default codes for most common errors. {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}. The Status Codes provide a few main benefits:
+The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} Code component on the Result type. <br/> 
+The status is applicable for both the Success / Failure branch and is made of a Integer code and String message. 
+Default {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}} are provided for convenience. The Status Codes provide a few main benefits:
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>1. Categorization</strong></td>
-        <td>Categorize errors into logical groups.</td>
+        <td>Categorize result into logical groups.</td>
         <td>E.g. Succeeded, Invalid, Denied, etc.</td>
     </tr>
     <tr>
@@ -302,7 +327,7 @@ The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-l
     </tr>
     <tr>
         <td><strong>3. Conversion</strong></td>
-        <td>Provides a reasonable way to conver to HTTP codes</td>
+        <td>Provides a reasonable way to convert the status to HTTP codes</td>
         <td>E.g. Succeeded -> HTTP 200 range</td>
     </tr>
 </table>
@@ -328,59 +353,89 @@ The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-l
 
 {{% feature-end mod="arch/results" %}}
 
-## Builders {#aliases}
-Typically, errors fall into various categories, and you may want to use specific messages, or other data to build up the errors. In order to facilitate these there are {{% sk-link-code component="result" filepath="results/builders/Builder.kt" name="Builders" %}} available for convenience to construct appropriate error types.
+## Aliases {#aliases}
+The Result type has 2 type parameters (**T for value and E for error**), but often its more convenient to work 
+with known error types and also to avoid having to constantly specify the error type **E**. This is where Kotlins typealias come in handy.
+There are a few type {{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}} for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types.
 {{< highlight kotlin >}}
-
-    ...
-    fun <T> denied(): Result<T, E> = Failure(errorFromStr(null, Codes.DENIED), Codes.DENIED)
-    fun <T> denied(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.DENIED), Codes.DENIED)
-    fun <T> denied(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.DENIED), Codes.DENIED)
-    fun <T> denied(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.DENIED), Codes.DENIED)
-
-    fun <T> ignored(): Result<T, E> = Failure(errorFromStr(null, Codes.IGNORED), Codes.IGNORED)
-    fun <T> ignored(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.IGNORED), Codes.IGNORED)
-    fun <T> ignored(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.IGNORED), Codes.IGNORED)
-    fun <T> ignored(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.IGNORED), Codes.IGNORED)
-
-    fun <T> invalid(): Result<T, E> = Failure(errorFromStr(null, Codes.INVALID), Codes.INVALID)
-    fun <T> invalid(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.INVALID), Codes.INVALID)
-    fun <T> invalid(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.INVALID), Codes.INVALID)
-    fun <T> invalid(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.INVALID), Codes.INVALID)
-
-    ...
+    import slatekit.results.* 
+    
+    // Aliases simplify Result from 2 type parameters down to 1.
+    typealias Try<T>       = Result<T, Exception>
+    typealias Notice<T>    = Result<T, String>
+    typealias Outcome<T>   = Result<T, Err>
+    typealias Validated<T> = Result<T, Err.ErrorList>
+    
+    // You can now pass around the types more simply
+    val result:Try<Int> = Success( "1".toInt() )
+    println(result)
 
 {{< /highlight >}}
 {{% feature-end mod="arch/results" %}}
 
-## Aliases {#aliases}
-There are a few type {{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}}  for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types.
+
+## Builders {#builders}
+Building up Results / Successes / Failures can become a bit tedious, especially with the combination of logical Status groups and error types ( Strings, Exception, etc ).
+The {{% sk-link-code component="result" filepath="results/builders/Builder.kt" name="Builders" %}} interface is available for convenience to simplify the construction of appropriate error types.
+There are builders {{% sk-link-code component="result" filepath="results/builders/Tries.kt" name="Tries" %}},
+{{% sk-link-code component="result" filepath="results/builders/Notices.kt" name="Notices" %}},
+{{% sk-link-code component="result" filepath="results/builders/Outcomes.kt" name="Outcomes" %}} for the corresponding Aliases **Try, Notice, Outcome**.
 {{< highlight kotlin >}}
-    import slatekit.results.* 
-    import slatekit.results.builders.Outcomes
-    import slatekit.results.builders.Tries
     
+    // Builder interface can build Result<T, E> from strings, exception, err
+    interface Builder<out E> {
+        fun <T> invalid(): Result<T, E> = Failure(errorFromStr(null, Codes.INVALID), Codes.INVALID)
+        fun <T> invalid(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.INVALID), Codes.INVALID)
+        fun <T> invalid(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.INVALID), Codes.INVALID)
+        fun <T> invalid(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.INVALID), Codes.INVALID)
+        
+        // misc code
+
+    }
+    // Misc builders ( See links / code )
+    interface TryBuilder : Builder<Exception> { /* .. */ }
+    object Tries : TryBuilder { /* ... */ }
+
+    interface NoticeBuilder : Builder<String> { /* .. */ }
+    object Notice : NoticeBuilder { /* ... */ }
+
+    interface OutcomeBuilder : Builder<Err> { /* .. */ }
+    object Outcome : OutcomeBuilder { /* ... */ }
+
+{{< /highlight >}}
+
+With the builders and aliases in place, we can uses the **Tries, Notices or Outcomes** to easily construct accurate results
+{{< highlight kotlin >}}
+
+    import slatkeit.results.builders.*
+
+    // Build results ( imagine this is some user registration flow )
     // Try<T> = Result<T, Exception>
-    val res1 = Tries.of { "1".toInt() }
+    val tried1 = Tries.success( User() )
+    val tried2 = Tries.denied<User>("Phone exists")
+    val tried3 = Tries.invalid<User>("Email required")
 
     // Outcome<T> = Result<T, Err>
-    val res2 = Outcomes.of { "1".toInt() }
+    val outcome1 = Outcomes.success( User() )
+    val outcome2 = Outcomes.denied<User>("Phone exists")
+    val outcome3 = Outcomes.invalid<User>("Email required" )
 
     // Notice<T> = Result<T, String>
-    val res3 = Notices.of { "1".toInt() }
+    val notice1 = Notices.success( User() )
+    val notice2 = Notices.denied<User>("Phone exists")
+    val notice3 = Notices.invalid<User>("Email required" )
 
-    // Validated<T> = Result<T, ErrorList>
-    val res4:Validated<String> = Failure(Err.ErrorList(listOf(
-            Err.on("email", "abc123 is not a valid email", "Invalid email"),
-            Err.on("phone", "123-456-789 is not a valid U.S. phone", "Invalid phone")
-    ), "Please correct the errors"))
-      
 {{< /highlight >}}
 {{% feature-end mod="arch/results" %}}
 
 
 ## Errors {#errors}
-Unlike Kotlin / Swift Result error types, the {{% sk-link-code component="result" filepath="results/Err.kt" name="Err" %}}  type on the Failure branch can be anything. It is not defaulted to **Exception**. In this way, this is conceptually similar to an Scala / Haskell Either. 
+The error type **E** on Result and its Failure branch can be anything, unlike other implementations which default **E** to **Exception**. 
+While you can use **String, or Exception** as the error type, Slate Kit offers {{% sk-link-code component="result" filepath="results/Err.kt" name="Err" %}} as a custom error type.
+This provides convenient ways to build errors from a string, exception, based on an invalid field or from a list of errors.
+This is much more comprehensive than using a simple **String** as an error type and more aligned with functional programming by
+avoiding throwing of **Exceptions** where applicable.
+
 {{< highlight kotlin >}}
     
     import slatekit.results.Err
@@ -420,11 +475,50 @@ Unlike Kotlin / Swift Result error types, the {{% sk-link-code component="result
 
 
 ## Conversions {#conversions}
-Place holder
+Results can be gracefully converted to other representations since there are 3 levels of detail:<br/>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Detail</strong></td>
+        <td><strong># Values</strong></td>
+        <td><strong>Type(s)</strong></td>
+        <td><strong>Conversion</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Top Level</strong></td>
+        <td>2 : pass / fail </td>
+        <td>**Success / Failure**</td>
+        <td>True / False </td>
+    </tr>
+    <tr>
+        <td><strong>Mid Level</strong></td>
+        <td>7 : logical categories of Status</td>
+        <td>**Status sub-classes**</td>
+        <td>Succeeded, Pending, Denied, Ignored, etc</td>
+    </tr>
+    <tr>
+        <td><strong>Low Level</strong></td>
+        <td>N: Based on # of statuses you use</td>
+        <td>**Status.code**</td>
+        <td>200001, 400001, 500001, etc</td>
+    </tr>
+</table>
 {{< highlight kotlin >}}
     
-    place holder
-     
+    // Suppose this an API endpoint to register a user
+
+    // Simulate registration through a service layer
+    val result:Outcome<User> = service.registerUser(user)
+
+    // Convert the result back to HTTP somehow
+    // NOTE: This is a simple conversion, see docs below
+    when (result.status) {
+        is Status.Succeeded  -> Http.Code200
+        is Status.Invalid    -> Http.Code400
+        is Status.Denied     -> Http.Code401
+        is Status.Errored    -> Http.Code400
+        else                 -> Http.Code500
+    } 
+
 {{< /highlight >}}
 
 {{% feature-end mod="arch/results" %}}
@@ -617,10 +711,10 @@ The **Try** class is simply a type alias for **Result[T, Exception]** and allows
     import slatekit.results.builders.Tries
 
     // Try<Long> = Result<Long, Exception>
-    val converted1:Try<Long> = Tries.attempt { "1".toLong() }
+    val converted1:Try<Long> = Tries.of { "1".toLong() }
 
     // DeniedException will checked and converted to Status.Denied
-    val converted2:Try<Long> = Tries.attemptWithStatus<Long> {
+    val converted2:Try<Long> = Tries.of<Long> {
         throw DeniedException("Token invalid")
     }
 
@@ -689,8 +783,8 @@ Status codes not only serve to logically categories successes/failures but becom
                         { name:"Terms" , anchor: "#concepts" },
                         { name:"Result" , anchor: "#result"  },
                         { name:"Status" , anchor: "#status"  },
-                        { name:"Builders" , anchor: "#builders"  },
                         { name:"Aliases" , anchor: "#aliases"  },
+                        { name:"Builders" , anchor: "#builders"  },
                         { name:"Errors" , anchor: "#errors"  },
                         { name:"Conversion" , anchor: "#conversion"  }
                     ]
