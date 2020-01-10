@@ -5,13 +5,92 @@ section_header: Results
 ---
 
 # Overview
-**Result** is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. 
+**Result&lt;T,E&gt;** is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. 
 Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
 In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.
 With result you can safely access the value of a successful or failed operation, accurately represent failures 
 from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
 The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.
 
+<img src="assets/app/media/arch/Result_TE.png" class="rounded mx-auto d-block img-fluid" />
+
+<!--
+<div class="container">
+    <div class="row d-flex ">
+        <div class="col-lg-5">
+            <div class="text">
+                <p>
+                <strong>Result&lt;T,E&gt;</strong> is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. <br/>
+
+Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
+In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.<br/>
+
+With result you can safely access the value of a successful or failed operation, accurately represent failures 
+from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
+The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.
+</p>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="image">
+                <img src="assets/app/media/arch/Result_TE.png" alt="slider" class="img-fluid wow fadeInUp">
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!--
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}}</strong></td>
+        <td><strong>{{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}}</strong></td>
+        <td><strong>{{% sk-link-code component="result" filepath="results/Result.kt" name="Status Subclass" %}}</strong></td>
+        <td><strong>{{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}</strong></td>
+    </tr>
+    <tr>
+        <td><strong>Success&lt;T&gt;</strong></td>
+        <td><strong>Passed</strong></td>
+        <td><strong>Succeeded</strong></td>
+        <td>200001,etc</td>
+    </tr>
+    <tr>
+        <td><strong></strong></td>
+        <td></td>
+        <td><strong>Pending</strong></td>
+        <td>200008,etc</td>
+    </tr>
+    <tr>
+        <td><strong>Failure&lt;E&gt;</strong></td>
+        <td><strong>Failed</strong></td>
+        <td><strong>Denied</strong></td>
+        <td>400004,etc</td>
+    </tr>
+    <tr>
+        <td><strong></strong></td>
+        <td></td>
+        <td><strong>Ignored</strong></td>
+        <td>400001,etc</td>
+    </tr>
+    <tr>
+        <td><strong></strong></td>
+        <td></td>
+        <td><strong>Invalid</strong></td>
+        <td>400002,etc</td>
+    </tr>
+    <tr>
+        <td><strong></strong></td>
+        <td></td>
+        <td><strong>Errored</strong></td>
+        <td>500007,etc</td>
+    </tr>
+    <tr>
+        <td><strong></strong></td>
+        <td></td>
+        <td><strong>Unexpected</strong></td>
+        <td>500008,etc</td>
+    </tr>
+</table>
+-->
 {{% break %}}
 
 # Goals
@@ -169,15 +248,19 @@ showing the usage of Result by creating, checking, and pattern matching the valu
         is Failure -> println("Error is : ${addResult.error}") // N/A
     }
 
-    // Pattern match on status
-    when (addResult.status) {
-        is Status.Succeeded  -> println(addResult.msg)
-        is Status.Pending    -> println(addResult.msg)
-        is Status.Denied     -> println(addResult.msg)
-        is Status.Invalid    -> println(addResult.msg)
-        is Status.Ignored    -> println(addResult.msg)
-        is Status.Errored    -> println(addResult.msg)
-        is Status.Unexpected -> println(addResult.msg)
+    // Pattern match on status: Passed / Failed statuses
+    when(result) {
+        is Success -> when(result.status) {
+            is Passed.Succeeded  -> println(result.msg)
+            is Passed.Pending    -> println(result.msg)
+        }
+        is Failure -> when(result.status) {
+            is Failed.Denied     -> println(result.msg)
+            is Failed.Invalid    -> println(result.msg)
+            is Failed.Ignored    -> println(result.msg)
+            is Failed.Errored    -> println(result.msg)
+            is Failed.Unexpected -> println(result.msg)
+        }
     }
         
 {{< /highlight >}}
@@ -296,13 +379,13 @@ The branches are also sensiblly defaulted with **Status** codes to make them opt
     }
 
     // Success branch ( type T to store value of successful operation )
-    data class Success<out T>(val value: T, override val status: Status = Codes.SUCCESS) 
+    data class Success<out T>(val value: T, override val status: Passed = Codes.SUCCESS) 
         : Result<T, Nothing>() {
         // implementation
     }
 
     // Failure branch ( type E to store error of failed operation )
-    data class Failure<out E>(val error: E, override val status: Status = Codes.ERRORED) 
+    data class Failure<out E>(val error: E, override val status: Failed = Codes.ERRORED) 
         : Result<Nothing, E>() {
         // implementation
     }
@@ -335,17 +418,22 @@ Default {{% sk-link-code component="result" filepath="results/Codes.kt" name="Co
 
     package slatekit.results
 
-    sealed class Status {
+    interface class Status {
         abstract val code: Int
         abstract val msg: String
-    
-        data class Succeeded(override val code: Int, override val msg: String) : Status()
-        data class Pending  (override val code: Int, override val msg: String) : Status()
-        data class Denied   (override val code: Int, override val msg: String) : Status()
-        data class Ignored  (override val code: Int, override val msg: String) : Status()
-        data class Invalid  (override val code: Int, override val msg: String) : Status()
-        data class Errored  (override val code: Int, override val msg: String) : Status()
-        data class Unexpected(override val code: Int, override val msg: String) : Status()
+    }
+
+    sealed class Passed : Status {
+        data class Succeeded (override val code: Int, override val msg: String) : Passed()
+        data class Pending   (override val code: Int, override val msg: String) : Passed()
+    }
+
+    sealed class Failed : Status {
+        data class Denied    (override val code: Int, override val msg: String) : Failed()
+        data class Ignored   (override val code: Int, override val msg: String) : Failed()
+        data class Invalid   (override val code: Int, override val msg: String) : Failed()
+        data class Errored   (override val code: Int, override val msg: String) : Failed()
+        data class Unexpected(override val code: Int, override val msg: String) : Failed()
     }
 
 {{< /highlight >}}
@@ -386,9 +474,9 @@ There are builders {{% sk-link-code component="result" filepath="results/builder
     interface Builder<out E> {
         fun <T> invalid(): Result<T, E> = Failure(errorFromStr(null, Codes.INVALID), Codes.INVALID)
         fun <T> invalid(msg: String): Result<T, E> = Failure(errorFromStr(msg, Codes.INVALID), Codes.INVALID)
-        fun <T> invalid(ex: Exception): Result<T, E> = Failure(errorFromEx(ex, Codes.INVALID), Codes.INVALID)
-        fun <T> invalid(err: Err): Result<T, E> = Failure(errorFromErr(err, Codes.INVALID), Codes.INVALID)
-        
+        fun <T> invalid(ex: Exception, status: Failed.Invalid? = null): Result<T, E> = Failure(errorFromEx(ex, Codes.INVALID), status ?: Codes.INVALID)
+        fun <T> invalid(err: Err, status:Failed.Invalid? = null): Result<T, E> = Failure(errorFromErr(err, Codes.INVALID), status ?: Codes.INVALID)
+
         // misc code
 
     }
@@ -593,7 +681,7 @@ There various ways to create successes / failures, and these will be similar to 
     val result1f: Result<Int, Err> = Failure(Err.of("Invalid email"))
 
     // Failure created with status codes / messages
-    val result1g = Failure(Err.of("Invalid email"), status = Codes.INVALID)
+    val result1g = Failure(Err.of("Invalid email"), Codes.INVALID)
     val result1h = Failure(Err.of("Invalid email"), msg = "Invalid inputs")
     val result1i = Failure(Err.of("Invalid email"), msg = "Invalid inputs", code = Codes.INVALID.code)
      
@@ -662,13 +750,13 @@ There are 3 ways to check / pattern match the result type and its actual branch/
     // Pattern match 2: "Mid-level" on Status ( 7 logical groups )
     // NOTE: The status property is available on both the Success/Failure branches
     when(result.status) {
-        is Status.Succeeded  -> println(result.msg) // Success!
-        is Status.Pending    -> println(result.msg) // Success, but in progress
-        is Status.Denied     -> println(result.msg) // Security related 
-        is Status.Invalid    -> println(result.msg) // Bad inputs / data
-        is Status.Ignored    -> println(result.msg) // Ignored for processing
-        is Status.Errored    -> println(result.msg) // Expected errors
-        is Status.Unexpected -> println(result.msg) // Unexpected errors
+        is Passed.Succeeded  -> println(result.msg) // Success!
+        is Passed.Pending    -> println(result.msg) // Success, but in progress
+        is Failed.Denied     -> println(result.msg) // Security related 
+        is Failed.Invalid    -> println(result.msg) // Bad inputs / data
+        is Failed.Ignored    -> println(result.msg) // Ignored for processing
+        is Failed.Errored    -> println(result.msg) // Expected errors
+        is Failed.Unexpected -> println(result.msg) // Unexpected errors
     }
 
     // Pattern match 3: "Low-Level" on numeric code
