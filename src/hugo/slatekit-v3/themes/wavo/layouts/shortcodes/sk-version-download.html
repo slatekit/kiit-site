@@ -1,0 +1,14 @@
+
+<span class="badge badge-light">{{.Get "target" }}</span>
+<br/>
+
+<a href="https://bintray.com/codehelixinc/slatekit/slatekit-{{.Get "page" }}">
+<img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-{{.Get "page" }}/images/download.svg" />
+</a>
+<br/>
+
+{{ if (isset .Params "status") }}
+    <span class="badge badge-success">{{.Get "status" }}</span>
+{{ else }}
+    <span class="badge badge-light">Beta</span>
+{{ end }}

@@ -284,9 +284,9 @@ showing the usage of Result by creating, checking, and pattern matching the valu
         <td><a href="arch/results/#result" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-        <td><strong>3. Status</strong></td>
+        <td><strong>3. Statuses</strong></td>
         <td>Status codes and logical grouping of states</td>
-        <td><a href="arch/results/#status" class="more"><span class="btn btn-primary">more</span></a></td>
+        <td><a href="arch/results/#statuses" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>4. Builders</strong> </td>
@@ -393,7 +393,7 @@ The branches are also sensiblly defaulted with **Status** codes to make them opt
 {{< /highlight >}}
 {{% feature-end mod="arch/results" %}}
 
-## Status {#status}
+## Statuses {#statuses}
 The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} Code component on the Result type. <br/> 
 The status is applicable for both the Success / Failure branch and is made of a Integer code and String message. 
 Default {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}} are provided for convenience. The Status Codes provide a few main benefits:
@@ -870,7 +870,7 @@ Status codes not only serve to logically categories successes/failures but becom
                     items: [
                         { name:"Terms" , anchor: "#concepts" },
                         { name:"Result" , anchor: "#result"  },
-                        { name:"Status" , anchor: "#status"  },
+                        { name:"Statuses" , anchor: "#statuses"  },
                         { name:"Aliases" , anchor: "#aliases"  },
                         { name:"Builders" , anchor: "#builders"  },
                         { name:"Errors" , anchor: "#errors"  },
