@@ -31,6 +31,8 @@
     
     <link rel="stylesheet" href="assets/theme/css/agency-2.css">
 
+    <link rel="icon" href="assets/app/media/slatekit_logo2.png">
+
 
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
     <link rel="stylesheet" href="assets/app/slatekit.css">
@@ -58,7 +60,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <nav class="navbar navbar-expand-lg navbar-classic">
                             <a class="navbar-brand" href="#0">
-                                <img src="assets/img/saas-1/logo.png" alt=""></a>
+                                <img src="assets/app/media/slatekit_logo2_small.png" alt=""></a>
                             <button
                                 class="navbar-toggler collapsed"
                                 type="button"
@@ -431,7 +433,7 @@ Also refer to the <a href="https://github.com/code-helix/slatekit/blob/master/sr
 <h2 id="args">Args</h2>
 
 <p>Command line arguments are parsed and supplied to your app. You can specify what the arguments are supported by specifying the schema.
-This leverages the <a href="http://www.slatekit.com/utils/args" >Args</a> component.
+This leverages the <a href="/utils/args" >Args</a> component.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">// Example of supplying arguments.
 </span><span class="c1"></span>  <span class="n">myapp</span> <span class="p">-</span><span class="n">env</span><span class="p">=</span><span class="n">dev</span> <span class="p">-</span><span class="n">log</span><span class="p">.</span><span class="n">level</span><span class="p">=</span><span class="n">info</span> <span class="p">-</span><span class="n">region</span><span class="p">=</span><span class="n">ny</span>
     
@@ -458,7 +460,7 @@ This leverages the <a href="http://www.slatekit.com/utils/args" >Args</a> compon
 
 <p>Default environments and configs per environment are setup for applications and associated together.
 Refer to example app and or a generated application for more info.
-This leverages the <a href="http://www.slatekit.com/utils/env" >Envs</a> and <a href="http://www.slatekit.com/utils/config" >Config</a> components
+This leverages the <a href="/utils/env" >Envs</a> and <a href="/utils/config" >Config</a> components
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Env</strong></td>
@@ -514,7 +516,7 @@ This leverages the <a href="http://www.slatekit.com/utils/env" >Envs</a> and <a 
 <h2 id="logs">Logs</h2>
 
 <p>Logback logging is setup for the application in <strong>/resources/logback.xml</strong>
-This leverages the <a href="http://www.slatekit.com/utils/logger" >Logs</a> component.
+This leverages the <a href="/utils/logger" >Logs</a> component.
 <div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span class="nt">&lt;configuration&gt;</span>
     ...
@@ -541,7 +543,7 @@ This leverages the <a href="http://www.slatekit.com/utils/logger" >Logs</a> comp
 
 <p>Configuration settings are supported via normal Java Properties files stored in the <strong>resources</strong> folder.
 Configuration settings existing based on the names of the environments setup ( see above ).
-This leverages the <a href="http://www.slatekit.com/utils/config" >Config</a> component.</p>
+This leverages the <a href="/utils/config" >Config</a> component.</p>
 
 <h4 id="env-conf">env.conf</h4>
 
@@ -569,7 +571,7 @@ You can specify the environment to load by setting <strong>env = name</strong>
 
 <p>The application supports typing  <strong>-version</strong>,  <strong>-about</strong> and <strong>-help</strong> after your apps executable/jar.
 This will display info about the app and usage of command line args.
-This leverages the <a href="http://www.slatekit.com/utils/args" >Args</a> component.
+This leverages the <a href="/utils/args" >Args</a> component.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">myapp -help
 
  <span class="o">==============================================</span>
@@ -679,7 +681,7 @@ You can use these template methods to insert your pre execution, execution, and 
 <h2 id="info">Info</h2>
 
 <p>The component can print diagnostic info during the start and end of your application life-cycle.
-This leverages the all the existing <a href="http://www.slatekit.com/utils/args" >Args</a>, <a href="http://www.slatekit.com/utils/env" >Env</a>, <a href="http://www.slatekit.com/utils/config" >Config</a>
+This leverages the all the existing <a href="/utils/args" >Args</a>, <a href="/utils/env" >Env</a>, <a href="/utils/config" >Config</a>
 components list earlier.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"> Info  : app executing now
  Info  : app completed
@@ -725,7 +727,7 @@ components list earlier.
 
 <h2 id="security">Security</h2>
 
-<p>Sensitive configuration settings can be secured by encrypting the settings, or loading them from environment variables. Check the <a href="http://www.slatekit.com/utils/config" >Config</a> component for more info.</p>
+<p>Sensitive configuration settings can be secured by encrypting the settings, or loading them from environment variables. Check the <a href="/utils/config" >Config</a> component for more info.</p>
 
 
 
@@ -774,11 +776,11 @@ components list earlier.
     
     <section class="links">
         <div class="container text-center">
-            <a href="#0">Twitter</a>
-            <a href="#0">Github</a>
-            <a href="#0">About</a>
-            <a href="#0">Contact</a>
-        </div>
+    <a href="https://twitter.com/slatekit">Twitter</a>
+    <a href="https://github.com/code-helix/slatekit">Github</a>
+    <a href="/info/contact">About</a>
+    <a href="/info/contact">Contact</a>
+</div>
     </section>
     
 

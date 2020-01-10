@@ -10,12 +10,12 @@ Slate Kit offers <strong>several features</strong> as modular <strong>Architectu
 and scalable applications on the JVM. Several of the modules can be used for both **Server and Android**. Click any of the modules below for more info.
 
  <div class="alert alert-info" role="alert">
-**Legend**<br/>
+**BADGES**<br/>
 1. The <span class="badge badge-light">Server</span> badge indicates that the component is meant to be used only on the **Server**.<br/>
 2. The <span class="badge badge-light">Android / Server</span> badge indicates that the component cab be used for both **Android** and **Server**.<br/>
-3. The <span class="badge badge-success">Stable</span> badge indicates the module is **stable** as a 1.x release <br/>
-4. The <span class="badge badge-light">Beta</span> is in still in **Beta**, but soon to launch a stable 1.x release in Jan 2020.<br/>
-5. The <img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /> badge is a download link to **Bintray** for the set up instructions on installing the package <br/>
+3. The <span class="badge badge-success">Stable</span> badge indicates the module is **stable** and available as a **1.x** release <br/>
+4. The <span class="badge badge-light">Beta</span> indicates a module still in **Beta**, but soon to launch a stable 1.x release in **Jan 2020**.<br/>
+5. The <img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /> badge is a download link to **Bintray** for the **gradle/maven** instructions on installing the package <br/>
 
 </a>
 </div>
@@ -183,11 +183,20 @@ and scalable applications on the JVM. Several of the modules can be used for bot
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="arch/tracking"><img src="assets/media/img/white/diagnostic.png" style="width:60px;" alt="" class="img-fluid"></a>
+              <a href="arch/tracking"><img src="assets/media/img/white/diagnostic.png" alt="" class="img-fluid"></a>
               <div><a href="arch/tracking"><h3>Tracking</h3></a></div>
               <p>Support for diagnostics and tracking of runtime values and recording of events. This supplements typical metrics libraries. See {{% sk-link-arch page="tracking" name="Tracking" %}} 
               </p>
               {{% sk-version-download page="tracking" target="Android / Server" %}}
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp">
+            <div class="box text-center">
+              <a href="utils/overview"><img src="assets/media/img/white/multitool.png" alt="" class="img-fluid"></a>
+              <div><a href="utils/overview"><h3>Utilities</h3></a></div>
+              <p>A large suite of common code / utilities to supplement the Standard Library with items like Args, Envs, Configs etc. {{% sk-link-util page="overview" name="Utilities" %}} 
+              </p>
+              {{% sk-version-download page="common" target="Android / Server" %}}
             </div>
           </div>
       </div>
