@@ -5,7 +5,7 @@ section_header: Results
 ---
 
 # Overview
-**Result&lt;T,E&gt;** is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. 
+**{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}}** is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. 
 Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
 In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.
 With result you can safely access the value of a successful or failed operation, accurately represent failures 
