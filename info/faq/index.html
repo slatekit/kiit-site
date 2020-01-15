@@ -34,11 +34,15 @@
     <link rel="icon" href="assets/app/media/slatekit_logo_v3.png">
 
 
-
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
-    <link rel="stylesheet" href="assets/app/syntax.css">
     <link rel="stylesheet" href="assets/app/slatekit.css">
-    <title>Slate Kit: Utilities</title>
+          
+   
+    
+   
+
+
+    <title>Slate Kit: Info</title>
 </head>
 
 <body>
@@ -155,123 +159,171 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities</h2>
+            <h2>FAQ</h2>
         </div>
     </section>
     
-    <section class="creative">
+    <section class="sk-creative">
       <div class="container">
         
 
-<h1 id="encrypt">Encrypt</h1>
+<h1 id="faq-index">FAQ Index</h1>
 
-<p><table class="table table-striped table-bordered">
-  <tbody>
+<p>More faq topics/sections coming soon.</p>
+
+<p><table class="table table-bordered table-striped">
     <tr>
-      <td><strong>desc</strong></td>
-      <td>Encryption using AES</td>
+        <td><strong>Area</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>More</strong></td>
     </tr>
     <tr>
-      <td><strong>date</strong></td>
-      <td>2019-12-04</td>
+        <td><strong>Setup</strong></td>
+        <td>Trouble with setup</td>
+        <td><a href="/info/faq#setup_trouble" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>version</strong></td>
-      <td>0.9.35</td>
+        <td><strong>-</strong></td>
+        <td>What are the dependencies</td>
+        <td><a href="/info/faq#setup_dependencies" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+        <td><strong>Starting</strong></td>
+        <td>How do I get started?</td>
+        <td><a href="/info/faq#starting_start" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.encrypt</td>
+        <td><strong>-</strong></td>
+        <td>What does the Slate Kit CLI tool do?</td>
+        <td><a href="/info/faq#starting_cli" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>artifact</strong></td>
-      <td>com.slatekit:slatekit-common</td>
+        <td><strong>Modules</strong></td>
+        <td>What are all the modules available</td>
+        <td><a href="/info/faq#modules_list" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/encrypt" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/encrypt</a></td>
+        <td><strong>-</strong></td>
+        <td>Which modules are for server side</td>
+        <td><a href="/info/faq#modules_server" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>example</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Encryptor.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Encryptor.kt</a></td>
+        <td><strong>-</strong></td>
+        <td>Which modules are for android</td>
+        <td><a href="/info/faq#modules_android" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+        <td><strong>-</strong></td>
+        <td>What are the dependencies of each module</td>
+        <td><a href="/info/faq#modules_dependencies" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
-  </tbody>
+    <tr>
+        <td><strong>Help</strong></td>
+        <td>How do I get help?</td>
+        <td><a href="/info/faq#help_overview" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>-</strong></td>
+        <td>How do I submit an idea or issue?</td>
+        <td><a href="/info/faq#help_submit" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
+    <tr>
+        <td><strong>-</strong></td>
+        <td>How do I get updates?</td>
+        <td><a href="/info/faq#help_updates" class="more"><span class="btn btn-primary">more</span></a></td>
+    </tr>
 </table>
 <br/><br/></p>
 
-<h2 id="gradle">Gradle</h2>
+<section class="about">
+  <div class="container">
+      <div class="row ">
+          <div class="text">
+            <h1>Setup</h1><br/>
+            <a id="setup_trouble" />
+            <h3>1. Trouble with setup</h3>
+            <p>
+            Check the <a href="/start/setup">Setup</a> page for details. You can reach us on Git, Gitter for discussions, and Twitter for more info.
+            </p>
+            <a id="setup_dependencies" />
+            <h3>2. What are the dependencies</h3>
+            <p>Dependencies vary by module. Each module has a setup#sources section with a link to the build.gradle containing the list of all dependencies for that module. In general, external dependencies include Logback for logs, Micrometer.io for metrics, json-simple for JSON, ThreeTenBP for Date/Time libraries. This is meant to ensure Slate Kit libraries work for both Server and Android. These dependencies are <strong>ONLY</strong> used if the respective Slate Kit module depends on them.
+            </p>
+          </div>
+      </div>
+  </div>
+</section>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
+<section class="about">
+  <div class="container">
+      <div class="row ">
+          <div class="text">
+            <h1>Starting</h1><br/>
+            <a id="starting_start" />
+            <h3>1. How do I get started?</h3>
+            <p>
+            Check the <a href="/start/hello_world">Hello World</a> page for to get started to create a sample app using the Slate Kit CLI tool.
+            </p>
+            <a id="starting_cli" />
+            <h3>2. What does the Slate Kit CLI tool do?</h3>
+            <p>The Slate Kit CLI tool is a project generator / scaffolding tool to generate project using predefined templates. See <a href="/start/generators">Generator</a> page for more details.
+            </p>
+          </div>
+      </div>
+  </div>
+</section>
 
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/><br/></p>
+<section class="about">
+  <div class="container">
+      <div class="row ">
+          <div class="text">
+            <h1>Modules</h1><br/>
+            <a id="modules_list" />
+            <h3>1. What are the modules available?</h3>
+            <p>All the modules are listed on the <a href="arch/overview">Components</a> page.
+            </p>
+            <a id="modules_server" />
+            <h3>2. What modules are available for server side?</h3>
+            <p>
+            There is a badge called <span class="badge badge-light">Server</span> on the <a href="arch/overview">Components</a> page that indicates that a module is for server side use only.
+            </p>
+            <a id="modules_android" />
+            <h3>3. What modules are available for server side?</h3>
+            <p>
+            There is a badge called <span class="badge badge-light">Android / Server</span> on the <a href="arch/overview">Components</a> page that indicates that a module is for both Android and Server side use only.
+            </p>
+            <a id="modules_dependencies" />
+            <h3>4. What are the dependencies on the modules?</h2>
+            <p>
+            Each module has a setup#sources section with a link to the build.gradle file containing the dependencies on the module. Typically, each Slate Kit module depends on the <a href="arch/results">Results</a> and <a href="utils/overview">Utils</a> modules. 
+            </p>
+          </div>
+      </div>
+  </div>
+</section>
 
-<h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.encrypt.Encryptor</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.B64Java8</span>
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
-<br/><br/></p>
-
-<h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">// SETUP 1: Create your singleton encryptor that can encrypt/decrypt using your custom key/secret.
-</span><span class="c1"></span>  <span class="c1">// and use it as a singleton.
-</span><span class="c1"></span>  <span class="k">object</span> <span class="nc">TestEncryptor</span> <span class="p">:</span> <span class="n">Encryptor</span><span class="p">(</span><span class="s">&#34;wejklhviuxywehjk&#34;</span><span class="p">,</span> <span class="s">&#34;3214maslkdf03292&#34;</span><span class="p">,</span> <span class="n">B64Java8</span><span class="p">)</span>
-
-
-  <span class="c1">// SETUP 2: Create an instance encryptor
-</span><span class="c1"></span>  <span class="k">val</span> <span class="py">encryptor</span> <span class="p">=</span> <span class="n">Encryptor</span><span class="p">(</span><span class="s">&#34;wejklhviuxywehjk&#34;</span><span class="p">,</span> <span class="s">&#34;3214maslkdf03292&#34;</span><span class="p">,</span> <span class="n">B64Java8</span><span class="p">)</span>
-
-  </code></pre></div>
-<br/><br/></p>
-
-<h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// CASE 1: Encrypt using AES ( text is base64 encoded without newlines )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">input</span> <span class="p">=</span> <span class="s">&#34;basMoAKSKDFJrd789&#34;</span>
-    <span class="k">val</span> <span class="py">encrypted</span> <span class="p">=</span> <span class="n">TestEncryptor</span><span class="p">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
-
-
-    <span class="c1">// CASE 2: Decrypt using AES
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">decrypted</span> <span class="p">=</span> <span class="n">TestEncryptor</span><span class="p">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
-
-
-    <span class="c1">// CASE 3: Ensure decrypted matches original
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">input</span> <span class="p">==</span> <span class="n">decrypted</span><span class="p">)</span>
-
-
-    <span class="c1">// CASE 4: Use the EncryptSupportIn trait to have built in encrypt/decrypt methods
-</span><span class="c1"></span>    <span class="c1">// NOTE: You just have to have an _enc member field
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">encryptor</span><span class="p">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">input</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">encryptor</span><span class="p">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span> <span class="p">)</span>
-    </code></pre></div>
-<br/><br/></p>
+<section class="about">
+  <div class="container">
+      <div class="row ">
+          <div class="text">
+            <h1>Help</h1><br/>
+            <a id="help_overview" />
+            <h3>1. How to get help?</h3>
+            <p>
+            Check the <a href="/info/contact">Contact</a> page for details. You can reach us on Git, Gitter for discussions, and Twitter. We will try to get back to you as soon as we can.
+            </p>
+            <a id="help_submit" />
+            <h3>2. How to submit ideas/issues?</h3>
+            <p>Log any issues on <a href="https://github.com/code-helix/slatekit/issues">Git Issues</a>. There are issue templates for bugs/features.
+            </p>
+            <a id="help_updates" />
+            <h3>3. How to get updates?</h3>
+            <p>Follow us on twitter ( link on <a href="/info/contact">Contact</a> page ) and check the <a href="/info/updates">Updates</a> page. 
+            </p>
+          </div>
+      </div>
+  </div>
+</section>
 
       </div>
     </section>  

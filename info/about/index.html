@@ -34,11 +34,15 @@
     <link rel="icon" href="assets/app/media/slatekit_logo_v3.png">
 
 
-
     <link rel="stylesheet" href="assets/theme/css/about-1.css">
-    <link rel="stylesheet" href="assets/app/syntax.css">
     <link rel="stylesheet" href="assets/app/slatekit.css">
-    <title>Slate Kit: Utilities</title>
+          
+   
+    
+   
+
+
+    <title>Slate Kit: Info</title>
 </head>
 
 <body>
@@ -155,122 +159,37 @@
     
     <section class="header wow fadeInUp">
         <div class="container text-center">
-            <h2>Utilities</h2>
+            <h2>About</h2>
         </div>
     </section>
     
-    <section class="creative">
+    <section class="sk-creative">
       <div class="container">
         
 
-<h1 id="encrypt">Encrypt</h1>
+<h1 id="slate-kit">Slate Kit</h1>
 
-<p><table class="table table-striped table-bordered">
-  <tbody>
-    <tr>
-      <td><strong>desc</strong></td>
-      <td>Encryption using AES</td>
-    </tr>
-    <tr>
-      <td><strong>date</strong></td>
-      <td>2019-12-04</td>
-    </tr>
-    <tr>
-      <td><strong>version</strong></td>
-      <td>0.9.35</td>
-    </tr>
-    <tr>
-      <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
-    </tr>
-    <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.encrypt</td>
-    </tr>
-    <tr>
-      <td><strong>artifact</strong></td>
-      <td>com.slatekit:slatekit-common</td>
-    </tr>
-    <tr>
-      <td><strong>source folder</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/encrypt" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/encrypt</a></td>
-    </tr>
-    <tr>
-      <td><strong>example</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Encryptor.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Encryptor.kt</a></td>
-    </tr>
-    <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
-    </tr>
-  </tbody>
-</table>
+<p>The Slate Kit framework was developed by <strong><a href="https://github.com/kishorereddy">Kishore Reddy</a></strong> to assist his team in building scalable JVM based projects for startups during a freelancing / contracting period and also for current work on mobile applications with server backends. It has been in production for a few years and is actively maintained. After years of carefully extracting the framework from internal projects, it is being open-sourced for general pupose use and to further support and streamline our own development efforts by decoupling our framework completely from individual projects.
 <br/><br/></p>
 
-<h2 id="gradle">Gradle</h2>
+<h1 id="code-helix">Code Helix</h1>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p>Slate Kit is a product of <strong><a href="https://codehelix.co">Code Helix</a></strong> which is a small New York City based software services company that has historically specialized in mobile and server development for freelance and contract work for SMBs ( Small and Medium Sized businesses ) and start-ups. Code Helix is made up of a small, passionate group of seasoned professionals in engineering and product development, with the goal of delivering high-quality applications and systems for both internal and/or external, public facing use.
 <br/><br/></p>
 
-<h2 id="import">Import</h2>
+<h1 id="philosophy">Philosophy</h1>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.encrypt.Encryptor</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.B64Java8</span>
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
+<p>We aim to simplify mobile and especially server-side development on the JVM using Kotlin and to make it much easier and accessible to people of all levels of experience. Slate Kit is intentially designed as a very <strong><a href="arch/overview">modular set of simple and light-weight libraries</a></strong> rather than a full-fledged framework. This library based approach allows many modules to be used for both client and server side, reduces coupling between modules, minimizes framework lock-in, and allows you to use as little or as much of Slate Kit as possible. Lastly, Slate Kit offers light abstractions for the most common Cloud based services such as File Storage, Queues, Documents, Email, SMS services so you can potentially switch Cloud providers and services. We currently favor and provide default implementations of these that connect with AWS ( S3, SQS ) and Twilio for SMS, SendGrid for Emails.
 <br/><br/></p>
 
-<h2 id="setup">Setup</h2>
+<h1 id="kotlin">Kotlin</h1>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">// SETUP 1: Create your singleton encryptor that can encrypt/decrypt using your custom key/secret.
-</span><span class="c1"></span>  <span class="c1">// and use it as a singleton.
-</span><span class="c1"></span>  <span class="k">object</span> <span class="nc">TestEncryptor</span> <span class="p">:</span> <span class="n">Encryptor</span><span class="p">(</span><span class="s">&#34;wejklhviuxywehjk&#34;</span><span class="p">,</span> <span class="s">&#34;3214maslkdf03292&#34;</span><span class="p">,</span> <span class="n">B64Java8</span><span class="p">)</span>
-
-
-  <span class="c1">// SETUP 2: Create an instance encryptor
-</span><span class="c1"></span>  <span class="k">val</span> <span class="py">encryptor</span> <span class="p">=</span> <span class="n">Encryptor</span><span class="p">(</span><span class="s">&#34;wejklhviuxywehjk&#34;</span><span class="p">,</span> <span class="s">&#34;3214maslkdf03292&#34;</span><span class="p">,</span> <span class="n">B64Java8</span><span class="p">)</span>
-
-  </code></pre></div>
+<p>We strongly believe that <strong><a href="https://kotlinlang.org/">Kotlin</a></strong> is the perfect language to build scalable applications efficiently with significantly less risk due to its modern set of features, static types, solid interop with existing libraries, and functional programming paradigms. Out of other languages such as Scala, Rust, Go, NodeJS, Ruby, Python for server development, Kotlin strikes the right balance with its combination of simplicity, features, type-safety, conciseness, access to existing JVM ecosystem, and has enormous potential for developing multi-platform apps within and outside of the JVM. Slate Kit modules are built with an emphasis on simplicity, immutability, and functional programming. However, we do not believe in a dogmatic approach to FP(functional programming), and carefully choose all the features of Kotlin to incorporate for the purpose of keeping things simple, pragmatic and easy for anyone to maintain code.
 <br/><br/></p>
 
-<h2 id="usage">Usage</h2>
+<h1 id="contact">Contact</h1>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// CASE 1: Encrypt using AES ( text is base64 encoded without newlines )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">input</span> <span class="p">=</span> <span class="s">&#34;basMoAKSKDFJrd789&#34;</span>
-    <span class="k">val</span> <span class="py">encrypted</span> <span class="p">=</span> <span class="n">TestEncryptor</span><span class="p">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
-
-
-    <span class="c1">// CASE 2: Decrypt using AES
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">decrypted</span> <span class="p">=</span> <span class="n">TestEncryptor</span><span class="p">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
-
-
-    <span class="c1">// CASE 3: Ensure decrypted matches original
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">input</span> <span class="p">==</span> <span class="n">decrypted</span><span class="p">)</span>
-
-
-    <span class="c1">// CASE 4: Use the EncryptSupportIn trait to have built in encrypt/decrypt methods
-</span><span class="c1"></span>    <span class="c1">// NOTE: You just have to have an _enc member field
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">encryptor</span><span class="p">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">input</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">encryptor</span><span class="p">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span> <span class="p">)</span>
-    </code></pre></div>
+<p>Get in touch with us using our various channels listed on the <a href="/info/contact">Contact</a> page.
 <br/><br/></p>
 
       </div>

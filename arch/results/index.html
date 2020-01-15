@@ -60,7 +60,7 @@
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <nav class="navbar navbar-expand-lg navbar-classic">
                             <a class="navbar-brand" href="#0">
-    <img src="assets/app/media/slatekit_logo_v3.png" width="50%" alt="" />
+    <img src="assets/app/media/slatekit_logo_v3.png" width="40%" alt="" />
 </a>
                             <button
                                 class="navbar-toggler collapsed"
@@ -137,8 +137,11 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
             <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
-            <li><a class="dropdown-item" href="info/standards">Standards</a></li>
+            <li><a class="dropdown-item" href="info/about">About</a></li>
             <li><a class="dropdown-item" href="info/contact">Contact</a></li>
+            <li><a class="dropdown-item" href="info/faq">FAQ</a></li>
+            <li><a class="dropdown-item" href="info/standards">Standards</a></li>
+            
         </ul>
     </li>
     <li class="nav-item">
@@ -160,7 +163,7 @@
     
       <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-2 d-none d-sm-block">
+            <div class="col-sm-2 d-none d-lg-block">
                 <div id="sidebar-wrapper">
    <div class="sidebar-header">
       <a class="brand" href="/">
@@ -380,50 +383,49 @@ The Result component removes much of the boiler plate code that you would create
 </span><span class="c1"></span>
         <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-result:1.0.0&#39;</span>
     <span class="o">}</span></code></pre></div>
+<br/>
+
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+
+<h1 id="sources">Sources</h1>
+
 
 <table class="table table-bordered table-striped">
   <tr>
-    <td><strong>package</strong></td>
-    <td>slatekit.results</td>
-  </tr>
-  <tr>
-    <td><strong>jar</strong></td>
+    <td><strong>Jar</strong></td>
     <td>slatekit.result.jar</td>
   </tr>
   <tr>
-    <td><strong>source</strong></td>
-    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results">slatekit/src/lib/kotlin/slatekit-result</a></td>
+    <td><strong>Package</strong></td>
+    <td>slatekit.results</td>
   </tr>
   <tr>
-      <td><strong>example</strong></td>
+    <td><strong>Sources</strong></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result">slatekit-result</a></td>
+  </tr>
+  <tr>
+      <td><strong>Example</strong></td>
       <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Results.kt">Example_Results.kt</a></td>
   </tr>
-  
   <tr>
-    <td><strong>version</strong></td>
+    <td><strong>Version</strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /></td>
   </tr>
   <tr>
-    <td><strong>license</strong></td>
+    <td><strong>License</strong></td>
     <td><img src="https://img.shields.io/badge/license-Apache2-green.svg?style=flat" /></td>
   </tr>
   <tr>
-    <td><strong>requires</strong></td>
-    <td>n/a</td>
+    <td><strong>Requires</strong></td>
+    <td>See <a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
+
 <br/>
 
 <a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
-
-<h1 id="requires">Requires</h1>
-
-<p>This component has <strong>0 dependencies</strong> and does <strong>NOT</strong> use any other Slate Kit components.
-<br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
+<br/><br/><br/><br/>
 
 <h1 id="example">Example</h1>
 
@@ -434,47 +436,47 @@ showing the usage of Result by creating, checking, and pattern matching the valu
     <span class="k">import</span> <span class="nn">slatekit.results.*</span>
 
     <span class="c1">// Create success explicitly
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">start</span><span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">start</span><span class="p">:</span> <span class="n">Outcome</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
 
     <span class="c1">// Properties
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">success</span><span class="p">)</span>     <span class="c1">// true
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">code</span><span class="p">)</span> <span class="c1">// Codes.SUCCESS.code
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>  <span class="c1">// Codes.SUCCESS.msg
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;success:     &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">success</span><span class="p">)</span>         <span class="c1">// true
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;status.code: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">code</span><span class="p">)</span> <span class="c1">// Codes.SUCCESS.code
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;status.code: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>  <span class="c1">// Codes.SUCCESS.msg
 </span><span class="c1"></span>
     <span class="c1">// Safely operate on values with map/flatMap
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">addResult</span> <span class="p">=</span> <span class="n">start</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
     <span class="k">val</span> <span class="py">subResult</span> <span class="p">=</span> <span class="n">start</span><span class="p">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">Success</span><span class="p">(</span><span class="n">it</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">}</span>
 
     <span class="c1">// Check values
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">addResult</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="m">11</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">addResult</span><span class="p">.</span><span class="n">exists</span> <span class="p">{</span> <span class="n">it</span> <span class="p">==</span> <span class="m">11</span> <span class="p">})</span>
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;contains:  &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="m">11</span><span class="p">))</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&#34;exists  :  &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">exists</span> <span class="p">{</span> <span class="n">it</span> <span class="p">==</span> <span class="m">11</span> <span class="p">})</span>
 
     <span class="c1">// Get values
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">addResult</span><span class="p">.</span><span class="n">getOrNull</span><span class="p">())</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">addResult</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="m">0</span> <span class="p">})</span>
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;getOrNull: &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">getOrNull</span><span class="p">())</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&#34;getOrElse: &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="m">0</span> <span class="p">})</span>
 
     <span class="c1">// On conditions
-</span><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// 9
-</span><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="n">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// N/A
+</span><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;onSuccess: &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// 9
+</span><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;onFailure: &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// N/A
 </span><span class="c1"></span>
     <span class="c1">// Pattern match on branches ( Success / Failure )
 </span><span class="c1"></span>    <span class="k">when</span> <span class="p">(</span><span class="n">addResult</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Value is : ${addResult.value}&#34;</span><span class="p">)</span> <span class="c1">// 11
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Error is : ${addResult.error}&#34;</span><span class="p">)</span> <span class="c1">// N/A
+        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;value: ${addResult.value}&#34;</span><span class="p">)</span> <span class="c1">// 11
+</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;error: ${addResult.error}&#34;</span><span class="p">)</span> <span class="c1">// N/A
 </span><span class="c1"></span>    <span class="p">}</span>
 
     <span class="c1">// Pattern match on status: Passed / Failed statuses
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Pending</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Succeeded: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Pending</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Pending  : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
         <span class="p">}</span>
-        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Denied</span>     <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Invalid</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Ignored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Errored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Unexpected</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Denied</span>     <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Denied    : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Invalid</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Invalid   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Ignored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Ignored   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Errored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Errored   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Unexpected</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Unexpected: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
         </code></pre></div>
