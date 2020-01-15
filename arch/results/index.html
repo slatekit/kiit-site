@@ -192,99 +192,15 @@
 
 <h1 id="overview">Overview</h1>
 
-<p><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a fundamental component of Slate Kit and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling.
-Result is <strong>not a new concept</strong> as it currently exists in various forms in other languages (see below).
-In fact, the Result type in Slate Kit has been inspired by these and also by Google&rsquo;s GRPC codes.
-With result you can safely access the value of a successful or failed operation, accurately represent failures
-from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
-The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.</p>
+<p><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a core component of Slate Kit and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling. Result is <strong>NOT a new concept</strong>, as it currently exists in various forms in other languages (see below), however <strong>Slate Kit Result differs</strong> significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:</p>
 
 <p><img src="assets/app/media/arch/Result_TE.png" class="rounded mx-auto d-block img-fluid" /></p>
-
-<!--
-<div class="container">
-    <div class="row d-flex ">
-        <div class="col-lg-5">
-            <div class="text">
-                <p>
-                <strong>Result&lt;T,E&gt;</strong> is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. <br/>
-
-Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
-In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.<br/>
-
-With result you can safely access the value of a successful or failed operation, accurately represent failures 
-from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
-The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.
-</p>
-            </div>
-        </div>
-        <div class="col-lg-7">
-            <div class="image">
-                <img src="assets/app/media/arch/Result_TE.png" alt="slider" class="img-fluid wow fadeInUp">
-            </div>
-        </div>
-    </div>
-</div>
--->
-
-<!--
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong></td>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></strong></td>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Status Subclass</a></strong></td>
-        <td><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a></strong></td>
-    </tr>
-    <tr>
-        <td><strong>Success&lt;T&gt;</strong></td>
-        <td><strong>Passed</strong></td>
-        <td><strong>Succeeded</strong></td>
-        <td>200001,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Pending</strong></td>
-        <td>200008,etc</td>
-    </tr>
-    <tr>
-        <td><strong>Failure&lt;E&gt;</strong></td>
-        <td><strong>Failed</strong></td>
-        <td><strong>Denied</strong></td>
-        <td>400004,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Ignored</strong></td>
-        <td>400001,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Invalid</strong></td>
-        <td>400002,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Errored</strong></td>
-        <td>500007,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Unexpected</strong></td>
-        <td>500008,etc</td>
-    </tr>
-</table>
--->
 
 <br/><br/>
 
 <h1 id="goals">Goals</h1>
 
-<p>The biggest differences between <strong>Slate Kit Result</strong> and other implementations are items 3, 4, 5 below.
+<p>The design goals of <strong>Slate Kit Result</strong> differ from other implementations by allowing for a custom error type, sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors.
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
@@ -304,7 +220,7 @@ The Result component removes much of the boiler plate code that you would create
     </tr>
     <tr>
         <td><strong>4. Status Codes</strong></td>
-        <td>Logical groups of status codes to categories errors, which can be converted to Http</td>
+        <td>Logical groups of status codes to sub-categories both successs and failures, which can be converted to Http</td>
     </tr>
     <tr>
         <td><strong>5. Sensible defaults</strong></td>
@@ -429,7 +345,7 @@ The Result component removes much of the boiler plate code that you would create
 
 <h1 id="example">Example</h1>
 
-<p>Short example take from <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Results.kt" >Example_Result.kt</a>,
+<p>Short example taken from <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Results.kt" >Example_Result.kt</a>,
 showing the usage of Result by creating, checking, and pattern matching the values.</p>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">       
@@ -566,17 +482,17 @@ showing the usage of Result by creating, checking, and pattern matching the valu
     <tr>
         <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
         <td>Optional</td>
-        <td>Logical error groups to reduce boiler plate and offer HTTP compatibility. E.g. <strong>Succeeded, Denied, Invalid, etc</strong></td>
+        <td>Logical states to sub-group both successes and failures. E.g. <strong>Succeeded, Denied, Invalid, etc</strong></td>
     </tr>
     <tr>
         <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a></td>
         <td>Optional</td>
-        <td>Default implementations of general purpose status codes</td>
+        <td>Default implementations of general purpose statuses as codes</td>
     </tr>
     <tr>
         <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a></td>
         <td>Optional</td>
-        <td>Type aliases to simplify the Result from 2 type parameters to 1. E.g. <strong>Outcome, Try, Notice, Validated</strong></td>
+        <td>Type aliases to simplify the Result from 2 type parameters to 1. E.g. <strong>Outcome&lt;T&gt; = Result&lt;T,Err&gt;, Try&lt;T&gt; = Result&lt;T,Exception&gt;</strong></td>
     </tr>
     <tr>
         <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Builder.kt" >Builders</a></td>
@@ -591,8 +507,8 @@ showing the usage of Result by creating, checking, and pattern matching the valu
 
 <h2 id="result">Result</h2>
 
-<p><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result</a> is the main component base class with only 2 implementations
-<strong>Success</strong> and <strong>Failure</strong>. <strong>Success</strong> stores the successful value of an operation, and <strong>Failure</strong> stores the error of an operation.
+<p><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a> is the main component as a sealed class with only 2 implementations of
+<strong>Success&lt;T&gt;</strong> and <strong>Failure&lt;E&gt;</strong>. <strong>Success&lt;T&gt;</strong> stores the successful value of an operation, and <strong>Failure&lt;E&gt;</strong> stores the error of an operation. <br/>
 Result has 2 type parameters <strong>T</strong> and <strong>E</strong>. <br/>
 <strong>T</strong> is used to represent the type of value ( Int, User, etc ) that the Success branch will store on the successful result of an operation.<br/>
 <strong>E</strong> is used to represent the type of error ( String, Exception, etc ) that the Failure branch will store on the failed result of an operation.<br/>
@@ -627,8 +543,7 @@ The branches are also sensiblly defaulted with <strong>Status</strong> codes to 
 
 <h2 id="statuses">Statuses</h2>
 
-<p>The distinguishing feature of Slate Kit Result is the introduction of a <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> Code component on the Result type. <br/>
-The status is applicable for both the Success / Failure branch and is made of a Integer code and String message.
+<p>One of the distinguishing features of Slate Kit Result is the introduction of a <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> component on the Result type base class. The status is applicable for both the Success / Failure branch and is made of a Integer code and String message and is used to further sub-categorize and classify successes and failures to figure out <strong>why</strong> something passed or failed.
 Default <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a> are provided for convenience. The Status Codes provide a few main benefits:
 <table class="table table-bordered table-striped">
     <tr>
@@ -677,9 +592,8 @@ Default <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotl
 
 <h2 id="aliases">Aliases</h2>
 
-<p>The Result type has 2 type parameters (<strong>T for value and E for error</strong>), but often its more convenient to work
-with known error types and also to avoid having to constantly specify the error type <strong>E</strong>. This is where Kotlins typealias come in handy.
-There are a few type <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a> for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types.
+<p>The Result type has 2 type parameters (<strong>T for value and E for error</strong>), but often its more convenient to work with known error types and also to avoid having to constantly specify the error type <strong>E</strong>. This is where Kotlins typealias come in handy.
+There are a few type <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a> available for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types. <strong>Outcome</strong> is used heavily in Slate Kit as we use functional error-handling and avoid throwing of Exceptions ( generally speaking ).
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
     
     <span class="c1">// Aliases simplify Result from 2 type parameters down to 1.
@@ -822,7 +736,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
         <td><strong>Mid Level</strong></td>
         <td>7 : logical categories of Status</td>
         <td><strong>Status sub-classes</strong></td>
-        <td>Succeeded, Pending, Denied, Ignored, etc</td>
+        <td>Succeeded, Pending, Denied, Ignored, Invalid, Errored, Unexpected etc</td>
     </tr>
     <tr>
         <td><strong>Low Level</strong></td>
@@ -985,7 +899,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
 
 <h2 id="check">Check</h2>
 
-<p>There are 3 ways to check / pattern match the result type and its actual branch/values. These range from coarse to fine grained matches depending on the situation. Typically though, as with other implementations you just need to check for Success / Failure. However, you can also check the categories of errors or the specific error types.
+<p>There are 3 ways to check / pattern match the result type and its actual branch/values. These range from coarse to fine grained matches depending on the situation. Typically though, as with other implementations you just need to check for Success / Failure. However, you can also check the sub-categories of Successes and Failures.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">import</span> <span class="nn">slatekit.results.*</span>
 
@@ -1036,7 +950,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
 
 <h2 id="outcome">Outcome</h2>
 
-<p>The <strong>Outcome</strong> class is simply a type alias for <strong>Result[T, Err]</strong> and allows you to use Result as <strong>Outcome[T]</strong>. This <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Outcomes.kt" >Outcomes</a> has builder methods to construct Successes / Failures easily.
+<p>The <strong>Outcome&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Err&gt;</strong> and allows you to use Result as <strong>Outcome&lt;T&gt;</strong>. This <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Outcomes.kt" >Outcomes</a> has builder methods to construct Successes / Failures easily.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
     <span class="k">import</span> <span class="nn">slatekit.results.builders.Outcomes</span>
 
@@ -1059,7 +973,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
 
 <h2 id="try">Try</h2>
 
-<p>The <strong>Try</strong> class is simply a type alias for <strong>Result[T, Exception]</strong> and allows you to use Result as <strong>Try[T]</strong>. This has <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Tries.kt" >Tries</a> builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
+<p>The <strong>Try&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Exception&gt;</strong> and allows you to use Result as <strong>Try&lt;T&gt;</strong>. This has <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Tries.kt" >Tries</a> builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
     <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
@@ -1081,7 +995,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
 
 <h2 id="validated">Validated</h2>
 
-<p>The <strong>Validated</strong> class is simply a type alias for <strong>Result[T, Err.ErrorList]</strong> and allows you to use collect a list of <strong>Err</strong>.
+<p>The <strong>Validated&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Err.ErrorList&gt;</strong> and allows you to use collect a list of <strong>Err</strong>.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
     <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
@@ -1114,7 +1028,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
 
 <h2 id="http">Http</h2>
 
-<p>Status codes not only serve to logically categories successes/failures but become a natural and easy way to convert results to platform/protocol specific errors. There is a default Err to HTTP status code converter available in <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a></p>
+<p><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> not only serve to logically sub-categorize successes/failures but they become a natural and easy way to convert results to platform/protocol specific statuses/errors. There is a default Err to HTTP status code converter available in <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a></p>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="c1">// Simulate a denied exception ( Security related )

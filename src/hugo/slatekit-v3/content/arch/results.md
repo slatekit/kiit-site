@@ -5,96 +5,14 @@ section_header: Results
 ---
 
 # Overview
-**{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}}** is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. 
-Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
-In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.
-With result you can safely access the value of a successful or failed operation, accurately represent failures 
-from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
-The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.
+**{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}}** is a core component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. Result is **NOT a new concept**, as it currently exists in various forms in other languages (see below), however **Slate Kit Result differs** significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:
 
 <img src="assets/app/media/arch/Result_TE.png" class="rounded mx-auto d-block img-fluid" />
 
-<!--
-<div class="container">
-    <div class="row d-flex ">
-        <div class="col-lg-5">
-            <div class="text">
-                <p>
-                <strong>Result&lt;T,E&gt;</strong> is a fundamental component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. <br/>
-
-Result is **not a new concept** as it currently exists in various forms in other languages (see below). 
-In fact, the Result type in Slate Kit has been inspired by these and also by Google's GRPC codes.<br/>
-
-With result you can safely access the value of a successful or failed operation, accurately represent failures 
-from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP.
-The Result component removes much of the boiler plate code that you would create to normally handle all these scenarios.
-</p>
-            </div>
-        </div>
-        <div class="col-lg-7">
-            <div class="image">
-                <img src="assets/app/media/arch/Result_TE.png" alt="slider" class="img-fluid wow fadeInUp">
-            </div>
-        </div>
-    </div>
-</div>
--->
-<!--
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}}</strong></td>
-        <td><strong>{{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}}</strong></td>
-        <td><strong>{{% sk-link-code component="result" filepath="results/Result.kt" name="Status Subclass" %}}</strong></td>
-        <td><strong>{{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}</strong></td>
-    </tr>
-    <tr>
-        <td><strong>Success&lt;T&gt;</strong></td>
-        <td><strong>Passed</strong></td>
-        <td><strong>Succeeded</strong></td>
-        <td>200001,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Pending</strong></td>
-        <td>200008,etc</td>
-    </tr>
-    <tr>
-        <td><strong>Failure&lt;E&gt;</strong></td>
-        <td><strong>Failed</strong></td>
-        <td><strong>Denied</strong></td>
-        <td>400004,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Ignored</strong></td>
-        <td>400001,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Invalid</strong></td>
-        <td>400002,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Errored</strong></td>
-        <td>500007,etc</td>
-    </tr>
-    <tr>
-        <td><strong></strong></td>
-        <td></td>
-        <td><strong>Unexpected</strong></td>
-        <td>500008,etc</td>
-    </tr>
-</table>
--->
 {{% break %}}
 
 # Goals
-The biggest differences between **Slate Kit Result** and other implementations are items 3, 4, 5 below.
+The design goals of **Slate Kit Result** differ from other implementations by allowing for a custom error type, sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. 
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
@@ -114,7 +32,7 @@ The biggest differences between **Slate Kit Result** and other implementations a
     </tr>
     <tr>
         <td><strong>4. Status Codes</strong></td>
-        <td>Logical groups of status codes to categories errors, which can be converted to Http</td>
+        <td>Logical groups of status codes to sub-categories both successs and failures, which can be converted to Http</td>
     </tr>
     <tr>
         <td><strong>5. Sensible defaults</strong></td>
@@ -211,7 +129,7 @@ Use the following settings in gradle for installing this component.
 {{% section-end mod="arch/results" %}}
 
 # Example {#example}
-Short example take from {{% sk-link-code component="examples" filepath="examples/Example_Results.kt" name="Example_Result.kt" %}},
+Short example taken from {{% sk-link-code component="examples" filepath="examples/Example_Results.kt" name="Example_Result.kt" %}},
 showing the usage of Result by creating, checking, and pattern matching the values.
 
 {{< highlight kotlin >}}
@@ -342,17 +260,17 @@ These are the main concepts / terms to know for using this component. All of the
     <tr>
         <td>{{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}}</td>
         <td>Optional</td>
-        <td>Logical error groups to reduce boiler plate and offer HTTP compatibility. E.g. **Succeeded, Denied, Invalid, etc**</td>
+        <td>Logical states to sub-group both successes and failures. E.g. **Succeeded, Denied, Invalid, etc**</td>
     </tr>
     <tr>
         <td>{{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}</td>
         <td>Optional</td>
-        <td>Default implementations of general purpose status codes</td>
+        <td>Default implementations of general purpose statuses as codes</td>
     </tr>
     <tr>
         <td>{{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}}</td>
         <td>Optional</td>
-        <td>Type aliases to simplify the Result from 2 type parameters to 1. E.g. **Outcome, Try, Notice, Validated**</td>
+        <td>Type aliases to simplify the Result from 2 type parameters to 1. E.g. **Outcome&lt;T&gt; = Result&lt;T,Err&gt;, Try&lt;T&gt; = Result&lt;T,Exception&gt;**</td>
     </tr>
     <tr>
         <td>{{% sk-link-code component="result" filepath="results/builders/Builder.kt" name="Builders" %}}</td>
@@ -363,8 +281,8 @@ These are the main concepts / terms to know for using this component. All of the
 {{% section-end mod="arch/results" %}}
 
 ## Result {#result}
-{{% sk-link-code component="result" filepath="results/Result.kt" name="Result" %}} is the main component base class with only 2 implementations
-**Success** and **Failure**. **Success** stores the successful value of an operation, and **Failure** stores the error of an operation. 
+{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}} is the main component as a sealed class with only 2 implementations of
+**Success&lt;T&gt;** and **Failure&lt;E&gt;**. **Success&lt;T&gt;** stores the successful value of an operation, and **Failure&lt;E&gt;** stores the error of an operation. <br/>
 Result has 2 type parameters **T** and **E**. <br/>
 **T** is used to represent the type of value ( Int, User, etc ) that the Success branch will store on the successful result of an operation.<br/>
 **E** is used to represent the type of error ( String, Exception, etc ) that the Failure branch will store on the failed result of an operation.<br/> 
@@ -394,8 +312,7 @@ The branches are also sensiblly defaulted with **Status** codes to make them opt
 {{% feature-end mod="arch/results" %}}
 
 ## Statuses {#statuses}
-The distinguishing feature of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} Code component on the Result type. <br/> 
-The status is applicable for both the Success / Failure branch and is made of a Integer code and String message. 
+One of the distinguishing features of Slate Kit Result is the introduction of a {{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} component on the Result type base class. The status is applicable for both the Success / Failure branch and is made of a Integer code and String message and is used to further sub-categorize and classify successes and failures to figure out **why** something passed or failed.
 Default {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}} are provided for convenience. The Status Codes provide a few main benefits:
 <table class="table table-bordered table-striped">
     <tr>
@@ -442,9 +359,8 @@ Default {{% sk-link-code component="result" filepath="results/Codes.kt" name="Co
 {{% feature-end mod="arch/results" %}}
 
 ## Aliases {#aliases}
-The Result type has 2 type parameters (**T for value and E for error**), but often its more convenient to work 
-with known error types and also to avoid having to constantly specify the error type **E**. This is where Kotlins typealias come in handy.
-There are a few type {{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}} for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types.
+The Result type has 2 type parameters (**T for value and E for error**), but often its more convenient to work with known error types and also to avoid having to constantly specify the error type **E**. This is where Kotlins typealias come in handy.
+There are a few type {{% sk-link-code component="result" filepath="results/Aliases.kt" name="Aliases" %}} available for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types. **Outcome** is used heavily in Slate Kit as we use functional error-handling and avoid throwing of Exceptions ( generally speaking ).
 {{< highlight kotlin >}}
     import slatekit.results.* 
     
@@ -581,7 +497,7 @@ Results can be gracefully converted to other representations since there are 3 l
         <td><strong>Mid Level</strong></td>
         <td>7 : logical categories of Status</td>
         <td>**Status sub-classes**</td>
-        <td>Succeeded, Pending, Denied, Ignored, etc</td>
+        <td>Succeeded, Pending, Denied, Ignored, Invalid, Errored, Unexpected etc</td>
     </tr>
     <tr>
         <td><strong>Low Level</strong></td>
@@ -728,7 +644,7 @@ Result offers the typical functional ways to safely get the value
 {{% feature-end mod="arch/results" %}}
 
 ## Check {#check}
-There are 3 ways to check / pattern match the result type and its actual branch/values. These range from coarse to fine grained matches depending on the situation. Typically though, as with other implementations you just need to check for Success / Failure. However, you can also check the categories of errors or the specific error types.
+There are 3 ways to check / pattern match the result type and its actual branch/values. These range from coarse to fine grained matches depending on the situation. Typically though, as with other implementations you just need to check for Success / Failure. However, you can also check the sub-categories of Successes and Failures.
 {{< highlight kotlin >}}
      
     import slatekit.results.*
@@ -774,7 +690,7 @@ There are 3 ways to check / pattern match the result type and its actual branch/
 {{% feature-end mod="arch/results" %}}
 
 ## Outcome {#outcome}
-The **Outcome** class is simply a type alias for **Result[T, Err]** and allows you to use Result as **Outcome[T]**. This {{% sk-link-code component="result" filepath="results/builders/Outcomes.kt" name="Outcomes" %}} has builder methods to construct Successes / Failures easily.
+The **Outcome&lt;T&gt;** class is simply a type alias for **Result&lt;T, Err&gt;** and allows you to use Result as **Outcome&lt;T&gt;**. This {{% sk-link-code component="result" filepath="results/builders/Outcomes.kt" name="Outcomes" %}} has builder methods to construct Successes / Failures easily.
 {{< highlight kotlin >}}
     import slatekit.results.* 
     import slatekit.results.builders.Outcomes
@@ -792,7 +708,7 @@ The **Outcome** class is simply a type alias for **Result[T, Err]** and allows y
 {{% feature-end mod="arch/results" %}}
 
 ## Try {#try}
-The **Try** class is simply a type alias for **Result[T, Exception]** and allows you to use Result as **Try[T]**. This has {{% sk-link-code component="result" filepath="results/builders/Tries.kt" name="Tries" %}} builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
+The **Try&lt;T&gt;** class is simply a type alias for **Result&lt;T, Exception&gt;** and allows you to use Result as **Try&lt;T&gt;**. This has {{% sk-link-code component="result" filepath="results/builders/Tries.kt" name="Tries" %}} builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
 {{< highlight kotlin >}}
      
     import slatekit.results.* 
@@ -810,7 +726,7 @@ The **Try** class is simply a type alias for **Result[T, Exception]** and allows
 {{% feature-end mod="arch/results" %}}
 
 ## Validated {#validated}
-The **Validated** class is simply a type alias for **Result[T, Err.ErrorList]** and allows you to use collect a list of **Err**. 
+The **Validated&lt;T&gt;** class is simply a type alias for **Result&lt;T, Err.ErrorList&gt;** and allows you to use collect a list of **Err**. 
 {{< highlight kotlin >}}
      
     import slatekit.results.* 
@@ -839,7 +755,7 @@ The **Validated** class is simply a type alias for **Result[T, Err.ErrorList]** 
 {{% feature-end mod="arch/results" %}}
 
 ## Http {#http}
-Status codes not only serve to logically categories successes/failures but become a natural and easy way to convert results to platform/protocol specific errors. There is a default Err to HTTP status code converter available in {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}
+{{% sk-link-code component="result" filepath="results/Status.kt" name="Status" %}} not only serve to logically sub-categorize successes/failures but they become a natural and easy way to convert results to platform/protocol specific statuses/errors. There is a default Err to HTTP status code converter available in {{% sk-link-code component="result" filepath="results/Codes.kt" name="Codes" %}}
 
 {{< highlight kotlin >}}
      
