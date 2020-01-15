@@ -72,40 +72,22 @@ This component is currently stable. Future versions will include support for:
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/cache" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="Cache"
     package="slatekit.cache"
     jar="slatekit.cache.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-cache"
+    gitModule="slatekit-cache"
     url="arch/cache"
     bintray="slatekit-cache"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_Cache.kt"
 %}}
-{{% section-end mod="arch/cache" %}}
 
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="core/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="arch/tracking">Slate Kit - Tracking</a></td>
-        <td>Tracking and diagnostics</td>
-    </tr>
-</table>
 {{% section-end mod="arch/cache" %}}
 
 # Example {#example}

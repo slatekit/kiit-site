@@ -53,36 +53,20 @@ This component is currently stable and can be used for both **Android and Server
 
 {{< /highlight >}}
 
+{{% section-end mod="arch/tracking" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="Tracking"
     package="slatekit.tracking"
     jar="slatekit.tracking.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-tracking"
+    gitModule="slatekit-tracking"
     url="arch/tracking"
     uses="slatekit.results, slatekit.common"
     exampleUrl="Example_Tracking.kt"
     exampleFileName="Example_Tracking.kt"
 %}}
-
-{{% section-end mod="arch/tracking" %}}
-
-# Requires
-This component uses several components from the Slate Kit Utilities.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
 
 {{% section-end mod="arch/tracking" %}}
 

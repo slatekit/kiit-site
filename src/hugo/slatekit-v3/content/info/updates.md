@@ -1,7 +1,6 @@
 ---
 title: "Updates"
 date: 2019-03-17T13:02:30-04:00
-draft: true
 section_header: Updates
 ---
 
@@ -21,6 +20,7 @@ Summary and status of all components available in Slate Kit.
 {{% sk-modules %}}
 {{% break %}}
 
+
 # Upcoming
 Upcoming developments and features
 <table class="table table-bordered table-striped">
@@ -32,27 +32,27 @@ Upcoming developments and features
     <tr>
         <td><strong>1</strong></td>
         <td><strong>Build</strong></td>
-        <td>Automated linting via ktlint</td>
+        <td>Automated linting via ktlint / Travis CI/CD improvements</td>
     </tr>
     <tr>
         <td><strong>2</strong></td>
-        <td><strong>Build</strong></td>
-        <td>Travis build fixes and improvements</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
         <td><strong>Releases</strong></td>
         <td>1.0.0 releases of components (App, CLI, Cache, Jobs, etc)</td>
     </tr>
     <tr>
-        <td><strong>4</strong></td>
+        <td><strong>3</strong></td>
         <td><strong>Docker</strong></td>
         <td>Docker integration in gradle builds/projet templates </td>
     </tr>
     <tr>
-        <td><strong>5</strong></td>
+        <td><strong>4</strong></td>
         <td><strong>Generator</strong></td>
         <td><a href="/arch/generators">Project generator</a> improvements </td>
+    </tr>
+    <tr>
+        <td><strong>5</strong></td>
+        <td><strong>Multi-Platform</strong></td>
+        <td>Project improvements to support Kotlin Multi-Platform <strong>iOS</strong> and <strong>Javascript</strong></td>
     </tr>
 </table>
 {{% break %}}

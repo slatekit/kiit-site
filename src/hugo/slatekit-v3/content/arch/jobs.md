@@ -75,12 +75,15 @@ This component is currently stable and there is a project generator for it
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/jobs" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="Jobs"
     package="slatekit.jobs"
     jar="slatekit.jobs.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-jobs"
+    gitModule="slatekit-jobs"
     url="arch/jobs"
     bintray="slatekit-jobs"
     uses="slatekit.results, slatekit.common"
@@ -88,28 +91,6 @@ This component is currently stable and there is a project generator for it
     exampleUrl=""
     exampleFileName="Example_Jobs.kt"
 %}}
-{{% section-end mod="arch/jobs" %}}
-
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="arch/queues">Queues</a></td>
-        <td>Persistent queues with AWS SQS as the default</td>
-    </tr>
-</table>
 
 {{% section-end mod="arch/jobs" %}}
 

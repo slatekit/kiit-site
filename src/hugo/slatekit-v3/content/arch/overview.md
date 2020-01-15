@@ -15,7 +15,8 @@ and scalable applications on the JVM. Several of the modules can be used for bot
 2. The <span class="badge badge-light">Android / Server</span> badge indicates that the component cab be used for both **Android** and **Server**.<br/>
 3. The <span class="badge badge-success">Stable</span> badge indicates the module is **stable** and available as a **1.x** release <br/>
 4. The <span class="badge badge-light">Beta</span> indicates a module still in **Beta**, but soon to launch a stable 1.x release in **Jan 2020**.<br/>
-5. The <img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /> badge is a download link to **Bintray** for the **gradle/maven** instructions on installing the package <br/>
+5. The <span class="badge badge-warning">Internal</span> badge indicates a module that is for internal use only <br/>
+6. The <img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /> badge is a download link to **Bintray** for the **gradle/maven** instructions on installing the package <br/>
 
 </a>
 </div>

@@ -40,36 +40,22 @@ This component is currently **stable**. Following limitations, current work, pla
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/sms" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="SMS"
     package="slatekit.notifications"
     jar="slatekit.notifications.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-notifications"
+    gitModule="slatekit-notifications"
     url="arch/sms"
     bintray="slatekit-notifications"
     uses="slatekit.results, slatekit.core, slatekit.notifications"
     exampleUrl=""
     exampleFileName="Example_Sms.kt"
 %}}
-{{% section-end mod="arch/sms" %}}
 
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td>{{% sk-link-arch page="results" name="Results" %}}</td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td>{{% sk-link-util page="overview" name="Utils" %}}</td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
 {{% section-end mod="arch/sms" %}}
 
 # Imports

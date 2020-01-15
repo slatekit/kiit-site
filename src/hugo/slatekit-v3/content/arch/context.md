@@ -55,48 +55,21 @@ This component is currently stable, has default implementations, and can be used
 
 {{< /highlight >}}
 
+{{% section-end mod="arch/context" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="App"
     package="slatekit.common"
     jar="slatekit.common.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Context.kt"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-common"
+    gitModule="slatekit-common"
     url="core/app"
+    bintray="slatekit-common"
     uses="slatekit.results, slatekit.common"
     exampleUrl="Example_Context.kt"
     exampleFileName="Example_Context.kt"
 %}}
-
-{{% section-end mod="arch/context" %}}
-
-# Requires
-This component uses several components from the Slate Kit Utilities.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/args">Args</a></td>
-        <td>Command line arguments parser</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/env">Env</a></td>
-        <td>Environment setup and selector</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/config">Conf</a></td>
-        <td>Config settings with inheritance</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/logger">Logs</a></td>
-        <td>Logger and logging support</td>
-    </tr>
-</table>
 
 {{% section-end mod="arch/context" %}}
 

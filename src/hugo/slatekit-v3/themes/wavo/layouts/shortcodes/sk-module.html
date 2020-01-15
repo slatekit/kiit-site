@@ -1,37 +1,31 @@
 
 <table class="table table-bordered table-striped">
   <tr>
-    <td><strong>package</strong></td>
-    <td>{{.Get "package" }}</td>
-  </tr>
-  <tr>
-    <td><strong>jar</strong></td>
+    <td><strong>Jar</strong></td>
     <td>{{.Get "jar" }}</td>
   </tr>
   <tr>
-    <td><strong>source</strong></td>
-    <td><a class="url-ch" href="{{.Get "git" }}">{{.Get "gitAlias" }}</a></td>
+    <td><strong>Package</strong></td>
+    <td>{{.Get "package" }}</td>
   </tr>
   <tr>
-      <td><strong>example</strong></td>
+    <td><strong>Sources</strong></td>
+    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/{{.Get "gitModule" }}">{{.Get "gitModule" }}</a></td>
+  </tr>
+  <tr>
+      <td><strong>Example</strong></td>
       <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/{{.Get "exampleUrl" }}">{{.Get "exampleFileName" }}</a></td>
   </tr>
-  <!--
   <tr>
-    <td><strong>docs</strong></td>
-    <td><a class="url-ch" href="{{.Get "url" }}">{{.Get "name" }}</a></td>
-  </tr>
-  -->
-  <tr>
-    <td><strong>version</strong></td>
+    <td><strong>Version</strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/{{.Get "bintray" }}/images/download.svg" /></td>
   </tr>
   <tr>
-    <td><strong>license</strong></td>
+    <td><strong>License</strong></td>
     <td><img src="https://img.shields.io/badge/license-{{.Get "license" | default "Apache2" }}-green.svg?style=flat" /></td>
   </tr>
   <tr>
-    <td><strong>requires</strong></td>
-    <td>{{.Get "uses" }}</td>
+    <td><strong>Requires</strong></td>
+    <td>See <a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/{{.Get "gitModule" }}/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>

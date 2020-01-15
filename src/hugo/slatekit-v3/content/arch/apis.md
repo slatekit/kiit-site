@@ -86,13 +86,15 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/apis" %}}
 
+# Sources {#sources}
 {{% sk-module 
     name="APIs"
     package="slatekit.apis"
     jar="slatekit.apis.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-apis/src/main/kotlin/slatekit/apis"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-apis"
+    gitModule="slatekit-apis"
     url="arch/apis"
     bintray="slatekit-apis"
     uses="slatekit.results, slatekit.common"
@@ -100,26 +102,6 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
     exampleUrl="Example_APIs.kt"
     exampleFileName="Example_APIs.kt"
 %}}
-
-{{% section-end mod="arch/apis" %}}
-
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="core/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/utils.html">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
-
 {{% section-end mod="arch/apis" %}}
 
 # Example {#example}

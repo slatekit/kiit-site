@@ -82,36 +82,21 @@ Use the following settings in gradle for installing this component.
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/app" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="App"
     package="slatekit.app"
     jar="slatekit.app.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app/src/main/kotlin/slatekit/app"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-app"
+    gitModule="slatekit-app"
     url="arch/app"
     bintray="slatekit-app"
     uses="slatekit.results, slatekit.common"
     exampleUrl="Example_App.kt"
     exampleFileName="Example_App.kt"
 %}}
-{{% section-end mod="arch/app" %}}
-
-# Requires {#requires}
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="core/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/utils.html">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
 {{% section-end mod="arch/app" %}}
 
 # Example {#example}

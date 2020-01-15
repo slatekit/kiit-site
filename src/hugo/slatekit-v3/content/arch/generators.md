@@ -80,36 +80,22 @@ You can install the slatekit application/command line tool from {{% sk-link href
     slatekit -version
     slatekit -help
 
-{{< /highlight >}}{{% sk-module 
+{{< /highlight >}}
+{{% section-end mod="arch/generators" %}}
+
+# Sources {#sources}
+{{% sk-module 
     name="Generator"
     package="slatekit.generator"
     jar="slatekit.generator.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-generator"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-generator"
+    gitModule="slatekit-generator"
     url="arch/generator"
     bintray="slatekit-generator"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_Generator.kt"
 %}}
-{{% section-end mod="arch/generators" %}}
-
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/overview">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
 
 {{% section-end mod="arch/generators" %}}
 

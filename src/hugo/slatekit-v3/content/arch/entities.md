@@ -84,35 +84,21 @@ coming soon
     }
 
 {{< /highlight >}}
+{{% section-end mod="core/cli" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="App"
-    package="slatekit.app"
-    jar="slatekit.app.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-app"
-    url="core/app"
+    package="slatekit.entities"
+    jar="slatekit.entities.jar"
+    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities"
+    gitModule="slatekit-entities"
+    url="core/entities"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_App.kt"
 %}}
-{{% section-end mod="core/cli" %}}
 
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="core/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/utils.html">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
 {{% section-end mod="core/cli" %}}
 
 # Example {#example}

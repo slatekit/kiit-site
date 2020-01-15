@@ -7,7 +7,7 @@ section_header: Contact
 
 
 # Contact
-Slate Kit is built and maintained by a small group of engineers. It has been in production for a few years and is actively maintained. Much of the usage of Slate Kit has been for prior internal and current projects. Prioritization and work on issues is based on our availablility. See our release cycle below for more info. We are considering adding premium support ( see below ) in the future. Feel free to contact us using all the various channels below! 
+Feel free to contact us using all the various channels below! We put a lot of effort on guides, concepts and general documentation, but it is still actively improving as we move along. See our release cycle below for the scheduled releases of Slate Kit. We are considering adding premium support ( see below ) in the future.
 {{% break %}}
 
 <section id="services" class="integration">
@@ -74,5 +74,5 @@ Join our discuss Slate Kit, ask questions on our {{% sk-contact-gitter %}} chann
 {{% break %}}
 
 # Calls
-In the near future, a short and free 1-2 hour conference call will be scheduled after work hours on a date/time ( to be determined ) for anyone who is interested in using Slate Kit. You can use this opportunity to talk to us live and ask questions. The schedule / details will be posted here and on our gitter channel ( check back soon ).
+In the near future, a short and free 1-2 hour conference call will be scheduled **after work hours** on a date/time ( to be determined ) for anyone who is interested in using Slate Kit. You can use this opportunity to talk to us live and ask questions. The schedule / details will be posted here and on our gitter channel ( check back soon ).
 {{% break %}}

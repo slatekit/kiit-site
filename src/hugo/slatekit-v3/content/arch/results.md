@@ -192,22 +192,22 @@ Use the following settings in gradle for installing this component.
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/results" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="Results"
     package="slatekit.results"
     jar="slatekit.result.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-result"
+    gitModule="slatekit-result"
     url="arch/results"
-    uses="n/a"
+    uses="0 Dependencies"
     bintray="slatekit-results"
     exampleUrl="Example_Results.kt"
     exampleFileName="Example_Results.kt"
 %}}
-{{% section-end mod="arch/results" %}}
 
-# Requires
-This component has **0 dependencies** and does **NOT** use any other Slate Kit components.
 {{% section-end mod="arch/results" %}}
 
 # Example {#example}
@@ -219,47 +219,47 @@ showing the usage of Result by creating, checking, and pattern matching the valu
     import slatekit.results.*
 
     // Create success explicitly
-    val start: Result<Int, Err> = Success(10)
+    val start: Outcome<Int> = Success(10)
 
     // Properties
-    println(start.success)     // true
-    println(start.status.code) // Codes.SUCCESS.code
-    println(start.status.msg)  // Codes.SUCCESS.msg
+    println("success:     " + start.success)         // true
+    println("status.code: " + start.status.code) // Codes.SUCCESS.code
+    println("status.code: " + start.status.msg)  // Codes.SUCCESS.msg
 
     // Safely operate on values with map/flatMap
     val addResult = start.map { it + 1 }
     val subResult = start.flatMap { Success(it - 1) }
 
     // Check values
-    println(addResult.contains(11))
-    println(addResult.exists { it == 11 })
+    println("contains:  " + addResult.contains(11))
+    println("exists  :  " + addResult.exists { it == 11 })
 
     // Get values
-    println(addResult.getOrNull())
-    println(addResult.getOrElse { 0 })
+    println("getOrNull: " + addResult.getOrNull())
+    println("getOrElse: " + addResult.getOrElse { 0 })
 
     // On conditions
-    subResult.onSuccess { println(it) } // 9
-    subResult.onFailure { println(it) } // N/A
+    subResult.onSuccess { println("onSuccess: " + it) } // 9
+    subResult.onFailure { println("onFailure: " + it) } // N/A
 
     // Pattern match on branches ( Success / Failure )
     when (addResult) {
-        is Success -> println("Value is : ${addResult.value}") // 11
-        is Failure -> println("Error is : ${addResult.error}") // N/A
+        is Success -> println("value: ${addResult.value}") // 11
+        is Failure -> println("error: ${addResult.error}") // N/A
     }
 
     // Pattern match on status: Passed / Failed statuses
-    when(result) {
-        is Success -> when(result.status) {
-            is Passed.Succeeded  -> println(result.msg)
-            is Passed.Pending    -> println(result.msg)
+    when(start) {
+        is Success -> when(start.status) {
+            is Passed.Succeeded  -> println("Succeeded: " + start.msg)
+            is Passed.Pending    -> println("Pending  : " + start.msg)
         }
-        is Failure -> when(result.status) {
-            is Failed.Denied     -> println(result.msg)
-            is Failed.Invalid    -> println(result.msg)
-            is Failed.Ignored    -> println(result.msg)
-            is Failed.Errored    -> println(result.msg)
-            is Failed.Unexpected -> println(result.msg)
+        is Failure -> when(start.status) {
+            is Failed.Denied     -> println("Denied    : " + start.msg)
+            is Failed.Invalid    -> println("Invalid   : " + start.msg)
+            is Failed.Ignored    -> println("Ignored   : " + start.msg)
+            is Failed.Errored    -> println("Errored   : " + start.msg)
+            is Failed.Unexpected -> println("Unexpected: " + start.msg)
         }
     }
         

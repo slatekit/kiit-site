@@ -60,36 +60,22 @@ A small future enhancement will add support for question and answer flow.
     }
 
 {{< /highlight >}}
+{{% section-end mod="arch/cli" %}}
+
+# Sources {#sources}
 {{% sk-module 
     name="Cli"
     package="slatekit.cli"
     jar="slatekit.cli.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli"
-    gitAlias="slatekit/src/lib/kotlin/slatekit-cli"
+    gitModule="slatekit-cli"
     url="core/cli"
     bintray="slatekit-cli"
     uses="slatekit.results, slatekit.common"
     exampleUrl=""
     exampleFileName="Example_CLI.kt"
 %}}
-{{% section-end mod="arch/cli" %}}
 
-# Requires
-This component uses the following other <strong>Slate Kit</strong> and/or third-party components.
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Component</strong></td>
-        <td><strong>Description</strong></td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="arch/results">Slate Kit - Results</a></td>
-        <td>To model successes and failures with optional status codes</td>
-    </tr>
-    <tr>
-        <td><a class="url-ch" href="utils/utils.html">Slate Kit - Common</a></td>
-        <td>Common utilities for both android + server</td>
-    </tr>
-</table>
 {{% section-end mod="arch/cli" %}}
 
 # Example {#example}

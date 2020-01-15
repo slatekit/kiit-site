@@ -13,8 +13,8 @@ function buildArchMenuCommon() {
             name: "Setup",
             items: [
                 { name:"Install" , anchor: "#install" },
-                { name:"Requires", anchor: "#requires" },
-                { name:"Example" , anchor: "#example" }
+                { name:"Sources", anchor: "#sources" },
+                { name:"Example" , anchor: "#example", highlight:true }
             ]
         }
     ];
@@ -59,7 +59,11 @@ function buildArchMenuSection(archComp, section) {
 
 function buildArchMenuLink(archComp, link) {
     // Build template 
-    var name = "<span>" + link.name + "</span>";
+    var text = link.name;
+    if(link.highlight && link.highlight === true) {
+        text = "<strong>" + link.name + "</strong>";
+    }
+    var name = "<span>" + text + "</span>";
     var href = '<a href="' + archComp.page + link.anchor + '">'
     var link = '<li>' + href + name + '</a></li>';
     return link
