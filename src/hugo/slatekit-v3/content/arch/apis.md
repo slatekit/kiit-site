@@ -98,7 +98,7 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
     url="arch/apis"
     bintray="slatekit-apis"
     uses="slatekit.results, slatekit.common"
-    license="LGPL__v3"
+    license="AGPL_v3"
     exampleUrl="Example_APIs.kt"
     exampleFileName="Example_APIs.kt"
 %}}
