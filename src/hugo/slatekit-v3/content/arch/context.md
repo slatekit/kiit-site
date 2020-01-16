@@ -59,13 +59,13 @@ This component is currently stable, has default implementations, and can be used
 
 # Sources {#sources}
 {{% sk-module 
-    name="App"
-    package="slatekit.common"
-    jar="slatekit.common.jar"
+    name="Context"
+    package="slatekit.context"
+    jar="slatekit.context.jar"
     git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Context.kt"
-    gitModule="slatekit-common"
+    gitModule="slatekit-context"
     url="core/app"
-    bintray="slatekit-common"
+    bintray="slatekit-context"
     uses="slatekit.results, slatekit.common"
     exampleUrl="Example_Context.kt"
     exampleFileName="Example_Context.kt"

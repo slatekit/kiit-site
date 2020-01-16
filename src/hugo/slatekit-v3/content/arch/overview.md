@@ -36,20 +36,20 @@ and scalable applications on the JVM. Several of the modules can be used for bot
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="arch/apis"><img src="assets/media/img/white/webapi.png" alt="" class="img-fluid"></a>
-              <div><a href="arch/apis"><h3>APIs</h3></a></div>
-              <p>A simple, intuitive, <strong>protocol independent</strong> approach to building APIs in Slate so they run as Web APIs or on the CLI. See {{% sk-link-arch page="apis" name="APIs" %}} 
-              </p>
-              {{% sk-version-download page="apis" target="Android / Server" %}}
-            </div>
-          </div>
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
               <a href="arch/app"><img src="assets/media/img/white/desktop.png" alt="" class="img-fluid"></a>
               <div><a href="arch/app"><h3>App</h3></a></div>
               <p>An general purpose <strong>App template</strong> with support for environments, logging, configs, diagnostics, help usage and more. See {{% sk-link-arch page="app" name="App" %}} 
               </p>
-              {{% sk-version-download page="app" target="Server" %}}
+              {{% sk-version-download page="app" target="Server" status="Stable" %}}
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp">
+            <div class="box text-center">
+              <a href="arch/apis"><img src="assets/media/img/white/webapi.png" alt="" class="img-fluid"></a>
+              <div><a href="arch/apis"><h3>APIs</h3></a></div>
+              <p>A simple, intuitive, <strong>protocol independent</strong> approach to building APIs in Slate so they run as Web APIs or on the CLI. See {{% sk-link-arch page="apis" name="APIs" %}} 
+              </p>
+              {{% sk-version-download page="apis" target="Server" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -89,7 +89,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>An application context to hold common dependencies like command line args, envs, configs, logger, encryptor, etc, 
                  See {{% sk-link-arch page="context" name="Context" %}} 
               </p>
-              {{% sk-version-download page="common" target="Android / Server" %}}
+              {{% sk-version-download page="context" target="Android / Server" status="Stable" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
