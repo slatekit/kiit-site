@@ -108,7 +108,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>Send emails with optional templates, with a default implementation for SendGrid.
                  See {{% sk-link-arch page="email" name="Email" %}} for details on setup and usage</a>.
               </p>
-              {{% sk-version-download page="notifications" target="Server" %}}
+              {{% sk-version-download page="notifications" target="Server" status="Stable" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -179,7 +179,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>Send text messages to mobile phones, with support for templates, with a default implementation using Twilio.
                  See {{% sk-link-arch page="sms" name="SMS" %}} 
               </p>
-              {{% sk-version-download page="notifications" target="Android / Server" %}}
+              {{% sk-version-download page="notifications" target="Server" status="Stable"%}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
