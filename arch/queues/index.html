@@ -286,10 +286,17 @@
 
 <h1 id="imports">Imports</h1>
 
+<p>Refer to <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Cloud_Queues.kt" >Example_Cloud_Queues.kt</a> for all imports.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">         
-    <span class="k">import</span> <span class="nn">slatekit.cloud.aws.AwsCloudQueue</span>
-    <span class="k">import</span> <span class="nn">slatekit.common.queues.QueueStringConverter</span>
-     </code></pre></div>
+    <span class="c1">// Required
+</span><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.cloud.aws.SQS</span>
+    <span class="k">import</span> <span class="nn">slatekit.core.queues.QueueEntry</span>
+    <span class="k">import</span> <span class="nn">slatekit.core.queues.QueueStringConverter</span>
+
+    <span class="c1">// Optional ( For examples)
+</span><span class="c1"></span>    <span class="k">import</span> <span class="nn">com.amazonaws.auth.profile.ProfileCredentialsProvider</span>
+    <span class="k">import</span> <span class="nn">com.amazonaws.regions.Regions</span>
+     </code></pre></div></p>
 
 <br/>
 
@@ -299,18 +306,35 @@
 <h1 id="setup">Setup</h1>
 
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
-    <span class="k">val</span> <span class="py">converter</span> <span class="p">=</span> <span class="n">QueueStringConverter</span><span class="p">()</span>
+    <span class="c1">// This converts the queue entry payload to a type
+</span><span class="c1"></span>    <span class="c1">// NOTES:
+</span><span class="c1"></span>    <span class="c1">// 1. This can be String converter for any payload ( e.g. JSON )
+</span><span class="c1"></span>    <span class="c1">// 2. You can create a custom type for type safety
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">converter</span> <span class="p">=</span> <span class="n">QueueStringConverter</span><span class="p">()</span>
+    
     <span class="c1">// Not storing any key/secret in source code for security purposes
-</span><span class="c1"></span>    <span class="c1">// Setup 1: Use the default aws config file in &#34;{user_dir}/.aws/credentials&#34;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">queue1</span> <span class="p">=</span> <span class="n">AwsCloudQueue</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="s">&#34;app1-queue-1&#34;</span><span class="p">,</span> <span class="s">&#34;queue1&#34;</span><span class="p">,</span> <span class="n">converter</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="c1">// Setup 1: Use the default aws config file in &#34;~/.aws/credentials and supply AWS region
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">queue1</span> <span class="p">=</span> <span class="n">SQS</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="n">credentials</span> <span class="p">=</span> <span class="n">ProfileCredentialsProvider</span><span class="p">().</span><span class="n">credentials</span><span class="p">,</span>
+            <span class="n">region</span> <span class="p">=</span> <span class="n">Regions</span><span class="p">.</span><span class="n">US_EAST_1</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;slatekit&#34;</span><span class="p">,</span> <span class="n">converter</span> <span class="p">=</span> <span class="n">converter</span><span class="p">)</span>
 
-    <span class="c1">// Setup 2: Use the type safe config in &#34;{user_id}/myapp/conf/queue.conf&#34;
-</span><span class="c1"></span>    <span class="c1">// Reads from the section &#34;sqs&#34; by default
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">queue2</span> <span class="p">=</span> <span class="n">AwsCloudQueue</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="s">&#34;app1-queue-1&#34;</span><span class="p">,</span> <span class="s">&#34;queue1&#34;</span><span class="p">,</span> <span class="n">converter</span><span class="p">,</span><span class="s">&#34;user://myapp/conf/queue.conf&#34;</span><span class="p">)</span>
+    <span class="c1">// Setup 2: Allow auto-loading of credentials from ~/.aws/credentials and region by string name supplied
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">queue2</span> <span class="p">=</span> <span class="n">SQS</span><span class="p">.</span><span class="n">of</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="n">region</span> <span class="p">=</span> <span class="s">&#34;us-east-1&#34;</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;slatekit&#34;</span><span class="p">,</span> <span class="n">converter</span> <span class="p">=</span> <span class="n">converter</span><span class="p">)</span>
 
-    <span class="c1">// Setup 3: Use the type safe config in &#34;{user_id}/myapp/conf/queue.conf&#34;
-</span><span class="c1"></span>    <span class="c1">// Reads from the section supplied &#34;sqs-3&#34; ( if you have multiple sqs configurations )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">queue3</span> <span class="p">=</span> <span class="n">AwsCloudQueue</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="s">&#34;app1-queue-1&#34;</span><span class="p">,</span>  <span class="s">&#34;queue1&#34;</span><span class="p">,</span> <span class="n">converter</span><span class="p">,</span> <span class="s">&#34;user://myapp/conf/queue.conf&#34;</span><span class="p">,</span> <span class="s">&#34;sqs-1&#34;</span><span class="p">)</span>
+    <span class="c1">// Setup 3: Use the config at &#34;~/myapp/conf/queue.conf&#34;
+</span><span class="c1"></span>    <span class="c1">// Reads from the section &#34;queues&#34; by default
+</span><span class="c1"></span>    <span class="cm">/**
+</span><span class="cm">     *  SAMPLE CONFIG:
+</span><span class="cm">     *  queues = true
+</span><span class="cm">     *  queues.key  = AWS_KEY_HERE
+</span><span class="cm">     *  queues.pass = AWS_PASSWORD_HERE
+</span><span class="cm">     *  queues.env  = dev
+</span><span class="cm">     *  queues.tag  = samples
+</span><span class="cm">     */</span>
+    <span class="k">val</span> <span class="py">queue3</span> <span class="p">=</span> <span class="n">SQS</span><span class="p">.</span><span class="n">of</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span> <span class="n">region</span> <span class="p">=</span> <span class="s">&#34;us-east-1&#34;</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;slatekit&#34;</span><span class="p">,</span> <span class="n">converter</span> <span class="p">=</span> <span class="n">converter</span><span class="p">,</span>
+        <span class="n">confPath</span> <span class="p">=</span> <span class="s">&#34;~/myapp/conf/queue.conf&#34;</span><span class="p">,</span> <span class="n">confSection</span> <span class="p">=</span> <span class="s">&#34;queues&#34;</span><span class="p">)</span>
+
+    <span class="k">val</span> <span class="py">queue</span> <span class="p">=</span> <span class="n">queue3</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="n">queue1</span> <span class="p">}</span>
+
      </code></pre></div>
 
 <br/>
@@ -322,36 +346,39 @@
 
 <p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
     <span class="c1">// Use case 1: init()
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
 
-    <span class="c1">// Use case 2: send 1 message
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#34;item 1&#34;</span><span class="p">)</span>
+    <span class="c1">// NOTES:
+</span><span class="c1"></span>    <span class="c1">// 1. All operations use the slate kit Result&lt;T,E&gt; type
+</span><span class="c1"></span>    <span class="c1">// 2. All operations return a slate kit Try&lt;T&gt; = Result&lt;T, Exception&gt;
+</span><span class="c1"></span>    <span class="c1">// Use case 2: send 1 message ( get back message id as String )
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#34;item 1&#34;</span><span class="p">)</span>
 
     <span class="c1">// Use case 3: send multiple messages
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#34;item 2&#34;</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#34;item 2&#34;</span><span class="p">)</span>
 
     <span class="c1">// Use case 4: send message with tags
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#34;user=kishore&#34;</span><span class="p">,</span> <span class="n">tagName</span><span class="p">=</span><span class="s">&#34;type&#34;</span><span class="p">,</span> <span class="n">tagValue</span><span class="p">=</span><span class="s">&#34;reg&#34;</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="s">&#34;user=kishore&#34;</span><span class="p">,</span> <span class="n">tagName</span> <span class="p">=</span> <span class="s">&#34;type&#34;</span><span class="p">,</span> <span class="n">tagValue</span> <span class="p">=</span> <span class="s">&#34;reg&#34;</span><span class="p">)</span>
 
     <span class="c1">// Use case 5: receive 1 message
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">queue2</span><span class="p">.</span><span class="n">next</span><span class="p">()</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">queue</span><span class="p">.</span><span class="n">next</span><span class="p">()</span>
     <span class="n">println</span><span class="p">(</span><span class="n">item1</span><span class="o">?.</span><span class="n">getValue</span><span class="p">())</span>
     <span class="n">println</span><span class="p">(</span><span class="n">item1</span><span class="o">?.</span><span class="n">getTag</span><span class="p">(</span><span class="s">&#34;type&#34;</span><span class="p">))</span>
 
     <span class="c1">// Use case 6: recieve 2 messages
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">items</span> <span class="p">=</span> <span class="n">queue2</span><span class="p">.</span><span class="n">next</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">items</span> <span class="p">=</span> <span class="n">queue</span><span class="p">.</span><span class="n">next</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 
     <span class="c1">// Use case 7: delete a message
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">complete</span><span class="p">(</span><span class="n">item1</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">done</span><span class="p">(</span><span class="n">item1</span><span class="p">)</span>
 
     <span class="c1">// Use case 8: delete many
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">completeAll</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">done</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
 
     <span class="c1">// Use case 9: abandon a message
-</span><span class="c1"></span>    <span class="n">queue2</span><span class="p">.</span><span class="n">abandon</span><span class="p">(</span><span class="n">queue2</span><span class="p">.</span><span class="n">next</span><span class="p">())</span>
+</span><span class="c1"></span>    <span class="n">queue</span><span class="p">.</span><span class="n">abandon</span><span class="p">(</span><span class="n">queue</span><span class="p">.</span><span class="n">next</span><span class="p">())</span>
 
     <span class="c1">// Use case 10: get count ( approximation )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">count</span> <span class="p">=</span> <span class="n">queue2</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
+</span><span class="c1"></span>    <span class="k">val</span> <span class="py">count</span> <span class="p">=</span> <span class="n">queue</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
     <span class="n">println</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
       </code></pre></div>
 <br/>
@@ -371,6 +398,7 @@
                 {
                     name: "Guide",
                     items: [
+                        { name:"Imports" , anchor: "#imports" },
                         { name:"Setup" , anchor: "#setup" },
                         { name:"Usage" , anchor: "#usage" }
                     ]

@@ -71,11 +71,18 @@ This component is currently **stable**. Following limitations, current work, pla
 %}}
 {{% section-end mod="arch/queues" %}}
 
-# Imports
+# Imports {#imports}
+Refer to {{% sk-link-example file="Example_Cloud_Queues.kt" name="Example_Cloud_Queues.kt" %}} for all imports.
 {{< highlight kotlin >}}
          
-    import slatekit.cloud.aws.AwsCloudQueue
-    import slatekit.common.queues.QueueStringConverter
+    // Required
+    import slatekit.cloud.aws.SQS
+    import slatekit.core.queues.QueueEntry
+    import slatekit.core.queues.QueueStringConverter
+
+    // Optional ( For examples)
+    import com.amazonaws.auth.profile.ProfileCredentialsProvider
+    import com.amazonaws.regions.Regions
      
 {{< /highlight >}}
 
@@ -84,18 +91,35 @@ This component is currently **stable**. Following limitations, current work, pla
 # Setup
 {{< highlight kotlin >}}
         
+    // This converts the queue entry payload to a type
+    // NOTES:
+    // 1. This can be String converter for any payload ( e.g. JSON )
+    // 2. You can create a custom type for type safety
     val converter = QueueStringConverter()
+    
     // Not storing any key/secret in source code for security purposes
-    // Setup 1: Use the default aws config file in "{user_dir}/.aws/credentials"
-    val queue1 = AwsCloudQueue<String>("app1-queue-1", "queue1", converter)
+    // Setup 1: Use the default aws config file in "~/.aws/credentials and supply AWS region
+    val queue1 = SQS<String>(credentials = ProfileCredentialsProvider().credentials,
+            region = Regions.US_EAST_1, name = "slatekit", converter = converter)
 
-    // Setup 2: Use the type safe config in "{user_id}/myapp/conf/queue.conf"
-    // Reads from the section "sqs" by default
-    val queue2 = AwsCloudQueue<String>("app1-queue-1", "queue1", converter,"user://myapp/conf/queue.conf")
+    // Setup 2: Allow auto-loading of credentials from ~/.aws/credentials and region by string name supplied
+    val queue2 = SQS.of<String>(region = "us-east-1", name = "slatekit", converter = converter)
 
-    // Setup 3: Use the type safe config in "{user_id}/myapp/conf/queue.conf"
-    // Reads from the section supplied "sqs-3" ( if you have multiple sqs configurations )
-    val queue3 = AwsCloudQueue<String>("app1-queue-1",  "queue1", converter, "user://myapp/conf/queue.conf", "sqs-1")
+    // Setup 3: Use the config at "~/myapp/conf/queue.conf"
+    // Reads from the section "queues" by default
+    /**
+     *  SAMPLE CONFIG:
+     *  queues = true
+     *  queues.key  = AWS_KEY_HERE
+     *  queues.pass = AWS_PASSWORD_HERE
+     *  queues.env  = dev
+     *  queues.tag  = samples
+     */
+    val queue3 = SQS.of<String>( region = "us-east-1", name = "slatekit", converter = converter,
+        confPath = "~/myapp/conf/queue.conf", confSection = "queues")
+
+    val queue = queue3.getOrElse { queue1 }
+
      
 {{< /highlight >}}
 
@@ -105,36 +129,39 @@ This component is currently **stable**. Following limitations, current work, pla
 {{< highlight kotlin >}}
         
     // Use case 1: init()
-    queue2.init()
+    queue.init()
 
-    // Use case 2: send 1 message
-    queue2.send("item 1")
+    // NOTES:
+    // 1. All operations use the slate kit Result<T,E> type
+    // 2. All operations return a slate kit Try<T> = Result<T, Exception>
+    // Use case 2: send 1 message ( get back message id as String )
+    queue.send("item 1")
 
     // Use case 3: send multiple messages
-    queue2.send("item 2")
+    queue.send("item 2")
 
     // Use case 4: send message with tags
-    queue2.send("user=kishore", tagName="type", tagValue="reg")
+    queue.send("user=kishore", tagName = "type", tagValue = "reg")
 
     // Use case 5: receive 1 message
-    val item1 = queue2.next()
+    val item1 = queue.next()
     println(item1?.getValue())
     println(item1?.getTag("type"))
 
     // Use case 6: recieve 2 messages
-    val items = queue2.next(2)
+    val items = queue.next(2)
 
     // Use case 7: delete a message
-    queue2.complete(item1)
+    queue.done(item1)
 
     // Use case 8: delete many
-    queue2.completeAll(items)
+    queue.done(items)
 
     // Use case 9: abandon a message
-    queue2.abandon(queue2.next())
+    queue.abandon(queue.next())
 
     // Use case 10: get count ( approximation )
-    val count = queue2.count()
+    val count = queue.count()
     println(count)
       
 
@@ -153,6 +180,7 @@ This component is currently **stable**. Following limitations, current work, pla
                 {
                     name: "Guide",
                     items: [
+                        { name:"Imports" , anchor: "#imports" },
                         { name:"Setup" , anchor: "#setup" },
                         { name:"Usage" , anchor: "#usage" }
                     ]

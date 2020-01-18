@@ -28,7 +28,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
             <div class="box text-center">
               <a href="arch/results"><img src="assets/media/img/white/target.png" alt="" class="img-fluid"></a>
               <div><a href="arch/results"><h3>Results</h3></a></div>
-              <p>Models <strong>successes and failures</strong> accurately with <strong>optional</strong> status codes. Works with exceptions, validations.
+              <p>Models <strong>successes and failures</strong> with <strong>optional</strong> sub-categories of errors with codes. Works with exceptions, validations.
                  See {{% sk-link-arch name="results" %}} 
               </p>
               {{% sk-version-download page="results" target="Android / Server" status="Stable" %}}
@@ -117,7 +117,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/files"><h3>Files</h3></a></div>
               <p>A simplified interface and abstraction for persistent file storage. Default implementation available in <strong>AWS S3</strong> See {{% sk-link-arch page="files" name="Files" %}} 
               </p>
-              {{% sk-version-download page="cloud" target="Server" %}}
+              {{% sk-version-download page="cloud" target="Server" status="Stable" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -156,7 +156,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>A simplified interface and abstraction for persistent queues. 
                 Support for <strong>AWS SQS</strong> and in-memory queue. See {{% sk-link-arch page="queues" name="Queues" %}} 
               </p>
-              {{% sk-version-download page="cloud" target="Server" %}}
+              {{% sk-version-download page="cloud" target="Server" status="Stable" %}}
             </div>
           </div>
           <!--

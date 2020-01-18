@@ -72,11 +72,17 @@ This component is currently **stable**. Following limitations, current work, pla
 
 {{% section-end mod="arch/files" %}}
 
-# Imports
+# Imports {#imports}
+Refer to {{% sk-link-example file="Example_Cloud_Files.kt" name="Example_Cloud_Files.kt" %}} for all imports.
 {{< highlight kotlin >}}
-        
-    import slatekit.cloud.aws.AwsCloudFiles
-    
+    // Required
+    import slatekit.cloud.aws.S3
+    import slatekit.core.files.CloudFiles
+
+    // Optional ( For examples)
+    import com.amazonaws.auth.profile.ProfileCredentialsProvider
+    import com.amazonaws.regions.Regions
+
 {{< /highlight >}}
 
 {{% section-end mod="arch/files" %}}
@@ -84,18 +90,28 @@ This component is currently **stable**. Following limitations, current work, pla
 # Setup
 {{< highlight kotlin >}}
         
-    // Not storing any key/secret in source code for security purposes
     // Setup 1: Use the default aws config file in "{user_dir}/.aws/credentials"
-    val files1 = AwsCloudFiles("app1-files-1", "slatekit", false)
+    val files1 = S3(credentials = ProfileCredentialsProvider().credentials,
+            region = Regions.US_EAST_1, bucket = "slatekit-unit-tests", createBucket = false)
 
-    // Setup 2: Use the type safe config in "{user_id}/myapp/conf/files.conf"
-    // Specify the api key section as "sqs"
-    val files2 = AwsCloudFiles("app1-files-1", "slatekit",false, "user://myapp/conf/files.conf", "s3")
+    // Setup 2: Use the default aws config file in "{user_dir}/.aws/credentials"
+    val files2 = S3.of(region = "us-west-2", bucket = "slatekit-unit-tests", createBucket = false)
 
-    // Setup 2: Use the type safe config in "{user_id}/myapp/conf/files.conf"
-    // Specify the api key section as "sqs"
-    val files3 = AwsCloudFiles("app1-files-1", "slatekit",false, "user://myapp/conf/files.conf", "s3-1")
+    // Setup 3: Use the config "{user_id}/myapp/conf/files.conf"
+    // Specify the api key section as "files"
+    /**
+     *  SAMPLE CONFIG:
+     *  files = true
+     *  files.key  = AWS_KEY_HERE
+     *  files.pass = AWS_PASSWORD_HERE
+     *  files.env  = dev
+     *  files.tag  = samples
+     */
+    val files3 = S3.of(region = "us-west-2", bucket = "slatekit-unit-tests", createBucket = false,
+            confPath = "~/.slatekit/conf/files.conf", confSection = "files")
 
+    val files:CloudFiles = files2.getOrElse { files1 }
+     
 {{< /highlight >}}
 
 {{% section-end mod="arch/files" %}}
@@ -103,38 +119,41 @@ This component is currently **stable**. Following limitations, current work, pla
 # Usage
 {{< highlight kotlin >}}
         
-    // Use case 1: Connect using parameters
-    files1.init()
+    // Use case 1: Creates bucket if configured
+    files.init()
 
+    // NOTES: 
+    // 1. All operations use the slate kit Result<T,E> type
+    // 2. All operations return a slate kit Try<T> = Result<T, Exception>
     // Use case 2: create using just name and content
-    files1.create("file-1", "content 1")
+    val result1:Try<String> = files.create("file-1", "content 1")
 
     // Use case 3: update using just name and content
-    files1.update("file-1", "content 2")
+    files.update("file-1", "content 2")
 
     // Use case 4: create using folder and file name
-    files1.create("folder-1", "file-1", "content 1")
+    files.create("folder-1", "file-1", "content 1")
 
     // Use case 5: update using folder and file name
-    files1.update("folder-1", "file-1", "content 2")
+    files.update("folder-1", "file-1", "content 2")
 
     // Use case 6: get file as a text using just name
-    files1.getAsText("file-1")
+    files.getAsText("file-1")
 
     // Use case 7: get file using folder and file name
-    files1.getAsText("folder-1", "file-1")
+    files.getAsText("folder-1", "file-1")
 
     // Use case 8: download file to local folder
-    files1.download("file-1", "~/dev/temp/")
+    files.download("file-1", "~/dev/temp/")
 
     // Use case 9: download using folder and file name to local folder
-    files1.download("folder-1", "file-1", "~/dev/temp")
+    files.download("folder-1", "file-1", "~/dev/temp")
 
     // Use case 10: delete file by just the name
-    files1.delete("file-1")
+    files.delete("file-1")
 
     // Use case 11: delete using folder and name
-    files1.delete("folder-1", "file-1")
+    files.delete("folder-1", "file-1")
       
 
 {{< /highlight >}}
@@ -152,6 +171,7 @@ This component is currently **stable**. Following limitations, current work, pla
                 {
                     name: "Guide",
                     items: [
+                        { name:"Imports" , anchor: "#imports" },
                         { name:"Setup" , anchor: "#setup" },
                         { name:"Usage" , anchor: "#usage"  }
                     ]

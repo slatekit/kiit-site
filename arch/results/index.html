@@ -231,47 +231,49 @@
 
 <h1 id="compare">Compare</h1>
 
+<p>The main differences between other implementations is that Slate Kit Result&lt;T,E&gt; offers features #3, #4, and #5 above in Goals and so the differences the the following:
+<p>
+1. <strong>Custom Error</strong>: The Error type <strong>E</strong> can be anything, unlike Kotlin and Swift<br/>
+2. <strong>Aliases</strong>: With custom error types, you can have aliases such as <strong>typealias Try&lt;T&gt; = Result&lt;T,Exception&gt;</strong><br/>
+3. <strong>Statuses</strong>: Contains an <strong>optional</strong> <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> on both Success and Failure branches to further <strong>sub-categorize</strong> successes and failures.<br/>
+4. <strong>Builders</strong>: Several convenience builders to easily construct different categories of errors, and from different sources ( String, Exception, Err).
+</p></p>
+
 <p><table class="table table-bordered table-striped">
     <tr>
         <td><strong>#</strong></td>
         <td><strong>Language</strong></td>
         <td><strong>Name</strong></td>
-        <td><strong>Notes</strong></td>
+        <td><strong>Differences</strong></td>
     </tr>
     <tr>
         <td><strong>1</strong></td>
         <td><strong>Kotlin</td>
-        <td><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result</a></td>
-        <td>The Kotlin Result Error type is Exception and currently for internal use</td>
+        <td><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/index.html">Result&lt;T&gt;</a></td>
+        <td>Result Error type is <strong>Exception</strong></td>
     </tr>
     <tr>
         <td><strong>2</strong></td>
         <td><strong>Swift</td>
-        <td><a href="https://developer.apple.com/documentation/swift/result">Result</a></td>
-        <td>Very similar to Kotlin</td>
+        <td><a href="https://developer.apple.com/documentation/swift/result">Result&lt;T&gt;</a></td>
+        <td>Swift Error type is <strong>Error</strong></td>
     </tr>
     <tr>
         <td><strong>3</strong></td>
         <td><strong>Rust</td>
-        <td><a href="https://doc.rust-lang.org/std/result/">Result</a></td>
-        <td>The Rust result branches are Ok / Err rather than Success / Failure.</td>
+        <td><a href="https://doc.rust-lang.org/std/result/">Result&lt;T,E&gt;</a></td>
+        <td>Slate Kit differs with addition of Status, and supplied Aliases, Builders ( see docs here )</td>
     </tr>
     <tr>
         <td><strong>4</strong></td>
         <td><strong>Scala</td>
-        <td><a href="https://www.scala-lang.org/api/2.12.4/scala/util/Either.html">Either</a></td>
-        <td>General purpose use to represent A or B, branches are Left / Right</td>
+        <td><a href="https://www.scala-lang.org/api/2.12.4/scala/util/Either.html">Either&lt;L,R&gt;</a></td>
+        <td>General purpose use to represent A or B, branches are Left / Right, although typically used for Success/Failure. Slate Kit differs in semantics by using Success instead of Right, and Failure instead of Left ( similar with Scala Try, but with a customizable error type )</td>
     </tr>
     <tr>
         <td><strong>5</strong></td>
-        <td><strong>Scala</td>
-        <td><a href="https://www.scala-lang.org/api/2.12.4/scala/util/Try.html">Try</a></td>
-        <td>Models successes and failures with exceptions</td>
-    </tr>
-    <tr>
-        <td><strong>6</strong></td>
         <td><strong>Go</td>
-        <td><a href="https://github.com/grpc/grpc/blob/master/doc/statuscodes.md">GRPC Codes</a></td>
+        <td><a href="https://github.com/grpc/grpc/blob/master/doc/statuscodes.md">GRPC_Codes</a></td>
         <td>Status codes in Slate Kit are inspired by these</td>
     </tr>
 </table>
