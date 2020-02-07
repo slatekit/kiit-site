@@ -58,7 +58,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/cli"><h3>CLI</h3></a></div>
               <p>Command line interface to handle actions in an interactive way. Has customization and formatting features. See {{% sk-link-arch page="cli" name="CLI" %}} </a>.
               </p>
-              {{% sk-version-download page="cli" target="Server" %}}
+              {{% sk-version-download page="cli" target="Server" status="Stable" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
