@@ -16,6 +16,12 @@ The Slate Jobs component is a background job/persistant task queue system for Ko
 {{% sk-link-cli %}}
 {{% break %}}
 
+# Diagram
+A high-level diagram of the concepts in this component
+{{% break %}}
+<img src="assets/app/media/arch/slatekit-jobs.png" class="rounded mx-auto d-block img-fluid" />
+{{% break %}}
+
 # Goals
 <table class="table table-bordered table-striped">
     <tr>
