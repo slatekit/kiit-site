@@ -21,6 +21,12 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 {{% sk-link-cli %}}
 {{% break %}}
 
+# Diagram
+A high-level diagram of the concepts in this component
+{{% break %}}
+<img src="assets/app/media/arch/slatekit-app.png" class="rounded mx-auto d-block img-fluid" />
+{{% break %}}
+
 # Goals {#goals}
 We often have to create a new application which requires typically much boiler-plate code.
 These include environments, config files, argument parsing, logging setup, and application life-cycle events.
