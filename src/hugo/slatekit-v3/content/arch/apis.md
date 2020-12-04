@@ -17,6 +17,14 @@ Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enr
 {{% sk-link-cli %}}
 {{% break %}}
 
+
+# Diagram
+A high-level diagram of the concepts in this component
+{{% break %}}
+<img src="assets/app/media/arch/slatekit-apis.png" class="rounded mx-auto d-block img-fluid" />
+{{% break %}}
+
+
 # Goals
 <table class="table table-bordered table-striped">
     <tr>
