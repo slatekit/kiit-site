@@ -8,6 +8,14 @@ section_header: Cache
 The Slate Cache is a light-weight LRU ( Least Recently Used ) Cache for both Android and Server. While there are many comprehensive Cache solutions available for the JVM, this is designed to be an **in-memory light-weight** cache with an emphasis on **diagnostics** and **async** functionality leveraging Kotlin **Coroutines and Channels**.
 {{% break %}}
 
+
+# Diagram
+A high-level diagram of the concepts in this component
+{{% break %}}
+<img src="assets/app/media/arch/slatekit-cache.png" class="rounded mx-auto d-block img-fluid" />
+{{% break %}}
+
+
 # Goals
 <table class="table table-bordered table-striped">
     <tr>
