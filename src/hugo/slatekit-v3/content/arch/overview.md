@@ -67,7 +67,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/cache"><h3>Cache</h3></a></div>
               <p>Light-weight cache with an emphasis towards diagnostics, and a synchronous or async Channel based APIs. See {{% sk-link-arch page="cache" name="Cache" %}} 
               </p>
-              {{% sk-version-download page="cache" target="Android / Server" %}}
+              {{% sk-version-download page="cache" target="Android / Server" status="Stable" %}}
             </div>
           </div>
           <!--
@@ -188,7 +188,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/tracking"><h3>Tracking</h3></a></div>
               <p>Support for diagnostics and tracking of runtime values and recording of events. This supplements typical metrics libraries. See {{% sk-link-arch page="tracking" name="Tracking" %}} 
               </p>
-              {{% sk-version-download page="tracking" target="Android / Server" %}}
+              {{% sk-version-download page="tracking" target="Android / Server" status="Stable" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -197,7 +197,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="utils/overview"><h3>Utilities</h3></a></div>
               <p>A large suite of common code / utilities to supplement the Standard Library with items like Args, Envs, Configs etc. {{% sk-link-util page="overview" name="Utilities" %}} 
               </p>
-              {{% sk-version-download page="common" target="Android / Server" %}}
+              {{% sk-version-download page="common" target="Android / Server" status="Stable" %}}
             </div>
           </div>
       </div>
