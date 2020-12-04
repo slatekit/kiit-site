@@ -7,8 +7,12 @@ section_header: Results
 # Overview
 **{{% sk-link-code component="result" filepath="results/Result.kt" name="Result<T,E>" %}}** is a core component of Slate Kit and is used for **accurately modeling successes and failures** of any operation, using a functional approach to error handling. Result is **NOT a new concept**, as it currently exists in various forms in other languages (see below), however **Slate Kit Result differs** significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:
 
-<img src="assets/app/media/arch/Result_TE.png" class="rounded mx-auto d-block img-fluid" />
+{{% break %}}
 
+# Diagram
+A high-level diagram of the concepts in this component
+{{% break %}}
+<img src="assets/app/media/arch/slatekit-result.png" class="rounded mx-auto d-block img-fluid" />
 {{% break %}}
 
 # Goals

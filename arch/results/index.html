@@ -194,9 +194,14 @@
 
 <p><strong><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a core component of Slate Kit and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling. Result is <strong>NOT a new concept</strong>, as it currently exists in various forms in other languages (see below), however <strong>Slate Kit Result differs</strong> significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:</p>
 
-<p><img src="assets/app/media/arch/Result_TE.png" class="rounded mx-auto d-block img-fluid" /></p>
-
 <br/><br/>
+
+<h1 id="diagram">Diagram</h1>
+
+<p>A high-level diagram of the concepts in this component
+<br/><br/>
+<img src="assets/app/media/arch/slatekit-result.png" class="rounded mx-auto d-block img-fluid" />
+<br/><br/></p>
 
 <h1 id="goals">Goals</h1>
 
