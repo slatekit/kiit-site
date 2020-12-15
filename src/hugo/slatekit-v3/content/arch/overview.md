@@ -54,6 +54,16 @@ and scalable applications on the JVM. Several of the modules can be used for bot
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
+              <a href="arch/actors"><img src="assets/media/img/white/gears.png" alt="" class="img-fluid"></a>
+              <div><a href="arch/actors"><h3>Actors</h3></a></div>
+              <p>A micro actor library with support for pausable actors to gracefully start, stop, pause and resume actors.
+                See {{% sk-link-arch page="actors" name="Actors" %}} 
+              </p>
+              {{% sk-version-download page="actors" target="Android / Server" %}}
+            </div>
+          </div>
+          <div class="col-md-4 wow fadeInUp">
+            <div class="box text-center">
               <a href="arch/cli"><img src="assets/media/img/white/terminal.png" alt="" class="img-fluid"></a>
               <div><a href="arch/cli"><h3>CLI</h3></a></div>
               <p>Command line interface to handle actions in an interactive way. Has customization and formatting features. See {{% sk-link-arch page="cli" name="CLI" %}} </a>.

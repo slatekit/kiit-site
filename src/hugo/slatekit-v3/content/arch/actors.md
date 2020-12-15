@@ -8,13 +8,6 @@ section_header: Actors
 The Slate Actors component is a micro actor library with support for **pausable** actors 
 to provide the ability to gracefully **start, stop, pause, resume** actors.
 {{% break %}}
-
-{{< highlight bash >}}
-    
-    slatekit new act -name="SampleJob" -package="mycompany.apps"
-    
-{{< /highlight >}}
-{{% sk-link-cli %}}
 {{% break %}}
 
 # Diagram
