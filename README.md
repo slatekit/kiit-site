@@ -32,17 +32,17 @@ Make changes on a separate branch e.g **docs-version-1.20.0** and then merge to 
 4. Copy content to root directory e.g. `public/info` -> `~/git/slatekit-site/info`
 5. Publish your branch
 6. Create a PR to merge your branch to main/master.
-7. After the merge to main/master, the site will automatically update ( there may be a slight delay due to cached content )
+7. After the merge to main/master, the site will automatically update(delayed due to cached content)
 
 
 # Directories
 
 name | purpose | location 
 --|---|---
-theme   | current theme used for the site | src/hugo/slatekit-v3/themes/wavo
-content | content of each page | src/hugo/slatekit-v3/content/start/overview
-assets  | web assets like css, js, images | src/hugo/slatekit-v3/themes/wavo/static/assets
-shortcodes   | reusable snippets of html | src/hugo/slatekit-v3/themes/layouts/shortcodes/sk-modules.html
+theme   | theme for site   | src/hugo/slatekit-v3/themes/wavo
+content | content for page | src/hugo/slatekit-v3/content/start/overview
+assets  | js,css,img       | src/hugo/slatekit-v3/themes/wavo/static/assets
+shortcodes   | reusable html | src/hugo/slatekit-v3/themes/layouts/shortcodes/sk-modules.html
 
 
 
