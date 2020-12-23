@@ -7,8 +7,12 @@
 </a>
 <br/>
 
-{{ if (isset .Params "status") }}
-    <span class="badge badge-success">{{.Get "status" }}</span>
-{{ else }}
-    <span class="badge badge-light">Beta</span>
+{{ if (.Get "stable") }}
+    <span class="badge badge-success">Stable</span>
+{{ else if (.Get "beta")  }}
+    <span class="badge badge-primary">Beta</span>
+{{ else if (.Get "internal") }}
+    <span class="badge badge-warning">Internal use</span>
+{{ else }}    
+    <span class="badge badge-danger">Danger!</span>
 {{ end }}
