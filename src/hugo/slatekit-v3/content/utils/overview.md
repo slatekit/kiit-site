@@ -1,7 +1,6 @@
 ---
 title: "Utilities"
 date: 2019-03-17T14:30:52-04:00
-draft: true
 ---
 # Overview
 Slate Kit <strong>Utilities</strong> supplement the existing Kotlin standard library by offering a powerful set of general purpose Kotlin components that can be used for any application. Many of these components are located in the {{% sk-link-code component="common" filepath="common" name="slatekit-common" %}} project. However, there are a few components located in other projects. Refer to each utility component for more info.
