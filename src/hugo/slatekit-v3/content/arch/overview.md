@@ -232,6 +232,9 @@ and scalable applications on the JVM. Several of the modules can be used for bot
       </div>
   </div>
 </section>
+<br/><br/>
+<img src="assets/app/media/arch/slatekit-overview.png" class="rounded mx-auto d-block img-fluid" />
+
 
 
 
