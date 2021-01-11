@@ -288,24 +288,6 @@ Also refer to the <a href="arch/apis" >APIs</a> component.</p>
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
-<h2 id="cli">CLI</h2>
-
-<p>Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
-Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_CLI.kt" >Example_CLI.kt</a>.</p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">      
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    
-    <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> MyCLI1
-    :&gt; gradle build
-    :&gt; gradle run
-    </code></pre></div>
-<br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
-
 <h2 id="job">JOB</h2>
 
 <p>Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in &ldquo;pages&rdquo;, or process items from queues.
@@ -337,6 +319,29 @@ Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https
 
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
+
+<h2 id="cli">CLI</h2>
+
+<p>Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
+Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_CLI.kt" >Example_CLI.kt</a>.</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">      
+    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+    
+    <span class="c1"># Now build and run via gradle</span>
+    :&gt; <span class="nb">cd</span> MyCLI1
+    :&gt; gradle build
+    :&gt; gradle distZip
+    :&gt; <span class="nb">cd</span> build/distributions
+
+    <span class="c1"># Unzip the MyCLI1.zip and run</span>
+    :&gt; <span class="nb">cd</span> MyCLI1/bin
+    :&gt; ./MyCLI1
+    </code></pre></div>
+<br/>
+
+<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 
       </div>
     </section>  

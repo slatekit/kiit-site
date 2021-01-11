@@ -119,23 +119,6 @@ Also refer to the {{% sk-link-arch page="apis" name="APIs" %}} component.
 {{% section-end mod="arch/generators" %}}
 
 
-## CLI {#cli}
-Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
-Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and example: {{% sk-link-example file="Example_CLI.kt" name="Example_CLI.kt" %}}.
-
-{{< highlight bash >}}
-      
-    slatekit new cli -name="MyCLI1" -packageName="company1.apps"
-    
-    # Now build and run via gradle
-    :> cd MyCLI1
-    :> gradle build
-    :> gradle run
-    
-{{< /highlight >}}
-{{% section-end mod="arch/generators" %}}
-
-
 ## JOB {#job}
 Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in "pages", or process items from queues.
 Refer to the {{% sk-link-arch page="jobs" name="Jobs" %}} component and example: {{% sk-link-example file="Example_Jobs.kt" name="Example_Jobs.kt" %}}.
@@ -166,6 +149,28 @@ For the Job, you can run the different job types by passing **-job.name** to the
     
 {{< /highlight >}}
 
+{{% section-end mod="arch/generators" %}}
+
+
+## CLI {#cli}
+Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
+Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and example: {{% sk-link-example file="Example_CLI.kt" name="Example_CLI.kt" %}}.
+
+{{< highlight bash >}}
+      
+    slatekit new cli -name="MyCLI1" -packageName="company1.apps"
+    
+    # Now build and run via gradle
+    :> cd MyCLI1
+    :> gradle build
+    :> gradle distZip
+    :> cd build/distributions
+
+    # Unzip the MyCLI1.zip and run
+    :> cd MyCLI1/bin
+    :> ./MyCLI1
+    
+{{< /highlight >}}
 {{% section-end mod="arch/generators" %}}
 
 
