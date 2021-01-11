@@ -31,7 +31,7 @@ You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
     
 {{< /highlight >}}
 <div class="alert alert-danger" role="alert">
-    You may experience some issues with the install, consider the following
+    You may experience some issues with the install, consider the following<br/>
     <strong>1:</strong> Ensure System Preferences -> security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )<br/>
     <strong>2:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
 </div>
