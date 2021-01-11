@@ -7,163 +7,40 @@ section_header: Generators
 
 # Overview
 Slate Kit comes with a command line tool to serve as a project generator.
-This is simply a Kotlin executable jar packaged as a Java Application via gradle that can be executed on the command line with bash/batch scripts. The application takes a template comprised of a instructions, along with files/folders that are copied to a new destinated folder representing the app/project to create. The files contain placeholder values that replaced the name of the app aamong other variables. This is a minimal version of **nodejs yeoman** or **python cookie-cutter**
+This is available on Mac using <strong>HomeBrew</strong>
+This project generator is a pacakged java based application, and works like a minimal version of **nodejs yeoman** or **python cookie-cutter**
 
 {{< highlight bash >}}
     
-    slatekit new app -name="Sample1" -package="mycompany.apps"
+    slatekit new app -name="Sample1" -packageName="mycompany.apps"
     
 {{< /highlight >}}
-
-The Slate Kit project generator is a java app ( packaged as a Java application via gradle ) and is composed of containing 3 things:
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Item</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Example</strong></td>
-        <td><strong>Desc</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Scripts</strong></td>
-        <td><strong>slatekit and slatekit.bat</strong></td>
-        <td>For running the commands</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Settings</strong></td>
-        <td><strong>conf/env.conf</strong></td>
-        <td>For various settings ( locations )</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong>Templates</strong></td>
-        <td><strong>templates/slatekit/app</strong></td>
-        <td>Templates for each project type</td>
-    </tr>
-</table>
 
 {{% break %}}
 
 
-# Setup
+
+# Mac OS
+You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
 {{% sk-link-cli %}}
 
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Step</strong></td>
-        <td><strong>Action</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Download</strong></td>
-        <td>
-            Download the Slate Kit tools by git cloning the tools git repo to your local machine.
-            <br/>
-            E.g. sample folder could be <strong>~/tools/slatekit</strong>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Path</strong></td>
-        <td>
-            The generator is 1 project in tools and is stored in a sub directory called generator. <br/>
-            Add the path to Slate Kit Generator<strong>~/tools/slatekit/generator</strong> to your <strong>PATH</strong> ( e.g. <strong>~/.bash_profile or /etc/paths </strong>)
-            <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> This allow you to avoid prefixing slatekit with <strong>./</strong> as in <strong>./slatekit </strong> and simply using <strong>slatekit</strong>
+{{< highlight bash >}}
+     
+    brew tap slatekit/slatekit
+    brew install slatekit
+    
+{{< /highlight >}}
+<div class="alert alert-danger" role="alert">
+    You may experience some issues with the install, consider the following
+    <strong>1:</strong> Ensure System Preferences -> security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )<br/>
+    <strong>2:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
 </div>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong>Config</strong></td>
-        <td>
-            Now you just have to configure 2 settings in the <strong>~/tools/slatekit/conf/env.conf</strong> file.
-            <ol>
-                <li>Set the <strong>generation.source</strong> to the location of the templates folder in the repo. 
-                </li>
-                <li>Set the <strong>generation.output</strong> to the location of the gen folder in the repo.
-                </li>
-            </ol>
-            {{< highlight props >}}
-    // Path to the templates
-    generation.source = ~/tools/slatekit/templates
-
-    // Path to the generated projects
-    generation.output = ~/tools/slatekit/gen
-    {{< /highlight >}}
-<div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> This step will not be needed in a future version
-</div>
-        </td>
-    </tr>
-</table>
-
 {{% break %}}
 
 
-# Usage {#usage}
-You can generate a new project by running slatekit with the appropriate commands. You can then run the generated app via gradle
-{{% break %}}
-
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Step</strong></td>
-        <td><strong>Action</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Create</strong></td>
-        <td>
-            To create a new project just cd to the Slate Kit folder and run the commands.
-            <br/><br/>
-{{< highlight bash >}}
-    # FORMAT: slatekit new {TYPE} -name={NAME} -package={PACKAGE}
-    # @name = name of application / folder name
-    # @package = the kotlin package name for the app
-    
-    :> cd ~/tools/slatekit/generator
-    :> slatekit new app -name="MyApp1" -package="mycompany.apps"
-    
-{{< /highlight >}}
-        </td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Build</strong></td>
-        <td>
-            The new project will be created in the <strong>SLATE_KIT_HOME/generator/gen</strong> folder.
-You can then cd into that to build it.
-            <br/><br/>
-{{< highlight bash >}}
-    # ~/tools/slatekit
-    :> cd gen/MyApp1
-    :> gradle build
-    
-{{< /highlight >}}
-        </td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong>Run</strong></td>
-        <td>
-            Once the project is built, you can simply run with gradle ( as a quick test ).
-            <br/><br/>
-{{< highlight bash >}}
-    :> gradle run
-    
-{{< /highlight >}}
-        </td>
-    </tr>
-</table>
-
-{{% break %}}
-
-
-# Future
-These are the features to be added in the future to further enhance/customize the project generation.
+# Settings
+The settings for the generator are automatically created at <strong>~/.slatekit/tools/cli/conf/settings.conf</strong> when you try to create your first project.
+The settings are listed below
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
@@ -172,32 +49,32 @@ These are the features to be added in the future to further enhance/customize th
         <td><strong>Example</strong></td>
     </tr>
     <tr>
-        <td><strong>gen.output</strong></td>
-        <td><strong>Variable</strong></td>
-        <td><strong>Customize the output directory of generated project</strong></td>
-        <td>~/myapps/app1 </td>
+        <td><strong>slatekit.version</strong></td>
+        <td>Variable</td>
+        <td>Version of Slate Kit stable libraries to use</td>
+        <td>1.34.0 </td>
     </tr>
     <tr>
-        <td><strong>sk.version</strong></td>
-        <td><strong>Variable</strong></td>
-        <td><strong>Customize the Slate Kit Version</strong></td>
-        <td>1.0.1 </td>
+        <td><strong>slatekit.version.beta</strong></td>
+        <td>Variable</td>
+        <td>Version of Slate Kit beta libraries to use</td>
+        <td>0.64.0 </td>
     </tr>
     <tr>
-        <td><strong>kt.version</strong></td>
-        <td><strong>Variable</strong></td>
-        <td><strong>Customize the Kotlin Version</strong></td>
+        <td><strong>kotlin.version</strong></td>
+        <td>Variable</td>
+        <td>Version of Kotlin to use</td>
         <td>1.3.6</td>
     </tr>
     <tr>
-        <td><strong>Templates</strong></td>
-        <td><strong>Feature</strong></td>
-        <td><strong>Downloading of templates from Git or remote sources</strong></td>
-        <td>n/a</td>
+        <td><strong>generation.source</strong></td>
+        <td>Variable</td>
+        <td>Represents the path to the templates used for project code generation. This is defaulted to the version of Slate Kit installed through HomeBrew</td>
+        <td>/usr/local/Cellar/slatekit/1.34.0/templates</td>
     </tr>
 </table>
 <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> The tool does <strong>NOT</strong> currently support downloading of templates from Git or online from a central repository. You must issue a Git checkout/update to get/use the latest templates.
+    <strong>Tip:</strong> The tool does <strong>NOT</strong> currently support setting up custom templates, but this is a desired future feature.
 </div>
 {{% section-end mod="arch/generators" %}}
 
@@ -209,12 +86,11 @@ These are all the types of project generators available by default from Slate Ki
 Generates a new Slate Kit stand-alone application with support command line args, environments, configs, logging, help usage and more. Refer to the {{% sk-link-arch page="app" name="App" %}} component and example: {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit/generator
-
-    :> slatekit new app -name="MyApp1" -package="company1.apps"
+     
+    :> slatekit new app -name="MyApp1" -packageName="company1.apps"
     
     # Now build and run via gradle
-    :> cd gen/MyApp1
+    :> cd MyApp1
     :> gradle build
     :> gradle run
     
@@ -227,19 +103,18 @@ Generates a new API project for hosting HTTP/Web APIs. APIs in Slate Kit are con
 Also refer to the {{% sk-link-arch page="apis" name="APIs" %}} component.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit/generator
-    
-    slatekit new api -name="MyAPI1" -package="company1.apis"
+      
+    slatekit new api -name="MyAPI1" -packageName="company1.apis"
     
     # Now build and run via gradle
-    :> cd gen/MyApp1
+    :> cd MyAPI1
     :> gradle build
     :> gradle run
     
 {{< /highlight >}}
 
 <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> A postman script named <strong>samples-postman.json</strong> is also created in the root folder of the generated project. You can import this into PostMan and easily test the API actions/endpoints
+    <strong>Tip:</strong> A postman script named <strong>slatekit-samples-postman.json</strong> is also created in the root folder of the generated project. You can import this into PostMan and easily test the API actions/endpoints
 </div>
 {{% section-end mod="arch/generators" %}}
 
@@ -249,12 +124,11 @@ Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can
 Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and example: {{% sk-link-example file="Example_CLI.kt" name="Example_CLI.kt" %}}.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit/generator
-    
-    slatekit new cli -name="MyCLI1" -package="company1.apps"
+      
+    slatekit new cli -name="MyCLI1" -packageName="company1.apps"
     
     # Now build and run via gradle
-    :> cd gen/MyApp1
+    :> cd MyCLI1
     :> gradle build
     :> gradle run
     
@@ -267,9 +141,8 @@ Generates a new background job that can be gracefully started, stopped, paused, 
 Refer to the {{% sk-link-arch page="jobs" name="Jobs" %}} component and example: {{% sk-link-example file="Example_Jobs.kt" name="Example_Jobs.kt" %}}.
 
 {{< highlight bash >}}
-    :> cd ~/tools/slatekit/generator
-    
-    slatekit new job -name="MyJob1" -package="company1.jobs"
+     
+    slatekit new job -name="MyJob1" -packageName="company1.jobs"
     
 {{< /highlight >}}
 
@@ -280,7 +153,7 @@ For the Job, you can run the different job types by passing **-job.name** to the
     gradle build
 
     # To run the One Time Job sample
-    gradle run --args='-job.name=single'
+    gradle run --args='-job.name=onetime'
 
     # To run the Paged Job sample
     gradle run --args='-job.name=paging'
@@ -293,39 +166,6 @@ For the Job, you can run the different job types by passing **-job.name** to the
     
 {{< /highlight >}}
 
-{{% section-end mod="arch/generators" %}}
-
-## LIB {#lib}
-Generates an empty gradle library project with some Slate Kit library references.
-
-{{< highlight bash >}}
-    :> cd ~/tools/slatekit/generator
-    
-    slatekit new lib -name="MyLib1" -package="company1.libs"
-    
-    # Now build and run via gradle
-    :> cd gen/MyApp1
-    :> gradle build
-    :> gradle run
-    
-{{< /highlight >}}
-{{% section-end mod="arch/generators" %}}
-
-## SQL {#orm}
-{{% sk-tip-generic text="Generator for this type is coming soon. This will generate a new project containing data models, repositories and services to provide a DDD ( Domain Driven Design) approach to modeling and managing your data." %}}
-
-
-{{< highlight bash >}}
-    :> cd ~/tools/slatekit/generator
-    
-    slatekit new sql -name="MyApp1" -package="company1.apps"
-    
-    # Now build and run via gradle
-    :> cd gen/MyApp1
-    :> gradle build
-    :> gradle run
-    
-{{< /highlight >}}
 {{% section-end mod="arch/generators" %}}
 
 

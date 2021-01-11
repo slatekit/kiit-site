@@ -171,158 +171,39 @@
 <h1 id="overview">Overview</h1>
 
 <p>Slate Kit comes with a command line tool to serve as a project generator.
-This is simply a Kotlin executable jar packaged as a Java Application via gradle that can be executed on the command line with bash/batch scripts. The application takes a template comprised of a instructions, along with files/folders that are copied to a new destinated folder representing the app/project to create. The files contain placeholder values that replaced the name of the app aamong other variables. This is a minimal version of <strong>nodejs yeoman</strong> or <strong>python cookie-cutter</strong></p>
+This is available on Mac using <strong>HomeBrew</strong>
+This project generator is a pacakged java based application, and works like a minimal version of <strong>nodejs yeoman</strong> or <strong>python cookie-cutter</strong></p>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
     </code></pre></div>
-
-<p>The Slate Kit project generator is a java app ( packaged as a Java application via gradle ) and is composed of containing 3 things:
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Item</strong></td>
-        <td><strong>Type</strong></td>
-        <td><strong>Example</strong></td>
-        <td><strong>Desc</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Scripts</strong></td>
-        <td><strong>slatekit and slatekit.bat</strong></td>
-        <td>For running the commands</td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Settings</strong></td>
-        <td><strong>conf/env.conf</strong></td>
-        <td>For various settings ( locations )</td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong>Templates</strong></td>
-        <td><strong>templates/slatekit/app</strong></td>
-        <td>Templates for each project type</td>
-    </tr>
-</table></p>
 
 <br/><br/>
 
-<h1 id="setup">Setup</h1>
+<h1 id="mac-os">Mac OS</h1>
 
+<p>You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
 <div class="alert alert-info" role="alert">
   You can download the Slate Kit Project Generator at 
-  <a href="https://github.com/code-helix/slatekit-tools" >slatekit-tools</a>. <br/>
+  <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
   Install instructions located at <a href="start/generators" >Generators</a>. 
-</div>
+</div></p>
 
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Step</strong></td>
-        <td><strong>Action</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Download</strong></td>
-        <td>
-            Download the Slate Kit tools by git cloning the tools git repo to your local machine.
-            <br/>
-            E.g. sample folder could be <strong>~/tools/slatekit</strong>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Path</strong></td>
-        <td>
-            The generator is 1 project in tools and is stored in a sub directory called generator. <br/>
-            Add the path to Slate Kit Generator<strong>~/tools/slatekit/generator</strong> to your <strong>PATH</strong> ( e.g. <strong>~/.bash_profile or /etc/paths </strong>)
-            <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> This allow you to avoid prefixing slatekit with <strong>./</strong> as in <strong>./slatekit </strong> and simply using <strong>slatekit</strong>
-</div>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong>Config</strong></td>
-        <td>
-            Now you just have to configure 2 settings in the <strong>~/tools/slatekit/conf/env.conf</strong> file.
-            <ol>
-                <li>Set the <strong>generation.source</strong> to the location of the templates folder in the repo. 
-                </li>
-                <li>Set the <strong>generation.output</strong> to the location of the gen folder in the repo.
-                </li>
-            </ol>
-            <div class="highlight"><pre class="chroma"><code class="language-props" data-lang="props">    // Path to the templates
-    generation.source = ~/tools/slatekit/templates
-
-    // Path to the generated projects
-    generation.output = ~/tools/slatekit/gen
+<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
+    brew tap slatekit/slatekit
+    brew install slatekit
     </code></pre></div>
-<div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> This step will not be needed in a future version
+<div class="alert alert-danger" role="alert">
+    You may experience some issues with the install, consider the following
+    <strong>1:</strong> Ensure System Preferences -&gt; security -&gt; privacy -&gt; full disk access -&gt; iterm2 ( of what ever terminal you use )<br/>
+    <strong>2:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
 </div>
-        </td>
-    </tr>
-</table>
-
-<br/><br/>
-
-<h1 id="usage">Usage</h1>
-
-<p>You can generate a new project by running slatekit with the appropriate commands. You can then run the generated app via gradle
 <br/><br/></p>
 
-<table class="table table-bordered table-striped">
-    <tr>
-        <td><strong>Step</strong></td>
-        <td><strong>Action</strong></td>
-        <td><strong>Notes</strong></td>
-    </tr>
-    <tr>
-        <td><strong>1</strong></td>
-        <td><strong>Create</strong></td>
-        <td>
-            To create a new project just cd to the Slate Kit folder and run the commands.
-            <br/><br/>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="c1"># FORMAT: slatekit new {TYPE} -name={NAME} -package={PACKAGE}</span>
-    <span class="c1"># @name = name of application / folder name</span>
-    <span class="c1"># @package = the kotlin package name for the app</span>
-    
-    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-    </code></pre></div>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>2</strong></td>
-        <td><strong>Build</strong></td>
-        <td>
-            The new project will be created in the <strong>SLATE_KIT_HOME/generator/gen</strong> folder.
-You can then cd into that to build it.
-            <br/><br/>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    <span class="c1"># ~/tools/slatekit</span>
-    :&gt; <span class="nb">cd</span> gen/MyApp1
-    :&gt; gradle build
-    </code></pre></div>
-        </td>
-    </tr>
-    <tr>
-        <td><strong>3</strong></td>
-        <td><strong>Run</strong></td>
-        <td>
-            Once the project is built, you can simply run with gradle ( as a quick test ).
-            <br/><br/>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; gradle run
-    </code></pre></div>
-        </td>
-    </tr>
-</table>
+<h1 id="settings">Settings</h1>
 
-<br/><br/>
-
-<h1 id="future">Future</h1>
-
-<p>These are the features to be added in the future to further enhance/customize the project generation.
+<p>The settings for the generator are automatically created at <strong>~/.slatekit/tools/cli/conf/settings.conf</strong> when you try to create your first project.
+The settings are listed below
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
@@ -331,32 +212,32 @@ You can then cd into that to build it.
         <td><strong>Example</strong></td>
     </tr>
     <tr>
-        <td><strong>gen.output</strong></td>
-        <td><strong>Variable</strong></td>
-        <td><strong>Customize the output directory of generated project</strong></td>
-        <td>~/myapps/app1 </td>
+        <td><strong>slatekit.version</strong></td>
+        <td>Variable</td>
+        <td>Version of Slate Kit stable libraries to use</td>
+        <td>1.34.0 </td>
     </tr>
     <tr>
-        <td><strong>sk.version</strong></td>
-        <td><strong>Variable</strong></td>
-        <td><strong>Customize the Slate Kit Version</strong></td>
-        <td>1.0.1 </td>
+        <td><strong>slatekit.version.beta</strong></td>
+        <td>Variable</td>
+        <td>Version of Slate Kit beta libraries to use</td>
+        <td>0.64.0 </td>
     </tr>
     <tr>
-        <td><strong>kt.version</strong></td>
-        <td><strong>Variable</strong></td>
-        <td><strong>Customize the Kotlin Version</strong></td>
+        <td><strong>kotlin.version</strong></td>
+        <td>Variable</td>
+        <td>Version of Kotlin to use</td>
         <td>1.3.6</td>
     </tr>
     <tr>
-        <td><strong>Templates</strong></td>
-        <td><strong>Feature</strong></td>
-        <td><strong>Downloading of templates from Git or remote sources</strong></td>
-        <td>n/a</td>
+        <td><strong>generation.source</strong></td>
+        <td>Variable</td>
+        <td>Represents the path to the templates used for project code generation. This is defaulted to the version of Slate Kit installed through HomeBrew</td>
+        <td>/usr/local/Cellar/slatekit/1.34.0/templates</td>
     </tr>
 </table>
 <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> The tool does <strong>NOT</strong> currently support downloading of templates from Git or online from a central repository. You must issue a Git checkout/update to get/use the latest templates.
+    <strong>Tip:</strong> The tool does <strong>NOT</strong> currently support setting up custom templates, but this is a desired future feature.
 </div>
 <br/>
 
@@ -372,12 +253,11 @@ You can then cd into that to build it.
 
 <p>Generates a new Slate Kit stand-alone application with support command line args, environments, configs, logging, help usage and more. Refer to the <a href="arch/app" >App</a> component and example: <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_App.kt" >Example_App.kt</a>.</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-
-    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
+    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
     
     <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> gen/MyApp1
+    :&gt; <span class="nb">cd</span> MyApp1
     :&gt; gradle build
     :&gt; gradle run
     </code></pre></div>
@@ -391,18 +271,17 @@ You can then cd into that to build it.
 <p>Generates a new API project for hosting HTTP/Web APIs. APIs in Slate Kit are considered <strong>Universal</strong> in the sense that you write them once and they are available as both HTTP/Web APIs ( in the form of RPCs ) and also available on the CLI.
 Also refer to the <a href="arch/apis" >APIs</a> component.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-    
-    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">      
+    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
     
     <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> gen/MyApp1
+    :&gt; <span class="nb">cd</span> MyAPI1
     :&gt; gradle build
     :&gt; gradle run
     </code></pre></div>
 
 <p><div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> A postman script named <strong>samples-postman.json</strong> is also created in the root folder of the generated project. You can import this into PostMan and easily test the API actions/endpoints
+    <strong>Tip:</strong> A postman script named <strong>slatekit-samples-postman.json</strong> is also created in the root folder of the generated project. You can import this into PostMan and easily test the API actions/endpoints
 </div>
 <br/>
 
@@ -414,12 +293,11 @@ Also refer to the <a href="arch/apis" >APIs</a> component.</p>
 <p>Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
 Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_CLI.kt" >Example_CLI.kt</a>.</p>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-    
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">      
+    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
     
     <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> gen/MyApp1
+    :&gt; <span class="nb">cd</span> MyCLI1
     :&gt; gradle build
     :&gt; gradle run
     </code></pre></div>
@@ -433,9 +311,8 @@ Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="ht
 <p>Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in &ldquo;pages&rdquo;, or process items from queues.
 Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https://github.com/code-helix/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Jobs.kt" >Example_Jobs.kt</a>.</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-    
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
+    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
     </code></pre></div>
 
 <p>For the Job, you can run the different job types by passing <strong>-job.name</strong> to the arguments for gradle/java. E.g.
@@ -444,7 +321,7 @@ Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https
     gradle build
 
     <span class="c1"># To run the One Time Job sample</span>
-    gradle run --args<span class="o">=</span><span class="s1">&#39;-job.name=single&#39;</span>
+    gradle run --args<span class="o">=</span><span class="s1">&#39;-job.name=onetime&#39;</span>
 
     <span class="c1"># To run the Paged Job sample</span>
     gradle run --args<span class="o">=</span><span class="s1">&#39;-job.name=paging&#39;</span>
@@ -460,44 +337,6 @@ Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https
 
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
-
-<h2 id="lib">LIB</h2>
-
-<p>Generates an empty gradle library project with some Slate Kit library references.</p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-    
-    slatekit new lib -name<span class="o">=</span><span class="s2">&#34;MyLib1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.libs&#34;</span>
-    
-    <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> gen/MyApp1
-    :&gt; gradle build
-    :&gt; gradle run
-    </code></pre></div>
-<br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
-
-<h2 id="orm">SQL</h2>
-
-<div class="alert alert-warning" role="alert">
-  TIP: Generator for this type is coming soon. This will generate a new project containing data models, repositories and services to provide a DDD ( Domain Driven Design) approach to modeling and managing your data.
-</div>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    :&gt; <span class="nb">cd</span> ~/tools/slatekit/generator
-    
-    slatekit new sql -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    
-    <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> gen/MyApp1
-    :&gt; gradle build
-    :&gt; gradle run
-    </code></pre></div>
-<br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/></p>
 
       </div>
     </section>  

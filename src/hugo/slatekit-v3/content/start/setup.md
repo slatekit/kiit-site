@@ -77,13 +77,15 @@ help with the sample apps and is also needed for the ORM ( entities ).
         <td>Refer to JetBrains</td>
         <td>IDE</td>
     </tr>
-    <tr>
-        <td><a class="url-ch" href="https://github.com/code-helix/slatekit-tools">Slate Kit CLI</a></td>
-        <td>1.0.0</td>
-        <td>{{% sk-link href="start/generators" text="Generators" %}}</td>
-    </tr>
 </table>
 
+{{% break %}}
+
+
+# Slate Kit CLI
+<p>There is a Slate Kit CLI ( command line interface ) application for Mac ( integrated with HomeBrew ) that serves as a project creator.
+    <br/>See {{% sk-link href="start/generators" text="Generators" %}} for more info
+</p>
 {{% break %}}
 
 

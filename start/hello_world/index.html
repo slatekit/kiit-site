@@ -173,7 +173,7 @@
 <p>Slate Kit comes with a command line project generation tool which is available below. You can create a new app quickly using the commands below.
 <div class="alert alert-info" role="alert">
   You can download the Slate Kit Project Generator at 
-  <a href="https://github.com/code-helix/slatekit-tools" >slatekit-tools</a>. <br/>
+  <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
   Install instructions located at <a href="start/generators" >Generators</a>. 
 </div></p>
 
@@ -184,10 +184,10 @@
 <p>The Slate Kit application leverages several of the utilities to provide a pre-built standalone application with support for command line args, environments, confs, logging, help usage and more. This is just 1 type of project you can create.</p>
 
 <p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
     </code></pre></div>
 <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> You must be run using <strong>./slatekit</strong> if slatekit is not in your path
+    <strong>Tip:</strong> This shows using the slatekit cli on a Mac installed via HomeBrew
 </div>
 <br/><br/></p>
 
@@ -195,13 +195,11 @@
 
 <p>You can create several different project types using the generator.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new env -name<span class="o">=</span><span class="s2">&#34;MyApp2&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
-    slatekit new lib -name<span class="o">=</span><span class="s2">&#34;MyLib1&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.libs&#34;</span>
-    slatekit new orm -name<span class="o">=</span><span class="s2">&#34;MyApp3&#34;</span> -package<span class="o">=</span><span class="s2">&#34;company1.data&#34;</span>
+    slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
+    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
+    slatekit new env -name<span class="o">=</span><span class="s2">&#34;MyApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
     </code></pre></div>
 <div class="alert alert-warning" role="alert">
     <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the Slate Kit CLI tool for generating various project types.
