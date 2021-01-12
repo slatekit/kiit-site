@@ -136,16 +136,16 @@ For the Job, you can run the different job types by passing **-job.name** to the
     gradle build
 
     # To run the One Time Job sample
-    gradle run --args='-job.name=onetime'
+    gradle run --args='-sample=onetime'
 
     # To run the Paged Job sample
-    gradle run --args='-job.name=paging'
+    gradle run --args='-sample=paging'
 
     # To run the Queue Job sample
-    gradle run --args='-job.name=queued'
+    gradle run --args='-sample=queued'
 
     # To run the Worker Sample
-    gradle run --args='-job.name=worker'
+    gradle run --args='-sample=worker'
     
 {{< /highlight >}}
 
