@@ -91,7 +91,7 @@ coming soon
     name="App"
     package="slatekit.notifications"
     jar="slatekit.notifications.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-notifications"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-notifications"
     gitModule="slatekit-notifications"
     url="core/notifications"
     uses="slatekit.results, slatekit.common"

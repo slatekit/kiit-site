@@ -96,7 +96,7 @@ Future versions will include support for:
     name="Data"
     package="slatekit.entities"
     jar="slatekit.entities.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities"
     gitModule="slatekit-entities"
     url="arch/data"
     bintray="slatekit-entities"

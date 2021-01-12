@@ -67,7 +67,7 @@ A small future enhancement will add support for question and answer flow.
     name="Cli"
     package="slatekit.cli"
     jar="slatekit.cli.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cli"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli"
     gitModule="slatekit-cli"
     url="core/cli"
     bintray="slatekit-cli"
@@ -414,7 +414,7 @@ You can have commands run during the start up of the CLI. This is accomplished b
 {{% feature-end mod="arch/cli" %}}
 
 ## API {#apis}
-The most important and powerful feature of the CLI is integration with Slate Kit {{% sk-link-arch page="apis" name="APIs" %}}. Refer to <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit/src/main/kotlin/slatekit/samples/cli/CLI.kt" >Sample</a> for more info.
+The most important and powerful feature of the CLI is integration with Slate Kit {{% sk-link-arch page="apis" name="APIs" %}}. Refer to <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit/src/main/kotlin/slatekit/samples/cli/CLI.kt" >Sample</a> for more info.
 {{< highlight kotlin >}}
 
     // 1. The API keys( DocApi, SetupApi are authenticated using an sample API key )

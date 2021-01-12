@@ -91,7 +91,7 @@ coming soon
     name="Server"
     package="slatekit.server"
     jar="slatekit.server.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-app"
     gitModule="slatekit-server"
     url="core/server"
     bintray="slatekit-server"

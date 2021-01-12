@@ -92,7 +92,7 @@ This is mostly a transition release from the 0.9.9 towards an Official 1.0.0 rel
                     <tr>
                         <td><strong>Git</strong></td>
                         <td>
-                            <h4><a class="url-ch" href="https://github.com/code-helix/slatekit/releases/tag/slatekit_0_9_15
+                            <h4><a class="url-ch" href="https://github.com/slatekit/slatekit/releases/tag/slatekit_0_9_15
 ">Git sources</a></h4>
                         </td>
                     </tr>

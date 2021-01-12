@@ -88,7 +88,7 @@ This component is currently stable and there is a project generator for it
     name="Jobs"
     package="slatekit.jobs"
     jar="slatekit.jobs.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-jobs"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs"
     gitModule="slatekit-jobs"
     url="arch/jobs"
     bintray="slatekit-jobs"

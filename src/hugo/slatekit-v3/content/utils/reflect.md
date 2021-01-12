@@ -29,11 +29,11 @@
     </tr>
     <tr>
       <td><strong>source folder</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-meta/src/main/kotlin/slatekit/common/Reflector" class="url-ch">src/lib/kotlin/slatekit-meta/src/main/kotlin/slatekit/common/Reflector</a></td>
+      <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-meta/src/main/kotlin/slatekit/common/Reflector" class="url-ch">src/lib/kotlin/slatekit-meta/src/main/kotlin/slatekit/common/Reflector</a></td>
     </tr>
     <tr>
       <td><strong>example</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Reflect.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Reflect.kt</a></td>
+      <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Reflect.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Reflect.kt</a></td>
     </tr>
     <tr>
       <td><strong>depends on</strong></td>

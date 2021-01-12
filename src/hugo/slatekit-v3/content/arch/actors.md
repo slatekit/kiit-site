@@ -50,7 +50,7 @@ Docs coming soon
     name="Actors"
     package="slatekit.actors"
     jar="slatekit.actors.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-actors"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-actors"
     gitModule="slatekit-actors"
     url="arch/actors"
     bintray="slatekit-actors"

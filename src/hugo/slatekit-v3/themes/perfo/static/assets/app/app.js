@@ -66,7 +66,7 @@ var codehelixUtils = {
 	  
 	  // Footer 
 	  $("#footer_aboutus").html(codeHelixMeta.product.about);
-	  $("#footer_needhelp").html('For more information on Slate Kit, including source code visit our <a href="https://github.com/code-helix/slatekit">github</a> repository and feel free to email/contact us at <a href="mailto:kishore@codehelix.co">kishore@codehelix.co</a>');
+	  $("#footer_needhelp").html('For more information on Slate Kit, including source code visit our <a href="https://github.com/slatekit/slatekit">github</a> repository and feel free to email/contact us at <a href="mailto:kishore@codehelix.co">kishore@codehelix.co</a>');
 	  $("#footer_addr_city").html(codeHelixMeta.company.address.city);
 	  $("#footer_addr_region").html(codeHelixMeta.company.address.region);
 	  $("#footer_addr_street").html(codeHelixMeta.company.address.street);
@@ -106,7 +106,7 @@ var codeHelixMeta = {
 	twitter: "https://twitter.com/kishore_reddy",
 	gplus: "https://plus.google.com/communities/101712726574147167469",
 	gitter: "https://gitter.im/code-helix/slatekit",
-	github: "https://github.com/code-helix/slatekit",
+	github: "https://github.com/slatekit/slatekit",
   },
   
   
@@ -116,7 +116,7 @@ var codeHelixMeta = {
 	slogan: "A scala toolkit, utility library and server backend",
 	about: 'Slate Kit is a product of <a href="http://www.codehelix.co">Code Helix Solutions Inc.</a>.',
 	needhelp: 'For more information on Slate Kit, including source code visit our github repository and feel free to email/contact us at <a href="mailto:kishore@codehelix.co">kishore@codehelix.co</a>',
-	questions: 'Questions ? Contact us via <a href="https://github.com/code-helix/slatekit">github</a> or at <a href="http://www.codehelix.co">Code Helix Solutions Inc.</a>'
+	questions: 'Questions ? Contact us via <a href="https://github.com/slatekit/slatekit">github</a> or at <a href="http://www.codehelix.co">Code Helix Solutions Inc.</a>'
   },
   
   menu: 
@@ -132,7 +132,7 @@ var codeHelixMeta = {
 	{ name: "Releases"      ,  page: "info/releases"      , children: null },	
 	{ name: "Contact"       ,  page: "info/contact"       , children: null },
 	{ name: "More"          ,  page: "info/more"          , children: null },
-	{ name: "Git"           ,  page: "https://github.com/code-helix/slatekit", children: null }
+	{ name: "Git"           ,  page: "https://github.com/slatekit/slatekit", children: null }
   ]
 };  
 

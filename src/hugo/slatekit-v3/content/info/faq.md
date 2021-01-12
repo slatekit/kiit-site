@@ -153,7 +153,7 @@ More faq topics/sections coming soon.
             </p>
             <a id="help_submit" />
             <h3>2. How to submit ideas/issues?</h3>
-            <p>Log any issues on <a href="https://github.com/code-helix/slatekit/issues">Git Issues</a>. There are issue templates for bugs/features.
+            <p>Log any issues on <a href="https://github.com/slatekit/slatekit/issues">Git Issues</a>. There are issue templates for bugs/features.
             </p>
             <a id="help_updates" />
             <h3>3. How to get updates?</h3>

@@ -15,8 +15,8 @@ Feel free to contact us using all the various channels below! We put a lot of ef
       <div class="row text-center">
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="https://github.com/code-helix/slatekit"><img src="assets/media/img/git.png" alt="" ></a>
-              <div><a href="https://github.com/code-helix/slatekit"><h3>Git</h3></a></div>
+              <a href="https://github.com/slatekit/slatekit"><img src="assets/media/img/git.png" alt="" ></a>
+              <div><a href="https://github.com/slatekit/slatekit"><h3>Git</h3></a></div>
               <p>See all the source code and modules {{% sk-contact-git %}}</p>
             </div>
           </div>
@@ -29,9 +29,9 @@ Feel free to contact us using all the various channels below! We put a lot of ef
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="https://github.com/code-helix/slatekit/issues"><img src="assets/media/img/white/error.png" alt="" ></a>
-              <div><a href="https://github.com/code-helix/slatekit/issues"><h3>Issues</h3></a></div>
-              <p>Log your issues <a href="https://github.com/code-helix/slatekit/issues">Git / Issues</a></p>
+              <a href="https://github.com/slatekit/slatekit/issues"><img src="assets/media/img/white/error.png" alt="" ></a>
+              <div><a href="https://github.com/slatekit/slatekit/issues"><h3>Issues</h3></a></div>
+              <p>Log your issues <a href="https://github.com/slatekit/slatekit/issues">Git / Issues</a></p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">

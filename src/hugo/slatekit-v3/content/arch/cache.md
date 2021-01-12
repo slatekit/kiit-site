@@ -87,7 +87,7 @@ This component is currently stable. Future versions will include support for:
     name="Cache"
     package="slatekit.cache"
     jar="slatekit.cache.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache"
     gitModule="slatekit-cache"
     url="arch/cache"
     bintray="slatekit-cache"

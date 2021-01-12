@@ -123,7 +123,7 @@ Use the following settings in gradle for installing this component.
     name="Results"
     package="slatekit.results"
     jar="slatekit.result.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results"
     gitModule="slatekit-result"
     url="arch/results"
     uses="0 Dependencies"

@@ -88,7 +88,7 @@ You can install the slatekit application/command line tool from {{% sk-link href
     name="Generator"
     package="slatekit.generator"
     jar="slatekit.generator.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-generator"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-generator"
     gitModule="slatekit-generator"
     url="arch/generator"
     bintray="slatekit-generator"

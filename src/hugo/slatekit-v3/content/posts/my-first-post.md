@@ -39,11 +39,11 @@ customize tables resource https://discourse.gohugo.io/t/how-to-customise-tables/
     </tr>
     <tr>
       <td><strong>source folder</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit/" class="url-ch">src/lib/kotlin/slatekit/</a></td>
+      <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit/" class="url-ch">src/lib/kotlin/slatekit/</a></td>
     </tr>
     <tr>
       <td><strong>example</strong></td>
-      <td><a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Args.kt" class="url-ch">/src/apps/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Args.kt</a></td>
+      <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Args.kt" class="url-ch">/src/apps/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Args.kt</a></td>
     </tr>
     <tr>
       <td><strong>depends on</strong></td>

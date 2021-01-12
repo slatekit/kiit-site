@@ -62,7 +62,7 @@ This component is currently stable, has default implementations, and can be used
     name="Context"
     package="slatekit.context"
     jar="slatekit.context.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Context.kt"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Context.kt"
     gitModule="slatekit-context"
     url="core/app"
     bintray="slatekit-context"

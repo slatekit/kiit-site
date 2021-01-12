@@ -60,7 +60,7 @@ This component is currently stable and can be used for both **Android and Server
     name="Tracking"
     package="slatekit.tracking"
     jar="slatekit.tracking.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking"
     gitModule="slatekit-tracking"
     url="arch/tracking"
     uses="slatekit.results, slatekit.common"

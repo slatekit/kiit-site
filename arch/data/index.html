@@ -136,7 +136,7 @@
             More
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
+            <li><a class="dropdown-item" href="https://github.com/slatekit/slatekit/releases">Releases</a></li>
             <li><a class="dropdown-item" href="info/about">About</a></li>
             <li><a class="dropdown-item" href="info/contact">Contact</a></li>
             <li><a class="dropdown-item" href="info/faq">FAQ</a></li>
@@ -145,7 +145,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="https://github.com/code-helix/slatekit">Github</a>
+        <a class="nav-link" href="https://github.com/slatekit/slatekit">Github</a>
     </li>
 </ul>
                             </div>
@@ -296,11 +296,11 @@ Future versions will include support for:
   </tr>
   <tr>
     <td><strong>Sources</strong></td>
-    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities">slatekit-entities</a></td>
+    <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities">slatekit-entities</a></td>
   </tr>
   <tr>
       <td><strong>Example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Entities.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Entities.kt</a></td>
   </tr>
   <tr>
     <td><strong>Version</strong></td>
@@ -312,7 +312,7 @@ Future versions will include support for:
   </tr>
   <tr>
     <td><strong>Requires</strong></td>
-    <td>See <a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities/build.gradle">build.gradle</a> for more info. </td>
+    <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
 
@@ -402,7 +402,7 @@ Future versions will include support for:
 
 <h2 id="connections">Connections</h2>
 
-<p>You can setup connections different ways from explicit creation to loading from configuration settings. This uses <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/DbCon.kt" >DbCon</a>. The <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/Connections.kt" >Connections</a> is used to store multiple connections by name.
+<p>You can setup connections different ways from explicit creation to loading from configuration settings. This uses <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/DbCon.kt" >DbCon</a>. The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/Connections.kt" >Connections</a> is used to store multiple connections by name.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Connection
 </span><span class="c1"></span>    <span class="c1">// 1. Explicit creation
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="s">&#34;pswd3210&#34;</span><span class="p">)</span>
@@ -434,7 +434,7 @@ Future versions will include support for:
 
 <h2 id="databases">Databases</h2>
 
-<p>The <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/IDb.kt" >IDb</a> interface provides a thin abstraction over data access calls, particularly JDBC. This makes it useful for abstracting data access to both Server side database calls via JDBC and Android database calls to Sqlite. Another benefit is facilitating unit-testing/mocking of other data related components in Slate Kit. The interface and supporting implementation for JDBC <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/Db.kt" >Db</a> support the typical operations to perform <strong>execute, update, query, scalar, stored proc</strong> calls.
+<p>The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/IDb.kt" >IDb</a> interface provides a thin abstraction over data access calls, particularly JDBC. This makes it useful for abstracting data access to both Server side database calls via JDBC and Android database calls to Sqlite. Another benefit is facilitating unit-testing/mocking of other data related components in Slate Kit. The interface and supporting implementation for JDBC <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/Db.kt" >Db</a> support the typical operations to perform <strong>execute, update, query, scalar, stored proc</strong> calls.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="s">&#34;pswd3210&#34;</span><span class="p">)</span>
     <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
@@ -486,7 +486,7 @@ Future versions will include support for:
 
 <h2 id="records">Records</h2>
 
-<p>Because the Database abstracts over JDBC, there is also a corresponding interface <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Record.kt" >Record</a> to abstract over JDBC ResultSets ( this is particularly useful for Android ). The implementation for JDBC is <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/RecordSet.kt" >RecordSet</a>
+<p>Because the Database abstracts over JDBC, there is also a corresponding interface <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Record.kt" >Record</a> to abstract over JDBC ResultSets ( this is particularly useful for Android ). The implementation for JDBC is <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/RecordSet.kt" >RecordSet</a>
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="c1">// Sample connection/DB
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="s">&#34;pswd3210&#34;</span><span class="p">)</span>
@@ -540,7 +540,7 @@ Future versions will include support for:
 
 <h2 id="mappers">Mappers</h2>
 
-<p>A <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Mapper.kt" >Mapper</a> simply encodes/decodes a data model to/from records. The <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Value.kt" >Values</a> is simply a container for key/value pairs representing all the fields on the field that can be persisted/saved to a database. You can simply implement the mapping yourself ( explicitly without any reflection ) or use the OrmMapper ( see ORM section ) along with a schema for the Model to leverage automatic mapping.
+<p>A <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Mapper.kt" >Mapper</a> simply encodes/decodes a data model to/from records. The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Value.kt" >Values</a> is simply a container for key/value pairs representing all the fields on the field that can be persisted/saved to a database. You can simply implement the mapping yourself ( explicitly without any reflection ) or use the OrmMapper ( see ORM section ) along with a schema for the Model to leverage automatic mapping.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Mapper: manual field mapping
 </span><span class="c1"></span>    <span class="k">val</span> <span class="py">mapper</span> <span class="p">=</span> <span class="k">object</span><span class="p">:</span> <span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;</span> <span class="p">{</span>
 
@@ -572,7 +572,7 @@ Future versions will include support for:
 
 <h2 id="repos">Repository</h2>
 
-<p>With the databases, records, mappers in place, the next step is to have a <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/Repo.kt" >Repo</a> component that can handle the common <strong>CRUD</strong> operations on model. The implementations for these are <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/repos/SqlRepo.kt" >SqlRepo</a>
+<p>With the databases, records, mappers in place, the next step is to have a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/Repo.kt" >Repo</a> component that can handle the common <strong>CRUD</strong> operations on model. The implementations for these are <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/repos/SqlRepo.kt" >SqlRepo</a>
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
     <span class="c1">// Setup: This is boiler-plate that can be moved
 </span><span class="c1"></span>    <span class="c1">// to a helper function/builder
@@ -894,7 +894,7 @@ Future versions will include support for:
     <section class="links">
         <div class="container text-center">
     <a href="https://twitter.com/slatekit">Twitter</a>
-    <a href="https://github.com/code-helix/slatekit">Github</a>
+    <a href="https://github.com/slatekit/slatekit">Github</a>
     <a href="/info/contact">About</a>
     <a href="/info/contact">Contact</a>
 </div>

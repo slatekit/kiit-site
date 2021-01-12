@@ -191,10 +191,10 @@ Some smaller Slate Kit components listed here are available in the core module. 
     name="Core"
     package="slatekit.core"
     jar="slatekit.core.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-core"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-core"
     gitAlias="slatekit-core"
     url="core/overview"
     uses="slatekit-results, slatekit-common, slatekit-meta"
-    exampleUrl="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples"
+    exampleUrl="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples"
     exampleFileName="Misc examples"
 %}}

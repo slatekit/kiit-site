@@ -47,7 +47,7 @@ This component is currently **stable**. Following limitations, current work, pla
     name="SMS"
     package="slatekit.notifications"
     jar="slatekit.notifications.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
     gitModule="slatekit-notifications"
     url="arch/sms"
     bintray="slatekit-notifications"

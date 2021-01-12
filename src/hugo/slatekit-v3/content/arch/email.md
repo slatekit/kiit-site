@@ -56,7 +56,7 @@ This component is currently **stable**. Following limitations, current work, pla
     name="Email"
     package="slatekit.notifications"
     jar="slatekit.notifications.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-notifications"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-notifications"
     gitModule="slatekit-notifications"
     url="arch/email"
     bintray="slatekit-notifications"

@@ -30,7 +30,7 @@ Links to this modules info. Click on any component icon below for example on how
     name="Common"
     package="slatekit.common"
     jar="slatekit.common.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-common"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common"
     gitAlias="slatekit-common"
     url="utils/overview"
     uses="slatekit-results"

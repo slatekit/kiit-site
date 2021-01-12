@@ -254,7 +254,7 @@ There are many components availables, but the most basic and general purpose for
         <td><strong>Examples</strong></td>
         <td><img src="assets/media/img/white/manual.png" width="50" alt=""></td>
         <td>Example are available for every utility and module. Click on the corresponsding utilities / components for details documentation.
-            You can also see the source code for all examples here: <strong><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples">Examples</a></strong></td>
+            You can also see the source code for all examples here: <strong><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples">Examples</a></strong></td>
     </tr>
 </table>
 {{% section-end mod="info/index" %}}
@@ -296,7 +296,7 @@ Since Slate Kit is <strong>100% Kotlin</strong> and runs on the JVM, it only mak
         <td><strong>OSS</strong></td>
         <td><img src="assets/media/img/white/flag.png" width="50" alt=""></td>
         <td><strong>Free</strong></td>
-        <td>Open source version is available under mostly Apache 2.0 licenses for most of the components. A few components are LGPLv3, listed here <a href="https://github.com/code-helix/slatekit" class="url-ch">github/slatekit</a>
+        <td>Open source version is available under mostly Apache 2.0 licenses for most of the components. A few components are LGPLv3, listed here <a href="https://github.com/slatekit/slatekit" class="url-ch">github/slatekit</a>
         The components are available from bintray</td>
     </tr>
     <tr>
@@ -368,7 +368,7 @@ Slate Kit is built for the <strong>JVM</strong> using <strong>100% Kotlin</stron
             </tr>
             <tr>
               <td><strong>License</strong></td>
-              <td>Apache 2.0 and LGPLv3: Please check our <a class="url-ch" href="https://github.com/code-helix/slatekit">git repo</a> for more info</td>
+              <td>Apache 2.0 and LGPLv3: Please check our <a class="url-ch" href="https://github.com/slatekit/slatekit">git repo</a> for more info</td>
             </tr>
             <tr>
               <td><strong>Style</strong></td>

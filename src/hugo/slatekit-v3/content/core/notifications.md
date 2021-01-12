@@ -88,7 +88,7 @@ coming soon
     name="App"
     package="slatekit.app"
     jar="slatekit.app.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-app"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-app"
     gitAlias="slatekit/src/lib/kotlin/slatekit-app"
     url="core/app"
     uses="slatekit.results, slatekit.common"

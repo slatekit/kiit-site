@@ -101,7 +101,7 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
     name="APIs"
     package="slatekit.apis"
     jar="slatekit.apis.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-apis/src/main/kotlin/slatekit/apis"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-apis/src/main/kotlin/slatekit/apis"
     gitModule="slatekit-apis"
     url="arch/apis"
     bintray="slatekit-apis"

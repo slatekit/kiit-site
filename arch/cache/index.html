@@ -136,7 +136,7 @@
             More
         </a>
         <ul class="dropdown-menu" aria-labelledby="menu-1">
-            <li><a class="dropdown-item" href="https://github.com/code-helix/slatekit/releases">Releases</a></li>
+            <li><a class="dropdown-item" href="https://github.com/slatekit/slatekit/releases">Releases</a></li>
             <li><a class="dropdown-item" href="info/about">About</a></li>
             <li><a class="dropdown-item" href="info/contact">Contact</a></li>
             <li><a class="dropdown-item" href="info/faq">FAQ</a></li>
@@ -145,7 +145,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="https://github.com/code-helix/slatekit">Github</a>
+        <a class="nav-link" href="https://github.com/slatekit/slatekit">Github</a>
     </li>
 </ul>
                             </div>
@@ -283,11 +283,11 @@
   </tr>
   <tr>
     <td><strong>Sources</strong></td>
-    <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache">slatekit-cache</a></td>
+    <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache">slatekit-cache</a></td>
   </tr>
   <tr>
       <td><strong>Example</strong></td>
-      <td><a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
   </tr>
   <tr>
     <td><strong>Version</strong></td>
@@ -299,7 +299,7 @@
   </tr>
   <tr>
     <td><strong>Requires</strong></td>
-    <td>See <a class="url-ch" href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/build.gradle">build.gradle</a> for more info. </td>
+    <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
 
@@ -514,7 +514,7 @@
 
 <h2 id="sync">Sync</h2>
 
-<p>Showing usage of a <strong>synchronous</strong> cache implementation <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. All operations on cache are using the <strong>@synchronized</strong> annotation on methods. Synchronouse caches are implemented using the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SyncCache.kt" >SyncCache</a> interface.
+<p>Showing usage of a <strong>synchronous</strong> cache implementation <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. All operations on cache are using the <strong>@synchronized</strong> annotation on methods. Synchronouse caches are implemented using the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SyncCache.kt" >SyncCache</a> interface.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
 
     <span class="c1">// SimpleCache is the underlying Cache implementation
@@ -558,7 +558,7 @@
 <h2 id="async">Async</h2>
 
 <p>Async functionality is based on using Coroutines and Channels for writes.
-The <strong>async</strong> cache implementation is <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. Async caches are implemented using the <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/AsyncCache.kt" >AsyncCache</a> interface. In this approach, concurrent writes are handling by creating a <a href="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/CacheCommand.kt" >CacheCommand</a> representing the operation and sending them to a channel to be handled sequentially. Reads are handling by returning a kotlin <strong>Deferred[T]</strong>.
+The <strong>async</strong> cache implementation is <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. Async caches are implemented using the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/AsyncCache.kt" >AsyncCache</a> interface. In this approach, concurrent writes are handling by creating a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/CacheCommand.kt" >CacheCommand</a> representing the operation and sending them to a channel to be handled sequentially. Reads are handling by returning a kotlin <strong>Deferred[T]</strong>.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
 
@@ -655,7 +655,7 @@ The <strong>async</strong> cache implementation is <a href="https://github.com/c
     <section class="links">
         <div class="container text-center">
     <a href="https://twitter.com/slatekit">Twitter</a>
-    <a href="https://github.com/code-helix/slatekit">Github</a>
+    <a href="https://github.com/slatekit/slatekit">Github</a>
     <a href="/info/contact">About</a>
     <a href="/info/contact">Contact</a>
 </div>

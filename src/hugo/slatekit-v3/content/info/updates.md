@@ -12,7 +12,7 @@ Slate Kit is in active development. As of January 2020, it is very stable and 1.
 
 # Releases
 In January 2020, stable 1.0.0 releases will be available of several Slate Kit architecture components.
-You can check the current releases at <a href="https://github.com/code-helix/slatekit/releases">Releases</a>
+You can check the current releases at <a href="https://github.com/slatekit/slatekit/releases">Releases</a>
 {{% break %}}
 
 # Current

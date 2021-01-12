@@ -61,7 +61,7 @@ This component is currently **stable**. Following limitations, current work, pla
     name="Files"
     package="slatekit.cloud"
     jar="slatekit.cloud.jar"
-    git="https://github.com/code-helix/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
+    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cloud"
     gitModule="slatekit-cloud"
     url="arch/queues"
     bintray="slatekit-cloud"
