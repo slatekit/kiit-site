@@ -9,7 +9,7 @@
 # About
 Sources for the www.slatekit.com Website
 
-Slate Kit is a **Kotlin** Tool-Kit, a simple, light-weight, modular framework to build Apps, APIs, CLIs, Jobs, and more for **start-ups, personal projects, and SMBs** ( small-medium sized businesses ), and can be used for both Server and Android! The server has integrates with **AWS**
+Slate Kit is a **Kotlin** Tool-Kit, a simple, light-weight, modular framework to build Apps, APIs, CLIs, Jobs, and more for **Start-ups, Personal projects, and SMBs** ( small-medium sized businesses ). These libraries can be used for both Server and Android and there are modules that abstract infrastruture ( Queues, Files, SMS, Emails, Alerts ) with integrations for **AWS** ( SQS, S3 ), Twilio ( SMS ), SendGrid ( Email ), Slack ( Alerts ) and more. Multi-platform support is planned as a future state.
 
 This contains all the source code for generating www.slatekit.com site content. 
 This uses a static site generator ( Hugo ) and most of the content is in markdown.
