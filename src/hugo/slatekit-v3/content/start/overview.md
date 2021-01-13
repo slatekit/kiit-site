@@ -6,7 +6,7 @@ section_header: Overview
 
 # Overiew
   <p>
-      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> based open-source tool-kit containing **architecture components and utilities**. It is comprised of several projects and modular components that collectively provide pre-built architecture that can be used to build applications for both Server and Android, optimizing for code/component reuse. There are also various interfaces to abstract over Cloud infrastrature such as files/queues to decouple / "unbundle" from Cloud Providers ( although AWS implementations are available by default ).
+      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> based tool-kit containing **architecture components and utilities**. It is comprised of several projects and modular components that collectively provide pre-built architecture that can be used to build applications for both Server and Android, optimizing for code/component reuse. There are also various interfaces to abstract over Cloud infrastrature such as files/queues to decouple / "unbundle" from Cloud Providers ( although AWS implementations are available by default ).
   </p>
 {{% break %}}
 
