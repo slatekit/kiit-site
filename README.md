@@ -45,7 +45,7 @@ Make changes on a separate branch e.g **docs-version-1.20.0** and then merge to 
 7. After the merge to main/master, the site will automatically update(delayed due to cached content)
 
 
-# Directories
+# Folders
 
 name | purpose | location 
 --|---|---
