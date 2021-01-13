@@ -1,10 +1,21 @@
 # Slatekit-site
 Sources for the slatekit.com Website
 
+Slate Kit is a **Kotlin** Tool-Kit, a simple, light-weight, modular framework to build Apps, APIs, CLIs, Jobs, and more for **start-ups, personal projects, and SMBs** ( small-medium sized businesses ), and can be used for both Server and Android! The server has integrates with **AWS**
+
 # Overview
 This contains all the source code for generating www.slatekit.com site content. 
 This uses a static site generator ( Hugo ) and most of the content is in markdown.
-It is automatically published to https://www.netlify.com/
+It is automatically published via github-pages. 
+
+# Links
+num | type | link 
+----|-----|------
+1 | Website   | https://www.slatekit.com
+2 | Framework | https://github.com/slatekit/slatekit
+3 | Modules   | https://www.slatekit.com/arch/overview/
+4 | Install   | https://github.com/slatekit/slatekit-cli ( Homebrew )
+
 
 # Install
 1. Hugo ( see https://gohugo.io/getting-started/installing/ )
@@ -15,7 +26,7 @@ Currently, the root directory of the hugo theme/site is at **src/hugo/slatekit-v
 
 ```bash
 # Move to dir
-cd ~/git/slatekit-site/src/hugo/slatekit-v3
+cd ~/git/slatekit/slatekit-site/src/hugo/slatekit-v3
 
 # Run hugo while serving drafts
 hugo serve -D 
