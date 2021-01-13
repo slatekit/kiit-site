@@ -1,3 +1,9 @@
+![Kotlin](https://img.shields.io/badge/kotlin-1.3-orange.svg)
+![Apache 2](https://img.shields.io/badge/license-Apache2-brightgreen.svg?style=flat)
+![BSL ](https://img.shields.io/badge/license-bsl__1.0-yellow.svg?style=flat)
+[![Follow us on twitter](https://img.shields.io/badge/twitter-slatekit-blue.svg)](https://twitter.com/slatekit)
+![image](assets/media/slatekit-banner.png)
+
 # About
 Sources for the www.slatekit.com Website
 
@@ -53,6 +59,4 @@ theme   | theme for site   | src/hugo/slatekit-v3/themes/wavo
 content | content for page | src/hugo/slatekit-v3/content/start/overview
 assets  | js,css,img       | src/hugo/slatekit-v3/themes/wavo/static/assets
 shortcodes   | reusable html | src/hugo/slatekit-v3/themes/layouts/shortcodes/sk-modules.html
-
-
 
