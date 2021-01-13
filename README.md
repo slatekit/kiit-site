@@ -1,9 +1,8 @@
-# Slatekit-site
-Sources for the slatekit.com Website
+# About
+Sources for the www.slatekit.com Website
 
 Slate Kit is a **Kotlin** Tool-Kit, a simple, light-weight, modular framework to build Apps, APIs, CLIs, Jobs, and more for **start-ups, personal projects, and SMBs** ( small-medium sized businesses ), and can be used for both Server and Android! The server has integrates with **AWS**
 
-# Overview
 This contains all the source code for generating www.slatekit.com site content. 
 This uses a static site generator ( Hugo ) and most of the content is in markdown.
 It is automatically published via github-pages. 
