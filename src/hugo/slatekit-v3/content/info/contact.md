@@ -1,7 +1,6 @@
 ---
 title: "Contact"
 date: 2019-03-17T13:02:30-04:00
-draft: true
 section_header: Contact
 ---
 
@@ -36,9 +35,9 @@ Feel free to contact us using all the various channels below! We put a lot of ef
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
-              <a href="https://gitter.im/code-helix/slatekit"><img src="assets/media/img/gitter.png" ></a>
-              <div><a href="https://gitter.im/code-helix/slatekit"><h3>Discuss</h3></a></div>
-              <p>Discuss and join conversations <a href="https://gitter.im/code-helix/slatekit">Gitter/Slate Kit</a></p>
+              <a href="https://github.com/slatekit/slatekit/discussions"><img src="assets/media/img/gitter.png" ></a>
+              <div><a href="https://github.com/slatekit/slatekit/discussions"><h3>Discuss</h3></a></div>
+              <p>Discuss and join conversations <a href="https://github.com/slatekit/slatekit/discussions">Git Discussions</a></p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
