@@ -6,7 +6,9 @@ section_header: License
 
 
 # Dual License
-Slate Kit has a unique Dual License approach using BSL (Business Source License) and Apache 2.0 using the Additional Use Grants parameter of the BSL. This is a reletively new license and approach we are trying out. At the moment, we are making this framework as permissive as possible and more details will come. We plan to allow this to be used as Apache 2.0 immediately for the groups listed below.
+Slate Kit has a unique Dual License approach using BSL (Business Source License) and Apache 2.0 using the Additional Use Grants parameter of the BSL. 
+This is a reletively new approach and license that we are trying out and we plan to improve on this dual licensing approach in time.
+Currently, we are allowing this software to be used as Apache 2.0 immediately for the groups / usage listed below and for the foreseeable future.
 
 {{% break %}}
 
@@ -33,9 +35,9 @@ It can not be used for production usage without obtaining a license.
 <h1 id="Notes">Notes</h1>
 <p>
 1. BSL is a relatively new license type. <br/>
-2. BSL is technicall <strong>NOT an open-source"</strong> license but rather <strong>source available</strong> <br/>
+2. BSL is technically <strong>NOT an open-source</strong> license but rather <strong>source available</strong> <br/>
 3. BSL has parameters <strong>Change Date | Change License | Additional Use Grants</strong> that convert it to open source <br/>
-4. BSL Additional Use Grant is used to grant additional rights ( we are using this broadly to provide Apache 2.0 licensing rights to the groups above )<br/>
+4. BSL Additional Use Grant is used to grant additional rights ( we are using this broadly to provide Apache 2.0 licensing rights above )<br/>
 </p>
 {{% break %}}
 
