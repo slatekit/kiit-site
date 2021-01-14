@@ -24,9 +24,12 @@ This project generator is a pacakged java based application, and works like a mi
 You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
 {{% sk-link-cli %}}
 
+### Install
 {{< highlight bash >}}
      
     brew tap slatekit/slatekit
+
+    # Note: install may take a long time ( see notes/issues below )
     brew install slatekit
     
 {{< /highlight >}}
@@ -36,8 +39,36 @@ You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
     <strong>2:</strong> <a href="https://discussions.apple.com/thread/251258165">Slow HomeBrew post install on Mac OS Catalina ( based on thread below )</a><br/>
     <strong>3:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
 </div>
+
+### Upgrade
+{{< highlight bash >}}
+     
+    brew upgrade slatekit
+    
+{{< /highlight >}}
+
+### Un-Install
+{{< highlight bash >}}
+     
+    brew uninstall slatekit
+    brew tap slatekit/slatekit
+    
+{{< /highlight >}}
 {{% break %}}
 
+# Windows
+Currently, there is no installer available for Windows. You will have to perform a manual install for the time being. <br/><br/>
+1. Download the latest release zip from https://github.com/slatekit/slatekit-cli/releases <br/>
+2. Unzip https://github.com/slatekit/slatekit-cli/archive/v1.34.5.zip to C:/tools/slatekit/1.34.5<br/>
+3. Create a bin directory in C:/tools/slatekit/1.34.5/bin and move slatekit and slatekit.bat files into bin  <br/>
+4. Add C:/tools/slatekit/1.34.5/bin/ to your system path  <br/>
+5. In terminal Run command slatekit new app -name="MyApp1" -packageName="company1.apps" (You may have to refresh your terminal) <br/>
+6. This will fail the first time but it will generate the settings  <br/>
+10. Go to your user/documents directory and open ~/.slatekit/tools/cli/conf/settings.conf file <br/>
+11. Update the generation.source to path of the templates e.g. C:/tools/slatekit/1.34.5/tempaltes <br/>
+12. You should now be able to run the command again to generate projects <br/>
+
+{{% break %}}
 
 # Settings
 The settings for the generator are automatically created at <strong>~/.slatekit/tools/cli/conf/settings.conf</strong> when you try to create your first project.

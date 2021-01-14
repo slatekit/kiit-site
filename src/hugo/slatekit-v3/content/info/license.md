@@ -6,7 +6,7 @@ section_header: License
 
 
 # Dual License
-Slate Kit has a unique Dual License approach using BSL (Business Source License) and Apache 2.0 using the Additional Use Grants parameter of the BSL. This is a reletively new license and approach. At the moment, we are making this framework as permissive as possible and more details will come. We plan to allow this to be used as Apache 2.0 immediately for the groups listed below.
+Slate Kit has a unique Dual License approach using BSL (Business Source License) and Apache 2.0 using the Additional Use Grants parameter of the BSL. This is a reletively new license and approach we are trying out. At the moment, we are making this framework as permissive as possible and more details will come. We plan to allow this to be used as Apache 2.0 immediately for the groups listed below.
 
 {{% break %}}
 
@@ -30,23 +30,27 @@ It can not be used for production usage without obtaining a license.
 
 {{% break %}}
 
-# Notes
-- BSL is a relatively new license type.
-- BSL is technicall NOT an open-source" license but rather source available
-- BSL has parameters Change Date | Change License | Additional Use that convert it to open source
-- BSL Additional Use Grant is used to grant production use and further rights to various groups
-
+<h1 id="Notes">Notes</h1>
+<p>
+1. BSL is a relatively new license type. <br/>
+2. BSL is technicall <strong>NOT an open-source"</strong> license but rather <strong>source available</strong> <br/>
+3. BSL has parameters <strong>Change Date | Change License | Additional Use Grants</strong> that convert it to open source <br/>
+4. BSL Additional Use Grant is used to grant additional rights ( we are using this broadly to provide Apache 2.0 licensing rights to the groups above )<br/>
+</p>
 {{% break %}}
 
-# Links:
-- https://mariadb.com/bsl-faq-adopting/
-- https://blog.adamretter.org.uk/business-source-license-adoption/
+<h1 id="Links">Links</h1>
+<p>
+1. https://mariadb.com/bsl-faq-adopting/ <br/>
+2. https://blog.adamretter.org.uk/business-source-license-adoption/ <br/>
+</p>
+{{% break %}}
 
 # Parameters
 <table class="table table-bordered table-striped">
     <tr><td><strong>Change Date</strong></td><td> Jan 1, 2024 - Converts to Apache 2.0 on Jan 1, 2024</td></tr>
     <tr><td><strong>Change License</strong></td><td>Apache 2.0 - Type of license this BSL will convert to</td></tr>
-    <tr><td><strong>Additional Use Grants</strong></td><td>Grants production use immediately under Apache 2.0 for non-profits (.org), edus (.edu), startups (pre-Series A), personal projects, and any company not in the cloud-provider space like AWS, Google Cloud, Azure, Digital Ocean, etc.</td></tr>
+    <tr><td><strong>Additional Use Grants</strong></td><td>Grants production use immediately under Apache 2.0 for certain groups and usage ( see above )</td></tr>
 </table>
 
 {{% break %}}

@@ -6,17 +6,17 @@ section_header: Updates
 
 
 # Status
-Slate Kit is in active development. As of January 2020, it is very stable and 1.0.0 versions of components will be released in the upcoming weeks.
+Slate Kit is in active development. As of January 2021, it is very stable and 1.x versions of components have been released.
+There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool to create new projects.
 {{% break %}}
 
 
 # Releases
-In January 2020, stable 1.0.0 releases will be available of several Slate Kit architecture components.
 You can check the current releases at <a href="https://github.com/slatekit/slatekit/releases">Releases</a>
 {{% break %}}
 
 # Current
-Summary and status of all components available in Slate Kit.
+Summary and status of all components available in Slate Kit. 
 {{% sk-modules %}}
 {{% break %}}
 
@@ -28,6 +28,11 @@ Upcoming developments and features
         <td><strong>Item</strong></td>
         <td><strong>Type</strong></td>
         <td><strong>Desc</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1</strong></td>
+        <td><strong>Infrastructure</strong></td>
+        <td>Additional Infrastructure abstractions and AWS integrations ( Documents, Streams ) </td>
     </tr>
     <tr>
         <td><strong>1</strong></td>
@@ -46,8 +51,8 @@ Upcoming developments and features
     </tr>
     <tr>
         <td><strong>4</strong></td>
-        <td><strong>Generator</strong></td>
-        <td><a href="/arch/generators">Project generator</a> improvements </td>
+        <td><strong>Generators</strong></td>
+        <td>Improved code and API doc generators</td>
     </tr>
     <tr>
         <td><strong>5</strong></td>
