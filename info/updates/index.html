@@ -80,10 +80,10 @@
         <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/info/updates">Updates</a>
+        <a class="nav-link" href="/start/overview">Overview</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/start/overview">Overview</a>
+        <a class="nav-link" href="/info/updates">Updates</a>
     </li>
     <li class="nav-item dropdown">
         <a
@@ -172,8 +172,13 @@
 
 <h1 id="status">Status</h1>
 
-<p>Slate Kit is in active development. As of January 2021, it is very stable and 1.x versions of components have been released.
-There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool to create new projects.
+<p>Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. It is very stable and 1.x versions of components have been released.
+There is also a <strong>Homebrew installer</strong> for Mac OS for using the <strong>Slate Kit CLI</strong> tool to create new projects.
+<div class="alert alert-info" role="alert">
+  You can download the Slate Kit Project Generator at 
+  <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
+  Install instructions located at <a href="start/generators" >Generators</a>. 
+</div>
 <br/><br/></p>
 
 <h1 id="releases">Releases</h1>
@@ -197,13 +202,22 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td ><strong>About</strong></td>
   </tr>
   <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Foundations</strong>: Libraries used by most projects</td>
+  </tr>
+  <tr>
     <td class="text-center"><a href="arch/results"><img src="assets/media/img/white/target.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/results">Results</a></strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /></td>
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Foundations</strong>: Successes / Failure Modeling</td>
+    <td>Successes / Failure Modeling</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/utils/overview"><img src="assets/media/img/white/multitool.png" width="40" alt="" /></a></td>
@@ -212,7 +226,7 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Foundations</strong>: Utility Components</td>
+    <td>Utility Components</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/context"><img src="assets/media/img/white/connected.png" width="40" alt="" /></a></td>
@@ -221,7 +235,7 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Foundations</strong>: Stores Common Dependencies</td>
+    <td>Stores Common Dependencies</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/actors"><img src="assets/media/img/white/gears.png" width="40" alt="" /></a></td>
@@ -230,9 +244,20 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Foundations</strong>: Micro Actor Library</td>
+    <td>Micro Actor Library</td>
   </tr>
 
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Applications</strong>: Runnable apps and services</td>
+  </tr>
+
+  
   <tr>
     <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/app">App</a></strong></td>
@@ -240,7 +265,7 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Apps</strong>: Runnable App Template</td>
+    <td>Runnable App Template</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/cli"><img src="assets/media/img/white/terminal.png" width="40" alt="" /></a></td>
@@ -249,16 +274,25 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Apps</strong>: Command Line Interface</td>
+    <td>Command Line Interface</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="/arch/apis">Server</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-apis/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Http Server ( using Ktor ) and our Universal APIs</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/apis">API</a></strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-apis/images/download.svg" /></td>
-    <td><span class="badge badge-light">Server</span></td>
+    <td><span class="badge badge-light">Server / Console</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Apps</strong>: Universal APIs</td>
+    <td>Universal APIs</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/jobs"><img src="assets/media/img/white/gears.png" width="40" alt="" /></a></td>
@@ -267,8 +301,21 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Apps</strong>: Background jobs/queues</td>
+    <td>Pausable Background jobs/queues library</td>
   </tr>
+
+
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Infrastructure</strong>: Infrastructure components</td>
+  </tr>
+
+
   <tr>
     <td class="text-center"><a href="/arch/cache"><img src="assets/media/img/white/lightning.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/cache">Cache</a></strong></td>
@@ -276,43 +323,34 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Infrastructure</strong>: Caching library</td>
-  </tr>
-  <tr>
-    <td class="text-center"><a href="/arch/files"><img src="assets/media/img/white/folders.png" width="40" alt="" /></a></td>
-    <td><strong><a class="url-ch" href="arch/files">Files</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-providers-aws/images/download.svg" /></td>
-    <td><span class="badge badge-light">Server</span></td>
-    <td><span class="badge badge-success">Stable</span></td>
-    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Infrastructure</strong>: Cloud Files library</td>
+    <td>Caching library</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/queues"><img src="assets/media/img/white/queue.png" width="40" alt="" /></a></td>
-    <td><strong><a class="url-ch" href="arch/queues">Queues</a></strong></td>
+    <td><strong><a class="url-ch" href="arch/queues">Core</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-core/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Infrastructure Abstractions(Files, Queues, etc)</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/files"><img src="assets/media/img/white/cloud.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="arch/files">Cloud</a></strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-providers-aws/images/download.svg" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Infrastructure</strong>: Cloud Queues library</td>
+    <td>AWS Cloud <strong><a class="url-ch" href="arch/files">Files</a></strong> and <strong><a class="url-ch" href="arch/queues">Queues</a></strong></td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/sms"><img src="assets/media/img/white/mobile.png" width="40" alt="" /></a></td>
-    <td><strong><a class="url-ch" href="arch/sms">Notifs</a></strong></td>
+    <td><strong><a class="url-ch" href="arch/sms">Notifications</a></strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-notifications/images/download.svg" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Infrastructure</strong>: Email, SMS, Slack, Push</td>
-  </tr>
-  <tr>
-    <td class="text-center"><a href="/arch/data"><img src="assets/media/img/white/layers.png" width="40" alt="" /></a></td>
-    <td><strong><a class="url-ch" href="arch/data">Entities</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-entities/images/download.svg" /></td>
-    <td><span class="badge badge-light">Android / Server</span></td>
-    <td><span class="badge badge-primary">Beta</span></td>
-    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Services</strong>: SQL / Data library</td>
+    <td>Email, SMS, Slack, Push</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/tracking"><img src="assets/media/img/white/diagnostic.png" width="40" alt="" /></a></td>
@@ -321,16 +359,216 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Services</strong>: Diagnostics related library</td>
+    <td>Diagnostics related library</td>
+  </tr>
+
+
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Data</strong>: Database related modules</td>
+  </tr>
+
+
+  <tr>
+    <td class="text-center"><a href="/arch/data"><img src="assets/media/img/white/layers.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="arch/data">DB</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-db/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><span class="badge badge-primary">Beta</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Convenient datbase operations over JDBC</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/data"><img src="assets/media/img/white/layers.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="arch/data">Query</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-query/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-primary">Beta</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>A light-weight SQL Query builder</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/data"><img src="assets/media/img/white/layers.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="arch/data">Entities</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-entities/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-primary">Beta</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Entity and Repository interfaces</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/data"><img src="assets/media/img/white/layers.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="arch/data">ORM</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-orm/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><span class="badge badge-primary">Beta</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Light-weight Data-Mapper to map from models and tables</td>
+  </tr>
+
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Support</strong>: Misc support libraries and tools</td>
+  </tr>
+
+
+  
+  <tr>
+    <td class="text-center"><a href="/arch/generators"><img src="assets/media/img/white/terminal.png" width="40" alt="" /></a></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit" >Slate Kit</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-generator/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server / Console</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Slate Kit CLI for MacOS</td>
   </tr>
   <tr>
     <td class="text-center"><a href="/arch/generators"><img src="assets/media/img/white/prototype.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="arch/generators">Generator</a></strong></td>
     <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-generator/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server / Console</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Project templates and code generator</td>
+  </tr>
+
+  
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Providers</strong>: 3rd Party Integrations</td>
+  </tr>
+
+
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/module.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/ext/kotlin/slatekit-providers-logback" >Logback</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-providers-logback/images/download.svg" /></td>
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><span class="badge badge-success">Stable</span></td>
     <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
-    <td><strong>Tools</strong>: Project generator</td>
+    <td>Logback logging provider for Slate Kit logs</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/module.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/ext/kotlin/slatekit-providers-datadog" >DataDog</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-providers-datadog/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>DataDog metrics provider for Slate Kit metrics</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/module.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/ext/kotlin/slatekit-providers-aws" >AWS</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-providers-aws/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>AWS S3, SQS provider for Slate Kit files/queues</td>
+  </tr>
+
+  
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Connectors</strong>: Connects 2 or modules together</td>
+  </tr>
+
+
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/gears.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/ext/kotlin/slatekit-connectors-cli" >API / CLI</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-connectors-cli/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server / Console</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Makes Universal APIs run on the CLI</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/gears.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/ext/kotlin/slatekit-connectors-jobs" >API / Jobs</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-connectors-jobs/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Makes Universal APIs accessible from jobs/queues</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/gears.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/ext/kotlin/slatekit-connectors-entities" >Entities/DB</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-connectors-entities/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Makes Entities/Databases available in the Context</td>
+  </tr>
+
+
+  <tr>
+    <td class="text-center"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><strong>Internal</strong>: Internal libraries (not for public use)</td>
+  </tr>
+
+
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/shield.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-http" >Http</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-http/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td> Thin library on top of OkHttp for RPC calls</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/shield.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-meta" >Meta</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-meta/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>For Reflections and meta-programming</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/shield.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-policy" >Policy</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-policy/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>For middleware and enforcing policies like once, every</td>
+  </tr>
+  <tr>
+    <td class="text-center"><img src="assets/media/img/white/shield.png" width="40" alt="" /></td>
+    <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-serialization" >Serialization</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-meta/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><span class="badge badge-success">Stable</span></td>
+    <td><img src="https://img.shields.io/badge/license-Dual-brightgreen.svg?style=flat" /></td>
+    <td>Custom serializer, deserializer for Universal APIs</td>
   </tr>
 </table>
 </div>
@@ -351,29 +589,34 @@ There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool t
         <td>Additional Infrastructure abstractions and AWS integrations ( Documents, Streams ) </td>
     </tr>
     <tr>
-        <td><strong>1</strong></td>
+        <td><strong>2</strong></td>
         <td><strong>Linting</strong></td>
         <td>Automated linting via ktlint</td>
     </tr>
     <tr>
-        <td><strong>2</strong></td>
+        <td><strong>3</strong></td>
         <td><strong>CI/CD</strong></td>
         <td>Automated builds and artifact publishing</td>
     </tr>
     <tr>
-        <td><strong>3</strong></td>
+        <td><strong>4</strong></td>
         <td><strong>Docker</strong></td>
         <td>Docker integration in gradle builds/projet templates </td>
     </tr>
     <tr>
-        <td><strong>4</strong></td>
+        <td><strong>5</strong></td>
         <td><strong>Generators</strong></td>
         <td>Improved code and API doc generators</td>
     </tr>
     <tr>
-        <td><strong>5</strong></td>
+        <td><strong>6</strong></td>
         <td><strong>Multi-Platform</strong></td>
         <td>Project improvements to support Kotlin Multi-Platform <strong>iOS</strong> and <strong>Javascript</strong></td>
+    </tr>
+    <tr>
+        <td><strong>7</strong></td>
+        <td><strong>Cloud Console</strong></td>
+        <td>We have an innovative Slate Kit SAAS based cloud console service being planned and in the works for 2021.</td>
     </tr>
 </table>
 <br/><br/></p>

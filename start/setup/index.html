@@ -81,10 +81,10 @@
         <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/info/updates">Updates</a>
+        <a class="nav-link" href="/start/overview">Overview</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/start/overview">Overview</a>
+        <a class="nav-link" href="/info/updates">Updates</a>
     </li>
     <li class="nav-item dropdown">
         <a
@@ -161,15 +161,34 @@
         
         
     
-    <section class="header wow fadeInUp">
-        <div class="container text-center">
-            <h2>Setup</h2>
-        </div>
-    </section>
-    
-    <section class="sk-creative">
-      <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-none d-lg-block">
+                <div id="sidebar-wrapper">
+   <div class="sidebar-header">
+      <a class="brand" href="/">
+      <span>Index</span>
+      </a>
+      
+      </button>
+   </div>
+   <div id="sk_arch_component_menu_sections" class="sidebar-nav">
         
+    </div>
+</div>
+            </div>
+            <div class="col-lg-9 flex">
+                <section class="features">
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">Setup</h1>
+                        </div>
+                    </div>
+                </section>
+                
 
 <h1 id="overview">Overview</h1>
 
@@ -256,8 +275,38 @@ help with the sample apps and is also needed for the ORM ( entities ).
 </p>
 <br/><br/></p>
 
+<script>
+    var archComponent = {
+        name: "Setup",
+        page: "start/setup",
+        icon: "assets/media/img/white/gears.png",
+        menu: {
+            mode: "normal",
+            useTemplate:false,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Overview"       , anchor: "#overview" },
+                        { name:"Required"       , anchor: "#required"  },
+                        { name:"Suggested"      , anchor: "#suggested"  },
+                        { name:"Slate Kit CLI"  , anchor: "#slate kit cli"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
+
+            </div>
+            <div class="col-sm-1 flex">
+            </div>
+        </div>
       </div>
-    </section>  
     
 
     
@@ -302,6 +351,11 @@ help with the sample apps and is also needed for the ORM ( entities ).
     </script>
 
     <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
 </body>
 
 </html>

@@ -81,10 +81,10 @@
         <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/info/updates">Updates</a>
+        <a class="nav-link" href="/start/overview">Overview</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/start/overview">Overview</a>
+        <a class="nav-link" href="/info/updates">Updates</a>
     </li>
     <li class="nav-item dropdown">
         <a
@@ -161,21 +161,40 @@
         
         
     
-    <section class="header wow fadeInUp">
-        <div class="container text-center">
-            <h2>Generators</h2>
-        </div>
-    </section>
-    
-    <section class="sk-creative">
-      <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-none d-lg-block">
+                <div id="sidebar-wrapper">
+   <div class="sidebar-header">
+      <a class="brand" href="/">
+      <span>Index</span>
+      </a>
+      
+      </button>
+   </div>
+   <div id="sk_arch_component_menu_sections" class="sidebar-nav">
         
+    </div>
+</div>
+            </div>
+            <div class="col-lg-9 flex">
+                <section class="features">
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">Generators</h1>
+                        </div>
+                    </div>
+                </section>
+                
 
-<h1 id="overview">Overview</h1>
+<h1 id="about">About</h1>
 
 <p>Slate Kit comes with a command line tool to serve as a project generator.
-This is available on Mac using <strong>HomeBrew</strong>
-This project generator is a pacakged java based application, and works like a minimal version of <strong>nodejs yeoman</strong> or <strong>python cookie-cutter</strong></p>
+This project generator is a pacakged java based application, and works like a minimal version of <strong>nodejs yeoman</strong> or <strong>python cookie-cutter</strong>
+There are several types of project generators available by default from Slate Kit. These are the most common type of Applications or services corresponding to the architecture components available from Slate Kit.</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
     slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
@@ -183,14 +202,16 @@ This project generator is a pacakged java based application, and works like a mi
 
 <br/><br/>
 
-<h1 id="mac-os">Mac OS</h1>
+<h1 id="status">Status</h1>
 
-<p>You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
-<div class="alert alert-info" role="alert">
-  You can download the Slate Kit Project Generator at 
-  <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
-  Install instructions located at <a href="start/generators" >Generators</a>. 
-</div></p>
+<p>Currently, the Slate Kit CLI tool is only available for automatic install on Mac OS as it is integrated with <strong>HomeBrew</strong>.
+You can however perform an manual install on Windows using the instructions provided.</p>
+
+<br/><br/>
+
+<h1 id="macos">MacOS</h1>
+
+<p>You can easily install the Slate Kit CLI using HomeBrew on Mac OS.</p>
 
 <h3 id="install">Install</h3>
 
@@ -217,7 +238,7 @@ This project generator is a pacakged java based application, and works like a mi
 
 <p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
     brew uninstall slatekit
-    brew tap slatekit/slatekit
+    brew untap slatekit/slatekit
     </code></pre></div>
 <br/><br/></p>
 
@@ -280,12 +301,7 @@ The settings are listed below
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
-<h1 id="generators">Generators</h1>
-
-<p>These are all the types of project generators available by default from Slate Kit. These are the most common type of Applications or services corresponding to the architecture components available from Slate Kit.
-<br/><br/></p>
-
-<h2 id="app">APP</h2>
+<h1 id="app">APP</h1>
 
 <p>Generates a new Slate Kit stand-alone application with support command line args, environments, configs, logging, help usage and more. Refer to the <a href="arch/app" >App</a> component and example: <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_App.kt" >Example_App.kt</a>.</p>
 
@@ -302,7 +318,7 @@ The settings are listed below
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
-<h2 id="api">API</h2>
+<h1 id="api">API</h1>
 
 <p>Generates a new API project for hosting HTTP/Web APIs. APIs in Slate Kit are considered <strong>Universal</strong> in the sense that you write them once and they are available as both HTTP/Web APIs ( in the form of RPCs ) and also available on the CLI.
 Also refer to the <a href="arch/apis" >APIs</a> component.</p>
@@ -324,7 +340,7 @@ Also refer to the <a href="arch/apis" >APIs</a> component.</p>
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
-<h2 id="job">JOB</h2>
+<h1 id="job">JOB</h1>
 
 <p>Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in &ldquo;pages&rdquo;, or process items from queues.
 Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Jobs.kt" >Example_Jobs.kt</a>.</p>
@@ -356,7 +372,7 @@ Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/>
 
-<h2 id="cli">CLI</h2>
+<h1 id="cli">CLI</h1>
 
 <p>Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
 Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_CLI.kt" >Example_CLI.kt</a>.</p>
@@ -379,8 +395,54 @@ Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="ht
 <a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 
+<script>
+    var archComponent = {
+        name: "Generators",
+        page: "start/generators",
+        icon: "assets/media/img/white/gears.png",
+        menu: {
+            mode: "normal",
+            useTemplate:false,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"About"    , anchor: "#about" },
+                        { name:"Status"       , anchor: "#status"  }
+                    ]
+                },
+                {
+                    name: "Setup",
+                    items: [
+                        { name:"MacOS"       , anchor: "#macos"  },
+                        { name:"Windows"        , anchor: "#windows" },
+                        { name:"Settings"        , anchor: "#settings"  }
+                    ]
+                },
+                {
+                    name: "Generators",
+                    items: [
+                        { name:"App"      , anchor: "#app"  },
+                        { name:"API"      , anchor: "#api"  },
+                        { name:"Job"      , anchor: "#job"  },
+                        { name:"Env"      , anchor: "#env"  },
+                        { name:"CLI"      , anchor: "#cli"  }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
+
+            </div>
+            <div class="col-sm-1 flex">
+            </div>
+        </div>
       </div>
-    </section>  
     
 
     
@@ -425,6 +487,11 @@ Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="ht
     </script>
 
     <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
 </body>
 
 </html>
