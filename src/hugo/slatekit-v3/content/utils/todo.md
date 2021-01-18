@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>date</strong></td>
-      <td>2019-12-04</td>
+      <td>{{% sk-version-date %}}</td>
     </tr>
     <tr>
       <td><strong>version</strong></td>
-      <td>0.9.35</td>
+      <td>{{% sk-version-number %}}</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>

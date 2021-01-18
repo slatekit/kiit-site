@@ -1,4 +1,0 @@
----
-title: core
-type: core
----

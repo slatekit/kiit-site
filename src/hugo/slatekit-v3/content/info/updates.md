@@ -6,8 +6,9 @@ section_header: Updates
 
 
 # Status
-Slate Kit is in active development. As of January 2021, it is very stable and 1.x versions of components have been released.
-There is also a Homebrew installer for Mac OS for using the Slate Kit CLI tool to create new projects.
+Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. It is very stable and 1.x versions of components have been released.
+There is also a <strong>Homebrew installer</strong> for Mac OS for using the <strong>Slate Kit CLI</strong> tool to create new projects.
+{{% sk-link-cli %}}
 {{% break %}}
 
 
@@ -35,29 +36,34 @@ Upcoming developments and features
         <td>Additional Infrastructure abstractions and AWS integrations ( Documents, Streams ) </td>
     </tr>
     <tr>
-        <td><strong>1</strong></td>
+        <td><strong>2</strong></td>
         <td><strong>Linting</strong></td>
         <td>Automated linting via ktlint</td>
     </tr>
     <tr>
-        <td><strong>2</strong></td>
+        <td><strong>3</strong></td>
         <td><strong>CI/CD</strong></td>
         <td>Automated builds and artifact publishing</td>
     </tr>
     <tr>
-        <td><strong>3</strong></td>
+        <td><strong>4</strong></td>
         <td><strong>Docker</strong></td>
         <td>Docker integration in gradle builds/projet templates </td>
     </tr>
     <tr>
-        <td><strong>4</strong></td>
+        <td><strong>5</strong></td>
         <td><strong>Generators</strong></td>
         <td>Improved code and API doc generators</td>
     </tr>
     <tr>
-        <td><strong>5</strong></td>
+        <td><strong>6</strong></td>
         <td><strong>Multi-Platform</strong></td>
         <td>Project improvements to support Kotlin Multi-Platform <strong>iOS</strong> and <strong>Javascript</strong></td>
+    </tr>
+    <tr>
+        <td><strong>7</strong></td>
+        <td><strong>Cloud Console</strong></td>
+        <td>We have an innovative Slate Kit SAAS based cloud console service being planned and in the works for 2021.</td>
     </tr>
 </table>
 {{% break %}}

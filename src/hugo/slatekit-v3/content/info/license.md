@@ -29,7 +29,11 @@ This is effectively Apache 2.0 for the following groups and usage
 # BSL 1.1 
 For Cloud-Providers such as AWS, Google Cloud, Azure, Digital Ocean, etc, this is a BSL license. 
 It can not be used for production usage without obtaining a license.
-
+<table class="table table-bordered table-striped">
+    <tr><td><strong>Change Date</strong></td><td> <strong>Jan 1, 2024</strong> - Converts to Apache 2.0 on Jan 1, 2024</td></tr>
+    <tr><td><strong>Change License</strong></td><td><strong>Apache 2.0</strong> - Type of license this BSL will convert to</td></tr>
+    <tr><td><strong>Additional Use Grants</strong></td><td><strong>Apache 2.0 license granted immediately</strong> for groups and usage listed above</td></tr>
+</table>
 {{% break %}}
 
 <h1 id="Notes">Notes</h1>
@@ -48,12 +52,6 @@ It can not be used for production usage without obtaining a license.
 </p>
 {{% break %}}
 
-# Parameters
-<table class="table table-bordered table-striped">
-    <tr><td><strong>Change Date</strong></td><td> Jan 1, 2024 - Converts to Apache 2.0 on Jan 1, 2024</td></tr>
-    <tr><td><strong>Change License</strong></td><td>Apache 2.0 - Type of license this BSL will convert to</td></tr>
-    <tr><td><strong>Additional Use Grants</strong></td><td>Grants production use immediately under Apache 2.0 for certain groups and usage ( see above )</td></tr>
-</table>
 
 {{% break %}}
 

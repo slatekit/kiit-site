@@ -89,7 +89,32 @@ help with the sample apps and is also needed for the ORM ( entities ).
 {{% break %}}
 
 
+<script>
+    var archComponent = {
+        name: "Setup",
+        page: "start/setup",
+        icon: "assets/media/img/white/gears.png",
+        menu: {
+            mode: "normal",
+            useTemplate:false,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"Overview"       , anchor: "#overview" },
+                        { name:"Required"       , anchor: "#required"  },
+                        { name:"Suggested"      , anchor: "#suggested"  },
+                        { name:"Slate Kit CLI"  , anchor: "#slate kit cli"  }
+                    ]
+                }
+            ]
+        }
+    };
 
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 
 
 

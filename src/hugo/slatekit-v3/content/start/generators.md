@@ -5,10 +5,11 @@ section_header: Generators
 ---
 
 
-# Overview
+# About
 Slate Kit comes with a command line tool to serve as a project generator.
-This is available on Mac using <strong>HomeBrew</strong>
 This project generator is a pacakged java based application, and works like a minimal version of **nodejs yeoman** or **python cookie-cutter**
+There are several types of project generators available by default from Slate Kit. These are the most common type of Applications or services corresponding to the architecture components available from Slate Kit.
+
 
 {{< highlight bash >}}
     
@@ -19,10 +20,15 @@ This project generator is a pacakged java based application, and works like a mi
 {{% break %}}
 
 
+# Status
+Currently, the Slate Kit CLI tool is only available for automatic install on Mac OS as it is integrated with <strong>HomeBrew</strong>.
+You can however perform an manual install on Windows using the instructions provided.
 
-# Mac OS
+{{% break %}}
+
+
+# MacOS
 You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
-{{% sk-link-cli %}}
 
 ### Install
 {{< highlight bash >}}
@@ -51,7 +57,7 @@ You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
 {{< highlight bash >}}
      
     brew uninstall slatekit
-    brew tap slatekit/slatekit
+    brew untap slatekit/slatekit
     
 {{< /highlight >}}
 {{% break %}}
@@ -110,11 +116,8 @@ The settings are listed below
 </div>
 {{% section-end mod="arch/generators" %}}
 
-# Generators
-These are all the types of project generators available by default from Slate Kit. These are the most common type of Applications or services corresponding to the architecture components available from Slate Kit.
-{{% break %}}
 
-## APP {#app}
+# APP {#app}
 Generates a new Slate Kit stand-alone application with support command line args, environments, configs, logging, help usage and more. Refer to the {{% sk-link-arch page="app" name="App" %}} component and example: {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}.
 
 {{< highlight bash >}}
@@ -130,7 +133,7 @@ Generates a new Slate Kit stand-alone application with support command line args
 {{% section-end mod="arch/generators" %}}
 
 
-## API {#api}
+# API {#api}
 Generates a new API project for hosting HTTP/Web APIs. APIs in Slate Kit are considered **Universal** in the sense that you write them once and they are available as both HTTP/Web APIs ( in the form of RPCs ) and also available on the CLI.
 Also refer to the {{% sk-link-arch page="apis" name="APIs" %}} component.
 
@@ -151,7 +154,7 @@ Also refer to the {{% sk-link-arch page="apis" name="APIs" %}} component.
 {{% section-end mod="arch/generators" %}}
 
 
-## JOB {#job}
+# JOB {#job}
 Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in "pages", or process items from queues.
 Refer to the {{% sk-link-arch page="jobs" name="Jobs" %}} component and example: {{% sk-link-example file="Example_Jobs.kt" name="Example_Jobs.kt" %}}.
 
@@ -184,7 +187,7 @@ For the Job, you can run the different job types by passing **-job.name** to the
 {{% section-end mod="arch/generators" %}}
 
 
-## CLI {#cli}
+# CLI {#cli}
 Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
 Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and example: {{% sk-link-example file="Example_CLI.kt" name="Example_CLI.kt" %}}.
 
@@ -205,6 +208,47 @@ Also refer to the {{% sk-link-arch page="cli" name="CLI" %}} component and examp
 {{< /highlight >}}
 {{% section-end mod="arch/generators" %}}
 
+<script>
+    var archComponent = {
+        name: "Generators",
+        page: "start/generators",
+        icon: "assets/media/img/white/gears.png",
+        menu: {
+            mode: "normal",
+            useTemplate:false,
+            sections: [
+                {
+                    name: "Guide",
+                    items: [
+                        { name:"About"    , anchor: "#about" },
+                        { name:"Status"       , anchor: "#status"  }
+                    ]
+                },
+                {
+                    name: "Setup",
+                    items: [
+                        { name:"MacOS"       , anchor: "#macos"  },
+                        { name:"Windows"        , anchor: "#windows" },
+                        { name:"Settings"        , anchor: "#settings"  }
+                    ]
+                },
+                {
+                    name: "Generators",
+                    items: [
+                        { name:"App"      , anchor: "#app"  },
+                        { name:"API"      , anchor: "#api"  },
+                        { name:"Job"      , anchor: "#job"  },
+                        { name:"Env"      , anchor: "#env"  },
+                        { name:"CLI"      , anchor: "#cli"  }
+                    ]
+                }
+            ]
+        }
+    };
 
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 
 
