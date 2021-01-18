@@ -110,7 +110,7 @@ You can generate a sample app using the slatekit executable.
 Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}
 {{< highlight bash >}}
     
-    :> slatekit new app -name="MyApp1" -package="company1.myapp1"
+    :> slatekit new app -name="MyApp1" -packageName="company1.myapp1"
     
 {{< /highlight >}}
 {{% section-end mod="arch/app" %}}
