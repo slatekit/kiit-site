@@ -4,7 +4,15 @@ date: 2021-01-12T13:02:30-04:00
 section_header: License
 ---
 
+# Apache 2.0
+The license for Slate Kit Framework Apache 2.0. 
 
+# SAAS
+There are some SAAS tools ( **independent from Slate Kit** ), that we are working on.
+These are related to Cloud Services, and API tools, which we also are planning on open-sourcing.
+The license for the open-source SAAS tools will be BSL 1.1
+
+<!--
 # Dual License
 Slate Kit has a unique Dual License approach using BSL (Business Source License) and Apache 2.0 using the Additional Use Grants parameter of the BSL. 
 This is a reletively new approach and license that we are trying out and we plan to improve on this dual licensing approach in time.
@@ -52,6 +60,6 @@ It can not be used for production usage without obtaining a license.
 </p>
 {{% break %}}
 
-
+-->
 {{% break %}}
 

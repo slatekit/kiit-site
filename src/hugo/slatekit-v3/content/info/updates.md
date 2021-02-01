@@ -6,7 +6,7 @@ section_header: Updates
 
 
 # Status
-Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. It is very stable and 1.x versions of components have been released.
+Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. Many components are very stable and 2.x versions of components have been released.
 There is also a <strong>Homebrew installer</strong> for Mac OS for using the <strong>Slate Kit CLI</strong> tool to create new projects.
 {{% sk-link-cli %}}
 {{% break %}}
