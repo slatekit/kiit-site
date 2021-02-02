@@ -17,7 +17,7 @@ You can setup the slatekit.common project with the configuration below.
 
     dependencies {
         // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:1.0.0'
+        compile 'com.slatekit:slatekit-common:2.0.0'
     }
 
 {{< /highlight >}}
@@ -34,6 +34,7 @@ Links to this modules info. Click on any component icon below for example on how
     gitAlias="slatekit-common"
     url="utils/overview"
     uses="slatekit-results"
+    bintray="slatekit-common"
     license="Apache 2.0"
     exampleUrl=""
     exampleFileName="All Examples"

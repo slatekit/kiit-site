@@ -62,9 +62,42 @@ Upcoming developments and features
     </tr>
     <tr>
         <td><strong>7</strong></td>
-        <td><strong>Cloud Console</strong></td>
-        <td>We have an innovative Slate Kit SAAS based cloud console service being planned and in the works for 2021.</td>
+        <td><strong>MBaaS</strong></td>
+        <td>See details below for more info</td>
     </tr>
 </table>
 {{% break %}}
+
+# MBaaS
+We are working on an Slate Kit based **MBaaS ( Mobile Backend as a Service )** that cane be **self-hosted or cloud deployed**. 
+This is meant to be an **alternative to Google Firebase**, with default integration with AWS for things like Files(S3), Queues(SQS), Docs(DynamoDB), and support for sending emails, sms, notifications and many more features.
+{{% break %}}
+
+<script>
+    var archComponent = {
+        name: "Updates",
+        page: "start/updates",
+        icon: "assets/media/img/white/speaker.png",
+        menu: {
+            mode: "normal",
+            useTemplate:false,
+            sections: [
+                {
+                    name: "Updates",
+                    items: [
+                        { name:"Status"      , anchor: "#status"    },
+                        { name:"Releases"    , anchor: "#releases"  },
+                        { name:"Current"     , anchor: "#current"   },
+                        { name:"Upcoming"    , anchor: "#upcoming"  },
+                        { name:"MBaaS"       , anchor: "#mbaas"   }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 
