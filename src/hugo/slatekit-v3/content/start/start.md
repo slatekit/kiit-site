@@ -121,7 +121,7 @@ You can create several different project types using the generator, these includ
 
 <script>
     var archComponent = {
-        name: "Setup",
+        name: "Start",
         page: "start/start",
         icon: "assets/media/img/white/gears.png",
         menu: {
