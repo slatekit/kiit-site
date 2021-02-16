@@ -118,6 +118,13 @@ You can create several different project types using the generator, these includ
 </div>
 {{% break %}}
 
+# Samples
+There are also several sample applications available in git at {{% sk-link-src component="apps/kotlin/slatekit-samples" filepath="samples" name="Samples" %}}
+<div class="alert alert-info" role="alert">
+    The <a href="/start/generators">Generators</a> are based on these Sample projects which are kept up to date with latest releases.
+</div>
+{{% break %}}
+
 
 <script>
     var archComponent = {
@@ -135,7 +142,8 @@ You can create several different project types using the generator, these includ
                         { name:"Required"       , anchor: "#required"  },
                         { name:"CLI"            , anchor: "#cli"  },
                         { name:"Create"         , anchor: "#create"  },
-                        { name:"Generators"         , anchor: "#generators"  }
+                        { name:"Generators"     , anchor: "#generators"  },
+                        { name:"Samples"        , anchor: "#samples"  }
                     ]
                 }
             ]

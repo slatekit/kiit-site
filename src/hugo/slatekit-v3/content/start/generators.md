@@ -63,15 +63,22 @@ You can easily install the Slate Kit CLI using HomeBrew on Mac OS.
 {{% break %}}
 
 # Windows
-Currently, there is no installer available for Windows. You will have to perform a manual install for the time being. <br/><br/>
+Currently, there is no installer available for Windows. However you have 2 options:
+
+## Option 1: Sample Apps
+There are several sample applications available in git at {{% sk-link-src component="apps/kotlin/slatekit-samples" filepath="samples" name="Samples" %}}.
+You can simply copy one of the samples ( app, cli, api, job, etc ) and adjust/remove code accoringly.
+
+## Option 2: Manual install
+You can also perform a manual install for the time being. <br/><br/>
 1. Download the latest release zip from https://github.com/slatekit/slatekit-cli/releases <br/>
-2. Unzip https://github.com/slatekit/slatekit-cli/archive/v1.34.5.zip to C:/tools/slatekit/1.34.5<br/>
-3. Create a bin directory in C:/tools/slatekit/1.34.5/bin and move slatekit and slatekit.bat files into bin  <br/>
-4. Add C:/tools/slatekit/1.34.5/bin/ to your system path  <br/>
+2. Unzip https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip to C:/tools/slatekit/2.2.0<br/>
+3. Create a bin directory in C:/tools/slatekit/2.2.0/bin and move slatekit and slatekit.bat files into bin  <br/>
+4. Add C:/tools/slatekit/2.2.0/bin/ to your system path  <br/>
 5. In terminal Run command slatekit new app -name="MyApp1" -packageName="company1.apps" (You may have to refresh your terminal) <br/>
 6. This will fail the first time but it will generate the settings  <br/>
 10. Go to your user/documents directory and open ~/.slatekit/tools/cli/conf/settings.conf file <br/>
-11. Update the generation.source to path of the templates e.g. C:/tools/slatekit/1.34.5/tempaltes <br/>
+11. Update the generation.source to path of the templates e.g. C:/tools/slatekit/2.2.0/tempaltes <br/>
 12. You should now be able to run the command again to generate projects <br/>
 
 {{% break %}}
@@ -90,13 +97,13 @@ The settings are listed below
         <td><strong>slatekit.version</strong></td>
         <td>Variable</td>
         <td>Version of Slate Kit stable libraries to use</td>
-        <td>1.34.0 </td>
+        <td>2.2.0</td>
     </tr>
     <tr>
         <td><strong>slatekit.version.beta</strong></td>
         <td>Variable</td>
         <td>Version of Slate Kit beta libraries to use</td>
-        <td>0.64.0 </td>
+        <td>2.2.0</td>
     </tr>
     <tr>
         <td><strong>kotlin.version</strong></td>

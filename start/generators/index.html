@@ -232,15 +232,24 @@ You can however perform an manual install on Windows using the instructions prov
 
 <h1 id="windows">Windows</h1>
 
-<p>Currently, there is no installer available for Windows. You will have to perform a manual install for the time being. <br/><br/>
+<p>Currently, there is no installer available for Windows. However you have 2 options:</p>
+
+<h2 id="option-1-sample-apps">Option 1: Sample Apps</h2>
+
+<p>There are several sample applications available in git at <a href="https://github.com/slatekit/slatekit/tree/master/src/apps/kotlin/slatekit-samples/src/main/kotlin/slatekit/samples" >Samples</a>.
+You can simply copy one of the samples ( app, cli, api, job, etc ) and adjust/remove code accoringly.</p>
+
+<h2 id="option-2-manual-install">Option 2: Manual install</h2>
+
+<p>You can also perform a manual install for the time being. <br/><br/>
 1. Download the latest release zip from <a href="https://github.com/slatekit/slatekit-cli/releases">https://github.com/slatekit/slatekit-cli/releases</a> <br/>
-2. Unzip <a href="https://github.com/slatekit/slatekit-cli/archive/v1.34.5.zip">https://github.com/slatekit/slatekit-cli/archive/v1.34.5.zip</a> to C:/tools/slatekit/1.34.5<br/>
-3. Create a bin directory in C:/tools/slatekit/1.34.5/bin and move slatekit and slatekit.bat files into bin  <br/>
-4. Add C:/tools/slatekit/1.34.5/bin/ to your system path  <br/>
+2. Unzip <a href="https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip">https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip</a> to C:/tools/slatekit/2.2.0<br/>
+3. Create a bin directory in C:/tools/slatekit/2.2.0/bin and move slatekit and slatekit.bat files into bin  <br/>
+4. Add C:/tools/slatekit/2.2.0/bin/ to your system path  <br/>
 5. In terminal Run command slatekit new app -name=&ldquo;MyApp1&rdquo; -packageName=&ldquo;company1.apps&rdquo; (You may have to refresh your terminal) <br/>
 6. This will fail the first time but it will generate the settings  <br/>
 10. Go to your user/documents directory and open ~/.slatekit/tools/cli/conf/settings.conf file <br/>
-11. Update the generation.source to path of the templates e.g. C:/tools/slatekit/1.34.5/tempaltes <br/>
+11. Update the generation.source to path of the templates e.g. C:/tools/slatekit/2.2.0/tempaltes <br/>
 12. You should now be able to run the command again to generate projects <br/></p>
 
 <br/><br/>
@@ -260,13 +269,13 @@ The settings are listed below
         <td><strong>slatekit.version</strong></td>
         <td>Variable</td>
         <td>Version of Slate Kit stable libraries to use</td>
-        <td>1.34.0 </td>
+        <td>2.2.0</td>
     </tr>
     <tr>
         <td><strong>slatekit.version.beta</strong></td>
         <td>Variable</td>
         <td>Version of Slate Kit beta libraries to use</td>
-        <td>0.64.0 </td>
+        <td>2.2.0</td>
     </tr>
     <tr>
         <td><strong>kotlin.version</strong></td>
