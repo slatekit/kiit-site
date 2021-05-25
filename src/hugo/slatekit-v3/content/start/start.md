@@ -126,6 +126,53 @@ There are also several sample applications available in git at {{% sk-link-src c
 {{% break %}}
 
 
+# Apps
+There are various runnable application types you can create with Slate Kit. See the links below for more docs and guides on how to get started with them.
+<table class="table table-bordered table-striped">
+    <tr>
+    <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="/arch/app">App</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-app/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
+    <td>Runnable App Template</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/cli"><img src="assets/media/img/white/terminal.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="/arch/cli">CLI</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-cli/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
+    <td>Command Line Interface</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="/arch/apis">Server</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-apis/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server</span></td>
+    <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
+    <td>Http Server ( using Ktor ) and our Universal APIs</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="/arch/apis">API</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-server/images/download.svg" /></td>
+    <td><span class="badge badge-light">Server / Console</span></td>
+    <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
+    <td>Universal APIs</td>
+  </tr>
+  <tr>
+    <td class="text-center"><a href="/arch/jobs"><img src="assets/media/img/white/gears.png" width="40" alt="" /></a></td>
+    <td><strong><a class="url-ch" href="arch/jobs">Jobs</a></strong></td>
+    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-jobs/images/download.svg" /></td>
+    <td><span class="badge badge-light">Android / Server</span></td>
+    <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
+    <td>Pausable Background jobs/queues library</td>
+  </tr>
+</table>
+{{% break %}}
+
+
 <script>
     var archComponent = {
         name: "Start",
@@ -138,12 +185,13 @@ There are also several sample applications available in git at {{% sk-link-src c
                 {
                     name: "Guide",
                     items: [
-                        { name:"Overview"       , anchor: "#overview" },
+                        { name:"Overview"       , anchor: "#overview"  },
                         { name:"Required"       , anchor: "#required"  },
-                        { name:"CLI"            , anchor: "#cli"  },
-                        { name:"Create"         , anchor: "#create"  },
-                        { name:"Generators"     , anchor: "#generators"  },
-                        { name:"Samples"        , anchor: "#samples"  }
+                        { name:"CLI"            , anchor: "#cli"       },
+                        { name:"Create"         , anchor: "#create"    },
+                        { name:"Generators"     , anchor: "#generators"},
+                        { name:"Samples"        , anchor: "#samples"   },
+                        { name:"Apps"           , anchor: "#apps"   }
                     ]
                 }
             ]
