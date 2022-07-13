@@ -12,7 +12,7 @@ section_header: Overview
 
 # Goals
 <p>
-  The Slate Kit framework was designed for and extracted from a sizable and sophisticated production Mobile Startup with a Server backend. 
+  The Slate Kit framework was originally designed for and extracted from a sizable and sophisticated production Mobile Startup with a Server backend. 
   Slate Kit is a **Kotlin first** framework architected with the explicit goals and purposes below in mind:
 </p>
 <table class="table table-bordered table-striped">

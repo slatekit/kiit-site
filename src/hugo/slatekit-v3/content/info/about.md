@@ -7,7 +7,7 @@ section_header: About
 
 
 # Slate Kit
-The Slate Kit framework was developed by **<a href="https://github.com/kishorereddy">Kishore Reddy</a>** to assist his team in building scalable JVM based projects for startups during a freelancing / contracting period and also for current work on mobile applications with server backends. It has been in production for a few years and is actively maintained. After years of carefully extracting the framework from internal projects, it is being open-sourced for general pupose use and to further support and streamline our own development efforts by decoupling our framework completely from individual projects.
+The Slate Kit framework was developed by **<a href="https://github.com/kishorereddy">Kishore Reddy</a>** to assist his team in building scalable JVM based projects for startups during a freelancing / contracting period. It has been in production for a few years and is actively maintained. After years of carefully extracting the framework from internal projects, it is being open-sourced for general pupose use and to further support and streamline our own development efforts by decoupling our framework completely from individual projects.
 {{% break %}}
 
 # Code Helix

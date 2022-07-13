@@ -6,7 +6,7 @@ section_header: Updates
 
 
 # Status
-Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. Many components are very stable and 2.x versions of components have been released.
+Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. Many components are marked as <strong>stable</strong> and few are still in <strong>beta</strong> and/or only meant for <strong>internal</strong> use.
 There is also a <strong>Homebrew installer</strong> for Mac OS for using the <strong>Slate Kit CLI</strong> tool to create new projects.
 {{% sk-link-cli %}}
 {{% break %}}
@@ -66,11 +66,6 @@ Upcoming developments and features
         <td>See details below for more info</td>
     </tr>
 </table>
-{{% break %}}
-
-# MBaaS
-We are working on an Slate Kit based **MBaaS ( Mobile Backend as a Service )** that cane be **self-hosted or cloud deployed**. 
-This is meant to be an **alternative to Google Firebase**, with default integration with AWS for things like Files(S3), Queues(SQS), Docs(DynamoDB), and support for sending emails, sms, notifications and many more features.
 {{% break %}}
 
 <script>

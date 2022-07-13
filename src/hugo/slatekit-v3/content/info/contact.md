@@ -6,7 +6,7 @@ section_header: Contact
 
 
 # Contact
-Feel free to contact us using all the various channels below! We put a lot of effort on guides, concepts and general documentation, but it is still actively improving as we move along. See our release cycle below for the scheduled releases of Slate Kit. We are considering adding premium support ( see below ) in the future.
+Feel free to contact us using all the various channels below! We put a lot of effort on guides, concepts and general documentation, but it is still actively improving as we move along. See our release cycle below for the scheduled releases of Slate Kit. 
 {{% break %}}
 
 <section id="services" class="integration">
@@ -47,13 +47,6 @@ Feel free to contact us using all the various channels below! We put a lot of ef
               <p>You can contact us at <a href="mailto:slatekit@codehelix.co">slatekit@codehelix.co</a></p>
             </div>
           </div>
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href=""><img src="assets/media/img/white/desktop.png" ></a>
-              <div><a href=""><h3>Conference</h3></a></div>
-              <p>Join our (upcoming) conference calls. Schedule is TBD</p>
-            </div>
-          </div>
         </div>
     </div>
 </section>
@@ -65,13 +58,10 @@ Feel free to contact us using all the various channels below! We put a lot of ef
 
 
 # Support
-We prioritize issues/tickets so they fall into one of the release schedules listed above ( e.g. hot-fixes, patches, minor features, major upgrades). However, we may open up some type of premium/paid service expedited features, enhancements and or fixes. This is still TBD(to be determined). Please contact us for more info if you are interested in premium support.
+We prioritize issues/tickets so they fall into one of the release schedules listed above ( e.g. hot-fixes, patches, minor features, major upgrades). 
 {{% break %}}
 
 # Discuss
-Join our discuss Slate Kit, ask questions on our {{% sk-contact-gitter %}} channel. Please note, we may not be available to respond back immediately, but we will review the channel and respond as soon as we can.
+Please post any questions, notes, issues or feature requests in {{% sk-contact-git %}}.
 {{% break %}}
 
-# Calls
-In the near future, a short and free 1-2 hour conference call will be scheduled **after work hours** on a date/time ( to be determined ) for anyone who is interested in using Slate Kit. You can use this opportunity to talk to us live and ask questions. The schedule / details will be posted here and on our gitter channel ( check back soon ).
-{{% break %}}
