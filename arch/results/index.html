@@ -183,7 +183,7 @@
 
 <h1 id="overview">Overview</h1>
 
-<p><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a core component of Slate Kit and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling. Result is <strong>NOT a new concept</strong>, as it currently exists in various forms in other languages (see below), however <strong>Slate Kit Result differs</strong> significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:</p>
+<p><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a core component of <strong>Kiit</strong> and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling. Result is <strong>NOT a new concept</strong>, as it currently exists in various forms in other languages (see below), however <strong>Kiit</strong> <strong>Result differs</strong> significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:</p>
 
 <br/><br/>
 
@@ -196,7 +196,7 @@
 
 <h1 id="goals">Goals</h1>
 
-<p>The design goals of <strong>Slate Kit Result</strong> differ from other implementations by allowing for a custom error type, sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors.
+<p>The design goals of <strong>Kiit</strong> differ from other implementations by allowing for a custom error type, sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors.
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
@@ -227,7 +227,7 @@
 
 <h1 id="compare">Compare</h1>
 
-<p>The main differences between other implementations is that Slate Kit Result&lt;T,E&gt; offers features #3, #4, and #5 above in Goals and so the differences the the following:
+<p>The main differences between other implementations is that <strong>Kiit</strong> Result&lt;T,E&gt; offers features #3, #4, and #5 above in Goals and so the differences the the following:
 <p>
 1. <strong>Custom Error</strong>: The Error type <strong>E</strong> can be anything, unlike Kotlin and Swift<br/>
 2. <strong>Aliases</strong>: With custom error types, you can have aliases such as <strong>typealias Try&lt;T&gt; = Result&lt;T,Exception&gt;</strong><br/>
@@ -258,19 +258,19 @@
         <td><strong>3</strong></td>
         <td><strong>Rust</td>
         <td><a href="https://doc.rust-lang.org/std/result/">Result&lt;T,E&gt;</a></td>
-        <td>Slate Kit differs with addition of Status, and supplied Aliases, Builders ( see docs here )</td>
+        <td><strong>Kiit</strong> differs with addition of Status, and supplied Aliases, Builders ( see docs here )</td>
     </tr>
     <tr>
         <td><strong>4</strong></td>
         <td><strong>Scala</td>
         <td><a href="https://www.scala-lang.org/api/2.12.4/scala/util/Either.html">Either&lt;L,R&gt;</a></td>
-        <td>General purpose use to represent A or B, branches are Left / Right, although typically used for Success/Failure. Slate Kit differs in semantics by using Success instead of Right, and Failure instead of Left ( similar with Scala Try, but with a customizable error type )</td>
+        <td>General purpose use to represent A or B, branches are Left / Right, although typically used for Success/Failure. <strong>Kiit</strong> differs in semantics by using Success instead of Right, and Failure instead of Left ( similar with Scala Try, but with a customizable error type )</td>
     </tr>
     <tr>
         <td><strong>5</strong></td>
         <td><strong>Go</td>
         <td><a href="https://github.com/grpc/grpc/blob/master/doc/statuscodes.md">GRPC_Codes</a></td>
-        <td>Status codes in Slate Kit are inspired by these</td>
+        <td>Status codes in <strong>Kiit</strong> are inspired by these</td>
     </tr>
 </table>
 <br/><br/></p>
@@ -541,7 +541,7 @@ The branches are also sensiblly defaulted with <strong>Status</strong> codes to 
 
 <h2 id="statuses">Statuses</h2>
 
-<p>One of the distinguishing features of Slate Kit Result is the introduction of a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> component on the Result type base class. The status is applicable for both the Success / Failure branch and is made of a Integer code and String message and is used to further sub-categorize and classify successes and failures to figure out <strong>why</strong> something passed or failed.
+<p>One of the distinguishing features of <strong>Kiit</strong> Result is the introduction of a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> component on the Result type base class. The status is applicable for both the Success / Failure branch and is made of a Integer code and String message and is used to further sub-categorize and classify successes and failures to figure out <strong>why</strong> something passed or failed.
 Default <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a> are provided for convenience. The Status Codes provide a few main benefits:
 <table class="table table-bordered table-striped">
     <tr>
@@ -591,7 +591,7 @@ Default <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin
 <h2 id="aliases">Aliases</h2>
 
 <p>The Result type has 2 type parameters (<strong>T for value and E for error</strong>), but often its more convenient to work with known error types and also to avoid having to constantly specify the error type <strong>E</strong>. This is where Kotlins typealias come in handy.
-There are a few type <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a> available for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types. <strong>Outcome</strong> is used heavily in Slate Kit as we use functional error-handling and avoid throwing of Exceptions ( generally speaking ).
+There are a few type <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a> available for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types. <strong>Outcome</strong> is used heavily in <strong>Kiit</strong> as we use functional error-handling and avoid throwing of Exceptions ( generally speaking ).
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
     
     <span class="c1">// Aliases simplify Result from 2 type parameters down to 1.
@@ -668,7 +668,7 @@ There are builders <a href="https://github.com/slatekit/slatekit/tree/master/src
 <h2 id="errors">Errors</h2>
 
 <p>The error type <strong>E</strong> on Result and its Failure branch can be anything, unlike other implementations which default <strong>E</strong> to <strong>Exception</strong>.
-While you can use <strong>String, or Exception</strong> as the error type, Slate Kit offers <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Err.kt" >Err</a> as a custom error type.
+While you can use <strong>String, or Exception</strong> as the error type, <strong>Kiit</strong> offers <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Err.kt" >Err</a> as a custom error type.
 This provides convenient ways to build errors from a string, exception, based on an invalid field or from a list of errors.
 This is much more comprehensive than using a simple <strong>String</strong> as an error type and more aligned with functional programming by
 avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
@@ -971,7 +971,7 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
 
 <h2 id="try">Try</h2>
 
-<p>The <strong>Try&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Exception&gt;</strong> and allows you to use Result as <strong>Try&lt;T&gt;</strong>. This has <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Tries.kt" >Tries</a> builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in Slate Kit, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
+<p>The <strong>Try&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Exception&gt;</strong> and allows you to use Result as <strong>Try&lt;T&gt;</strong>. This has <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Tries.kt" >Tries</a> builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in <strong>Kiit</strong>, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
 <div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
     <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
     <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
