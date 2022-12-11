@@ -6,8 +6,8 @@ section_header: Updates
 
 
 # Status
-Slate Kit is <strong>production ready as of January 2021</strong> and being made generally available. Many components are marked as <strong>stable</strong> and few are still in <strong>beta</strong> and/or only meant for <strong>internal</strong> use.
-There is also a <strong>Homebrew installer</strong> for Mac OS for using the <strong>Slate Kit CLI</strong> tool to create new projects.
+{{% sk-name %}} is <strong>production ready as of January 2021</strong> and being made generally available. Many components are marked as <strong>stable</strong> and few are still in <strong>beta</strong> and/or only meant for <strong>internal</strong> use.
+There is also a <strong>Homebrew installer</strong> for Mac OS for using the {{% sk-name %}} <strong>CLI</strong> tool to create new projects.
 {{% sk-link-cli %}}
 {{% break %}}
 
@@ -17,7 +17,7 @@ You can check the current releases at <a href="https://github.com/slatekit/slate
 {{% break %}}
 
 # Current
-Summary and status of all components available in Slate Kit. 
+Summary and status of all components available in {{% sk-name %}}. 
 {{% sk-modules %}}
 {{% break %}}
 

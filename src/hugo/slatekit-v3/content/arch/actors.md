@@ -1,11 +1,11 @@
 ---
-title: "Jobs"
+title: "Actors"
 date: 2019-11-17T23:55:42-05:00
 section_header: Actors
 ---
 
 # Overview
-The Slate Actors component is a micro actor library with support for **pausable** actors 
+The {{% sk-name %}} Actors component is a micro actor library with support for **pausable** actors 
 to provide the ability to gracefully **start, stop, pause, resume** actors.
 {{% break %}}
 {{% break %}}
@@ -13,7 +13,7 @@ to provide the ability to gracefully **start, stop, pause, resume** actors.
 # Diagram
 A high-level diagram of the concepts in this component
 {{% break %}}
-<img src="assets/app/media/arch/slatekit-actors.png" class="rounded mx-auto d-block img-fluid" />
+<img src="assets/app/media/arch/mod-actors.png" class="rounded mx-auto d-block img-fluid" />
 {{% break %}}
 
 # Goals

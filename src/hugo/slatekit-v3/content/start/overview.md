@@ -6,14 +6,14 @@ section_header: Overview
 
 # About
   <p>
-      Slate Kit is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> Tool-Kit, a simple, light-weight, modular framework to build <strong>Apps, APIs, CLIs, Jobs</strong>, and more for <strong>Start-ups, Personal projects, and SMBs</strong> ( small-medium sized businesses ). These libraries can be used for both Server and Android and there are modules for the server that abstract infrastructure ( Queues, Files, SMS, Emails, Alerts ) with integrations for <strong>AWS</strong> ( SQS, S3 ), Twilio ( SMS ), SendGrid ( Email ), Slack ( Alerts ) and more. Multi-platform support is planned as a future state.
+      {{% sk-name %}} is a <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> Tool-Kit, a simple, light-weight, modular framework to build <strong>Apps, APIs, CLIs, Jobs</strong>, and more for <strong>Start-ups, Personal projects, and SMBs</strong> ( small-medium sized businesses ). These libraries can be used for both Server and Android and there are modules for the server that abstract infrastructure ( Queues, Files, SMS, Emails, Alerts ) with integrations for <strong>AWS</strong> ( SQS, S3 ), Twilio ( SMS ), SendGrid ( Email ), Slack ( Alerts ) and more. Multi-platform support is planned as a future state.
   </p>
 {{% break %}}
 
 # Goals
 <p>
-  The Slate Kit framework was originally designed for and extracted from a sizable and sophisticated production Mobile Startup with a Server backend. 
-  Slate Kit is a **Kotlin first** framework architected with the explicit goals and purposes below in mind:
+  The {{% sk-name %}} framework was originally designed for and extracted from a sizable and sophisticated production Mobile Startup with a Server backend. 
+  {{% sk-name %}} is a **Kotlin first** framework architected with the explicit goals and purposes below in mind:
 </p>
 <table class="table table-bordered table-striped">
     <tr><td><img src="assets/media/img/white/module.png"     width="50" /><td><strong>Simple</strong></td><td>Designed with simplicity in mind, <strong>modular and very light-weight</strong>.</td></tr>
@@ -28,21 +28,21 @@ section_header: Overview
 
 # Uses
 <p>
-  Slate Kit can be used to quickly build well structured and scalable architecture and applications for different target groups.
+  {{% sk-name %}} can be used to quickly build well structured and scalable architecture and applications for different target groups.
 </p>
 <table class="table table-bordered table-striped">
     <tr><td><img src="assets/media/img/white/mobile.png"    width="50" /></td><td><strong>Mobile</strong></td><td> Set up the back-end for your mobile apps. Use Kotlin code and libraries for both Server and Android</td></tr>
     <tr><td><img src="assets/media/img/white/users.png"     width="50" /></td><td><strong>Personal</strong></td><td>Learn Kotlin, functional programming, for self-improvement or side projects</td></tr>
     <tr><td><img src="assets/media/img/white/prototype.png" width="50" /></td><td><strong>Startups</strong></td><td> Start with a strong base architecture to quickly build high-quality MVPs (Minimum Viable Products) that can scale</td></tr>
     <tr><td><img src="assets/media/img/white/studio.png"    width="50" /></td><td><strong>SMB</strong></td><td>For small to medium sized businesses, build backend applications with pre-built application/service templates/components</td></tr>
-    <tr><td><img src="assets/media/img/white/connected.png" width="50" /></td><td><strong>Enterprise*</strong></td><td>There are several components in Slate Kit that can currently be used in the Enterprise, such as the App, Utilities, CLI. However, Slate Kit is simpler and thus less comprehensive in some areas than enterprise offerings such as Spring.io, Vertx.io, Micronaut.io, all of which are very solid solutions and recommendations for the enterprise.</td></tr>
+    <tr><td><img src="assets/media/img/white/connected.png" width="50" /></td><td><strong>Enterprise*</strong></td><td>There are several components in {{% sk-name %}} that can currently be used in the Enterprise, such as the App, Utilities, CLI. However, {{% sk-name %}} is simpler and thus less comprehensive in some areas than enterprise offerings such as Spring.io, Vertx.io, Micronaut.io, all of which are very solid solutions and recommendations for the enterprise.</td></tr>
 </table>
 {{% section-end mod="start/overview" %}}
 
 
 # Tech
 <p>
-  Slate Kit is built for the <strong>JVM</strong> using <strong>100% Kotlin</strong> so that many modules can be used for both <strong>Server and Android ( and soon Multi-Platofrm)</strong>. There are also thin abstractions over some infrastructure services such as Files, queues, docs. Currently, only AWS implementations are available for the infrastructure abstractions. However, in the future, support for Google and Azure cloud services may be implemented. Other services are used directly.
+  {{% sk-name %}} is built for the <strong>JVM</strong> using <strong>100% Kotlin</strong> so that many modules can be used for both <strong>Server and Android ( and soon Multi-Platofrm)</strong>. There are also thin abstractions over some infrastructure services such as Files, queues, docs. Currently, only AWS implementations are available for the infrastructure abstractions. However, in the future, support for Google and Azure cloud services may be implemented. Other services are used directly.
 </p>
 <table class="table table-bordered table-striped">
     <tr>
@@ -128,12 +128,12 @@ section_header: Overview
 
 
 # Modules
-These are the main architecture components available in Slate Kit.
+These are the main architecture components available in {{% sk-name %}}.
 {{% sk-modules %}}
 {{% section-end mod="start/overview" %}}
 
 # Design
-The architecture of the Slate Kit can be visualized in this high-level diagram of the modules and how they are logical organized.
+The architecture of the {{% sk-name %}} can be visualized in this high-level diagram of the modules and how they are logical organized.
 <div class="container">
     <div class="row">
         <div class="col-lg-10 flex">

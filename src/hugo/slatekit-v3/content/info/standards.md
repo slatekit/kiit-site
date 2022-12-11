@@ -5,7 +5,7 @@ section_header: Standards
 ---
 
 # Overview
-The overarching design in Slate Kit involves an emphasis on simplicity, reasonably light-weight and modular components that can be used both on the Server Side, and on the Client ( Android ). This is also designed to be much more of a collection of libraries than a full-fledged framework, in order to keep components decoupled and support using as little or as much of the code as possible. With regard to programming style, there is also a strong preference towards <strong>pragmatic functional programming</strong>, immutability, and use of higher-order functions. 
+The overarching design in {{% sk-name %}} involves an emphasis on simplicity, reasonably light-weight and modular components that can be used both on the Server Side, and on the Client ( Android ). This is also designed to be much more of a collection of libraries than a full-fledged framework, in order to keep components decoupled and support using as little or as much of the code as possible. With regard to programming style, there is also a strong preference towards <strong>pragmatic functional programming</strong>, immutability, and use of higher-order functions. 
 {{% break %}}
 
 # Standards
