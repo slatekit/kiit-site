@@ -6,7 +6,7 @@ section_header: Contact
 
 
 # Contact
-Feel free to contact us using all the various channels below! We put a lot of effort on guides, concepts and general documentation, but it is still actively improving as we move along. See our release cycle below for the scheduled releases of Slate Kit. 
+Feel free to contact us using all the various channels below! We put a lot of effort on guides, concepts and general documentation, but it is still actively improving as we move along. See our release cycle below for the scheduled releases of {{% sk-name %}}. 
 {{% break %}}
 
 <section id="services" class="integration">

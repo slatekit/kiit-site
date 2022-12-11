@@ -5,7 +5,7 @@ section_header: Apis
 ---
 
 # Overview
-Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enriching normal Kotlin methods and making them easily discoverable and accessible across a range of hosts. This will resemble an **RPC** type approach, but contains some support and concepts from **REST**. More specifically, APIs in Slate Kit can be hosted and made available as Web/HTTP APIs, on the CLI, or called from requests from queues or files for automation purposes. Under the hood, Slate Kit simply leverages existing HTTP servers ( currently **Ktor** ), to host, discover, manage, and access Slate Kit APIs. Our {{% sk-link-arch page="cli" name="CLI" %}} also supports the ability to host Slate Kit APIs. This specific approach to API development in Slate Kit is referred to as **Universal APIs**.
+{{% sk-name %}} uses a somewhat new, yet familiar paradigm to building out APIs by enriching normal Kotlin methods and making them easily discoverable and accessible across a range of hosts. This will resemble an **RPC** type approach, but contains some support and concepts from **REST**. More specifically, APIs in {{% sk-name %}} can be hosted and made available as Web/HTTP APIs, on the CLI, or called from requests from queues or files for automation purposes. Under the hood, {{% sk-name %}} simply leverages existing HTTP servers ( currently **Ktor** ), to host, discover, manage, and access {{% sk-name %}} APIs. Our {{% sk-link-arch page="cli" name="CLI" %}} also supports the ability to host {{% sk-name %}} APIs. This specific approach to API development in {{% sk-name %}} is referred to as **Universal APIs**.
 {{% break %}}
 
 {{< highlight bash >}}
@@ -21,7 +21,7 @@ Slate Kit uses a somewhat new, yet familiar paradigm to building out APIs by enr
 # Diagram
 A high-level diagram of the concepts in this component
 {{% break %}}
-<img src="assets/app/media/arch/slatekit-apis.png" class="rounded mx-auto d-block img-fluid" />
+<img src="assets/app/media/arch/mod-apis.png" class="rounded mx-auto d-block img-fluid" />
 {{% break %}}
 
 
@@ -49,7 +49,7 @@ A high-level diagram of the concepts in this component
 
 
 # Status
-This component is currently stable and uses JetBrains **Ktor** as the underlying HTTP server for hosting Slate Kit APIs as Web/HTTP APIs. 
+This component is currently stable and uses JetBrains **Ktor** as the underlying HTTP server for hosting {{% sk-name %}} APIs as Web/HTTP APIs. 
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Feature</strong></td>
@@ -113,8 +113,8 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
 {{% section-end mod="arch/apis" %}}
 
 # Example {#example}
-This is a quick and simple example of creating an API using the Slate Kit **Universal API paradigm**. This API is then accessible on the CLI and Web
-{{% sk-tip-generic text="Slate Kit APIs have a 3 part routing convention: {AREA} / {API} / {ACTION}" %}}
+This is a quick and simple example of creating an API using the {{% sk-name %}} **Universal API paradigm**. This API is then accessible on the CLI and Web
+{{% sk-tip-generic text="APIs have a 3 part routing convention: {AREA} / {API} / {ACTION}" %}}
 {{< highlight kotlin >}}
       
     import slatekit.apis.*
@@ -190,7 +190,7 @@ This is a quick and simple example of creating an API using the Slate Kit **Univ
     </tr>
     <tr>
         <td><strong>9. CLI</strong></td>
-        <td>How to make APIs hosted in a CLI ( Slate Kit CLI )</td>
+        <td>How to make APIs hosted in a CLI ( {{% sk-name %}} CLI )</td>
         <td><a href="arch/apis/#cli" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
@@ -219,7 +219,7 @@ This is a quick and simple example of creating an API using the Slate Kit **Univ
 
 
 ## Setup {#setup}
-APIs are developed as normal Kotlin methods. The only difference is that they are enriched with annotations and/or configuration during registration, to provided metadata to the Slate Kit API Server indicated how they should be accessed and managed. 
+APIs are developed as normal Kotlin methods. The only difference is that they are enriched with annotations and/or configuration during registration, to provided metadata to the API Server indicated how they should be accessed and managed. 
 {{% sk-tip-generic text="Annotations can be avoided and instead the configurations can be explicitly supplied during registration of the APIs into the API server ( see web/cli sections below for setting up the server)" %}}
 
 ### 1: Annotations
@@ -248,7 +248,7 @@ This approach is convenient and puts all relevant metadata at the source.
 {{< /highlight >}}
 
 ### 2: Registration
-This approach reduces the dependency on Slate Kit, and requires that the metadata be supplied during registration of the API, and all the actions assume that the annotation values are inherited from the parent Api metadata.
+This approach reduces the dependency on {{% sk-name %}}, and requires that the metadata be supplied during registration of the API, and all the actions assume that the annotation values are inherited from the parent Api metadata.
 {{< highlight kotlin >}}
       
     import slatekit.apis.*
@@ -518,7 +518,7 @@ These are all the properties for the **@Action** annotation to be put on methods
 {{% feature-end mod="arch/apis" %}}
 
 ## Requests {#requests}
-Requests in Slate Kit are abstracted out as {{% sk-link-code component="common" filepath="common/requests/Request.kt" name="Request.kt" %}}. They are implementations for a Web Request and CLI request.
+Requests in are abstracted out as {{% sk-link-code component="common" filepath="common/requests/Request.kt" name="Request.kt" %}}. They are implementations for a Web Request and CLI request.
 {{< highlight kotlin >}}
      
     val request:Request = CommonRequest(
@@ -572,7 +572,7 @@ Requests in Slate Kit are abstracted out as {{% sk-link-code component="common" 
 {{% feature-end mod="arch/apis" %}}
 
 ## Responses {#responses}
-There are 2 ways to returns responses/values from methods. The first is to simply return the exact value. The second is to wrap the value into a Slate Kit {{% sk-link-arch page="results" name="Result" %}}.
+There are 2 ways to returns responses/values from methods. The first is to simply return the exact value. The second is to wrap the value into a {{% sk-link-arch page="results" name="Result" %}}.
 
 ### 1. Result model
 {{< highlight kotlin >}}
@@ -634,16 +634,16 @@ You can accurately model successes and failures using {{% sk-link-arch page="res
 {{% feature-end mod="arch/apis" %}}
 
 ## Web {#web}
-You can host Slate Kit APIs as Web APIs using the default Http Engine which is **Ktor**.
+You can host APIs as Web APIs using the default Http Engine which is **Ktor**.
 <div class="alert alert-warning" role="alert">
-  Use the generator to create Slate Kit APIs
+  Use the generator to create APIs
 </div>
 
 {{< highlight kotlin >}}
      
     fun runServer() {
         // ====================================
-        // Slate Kit Setup
+        // Setup
         // 1. Settings ( defaults: port = 5000, prefix = /api/)
         val settings = ServerSettings(docs = true, docKey = "abc123")
 
@@ -658,7 +658,7 @@ You can host Slate Kit APIs as Web APIs using the default Http Engine which is *
         // 3. API host
         val apiHost = ApiServer.of( ctx, apis, auth = null)
 
-        // 4. Ktor handler: Delegates Ktor requests to Slate Kit
+        // 4. Ktor handler: Delegates Ktor requests to 
         val handler = KtorHandler(ctx, settings, apiHost)
 
         // ====================================
@@ -677,7 +677,7 @@ You can host Slate Kit APIs as Web APIs using the default Http Engine which is *
                     KtorResponse.json(call, Success("action 1 : " + DateTime.now().toString()).toResponse())
                 }
 
-                // Remaining outes beginning with /api/ to be handled by Slate Kit API Server
+                // Remaining outes beginning with /api/ to be handled by API Server
                 handler.register(this)
             }
         }
@@ -690,7 +690,7 @@ You can host Slate Kit APIs as Web APIs using the default Http Engine which is *
 {{% feature-end mod="arch/apis" %}}
 
 ## CLI {#cli}
-You can host Slate Kit **Universal APIs** on the CLI using the Slate Kit {{% sk-link-arch page="cli" name="CLI" %}}
+You can host {{% sk-name %}} **Universal APIs** on the CLI using the {{% sk-name %}} {{% sk-link-arch page="cli" name="CLI" %}}
 
 ### CLI Setup
 {{< highlight kotlin >}}
@@ -701,7 +701,7 @@ You can host Slate Kit **Universal APIs** on the CLI using the Slate Kit {{% sk-
     // 2. Authentication
     val auth = Authenticator(keys)
 
-    // 3. Load all the Slate Kit Universal APIs
+    // 3. Load all the Universal APIs
     val apis = listOf(
             slatekit.apis.core.Api(
                 klass = SampleApi::class, 
@@ -727,7 +727,7 @@ You can host Slate Kit **Universal APIs** on the CLI using the Slate Kit {{% sk-
 {{< /highlight >}}
 
 ### CLI Example
-You can then access this API on the CLI by hosting it in the Slate Kit CLI component.
+You can then access this API on the CLI by hosting it in the {{% sk-name %}} CLI component.
 The request would like this:
 {{< highlight kotlin >}}
      

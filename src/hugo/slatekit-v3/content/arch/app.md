@@ -8,8 +8,8 @@ section_header: App
 The Slate App is a base application and template to build console, batch, cli and server applications.
 It has pre-built support for common features such as **command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics** and much more.
 This is accomplished by integrating some of the components and utilities available in the 
-{{% sk-link href="utils.html" text="Slate Kit Common" %}} project. 
-You can create a app quickly using the Slate Kit command line executable with the following inputs.
+{{% sk-link href="utils.html" text="Common" %}} project. 
+You can create a app quickly using the {{% sk-name %}} command line executable with the following inputs.
 Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt" %}}.
 {{% break %}}
 
@@ -24,7 +24,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 # Diagram
 A high-level diagram of the concepts in this component
 {{% break %}}
-<img src="assets/app/media/arch/slatekit-app.png" class="rounded mx-auto d-block img-fluid" />
+<img src="assets/app/media/arch/mod-app.png" class="rounded mx-auto d-block img-fluid" />
 {{% break %}}
 
 # Goals {#goals}

@@ -5,14 +5,14 @@ section_header: Start
 ---
 
 # Overview
-Slate Kit is built in 100% Kotlin and depends on Java. The Slate Kit CLI generates new projects using the Gradle build tool. <br/>
+{{% sk-name %}} is built in 100% Kotlin and depends on Java. The {{% sk-name %}} CLI generates new projects using the Gradle build tool. <br/>
 If you are new to Kotlin, refer to <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> for more info. 
 
 {{% break %}}
 
 
 # Required
-<p>Installation of Java, Kotlin, Gradle and Slate Kit is fairly easy. We recommend the following installation steps and centralized location for simplicity.
+<p>Installation of Java, Kotlin, Gradle and {{% sk-name %}} is fairly easy. We recommend the following installation steps and centralized location for simplicity.
 </p>
 <table class="table table-bordered table-striped">
     <tr class="">
@@ -48,7 +48,7 @@ If you are new to Kotlin, refer to <strong><a class="url-ch" href="http://www.ko
 
 
 # CLI
-The **Slate Kit CLI** is a command line tool ( based on **HomeBrew on Mac OS** ) that can be used to create projects
+The {{% sk-name %}} **CLI** is a command line tool ( based on **HomeBrew on Mac OS** ) that can be used to create projects
 {{< highlight bash >}}
      
     # Note: install may take a while on Mac OS Catalina 
@@ -114,7 +114,7 @@ You can create several different project types using the generator, these includ
     
 {{< /highlight >}}
 <div class="alert alert-warning" role="alert">
-    <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the Slate Kit CLI tool and info on the project types.
+    <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the {{% sk-name %}} CLI tool and info on the project types.
 </div>
 {{% break %}}
 
@@ -127,7 +127,7 @@ There are also several sample applications available in git at {{% sk-link-src c
 
 
 # Apps
-There are various runnable application types you can create with Slate Kit. See the links below for more docs and guides on how to get started with them.
+There are various runnable application types you can create with {{% sk-name %}}. See the links below for more docs and guides on how to get started with them.
 <table class="table table-bordered table-striped">
     <tr>
     <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
