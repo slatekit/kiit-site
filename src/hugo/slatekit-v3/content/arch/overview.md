@@ -16,7 +16,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
 3. The <span class="badge badge-success">Stable</span> tag indicates the module is a **stable** release. <br/>
 4. The <span class="badge badge-primary">Beta</span> tag indicates a module still in **Beta**, but soon to become a stable release.<br/>
 5. The <span class="badge badge-warning">Internal</span> tag indicates a module that is for internal use only <strong>( these may be replaced by other open-source libraries )</strong><br/>
-6. The <img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-results/images/download.svg" /> tag is a download link to **Bintray** for the **gradle/maven** instructions on installing the package <br/>
+6. The <img src="https://img.shields.io/badge/2.8.0-version-blue" /> tag is a download link to **Github Packages** for the **gradle/maven** instructions on installing the package <br/>
 
 </a>
 </div>
@@ -31,7 +31,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>Models <strong>successes and failures</strong> with <strong>optional</strong> sub-categories of errors with codes. Works with exceptions, validations.
                  See {{% sk-link-arch name="results" %}} 
               </p>
-              {{% sk-version-download page="results" target="Android / Server" stable="abc" %}}
+              {{% sk-version-download page="results" target="Android / Server" stable="true" %}}
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
