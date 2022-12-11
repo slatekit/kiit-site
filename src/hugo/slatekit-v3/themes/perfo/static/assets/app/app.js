@@ -112,10 +112,10 @@ var codeHelixMeta = {
   
   product: 
   {
-	name : "Slate Kit",
-	slogan: "A scala toolkit, utility library and server backend",
-	about: 'Slate Kit is a product of <a href="http://www.codehelix.co">Code Helix Solutions Inc.</a>.',
-	needhelp: 'For more information on Slate Kit, including source code visit our github repository and feel free to email/contact us at <a href="mailto:kishore@codehelix.co">kishore@codehelix.co</a>',
+	name : "Kiit",
+	slogan: "A Kotlin Framework for Apps, APIs, CLIs, Jobs, Mobile and more",
+	about: 'Kiit is a product of <a href="http://www.codehelix.co">Code Helix Solutions Inc.</a>.',
+	needhelp: 'For more information on Kiit, including source code visit our github repository and feel free to email/contact us at <a href="mailto:kishore@codehelix.co">kishore@codehelix.co</a>',
 	questions: 'Questions ? Contact us via <a href="https://github.com/slatekit/slatekit">github</a> or at <a href="http://www.codehelix.co">Code Helix Solutions Inc.</a>'
   },
   
