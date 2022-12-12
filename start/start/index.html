@@ -132,7 +132,7 @@
         </ul>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="https://github.com/slatekit/slatekit">Github</a>
+        <a class="nav-link" href="https://github.com/slatekit/kiit">Github</a>
     </li>
 </ul>
                             </div>
@@ -224,8 +224,8 @@ If you are new to Kotlin, refer to <strong><a class="url-ch" href="http://www.ko
     <span class="c1"># Note: install may take a while on Mac OS Catalina</span> 
     <span class="c1"># See notes/issues below</span>
 
-    brew tap slatekit/slatekit
-    brew install slatekit
+    brew tap slatekit/kiit
+    brew install kiit
     </code></pre></div>
 <div class="alert alert-warning" role="alert">
     You may experience some issues with the install, consider the following<br/>
@@ -260,7 +260,7 @@ with support for :</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
     <span class="c1"># Generate new app ( into current directory )</span>
-    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+    :&gt; kiit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
 
     <span class="c1">#  navigate into the generated app</span> 
     :&gt; <span class="nb">cd</span> Sample1
@@ -275,11 +275,11 @@ with support for :</p>
 
 <p>You can create several different project types using the generator, these include CLIs, APIs, Jobs, and more to come.
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;SampleApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new api -name<span class="o">=</span><span class="s2">&#34;SampleAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;SampleCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;SampleJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
-    slatekit new env -name<span class="o">=</span><span class="s2">&#34;SampleApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+    kiit new app -name<span class="o">=</span><span class="s2">&#34;SampleApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+    kiit new api -name<span class="o">=</span><span class="s2">&#34;SampleAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
+    kiit new cli -name<span class="o">=</span><span class="s2">&#34;SampleCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+    kiit new job -name<span class="o">=</span><span class="s2">&#34;SampleJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
+    kiit new env -name<span class="o">=</span><span class="s2">&#34;SampleApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
     </code></pre></div>
 <div class="alert alert-warning" role="alert">
     <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the <strong>Kiit</strong> CLI tool and info on the project types.
@@ -301,7 +301,7 @@ with support for :</p>
     <tr>
     <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/app">App</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-app/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Runnable App Template</td>
@@ -309,7 +309,7 @@ with support for :</p>
   <tr>
     <td class="text-center"><a href="/arch/cli"><img src="assets/media/img/white/terminal.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/cli">CLI</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-cli/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Command Line Interface</td>
@@ -317,7 +317,7 @@ with support for :</p>
   <tr>
     <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/apis">Server</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-apis/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Http Server ( using Ktor ) and our Universal APIs</td>
@@ -325,7 +325,7 @@ with support for :</p>
   <tr>
     <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/apis">API</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-server/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server / Console</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Universal APIs</td>
@@ -333,7 +333,7 @@ with support for :</p>
   <tr>
     <td class="text-center"><a href="/arch/jobs"><img src="assets/media/img/white/gears.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="arch/jobs">Jobs</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-jobs/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Pausable Background jobs/queues library</td>
@@ -382,7 +382,7 @@ with support for :</p>
     <section class="links">
         <div class="container text-center">
     <a href="https://twitter.com/slatekit">Twitter</a>
-    <a href="https://github.com/slatekit/slatekit">Github</a>
+    <a href="https://github.com/slatekit/kiit">Github</a>
     <a href="/info/about">About</a>
     <a href="/info/contact">Contact</a>
 </div>
@@ -392,7 +392,7 @@ with support for :</p>
     
     <footer class="footer">
         <div class="container text-center">
-    <p>Slate Kit developed by <a href="https://www.codehelix.co">Code Helix</a></p>
+    <p>Kiit developed by <a href="https://www.codehelix.co">Code Helix</a></p>
 </div>
     </footer>
     

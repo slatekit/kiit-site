@@ -54,8 +54,8 @@ The {{% sk-name %}} **CLI** is a command line tool ( based on **HomeBrew on Mac 
     # Note: install may take a while on Mac OS Catalina 
     # See notes/issues below
 
-    brew tap slatekit/slatekit
-    brew install slatekit
+    brew tap slatekit/kiit
+    brew install kiit
     
 {{< /highlight >}}
 <div class="alert alert-warning" role="alert">
@@ -89,7 +89,7 @@ with support for :
 {{< highlight bash >}}
     
     # Generate new app ( into current directory )
-    :> slatekit new app -name="Sample1" -packageName="mycompany.apps"
+    :> kiit new app -name="Sample1" -packageName="mycompany.apps"
 
     #  navigate into the generated app 
     :> cd Sample1
@@ -106,11 +106,11 @@ with support for :
 You can create several different project types using the generator, these include CLIs, APIs, Jobs, and more to come.
 {{< highlight bash >}}
     
-    slatekit new app -name="SampleApp1" -packageName="company1.apps"
-    slatekit new api -name="SampleAPI1" -packageName="company1.apis"
-    slatekit new cli -name="SampleCLI1" -packageName="company1.apps"
-    slatekit new job -name="SampleJob1" -packageName="company1.jobs"
-    slatekit new env -name="SampleApp2" -packageName="company1.apps"
+    kiit new app -name="SampleApp1" -packageName="company1.apps"
+    kiit new api -name="SampleAPI1" -packageName="company1.apis"
+    kiit new cli -name="SampleCLI1" -packageName="company1.apps"
+    kiit new job -name="SampleJob1" -packageName="company1.jobs"
+    kiit new env -name="SampleApp2" -packageName="company1.apps"
     
 {{< /highlight >}}
 <div class="alert alert-warning" role="alert">
@@ -132,7 +132,7 @@ There are various runnable application types you can create with {{% sk-name %}}
     <tr>
     <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/app">App</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-app/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Runnable App Template</td>
@@ -140,7 +140,7 @@ There are various runnable application types you can create with {{% sk-name %}}
   <tr>
     <td class="text-center"><a href="/arch/cli"><img src="assets/media/img/white/terminal.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/cli">CLI</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-cli/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Command Line Interface</td>
@@ -148,7 +148,7 @@ There are various runnable application types you can create with {{% sk-name %}}
   <tr>
     <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/apis">Server</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-apis/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Http Server ( using Ktor ) and our Universal APIs</td>
@@ -156,7 +156,7 @@ There are various runnable application types you can create with {{% sk-name %}}
   <tr>
     <td class="text-center"><a href="/arch/apis"><img src="assets/media/img/white/webapi.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="/arch/apis">API</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-server/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server / Console</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Universal APIs</td>
@@ -164,7 +164,7 @@ There are various runnable application types you can create with {{% sk-name %}}
   <tr>
     <td class="text-center"><a href="/arch/jobs"><img src="assets/media/img/white/gears.png" width="40" alt="" /></a></td>
     <td><strong><a class="url-ch" href="arch/jobs">Jobs</a></strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-jobs/images/download.svg" /></td>
+    <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Android / Server</span></td>
     <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
     <td>Pausable Background jobs/queues library</td>

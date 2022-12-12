@@ -6,7 +6,7 @@ layout : "overview"
 ---
 
 # Overview
-Slate Kit offers <strong>several features</strong> as modular <strong>Architecture components</strong>. These are designed as a collection of Kotlin libraries that help you to quickly build fully featured, testable, 
+Kiit offers <strong>several features</strong> as modular <strong>Architecture components</strong>. These are designed as a collection of Kotlin libraries that help you to quickly build fully featured, testable, 
 and scalable applications on the JVM. Several of the modules can be used for both **Server and Android**. Click any of the modules below for more info.
 
  <div class="alert alert-info" role="alert">
@@ -124,7 +124,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
             <div class="box text-center">
               <a href="arch/generators"><img src="assets/media/img/white/prototype.png" alt="" class="img-fluid"></a>
               <div><a href="arch/generators"><h3>Generator</h3></a></div>
-              <p>Command Line Project generator with extensible templates to quickly create new Slate Kit or custom apps. See {{% sk-link-arch page="generators" name="Generators" %}} 
+              <p>Command Line Project generator with extensible templates to quickly create new or custom apps. See {{% sk-link-arch page="generators" name="Generators" %}} 
               </p>
               {{% sk-version-download page="generator" target="Android / Server" beta="true" %}}
             </div>
@@ -224,7 +224,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
             <div class="box text-center">
               <a href="utils/serialization"><img src="assets/media/img/white/print.png" alt="" class="img-fluid"></a>
               <div><a href="utils/serialization"><h3>Serialization</h3></a></div>
-              <p>Library for serialization of a single object or a set of values. Handles custom Slate Kit use-cases, but may be replaced by <strong>Mocha</strong> {{% sk-link-util page="overview" name="Utilities" %}} 
+              <p>Library for serialization of a single object or a set of values. Handles custom use-cases, but may be replaced by <strong>Mocha</strong> {{% sk-link-util page="overview" name="Utilities" %}} 
               </p>
               {{% sk-version-download page="common" target="Android / Server" internal="true" %}}
             </div>
