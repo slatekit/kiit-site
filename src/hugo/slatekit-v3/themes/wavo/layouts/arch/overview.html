@@ -55,17 +55,36 @@
         <!-- header close -->
         <!-- ========== End Navbar ========== -->
     <!-- ========== Start Header ========== -->
+    <!--
     <section class="header wow fadeInUp">
         <div class="container text-center">
             <h2>{{ .Params.section_header }}</h2>
         </div>
     </section>
+    -->
     
-    <section class="sk-creative">
-      <div class="container">
-        {{ .Content }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 d-none d-lg-block">
+                {{ partial "sidebar.html" . }}
+            </div>
+            <div class="col-lg-9 flex">
+                <section class="features">
+                    <div class="container-fluid text-center">
+                        <div class="mx-auto">
+                            <a id="sk_arch_component_link" href="arch/cli">
+                                <img id="sk_arch_component_img" src="assets/media/img/white/desktop.png" alt="" style="width:70px;" class="img-fluid">
+                            </a>
+                            <h1 id="sk_arch_component_name">App</h1>
+                        </div>
+                    </div>
+                </section>
+                {{ .Content }}
+            </div>
+            <div class="col-sm-1 flex">
+            </div>
+        </div>
       </div>
-    </section>  
     
 
     <!-- ========== Start links ========== -->
@@ -84,6 +103,11 @@
     {{ partial "footer.html" . }}
 
     <script src="assets/theme/js/sass-1.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            setupArchComponent();
+        });
+    </script>
 </body>
 
 </html>

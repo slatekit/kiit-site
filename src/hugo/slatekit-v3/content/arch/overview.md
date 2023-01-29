@@ -9,7 +9,7 @@ layout : "overview"
 Kiit offers <strong>several features</strong> as modular <strong>Architecture components</strong>. These are designed as a collection of Kotlin libraries that help you to quickly build fully featured, testable, 
 and scalable applications on the JVM. Several of the modules can be used for both **Server and Android**. Click any of the modules below for more info.
 
- <div class="alert alert-info" role="alert">
+<div class="alert alert-info" role="alert">
 **TAGS**<br/>
 1. The <span class="badge badge-light">Server</span> tag indicates that the component is a runnable application and meant to be used on the **Server**.<br/>
 2. The <span class="badge badge-light">Android / Server</span> tag indicates that the component is a library and can be used for both **Android** and **Server**.<br/>
@@ -20,6 +20,29 @@ and scalable applications on the JVM. Several of the modules can be used for bot
 
 </a>
 </div>
+
+
+# Concepts {#concepts}
+Place holder
+
+## Overview {#concepts_overview}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+## Identity {#concepts_overview}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+## Requests {#concepts_requests}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+## Context {#concepts_context}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+## Results {#concepts_results}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 <section id="services" class="integration">
   <div class="container">
@@ -234,7 +257,753 @@ and scalable applications on the JVM. Several of the modules can be used for bot
 </section>
 <br/><br/>
 <img src="assets/app/media/arch/slatekit-overview.png" class="rounded mx-auto d-block img-fluid" />
+{{% break %}}
+{{% break %}}
+
+<h1 id="apps_section">Applications</h1>
+<hr/>
+<h2 id="apps_overview">Overview</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{% break %}}
+
+<section id="section_infra" class="integration">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/app"><img src="assets/media/img/white/desktop.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/app"><h3>App</h3></a></div>
+          <p>An general purpose <strong>App template</strong> with support for environments, logging, configs, diagnostics, help usage and more. See {{% sk-link-arch page="app" name="App" %}} 
+          </p>
+          {{% sk-version-download page="app" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/apis"><img src="assets/media/img/white/webapi.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/apis"><h3>APIs</h3></a></div>
+          <p>A simple, intuitive, <strong>protocol independent</strong> approach to building APIs in Slate so they run as Web APIs or on the CLI. See {{% sk-link-arch page="apis" name="APIs" %}} 
+          </p>
+          {{% sk-version-download page="apis" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/cli"><img src="assets/media/img/white/terminal.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/cli"><h3>CLI</h3></a></div>
+          <p>Command line interface to handle actions in an interactive way. Has customization and formatting features. See {{% sk-link-arch page="cli" name="CLI" %}} </a>.
+          </p>
+          {{% sk-version-download page="cli" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/jobs"><img src="assets/media/img/white/gears.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/jobs"><h3>Jobs</h3></a></div>
+          <p>Background Jobs/Task queue system for one-off, paged, and queued jobs with middleware support and diagnostics.
+            See {{% sk-link-arch page="jobs" name="Jobs" %}} 
+          </p>
+          {{% sk-version-download page="jobs" target="Android / Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="core/kotlin-server.html"><img src="assets/media/img/white/server.png" alt="" class="img-fluid"></a>
+          <div><a href="core/kotlin-server.html"><h3>Server</h3></a></div>
+          <p>A base Web Server to host your <a class="url-ch" href="core/kotlin-server.html">protocol independent APIs</a> 
+            with built in support for many features. See <a class="url-ch" href="core/kotlin-server.html">concepts</a>, 
+            <a class="url-ch" href="core/kotlin-server.html">example</a> and 
+            <a class="url-ch" href="releases.html#release-downloads">sample apps</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+## Principles {#apps_principles}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Light-Weight</strong></td>
+        <td>Simple, light-weight with default implementations for sync and async based Caches.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics </strong> </td>
+        <td>Provides a reasonable level of diagnostics and cache metrics</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Coroutines</strong></td>
+        <td>Async based cache leverages Coroutines / Channels for write operations</td>
+    </tr>
+</table>
+{{% break %}}
+
+
+## Modules {#apps_modules}
+Summary and status of all components available in {{% sk-name %}}. 
+{{% part-modules-infra %}}
+{{% break %}}
+
+
+## App {#apps_queues}
+See {{% sk-link-arch page="queues" name="Queues" %}} for more info
+{{% break %}}
+
+
+## API {#apps_files}
+See {{% sk-link-arch page="files" name="Files" %}} for more info
+{{% break %}}
+
+
+## CLI {#apps_comms}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Job {#apps_documents}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Server {#apps_streams}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+<h1 id="infra_section">Infra</h1>
+<hr/>
+<h2 id="infra_overview">Overview</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{% break %}}
+
+<section id="section_infra" class="integration">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/files"><img src="assets/media/img/white/folders.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/files"><h3>Files</h3></a></div>
+          <p>A simplified interface and abstraction for persistent file storage. Default implementation available in <strong>AWS S3</strong> See {{% sk-link-arch page="files" name="Files" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/comms"><img src="assets/media/img/white/speaker.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/comms"><h3>Notifications</h3></a></div>
+          <p>Send alerts, emails, sms, push messages with optional templates. Works with Slack, SendGrid, Twilio.
+             See samples for {{% sk-link-arch page="email" name="Email" %}} and {{% sk-link-arch page="sms" name="SMS" %}} 
+          </p>
+          {{% sk-version-download page="notifications" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/queues"><img src="assets/media/img/white/queue.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/queues"><h3>Queues</h3></a></div>
+          <p>A simplified interface and abstraction for persistent queues. 
+            Support for <strong>AWS SQS</strong> and in-memory queue. See {{% sk-link-arch page="queues" name="Queues" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/files"><img src="assets/media/img/white/folders.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/files"><h3>Files</h3></a></div>
+          <p>A simplified interface and abstraction for persistent file storage. Default implementation available in <strong>AWS S3</strong> See {{% sk-link-arch page="files" name="Files" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/comms"><img src="assets/media/img/white/speaker.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/comms"><h3>Notifications</h3></a></div>
+          <p>Send alerts, emails, sms, push messages with optional templates. Works with Slack, SendGrid, Twilio.
+             See samples for {{% sk-link-arch page="email" name="Email" %}} and {{% sk-link-arch page="sms" name="SMS" %}} 
+          </p>
+          {{% sk-version-download page="notifications" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/queues"><img src="assets/media/img/white/queue.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/queues"><h3>Queues</h3></a></div>
+          <p>A simplified interface and abstraction for persistent queues. 
+            Support for <strong>AWS SQS</strong> and in-memory queue. See {{% sk-link-arch page="queues" name="Queues" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+## Principles {#infra_overview}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Light-Weight</strong></td>
+        <td>Simple, light-weight with default implementations for sync and async based Caches.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics </strong> </td>
+        <td>Provides a reasonable level of diagnostics and cache metrics</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Coroutines</strong></td>
+        <td>Async based cache leverages Coroutines / Channels for write operations</td>
+    </tr>
+</table>
+{{% break %}}
+
+
+## Modules {#infra_modules}
+Summary and status of all components available in {{% sk-name %}}. 
+{{% part-modules-infra %}}
+{{% break %}}
+
+
+## Queues {#infra_queues}
+See {{% sk-link-arch page="queues" name="Queues" %}} for more info
+{{% break %}}
+
+
+## Files {#infra_files}
+See {{% sk-link-arch page="files" name="Files" %}} for more info
+{{% break %}}
+
+
+## Comms {#infra_comms}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Documents {#infra_documents}
+Coming soon
+{{% break %}}
+
+
+## Streams {#infra_streams}
+Comming soon
+{{% break %}}
+
+
+<h1 id="data_section">Data</h1>
+<hr/>
+<h2 id="data_overview">Overview</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{% break %}}
+
+<section id="section_infra" class="integration">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/app"><img src="assets/media/img/white/desktop.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/app"><h3>App</h3></a></div>
+          <p>An general purpose <strong>App template</strong> with support for environments, logging, configs, diagnostics, help usage and more. See {{% sk-link-arch page="app" name="App" %}} 
+          </p>
+          {{% sk-version-download page="app" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/apis"><img src="assets/media/img/white/webapi.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/apis"><h3>APIs</h3></a></div>
+          <p>A simple, intuitive, <strong>protocol independent</strong> approach to building APIs in Slate so they run as Web APIs or on the CLI. See {{% sk-link-arch page="apis" name="APIs" %}} 
+          </p>
+          {{% sk-version-download page="apis" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/cli"><img src="assets/media/img/white/terminal.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/cli"><h3>CLI</h3></a></div>
+          <p>Command line interface to handle actions in an interactive way. Has customization and formatting features. See {{% sk-link-arch page="cli" name="CLI" %}} </a>.
+          </p>
+          {{% sk-version-download page="cli" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/jobs"><img src="assets/media/img/white/gears.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/jobs"><h3>Jobs</h3></a></div>
+          <p>Background Jobs/Task queue system for one-off, paged, and queued jobs with middleware support and diagnostics.
+            See {{% sk-link-arch page="jobs" name="Jobs" %}} 
+          </p>
+          {{% sk-version-download page="jobs" target="Android / Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="core/kotlin-server.html"><img src="assets/media/img/white/server.png" alt="" class="img-fluid"></a>
+          <div><a href="core/kotlin-server.html"><h3>Server</h3></a></div>
+          <p>A base Web Server to host your <a class="url-ch" href="core/kotlin-server.html">protocol independent APIs</a> 
+            with built in support for many features. See <a class="url-ch" href="core/kotlin-server.html">concepts</a>, 
+            <a class="url-ch" href="core/kotlin-server.html">example</a> and 
+            <a class="url-ch" href="releases.html#release-downloads">sample apps</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+## Principles {#data_principles}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Light-Weight</strong></td>
+        <td>Simple, light-weight with default implementations for sync and async based Caches.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics </strong> </td>
+        <td>Provides a reasonable level of diagnostics and cache metrics</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Coroutines</strong></td>
+        <td>Async based cache leverages Coroutines / Channels for write operations</td>
+    </tr>
+</table>
+{{% break %}}
+
+
+## Modules {#data_modules}
+Summary and status of all components available in {{% sk-name %}}. 
+{{% part-modules-infra %}}
+{{% break %}}
+
+
+## Connections {#data_connections}
+See {{% sk-link-arch page="queues" name="Queues" %}} for more info
+{{% break %}}
+
+
+## Database {#data_database}
+See {{% sk-link-arch page="files" name="Files" %}} for more info
+{{% break %}}
+
+
+## Models {#data_models}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Mappers {#data_mappers}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Repository {#data_repository}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Services {#data_services}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+
+<h1 id="techniques_section">Techniques</h1>
+<hr/>
+<h2 id="techniques_overview">Overview</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{% break %}}
+
+<section id="section_infra" class="integration">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/files"><img src="assets/media/img/white/folders.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/files"><h3>Files</h3></a></div>
+          <p>A simplified interface and abstraction for persistent file storage. Default implementation available in <strong>AWS S3</strong> See {{% sk-link-arch page="files" name="Files" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/comms"><img src="assets/media/img/white/speaker.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/comms"><h3>Notifications</h3></a></div>
+          <p>Send alerts, emails, sms, push messages with optional templates. Works with Slack, SendGrid, Twilio.
+             See samples for {{% sk-link-arch page="email" name="Email" %}} and {{% sk-link-arch page="sms" name="SMS" %}} 
+          </p>
+          {{% sk-version-download page="notifications" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/queues"><img src="assets/media/img/white/queue.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/queues"><h3>Queues</h3></a></div>
+          <p>A simplified interface and abstraction for persistent queues. 
+            Support for <strong>AWS SQS</strong> and in-memory queue. See {{% sk-link-arch page="queues" name="Queues" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/files"><img src="assets/media/img/white/folders.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/files"><h3>Files</h3></a></div>
+          <p>A simplified interface and abstraction for persistent file storage. Default implementation available in <strong>AWS S3</strong> See {{% sk-link-arch page="files" name="Files" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/comms"><img src="assets/media/img/white/speaker.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/comms"><h3>Notifications</h3></a></div>
+          <p>Send alerts, emails, sms, push messages with optional templates. Works with Slack, SendGrid, Twilio.
+             See samples for {{% sk-link-arch page="email" name="Email" %}} and {{% sk-link-arch page="sms" name="SMS" %}} 
+          </p>
+          {{% sk-version-download page="notifications" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/queues"><img src="assets/media/img/white/queue.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/queues"><h3>Queues</h3></a></div>
+          <p>A simplified interface and abstraction for persistent queues. 
+            Support for <strong>AWS SQS</strong> and in-memory queue. See {{% sk-link-arch page="queues" name="Queues" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+## Principles {#techniques_principles}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Light-Weight</strong></td>
+        <td>Simple, light-weight with default implementations for sync and async based Caches.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics </strong> </td>
+        <td>Provides a reasonable level of diagnostics and cache metrics</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Coroutines</strong></td>
+        <td>Async based cache leverages Coroutines / Channels for write operations</td>
+    </tr>
+</table>
+{{% break %}}
+
+
+## Modules {#techniques_modules}
+Summary and status of all components available in {{% sk-name %}}. 
+{{% part-modules-infra %}}
+{{% break %}}
+
+
+## Args {#techniques_args}
+See {{% sk-link-arch page="queues" name="Queues" %}} for more info
+{{% break %}}
+
+
+## Config {#techniques_config}
+See {{% sk-link-arch page="files" name="Files" %}} for more info
+{{% break %}}
+
+
+## Cache {#techniques_cache}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## Dates {#techniques_dates}
+Coming soon
+{{% break %}}
+
+
+## Folders {#techniques_folders}
+Comming soon
+{{% break %}}
+
+
+## IOC {#techniques_ioc}
+Comming soon
+{{% break %}}
+
+
+## Folders {#techniques_folders}
+Comming soon
+{{% break %}}
+
+
+## Hooks {#techniques_hooks}
+Comming soon
+{{% break %}}
+
+
+## Logs {#techniques_logs}
+Comming soon
+{{% break %}}
+
+
+## Metrics {#techniques_Metrics}
+Comming soon
+{{% break %}}
+
+
+## Validation {#techniques_validation}
+Comming soon
+{{% break %}}
+
+<h1 id="security_section">Security</h1>
+<hr/>
+<h2 id="security_overview">Overview</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+{{% break %}}
+
+<section id="section_infra" class="integration">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/files"><img src="assets/media/img/white/folders.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/files"><h3>Files</h3></a></div>
+          <p>A simplified interface and abstraction for persistent file storage. Default implementation available in <strong>AWS S3</strong> See {{% sk-link-arch page="files" name="Files" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/comms"><img src="assets/media/img/white/speaker.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/comms"><h3>Notifications</h3></a></div>
+          <p>Send alerts, emails, sms, push messages with optional templates. Works with Slack, SendGrid, Twilio.
+             See samples for {{% sk-link-arch page="email" name="Email" %}} and {{% sk-link-arch page="sms" name="SMS" %}} 
+          </p>
+          {{% sk-version-download page="notifications" target="Server" stable="true" %}}
+        </div>
+      </div>
+      <div class="col-md-4 wow fadeInUp">
+        <div class="box text-center">
+          <a href="arch/queues"><img src="assets/media/img/white/queue.png" alt="" class="img-fluid"></a>
+          <div><a href="arch/queues"><h3>Queues</h3></a></div>
+          <p>A simplified interface and abstraction for persistent queues. 
+            Support for <strong>AWS SQS</strong> and in-memory queue. See {{% sk-link-arch page="queues" name="Queues" %}} 
+          </p>
+          {{% sk-version-download page="cloud" target="Server" stable="true" %}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+## Principles {#security_principles}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td><strong>Goal</strong></td>
+        <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+        <td><strong>1. Light-Weight</strong></td>
+        <td>Simple, light-weight with default implementations for sync and async based Caches.</td>
+    </tr>
+    <tr>
+        <td><strong>2. Diagnostics </strong> </td>
+        <td>Provides a reasonable level of diagnostics and cache metrics</td>                     
+    </tr>
+    <tr>
+        <td><strong>3. Coroutines</strong></td>
+        <td>Async based cache leverages Coroutines / Channels for write operations</td>
+    </tr>
+</table>
+{{% break %}}
+
+
+## Modules {#security_modules}
+Summary and status of all components available in {{% sk-name %}}. 
+{{% part-modules-infra %}}
+{{% break %}}
+
+
+## Config {#security_config}
+See {{% sk-link-arch page="files" name="Files" %}} for more info
+{{% break %}}
+
+
+## Encrypt {#security_cache}
+See {{% sk-link-arch page="comms" name="Comms" %}} for more info
+{{% break %}}
+
+
+## APIs {#security_apis}
+Comming soon
+{{% break %}}
+
+
+## Authorization {#security_authentication}
+Coming soon
+{{% break %}}
+
+
+## Authorization {#security_authorization}
+Comming soon
+{{% break %}}
+
+
+## Ktor {#security_ktor}
+Comming soon
+{{% break %}}
+
+
+<script>
+    var archComponent = {
+        name: "Guide",
+        page: "arch/overview",
+        icon: "assets/media/img/white/desktop.png",
+        menu: {
+            mode: "normal",
+            useTemplate:false,
+            sections: [
+                {
+                    name: "Overview",
+                    items: [
+                        { name:"Setup"  , anchor: "/#overview_setup"   , highlight: true },
+                        { name:"Tools"  , anchor: "/#overview_tools"   },
+                        { name:"Modules", anchor: "/#overview_modules" }
+                    ]
+                },
+                {
+                    name: "Concepts",
+                    items: [
+                        { name:"Overview"  , anchor: "#concepts_overview"       , highlight: true},
+                        { name:"Principles", anchor: "#concepts_principles"   },
+                        { name:"Modules"   , anchor: "#concepts_modules"      },
+                        { name:"Videos"    , anchor: "#concepts_videos"       },
+                        { name:"Services"     , anchor: "#concepts_services"  },
+                        { name:"Identity"     , anchor: "#concepts_identity"   },
+                        { name:"Context"      , anchor: "#concepts_context"    },
+                        { name:"Requests"     , anchor: "#concepts_requests"   },
+                        { name:"Results"      , anchor: "#concepts_results"    },
+                        { name:"Connectors"   , anchor: "#concepts_connectors" },
+                        { name:"Providers"    , anchor: "#concepts_providers"  },
+                    ]
+                },
+                {
+                    name: "Services",
+                    items: [
+                        { name:"Overview"  , anchor: "#services_overview"   , highlight: true},
+                        { name:"Principles", anchor: "#services_principles"   },
+                        { name:"Modules"   , anchor: "#services_modules"      },
+                        { name:"Videos"    , anchor: "#services_videos"       },
+                        { name:"App"       , anchor: "#services_app"   },
+                        { name:"CLI"       , anchor: "#services_cli"     },
+                        { name:"Job"       , anchor: "#services_jobs"   },
+                        { name:"API"       , anchor: "#services_api"   },
+                        { name:"Server"    , anchor: "#services_server"   },
+                    ]
+                },
+                {
+                    name: "Infra",
+                    items: [
+                        { name:"Overview"  , anchor: "#infra_overview"   , highlight: true},
+                        { name:"Principles", anchor: "#infra_principles"   },
+                        { name:"Modules"   , anchor: "#infra_modules"      },
+                        { name:"Videos"    , anchor: "#infra_videos"       },
+                        { name:"Queue"     , anchor: "#infra_envs"     },
+                        { name:"Files"     , anchor: "#infra_files"    },
+                        { name:"Docs"      , anchor: "#infra_docs"     },
+                        { name:"Comms"     , anchor: "#infra_comms"    },
+                        { name:"Streams"   , anchor: "#infra_streams"  }
+                    ]
+                },
+                {
+                    name: "Data",
+                    items: [
+                        { name:"Overview"   , anchor: "#data_overview"   , highlight: true},
+                        { name:"Principles" , anchor: "#data_principles"   },
+                        { name:"Modules"    , anchor: "#data_modules"      },
+                        { name:"Videos"     , anchor: "#data_videos"       },
+                        { name:"Connections", anchor: "#data_connections"  },
+                        { name:"Database"   , anchor: "#data_database"     },
+                        { name:"Models"     , anchor: "#data_models"       },
+                        { name:"Repository" , anchor: "#data_repository"   },
+                        { name:"Mappers"    , anchor: "#data_mappers"      },
+                        { name:"Service"    , anchor: "#data_service"      }
+                        
+                    ]
+                },
+                {
+                    name: "Techniques",
+                    items: [
+                        { name:"Overview"  , anchor: "#techniques_overview"   , highlight: true},
+                        { name:"Principles", anchor: "#techniques_principles"  },
+                        { name:"Modules"   , anchor: "#techniques_modules"     },
+                        { name:"Videos"    , anchor: "#techniques_videos"      },
+                        { name:"Args"       , anchor: "#techniques_args"       },
+                        { name:"Config"     , anchor: "#techniques_config"     },
+                        { name:"Cache"      , anchor: "#techniques_cache"      },
+                        { name:"Dates"      , anchor: "#techniques_dates"      },
+                        { name:"Folders"    , anchor: "#techniques_folders"    },
+                        { name:"IOC"        , anchor: "#techniques_ioc"        },
+                        { name:"Hooks"      , anchor: "#techniques_hooks"      },
+                        { name:"Logs"       , anchor: "#techniques_logs"       },
+                        { name:"Metrics"    , anchor: "#techniques_metrics"    },
+                        { name:"Validation" , anchor: "#techniques_validation" },
+                    ]
+                },
+                {
+                    name: "Security",
+                    items: [
+                        { name:"Overview"  , anchor: "#security_overview"   , highlight: true},
+                        { name:"Principles", anchor: "#security_principles"   },
+                        { name:"Modules"   , anchor: "#security_modules"      },
+                        { name:"Videos"    , anchor: "#security_videos"       },
+                        { name:"Config"    , anchor: "#security_envs"         },
+                        { name:"Encrypt"   , anchor: "#security_files"        },
+                        { name:"APIs"      , anchor: "#security_docs"    },
+                        { name:"Authentication", anchor: "#security_docs"    },
+                        { name:"Authorization" , anchor: "#security_docs"    },
+                        { name:"Ktor"          , anchor: "#security_streams"      }
+                    ]
+                }
+            ]
+        }
+    };
+
+    function setupArchComponent() {
+        buildArchComponent(archComponent);
+    }
+</script>
 
 
