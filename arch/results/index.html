@@ -175,24 +175,16 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
-<p><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a core component of <strong>Kiit</strong> and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling. Result is <strong>NOT a new concept</strong>, as it currently exists in various forms in other languages (see below), however <strong>Kiit</strong> <strong>Result differs</strong> significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure:</p>
-
-<br/><br/>
-
+                <h1 id="overview">Overview</h1>
+<p><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a></strong> is a core component of <strong>Kiit</strong> and is used for <strong>accurately modeling successes and failures</strong> of any operation, using a functional approach to error handling. Result is <strong>NOT a new concept</strong>, as it currently exists in various forms in other languages (see below), however <strong>Kiit</strong> <strong>Result differs</strong> significantly by allowing for a custom error type,  sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors. With Result, you can safely access the value of an operation based on its success or failure, accurately represent failures from various sources, organize errors into logical groups, and easily convert these errors into compatible errors for HTTP. The Result component removes much of the boiler plate code that you would normally create yourself to handle all these scenarios. This diagram shows the high-level design/structure :</p>
+<p><br/><br/></p>
 <h1 id="diagram">Diagram</h1>
-
 <p>A high-level diagram of the concepts in this component
 <br/><br/>
 <img src="assets/app/media/arch/slatekit-result.png" class="rounded mx-auto d-block img-fluid" />
 <br/><br/></p>
-
 <h1 id="goals">Goals</h1>
-
-<p>The design goals of <strong>Kiit</strong> differ from other implementations by allowing for a custom error type, sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors.
+<p>The design goals of <strong>Kiit</strong> differ from other implementations by allowing for a custom error type, sub-categories of successes and failures in the form of Statuses, and providing sensible defaults and ways to build errors.</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Design</strong></td>
@@ -204,11 +196,11 @@
     </tr>
     <tr>
         <td><strong>2. Accuracy</strong> </td>
-        <td>Accurate modeling of success/failures </td><br />
+        <td>Accurate modeling of success/failures </td>                     
     </tr>
     <tr>
         <td><strong>3. Flexible error</strong> </td>
-        <td>Error type on the Failure branch can be anything, Exception, Err, String. </td><br />
+        <td>Error type on the Failure branch can be anything, Exception, Err, String. </td>                     
     </tr>
     <tr>
         <td><strong>4. Status Codes</strong></td>
@@ -219,19 +211,16 @@
         <td>Default Error types, and builders are provided to reduce custom errors / boiler-plate</td>
     </tr>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="compare">Compare</h1>
-
-<p>The main differences between other implementations is that <strong>Kiit</strong> Result&lt;T,E&gt; offers features #3, #4, and #5 above in Goals and so the differences the the following:
+<p>The main differences between other implementations is that <strong>Kiit</strong> Result&lt;T,E&gt; offers features #3, #4, and #5 above in Goals and so the differences the the following:</p>
 <p>
 1. <strong>Custom Error</strong>: The Error type <strong>E</strong> can be anything, unlike Kotlin and Swift<br/>
 2. <strong>Aliases</strong>: With custom error types, you can have aliases such as <strong>typealias Try&lt;T&gt; = Result&lt;T,Exception&gt;</strong><br/>
 3. <strong>Statuses</strong>: Contains an <strong>optional</strong> <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> on both Success and Failure branches to further <strong>sub-categorize</strong> successes and failures.<br/>
 4. <strong>Builders</strong>: Several convenience builders to easily construct different categories of errors, and from different sources ( String, Exception, Err).
-</p></p>
-
-<p><table class="table table-bordered table-striped">
+</p>
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>#</strong></td>
         <td><strong>Language</strong></td>
@@ -269,38 +258,28 @@
         <td>Status codes in <strong>Kiit</strong> are inspired by these</td>
     </tr>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="status">Status</h1>
-
 <p>This component is currently stable, has 0 dependencies and can be used for both <strong>Android and Server</strong></p>
-
 <br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="install">Install</h1>
-
-<p>Use the following settings in gradle for installing this component.
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="c1">// other repositories
-</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other dependencies ...
-</span><span class="c1"></span>
-        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-result:1.0.0&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
+<h1 id="install">Install</h1>
+<p>Use the following settings in gradle for installing this component.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-result:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <h1 id="sources">Sources</h1>
-
-
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -331,73 +310,65 @@
     <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
-
 <br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <h1 id="example">Example</h1>
-
 <p>Short example taken from <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Results.kt" >Example_Result.kt</a>,
 showing the usage of Result by creating, checking, and pattern matching the values.</p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">       
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
-
-    <span class="c1">// Create success explicitly
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">start</span><span class="p">:</span> <span class="n">Outcome</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
-
-    <span class="c1">// Properties
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;success:     &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">success</span><span class="p">)</span>         <span class="c1">// true
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;status.code: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">code</span><span class="p">)</span> <span class="c1">// Codes.SUCCESS.code
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;status.code: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>  <span class="c1">// Codes.SUCCESS.msg
-</span><span class="c1"></span>
-    <span class="c1">// Safely operate on values with map/flatMap
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">addResult</span> <span class="p">=</span> <span class="n">start</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
-    <span class="k">val</span> <span class="py">subResult</span> <span class="p">=</span> <span class="n">start</span><span class="p">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">Success</span><span class="p">(</span><span class="n">it</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">}</span>
-
-    <span class="c1">// Check values
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;contains:  &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="m">11</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&#34;exists  :  &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">exists</span> <span class="p">{</span> <span class="n">it</span> <span class="p">==</span> <span class="m">11</span> <span class="p">})</span>
-
-    <span class="c1">// Get values
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;getOrNull: &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">getOrNull</span><span class="p">())</span>
-    <span class="n">println</span><span class="p">(</span><span class="s">&#34;getOrElse: &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="m">0</span> <span class="p">})</span>
-
-    <span class="c1">// On conditions
-</span><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;onSuccess: &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// 9
-</span><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;onFailure: &#34;</span> <span class="p">+</span> <span class="n">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// N/A
-</span><span class="c1"></span>
-    <span class="c1">// Pattern match on branches ( Success / Failure )
-</span><span class="c1"></span>    <span class="k">when</span> <span class="p">(</span><span class="n">addResult</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;value: ${addResult.value}&#34;</span><span class="p">)</span> <span class="c1">// 11
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;error: ${addResult.error}&#34;</span><span class="p">)</span> <span class="c1">// N/A
-</span><span class="c1"></span>    <span class="p">}</span>
-
-    <span class="c1">// Pattern match on status: Passed / Failed statuses
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Succeeded: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Pending</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Pending  : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-        <span class="p">}</span>
-        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Denied</span>     <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Denied    : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Invalid</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Invalid   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Ignored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Ignored   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Errored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Errored   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-            <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Unexpected</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Unexpected: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-        </code></pre></div>
-<br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create success explicitly
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">start</span><span class="p">:</span> <span class="n">Outcome</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Properties
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;success:     &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">success</span><span class="p">)</span>         <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;status.code: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">code</span><span class="p">)</span> <span class="c1">// Codes.SUCCESS.code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;status.code: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>  <span class="c1">// Codes.SUCCESS.msg
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Safely operate on values with map/flatMap
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">addResult</span> <span class="p">=</span> <span class="n">start</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="k">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">subResult</span> <span class="p">=</span> <span class="n">start</span><span class="p">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">Success</span><span class="p">(</span><span class="k">it</span> <span class="p">-</span> <span class="m">1</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;contains:  &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="m">11</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;exists  :  &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">exists</span> <span class="p">{</span> <span class="k">it</span> <span class="o">==</span> <span class="m">11</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;getOrNull: &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">getOrNull</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;getOrElse: &#34;</span> <span class="p">+</span> <span class="n">addResult</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="m">0</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// On conditions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;onSuccess: &#34;</span> <span class="p">+</span> <span class="k">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// 9
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">subResult</span><span class="p">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;onFailure: &#34;</span> <span class="p">+</span> <span class="k">it</span><span class="p">)</span> <span class="p">}</span> <span class="c1">// N/A
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Pattern match on branches ( Success / Failure )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span> <span class="p">(</span><span class="n">addResult</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Success</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;value: </span><span class="si">${addResult.value}</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">// 11
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;error: </span><span class="si">${addResult.error}</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">// N/A
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Pattern match on status: Passed / Failed statuses
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Success</span> <span class="o">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Passed</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Succeeded: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Passed</span><span class="p">.</span><span class="n">Pending</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Pending  : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Failure</span> <span class="o">-&gt;</span> <span class="k">when</span><span class="p">(</span><span class="n">start</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Denied</span>     <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Denied    : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Invalid</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Invalid   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Ignored</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Ignored   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Errored</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Errored   : &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Unexpected</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Unexpected: &#34;</span> <span class="p">+</span> <span class="n">start</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        </span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="concepts">Concepts</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
@@ -420,8 +391,8 @@ showing the usage of Result by creating, checking, and pattern matching the valu
     </tr>
     <tr>
         <td><strong>4. Builders</strong> </td>
-        <td>Several easy ways to build success or different category of errors</td>
-        <td><a href="arch/results/#builders" class="more"><span class="btn btn-primary">more</span></a></td><br />
+        <td>Several easy ways to build success or different category of errors</td> 
+        <td><a href="arch/results/#builders" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
         <td><strong>5. Aliases</strong></td>
@@ -440,13 +411,10 @@ showing the usage of Result by creating, checking, and pattern matching the valu
     </tr>
 </table>
 <br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h2 id="terms">Terms</h2>
-
-<p>These are the main concepts / terms to know for using this component. All of these are explained further below in the details section. You can find links to the source code here.
+<p>These are the main concepts / terms to know for using this component. All of these are explained further below in the details section. You can find links to the source code here.</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Concept</strong></td>
@@ -469,14 +437,14 @@ showing the usage of Result by creating, checking, and pattern matching the valu
         <td>Failure branch/sub-class of Result storing the error with optional status code.</td>
     </tr>
     <tr>
-        <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Err.kt" >Err</a></td><br />
+        <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Err.kt" >Err</a></td>   
         <td>Optional</td>
-        <td>Flexible representation of errors. E.g. You can use the <strong>Err</strong> interface, default implementations or <strong>Exceptions</strong></td>
+        <td>Flexible representation of errors. E.g. You can use the **Err** interface, default implementations or **Exceptions**</td>
     </tr>
     <tr>
         <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
         <td>Optional</td>
-        <td>Logical states to sub-group both successes and failures. E.g. <strong>Succeeded, Denied, Invalid, etc</strong></td>
+        <td>Logical states to sub-group both successes and failures. E.g. **Succeeded, Denied, Invalid, etc**</td>
     </tr>
     <tr>
         <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a></td>
@@ -486,59 +454,50 @@ showing the usage of Result by creating, checking, and pattern matching the valu
     <tr>
         <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a></td>
         <td>Optional</td>
-        <td>Type aliases to simplify the Result from 2 type parameters to 1. E.g. <strong>Outcome&lt;T&gt; = Result&lt;T,Err&gt;, Try&lt;T&gt; = Result&lt;T,Exception&gt;</strong></td>
+        <td>Type aliases to simplify the Result from 2 type parameters to 1. E.g. **Outcome&lt;T&gt; = Result&lt;T,Err&gt;, Try&lt;T&gt; = Result&lt;T,Exception&gt;**</td>
     </tr>
     <tr>
         <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Builder.kt" >Builders</a></td>
         <td>Optional</td>
-        <td>Convenient methods to build errors such as <strong>Outcomes.denied</strong></td>
+        <td>Convenient methods to build errors such as **Outcomes.denied**</td>
     </tr>
 </table>
 <br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h2 id="result">Result</h2>
-
 <p><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Result.kt" >Result&lt;T,E&gt;</a> is the main component as a sealed class with only 2 implementations of
 <strong>Success&lt;T&gt;</strong> and <strong>Failure&lt;E&gt;</strong>. <strong>Success&lt;T&gt;</strong> stores the successful value of an operation, and <strong>Failure&lt;E&gt;</strong> stores the error of an operation. <br/>
 Result has 2 type parameters <strong>T</strong> and <strong>E</strong>. <br/>
 <strong>T</strong> is used to represent the type of value ( Int, User, etc ) that the Success branch will store on the successful result of an operation.<br/>
 <strong>E</strong> is used to represent the type of error ( String, Exception, etc ) that the Failure branch will store on the failed result of an operation.<br/>
 The branches are also sensiblly defaulted with <strong>Status</strong> codes to make them optional.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
-
-    <span class="c1">// Result base class
-</span><span class="c1"></span>    <span class="k">sealed</span> <span class="k">class</span> <span class="nc">Result</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">,</span> <span class="k">out</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">{</span>
-        <span class="c1">// implementation
-</span><span class="c1"></span>    <span class="p">}</span>
-
-    <span class="c1">// Success branch ( type T to store value of successful operation )
-</span><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">Success</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;(</span><span class="k">val</span> <span class="py">value</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">status</span><span class="p">:</span> <span class="n">Passed</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">)</span> 
-        <span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Nothing</span><span class="p">&gt;()</span> <span class="p">{</span>
-        <span class="c1">// implementation
-</span><span class="c1"></span>    <span class="p">}</span>
-
-    <span class="c1">// Failure branch ( type E to store error of failed operation )
-</span><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">Failure</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">E</span><span class="p">&gt;(</span><span class="k">val</span> <span class="py">error</span><span class="p">:</span> <span class="n">E</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">status</span><span class="p">:</span> <span class="n">Failed</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">ERRORED</span><span class="p">)</span> 
-        <span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Nothing</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;()</span> <span class="p">{</span>
-        <span class="c1">// implementation
-</span><span class="c1"></span>    <span class="p">}</span>
-     </code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Result base class
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">sealed</span> <span class="k">class</span> <span class="nc">Result</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">,</span> <span class="k">out</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// implementation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Success branch ( type T to store value of successful operation )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">Success</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">T</span><span class="p">&gt;(</span><span class="k">val</span> <span class="py">value</span><span class="p">:</span> <span class="n">T</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">status</span><span class="p">:</span> <span class="n">Passed</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Nothing</span><span class="p">&gt;()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// implementation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Failure branch ( type E to store error of failed operation )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">Failure</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">E</span><span class="p">&gt;(</span><span class="k">val</span> <span class="py">error</span><span class="p">:</span> <span class="n">E</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">status</span><span class="p">:</span> <span class="n">Failed</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">ERRORED</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Nothing</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// implementation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="statuses">Statuses</h2>
-
 <p>One of the distinguishing features of <strong>Kiit</strong> Result is the introduction of a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> component on the Result type base class. The status is applicable for both the Success / Failure branch and is made of a Integer code and String message and is used to further sub-categorize and classify successes and failures to figure out <strong>why</strong> something passed or failed.
-Default <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a> are provided for convenience. The Status Codes provide a few main benefits:
+Default <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a> are provided for convenience. The Status Codes provide a few main benefits:</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>1. Categorization</strong></td>
@@ -548,171 +507,143 @@ Default <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin
     <tr>
         <td><strong>2. Reduce boiler-plate</strong></td>
         <td>Removes boiler-plate code of creating small custom error types.</td>
-        <td>E.g. Outcomes.denied(&ldquo;No access to resource&rdquo;)</td>
+        <td>E.g. Outcomes.denied("No access to resource")</td>
     </tr>
     <tr>
         <td><strong>3. Conversion</strong></td>
         <td>Provides a reasonable way to convert the status to HTTP codes</td>
-        <td>E.g. Succeeded -&gt; HTTP 200 range</td>
+        <td>E.g. Succeeded -> HTTP 200 range</td>
     </tr>
 </table>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">package</span> <span class="nn">slatekit.results</span>
-
-    <span class="k">interface</span> <span class="nc">class</span> <span class="n">Status</span> <span class="p">{</span>
-        <span class="k">abstract</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span>
-        <span class="k">abstract</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span>
-    <span class="p">}</span>
-
-    <span class="k">sealed</span> <span class="k">class</span> <span class="nc">Passed</span> <span class="p">:</span> <span class="n">Status</span> <span class="p">{</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Succeeded</span> <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Passed</span><span class="p">()</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Pending</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Passed</span><span class="p">()</span>
-    <span class="p">}</span>
-
-    <span class="k">sealed</span> <span class="k">class</span> <span class="nc">Failed</span> <span class="p">:</span> <span class="n">Status</span> <span class="p">{</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Denied</span>    <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Ignored</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Invalid</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Errored</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
-        <span class="k">data</span> <span class="k">class</span> <span class="nc">Unexpected</span><span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
-    <span class="p">}</span></code></pre></div></p>
-
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">package</span> <span class="nn">slatekit.results</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">interface</span> <span class="nc">class</span> <span class="n">Status</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">abstract</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span>
+</span></span><span class="line"><span class="cl">        <span class="k">abstract</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">sealed</span> <span class="k">class</span> <span class="nc">Passed</span> <span class="p">:</span> <span class="n">Status</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Succeeded</span> <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Passed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Pending</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Passed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">sealed</span> <span class="k">class</span> <span class="nc">Failed</span> <span class="p">:</span> <span class="n">Status</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Denied</span>    <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Ignored</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Invalid</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Errored</span>   <span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">data</span> <span class="k">class</span> <span class="nc">Unexpected</span><span class="p">(</span><span class="k">override</span> <span class="k">val</span> <span class="py">code</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="k">override</span> <span class="k">val</span> <span class="py">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">:</span> <span class="n">Failed</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="aliases">Aliases</h2>
-
 <p>The Result type has 2 type parameters (<strong>T for value and E for error</strong>), but often its more convenient to work with known error types and also to avoid having to constantly specify the error type <strong>E</strong>. This is where Kotlins typealias come in handy.
 There are a few type <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Aliases.kt" >Aliases</a> available for making it easier to work with error types and to simplify the Result type from 2 type parameters down to 1. The aliases are supplemented with builder functions to easily create the result types. <strong>Outcome</strong> is used heavily in <strong>Kiit</strong> as we use functional error-handling and avoid throwing of Exceptions ( generally speaking ).
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
-    
-    <span class="c1">// Aliases simplify Result from 2 type parameters down to 1.
-</span><span class="c1"></span>    <span class="n">typealias</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>       <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Exception</span><span class="p">&gt;</span>
-    <span class="n">typealias</span> <span class="n">Notice</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>    <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span>
-    <span class="n">typealias</span> <span class="n">Outcome</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>   <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span>
-    <span class="n">typealias</span> <span class="n">Validated</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Err</span><span class="p">.</span><span class="n">ErrorList</span><span class="p">&gt;</span>
-    
-    <span class="c1">// You can now pass around the types more simply
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span> <span class="s">&#34;1&#34;</span><span class="p">.</span><span class="n">toInt</span><span class="p">()</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Aliases simplify Result from 2 type parameters down to 1.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">typealias</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>       <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Exception</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">typealias</span> <span class="n">Notice</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>    <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">String</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">typealias</span> <span class="n">Outcome</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span>   <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">typealias</span> <span class="n">Validated</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="nc">Err</span><span class="p">.</span><span class="n">ErrorList</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// You can now pass around the types more simply
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span> <span class="s2">&#34;1&#34;</span><span class="p">.</span><span class="n">toInt</span><span class="p">()</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="builders">Builders</h2>
-
 <p>Building up Results / Successes / Failures can become a bit tedious, especially with the combination of logical Status groups and error types ( Strings, Exception, etc ).
 The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Builder.kt" >Builders</a> interface is available for convenience to simplify the construction of appropriate error types.
 There are builders <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Tries.kt" >Tries</a>,
 <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Notices.kt" >Notices</a>,
 <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Outcomes.kt" >Outcomes</a> for the corresponding Aliases <strong>Try, Notice, Outcome</strong>.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
-    <span class="c1">// Builder interface can build Result&lt;T, E&gt; from strings, exception, err
-</span><span class="c1"></span>    <span class="k">interface</span> <span class="nc">Builder</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">{</span>
-        <span class="k">fun</span> &lt;T&gt; <span class="nf">invalid</span><span class="p">():</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromStr</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
-        <span class="k">fun</span> &lt;T&gt; <span class="nf">invalid</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromStr</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
-        <span class="k">fun</span> &lt;T&gt; <span class="nf">invalid</span><span class="p">(</span><span class="n">ex</span><span class="p">:</span> <span class="n">Exception</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Invalid</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span><span class="p">):</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromEx</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="n">status</span> <span class="o">?:</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
-        <span class="k">fun</span> &lt;T&gt; <span class="nf">invalid</span><span class="p">(</span><span class="n">err</span><span class="p">:</span> <span class="n">Err</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span><span class="n">Failed</span><span class="p">.</span><span class="n">Invalid</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span><span class="p">):</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromErr</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="n">status</span> <span class="o">?:</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
-
-        <span class="c1">// misc code
-</span><span class="c1"></span>
-    <span class="p">}</span>
-    <span class="c1">// Misc builders ( See links / code )
-</span><span class="c1"></span>    <span class="k">interface</span> <span class="nc">TryBuilder</span> <span class="p">:</span> <span class="n">Builder</span><span class="p">&lt;</span><span class="n">Exception</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* .. */</span> <span class="p">}</span>
-    <span class="k">object</span> <span class="nc">Tries</span> <span class="p">:</span> <span class="n">TryBuilder</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
-
-    <span class="k">interface</span> <span class="nc">NoticeBuilder</span> <span class="p">:</span> <span class="n">Builder</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* .. */</span> <span class="p">}</span>
-    <span class="k">object</span> <span class="nc">Notice</span> <span class="p">:</span> <span class="n">NoticeBuilder</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
-
-    <span class="k">interface</span> <span class="nc">OutcomeBuilder</span> <span class="p">:</span> <span class="n">Builder</span><span class="p">&lt;</span><span class="n">Err</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* .. */</span> <span class="p">}</span>
-    <span class="k">object</span> <span class="nc">Outcome</span> <span class="p">:</span> <span class="n">OutcomeBuilder</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span></code></pre></div></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Builder interface can build Result&lt;T, E&gt; from strings, exception, err
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">interface</span> <span class="nc">Builder</span><span class="p">&lt;</span><span class="k">out</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">invalid</span><span class="p">():</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromStr</span><span class="p">(</span><span class="k">null</span><span class="p">,</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">invalid</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="n">String</span><span class="p">):</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromStr</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">invalid</span><span class="p">(</span><span class="n">ex</span><span class="p">:</span> <span class="n">Exception</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Invalid</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span><span class="p">):</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromEx</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="n">status</span> <span class="o">?:</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">invalid</span><span class="p">(</span><span class="n">err</span><span class="p">:</span> <span class="n">Err</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span><span class="nc">Failed</span><span class="p">.</span><span class="n">Invalid</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span><span class="p">):</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">errorFromErr</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">),</span> <span class="n">status</span> <span class="o">?:</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// misc code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Misc builders ( See links / code )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">interface</span> <span class="nc">TryBuilder</span> <span class="p">:</span> <span class="n">Builder</span><span class="p">&lt;</span><span class="n">Exception</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* .. */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">object</span> <span class="nc">Tries</span> <span class="p">:</span> <span class="n">TryBuilder</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">interface</span> <span class="nc">NoticeBuilder</span> <span class="p">:</span> <span class="n">Builder</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* .. */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">object</span> <span class="nc">Notice</span> <span class="p">:</span> <span class="n">NoticeBuilder</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">interface</span> <span class="nc">OutcomeBuilder</span> <span class="p">:</span> <span class="n">Builder</span><span class="p">&lt;</span><span class="n">Err</span><span class="p">&gt;</span> <span class="p">{</span> <span class="cm">/* .. */</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">object</span> <span class="nc">Outcome</span> <span class="p">:</span> <span class="n">OutcomeBuilder</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">}</span></span></span></code></pre></div></p>
 <p>With the builders and aliases in place, we can uses the <strong>Tries, Notices or Outcomes</strong> to easily construct accurate results
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatkeit.results.builders.*</span>
-
-    <span class="c1">// Build results ( imagine this is some user registration flow )
-</span><span class="c1"></span>    <span class="c1">// Try&lt;T&gt; = Result&lt;T, Exception&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">tried1</span> <span class="p">=</span> <span class="n">Tries</span><span class="p">.</span><span class="n">success</span><span class="p">(</span> <span class="n">User</span><span class="p">()</span> <span class="p">)</span>
-    <span class="k">val</span> <span class="py">tried2</span> <span class="p">=</span> <span class="n">Tries</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;Phone exists&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">tried3</span> <span class="p">=</span> <span class="n">Tries</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;Email required&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Outcome&lt;T&gt; = Result&lt;T, Err&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">outcome1</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span> <span class="n">User</span><span class="p">()</span> <span class="p">)</span>
-    <span class="k">val</span> <span class="py">outcome2</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;Phone exists&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">outcome3</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;Email required&#34;</span> <span class="p">)</span>
-
-    <span class="c1">// Notice&lt;T&gt; = Result&lt;T, String&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">notice1</span> <span class="p">=</span> <span class="n">Notices</span><span class="p">.</span><span class="n">success</span><span class="p">(</span> <span class="n">User</span><span class="p">()</span> <span class="p">)</span>
-    <span class="k">val</span> <span class="py">notice2</span> <span class="p">=</span> <span class="n">Notices</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;Phone exists&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">notice3</span> <span class="p">=</span> <span class="n">Notices</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;Email required&#34;</span> <span class="p">)</span></code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatkeit.results.builders.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Build results ( imagine this is some user registration flow )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Try&lt;T&gt; = Result&lt;T, Exception&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">tried1</span> <span class="p">=</span> <span class="nc">Tries</span><span class="p">.</span><span class="n">success</span><span class="p">(</span> <span class="n">User</span><span class="p">()</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">tried2</span> <span class="p">=</span> <span class="nc">Tries</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;Phone exists&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">tried3</span> <span class="p">=</span> <span class="nc">Tries</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;Email required&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Outcome&lt;T&gt; = Result&lt;T, Err&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">outcome1</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span> <span class="n">User</span><span class="p">()</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">outcome2</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;Phone exists&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">outcome3</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;Email required&#34;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Notice&lt;T&gt; = Result&lt;T, String&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">notice1</span> <span class="p">=</span> <span class="nc">Notices</span><span class="p">.</span><span class="n">success</span><span class="p">(</span> <span class="n">User</span><span class="p">()</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">notice2</span> <span class="p">=</span> <span class="nc">Notices</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;Phone exists&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">notice3</span> <span class="p">=</span> <span class="nc">Notices</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;Email required&#34;</span> <span class="p">)</span></span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="errors">Errors</h2>
-
 <p>The error type <strong>E</strong> on Result and its Failure branch can be anything, unlike other implementations which default <strong>E</strong> to <strong>Exception</strong>.
 While you can use <strong>String, or Exception</strong> as the error type, <strong>Kiit</strong> offers <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Err.kt" >Err</a> as a custom error type.
 This provides convenient ways to build errors from a string, exception, based on an invalid field or from a list of errors.
 This is much more comprehensive than using a simple <strong>String</strong> as an error type and more aligned with functional programming by
 avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
-    <span class="k">import</span> <span class="nn">slatekit.results.Err</span>
-    <span class="k">import</span> <span class="nn">slatekit.results.ErrorList</span>
-
-    <span class="c1">// Build Err from various sources using convenience methods
-</span><span class="c1"></span>    <span class="c1">// From simple string
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err1</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">)</span>
-
-    <span class="c1">// From Exception
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err2</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">ex</span><span class="p">(</span><span class="n">Exception</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">))</span>
-
-    <span class="c1">// From field name / value
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err3</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">,</span> <span class="s">&#34;abc123@&#34;</span><span class="p">,</span> <span class="s">&#34;Invalid email&#34;</span><span class="p">)</span>
-
-    <span class="c1">// From status code
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err4</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">code</span><span class="p">(</span><span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
-
-    <span class="c1">// From list of error strings
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err5</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">list</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
-            <span class="s">&#34;username must be at least 8 chars&#34;</span><span class="p">,</span>
-            <span class="s">&#34;username must have 1 UPPERCASE letter&#34;</span><span class="p">),</span>
-            <span class="s">&#34;Username is invalid&#34;</span><span class="p">)</span>
-
-    <span class="c1">// From list of Err types
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">err6</span> <span class="p">=</span> <span class="n">Err</span><span class="p">.</span><span class="n">ErrorList</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
-            <span class="n">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">,</span> <span class="s">&#34;abc123 is not a valid email&#34;</span><span class="p">,</span> <span class="s">&#34;Invalid email&#34;</span><span class="p">),</span>
-            <span class="n">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s">&#34;phone&#34;</span><span class="p">,</span> <span class="s">&#34;123-456-789 is not a valid U.S. phone&#34;</span><span class="p">,</span> <span class="s">&#34;Invalid phone&#34;</span><span class="p">)</span>
-    <span class="p">),</span> <span class="s">&#34;Please correct the errors&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Create the Failure branch from the errors
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Result</span><span class="p">&lt;</span><span class="n">UUID</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">err6</span><span class="p">)</span>
-     </code></pre></div>
-
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.Err</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.ErrorList</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Build Err from various sources using convenience methods
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// From simple string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">err1</span> <span class="p">=</span> <span class="nc">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// From Exception
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">err2</span> <span class="p">=</span> <span class="nc">Err</span><span class="p">.</span><span class="n">ex</span><span class="p">(</span><span class="n">Exception</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// From field name / value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">err3</span> <span class="p">=</span> <span class="nc">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">,</span> <span class="s2">&#34;abc123@&#34;</span><span class="p">,</span> <span class="s2">&#34;Invalid email&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// From status code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">err4</span> <span class="p">=</span> <span class="nc">Err</span><span class="p">.</span><span class="n">code</span><span class="p">(</span><span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// From list of error strings
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">err5</span> <span class="p">=</span> <span class="nc">Err</span><span class="p">.</span><span class="n">list</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;username must be at least 8 chars&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;username must have 1 UPPERCASE letter&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Username is invalid&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// From list of Err types
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">err6</span> <span class="p">=</span> <span class="nc">Err</span><span class="p">.</span><span class="n">ErrorList</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nc">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">,</span> <span class="s2">&#34;abc123 is not a valid email&#34;</span><span class="p">,</span> <span class="s2">&#34;Invalid email&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="nc">Err</span><span class="p">.</span><span class="n">on</span><span class="p">(</span><span class="s2">&#34;phone&#34;</span><span class="p">,</span> <span class="s2">&#34;123-456-789 is not a valid U.S. phone&#34;</span><span class="p">,</span> <span class="s2">&#34;Invalid phone&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span> <span class="s2">&#34;Please correct the errors&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create the Failure branch from the errors
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Result</span><span class="p">&lt;</span><span class="n">UUID</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">err6</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="conversions">Conversions</h2>
-
-<p>Results can be gracefully converted to other representations since there are 3 levels of detail:<br/>
+<p>Results can be gracefully converted to other representations since there are 3 levels of detail:<br/></p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Detail</strong></td>
@@ -723,49 +654,42 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
     <tr>
         <td><strong>Top Level</strong></td>
         <td>2 : pass / fail </td>
-        <td><strong>Success / Failure</strong></td>
+        <td>**Success / Failure**</td>
         <td>True / False </td>
     </tr>
     <tr>
         <td><strong>Mid Level</strong></td>
         <td>7 : logical categories of Status</td>
-        <td><strong>Status sub-classes</strong></td>
+        <td>**Status sub-classes**</td>
         <td>Succeeded, Pending, Denied, Ignored, Invalid, Errored, Unexpected etc</td>
     </tr>
     <tr>
         <td><strong>Low Level</strong></td>
         <td>N: Based on # of statuses you use</td>
-        <td><strong>Status.code</strong></td>
+        <td>**Status.code**</td>
         <td>200001, 400001, 500001, etc</td>
     </tr>
 </table>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
-    <span class="c1">// Suppose this an API endpoint to register a user
-</span><span class="c1"></span>
-    <span class="c1">// Simulate registration through a service layer
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Outcome</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">registerUser</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
-
-    <span class="c1">// Convert the result back to HTTP somehow
-</span><span class="c1"></span>    <span class="c1">// NOTE: This is a simple conversion, see docs below
-</span><span class="c1"></span>    <span class="k">when</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Status</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="p">-&gt;</span> <span class="n">Http</span><span class="p">.</span><span class="n">Code200</span>
-        <span class="k">is</span> <span class="n">Status</span><span class="p">.</span><span class="n">Invalid</span>    <span class="p">-&gt;</span> <span class="n">Http</span><span class="p">.</span><span class="n">Code400</span>
-        <span class="k">is</span> <span class="n">Status</span><span class="p">.</span><span class="n">Denied</span>     <span class="p">-&gt;</span> <span class="n">Http</span><span class="p">.</span><span class="n">Code401</span>
-        <span class="k">is</span> <span class="n">Status</span><span class="p">.</span><span class="n">Errored</span>    <span class="p">-&gt;</span> <span class="n">Http</span><span class="p">.</span><span class="n">Code400</span>
-        <span class="k">else</span>                 <span class="p">-&gt;</span> <span class="n">Http</span><span class="p">.</span><span class="n">Code500</span>
-    <span class="p">}</span> </code></pre></div></p>
-
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Suppose this an API endpoint to register a user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Simulate registration through a service layer
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Outcome</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">registerUser</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Convert the result back to HTTP somehow
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// NOTE: This is a simple conversion, see docs below
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span> <span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="nc">Status</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="o">-&gt;</span> <span class="nc">Http</span><span class="p">.</span><span class="n">Code200</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="nc">Status</span><span class="p">.</span><span class="n">Invalid</span>    <span class="o">-&gt;</span> <span class="nc">Http</span><span class="p">.</span><span class="n">Code400</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="nc">Status</span><span class="p">.</span><span class="n">Denied</span>     <span class="o">-&gt;</span> <span class="nc">Http</span><span class="p">.</span><span class="n">Code401</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="nc">Status</span><span class="p">.</span><span class="n">Errored</span>    <span class="o">-&gt;</span> <span class="nc">Http</span><span class="p">.</span><span class="n">Code400</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>                 <span class="o">-&gt;</span> <span class="nc">Http</span><span class="p">.</span><span class="n">Code500</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> </span></span></code></pre></div>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h1 id="guide">Guide</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
@@ -788,17 +712,17 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
     </tr>
     <tr>
         <td><strong>4. Outcome</strong></td>
-        <td>A type alias for <strong>Result[T, Err]</strong> where Err is an error interface</td>
+        <td>A type alias for **Result[T, Err]** where Err is an error interface</td>
         <td><a href="arch/results/#outcome" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>5. Try</strong></td>
-        <td>A type alias for <strong>Result[T, Exception]</strong> to work with Exceptions</td>
+        <td>A type alias for **Result[T, Exception]** to work with Exceptions</td>
         <td><a href="arch/results/#try" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
         <td><strong>6. Validated</strong></td>
-        <td>A type alias for <strong>Result[T, Err.ErrorList]</strong> to collect errors</td>
+        <td>A type alias for **Result[T, Err.ErrorList]** to collect errors</td>
         <td><a href="arch/results/#validated" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
@@ -808,244 +732,197 @@ avoiding throwing of <strong>Exceptions</strong> where applicable.</p>
     </tr>
 </table>
 <br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h2 id="create">Create</h2>
-
 <p>There various ways to create successes / failures, and these will be similar to Kotlin / Swift Result type usage.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
-    
-    <span class="c1">// Success: Straight-forward
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
-
-    <span class="c1">// Success referenced as base type Result&lt;Int, Err&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1a</span><span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
-
-    <span class="c1">// Success created with status codes / messages
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1b</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">,</span> <span class="n">status</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">result1c</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">,</span> <span class="n">msg</span> <span class="p">=</span> <span class="s">&#34;Successfully processed&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">result1d</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">,</span> <span class="n">msg</span> <span class="p">=</span> <span class="s">&#34;Successfully processed&#34;</span><span class="p">,</span> <span class="n">code</span> <span class="p">=</span> <span class="m">200</span><span class="p">)</span>
-
-    <span class="c1">// Failure
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1e</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Failure referenced as base type Result&lt;Int, Err&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1f</span><span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Failure created with status codes / messages
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1g</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">),</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">result1h</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">),</span> <span class="n">msg</span> <span class="p">=</span> <span class="s">&#34;Invalid inputs&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">result1i</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="n">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;Invalid email&#34;</span><span class="p">),</span> <span class="n">msg</span> <span class="p">=</span> <span class="s">&#34;Invalid inputs&#34;</span><span class="p">,</span> <span class="n">code</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">.</span><span class="n">code</span><span class="p">)</span>
-     </code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Success: Straight-forward
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Success referenced as base type Result&lt;Int, Err&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1a</span><span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Success created with status codes / messages
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1b</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">,</span> <span class="n">status</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">result1c</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">,</span> <span class="n">msg</span> <span class="p">=</span> <span class="s2">&#34;Successfully processed&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">result1d</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">,</span> <span class="n">msg</span> <span class="p">=</span> <span class="s2">&#34;Successfully processed&#34;</span><span class="p">,</span> <span class="n">code</span> <span class="p">=</span> <span class="m">200</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Failure
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1e</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="nc">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Failure referenced as base type Result&lt;Int, Err&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1f</span><span class="p">:</span> <span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="nc">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Failure created with status codes / messages
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1g</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="nc">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">),</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">INVALID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">result1h</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="nc">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">),</span> <span class="n">msg</span> <span class="p">=</span> <span class="s2">&#34;Invalid inputs&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">result1i</span> <span class="p">=</span> <span class="n">Failure</span><span class="p">(</span><span class="nc">Err</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;Invalid email&#34;</span><span class="p">),</span> <span class="n">msg</span> <span class="p">=</span> <span class="s2">&#34;Invalid inputs&#34;</span><span class="p">,</span> <span class="n">code</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="nc">INVALID</span><span class="p">.</span><span class="n">code</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="access">Access</h2>
-
 <p>Result offers the typical functional ways to safely get the value
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">      
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
-
-    <span class="c1">// Create
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
-
-    <span class="c1">// Get value or default to null
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">value1</span><span class="p">:</span><span class="n">Int</span><span class="p">?</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">getOrNull</span><span class="p">()</span>
-
-    <span class="c1">// Get value or default with value provided
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">value2</span><span class="p">:</span><span class="n">Int</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="m">0</span> <span class="p">}</span>
-
-    <span class="c1">// Map over the value
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">op1</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
-
-    <span class="c1">// Flat Map over the value
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">op2</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">Success</span><span class="p">(</span><span class="n">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">)</span> <span class="p">}</span>
-
-    <span class="c1">// Fold to transform both the success / failure into something else ( e.g. string here )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">value3</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fold</span><span class="p">({</span> <span class="s">&#34;Succeeded : $it&#34;</span> <span class="p">},</span> <span class="p">{</span><span class="n">err</span> <span class="p">-&gt;</span> <span class="s">&#34;Failed : ${err.msg}&#34;</span> <span class="p">})</span>
-
-    <span class="c1">// Get value if success
-</span><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Number = $it&#34;</span><span class="p">)</span> <span class="p">}</span>
-
-    <span class="c1">// Get error if failure
-</span><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Error is ${it.msg}&#34;</span><span class="p">)</span> <span class="p">}</span>
-
-    <span class="c1">// Pattern match
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1">// 42
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">error</span><span class="p">)</span>  <span class="c1">// Err
-</span><span class="c1"></span>    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get value or default to null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">value1</span><span class="p">:</span><span class="n">Int</span><span class="p">?</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">getOrNull</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get value or default with value provided
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">value2</span><span class="p">:</span><span class="n">Int</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="m">0</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Map over the value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">op1</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">map</span> <span class="p">{</span> <span class="k">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Flat Map over the value
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">op2</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">Success</span><span class="p">(</span><span class="k">it</span> <span class="p">+</span> <span class="m">1</span> <span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Fold to transform both the success / failure into something else ( e.g. string here )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">value3</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">fold</span><span class="p">({</span> <span class="s2">&#34;Succeeded : </span><span class="si">$it</span><span class="s2">&#34;</span> <span class="p">},</span> <span class="p">{</span><span class="n">err</span> <span class="o">-&gt;</span> <span class="s2">&#34;Failed : </span><span class="si">${err.msg}</span><span class="s2">&#34;</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get value if success
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Number = </span><span class="si">$it</span><span class="s2">&#34;</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Get error if failure
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Error is </span><span class="si">${it.msg}</span><span class="s2">&#34;</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Pattern match
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Success</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="k">value</span><span class="p">)</span>  <span class="c1">// 42
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">error</span><span class="p">)</span>  <span class="c1">// Err
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="check">Check</h2>
-
 <p>There are 3 ways to check / pattern match the result type and its actual branch/values. These range from coarse to fine grained matches depending on the situation. Typically though, as with other implementations you just need to check for Success / Failure. However, you can also check the sub-categories of Successes and Failures.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
-
-    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span><span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
-    
-    <span class="c1">// Check if the value matches the criteria
-</span><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">exists</span> <span class="p">{</span> <span class="n">it</span> <span class="p">==</span> <span class="m">42</span> <span class="p">}</span> <span class="c1">// true
-</span><span class="c1"></span>    
-    <span class="c1">// Check if the value matches the one provided
-</span><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>        <span class="c1">// false
-</span><span class="c1"></span>
-    <span class="c1">// Pattern match 1: &#34;Top-Level&#34; on Success/Failure (Binary true / false )
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>  <span class="c1">// 42
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">error</span><span class="p">)</span>  <span class="c1">// Err
-</span><span class="c1"></span>    <span class="p">}</span>
-
-    <span class="c1">// Pattern match 2: &#34;Mid-level&#34; on Status ( 7 logical groups )
-</span><span class="c1"></span>    <span class="c1">// NOTE: The status property is available on both the Success/Failure branches
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Success!
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Passed</span><span class="p">.</span><span class="n">Pending</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Success, but in progress
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Denied</span>     <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Security related 
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Invalid</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Bad inputs / data
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Ignored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Ignored for processing
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Errored</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Expected errors
-</span><span class="c1"></span>        <span class="k">is</span> <span class="n">Failed</span><span class="p">.</span><span class="n">Unexpected</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Unexpected errors
-</span><span class="c1"></span>    <span class="p">}</span>
-
-    <span class="c1">// Pattern match 3: &#34;Low-Level&#34; on numeric code
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">code</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">.</span><span class="n">code</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;OK&#34;</span><span class="p">)</span>
-        <span class="n">Codes</span><span class="p">.</span><span class="n">QUEUED</span><span class="p">.</span><span class="n">code</span>     <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Pending&#34;</span><span class="p">)</span>
-        <span class="n">Codes</span><span class="p">.</span><span class="n">UPDATED</span><span class="p">.</span><span class="n">code</span>    <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;User updated&#34;</span><span class="p">)</span>
-        <span class="n">Codes</span><span class="p">.</span><span class="n">DENIED</span><span class="p">.</span><span class="n">code</span>     <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Log in again&#34;</span><span class="p">)</span>
-        <span class="n">Codes</span><span class="p">.</span><span class="n">DEPRECATED</span><span class="p">.</span><span class="n">code</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;No longer supported&#34;</span><span class="p">)</span>
-        <span class="n">Codes</span><span class="p">.</span><span class="n">CONFLICT</span><span class="p">.</span><span class="n">code</span>   <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Email already exists&#34;</span><span class="p">)</span>
-        <span class="k">else</span>                  <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;Other!!&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-     </code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">result</span><span class="p">:</span><span class="n">Result</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span><span class="n">Err</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="m">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check if the value matches the criteria
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">exists</span> <span class="p">{</span> <span class="k">it</span> <span class="o">==</span> <span class="m">42</span> <span class="p">}</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check if the value matches the one provided
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">result</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>        <span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Pattern match 1: &#34;Top-Level&#34; on Success/Failure (Binary true / false )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Success</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="k">value</span><span class="p">)</span>  <span class="c1">// 42
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="n">Failure</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">error</span><span class="p">)</span>  <span class="c1">// Err
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Pattern match 2: &#34;Mid-level&#34; on Status ( 7 logical groups )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// NOTE: The status property is available on both the Success/Failure branches
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="nc">Passed</span><span class="p">.</span><span class="n">Succeeded</span>  <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Success!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="nc">Passed</span><span class="p">.</span><span class="n">Pending</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Success, but in progress
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Denied</span>     <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Security related 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Invalid</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Bad inputs / data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Ignored</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Ignored for processing
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Errored</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Expected errors
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">is</span> <span class="nc">Failed</span><span class="p">.</span><span class="n">Unexpected</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">msg</span><span class="p">)</span> <span class="c1">// Unexpected errors
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Pattern match 3: &#34;Low-Level&#34; on numeric code
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">status</span><span class="p">.</span><span class="n">code</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">Codes</span><span class="p">.</span><span class="nc">SUCCESS</span><span class="p">.</span><span class="n">code</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;OK&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">Codes</span><span class="p">.</span><span class="nc">QUEUED</span><span class="p">.</span><span class="n">code</span>     <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Pending&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">Codes</span><span class="p">.</span><span class="nc">UPDATED</span><span class="p">.</span><span class="n">code</span>    <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;User updated&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">Codes</span><span class="p">.</span><span class="nc">DENIED</span><span class="p">.</span><span class="n">code</span>     <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Log in again&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">Codes</span><span class="p">.</span><span class="nc">DEPRECATED</span><span class="p">.</span><span class="n">code</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;No longer supported&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nc">Codes</span><span class="p">.</span><span class="nc">CONFLICT</span><span class="p">.</span><span class="n">code</span>   <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Email already exists&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>                  <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Other!!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="outcome">Outcome</h2>
-
 <p>The <strong>Outcome&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Err&gt;</strong> and allows you to use Result as <strong>Outcome&lt;T&gt;</strong>. This <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Outcomes.kt" >Outcomes</a> has builder methods to construct Successes / Failures easily.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
-    <span class="k">import</span> <span class="nn">slatekit.results.builders.Outcomes</span>
-
-    <span class="c1">// Outcome&lt;Int&gt; = Result&lt;Int, Err&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">res1</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">&#34;Created User with id 1&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">res2</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s">&#34;Not authorized to send alerts&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">res3</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">ignored</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s">&#34;Not a beta tester&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">res4</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s">&#34;Email is invalid&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">res5</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">conflict</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s">&#34;Duplicate email found&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">res6</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">errored</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s">&#34;Phone is invalid&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">res7</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">unexpected</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s">&#34;Unable to send confirmation code&#34;</span><span class="p">)</span>
-    </code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.builders.Outcomes</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Outcome&lt;Int&gt; = Result&lt;Int, Err&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">res1</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s2">&#34;Created User with id 1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">res2</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s2">&#34;Not authorized to send alerts&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">res3</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">ignored</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s2">&#34;Not a beta tester&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">res4</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">invalid</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s2">&#34;Email is invalid&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">res5</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">conflict</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s2">&#34;Duplicate email found&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">res6</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">errored</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s2">&#34;Phone is invalid&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">res7</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">unexpected</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">&gt;(</span><span class="s2">&#34;Unable to send confirmation code&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="try">Try</h2>
-
 <p>The <strong>Try&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Exception&gt;</strong> and allows you to use Result as <strong>Try&lt;T&gt;</strong>. This has <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/builders/Tries.kt" >Tries</a> builder methods to construct Successes / Failures with exceptions. This is quite similar to Scala Try. Also, while functional error-handling is prioritized in <strong>Kiit</strong>, its not a dogmatic / absolute approach and exceptions can be used where appropriate.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
-    <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
-
-    <span class="c1">// Try&lt;Long&gt; = Result&lt;Long, Exception&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">converted1</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Tries</span><span class="p">.</span><span class="n">of</span> <span class="p">{</span> <span class="s">&#34;1&#34;</span><span class="p">.</span><span class="n">toLong</span><span class="p">()</span> <span class="p">}</span>
-
-    <span class="c1">// DeniedException will checked and converted to Status.Denied
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">converted2</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Tries</span><span class="p">.</span><span class="n">of</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">{</span>
-        <span class="k">throw</span> <span class="n">DeniedException</span><span class="p">(</span><span class="s">&#34;Token invalid&#34;</span><span class="p">)</span>
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Try&lt;Long&gt; = Result&lt;Long, Exception&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">converted1</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">Tries</span><span class="p">.</span><span class="n">of</span> <span class="p">{</span> <span class="s2">&#34;1&#34;</span><span class="p">.</span><span class="n">toLong</span><span class="p">()</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// DeniedException will checked and converted to Status.Denied
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">converted2</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">Tries</span><span class="p">.</span><span class="n">of</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">throw</span> <span class="n">DeniedException</span><span class="p">(</span><span class="s2">&#34;Token invalid&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="validated">Validated</h2>
-
 <p>The <strong>Validated&lt;T&gt;</strong> class is simply a type alias for <strong>Result&lt;T, Err.ErrorList&gt;</strong> and allows you to use collect a list of <strong>Err</strong>.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
-    <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
-    <span class="k">import</span> <span class="nn">slatekit.common.validations.Validations</span>
-
-    <span class="c1">// Model to validate
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;batman_gotham&#34;</span><span class="p">,</span> <span class="s">&#34;batman&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="m">34</span><span class="p">)</span>
-    
-    <span class="c1">// Validated&lt;User&gt; = Result&lt;User, Err.ErrorList&gt;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">validated</span> <span class="p">=</span> <span class="n">Validations</span><span class="p">.</span><span class="n">collect</span><span class="p">&lt;</span><span class="n">User</span><span class="p">,</span><span class="n">String</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;(</span><span class="n">user</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">listOf</span><span class="p">(</span>
-                <span class="n">isNotEmpty</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">firstName</span><span class="p">),</span>
-                <span class="n">isNotEmpty</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">lastName</span><span class="p">),</span>
-                <span class="n">isEmail</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">email</span><span class="p">)</span>
-        <span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Print first error
-</span><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">validated</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">is</span> <span class="n">Success</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;User model is valid&#34;</span><span class="p">)</span> 
-        <span class="k">is</span> <span class="n">Failure</span> <span class="p">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s">&#34;User model failed with : &#34;</span> <span class="p">+</span> <span class="n">validated</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">errors</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.builders.Tries</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.common.validations.Validations</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Model to validate
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">user</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s2">&#34;batman_gotham&#34;</span><span class="p">,</span> <span class="s2">&#34;batman&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="m">34</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Validated&lt;User&gt; = Result&lt;User, Err.ErrorList&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">validated</span> <span class="p">=</span> <span class="nc">Validations</span><span class="p">.</span><span class="n">collect</span><span class="p">&lt;</span><span class="n">User</span><span class="p">,</span><span class="n">String</span><span class="p">,</span> <span class="n">Err</span><span class="p">&gt;(</span><span class="n">user</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">isNotEmpty</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">firstName</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">isNotEmpty</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">lastName</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">isEmail</span><span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">email</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Print first error
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">when</span><span class="p">(</span><span class="n">validated</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Success</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;User model is valid&#34;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="k">is</span> <span class="n">Failure</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;User model failed with : &#34;</span> <span class="p">+</span> <span class="n">validated</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">errors</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">msg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="http">Http</h2>
-
 <p><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a> not only serve to logically sub-categorize successes/failures but they become a natural and easy way to convert results to platform/protocol specific statuses/errors. There is a default Err to HTTP status code converter available in <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Codes.kt" >Codes</a></p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="c1">// Simulate a denied exception ( Security related )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">denied</span><span class="p">:</span><span class="n">Outcome</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">(</span><span class="s">&#34;Access token has expired&#34;</span><span class="p">)</span>
-    
-    <span class="c1">// Convert it to HTTP
-</span><span class="c1"></span>    <span class="c1">// This returns back the HTTP code + original Status
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">code</span><span class="p">:</span><span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Status</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">toHttp</span><span class="p">(</span><span class="n">denied</span><span class="p">.</span><span class="n">status</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">code</span><span class="p">.</span><span class="n">first</span><span class="p">)</span> <span class="c1">// 401
-</span><span class="c1"></span>     </code></pre></div>
-
-
-
-<a href="arch/results#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="c1">// Simulate a denied exception ( Security related )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">denied</span><span class="p">:</span><span class="n">Outcome</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">Outcomes</span><span class="p">.</span><span class="n">denied</span><span class="p">(</span><span class="s2">&#34;Access token has expired&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Convert it to HTTP
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// This returns back the HTTP code + original Status
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">code</span><span class="p">:</span><span class="n">Pair</span><span class="p">&lt;</span><span class="n">Int</span><span class="p">,</span> <span class="n">Status</span><span class="p">&gt;</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="n">toHttp</span><span class="p">(</span><span class="n">denied</span><span class="p">.</span><span class="n">status</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">code</span><span class="p">.</span><span class="n">first</span><span class="p">)</span> <span class="c1">// 401
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     </span></span></code></pre></div>
+<p><a href="arch/results#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/results#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <br/>
-
-<a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
+<p><a href="arch/results#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <script>
     var archComponent = {
         name: "Result",

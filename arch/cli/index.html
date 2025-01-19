@@ -175,29 +175,22 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
+                <h1 id="overview">Overview</h1>
 <p>The Slate Kit CLI is a Command Line Interface application that provides
 pre-built functionality for you to integrate your own commands in an interactie manner. This CLI offers 2 distinct approaches to integration. The first approach allows you to handle the raw text supplied in the CLI yourself and is the most flexible. The second approach provides a more connected, automatic experience by exposing, validating, and executing inputs against Slate Kit Universal APIs. You can create a CLI app quickly using the Slate Kit command line executable with the command below.
 <br/><br/></p>
-
 <h1 id="create">Create</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;SampleCLI&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;SampleCLI&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <div class="alert alert-info" role="alert">
   You can download the Slate Kit Project Generator at 
   <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
   Install instructions located at <a href="start/generators" >Generators</a>. 
 </div>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="goals">Goals</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Goal</strong></td>
         <td><strong>Description</strong></td>
@@ -208,44 +201,35 @@ pre-built functionality for you to integrate your own commands in an interactie 
     </tr>
     <tr>
         <td><strong>2. Flexible Use</strong> </td>
-        <td>Handle raw requests or leverage existing integration</td><br />
+        <td>Handle raw requests or leverage existing integration</td>                     
     </tr>
     <tr>
         <td><strong>3. API Support</strong></td>
         <td>Slate Kit APIs are accessible on Web or CLI</td>
     </tr>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="status">Status</h1>
-
 <p>This component is currently stable and there is a project generator for it.
 A small future enhancement will add support for question and answer flow.
-<br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<br/></p>
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="install">Install</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="c1">// other repositories
-</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other dependencies ...
-</span><span class="c1"></span>
-        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cli:1.0.0&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cli:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="sources">Sources</h1>
-
-
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -276,81 +260,74 @@ A small future enhancement will add support for question and answer flow.
     <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
-
 <br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="example">Example</h1>
-
-<p>You can create a custom CLI by extending the Slate Kit CLI component or the CliAPI component which integrates nicely with Slate Kit <a href="arch/apis" >APIs</a>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">import</span> <span class="nn">kotlinx.coroutines.runBlocking</span>
-    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
-    <span class="k">import</span> <span class="nn">slatekit.cli.CLI</span>
-    <span class="k">import</span> <span class="nn">slatekit.cli.CliRequest</span>
-    <span class="k">import</span> <span class="nn">slatekit.cli.CliSettings</span>
-    <span class="k">import</span> <span class="nn">slatekit.cli.CliResponse</span> 
-
-    <span class="k">class</span> <span class="nc">AppCLI</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">CliSettings</span><span class="p">,</span> <span class="n">serializer</span><span class="p">:(</span><span class="n">Any</span><span class="p">?,</span> <span class="n">ContentType</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Content</span><span class="p">)</span> 
-        <span class="p">:</span> <span class="n">CLI</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="n">Info</span><span class="p">.</span><span class="n">none</span><span class="p">,</span> <span class="n">Folders</span><span class="p">.</span><span class="n">default</span><span class="p">,</span> <span class="n">serializer</span> <span class="p">=</span> <span class="n">serializer</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="cm">/**
-</span><span class="cm">         * Use case 3a : ( OPTIONAL ) do some stuff before running any commands
-</span><span class="cm">         */</span>
-        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
-            <span class="c1">// You don&#39;t need to override this as the base method displays help info
-</span><span class="c1"></span>            <span class="n">context</span><span class="p">.</span><span class="n">help</span><span class="p">.</span><span class="n">showHelp</span><span class="p">()</span>
-            <span class="n">context</span><span class="p">.</span><span class="n">writer</span><span class="p">.</span><span class="n">highlight</span><span class="p">(</span><span class="s">&#34;\thook: onShellStart - starting myapp command line interface&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-        <span class="p">}</span>
-
-
-        <span class="cm">/**
-</span><span class="cm">         * Use case 3b : ( OPTIONAL ) do some stuff before ending the shell this is called
-</span><span class="cm">         */</span>
-        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">end</span><span class="p">(</span><span class="n">status</span><span class="p">:</span> <span class="n">Status</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
-            <span class="n">context</span><span class="p">.</span><span class="n">writer</span><span class="p">.</span><span class="n">highlight</span><span class="p">(</span><span class="s">&#34;\thook: onShellEnd - ending myapp command line interface&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-        <span class="p">}</span>
-
-
-        <span class="cm">/**
-</span><span class="cm">         * Handle execution of the CLI Request
-</span><span class="cm">         */</span>
-        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">CliRequest</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">CliResponse</span><span class="p">&lt;*&gt;&gt;</span> <span class="p">{</span>
-
-            <span class="c1">// Access the arguments
-</span><span class="c1"></span>            <span class="k">val</span> <span class="py">title</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">))</span>
-            <span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;date&#34;</span><span class="p">))</span>
-            
-            <span class="c1">// Do something with the request
-</span><span class="c1"></span>            <span class="k">val</span> <span class="py">res</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="s">&#34;Processed &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">path</span><span class="p">)</span>
-
-            <span class="c1">// 4. Now return the response
-</span><span class="c1"></span>            <span class="k">return</span> <span class="n">res</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Serialization for output ( using Slate Kit default )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">serializer</span> <span class="p">=</span> <span class="p">{</span> <span class="n">item</span><span class="p">:</span><span class="n">Any</span><span class="p">?,</span> <span class="n">type</span><span class="p">:</span> <span class="n">ContentType</span> <span class="p">-&gt;</span> <span class="n">Content</span><span class="p">.</span><span class="n">csv</span><span class="p">(</span><span class="n">slatekit</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">csv</span><span class="p">().</span><span class="n">serialize</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">)}</span>
-
-    <span class="c1">// Create with default settings
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cli</span> <span class="p">=</span> <span class="n">AppCLI</span><span class="p">(</span><span class="n">CliSettings</span><span class="p">(),</span> <span class="n">serializer</span><span class="p">)</span>
-
-    <span class="c1">// Begin the REPL (Read, Eval, Print, Loop )
-</span><span class="c1"></span>    <span class="n">runBlocking</span> <span class="p">{</span>
-        <span class="n">cli</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
-    <span class="p">}</span></code></pre></div>
-<br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
+<h1 id="example">Example</h1>
+<p>You can create a custom CLI by extending the Slate Kit CLI component or the CliAPI component which integrates nicely with Slate Kit <a href="arch/apis" >APIs</a>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">kotlinx.coroutines.runBlocking</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.*</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.cli.CLI</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.cli.CliRequest</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.cli.CliSettings</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.cli.CliResponse</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">AppCLI</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">CliSettings</span><span class="p">,</span> <span class="n">serializer</span><span class="p">:(</span><span class="n">Any</span><span class="p">?,</span> <span class="n">ContentType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Content</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">:</span> <span class="n">CLI</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="nc">Info</span><span class="p">.</span><span class="n">none</span><span class="p">,</span> <span class="nc">Folders</span><span class="p">.</span><span class="n">default</span><span class="p">,</span> <span class="n">serializer</span> <span class="p">=</span> <span class="n">serializer</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * Use case 3a : ( OPTIONAL ) do some stuff before running any commands
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// You don&#39;t need to override this as the base method displays help info
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">context</span><span class="p">.</span><span class="n">help</span><span class="p">.</span><span class="n">showHelp</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">context</span><span class="p">.</span><span class="n">writer</span><span class="p">.</span><span class="n">highlight</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">hook: onShellStart - starting myapp command line interface&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * Use case 3b : ( OPTIONAL ) do some stuff before ending the shell this is called
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">end</span><span class="p">(</span><span class="n">status</span><span class="p">:</span> <span class="n">Status</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">context</span><span class="p">.</span><span class="n">writer</span><span class="p">.</span><span class="n">highlight</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\t</span><span class="s2">hook: onShellEnd - ending myapp command line interface&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">         * Handle execution of the CLI Request
+</span></span></span><span class="line"><span class="cl"><span class="cm">         */</span>
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">CliRequest</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">CliResponse</span><span class="p">&lt;*&gt;&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// Access the arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">val</span> <span class="py">title</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="k">val</span> <span class="py">date</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;date&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            <span class="c1">// Do something with the request
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">val</span> <span class="py">res</span> <span class="p">=</span> <span class="n">Success</span><span class="p">(</span><span class="s2">&#34;Processed &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// 4. Now return the response
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Serialization for output ( using Slate Kit default )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">serializer</span> <span class="p">=</span> <span class="p">{</span> <span class="n">item</span><span class="p">:</span><span class="n">Any</span><span class="p">?,</span> <span class="n">type</span><span class="p">:</span> <span class="n">ContentType</span> <span class="o">-&gt;</span> <span class="nc">Content</span><span class="p">.</span><span class="n">csv</span><span class="p">(</span><span class="n">slatekit</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="nc">Serialization</span><span class="p">.</span><span class="n">csv</span><span class="p">().</span><span class="n">serialize</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="p">)}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create with default settings
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">cli</span> <span class="p">=</span> <span class="n">AppCLI</span><span class="p">(</span><span class="n">CliSettings</span><span class="p">(),</span> <span class="n">serializer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Begin the REPL (Read, Eval, Print, Loop )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">runBlocking</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cli</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <h1 id="concepts">Concepts</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Component</strong></td>
         <td><strong>Description</strong></td>
@@ -361,7 +338,7 @@ A small future enhancement will add support for question and answer flow.
     </tr>
     <tr>
         <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/CliRequest.kt" >CliRequest</a></strong> </td>
-        <td>Represents the command entered</td><br />
+        <td>Represents the command entered</td>                     
     </tr>
     <tr>
         <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/CliResponse.kt" >CliResponse</a></strong></td>
@@ -373,19 +350,19 @@ A small future enhancement will add support for question and answer flow.
     </tr>
     <tr>
         <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/Command.kt" >Command</a></strong></td>
-        <td>Reserved commands like <strong>about, version, help, quit, exit</strong>, etc</td>
+        <td>Reserved commands like **about, version, help, quit, exit**, etc</td>
     </tr>
     <tr>
         <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/args/Args.kt" >Input Param</a></strong></td>
-        <td>Parameter starting with <strong>-</strong> representing data for a command</td>
+        <td>Parameter starting with **-** representing data for a command</td>
     </tr>
     <tr>
         <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/args/Args.kt" >Meta Param</a></strong></td>
-        <td>Parameter starting with <strong>@</strong> representing metadata for a command </td>
+        <td>Parameter starting with **@** representing metadata for a command </td>
     </tr>
     <tr>
         <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/SysParam.kt" >System Param</a></strong></td>
-        <td>Parameter starting with <strong>$</strong> representing an instruction for the CLI</td>
+        <td>Parameter starting with **$** representing an instruction for the CLI</td>
     </tr>
     <tr>
         <td><strong>9. Reference</strong></td>
@@ -393,13 +370,10 @@ A small future enhancement will add support for question and answer flow.
     </tr>
 </table>
 <br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="guide">Guide</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
@@ -412,8 +386,8 @@ A small future enhancement will add support for question and answer flow.
     </tr>
     <tr>
         <td><strong>2. Reserved</strong> </td>
-        <td>List of reserved commands</td>
-        <td><a href="arch/cli/#reserved" class="more"><span class="btn btn-primary">more</span></a></td><br />
+        <td>List of reserved commands</td> 
+        <td><a href="arch/cli/#reserved" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
         <td><strong>3. Args</strong></td>
@@ -457,33 +431,24 @@ A small future enhancement will add support for question and answer flow.
     </tr>
 </table>
 <br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h2 id="inputs">Inputs</h2>
-
 <p>You can customize the CLI so that you can handle a) raw text / lines, b)have the text parsed into arguments, or c) have the text be  converted and called as an API request. All these are valid depending on your configuration.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    <span class="c1"># Handle any text yourself</span>
-    :&gt; some free form text
-
-    <span class="c1"># Use a arguments style structure</span>
-    :&gt; -email<span class="o">=</span><span class="s2">&#34;user1@abc.com&#34;</span> -betaUser<span class="o">=</span><span class="nb">true</span> -promoCode<span class="o">=</span>referral
-
-    <span class="c1"># Leverage use of Slate Kit Universal APIs by specifying the 3 part route</span>
-    :&gt; manage.movies.createSample -title<span class="o">=</span><span class="s2">&#34;Dark Knight&#34;</span> -date<span class="o">=</span><span class="s2">&#34;2013-07-18&#34;</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="c1"># Handle any text yourself</span>
+</span></span><span class="line"><span class="cl">    :&gt; some free form text
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Use a arguments style structure</span>
+</span></span><span class="line"><span class="cl">    :&gt; -email<span class="o">=</span><span class="s2">&#34;user1@abc.com&#34;</span> -betaUser<span class="o">=</span><span class="nb">true</span> -promoCode<span class="o">=</span>referral
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Leverage use of Slate Kit Universal APIs by specifying the 3 part route</span>
+</span></span><span class="line"><span class="cl">    :&gt; manage.movies.createSample -title<span class="o">=</span><span class="s2">&#34;Dark Knight&#34;</span> -date<span class="o">=</span><span class="s2">&#34;2013-07-18&#34;</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="reserved">Reserved</h2>
-
-<p>There are several built-in reserved commands. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/Reserved.kt" >Reserved.kt</a> for more info
+<p>There are several built-in reserved commands. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cli/src/main/kotlin/slatekit/cli/Reserved.kt" >Reserved.kt</a> for more info</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Text</strong></td>
@@ -506,223 +471,166 @@ A small future enhancement will add support for question and answer flow.
         <td>Gets help text about the CLI and how to use commands</td>
     </tr>
 </table>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="args">Args</h2>
-
 <p>The raw text / line is parsed into command line args using the <a href="/utils/args" >Args</a>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    <span class="c1"># Leverage use of Slate Kit Universal APIs by specifying the 3 part route</span>
-    :&gt; manage.movies.createSample -title<span class="o">=</span><span class="s2">&#34;Dark Knight&#34;</span> -date<span class="o">=</span><span class="s2">&#34;2013-07-18&#34;</span>
-    
-    args.getString<span class="o">(</span><span class="s2">&#34;title&#34;</span><span class="o">)</span>
-    args.getLocalDate<span class="o">(</span><span class="s2">&#34;date&#34;</span><span class="o">)</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Leverage use of Slate Kit Universal APIs by specifying the 3 part route</span>
+</span></span><span class="line"><span class="cl">    :&gt; manage.movies.createSample -title<span class="o">=</span><span class="s2">&#34;Dark Knight&#34;</span> -date<span class="o">=</span><span class="s2">&#34;2013-07-18&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    args.getString<span class="o">(</span><span class="s2">&#34;title&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    args.getLocalDate<span class="o">(</span><span class="s2">&#34;date&#34;</span><span class="o">)</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="requests">Requests</h2>
-
 <p>The raw text line, after being parsed into command line arguments is converted into a CliRequest object which you can then use to execute your commands.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="cm">/**
-</span><span class="cm">     * Handle execution of the CLI Request
-</span><span class="cm">     */</span>
-    <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">CliRequest</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">CliResponse</span><span class="p">&lt;*&gt;&gt;</span> <span class="p">{</span>
-
-        <span class="c1">// 1. Here is where you can put in your code to handle the command.
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;running command&#34;</span><span class="p">)</span>
-
-        <span class="c1">// 2. You have access to all the command fields and arguments.
-</span><span class="c1"></span>        <span class="c1">// NOTES: 
-</span><span class="c1"></span>        <span class="c1">// - The command is parsed into [slatekit.common.args.Args] 
-</span><span class="c1"></span>        <span class="c1">// - The Args component is put inside [slatekit.cli.CliRequest] 
-</span><span class="c1"></span>        <span class="c1">// This gets you the raw text/line
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;line   : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">line</span><span class="p">)</span>
-        
-        <span class="c1">// This returns the list of action names before arguments. e.g. [&#34;manage&#34;, &#34;movies&#34;, &#34;createSample&#34;]
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;parts  : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">parts</span><span class="p">)</span>
-        <span class="n">println</span><span class="p">(</span><span class="s">&#34;path   : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">fullName</span><span class="p">)</span>
-
-        <span class="c1">// This is useful if leveraging the 3 part routing system for Slate Kit APIs
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;area   : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">area</span><span class="p">)</span>
-        <span class="n">println</span><span class="p">(</span><span class="s">&#34;api    : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="n">println</span><span class="p">(</span><span class="s">&#34;action : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">action</span><span class="p">)</span>
-        
-        <span class="c1">// Access the arguments
-</span><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s">&#34;arg #  : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
-        <span class="n">println</span><span class="p">(</span><span class="s">&#34;arg 1  : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">))</span>
-
-        <span class="c1">// ...
-</span><span class="c1"></span>    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * Handle execution of the CLI Request
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">CliRequest</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">CliResponse</span><span class="p">&lt;*&gt;&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 1. Here is where you can put in your code to handle the command.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;running command&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 2. You have access to all the command fields and arguments.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// NOTES: 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// - The command is parsed into [slatekit.common.args.Args] 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// - The Args component is put inside [slatekit.cli.CliRequest] 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// This gets you the raw text/line
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;line   : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">line</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// This returns the list of action names before arguments. e.g. [&#34;manage&#34;, &#34;movies&#34;, &#34;createSample&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;parts  : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">parts</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;path   : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">fullName</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// This is useful if leveraging the 3 part routing system for Slate Kit APIs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;area   : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">area</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;api    : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;action : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">action</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// Access the arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;arg #  : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">size</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;arg 1  : &#34;</span> <span class="p">+</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="execute">Execute</h2>
-
 <p>To execute the command, you can override the executeRequest method
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="cm">/**
-</span><span class="cm">     * Handle execution of the CLI Request
-</span><span class="cm">     */</span>
-    <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">CliRequest</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">CliResponse</span><span class="p">&lt;*&gt;&gt;</span> <span class="p">{</span>
-        
-        <span class="c1">// Access the arguments
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">title</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">))</span>
-        <span class="k">val</span> <span class="py">date</span>  <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getLocalDate</span><span class="p">(</span><span class="s">&#34;date&#34;</span><span class="p">))</span>
-
-        <span class="c1">// Process... 
-</span><span class="c1"></span>
-        <span class="c1">// Return
-</span><span class="c1"></span>        <span class="k">return</span> <span class="n">Success</span><span class="p">(</span>
-                <span class="n">CliResponse</span><span class="p">(</span>
-                        <span class="n">request</span> <span class="p">=</span> <span class="n">request</span><span class="p">,</span>
-                        <span class="n">success</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
-                        <span class="n">code</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">.</span><span class="n">code</span><span class="p">,</span>
-                        <span class="n">meta</span> <span class="p">=</span> <span class="n">mapOf</span><span class="p">(),</span>
-                        <span class="n">value</span> <span class="p">=</span> <span class="s">&#34;Sample Response&#34;</span><span class="p">,</span>
-                        <span class="n">msg</span> <span class="p">=</span> <span class="s">&#34;Processed&#34;</span><span class="p">,</span>
-                        <span class="n">err</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
-                        <span class="n">tag</span> <span class="p">=</span> <span class="s">&#34;tag-123&#34;</span>
-                <span class="p">))</span>
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     * Handle execution of the CLI Request
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">CliRequest</span><span class="p">):</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">CliResponse</span><span class="p">&lt;*&gt;&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// Access the arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">title</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">date</span>  <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">args</span><span class="p">.</span><span class="n">getLocalDate</span><span class="p">(</span><span class="s2">&#34;date&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Process... 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Return
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="n">Success</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">CliResponse</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">request</span> <span class="p">=</span> <span class="n">request</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">success</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">code</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="nc">SUCCESS</span><span class="p">.</span><span class="n">code</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">meta</span> <span class="p">=</span> <span class="n">mapOf</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">value</span> <span class="p">=</span> <span class="s2">&#34;Sample Response&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">msg</span> <span class="p">=</span> <span class="s2">&#34;Processed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">err</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">tag</span> <span class="p">=</span> <span class="s2">&#34;tag-123&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="responses">Responses</h2>
-
 <p>You must return a CliResponse upon execution. This leverages the Slate Kit <a href="arch/results" >Result</a>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">return</span> <span class="n">Success</span><span class="p">(</span>
-                <span class="n">CliResponse</span><span class="p">(</span>
-                        <span class="n">request</span> <span class="p">=</span> <span class="n">request</span><span class="p">,</span>
-                        <span class="n">success</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
-                        <span class="n">code</span> <span class="p">=</span> <span class="n">Codes</span><span class="p">.</span><span class="n">SUCCESS</span><span class="p">.</span><span class="n">code</span><span class="p">,</span>
-                        <span class="n">meta</span> <span class="p">=</span> <span class="n">mapOf</span><span class="p">(),</span>
-                        <span class="n">value</span> <span class="p">=</span> <span class="s">&#34;Sample Response&#34;</span><span class="p">,</span>
-                        <span class="n">msg</span> <span class="p">=</span> <span class="s">&#34;Processed&#34;</span><span class="p">,</span>
-                        <span class="n">err</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
-                        <span class="n">tag</span> <span class="p">=</span> <span class="s">&#34;tag-123&#34;</span>
-                <span class="p">))</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Success</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">CliResponse</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">request</span> <span class="p">=</span> <span class="n">request</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">success</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">code</span> <span class="p">=</span> <span class="nc">Codes</span><span class="p">.</span><span class="nc">SUCCESS</span><span class="p">.</span><span class="n">code</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">meta</span> <span class="p">=</span> <span class="n">mapOf</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">value</span> <span class="p">=</span> <span class="s2">&#34;Sample Response&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">msg</span> <span class="p">=</span> <span class="s2">&#34;Processed&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">err</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">tag</span> <span class="p">=</span> <span class="s2">&#34;tag-123&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">))</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="startup">Startup</h2>
-
 <p>You can have commands run during the start up of the CLI. This is accomplished by supplying a list of String text commands to the CLI during construction in the <strong>commands</strong> parameter.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">open</span> <span class="k">class</span> <span class="nc">CLI</span><span class="p">(</span>
-        <span class="k">val</span> <span class="py">settings</span><span class="p">:</span> <span class="n">CliSettings</span><span class="p">,</span>
-        <span class="k">val</span> <span class="py">info</span><span class="p">:</span> <span class="n">Info</span><span class="p">,</span>
-        <span class="k">val</span> <span class="py">folders</span><span class="p">:</span> <span class="n">Folders</span><span class="p">?,</span>
-        <span class="k">val</span> <span class="py">callback</span><span class="p">:</span> <span class="p">((</span><span class="n">CLI</span><span class="p">,</span> <span class="n">CliRequest</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">CliResponse</span><span class="p">&lt;*&gt;)?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
-        <span class="n">commands</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">?&gt;?</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(),</span>
-        <span class="n">ioReader</span><span class="p">:</span> <span class="p">((</span><span class="n">Unit</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">String</span><span class="p">?)?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
-        <span class="n">ioWriter</span><span class="p">:</span> <span class="p">((</span><span class="n">CliOutput</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Unit</span><span class="p">)?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
-        <span class="k">val</span> <span class="py">serializer</span><span class="p">:(</span><span class="n">Any</span><span class="p">?,</span> <span class="n">ContentType</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Content</span>
-    <span class="p">)</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">open</span> <span class="k">class</span> <span class="nc">CLI</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">settings</span><span class="p">:</span> <span class="n">CliSettings</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">info</span><span class="p">:</span> <span class="n">Info</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">folders</span><span class="p">:</span> <span class="n">Folders</span><span class="p">?,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">callback</span><span class="p">:</span> <span class="p">((</span><span class="n">CLI</span><span class="p">,</span> <span class="n">CliRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CliResponse</span><span class="p">&lt;*&gt;)?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">commands</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">?&gt;?</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ioReader</span><span class="p">:</span> <span class="p">((</span><span class="n">Unit</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">String</span><span class="p">?)?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ioWriter</span><span class="p">:</span> <span class="p">((</span><span class="n">CliOutput</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Unit</span><span class="p">)?</span> <span class="p">=</span> <span class="k">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">serializer</span><span class="p">:(</span><span class="n">Any</span><span class="p">?,</span> <span class="n">ContentType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Content</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="apis">API</h2>
-
 <p>The most important and powerful feature of the CLI is integration with Slate Kit <a href="arch/apis" >APIs</a>. Refer to <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit/src/main/kotlin/slatekit/samples/cli/CLI.kt" >Sample</a> for more info.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// 1. The API keys( DocApi, SetupApi are authenticated using an sample API key )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">keys</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">ApiKey</span><span class="p">(</span> <span class="n">name</span> <span class="p">=</span><span class="s">&#34;cli&#34;</span><span class="p">,</span> <span class="n">key</span> <span class="p">=</span> <span class="s">&#34;abc&#34;</span><span class="p">,</span> <span class="n">roles</span> <span class="p">=</span> <span class="s">&#34;dev,qa,ops,admin&#34;</span><span class="p">))</span>
-
-    <span class="c1">// 2. Authentication
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">auth</span> <span class="p">=</span> <span class="n">Authenticator</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
-
-    <span class="c1">// 3. Load all the Slate Kit Universal APIs
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">apis</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
-            <span class="n">slatekit</span><span class="p">.</span><span class="n">apis</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">Api</span><span class="p">(</span>
-                <span class="n">klass</span> <span class="p">=</span> <span class="n">SampleApi</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> 
-                <span class="n">singleton</span> <span class="p">=</span> <span class="n">SampleApi</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
-            <span class="p">)</span>
-    <span class="p">)</span>
-
-    <span class="c1">// 4. Makes the APIs accessible on the CLI runner
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cli</span> <span class="p">=</span> <span class="n">CliApi</span><span class="p">(</span>
-            <span class="n">ctx</span> <span class="p">=</span> <span class="n">ctx</span><span class="p">,</span>
-            <span class="n">auth</span> <span class="p">=</span> <span class="n">auth</span><span class="p">,</span>
-            <span class="n">settings</span> <span class="p">=</span> <span class="n">CliSettings</span><span class="p">(</span><span class="n">enableLogging</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="n">enableOutput</span> <span class="p">=</span> <span class="k">true</span><span class="p">),</span>
-            <span class="n">apiItems</span> <span class="p">=</span> <span class="n">apis</span><span class="p">,</span>
-            <span class="n">metaTransform</span> <span class="p">=</span> <span class="p">{</span>
-                <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;api-key&#34;</span> <span class="n">to</span> <span class="n">keys</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">key</span><span class="p">)</span>
-            <span class="p">},</span>
-            <span class="n">serializer</span> <span class="p">=</span> <span class="p">{</span><span class="n">item</span><span class="p">,</span> <span class="n">type</span> <span class="p">-&gt;</span> <span class="n">Content</span><span class="p">.</span><span class="n">csv</span><span class="p">(</span><span class="n">slatekit</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">csv</span><span class="p">().</span><span class="n">serialize</span><span class="p">(</span><span class="n">item</span><span class="p">))}</span>
-    <span class="p">)</span>
-
-    <span class="c1">// 5. Run interactive mode
-</span><span class="c1"></span>    <span class="k">return</span> <span class="n">cli</span><span class="p">.</span><span class="n">run</span><span class="p">()</span></code></pre></div>
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// 1. The API keys( DocApi, SetupApi are authenticated using an sample API key )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">keys</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">ApiKey</span><span class="p">(</span> <span class="n">name</span> <span class="p">=</span><span class="s2">&#34;cli&#34;</span><span class="p">,</span> <span class="n">key</span> <span class="p">=</span> <span class="s2">&#34;abc&#34;</span><span class="p">,</span> <span class="n">roles</span> <span class="p">=</span> <span class="s2">&#34;dev,qa,ops,admin&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 2. Authentication
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">auth</span> <span class="p">=</span> <span class="n">Authenticator</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 3. Load all the Slate Kit Universal APIs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">apis</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">slatekit</span><span class="p">.</span><span class="n">apis</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">Api</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">klass</span> <span class="p">=</span> <span class="n">SampleApi</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">                <span class="n">singleton</span> <span class="p">=</span> <span class="n">SampleApi</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 4. Makes the APIs accessible on the CLI runner
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">cli</span> <span class="p">=</span> <span class="n">CliApi</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ctx</span> <span class="p">=</span> <span class="n">ctx</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">auth</span> <span class="p">=</span> <span class="n">auth</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">settings</span> <span class="p">=</span> <span class="n">CliSettings</span><span class="p">(</span><span class="n">enableLogging</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="n">enableOutput</span> <span class="p">=</span> <span class="k">true</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">apiItems</span> <span class="p">=</span> <span class="n">apis</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">metaTransform</span> <span class="p">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;api-key&#34;</span> <span class="n">to</span> <span class="n">keys</span><span class="p">.</span><span class="n">first</span><span class="p">().</span><span class="n">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="n">serializer</span> <span class="p">=</span> <span class="p">{</span><span class="n">item</span><span class="p">,</span> <span class="n">type</span> <span class="o">-&gt;</span> <span class="nc">Content</span><span class="p">.</span><span class="n">csv</span><span class="p">(</span><span class="n">slatekit</span><span class="p">.</span><span class="n">meta</span><span class="p">.</span><span class="nc">Serialization</span><span class="p">.</span><span class="n">csv</span><span class="p">().</span><span class="n">serialize</span><span class="p">(</span><span class="n">item</span><span class="p">))}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 5. Run interactive mode
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="n">cli</span><span class="p">.</span><span class="n">run</span><span class="p">()</span></span></span></code></pre></div></p>
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="from-file">From file</h2>
-
 <div class="alert alert-info" role="alert">
   COMING SOON: Functionality is available but docs are not yet ready.
 </div>
-
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="scripts">Scripts</h2>
-
 <div class="alert alert-info" role="alert">
   COMING SOON: Functionality is available but docs are not yet ready.
 </div>
-
-
-
-
-<a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<p><a href="arch/cli#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <br/>
-
-<a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
+<p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <script>
     var archComponent = {
         name: "CLI",

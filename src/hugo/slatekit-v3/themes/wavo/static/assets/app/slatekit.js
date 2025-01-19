@@ -52,7 +52,7 @@ function buildArchMenuSection(archComp, section) {
         var link = section.items[ndxItem];
         links += buildArchMenuLink(archComp, link);
     }
-    var end = '</ul></div>';
+    var end = '</ul><hr></div>';
     return start + links + end;
 } 
 

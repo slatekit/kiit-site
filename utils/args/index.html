@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="args">Args</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="args">Args</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,201 +189,191 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.args.Args</span>
-<span class="k">import</span> <span class="nn">slatekit.common.args.ArgsSchema</span>
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.getOrElse</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.args.Args</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.args.ArgsSchema</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.getOrElse</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="n">n</span><span class="p">/</span><span class="n">a</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Example:
-</span><span class="c1"></span>    <span class="c1">// Given on the the command line:
-</span><span class="c1"></span>    <span class="c1">// -log.level=info -env=dev -text=&#39;hello world&#39;
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;-log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">)</span> <span class="p">)</span>
-
-    <span class="c1">// CASE 1: Parse using an action prefixed to the arguments
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;service.action -log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 2: Custom prefix and sep e.g. &#34;!&#34; and separator &#34;:&#34;
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;!env=dev !text=&#39;hello word&#39; !batch:10 &#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;!&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 3a: Check for action/method call in the beginning
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">args</span> <span class="p">=</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;manage.movies.createSample -title=&#39;Dark Knight&#39; -date=&#39;2013-07-18&#39;&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span>
-    <span class="n">showResults</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
-    <span class="n">args</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">args</span> <span class="p">-&gt;</span>
-      <span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;title&#34;</span><span class="p">)</span>
-      <span class="n">args</span><span class="p">.</span><span class="n">getLocalDate</span><span class="p">(</span><span class="s">&#34;date&#34;</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="c1">// CASE 3c: Check for only action name in the beginning.
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;method&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;-&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 4: No args
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;service.method&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s">&#34;-&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 5a: Help request ( &#34;?&#34;, &#34;help&#34;)
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;?&#34;</span>         <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 5b: Help request with method call ( &#34;method.action&#34; ? )
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;service.method help&#34;</span>   <span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 6: Version request ( &#34;ver&#34;, &#34;version&#34; )
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;version&#34;</span>  <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 7: Exit request
-</span><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="n">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s">&#34;exit&#34;</span>     <span class="p">)</span> <span class="p">)</span>
-
-
-    <span class="c1">// CASE 8: Build up the schema
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">schema</span> <span class="p">=</span> <span class="n">ArgsSchema</span><span class="p">().</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;env&#34;</span><span class="p">,</span> <span class="s">&#34;env&#34;</span><span class="p">).</span><span class="n">flag</span><span class="p">(</span><span class="s">&#34;log&#34;</span><span class="p">,</span> <span class="s">&#34;log&#34;</span><span class="p">).</span><span class="n">number</span><span class="p">(</span><span class="s">&#34;level&#34;</span><span class="p">,</span> <span class="s">&#34;level&#34;</span><span class="p">)</span>
-    <span class="n">print</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
-
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Example:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Given on the the command line:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// -log.level=info -env=dev -text=&#39;hello world&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;-log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 1: Parse using an action prefixed to the arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;service.action -log.level=info -env=dev -text=&#39;hello world&#39;&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 2: Custom prefix and sep e.g. &#34;!&#34; and separator &#34;:&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;!env=dev !text=&#39;hello word&#39; !batch:10 &#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s2">&#34;!&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s2">&#34;:&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 3a: Check for action/method call in the beginning
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">args</span> <span class="p">=</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;manage.movies.createSample -title=&#39;Dark Knight&#39; -date=&#39;2013-07-18&#39;&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">showResults</span><span class="p">(</span> <span class="n">args</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">args</span><span class="p">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">args</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">args</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;title&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">args</span><span class="p">.</span><span class="n">getLocalDate</span><span class="p">(</span><span class="s2">&#34;date&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 3c: Check for only action name in the beginning.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;method&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s2">&#34;-&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s2">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 4: No args
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;service.method&#34;</span><span class="p">,</span> <span class="n">prefix</span> <span class="p">=</span> <span class="s2">&#34;-&#34;</span><span class="p">,</span> <span class="n">sep</span> <span class="p">=</span> <span class="s2">&#34;=&#34;</span><span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 5a: Help request ( &#34;?&#34;, &#34;help&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;?&#34;</span>         <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 5b: Help request with method call ( &#34;method.action&#34; ? )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;service.method help&#34;</span>   <span class="p">,</span> <span class="n">hasAction</span> <span class="p">=</span> <span class="k">true</span> <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 6: Version request ( &#34;ver&#34;, &#34;version&#34; )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;version&#34;</span>  <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 7: Exit request
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">showResults</span><span class="p">(</span> <span class="nc">Args</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span> <span class="s2">&#34;exit&#34;</span>     <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 8: Build up the schema
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">schema</span> <span class="p">=</span> <span class="n">ArgsSchema</span><span class="p">().</span><span class="n">text</span><span class="p">(</span><span class="s2">&#34;env&#34;</span><span class="p">,</span> <span class="s2">&#34;env&#34;</span><span class="p">).</span><span class="n">flag</span><span class="p">(</span><span class="s2">&#34;log&#34;</span><span class="p">,</span> <span class="s2">&#34;log&#34;</span><span class="p">).</span><span class="n">number</span><span class="p">(</span><span class="s2">&#34;level&#34;</span><span class="p">,</span> <span class="s2">&#34;level&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">print</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="output">Output</h2>
-
-<div class="highlight"><pre class="chroma"><code class="language-bat" data-lang="bat">  RESULTS:
-  action   <span class="p">:</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;<span class="p">:</span><span class="nl">&#39;</span>
-  named    <span class="p">:</span> <span class="nl">3</span>
-  	text <span class="p">:</span> <span class="nl">hello</span><span class="c1"> world</span>
-  	batch <span class="p">:</span> <span class="nl">10</span>
-  	env <span class="p">:</span> <span class="nl">dev</span>
-  index    <span class="p">:</span> <span class="nl">0</span>
-
-
-  RESULTS:
-  action   <span class="p">:</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;!&#39;</span>
-  separator: &#39;=&#39;
-  named    <span class="p">:</span> <span class="nl">3</span>
-  	text = hello word
-  	batch = 10
-  	env = dev
-  index    <span class="p">:</span> <span class="nl">0</span>
-
-
-  RESULTS:
-  action   <span class="p">:</span> <span class="nl">area.service.method</span>
-  parts    <span class="p">:</span> <span class="nl">area</span><span class="c1"> service method</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;=&#39;
-  named    <span class="p">:</span> <span class="nl">3</span>
-  	text = hello word
-  	batch = 10
-  	env = dev
-  index    <span class="p">:</span> <span class="nl">0</span>
-
-
-  RESULTS:
-  action   <span class="p">:</span> <span class="nl">service.method</span>
-  parts    <span class="p">:</span> <span class="nl">service</span><span class="c1"> method</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;=&#39;
-  named    <span class="p">:</span> <span class="nl">3</span>
-  	text = hello word
-  	batch = 10
-  	env = dev
-  index    <span class="p">:</span> <span class="nl">0</span>
-
-
-  RESULTS:
-  action   <span class="p">:</span> <span class="nl">method</span>
-  parts    <span class="p">:</span> <span class="nl">method</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;=&#39;
-  named    <span class="p">:</span> <span class="nl">0</span>
-  index    <span class="p">:</span> <span class="nl">0</span>
-  empty
-
-
-  RESULTS:
-  action   <span class="p">:</span> <span class="nl">service.method</span>
-  parts    <span class="p">:</span> <span class="nl">service</span><span class="c1"> method</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;=&#39;
-  named    <span class="p">:</span> <span class="nl">0</span>
-  index    <span class="p">:</span> <span class="nl">0</span>
-  empty
-
-
-  RESULTS:
-  action   <span class="p">:</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;<span class="p">:</span><span class="nl">&#39;</span>
-  named    <span class="p">:</span> <span class="nl">0</span>
-  index    <span class="p">:</span> <span class="nl">1</span>
-  	?
-  help
-
-
-  RESULTS:
-  action   <span class="p">:</span> <span class="nl">service.method.help</span>
-  parts    <span class="p">:</span> <span class="nl">service</span><span class="c1"> method help</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;<span class="p">:</span><span class="nl">&#39;</span>
-  named    <span class="p">:</span> <span class="nl">0</span>
-  index    <span class="p">:</span> <span class="nl">0</span>
-  empty
-
-
-  RESULTS:
-  action   <span class="p">:</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;<span class="p">:</span><span class="nl">&#39;</span>
-  named    <span class="p">:</span> <span class="nl">0</span>
-  index    <span class="p">:</span> <span class="nl">1</span>
-  	version
-  version
-
-
-  RESULTS:
-  action   <span class="p">:</span>
-  prefix   <span class="p">:</span> <span class="nl">&#39;-&#39;</span>
-  separator: &#39;<span class="p">:</span><span class="nl">&#39;</span>
-  named    <span class="p">:</span> <span class="nl">0</span>
-  index    <span class="p">:</span> <span class="nl">1</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   :
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;:&#39;
+</span></span><span class="line"><span class="cl">  named    : 3
+</span></span><span class="line"><span class="cl">  	text : hello world
+</span></span><span class="line"><span class="cl">  	batch : 10
+</span></span><span class="line"><span class="cl">  	env : dev
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   :
+</span></span><span class="line"><span class="cl">  prefix   : &#39;!&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;=&#39;
+</span></span><span class="line"><span class="cl">  named    : 3
+</span></span><span class="line"><span class="cl">  	text = hello word
+</span></span><span class="line"><span class="cl">  	batch = 10
+</span></span><span class="line"><span class="cl">  	env = dev
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   : area.service.method
+</span></span><span class="line"><span class="cl">  parts    : area service method
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;=&#39;
+</span></span><span class="line"><span class="cl">  named    : 3
+</span></span><span class="line"><span class="cl">  	text = hello word
+</span></span><span class="line"><span class="cl">  	batch = 10
+</span></span><span class="line"><span class="cl">  	env = dev
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   : service.method
+</span></span><span class="line"><span class="cl">  parts    : service method
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;=&#39;
+</span></span><span class="line"><span class="cl">  named    : 3
+</span></span><span class="line"><span class="cl">  	text = hello word
+</span></span><span class="line"><span class="cl">  	batch = 10
+</span></span><span class="line"><span class="cl">  	env = dev
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   : method
+</span></span><span class="line"><span class="cl">  parts    : method
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;=&#39;
+</span></span><span class="line"><span class="cl">  named    : 0
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">  empty
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   : service.method
+</span></span><span class="line"><span class="cl">  parts    : service method
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;=&#39;
+</span></span><span class="line"><span class="cl">  named    : 0
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">  empty
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   :
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;:&#39;
+</span></span><span class="line"><span class="cl">  named    : 0
+</span></span><span class="line"><span class="cl">  index    : 1
+</span></span><span class="line"><span class="cl">  	?
+</span></span><span class="line"><span class="cl">  help
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   : service.method.help
+</span></span><span class="line"><span class="cl">  parts    : service method help
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;:&#39;
+</span></span><span class="line"><span class="cl">  named    : 0
+</span></span><span class="line"><span class="cl">  index    : 0
+</span></span><span class="line"><span class="cl">  empty
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   :
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;:&#39;
+</span></span><span class="line"><span class="cl">  named    : 0
+</span></span><span class="line"><span class="cl">  index    : 1
+</span></span><span class="line"><span class="cl">  	version
+</span></span><span class="line"><span class="cl">  version
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  RESULTS:
+</span></span><span class="line"><span class="cl">  action   :
+</span></span><span class="line"><span class="cl">  prefix   : &#39;-&#39;
+</span></span><span class="line"><span class="cl">  separator: &#39;:&#39;
+</span></span><span class="line"><span class="cl">  named    : 0
+</span></span><span class="line"><span class="cl">  index    : 1</span></span></code></pre></div>
 
       </div>
     </section>  

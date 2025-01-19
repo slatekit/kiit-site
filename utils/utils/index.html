@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="utils">Utils</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="utils">Utils</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,82 +189,74 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.utils.Require.requireOneOf</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Require.requireText</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Require.requireValidIndex</span>
-
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.common.data.DbConString</span>
-<span class="k">import</span> <span class="nn">slatekit.common.info.ApiKey</span>
-<span class="k">import</span> <span class="nn">slatekit.common.info.ApiLogin</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.common.io.Uris</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.utils.Require.requireOneOf</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Require.requireText</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Require.requireValidIndex</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.data.DbConString</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.info.ApiKey</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.info.ApiLogin</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.io.Uris</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="n">n</span><span class="p">/</span><span class="n">a</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Miscellaneous utilities.
-</span><span class="c1"></span>
-    <span class="c1">// CASE 1: Api Credentials
-</span><span class="c1"></span>    <span class="c1">// The ApiCredentials class provides a convenient container for most fields required to
-</span><span class="c1"></span>    <span class="c1">// represent the access credentials some API such as AWS ( Amazon Web Services ) or Azure.
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">awsS3</span>    <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s">&#34;aws-s3&#34;</span><span class="p">,</span> <span class="s">&#34;ABCDEFG&#34;</span><span class="p">,</span> <span class="s">&#34;123456&#34;</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="s">&#34;user-profile&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">twilio</span>   <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s">&#34;1-234-567-8901&#34;</span><span class="p">,</span> <span class="s">&#34;ABCEDEFG&#34;</span><span class="p">,</span> <span class="s">&#34;123456&#34;</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="s">&#34;sms&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">sendgrid</span> <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s">&#34;support@mystartup.com&#34;</span><span class="p">,</span> <span class="s">&#34;mystartup&#34;</span><span class="p">,</span> <span class="s">&#34;123456789&#34;</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="s">&#34;emails&#34;</span><span class="p">)</span>
-
-    <span class="c1">// CASE 2: Api Keys
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">devKey</span> <span class="p">=</span> <span class="n">ApiKey</span><span class="p">(</span><span class="s">&#34;dev1&#34;</span><span class="p">,</span> <span class="s">&#34;B8779D64-6104-4244-88B6-F81B4D2AAF5B&#34;</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="n">mapOf</span><span class="p">())</span>
-    <span class="k">val</span> <span class="py">qaKey</span>  <span class="p">=</span> <span class="n">ApiKey</span><span class="p">(</span><span class="s">&#34;qa1&#34;</span><span class="p">,</span> <span class="s">&#34;F01718FF-0AF5-43C2-84D7-D1E2B4234644&#34;</span><span class="p">,</span> <span class="s">&#34;qa&#34;</span><span class="p">,</span> <span class="n">mapOf</span><span class="p">())</span>
-
-    <span class="c1">// CASE 3: Guards ( Exceptions are discouraged in favor
-</span><span class="c1"></span>    <span class="c1">// of functional error handling, however, there are times where
-</span><span class="c1"></span>    <span class="c1">// a guard like approach to inputs is preferable
-</span><span class="c1"></span>    <span class="n">requireText</span><span class="p">(</span><span class="s">&#34;slate-kit&#34;</span><span class="p">,</span> <span class="s">&#34;Name must be supplied&#34;</span> <span class="p">)</span>
-    <span class="n">requireOneOf</span><span class="p">(</span> <span class="s">&#34;kotlin&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;kotlin&#34;</span><span class="p">,</span> <span class="s">&#34;go&#34;</span><span class="p">),</span> <span class="s">&#34;Name not valid&#34;</span><span class="p">)</span>
-    <span class="n">requireValidIndex</span><span class="p">(</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="s">&#34;Index is must be 0 &lt;= index &lt;= 4&#34;</span><span class="p">)</span>
-
-    <span class="c1">// CASE 4: Db connection
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="s">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/app1&#34;</span><span class="p">,</span> <span class="s">&#34;db1&#34;</span><span class="p">,</span> <span class="s">&#34;1245689&#34;</span><span class="p">)</span>
-
-    <span class="c1">// CASE 5: Interpret URI represetning file locations
-</span><span class="c1"></span>    <span class="c1">// - user dir: user://{folder} ( user home directory for os  )
-</span><span class="c1"></span>    <span class="c1">// - temp dir: temp://{folder} ( temp files directory for os )
-</span><span class="c1"></span>    <span class="c1">// - file dir: file://{path}   ( absolution file location    )
-</span><span class="c1"></span>    <span class="c1">// This yeilds c:/users/{user1}/myapp1
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">path1</span> <span class="p">=</span> <span class="n">Uris</span><span class="p">.</span><span class="n">interpret</span><span class="p">(</span><span class="s">&#34;user://myapp1&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">path1</span><span class="p">)</span>
-
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Miscellaneous utilities.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 1: Api Credentials
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// The ApiCredentials class provides a convenient container for most fields required to
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// represent the access credentials some API such as AWS ( Amazon Web Services ) or Azure.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">awsS3</span>    <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s2">&#34;aws-s3&#34;</span><span class="p">,</span> <span class="s2">&#34;ABCDEFG&#34;</span><span class="p">,</span> <span class="s2">&#34;123456&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="s2">&#34;user-profile&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">twilio</span>   <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s2">&#34;1-234-567-8901&#34;</span><span class="p">,</span> <span class="s2">&#34;ABCEDEFG&#34;</span><span class="p">,</span> <span class="s2">&#34;123456&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="s2">&#34;sms&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">sendgrid</span> <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s2">&#34;support@mystartup.com&#34;</span><span class="p">,</span> <span class="s2">&#34;mystartup&#34;</span><span class="p">,</span> <span class="s2">&#34;123456789&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="s2">&#34;emails&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 2: Api Keys
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">devKey</span> <span class="p">=</span> <span class="n">ApiKey</span><span class="p">(</span><span class="s2">&#34;dev1&#34;</span><span class="p">,</span> <span class="s2">&#34;B8779D64-6104-4244-88B6-F81B4D2AAF5B&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="n">mapOf</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">qaKey</span>  <span class="p">=</span> <span class="n">ApiKey</span><span class="p">(</span><span class="s2">&#34;qa1&#34;</span><span class="p">,</span> <span class="s2">&#34;F01718FF-0AF5-43C2-84D7-D1E2B4234644&#34;</span><span class="p">,</span> <span class="s2">&#34;qa&#34;</span><span class="p">,</span> <span class="n">mapOf</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 3: Guards ( Exceptions are discouraged in favor
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// of functional error handling, however, there are times where
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// a guard like approach to inputs is preferable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">requireText</span><span class="p">(</span><span class="s2">&#34;slate-kit&#34;</span><span class="p">,</span> <span class="s2">&#34;Name must be supplied&#34;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">requireOneOf</span><span class="p">(</span> <span class="s2">&#34;kotlin&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;kotlin&#34;</span><span class="p">,</span> <span class="s2">&#34;go&#34;</span><span class="p">),</span> <span class="s2">&#34;Name not valid&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">requireValidIndex</span><span class="p">(</span> <span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="s2">&#34;Index is must be 0 &lt;= index &lt;= 4&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 4: Db connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="s2">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/app1&#34;</span><span class="p">,</span> <span class="s2">&#34;db1&#34;</span><span class="p">,</span> <span class="s2">&#34;1245689&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 5: Interpret URI represetning file locations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// - user dir: user://{folder} ( user home directory for os  )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// - temp dir: temp://{folder} ( temp files directory for os )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// - file dir: file://{path}   ( absolution file location    )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// This yeilds c:/users/{user1}/myapp1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">path1</span> <span class="p">=</span> <span class="nc">Uris</span><span class="p">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&#34;user://myapp1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">path1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
 
       </div>

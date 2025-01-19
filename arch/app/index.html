@@ -175,42 +175,33 @@
                         </div>
                     </div>
                 </section>
-                
-
-<p><br/></p>
-
-<h1 id="overview">Overview</h1>
-
-<p>The Slate App is a base application and template to build console, batch, cli and server applications.
-It has pre-built support for common features such as <strong>command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics</strong> and much more.
-This is accomplished by integrating some of the components and utilities available in the
-<a href="utils.html" >Common</a> project.
+                <br/>
+# Overview {#overview}
+The Slate App is a base application and template to build console, batch, cli and server applications.
+It has pre-built support for common features such as **command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics** and much more.
+This is accomplished by integrating some of the components and utilities available in the 
+<a href="utils.html" >Common</a> project. 
 You can create a app quickly using the <strong>Kiit</strong> command line executable with the following inputs.
 Also refer to the <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_App.kt" >Example_App.kt</a>.
-<br/><br/></p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;SampleApp&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-    </code></pre></div>
+<br/><br/>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    slatekit new app -name<span class="o">=</span><span class="s2">&#34;SampleApp&#34;</span> -package<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <div class="alert alert-info" role="alert">
   You can download the Slate Kit Project Generator at 
   <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
   Install instructions located at <a href="start/generators" >Generators</a>. 
 </div>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="diagram">Diagram</h1>
-
 <p>A high-level diagram of the concepts in this component
 <br/><br/>
 <img src="assets/app/media/arch/mod-app.png" class="rounded mx-auto d-block img-fluid" />
 <br/><br/></p>
-
 <h1 id="goals">Goals</h1>
-
 <p>We often have to create a new application which requires typically much boiler-plate code.
 These include environments, config files, argument parsing, logging setup, and application life-cycle events.
-This component quickly gets a new application set up with all these features ready.
+This component quickly gets a new application set up with all these features ready.</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Goal</strong></td>
@@ -218,26 +209,23 @@ This component quickly gets a new application set up with all these features rea
     </tr>
     <tr>
         <td><strong>1. Template</strong></td>
-        <td>Provide template for any application
+        <td>Provide template for any application 
         ( Console, Batch, CLI, Server )</td>
     </tr>
     <tr>
         <td><strong>2. Features</strong> </td>
-        <td>Provide pre-built support commandline args,
-        config, logging, and more.</td><br />
+        <td>Provide pre-built support commandline args, 
+        config, logging, and more.</td>                     
     </tr>
     <tr>
         <td><strong>3. Standardized</strong></td>
         <td>Provide standardized setup, functionality and diagnostics</td>
-        </td><br />
+        </td>                       
     </tr>
-</table></p>
-
-<br/><br/>
-
+</table> 
+<p><br/><br/></p>
 <h1 id="status">Status</h1>
-
-<p>This component is currently stable and there is a project generator for it.
+<p>This component is currently stable and there is a project generator for it.</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Feature</strong></td>
@@ -251,31 +239,24 @@ This component quickly gets a new application set up with all these features rea
     </tr>
 </table>
 <br/>
-
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="install">Install</h1>
-
 <p>Use the following settings in gradle for installing this component.
-<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="c1">// other repositories
-</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other dependencies ...
-</span><span class="c1"></span>
-        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-app:1.0.0&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/>
-
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-app:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="sources">Sources</h1>
-
-<p>
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -307,25 +288,19 @@ This component quickly gets a new application set up with all these features rea
   </tr>
 </table>
 <br/>
-
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="example">Example</h1>
-
 <p>You can generate a sample app using the slatekit executable.
 Also refer to the <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_App.kt" >Example_App.kt</a>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.myapp1&#34;</span>
-    </code></pre></div>
-<br/>
-
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.myapp1&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="concepts">Concepts</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Concept</strong></td>
         <td><strong>Description</strong></td>
@@ -352,13 +327,10 @@ Also refer to the <a href="https://github.com/slatekit/slatekit/blob/master/src/
     </tr>
 </table>
 <br/>
-
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="guide">Guide</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
@@ -403,46 +375,38 @@ Also refer to the <a href="https://github.com/slatekit/slatekit/blob/master/src/
         <td><strong>Info</strong></td>
         <td>Startup info and diagnostics</td>
         <td><a href="arch/app#info" class="more"><span class="btn btn-primary">more</span></a></td>
-    </tr>&gt;
+    </tr>>
     <tr>
         <td><strong>Security</strong></td>
         <td>Setting up a secure application </td>
         <td><a href="arch/app#security" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
 </table>
-<br/></p>
-
+<br/>
 <h2 id="args">Args</h2>
-
 <p>Command line arguments are parsed and supplied to your app. You can specify what the arguments are supported by specifying the schema.
 This leverages the <a href="/utils/args" >Args</a> component.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">// Example of supplying arguments.
-</span><span class="c1"></span>  <span class="n">myapp</span> <span class="p">-</span><span class="n">env</span><span class="p">=</span><span class="n">dev</span> <span class="p">-</span><span class="n">log</span><span class="p">.</span><span class="n">level</span><span class="p">=</span><span class="n">info</span> <span class="p">-</span><span class="n">region</span><span class="p">=</span><span class="n">ny</span>
-    
-  <span class="c1">// setup the command line arguments.
-</span><span class="c1"></span>  <span class="c1">// NOTE:
-</span><span class="c1"></span>  <span class="c1">// 1. These values can can be setup in the env.conf file
-</span><span class="c1"></span>  <span class="c1">// 2. If supplied on command line, they override the values in .conf file
-</span><span class="c1"></span>  <span class="c1">// 3. If any of these are required and not supplied, then an error is display and program exists
-</span><span class="c1"></span>  <span class="c1">// 4. Help text can be easily built from this schema.
-</span><span class="c1"></span>  <span class="k">val</span> <span class="py">schema</span> <span class="p">=</span> <span class="n">ArgsSchema</span><span class="p">()</span>
-        <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="s">&#34;env&#34;</span><span class="p">,</span> <span class="s">&#34;the environment to run in&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="s">&#34;dev1|qa1|stg1|pro&#34;</span><span class="p">)</span>
-        <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="s">&#34;region&#34;</span><span class="p">,</span> <span class="s">&#34;the region linked to app&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s">&#34;us&#34;</span><span class="p">,</span> <span class="s">&#34;us&#34;</span><span class="p">,</span> <span class="s">&#34;us|europe|india|*&#34;</span><span class="p">)</span>
-        <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="s">&#34;log.level&#34;</span><span class="p">,</span> <span class="s">&#34;the log level for logging&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s">&#34;info&#34;</span><span class="p">,</span> <span class="s">&#34;info&#34;</span><span class="p">,</span> <span class="s">&#34;debug|info|warn|error&#34;</span><span class="p">)</span>
-    </code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">  <span class="c1">// Example of supplying arguments.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">myapp</span> <span class="p">-</span><span class="n">env</span><span class="p">=</span><span class="n">dev</span> <span class="p">-</span><span class="n">log</span><span class="p">.</span><span class="n">level</span><span class="p">=</span><span class="n">info</span> <span class="p">-</span><span class="n">region</span><span class="p">=</span><span class="n">ny</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c1">// setup the command line arguments.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// NOTE:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 1. These values can can be setup in the env.conf file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 2. If supplied on command line, they override the values in .conf file
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 3. If any of these are required and not supplied, then an error is display and program exists
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 4. Help text can be easily built from this schema.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">val</span> <span class="py">schema</span> <span class="p">=</span> <span class="n">ArgsSchema</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;env&#34;</span><span class="p">,</span> <span class="s2">&#34;the environment to run in&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="s2">&#34;dev1|qa1|stg1|pro&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;region&#34;</span><span class="p">,</span> <span class="s2">&#34;the region linked to app&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s2">&#34;us&#34;</span><span class="p">,</span> <span class="s2">&#34;us&#34;</span><span class="p">,</span> <span class="s2">&#34;us|europe|india|*&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="s2">&#34;log.level&#34;</span><span class="p">,</span> <span class="s2">&#34;the log level for logging&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;info&#34;</span><span class="p">,</span> <span class="s2">&#34;debug|info|warn|error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="envs">Envs</h2>
-
 <p>Default environments and configs per environment are setup for applications and associated together.
 Refer to example app and or a generated application for more info.
-This leverages the <a href="/utils/env" >Envs</a> and <a href="/utils/config" >Config</a> components
+This leverages the <a href="/utils/env" >Envs</a> and <a href="/utils/config" >Config</a> components</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Env</strong></td>
@@ -487,238 +451,186 @@ This leverages the <a href="/utils/env" >Envs</a> and <a href="/utils/config" >C
         <td>resources/env.pro.conf</td>
     </tr>
 </table>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="logs">Logs</h2>
-
 <p>Logback logging is setup for the application in <strong>/resources/logback.xml</strong>
 This leverages the <a href="/utils/logger" >Logs</a> component.
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-<span class="nt">&lt;configuration&gt;</span>
-    ...
-    <span class="nt">&lt;logger</span> <span class="na">name=</span><span class="s">&#34;app&#34;</span> <span class="na">level=</span><span class="s">&#34;info&#34;</span> <span class="na">additivity=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;STDOUT&#34;</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;FILE&#34;</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;LOGGLY-ASYNC&#34;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/logger&gt;</span>
-    <span class="nt">&lt;root</span> <span class="na">level=</span><span class="s">&#34;debug&#34;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;STDOUT&#34;</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;FILE&#34;</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/root&gt;</span>
-    ...
-<span class="nt">&lt;/configuration&gt;</span></code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;logger</span> <span class="na">name=</span><span class="s">&#34;app&#34;</span> <span class="na">level=</span><span class="s">&#34;info&#34;</span> <span class="na">additivity=</span><span class="s">&#34;false&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;STDOUT&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;FILE&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;LOGGLY-ASYNC&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/logger&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;root</span> <span class="na">level=</span><span class="s">&#34;debug&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;STDOUT&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;appender-ref</span> <span class="na">ref=</span><span class="s">&#34;FILE&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/root&gt;</span>
+</span></span><span class="line"><span class="cl">    ...
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/configuration&gt;</span></span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="conf">Conf</h2>
-
 <p>Configuration settings are supported via normal Java Properties files stored in the <strong>resources</strong> folder.
 Configuration settings existing based on the names of the environments setup ( see above ).
 This leverages the <a href="/utils/config" >Config</a> component.</p>
-
-<h4 id="env-conf">env.conf</h4>
-
+<h4 id="envconf">env.conf</h4>
 <p>This is the common config file inherited by all other configs.
 You can specify the environment to load by setting <strong>env = name</strong>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># environment selection</span><span class="w">
-</span><span class="w"></span><span class="c"># this can be overriden on the commandline via -env=qa</span><span class="w">
-</span><span class="w"></span>env<span class="w"> </span>=<span class="w"> </span>loc</code></pre></div></p>
-
-<h4 id="env-qat-conf">env.qat.conf</h4>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># environment selection</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># this can be overriden on the commandline via -env=qa</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">env = loc</span></span></span></code></pre></div></p>
+<h4 id="envqatconf">env.qat.conf</h4>
 <p>You have config files per environment. You can override settings in the environment specific config.
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># environment selection</span><span class="w">
-</span><span class="w"></span><span class="c"># this can be overriden on the commandline via -env=qa</span><span class="w">
-</span><span class="w"></span>env<span class="w"> </span>=<span class="w"> </span>loc</code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># environment selection</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># this can be overriden on the commandline via -env=qa</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">env = loc</span></span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="help">Help</h2>
-
 <p>The application supports typing  <strong>-version</strong>,  <strong>-about</strong> and <strong>-help</strong> after your apps executable/jar.
 This will display info about the app and usage of command line args.
 This leverages the <a href="/utils/args" >Args</a> component.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">myapp -help
-
- <span class="o">==============================================</span>
- ABOUT
- area     :  Department <span class="m">1</span>
- name     :  Sample App
- desc     :  Sample console application to show the base application features
- url      :  http://sampleapp.slatekit.com
- contact  :  kishore@company1.co
- version  :  <span class="m">1</span>.0.0
- tags     :  slate,shell,cli
- examples :  sampleapp -env<span class="o">=</span>dev -log.level<span class="o">=</span>debug -region<span class="o">=</span><span class="s1">&#39;ny&#39;</span> -enc<span class="o">=</span><span class="nb">false</span>
- <span class="o">==============================================</span>
-
- ARGS
- -env     :  the environment to run in
-             ! required  <span class="o">[</span>String<span class="o">]</span>  e.g. dev
- -log     :  the log level <span class="k">for</span> logging
-             ? optional  <span class="o">[</span>String<span class="o">]</span>  e.g. info
- -enc     :  whether encryption is on
-             ? optional  <span class="o">[</span>String<span class="o">]</span>  e.g. <span class="nb">false</span>
- -region  :  the region linked to app
-             ? optional  <span class="o">[</span>String<span class="o">]</span>  e.g. us
-    </code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">myapp -help
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="o">==============================================</span>
+</span></span><span class="line"><span class="cl"> ABOUT
+</span></span><span class="line"><span class="cl"> area     :  Department <span class="m">1</span>
+</span></span><span class="line"><span class="cl"> name     :  Sample App
+</span></span><span class="line"><span class="cl"> desc     :  Sample console application to show the base application features
+</span></span><span class="line"><span class="cl"> url      :  http://sampleapp.slatekit.com
+</span></span><span class="line"><span class="cl"> contact  :  kishore@company1.co
+</span></span><span class="line"><span class="cl"> version  :  1.0.0
+</span></span><span class="line"><span class="cl"> tags     :  slate,shell,cli
+</span></span><span class="line"><span class="cl"> examples :  sampleapp -env<span class="o">=</span>dev -log.level<span class="o">=</span>debug -region<span class="o">=</span><span class="s1">&#39;ny&#39;</span> -enc<span class="o">=</span><span class="nb">false</span>
+</span></span><span class="line"><span class="cl"> <span class="o">==============================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> ARGS
+</span></span><span class="line"><span class="cl"> -env     :  the environment to run in
+</span></span><span class="line"><span class="cl">             ! required  <span class="o">[</span>String<span class="o">]</span>  e.g. dev
+</span></span><span class="line"><span class="cl"> -log     :  the log level <span class="k">for</span> logging
+</span></span><span class="line"><span class="cl">             ? optional  <span class="o">[</span>String<span class="o">]</span>  e.g. info
+</span></span><span class="line"><span class="cl"> -enc     :  whether encryption is on
+</span></span><span class="line"><span class="cl">             ? optional  <span class="o">[</span>String<span class="o">]</span>  e.g. <span class="nb">false</span>
+</span></span><span class="line"><span class="cl"> -region  :  the region linked to app
+</span></span><span class="line"><span class="cl">             ? optional  <span class="o">[</span>String<span class="o">]</span>  e.g. us
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="context">Context</h2>
-
 <p>The is an application context that stores all relevant info about the application such as the command line args,
 config, logs, encryptor, info about the app and more. You have access to this with in your app.
 This can be either built up automatically by the application or you can supply it explicitly.
 This leverages the <a href="arch/context" >Context</a> component. Here is an example of an explictly built context.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Build explicitly
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">ctx1</span> <span class="p">=</span> <span class="n">AppEntContext</span><span class="p">(</span>
-            <span class="n">arg</span> <span class="p">=</span> <span class="n">Args</span><span class="p">.</span><span class="n">default</span><span class="p">(),</span>
-            <span class="n">env</span> <span class="p">=</span> <span class="n">Env</span><span class="p">(</span><span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Dev</span><span class="p">,</span> <span class="s">&#34;ny&#34;</span><span class="p">,</span> <span class="s">&#34;dev environment&#34;</span><span class="p">),</span>
-            <span class="n">cfg</span> <span class="p">=</span> <span class="n">Config</span><span class="p">(),</span>
-            <span class="n">logs</span> <span class="p">=</span> <span class="n">LogsDefault</span><span class="p">,</span>
-            <span class="n">ent</span> <span class="p">=</span> <span class="n">Entities</span><span class="p">({</span> <span class="n">con</span> <span class="p">-&gt;</span> <span class="n">Db</span><span class="p">(</span><span class="n">con</span><span class="p">)</span> <span class="p">}),</span>
-            <span class="n">sys</span> <span class="p">=</span> <span class="n">Sys</span><span class="p">.</span><span class="n">build</span><span class="p">(),</span>
-            <span class="n">build</span> <span class="p">=</span> <span class="n">Build</span><span class="p">.</span><span class="n">empty</span><span class="p">,</span>
-            <span class="n">start</span> <span class="p">=</span> <span class="n">StartInfo</span><span class="p">.</span><span class="n">none</span><span class="p">,</span>
-            <span class="n">app</span> <span class="p">=</span> <span class="n">About</span><span class="p">(</span>
-                <span class="n">area</span> <span class="p">=</span> <span class="s">&#34;department1&#34;</span><span class="p">,</span>
-                <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;sample-app-1&#34;</span><span class="p">,</span>
-                <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Sample application 1&#34;</span><span class="p">,</span>
-                <span class="n">company</span> <span class="p">=</span> <span class="s">&#34;Company 1&#34;</span><span class="p">,</span>
-                <span class="n">region</span> <span class="p">=</span> <span class="s">&#34;New York&#34;</span><span class="p">,</span>
-                <span class="n">url</span> <span class="p">=</span> <span class="s">&#34;http://company1.com/dep1/sampleapp-1&#34;</span><span class="p">,</span>
-                <span class="n">contact</span> <span class="p">=</span> <span class="s">&#34;dept1@company1.com&#34;</span><span class="p">,</span>
-                <span class="n">version</span> <span class="p">=</span> <span class="s">&#34;1.0.1&#34;</span><span class="p">,</span>
-                <span class="n">tags</span> <span class="p">=</span> <span class="s">&#34;sample app slatekit&#34;</span><span class="p">,</span>
-                <span class="n">examples</span> <span class="p">=</span> <span class="s">&#34;&#34;</span>
-            <span class="p">)</span>
-    <span class="p">)</span>
-       </code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Build explicitly
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">ctx1</span> <span class="p">=</span> <span class="n">AppEntContext</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">arg</span> <span class="p">=</span> <span class="nc">Args</span><span class="p">.</span><span class="n">default</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">env</span> <span class="p">=</span> <span class="n">Env</span><span class="p">(</span><span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="nc">EnvMode</span><span class="p">.</span><span class="n">Dev</span><span class="p">,</span> <span class="s2">&#34;ny&#34;</span><span class="p">,</span> <span class="s2">&#34;dev environment&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cfg</span> <span class="p">=</span> <span class="n">Config</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">logs</span> <span class="p">=</span> <span class="n">LogsDefault</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ent</span> <span class="p">=</span> <span class="n">Entities</span><span class="p">({</span> <span class="n">con</span> <span class="o">-&gt;</span> <span class="n">Db</span><span class="p">(</span><span class="n">con</span><span class="p">)</span> <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">sys</span> <span class="p">=</span> <span class="nc">Sys</span><span class="p">.</span><span class="n">build</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">build</span> <span class="p">=</span> <span class="nc">Build</span><span class="p">.</span><span class="n">empty</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">start</span> <span class="p">=</span> <span class="nc">StartInfo</span><span class="p">.</span><span class="n">none</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">app</span> <span class="p">=</span> <span class="n">About</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">area</span> <span class="p">=</span> <span class="s2">&#34;department1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span> <span class="p">=</span> <span class="s2">&#34;sample-app-1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">desc</span> <span class="p">=</span> <span class="s2">&#34;Sample application 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">company</span> <span class="p">=</span> <span class="s2">&#34;Company 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">region</span> <span class="p">=</span> <span class="s2">&#34;New York&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">url</span> <span class="p">=</span> <span class="s2">&#34;http://company1.com/dep1/sampleapp-1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">contact</span> <span class="p">=</span> <span class="s2">&#34;dept1@company1.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">version</span> <span class="p">=</span> <span class="s2">&#34;1.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">tags</span> <span class="p">=</span> <span class="s2">&#34;sample app slatekit&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">examples</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">       </span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="cycle">Cycle</h2>
-
 <p>The application support 3 life-cycle events, <strong>init, exec, and done</strong>.
 You can use these template methods to insert your pre execution, execution, and post execution logic.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
-    <span class="k">import</span> <span class="nn">slatekit.app.App</span>
-    <span class="k">import</span> <span class="nn">slatekit.results.Success</span>
-    <span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-    <span class="k">import</span> <span class="nn">slatekit.common.CommonContext</span>
-
-    <span class="k">class</span> <span class="nc">SlateKit</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">CommonContext</span><span class="p">)</span> <span class="p">:</span> <span class="n">App</span><span class="p">&lt;</span><span class="n">CommonContext</span><span class="p">&gt;(</span><span class="n">ctx</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
-            <span class="n">println</span><span class="p">(</span><span class="s">&#34;starting&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="k">super</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
-        <span class="p">}</span>
-
-        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">exec</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Any</span><span class="p">&gt;</span> <span class="p">{</span>
-            <span class="n">println</span><span class="p">(</span><span class="s">&#34;executing&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
-        <span class="p">}</span>
-
-        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">end</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
-            <span class="n">println</span><span class="p">(</span><span class="s">&#34;complete&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="k">super</span><span class="p">.</span><span class="n">end</span><span class="p">()</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    </code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.app.App</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.Success</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.common.CommonContext</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">class</span> <span class="nc">SlateKit</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">CommonContext</span><span class="p">)</span> <span class="p">:</span> <span class="n">App</span><span class="p">&lt;</span><span class="n">CommonContext</span><span class="p">&gt;(</span><span class="n">ctx</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">init</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">println</span><span class="p">(</span><span class="s2">&#34;starting&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">super</span><span class="p">.</span><span class="k">init</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">exec</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Any</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">println</span><span class="p">(</span><span class="s2">&#34;executing&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">Success</span><span class="p">(</span><span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">end</span><span class="p">():</span> <span class="n">Try</span><span class="p">&lt;</span><span class="n">Boolean</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">println</span><span class="p">(</span><span class="s2">&#34;complete&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="k">super</span><span class="p">.</span><span class="n">end</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="info">Info</h2>
-
 <p>The component can print diagnostic info during the start and end of your application life-cycle.
 This leverages the all the existing <a href="/utils/args" >Args</a>, <a href="/utils/env" >Env</a>, <a href="/utils/config" >Config</a>
 components list earlier.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"> Info  : app executing now
- Info  : app completed
- Info  : app shutting down
- Info  : <span class="o">===============================================================</span>
- Info  : SUMMARY :
- Info  : <span class="o">===============================================================</span>
- Info  : <span class="nv">area</span>              <span class="o">=</span> Samples
- Info  : <span class="nv">name</span>              <span class="o">=</span> App1
- Info  : <span class="nv">desc</span>              <span class="o">=</span> Sample to show the base application
- Info  : <span class="nv">version</span>           <span class="o">=</span> <span class="m">1</span>.0.0
- Info  : <span class="nv">tags</span>              <span class="o">=</span> sample
- Info  : <span class="nv">contact</span>           <span class="o">=</span> kishore@abc.co
- Info  : <span class="nv">url</span>               <span class="o">=</span>
- Info  : <span class="nv">args</span>              <span class="o">=</span> -region<span class="o">=</span>usa
- Info  : <span class="nv">env</span>               <span class="o">=</span> dev
- Info  : <span class="nv">config</span>            <span class="o">=</span> env.conf
- Info  : <span class="nv">log</span>               <span class="o">=</span> local:dev
- Info  : <span class="nv">started</span>           <span class="o">=</span> <span class="m">2017</span>-07-11T11:54:13.132-04:00<span class="o">[</span>America/New_York<span class="o">]</span>
- Info  : <span class="nv">ended</span>             <span class="o">=</span> <span class="m">2017</span>-07-11T11:54:18.408-04:00<span class="o">[</span>America/New_York<span class="o">]</span>
- Info  : <span class="nv">duration</span>          <span class="o">=</span> PT5.276S
- Info  : <span class="nv">status</span>            <span class="o">=</span> ended
- Info  : host.name         <span class="o">=</span> KRPC1
- Info  : host.ip           <span class="o">=</span>
- Info  : host.origin       <span class="o">=</span> mac
- Info  : host.version      <span class="o">=</span> <span class="m">10</span>.0
- Info  : lang.name         <span class="o">=</span> kotlin
- Info  : lang.version      <span class="o">=</span> <span class="m">1</span>.8.0_91
- Info  : lang.vendor       <span class="o">=</span> Oracle Corporation
- Info  : lang.java         <span class="o">=</span> <span class="nb">local</span>
- Info  : <span class="nv">App1</span>              <span class="o">=</span>  extra summary data1
- Info  : <span class="nv">App1</span>              <span class="o">=</span>  extra summary data2
- Info  : <span class="o">===============================================================</span>
-
-    </code></pre></div>
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> Info  : app executing now
+</span></span><span class="line"><span class="cl"> Info  : app completed
+</span></span><span class="line"><span class="cl"> Info  : app shutting down
+</span></span><span class="line"><span class="cl"> Info  : <span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"> Info  : SUMMARY :
+</span></span><span class="line"><span class="cl"> Info  : <span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">area</span>              <span class="o">=</span> Samples
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">name</span>              <span class="o">=</span> App1
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">desc</span>              <span class="o">=</span> Sample to show the base application
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">version</span>           <span class="o">=</span> 1.0.0
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">tags</span>              <span class="o">=</span> sample
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">contact</span>           <span class="o">=</span> kishore@abc.co
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">url</span>               <span class="o">=</span>
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">args</span>              <span class="o">=</span> -region<span class="o">=</span>usa
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">env</span>               <span class="o">=</span> dev
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">config</span>            <span class="o">=</span> env.conf
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">log</span>               <span class="o">=</span> local:dev
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">started</span>           <span class="o">=</span> 2017-07-11T11:54:13.132-04:00<span class="o">[</span>America/New_York<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">ended</span>             <span class="o">=</span> 2017-07-11T11:54:18.408-04:00<span class="o">[</span>America/New_York<span class="o">]</span>
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">duration</span>          <span class="o">=</span> PT5.276S
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">status</span>            <span class="o">=</span> ended
+</span></span><span class="line"><span class="cl"> Info  : host.name         <span class="o">=</span> KRPC1
+</span></span><span class="line"><span class="cl"> Info  : host.ip           <span class="o">=</span>
+</span></span><span class="line"><span class="cl"> Info  : host.origin       <span class="o">=</span> mac
+</span></span><span class="line"><span class="cl"> Info  : host.version      <span class="o">=</span> 10.0
+</span></span><span class="line"><span class="cl"> Info  : lang.name         <span class="o">=</span> kotlin
+</span></span><span class="line"><span class="cl"> Info  : lang.version      <span class="o">=</span> 1.8.0_91
+</span></span><span class="line"><span class="cl"> Info  : lang.vendor       <span class="o">=</span> Oracle Corporation
+</span></span><span class="line"><span class="cl"> Info  : lang.java         <span class="o">=</span> <span class="nb">local</span>
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">App1</span>              <span class="o">=</span>  extra summary data1
+</span></span><span class="line"><span class="cl"> Info  : <span class="nv">App1</span>              <span class="o">=</span>  extra summary data2
+</span></span><span class="line"><span class="cl"> Info  : <span class="o">===============================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="security">Security</h2>
-
 <p>Sensitive configuration settings can be secured by encrypting the settings, or loading them from environment variables. Check the <a href="/utils/config" >Config</a> component for more info.</p>
-
-
-
-
-<a href="arch/app#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/app#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<p><a href="arch/app#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/app#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <script>
     var archComponent = {
         name: "App",

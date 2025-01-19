@@ -172,88 +172,65 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="about">About</h1>
-
+                <h1 id="about">About</h1>
 <p>Slate Kit comes with a command line tool to serve as a project generator.
 This project generator is a pacakged java based application, and works like a minimal version of <strong>nodejs yeoman</strong> or <strong>python cookie-cutter</strong>
 There are several types of project generators available by default from Slate Kit. These are the most common type of Applications or services corresponding to the architecture components available from Slate Kit.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-    </code></pre></div>
-
-<br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<p><br/><br/></p>
 <h1 id="status">Status</h1>
-
 <p>Currently, the Slate Kit CLI tool is only available for automatic install on Mac OS as it is integrated with <strong>HomeBrew</strong>.
 You can however perform an manual install on Windows using the instructions provided.</p>
-
-<br/><br/>
-
+<p><br/><br/></p>
 <h1 id="macos">MacOS</h1>
-
 <p>You can easily install the Slate Kit CLI using HomeBrew on Mac OS.</p>
-
 <h3 id="install">Install</h3>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    brew tap slatekit/slatekit
-
-    <span class="c1"># Note: install may take a long time ( see notes/issues below )</span>
-    brew install slatekit
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    brew tap slatekit/slatekit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Note: install may take a long time ( see notes/issues below )</span>
+</span></span><span class="line"><span class="cl">    brew install slatekit
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <div class="alert alert-danger" role="alert">
     You may experience some issues with the install, consider the following<br/>
-    <strong>1:</strong> Ensure System Preferences -&gt; security -&gt; privacy -&gt; full disk access -&gt; iterm2 ( of what ever terminal you use )<br/>
+    <strong>1:</strong> Ensure System Preferences -> security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )<br/>
     <strong>2:</strong> <a href="https://discussions.apple.com/thread/251258165">Slow HomeBrew post install on Mac OS Catalina ( based on thread below )</a><br/>
     <strong>3:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
-</div></p>
-
+</div>
 <h3 id="upgrade">Upgrade</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    brew upgrade slatekit
-    </code></pre></div>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    brew upgrade slatekit
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <h3 id="un-install">Un-Install</h3>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    brew uninstall slatekit
-    brew untap slatekit/slatekit
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    brew uninstall slatekit
+</span></span><span class="line"><span class="cl">    brew untap slatekit/slatekit
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
-
 <h1 id="windows">Windows</h1>
-
 <p>Currently, there is no installer available for Windows. However you have 2 options:</p>
-
 <h2 id="option-1-sample-apps">Option 1: Sample Apps</h2>
-
 <p>There are several sample applications available in git at <a href="https://github.com/slatekit/slatekit/tree/master/src/apps/kotlin/slatekit-samples/src/main/kotlin/slatekit/samples" >Samples</a>.
 You can simply copy one of the samples ( app, cli, api, job, etc ) and adjust/remove code accoringly.</p>
-
 <h2 id="option-2-manual-install">Option 2: Manual install</h2>
-
-<p>You can also perform a manual install for the time being. <br/><br/>
-1. Download the latest release zip from <a href="https://github.com/slatekit/slatekit-cli/releases">https://github.com/slatekit/slatekit-cli/releases</a> <br/>
-2. Unzip <a href="https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip">https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip</a> to C:/tools/slatekit/2.2.0<br/>
-3. Create a bin directory in C:/tools/slatekit/2.2.0/bin and move slatekit and slatekit.bat files into bin  <br/>
-4. Add C:/tools/slatekit/2.2.0/bin/ to your system path  <br/>
-5. In terminal Run command slatekit new app -name=&ldquo;MyApp1&rdquo; -packageName=&ldquo;company1.apps&rdquo; (You may have to refresh your terminal) <br/>
-6. This will fail the first time but it will generate the settings  <br/>
-10. Go to your user/documents directory and open ~/.slatekit/tools/cli/conf/settings.conf file <br/>
-11. Update the generation.source to path of the templates e.g. C:/tools/slatekit/2.2.0/tempaltes <br/>
-12. You should now be able to run the command again to generate projects <br/></p>
-
-<br/><br/>
-
+<p>You can also perform a manual install for the time being. <br/><br/></p>
+<ol>
+<li>Download the latest release zip from <a href="https://github.com/slatekit/slatekit-cli/releases">https://github.com/slatekit/slatekit-cli/releases</a> <br/></li>
+<li>Unzip <a href="https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip">https://github.com/slatekit/slatekit-cli/archive/v2.2.0.zip</a> to C:/tools/slatekit/2.2.0<br/></li>
+<li>Create a bin directory in C:/tools/slatekit/2.2.0/bin and move slatekit and slatekit.bat files into bin  <br/></li>
+<li>Add C:/tools/slatekit/2.2.0/bin/ to your system path  <br/></li>
+<li>In terminal Run command slatekit new app -name=&ldquo;MyApp1&rdquo; -packageName=&ldquo;company1.apps&rdquo; (You may have to refresh your terminal) <br/></li>
+<li>This will fail the first time but it will generate the settings  <br/></li>
+<li>Go to your user/documents directory and open ~/.slatekit/tools/cli/conf/settings.conf file <br/></li>
+<li>Update the generation.source to path of the templates e.g. C:/tools/slatekit/2.2.0/tempaltes <br/></li>
+<li>You should now be able to run the command again to generate projects <br/></li>
+</ol>
+<p><br/><br/></p>
 <h1 id="settings">Settings</h1>
-
 <p>The settings for the generator are automatically created at <strong>~/.slatekit/tools/cli/conf/settings.conf</strong> when you try to create your first project.
-The settings are listed below
+The settings are listed below</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
@@ -290,104 +267,83 @@ The settings are listed below
     <strong>Tip:</strong> The tool does <strong>NOT</strong> currently support setting up custom templates, but this is a desired future feature.
 </div>
 <br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="app">APP</h1>
-
 <p>Generates a new Slate Kit stand-alone application with support command line args, environments, configs, logging, help usage and more. Refer to the <a href="arch/app" >App</a> component and example: <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_App.kt" >Example_App.kt</a>.</p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    
-    <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> MyApp1
-    :&gt; gradle build
-    :&gt; gradle run
-    </code></pre></div>
-<br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Now build and run via gradle</span>
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> MyApp1
+</span></span><span class="line"><span class="cl">    :&gt; gradle build
+</span></span><span class="line"><span class="cl">    :&gt; gradle run
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="api">API</h1>
-
 <p>Generates a new API project for hosting HTTP/Web APIs. APIs in Slate Kit are considered <strong>Universal</strong> in the sense that you write them once and they are available as both HTTP/Web APIs ( in the form of RPCs ) and also available on the CLI.
 Also refer to the <a href="arch/apis" >APIs</a> component.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">      
-    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
-    
-    <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> MyAPI1
-    :&gt; gradle build
-    :&gt; gradle run
-    </code></pre></div>
-
-<p><div class="alert alert-warning" role="alert">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Now build and run via gradle</span>
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> MyAPI1
+</span></span><span class="line"><span class="cl">    :&gt; gradle build
+</span></span><span class="line"><span class="cl">    :&gt; gradle run
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<div class="alert alert-warning" role="alert">
     <strong>Tip:</strong> A postman script named <strong>slatekit-samples-postman.json</strong> is also created in the root folder of the generated project. You can import this into PostMan and easily test the API actions/endpoints
 </div>
 <br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="job">JOB</h1>
-
 <p>Generates a new background job that can be gracefully started, stopped, paused, resumed. They can also be run in &ldquo;pages&rdquo;, or process items from queues.
 Refer to the <a href="arch/jobs" >Jobs</a> component and example: <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Jobs.kt" >Example_Jobs.kt</a>.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
-    </code></pre></div>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <p>For the Job, you can run the different job types by passing <strong>-job.name</strong> to the arguments for gradle/java. E.g.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    <span class="nb">cd</span> gen/MyJob1
-    gradle build
-
-    <span class="c1"># To run the One Time Job sample</span>
-    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=onetime&#39;</span>
-
-    <span class="c1"># To run the Paged Job sample</span>
-    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=paging&#39;</span>
-
-    <span class="c1"># To run the Queue Job sample</span>
-    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=queued&#39;</span>
-
-    <span class="c1"># To run the Worker Sample</span>
-    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=worker&#39;</span>
-    </code></pre></div></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nb">cd</span> gen/MyJob1
+</span></span><span class="line"><span class="cl">    gradle build
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># To run the One Time Job sample</span>
+</span></span><span class="line"><span class="cl">    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=onetime&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># To run the Paged Job sample</span>
+</span></span><span class="line"><span class="cl">    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=paging&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># To run the Queue Job sample</span>
+</span></span><span class="line"><span class="cl">    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=queued&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># To run the Worker Sample</span>
+</span></span><span class="line"><span class="cl">    gradle run --args<span class="o">=</span><span class="s1">&#39;-sample=worker&#39;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
 <br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
+<p><a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <h1 id="cli">CLI</h1>
-
 <p>Generates a CLI ( Command Line Interface ) application. The CLI in Slate Kit can host Slate Kit APIs.
 Also refer to the <a href="arch/cli" >CLI</a> component and example: <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_CLI.kt" >Example_CLI.kt</a>.</p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">      
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    
-    <span class="c1"># Now build and run via gradle</span>
-    :&gt; <span class="nb">cd</span> MyCLI1
-    :&gt; gradle build
-    :&gt; gradle distZip
-    :&gt; <span class="nb">cd</span> build/distributions
-
-    <span class="c1"># Unzip the MyCLI1.zip and run</span>
-    :&gt; <span class="nb">cd</span> MyCLI1/bin
-    :&gt; ./MyCLI1
-    </code></pre></div>
-<br/>
-
-<a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Now build and run via gradle</span>
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> MyCLI1
+</span></span><span class="line"><span class="cl">    :&gt; gradle build
+</span></span><span class="line"><span class="cl">    :&gt; gradle distZip
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> build/distributions
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Unzip the MyCLI1.zip and run</span>
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> MyCLI1/bin
+</span></span><span class="line"><span class="cl">    :&gt; ./MyCLI1
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/generators#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <script>
     var archComponent = {
         name: "Generators",

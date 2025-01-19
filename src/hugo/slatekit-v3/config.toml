@@ -7,3 +7,7 @@ pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses            = true 
 pygmentsStyle = "monokai"
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup.goldmark.renderer]
+unsafe = true

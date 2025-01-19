@@ -172,65 +172,52 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
-<p>Slate Kit comes with a command line project generation tool which is available below. You can create a new app quickly using the commands below.
+                <h1 id="overview">Overview</h1>
+<p>Slate Kit comes with a command line project generation tool which is available below. You can create a new app quickly using the commands below.</p>
 <div class="alert alert-info" role="alert">
   You can download the Slate Kit Project Generator at 
   <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
   Install instructions located at <a href="start/generators" >Generators</a>. 
-</div></p>
-
-<br/><br/>
-
+</div>
+<p><br/><br/></p>
 <h1 id="install">Install</h1>
-
 <p>You can easily install the Slate Kit CLI to create projects, using HomeBrew on Mac OS
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    brew tap slatekit/slatekit
-
-    <span class="c1"># Note: install may take a long time ( see notes/issues below )</span>
-    brew install slatekit
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    brew tap slatekit/slatekit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Note: install may take a long time ( see notes/issues below )</span>
+</span></span><span class="line"><span class="cl">    brew install slatekit
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
 <div class="alert alert-danger" role="alert">
     You may experience some issues with the install, consider the following<br/>
-    <strong>1:</strong> Ensure System Preferences -&gt; security -&gt; privacy -&gt; full disk access -&gt; iterm2 ( of what ever terminal you use )<br/>
+    <strong>1:</strong> Ensure System Preferences -> security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )<br/>
     <strong>2:</strong> <a href="https://discussions.apple.com/thread/251258165">Slow HomeBrew post install on Mac OS Catalina ( based on thread below )</a><br/>
     <strong>3:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
-</div></p>
-
-<br/><br/>
-
+</div>
+<p><br/><br/></p>
 <h1 id="hello-world">Hello World</h1>
-
 <p>You can create your first app by running the command below which will create a new console application
 with support for command line args, environments, confs, logging, help usage and more. This is just 1 type of project you can create.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-    :&gt; <span class="nb">cd</span> MyApp1
-    :&gt; gradle build
-    :&gt; gradle run
-    </code></pre></div>
-
-<br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    :&gt; slatekit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> MyApp1
+</span></span><span class="line"><span class="cl">    :&gt; gradle build
+</span></span><span class="line"><span class="cl">    :&gt; gradle run
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<p><br/><br/></p>
 <h1 id="generators">Generators</h1>
-
 <p>You can create several different project types using the generator, these include CLIs, APIs, Jobs, and more to come.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
-    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
-    slatekit new env -name<span class="o">=</span><span class="s2">&#34;MyApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    slatekit new app -name<span class="o">=</span><span class="s2">&#34;MyApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    slatekit new api -name<span class="o">=</span><span class="s2">&#34;MyAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
+</span></span><span class="line"><span class="cl">    slatekit new cli -name<span class="o">=</span><span class="s2">&#34;MyCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    slatekit new job -name<span class="o">=</span><span class="s2">&#34;MyJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
+</span></span><span class="line"><span class="cl">    slatekit new env -name<span class="o">=</span><span class="s2">&#34;MyApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
 <div class="alert alert-warning" role="alert">
     <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the Slate Kit CLI tool and info on the project types.
 </div>
-<br/><br/></p>
+<br/><br/>
 
             </div>
             <div class="col-sm-1 flex">

@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="data">Data</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="data">Data</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,134 +189,126 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.17&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.db.Db</span>
-<span class="k">import</span> <span class="nn">slatekit.common.db.DbConString</span>
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span>
-<span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span>
-<span class="k">import</span> <span class="nn">slatekit.entities.core.EntityMapper</span>
-<span class="k">import</span> <span class="nn">slatekit.examples.common.User</span>
-<span class="k">import</span> <span class="nn">slatekit.meta.models.ModelMapper</span>
-<span class="k">import</span> <span class="nn">slatekit.orm.core.OrmMapper</span>
-<span class="k">import</span> <span class="nn">slatekit.orm.databases.vendors.MySqlConverter</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.db.Db</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.db.DbConString</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.core.cmds.Cmd</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.entities.core.EntityMapper</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.examples.common.User</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.meta.models.ModelMapper</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.orm.core.OrmMapper</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.orm.databases.vendors.MySqlConverter</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="n">n</span><span class="p">/</span><span class="n">a</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        <span class="c1">// NOTES:
-</span><span class="c1"></span>        <span class="c1">// 1. The Db.kt simply uses JDBC
-</span><span class="c1"></span>        <span class="c1">// 2. There is a separate DbLookup.kt component that
-</span><span class="c1"></span>        <span class="c1">//    loads, stores, and manages named database connections.
-</span><span class="c1"></span>        <span class="c1">//    Refer to that example for more info.
-</span><span class="c1"></span>
-        <span class="c1">// CASE 1: Create DB connection.
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span>
-            <span class="s">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">,</span>
-            <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span>
-            <span class="s">&#34;root&#34;</span><span class="p">,</span>
-            <span class="s">&#34;abcdefghi&#34;</span>
-        <span class="p">)</span>
-
-        <span class="c1">// CASE 2. Initialize the DB with the connection string.
-</span><span class="c1"></span>        <span class="c1">// NOTE: This defaults the db to mysql. The first line is same
-</span><span class="c1"></span>        <span class="c1">// as db = Db(con, source: DbSourceMySql())
-</span><span class="c1"></span>        <span class="c1">// In the future, we can more easily support mutliple databases
-</span><span class="c1"></span>        <span class="c1">// using this approach.
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-
-        <span class="c1">// CASE 3: Open the database
-</span><span class="c1"></span>        <span class="n">db</span><span class="p">.</span><span class="k">open</span><span class="p">()</span>
-
-        <span class="c1">// CASE 4: Get scalar values
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">total1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarString</span>       <span class="p">(</span><span class="s">&#34;select test_string from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarBool</span>         <span class="p">(</span><span class="s">&#34;select test_bool   from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total3</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarShort</span>        <span class="p">(</span><span class="s">&#34;select test_short  from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total4</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarInt</span>          <span class="p">(</span><span class="s">&#34;select test_int    from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total5</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLong</span>         <span class="p">(</span><span class="s">&#34;select test_long   from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total6</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarDouble</span>       <span class="p">(</span><span class="s">&#34;select test_double from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total7</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDate</span>    <span class="p">(</span><span class="s">&#34;select test_ldate  from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total8</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalTime</span>    <span class="p">(</span><span class="s">&#34;select test_ltime  from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">total9</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDateTime</span><span class="p">(</span><span class="s">&#34;select test_ldtime from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
-
-        <span class="c1">// CASE 5: Execute a sql insert
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">id1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&#34;insert into `city`(`name`) values( &#39;ny&#39; )&#34;</span><span class="p">)</span>
-
-        <span class="c1">// CASE 6: Execute a sql insert using parameters
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">id2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&#34;insert into `city`(`name`) values( ? )&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;ny&#34;</span><span class="p">))</span>
-
-        <span class="c1">// CASE 7: Execute a sql update
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">count7</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;update `city` set `alias` = &#39;nyc&#39; where id = 2&#34;</span><span class="p">)</span>
-
-        <span class="c1">// CASE 8: Execute a sql udpate using parameters
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">count8</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;update `city` set `alias` = &#39;nyc&#39; where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
-
-        <span class="c1">// CASE 9: Deletes are same as updates
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">count9a</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;delete from `city` where id = 2&#34;</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">count9b</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;delete from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span>
-
-
-        <span class="c1">// ===============================================================
-</span><span class="c1"></span>        <span class="c1">// STORED PROCS
-</span><span class="c1"></span>        <span class="c1">// ===============================================================
-</span><span class="c1"></span>        <span class="c1">// CASE 10: Call a stored proc that updates data
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">count10</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callUpdate</span><span class="p">(</span><span class="s">&#34;dbtests_activate_by_id&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
-
-        <span class="c1">// CASE 11: Call a stored proc that fetches data
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">count11</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callQuery</span><span class="p">(</span><span class="s">&#34;dbtests_max_by_id&#34;</span><span class="p">,</span>
-                <span class="n">callback</span> <span class="p">=</span> <span class="p">{</span> <span class="n">rs</span> <span class="p">-&gt;</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">},</span> <span class="n">inputs</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
-
-        <span class="c1">// ===============================================================
-</span><span class="c1"></span>        <span class="c1">// MODELS / MAPPERS
-</span><span class="c1"></span>        <span class="c1">// ===============================================================
-</span><span class="c1"></span>        <span class="c1">// CASE 12: Map a record to an model using the mapper component
-</span><span class="c1"></span>        <span class="c1">// The mapper will load a schema from the User class by checking
-</span><span class="c1"></span>        <span class="c1">// for &#34;Field&#34; annotations
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">userModelSchema</span> <span class="p">=</span> <span class="n">ModelMapper</span><span class="p">.</span><span class="n">loadSchema</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">mapper</span> <span class="p">=</span> <span class="n">OrmMapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span><span class="n">User</span><span class="p">&gt;(</span><span class="n">userModelSchema</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">MySqlConverter</span><span class="p">())</span>
-        <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapOne</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;select * from `user` where id = 1&#34;</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
-        <span class="n">println</span><span class="p">(</span><span class="n">item1</span><span class="p">)</span>
-
-        <span class="c1">// CASE 13: Map multiple records
-</span><span class="c1"></span>        <span class="k">val</span> <span class="py">items</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapMany</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s">&#34;select * from `user` where id &lt; 5&#34;</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
-        <span class="n">println</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
-
-        <span class="c1">// CASE 14: Create the table using the model
-</span><span class="c1"></span>        <span class="c1">// Be careful with this, ensure you are using a connection string
-</span><span class="c1"></span>        <span class="c1">// with limited permissions
-</span><span class="c1"></span>        <span class="c1">//createTable(db, userModelSchema)
-</span><span class="c1"></span>
-        <span class="c1">// CASE 15: Drop a table
-</span><span class="c1"></span>        <span class="c1">// Be careful with this, ensure you are using a connection string
-</span><span class="c1"></span>        <span class="c1">// with limited permissions.
-</span><span class="c1"></span>        </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        <span class="c1">// NOTES:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 1. The Db.kt simply uses JDBC
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// 2. There is a separate DbLookup.kt component that
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//    loads, stores, and manages named database connections.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//    Refer to that example for more info.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 1: Create DB connection.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;com.mysql.jdbc.Driver&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;root&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;abcdefghi&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 2. Initialize the DB with the connection string.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// NOTE: This defaults the db to mysql. The first line is same
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// as db = Db(con, source: DbSourceMySql())
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// In the future, we can more easily support mutliple databases
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// using this approach.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 3: Open the database
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">db</span><span class="p">.</span><span class="k">open</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 4: Get scalar values
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">total1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarString</span>       <span class="p">(</span><span class="s2">&#34;select test_string from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarBool</span>         <span class="p">(</span><span class="s2">&#34;select test_bool   from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total3</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarShort</span>        <span class="p">(</span><span class="s2">&#34;select test_short  from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total4</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarInt</span>          <span class="p">(</span><span class="s2">&#34;select test_int    from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total5</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLong</span>         <span class="p">(</span><span class="s2">&#34;select test_long   from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total6</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarDouble</span>       <span class="p">(</span><span class="s2">&#34;select test_double from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total7</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDate</span>    <span class="p">(</span><span class="s2">&#34;select test_ldate  from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total8</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalTime</span>    <span class="p">(</span><span class="s2">&#34;select test_ltime  from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">total9</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDateTime</span><span class="p">(</span><span class="s2">&#34;select test_ldtime from db_tests where id = 1&#34;</span><span class="p">,</span> <span class="k">null</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 5: Execute a sql insert
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">id1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;insert into `city`(`name`) values( &#39;ny&#39; )&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 6: Execute a sql insert using parameters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">id2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;insert into `city`(`name`) values( ? )&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;ny&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 7: Execute a sql update
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">count7</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;update `city` set `alias` = &#39;nyc&#39; where id = 2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 8: Execute a sql udpate using parameters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">count8</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;update `city` set `alias` = &#39;nyc&#39; where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 9: Deletes are same as updates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">count9a</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;delete from `city` where id = 2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">count9b</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;delete from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ===============================================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// STORED PROCS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// ===============================================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// CASE 10: Call a stored proc that updates data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">count10</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callUpdate</span><span class="p">(</span><span class="s2">&#34;dbtests_activate_by_id&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 11: Call a stored proc that fetches data
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">count11</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callQuery</span><span class="p">(</span><span class="s2">&#34;dbtests_max_by_id&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">callback</span> <span class="p">=</span> <span class="p">{</span> <span class="n">rs</span> <span class="o">-&gt;</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">},</span> <span class="n">inputs</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ===============================================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// MODELS / MAPPERS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// ===============================================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// CASE 12: Map a record to an model using the mapper component
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// The mapper will load a schema from the User class by checking
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// for &#34;Field&#34; annotations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">userModelSchema</span> <span class="p">=</span> <span class="nc">ModelMapper</span><span class="p">.</span><span class="n">loadSchema</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">mapper</span> <span class="p">=</span> <span class="n">OrmMapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span><span class="n">User</span><span class="p">&gt;(</span><span class="n">userModelSchema</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">MySqlConverter</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapOne</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;select * from `user` where id = 1&#34;</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="n">item1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 13: Map multiple records
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">val</span> <span class="py">items</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapMany</span><span class="p">&lt;</span><span class="n">User</span><span class="p">&gt;(</span><span class="s2">&#34;select * from `user` where id &lt; 5&#34;</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 14: Create the table using the model
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// Be careful with this, ensure you are using a connection string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// with limited permissions
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//createTable(db, userModelSchema)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// CASE 15: Drop a table
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// Be careful with this, ensure you are using a connection string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">// with limited permissions.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        </span></span></code></pre></div>
 <br/><br/></p>
 
       </div>

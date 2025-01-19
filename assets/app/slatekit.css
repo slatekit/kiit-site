@@ -1,5 +1,6 @@
 h1 {
-            color: #494e6b;
+    color: #494e6b;
+    font-weight: bold;
 }
 
 .alert {
@@ -281,8 +282,10 @@ table tr td  {
 .sidebar-section {
     padding-left: 20px;
     font-weight: bold;
-    color: #ffffff;
-    background: #585CE9;
+    color: #000000;
+}
+.navbar-classic .navbar-nav .nav-item .nav-link {
+	font-weight: bold;
 }
 /*
 table tr td  {

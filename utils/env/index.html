@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="env">Env</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="env">Env</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,78 +189,70 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.envs.*</span>
-
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.envs.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="n">n</span><span class="p">/</span><span class="n">a</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// CASE 1: Build a list of environments
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">envs1</span> <span class="p">=</span> <span class="n">Envs</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;loc&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Dev environment (local)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;Dev environment (dev)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;qat&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Qat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;QAT environment (test)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;stg&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Uat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;STG environment (demo)&#34;</span><span class="p">),</span>
-            <span class="n">Env</span><span class="p">(</span><span class="s">&#34;pro&#34;</span><span class="p">,</span> <span class="n">EnvMode</span><span class="p">.</span><span class="n">Pro</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s">&#34;LIVE environment&#34;</span><span class="p">)</span>
-    <span class="p">))</span>
-
-    <span class="c1">// CASE 2: Use the default list of environments ( same as above )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">envs</span> <span class="p">=</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">envs</span><span class="p">.</span><span class="n">Envs</span><span class="p">.</span><span class="n">defaults</span><span class="p">()</span>
-
-    <span class="c1">// CASE 3: Get one of the environments by api
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">qa1</span> <span class="p">=</span> <span class="n">envs</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s">&#34;qa1&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">qa1</span> <span class="p">)</span>
-
-    <span class="c1">// CASE 4: Validate one of the environments by api
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">envs</span><span class="p">.</span><span class="n">isValid</span><span class="p">(</span><span class="s">&#34;qa2&#34;</span><span class="p">)</span> <span class="p">)</span>
-
-    <span class="c1">// CASE 5: Current environment ( nothing - none selected )
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">envs</span><span class="p">.</span><span class="n">current</span> <span class="p">)</span>
-
-    <span class="c1">// CASE 6: Select an environment
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">envs2</span> <span class="p">=</span> <span class="n">envs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s">&#34;dev&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span> <span class="p">)</span>
-
-    <span class="c1">// CASE 7: Get info about currently selected environment
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">name</span>    <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isDev</span>   <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isQat</span>    <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isUat</span>   <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isPro</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">current</span> <span class="p">)</span>
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// CASE 1: Build a list of environments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">envs1</span> <span class="p">=</span> <span class="n">Envs</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Env</span><span class="p">(</span><span class="s2">&#34;loc&#34;</span><span class="p">,</span> <span class="nc">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s2">&#34;Dev environment (local)&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Env</span><span class="p">(</span><span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="nc">EnvMode</span><span class="p">.</span><span class="n">Dev</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s2">&#34;Dev environment (dev)&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Env</span><span class="p">(</span><span class="s2">&#34;qat&#34;</span><span class="p">,</span> <span class="nc">EnvMode</span><span class="p">.</span><span class="n">Qat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s2">&#34;QAT environment (test)&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Env</span><span class="p">(</span><span class="s2">&#34;stg&#34;</span><span class="p">,</span> <span class="nc">EnvMode</span><span class="p">.</span><span class="n">Uat</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s2">&#34;STG environment (demo)&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Env</span><span class="p">(</span><span class="s2">&#34;pro&#34;</span><span class="p">,</span> <span class="nc">EnvMode</span><span class="p">.</span><span class="n">Pro</span> <span class="p">,</span> <span class="n">desc</span> <span class="p">=</span> <span class="s2">&#34;LIVE environment&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 2: Use the default list of environments ( same as above )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">envs</span> <span class="p">=</span> <span class="n">slatekit</span><span class="p">.</span><span class="n">common</span><span class="p">.</span><span class="n">envs</span><span class="p">.</span><span class="nc">Envs</span><span class="p">.</span><span class="n">defaults</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 3: Get one of the environments by api
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">qa1</span> <span class="p">=</span> <span class="n">envs</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s2">&#34;qa1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">qa1</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 4: Validate one of the environments by api
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">envs</span><span class="p">.</span><span class="n">isValid</span><span class="p">(</span><span class="s2">&#34;qa2&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 5: Current environment ( nothing - none selected )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">envs</span><span class="p">.</span><span class="n">current</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 6: Select an environment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">envs2</span> <span class="p">=</span> <span class="n">envs</span><span class="p">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&#34;dev&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 7: Get info about currently selected environment
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">name</span>    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isDev</span>   <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isQat</span>    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isUat</span>   <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">isPro</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="n">envs2</span><span class="p">.</span><span class="n">current</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
 
       </div>

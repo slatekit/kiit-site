@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="console">Console</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="console">Console</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,117 +189,107 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.console.*</span>
-
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.common.DateTime</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.console.*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.DateTime</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="n">n</span><span class="p">/</span><span class="n">a</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// ConsoleWriter with semantic ( title, url, error, success, highlight ) writing.
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">writer</span> <span class="p">=</span> <span class="n">SemanticConsole</span><span class="p">()</span>
-
-    <span class="c1">// Case 1: Title - prints text in title format ( CAPS + Color Cyan )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">&#34;title is in CAPS&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 2: Subtitle ( Color Cyan )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">subTitle</span><span class="p">(</span><span class="s">&#34;subtitle is in color cyan&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 3: Url ( Color blue )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">url</span><span class="p">(</span><span class="s">&#34;url is in blue&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 4: Highlight ( Color Yellow )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">highlight</span><span class="p">(</span><span class="s">&#34;highlight is in color&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 5: Subtitle ( Color Red )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">important</span><span class="p">(</span><span class="s">&#34;important is red&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 6: Subtitle ( Color Red )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">failure</span><span class="p">(</span><span class="s">&#34;error shown in red&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 7: Subtitle ( Color Green )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="s">&#34;success is in green&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 8: Subtitle ( Color Green )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s">&#34;normal text&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 9: Tab
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">tab</span><span class="p">()</span>
-
-    <span class="c1">// Case 10: New line
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">line</span><span class="p">()</span>
-
-    <span class="c1">// Case 11: Label &#34;Key :&#34;
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">label</span><span class="p">(</span><span class="s">&#34;Key&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Case 12: Key/Value = &#34;Name : Superman&#34;
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">keyValue</span><span class="p">(</span><span class="s">&#34;Name&#34;</span><span class="p">,</span> <span class="s">&#34;Superman&#34;</span><span class="p">)</span>
-    <span class="n">writer</span><span class="p">.</span><span class="n">lines</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
-
-    <span class="c1">// Case 13: List of items ( unordered and ordered )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">list</span><span class="p">(</span> <span class="n">listOf</span><span class="p">(</span> <span class="m">1</span><span class="p">,</span> <span class="k">true</span> <span class="p">,</span> <span class="s">&#34;www.slatekit.com&#34;</span><span class="p">,</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">(),</span> <span class="m">12.34</span> <span class="p">),</span> <span class="k">true</span><span class="p">)</span>
-    <span class="n">writer</span><span class="p">.</span><span class="n">list</span><span class="p">(</span> <span class="n">listOf</span><span class="p">(</span> <span class="m">2</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s">&#34;www.codehelix.co&#34;</span><span class="p">,</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">(),</span> <span class="m">56.78</span> <span class="p">),</span> <span class="k">true</span><span class="p">)</span>
-
-    <span class="c1">// Case 14: Supply a list of items to print specifying the semantic mode ( title, url, etc )
-</span><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">writeItems</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
-      <span class="n">SemanticOutput</span><span class="p">(</span><span class="n">SemanticText</span><span class="p">.</span><span class="n">Title</span>     <span class="p">,</span> <span class="s">&#34;About App&#34;</span>                   <span class="p">,</span> <span class="k">true</span><span class="p">),</span>
-      <span class="n">SemanticOutput</span><span class="p">(</span><span class="n">SemanticText</span><span class="p">.</span><span class="n">Subtitle</span>  <span class="p">,</span> <span class="s">&#34;Example of Console component&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">),</span>
-      <span class="n">SemanticOutput</span><span class="p">(</span><span class="n">SemanticText</span><span class="p">.</span><span class="n">Url</span>       <span class="p">,</span> <span class="s">&#34;http://www.slatekit.com&#34;</span>     <span class="p">,</span> <span class="k">true</span><span class="p">),</span>
-      <span class="n">SemanticOutput</span><span class="p">(</span><span class="n">SemanticText</span><span class="p">.</span><span class="n">Highlight</span> <span class="p">,</span> <span class="s">&#34;visit us for more info&#34;</span>      <span class="p">,</span> <span class="k">true</span><span class="p">)</span>
-    <span class="p">))</span>
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// ConsoleWriter with semantic ( title, url, error, success, highlight ) writing.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">writer</span> <span class="p">=</span> <span class="n">SemanticConsole</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 1: Title - prints text in title format ( CAPS + Color Cyan )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;title is in CAPS&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 2: Subtitle ( Color Cyan )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">subTitle</span><span class="p">(</span><span class="s2">&#34;subtitle is in color cyan&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 3: Url ( Color blue )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&#34;url is in blue&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 4: Highlight ( Color Yellow )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">highlight</span><span class="p">(</span><span class="s2">&#34;highlight is in color&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 5: Subtitle ( Color Red )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">important</span><span class="p">(</span><span class="s2">&#34;important is red&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 6: Subtitle ( Color Red )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">failure</span><span class="p">(</span><span class="s2">&#34;error shown in red&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 7: Subtitle ( Color Green )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="s2">&#34;success is in green&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 8: Subtitle ( Color Green )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&#34;normal text&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 9: Tab
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">tab</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 10: New line
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">line</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 11: Label &#34;Key :&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">label</span><span class="p">(</span><span class="s2">&#34;Key&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 12: Key/Value = &#34;Name : Superman&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">keyValue</span><span class="p">(</span><span class="s2">&#34;Name&#34;</span><span class="p">,</span> <span class="s2">&#34;Superman&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">writer</span><span class="p">.</span><span class="n">lines</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 13: List of items ( unordered and ordered )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">list</span><span class="p">(</span> <span class="n">listOf</span><span class="p">(</span> <span class="m">1</span><span class="p">,</span> <span class="k">true</span> <span class="p">,</span> <span class="s2">&#34;www.slatekit.com&#34;</span><span class="p">,</span> <span class="nc">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">(),</span> <span class="m">12.34</span> <span class="p">),</span> <span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">writer</span><span class="p">.</span><span class="n">list</span><span class="p">(</span> <span class="n">listOf</span><span class="p">(</span> <span class="m">2</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="s2">&#34;www.codehelix.co&#34;</span><span class="p">,</span> <span class="nc">DateTime</span><span class="p">.</span><span class="n">now</span><span class="p">(),</span> <span class="m">56.78</span> <span class="p">),</span> <span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Case 14: Supply a list of items to print specifying the semantic mode ( title, url, etc )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">writer</span><span class="p">.</span><span class="n">writeItems</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">SemanticOutput</span><span class="p">(</span><span class="nc">SemanticText</span><span class="p">.</span><span class="n">Title</span>     <span class="p">,</span> <span class="s2">&#34;About App&#34;</span>                   <span class="p">,</span> <span class="k">true</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="n">SemanticOutput</span><span class="p">(</span><span class="nc">SemanticText</span><span class="p">.</span><span class="n">Subtitle</span>  <span class="p">,</span> <span class="s2">&#34;Example of Console component&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="n">SemanticOutput</span><span class="p">(</span><span class="nc">SemanticText</span><span class="p">.</span><span class="n">Url</span>       <span class="p">,</span> <span class="s2">&#34;http://www.slatekit.com&#34;</span>     <span class="p">,</span> <span class="k">true</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="n">SemanticOutput</span><span class="p">(</span><span class="nc">SemanticText</span><span class="p">.</span><span class="n">Highlight</span> <span class="p">,</span> <span class="s2">&#34;visit us for more info&#34;</span>      <span class="p">,</span> <span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">))</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="output">Output</h2>
-
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="n">TITLE</span> <span class="n">IS</span> <span class="n">IN</span> <span class="n">CAPS</span>
-  <span class="n">subtitle</span> <span class="k">is</span> <span class="k">in</span> <span class="n">color</span> <span class="n">cyan</span>
-  <span class="n">url</span> <span class="k">is</span> <span class="k">in</span> <span class="n">blue</span>
-  <span class="n">highlight</span> <span class="k">is</span> <span class="k">in</span> <span class="n">color</span>
-  <span class="n">important</span> <span class="k">is</span> <span class="n">red</span>
-  <span class="n">error</span> <span class="n">shown</span> <span class="k">in</span> <span class="n">red</span>
-  <span class="n">success</span> <span class="k">is</span> <span class="k">in</span> <span class="n">green</span>
-
-  <span class="n">Key</span>
-  <span class="n">Name</span> <span class="p">=</span>  <span class="n">Superman</span>
-
-
-  <span class="n">ABOUT</span> <span class="n">APP</span>
-  <span class="n">Example</span> <span class="n">of</span> <span class="n">Console</span> <span class="n">component</span>
-  <span class="n">http</span><span class="p">:</span><span class="c1">//www.slatekit.com
-</span><span class="c1"></span>  <span class="n">visit</span> <span class="n">us</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">  <span class="n">TITLE</span> <span class="n">IS</span> <span class="n">IN</span> <span class="n">CAPS</span>
+</span></span><span class="line"><span class="cl">  <span class="n">subtitle</span> <span class="k">is</span> <span class="k">in</span> <span class="n">color</span> <span class="n">cyan</span>
+</span></span><span class="line"><span class="cl">  <span class="n">url</span> <span class="k">is</span> <span class="k">in</span> <span class="n">blue</span>
+</span></span><span class="line"><span class="cl">  <span class="n">highlight</span> <span class="k">is</span> <span class="k">in</span> <span class="n">color</span>
+</span></span><span class="line"><span class="cl">  <span class="n">important</span> <span class="k">is</span> <span class="n">red</span>
+</span></span><span class="line"><span class="cl">  <span class="n">error</span> <span class="n">shown</span> <span class="k">in</span> <span class="n">red</span>
+</span></span><span class="line"><span class="cl">  <span class="n">success</span> <span class="k">is</span> <span class="k">in</span> <span class="n">green</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Key</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Name</span> <span class="p">=</span>  <span class="n">Superman</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">ABOUT</span> <span class="n">APP</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Example</span> <span class="n">of</span> <span class="n">Console</span> <span class="n">component</span>
+</span></span><span class="line"><span class="cl">  <span class="n">http</span><span class="p">:</span><span class="c1">//www.slatekit.com
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">visit</span> <span class="n">us</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span></span></span></code></pre></div>
 
       </div>
     </section>  

@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="auth">Auth</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="auth">Auth</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,67 +189,59 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.auth.AuthConsole</span>
-<span class="k">import</span> <span class="nn">slatekit.common.auth.User</span>
-
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.auth.AuthConsole</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.auth.User</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Setup: Setup the Auth wrapper with the user to inspect info about the user
-</span><span class="c1"></span>    <span class="c1">// NOTES:
-</span><span class="c1"></span>    <span class="c1">// * 1. This component does NOT handle any actual login/logout/authorization features.
-</span><span class="c1"></span>    <span class="c1">// * 2. This set of classes are only used to inspect information about a user.
-</span><span class="c1"></span>    <span class="c1">// * 3. Since authorization is a fairly complex feature with implementations such as
-</span><span class="c1"></span>    <span class="c1">// *    OAuth, Social Auth, Slate Kit has purposely left out the Authentication to more reliable
-</span><span class="c1"></span>    <span class="c1">// *    libraries and frameworks.
-</span><span class="c1"></span>    <span class="c1">// * 4. The SlateKit.Api component, while supporting basic api &#34;Keys&#34; based authentication,
-</span><span class="c1"></span>    <span class="c1">// *    and a roles based authentication, it leaves the login/logout and actual generating
-</span><span class="c1"></span>    <span class="c1">// *    of tokens to libraries such as OAuth.
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">user2</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span> <span class="s">&#34;2&#34;</span><span class="p">,</span> <span class="s">&#34;john doe&#34;</span><span class="p">,</span> <span class="s">&#34;john&#34;</span><span class="p">,</span> <span class="s">&#34;doe&#34;</span><span class="p">,</span> <span class="s">&#34;jdoe@gmail.com&#34;</span><span class="p">,</span> <span class="s">&#34;123-456-7890&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">auth</span> <span class="p">=</span> <span class="n">AuthConsole</span><span class="p">(</span><span class="n">isAuthenticated</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="n">user</span> <span class="p">=</span> <span class="n">user2</span><span class="p">,</span> <span class="n">roles</span> <span class="p">=</span> <span class="s">&#34;admin&#34;</span><span class="p">)</span>
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Setup: Setup the Auth wrapper with the user to inspect info about the user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// NOTES:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// * 1. This component does NOT handle any actual login/logout/authorization features.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// * 2. This set of classes are only used to inspect information about a user.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// * 3. Since authorization is a fairly complex feature with implementations such as
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// *    OAuth, Social Auth, Slate Kit has purposely left out the Authentication to more reliable
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// *    libraries and frameworks.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// * 4. The SlateKit.Api component, while supporting basic api &#34;Keys&#34; based authentication,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// *    and a roles based authentication, it leaves the login/logout and actual generating
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// *    of tokens to libraries such as OAuth.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">user2</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span> <span class="s2">&#34;2&#34;</span><span class="p">,</span> <span class="s2">&#34;john doe&#34;</span><span class="p">,</span> <span class="s2">&#34;john&#34;</span><span class="p">,</span> <span class="s2">&#34;doe&#34;</span><span class="p">,</span> <span class="s2">&#34;jdoe@gmail.com&#34;</span><span class="p">,</span> <span class="s2">&#34;123-456-7890&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">auth</span> <span class="p">=</span> <span class="n">AuthConsole</span><span class="p">(</span><span class="n">isAuthenticated</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span> <span class="n">user</span> <span class="p">=</span> <span class="n">user2</span><span class="p">,</span> <span class="n">roles</span> <span class="p">=</span> <span class="s2">&#34;admin&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// CASE 1: Use the auth to check user info
-</span><span class="c1"></span>    <span class="n">println</span> <span class="p">(</span><span class="s">&#34;Checking auth info in desktop/local mode&#34;</span> <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;user info         : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">user</span>                   <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;user id           : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">userId</span>                 <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;is authenticated  : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isAuthenticated</span>        <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;is email verified : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isEmailVerified</span>        <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;is phone verified : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isPhoneVerified</span>        <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;is a moderator    : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isInRole</span><span class="p">(</span> <span class="s">&#34;moderator&#34;</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span> <span class="p">(</span> <span class="s">&#34;is an admin       : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isInRole</span><span class="p">(</span> <span class="s">&#34;admin&#34;</span> <span class="p">)</span>    <span class="p">)</span>
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// CASE 1: Use the auth to check user info
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span> <span class="p">(</span><span class="s2">&#34;Checking auth info in desktop/local mode&#34;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;user info         : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">user</span>                   <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;user id           : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">userId</span>                 <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;is authenticated  : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isAuthenticated</span>        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;is email verified : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isEmailVerified</span>        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;is phone verified : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isPhoneVerified</span>        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;is a moderator    : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isInRole</span><span class="p">(</span> <span class="s2">&#34;moderator&#34;</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span> <span class="p">(</span> <span class="s2">&#34;is an admin       : &#34;</span> <span class="p">+</span> <span class="n">auth</span><span class="p">.</span><span class="n">isInRole</span><span class="p">(</span> <span class="s2">&#34;admin&#34;</span> <span class="p">)</span>    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
 
       </div>

@@ -175,15 +175,10 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
+                <h1 id="overview">Overview</h1>
 <p>The Files component is an abstraction of file storage with a default implementation using <strong>AWS S3</strong>. This also provides a much simplified API while making the underlying implementation swappable.</p>
-
 <h1 id="status">Status</h1>
-
-<p>This component is currently <strong>stable</strong>. Following limitations, current work, planned features apply.
+<p>This component is currently <strong>stable</strong>. Following limitations, current work, planned features apply.</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Feature</strong></td>
@@ -191,51 +186,44 @@
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong>Binary</strong></td>
+        <td>**Binary**</td>
         <td>In-Progress</td>
         <td>Ability to store/retrieve binary files. ( you can still use the underlying AWS provider to so )</td>
     </tr>
     <tr>
-        <td><strong>Names</strong></td>
+        <td>**Names**</td>
         <td>Upcoming</td>
         <td>Ability to enforce a naming convention on the file names</td>
     </tr>
     <tr>
-        <td><strong>Async</strong></td>
+        <td>**Async**</td>
         <td>Upcoming</td>
         <td>Async support via Kotlin suspend/coroutines and Java AWS 2.0 SDK</td>
     </tr>
     <tr>
-        <td><strong>URI</strong></td>
+        <td>**URI**</td>
         <td>Upcoming</td>
         <td>Ability to use Slate Kit Uri for explicit references to file paths</td>
     </tr>
 </table>
 <br/>
-
-<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="install">Install</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="c1">// other repositories
-</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other dependencies ...
-</span><span class="c1"></span>
-        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cloud:1.0.0&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/>
-
-<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cloud:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="sources">Sources</h1>
-
-
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -266,103 +254,89 @@
     <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cloud/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
-
 <br/>
-
-<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="imports">Imports</h1>
-
-<p>Refer to <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Cloud_Files.kt" >Example_Cloud_Files.kt</a> for all imports.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Required
-</span><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.cloud.aws.S3</span>
-    <span class="k">import</span> <span class="nn">slatekit.core.files.CloudFiles</span>
-
-    <span class="c1">// Optional ( For examples)
-</span><span class="c1"></span>    <span class="k">import</span> <span class="nn">com.amazonaws.auth.profile.ProfileCredentialsProvider</span>
-    <span class="k">import</span> <span class="nn">com.amazonaws.regions.Regions</span></code></pre></div></p>
-
-<br/>
-
-<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="setup">Setup</h1>
-
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
-    <span class="c1">// Setup 1: Use the default aws config file in &#34;{user_dir}/.aws/credentials&#34;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">files1</span> <span class="p">=</span> <span class="n">S3</span><span class="p">(</span><span class="n">credentials</span> <span class="p">=</span> <span class="n">ProfileCredentialsProvider</span><span class="p">().</span><span class="n">credentials</span><span class="p">,</span>
-            <span class="n">region</span> <span class="p">=</span> <span class="n">Regions</span><span class="p">.</span><span class="n">US_EAST_1</span><span class="p">,</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s">&#34;slatekit-unit-tests&#34;</span><span class="p">,</span> <span class="n">createBucket</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span>
-
-    <span class="c1">// Setup 2: Use the default aws config file in &#34;{user_dir}/.aws/credentials&#34;
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">files2</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">region</span> <span class="p">=</span> <span class="s">&#34;us-west-2&#34;</span><span class="p">,</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s">&#34;slatekit-unit-tests&#34;</span><span class="p">,</span> <span class="n">createBucket</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span>
-
-    <span class="c1">// Setup 3: Use the config &#34;{user_id}/myapp/conf/files.conf&#34;
-</span><span class="c1"></span>    <span class="c1">// Specify the api key section as &#34;files&#34;
-</span><span class="c1"></span>    <span class="cm">/**
-</span><span class="cm">     *  SAMPLE CONFIG:
-</span><span class="cm">     *  files = true
-</span><span class="cm">     *  files.key  = AWS_KEY_HERE
-</span><span class="cm">     *  files.pass = AWS_PASSWORD_HERE
-</span><span class="cm">     *  files.env  = dev
-</span><span class="cm">     *  files.tag  = samples
-</span><span class="cm">     */</span>
-    <span class="k">val</span> <span class="py">files3</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">region</span> <span class="p">=</span> <span class="s">&#34;us-west-2&#34;</span><span class="p">,</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s">&#34;slatekit-unit-tests&#34;</span><span class="p">,</span> <span class="n">createBucket</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
-            <span class="n">confPath</span> <span class="p">=</span> <span class="s">&#34;~/.slatekit/conf/files.conf&#34;</span><span class="p">,</span> <span class="n">confSection</span> <span class="p">=</span> <span class="s">&#34;files&#34;</span><span class="p">)</span>
-
-    <span class="k">val</span> <span class="py">files</span><span class="p">:</span><span class="n">CloudFiles</span> <span class="p">=</span> <span class="n">files2</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="n">files1</span> <span class="p">}</span>
-     </code></pre></div>
-
-<br/>
-
-<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="usage">Usage</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
-    <span class="c1">// Use case 1: Creates bucket if configured
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">init</span><span class="p">()</span>
-
-    <span class="c1">// NOTES: 
-</span><span class="c1"></span>    <span class="c1">// 1. All operations use the slate kit Result&lt;T,E&gt; type
-</span><span class="c1"></span>    <span class="c1">// 2. All operations return a slate kit Try&lt;T&gt; = Result&lt;T, Exception&gt;
-</span><span class="c1"></span>    <span class="c1">// Use case 2: create using just name and content
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">files</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 1&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 3: update using just name and content
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 2&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 4: create using folder and file name
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 1&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 5: update using folder and file name
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;content 2&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 6: get file as a text using just name
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">getAsText</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 7: get file using folder and file name
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">getAsText</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 8: download file to local folder
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;~/dev/temp/&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 9: download using folder and file name to local folder
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">,</span> <span class="s">&#34;~/dev/temp&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 10: delete file by just the name
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">&#34;file-1&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 11: delete using folder and name
-</span><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s">&#34;file-1&#34;</span><span class="p">)</span>
-      </code></pre></div>
-<br/>
-
-<a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
+<h1 id="imports">Imports</h1>
+<p>Refer to <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Cloud_Files.kt" >Example_Cloud_Files.kt</a> for all imports.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Required
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.cloud.aws.S3</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.core.files.CloudFiles</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Optional ( For examples)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">import</span> <span class="nn">com.amazonaws.auth.profile.ProfileCredentialsProvider</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">com.amazonaws.regions.Regions</span></span></span></code></pre></div></p>
+<br/>
+<p><a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+<h1 id="setup">Setup</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 1: Use the default aws config file in &#34;{user_dir}/.aws/credentials&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">files1</span> <span class="p">=</span> <span class="n">S3</span><span class="p">(</span><span class="n">credentials</span> <span class="p">=</span> <span class="n">ProfileCredentialsProvider</span><span class="p">().</span><span class="n">credentials</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">region</span> <span class="p">=</span> <span class="nc">Regions</span><span class="p">.</span><span class="n">US_EAST_1</span><span class="p">,</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s2">&#34;slatekit-unit-tests&#34;</span><span class="p">,</span> <span class="n">createBucket</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 2: Use the default aws config file in &#34;{user_dir}/.aws/credentials&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">files2</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">region</span> <span class="p">=</span> <span class="s2">&#34;us-west-2&#34;</span><span class="p">,</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s2">&#34;slatekit-unit-tests&#34;</span><span class="p">,</span> <span class="n">createBucket</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 3: Use the config &#34;{user_id}/myapp/conf/files.conf&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Specify the api key section as &#34;files&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *  SAMPLE CONFIG:
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *  files = true
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *  files.key  = AWS_KEY_HERE
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *  files.pass = AWS_PASSWORD_HERE
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *  files.env  = dev
+</span></span></span><span class="line"><span class="cl"><span class="cm">     *  files.tag  = samples
+</span></span></span><span class="line"><span class="cl"><span class="cm">     */</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">files3</span> <span class="p">=</span> <span class="n">S3</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">region</span> <span class="p">=</span> <span class="s2">&#34;us-west-2&#34;</span><span class="p">,</span> <span class="n">bucket</span> <span class="p">=</span> <span class="s2">&#34;slatekit-unit-tests&#34;</span><span class="p">,</span> <span class="n">createBucket</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">confPath</span> <span class="p">=</span> <span class="s2">&#34;~/.slatekit/conf/files.conf&#34;</span><span class="p">,</span> <span class="n">confSection</span> <span class="p">=</span> <span class="s2">&#34;files&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">files</span><span class="p">:</span><span class="n">CloudFiles</span> <span class="p">=</span> <span class="n">files2</span><span class="p">.</span><span class="n">getOrElse</span> <span class="p">{</span> <span class="n">files1</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div>
+<br/>
+<p><a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+<h1 id="usage">Usage</h1>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 1: Creates bucket if configured
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="k">init</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// NOTES: 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. All operations use the slate kit Result&lt;T,E&gt; type
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 2. All operations return a slate kit Try&lt;T&gt; = Result&lt;T, Exception&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Use case 2: create using just name and content
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1</span><span class="p">:</span><span class="n">Try</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">files</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&#34;file-1&#34;</span><span class="p">,</span> <span class="s2">&#34;content 1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 3: update using just name and content
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;file-1&#34;</span><span class="p">,</span> <span class="s2">&#34;content 2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 4: create using folder and file name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="s2">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s2">&#34;file-1&#34;</span><span class="p">,</span> <span class="s2">&#34;content 1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 5: update using folder and file name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s2">&#34;file-1&#34;</span><span class="p">,</span> <span class="s2">&#34;content 2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 6: get file as a text using just name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">getAsText</span><span class="p">(</span><span class="s2">&#34;file-1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 7: get file using folder and file name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">getAsText</span><span class="p">(</span><span class="s2">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s2">&#34;file-1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 8: download file to local folder
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&#34;file-1&#34;</span><span class="p">,</span> <span class="s2">&#34;~/dev/temp/&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 9: download using folder and file name to local folder
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s2">&#34;file-1&#34;</span><span class="p">,</span> <span class="s2">&#34;~/dev/temp&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 10: delete file by just the name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&#34;file-1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 11: delete using folder and name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">files</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&#34;folder-1&#34;</span><span class="p">,</span> <span class="s2">&#34;file-1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      </span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/files#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <script>
     var archComponent = {
         name: "Files",

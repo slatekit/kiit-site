@@ -175,15 +175,10 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
+                <h1 id="overview">Overview</h1>
 <p>Slate Kit contains 3 modules for working with <strong>data and databases</strong>. These allow you to leverage existing code for low-level database calls, mid-level interfaces/abstractions for Entities/Repositories/Services or high-level ORM functionality.
 <br/><br/></p>
-
 <h1 id="goals">Goals</h1>
-
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Goal</strong></td>
@@ -202,13 +197,10 @@
         <td>Provide a light-weight ORM for both Android ( Sqlite ) and Server. </td>
     </tr>
 </table>
-
-<br/><br/>
-
+<p><br/><br/></p>
 <h1 id="status">Status</h1>
-
 <p>This component is currently stable and works with <strong>MySql</strong>.
-Future versions will include support for:
+Future versions will include support for:</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Feature</strong></td>
@@ -233,45 +225,37 @@ Future versions will include support for:
     <tr>
         <td><strong>Exposed</strong></td>
         <td>Future</td>
-        <td>Integration with the <strong>JetBrains Exposed ORM</strong> instead of Slate Kit ORM</td>
+        <td>Integration with the **JetBrains Exposed ORM** instead of Slate Kit ORM</td>
     </tr>
-</table></p>
-
+</table>
 <br/>
-
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="install">Install</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="c1">// other repositories
-</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other dependencies ...
-</span><span class="c1"></span>
-        <span class="c1">// Common code for all components
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:1.0.0&#39;</span>
-
-        <span class="c1">// For database calls to work with JDBC
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-db:1.0.0&#39;</span>
-
-        <span class="c1">// Entities / Repositories / Service interfaces and defaults
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-entities:1.0.0&#39;</span>
-
-        <span class="c1">// ORM functionality to map to/from models and records and query
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-orm:1.0.0&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/>
-
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
+<h1 id="install">Install</h1>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Common code for all components
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// For database calls to work with JDBC
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-db:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Entities / Repositories / Service interfaces and defaults
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-entities:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ORM functionality to map to/from models and records and query
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-orm:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <h1 id="sources">Sources</h1>
-
-
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -302,25 +286,18 @@ Future versions will include support for:
     <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/build.gradle">build.gradle</a> for more info. </td>
   </tr>
 </table>
-
 <br/>
-
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="example">Example</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">fun</span> <span class="nf">quick_sample</span><span class="p">()</span> <span class="p">{</span>
-        
-    <span class="p">}</span></code></pre></div>
-<br/>
-
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
+<h1 id="example">Example</h1>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">fun</span> <span class="nf">quick</span><span class="n">_sample</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <h1 id="guide">Guide</h1>
-
-<p><table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped">
     <tr>
         <td><strong>Name</strong></td>
         <td><strong>Description</strong></td>
@@ -333,8 +310,8 @@ Future versions will include support for:
     </tr>
     <tr>
         <td><strong>2. Databases</strong> </td>
-        <td>Low-level database calls and operations</td>
-        <td><a href="arch/data/#databases" class="more"><span class="btn btn-primary">more</span></a></td><br />
+        <td>Low-level database calls and operations</td> 
+        <td><a href="arch/data/#databases" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
         <td><strong>3. Records</strong></td>
@@ -383,459 +360,390 @@ Future versions will include support for:
     </tr>
 </table>
 <br/>
-
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h2 id="connections">Connections</h2>
-
 <p>You can setup connections different ways from explicit creation to loading from configuration settings. This uses <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/DbCon.kt" >DbCon</a>. The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/Connections.kt" >Connections</a> is used to store multiple connections by name.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Connection
-</span><span class="c1"></span>    <span class="c1">// 1. Explicit creation
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="s">&#34;pswd3210&#34;</span><span class="p">)</span>
-
-    <span class="c1">// 2. From config
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cfg</span> <span class="p">=</span> <span class="n">Config</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;env.dev.conf&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">con2</span> <span class="p">=</span> <span class="n">cfg</span><span class="p">.</span><span class="n">dbCon</span><span class="p">(</span><span class="s">&#34;db&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Connections ( collection of multiple connections )
-</span><span class="c1"></span>    <span class="c1">// 1. From single connection
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cons1</span> <span class="p">=</span> <span class="n">Connections</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
-
-    <span class="c1">// 2. From config: Shortcut for Connections.of(conf.dbCon(&#34;db&#34;))
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cons2</span> <span class="p">=</span> <span class="n">Connections</span><span class="p">.</span><span class="n">from</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
-
-    <span class="c1">// 3. From multiple named connections
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">cons3</span> <span class="p">=</span> <span class="n">Connections</span><span class="p">.</span><span class="n">named</span><span class="p">(</span>
-            <span class="n">listOf</span><span class="p">(</span>
-                    <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;db1&#34;</span><span class="p">,</span> <span class="n">con1</span><span class="p">),</span>
-                    <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;db2&#34;</span><span class="p">,</span> <span class="n">con2</span><span class="p">)</span>
-            <span class="p">))</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. Explicit creation
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="nc">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span> <span class="s2">&#34;pswd3210&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 2. From config
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">cfg</span> <span class="p">=</span> <span class="nc">Config</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;env.dev.conf&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">con2</span> <span class="p">=</span> <span class="n">cfg</span><span class="p">.</span><span class="n">dbCon</span><span class="p">(</span><span class="s2">&#34;db&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Connections ( collection of multiple connections )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. From single connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">cons1</span> <span class="p">=</span> <span class="nc">Connections</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 2. From config: Shortcut for Connections.of(conf.dbCon(&#34;db&#34;))
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">cons2</span> <span class="p">=</span> <span class="nc">Connections</span><span class="p">.</span><span class="n">from</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 3. From multiple named connections
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">cons3</span> <span class="p">=</span> <span class="nc">Connections</span><span class="p">.</span><span class="n">named</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;db1&#34;</span><span class="p">,</span> <span class="n">con1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;db2&#34;</span><span class="p">,</span> <span class="n">con2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">))</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="databases">Databases</h2>
-
 <p>The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/IDb.kt" >IDb</a> interface provides a thin abstraction over data access calls, particularly JDBC. This makes it useful for abstracting data access to both Server side database calls via JDBC and Android database calls to Sqlite. Another benefit is facilitating unit-testing/mocking of other data related components in Slate Kit. The interface and supporting implementation for JDBC <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/Db.kt" >Db</a> support the typical operations to perform <strong>execute, update, query, scalar, stored proc</strong> calls.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="s">&#34;pswd3210&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
-
-    <span class="c1">// Inserts
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">id1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&#34;insert into `city`(`name`) values( &#39;ny&#39; )&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">id2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s">&#34;insert into `city`(`name`) values( ? )&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;ny&#34;</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">id3</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insertGetId</span><span class="p">(</span><span class="s">&#34;insert into `city`(`name`) values( ? )&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;ny&#34;</span><span class="p">)).</span><span class="n">toLong</span><span class="p">()</span>
-
-    <span class="c1">// Updates
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">updated1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;update `city` set `alias` = &#39;nyc&#39; where id = 2&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">updated2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;update `city` set `alias` = &#39;nyc&#39; where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
-
-    <span class="c1">// Deletes
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">deleted1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;delete from `city` where id = 2&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">deleted2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s">&#34;delete from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span>
-
-    <span class="c1">// Procs
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">procUpdate1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callUpdate</span><span class="p">(</span><span class="s">&#34;dbtests_activate_by_id&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">procQuery1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callQuery</span><span class="p">(</span><span class="s">&#34;dbtests_max_by_id&#34;</span><span class="p">,</span>
-            <span class="n">callback</span> <span class="p">=</span> <span class="p">{</span> <span class="n">rs</span> <span class="p">-&gt;</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">},</span> <span class="n">inputs</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
-
-    <span class="c1">// Queries ( mapOne, mapMany )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">city1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapOne</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;(</span><span class="s">&#34;select * from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span> <span class="p">{</span> <span class="n">rs</span> <span class="p">-&gt;</span>
-        <span class="n">City</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;alias&#34;</span><span class="p">))</span>
-    <span class="p">}</span>
-    <span class="k">val</span> <span class="py">city2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapAll</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;(</span><span class="s">&#34;select * from `city` where id &lt; ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span> <span class="p">{</span> <span class="n">rs</span> <span class="p">-&gt;</span>
-        <span class="n">City</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;alias&#34;</span><span class="p">))</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Scalar calls
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">total1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarBool</span><span class="p">(</span><span class="s">&#34;select isActive from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarInt</span><span class="p">(</span><span class="s">&#34;select age from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total3</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLong</span><span class="p">(</span><span class="s">&#34;select account from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total4</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarFloat</span><span class="p">(</span><span class="s">&#34;select salary from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total5</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarDouble</span><span class="p">(</span><span class="s">&#34;select total from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total6</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarString</span><span class="p">(</span><span class="s">&#34;select email from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total7</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDate</span><span class="p">(</span><span class="s">&#34;select startDate from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total8</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalTime</span><span class="p">(</span><span class="s">&#34;select startHour from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total9</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDateTime</span><span class="p">(</span><span class="s">&#34;select registered from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">total10</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarZonedDateTime</span><span class="p">(</span><span class="s">&#34;select activated from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="nc">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span> <span class="s2">&#34;pswd3210&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Inserts
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">id1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;insert into `city`(`name`) values( &#39;ny&#39; )&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">id2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;insert into `city`(`name`) values( ? )&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;ny&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">id3</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">insertGetId</span><span class="p">(</span><span class="s2">&#34;insert into `city`(`name`) values( ? )&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;ny&#34;</span><span class="p">)).</span><span class="n">toLong</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Updates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">updated1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;update `city` set `alias` = &#39;nyc&#39; where id = 2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">updated2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;update `city` set `alias` = &#39;nyc&#39; where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Deletes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">deleted1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;delete from `city` where id = 2&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">deleted2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="s2">&#34;delete from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Procs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">procUpdate1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callUpdate</span><span class="p">(</span><span class="s2">&#34;dbtests_activate_by_id&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">procQuery1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">callQuery</span><span class="p">(</span><span class="s2">&#34;dbtests_max_by_id&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">callback</span> <span class="p">=</span> <span class="p">{</span> <span class="n">rs</span> <span class="o">-&gt;</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="m">0</span><span class="p">)</span> <span class="p">},</span> <span class="n">inputs</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="n">id2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Queries ( mapOne, mapMany )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">city1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapOne</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;(</span><span class="s2">&#34;select * from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span> <span class="p">{</span> <span class="n">rs</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">City</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;alias&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">city2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapAll</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;(</span><span class="s2">&#34;select * from `city` where id &lt; ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">2</span><span class="p">))</span> <span class="p">{</span> <span class="n">rs</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">City</span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">),</span> <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;alias&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Scalar calls
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">total1</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarBool</span><span class="p">(</span><span class="s2">&#34;select isActive from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total2</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarInt</span><span class="p">(</span><span class="s2">&#34;select age from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total3</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLong</span><span class="p">(</span><span class="s2">&#34;select account from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total4</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarFloat</span><span class="p">(</span><span class="s2">&#34;select salary from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total5</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarDouble</span><span class="p">(</span><span class="s2">&#34;select total from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total6</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarString</span><span class="p">(</span><span class="s2">&#34;select email from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total7</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDate</span><span class="p">(</span><span class="s2">&#34;select startDate from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total8</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalTime</span><span class="p">(</span><span class="s2">&#34;select startHour from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total9</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarLocalDateTime</span><span class="p">(</span><span class="s2">&#34;select registered from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">total10</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">getScalarZonedDateTime</span><span class="p">(</span><span class="s2">&#34;select activated from users where userid = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="records">Records</h2>
-
 <p>Because the Database abstracts over JDBC, there is also a corresponding interface <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Record.kt" >Record</a> to abstract over JDBC ResultSets ( this is particularly useful for Android ). The implementation for JDBC is <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/RecordSet.kt" >RecordSet</a>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="c1">// Sample connection/DB
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span> <span class="s">&#34;pswd3210&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
-
-    <span class="c1">// Record via wrapped JDBC ResultSet
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">city</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapOne</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;(</span><span class="s">&#34;select * from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span> <span class="p">{</span> <span class="n">rs</span><span class="p">:</span><span class="n">Record</span> <span class="p">-&gt;</span>
-        <span class="n">City</span><span class="p">(</span>   <span class="n">rs</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">),</span>
-                <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">),</span>
-                <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;alias&#34;</span><span class="p">)</span>
-        <span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Simulating a Record from a list of key/value pairs
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">record</span><span class="p">:</span><span class="n">Record</span> <span class="p">=</span> <span class="n">RecordMap</span><span class="p">(</span>
-            <span class="n">ListMap</span><span class="p">(</span>
-                    <span class="n">listOf</span><span class="p">(</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">,</span> <span class="m">1L</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;uuid&#34;</span><span class="p">,</span> <span class="s">&#34;ABC&#34;</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">,</span> <span class="s">&#34;kishore@abc.com&#34;</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;isActive&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;age&#34;</span><span class="p">,</span> <span class="m">35</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;status&#34;</span><span class="p">,</span> <span class="n">Status</span><span class="p">.</span><span class="n">InActive</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;salary&#34;</span><span class="p">,</span> <span class="m">400.5</span><span class="p">),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;uid&#34;</span><span class="p">,</span> <span class="n">UUID</span><span class="p">.</span><span class="n">fromString</span><span class="p">(</span><span class="s">&#34;ad6ec896-bc1e-4430-b13c-88e3d4924a6a&#34;</span><span class="p">)),</span>
-                            <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;createdAt&#34;</span><span class="p">,</span> <span class="n">DateTimes</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="m">2017</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span>
-                            <span class="p">)</span>
-            <span class="p">)</span>
-    <span class="p">)</span>
-    
-    <span class="c1">// There are getX methods, getXOrNull, getXOrDefault
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s">&#34;isActive&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBoolOrNull</span><span class="p">(</span><span class="s">&#34;isActive&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBoolOrElse</span><span class="p">(</span><span class="s">&#34;isActive&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">))</span>
-    
-    <span class="c1">// There are several methods for various types
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s">&#34;isActive&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s">&#34;age&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getDouble</span><span class="p">(</span><span class="s">&#34;salary&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getUUID</span><span class="p">(</span><span class="s">&#34;uuid&#34;</span><span class="p">))</span>
-    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getZonedDateTime</span><span class="p">(</span><span class="s">&#34;createdAt&#34;</span><span class="p">))</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="c1">// Sample connection/DB
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="nc">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span> <span class="s2">&#34;pswd3210&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Record via wrapped JDBC ResultSet
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">city</span> <span class="p">=</span> <span class="n">db</span><span class="p">.</span><span class="n">mapOne</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;(</span><span class="s2">&#34;select * from `city` where id = ?&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">))</span> <span class="p">{</span> <span class="n">rs</span><span class="p">:</span><span class="n">Record</span> <span class="o">-&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">City</span><span class="p">(</span>   <span class="n">rs</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rs</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;alias&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Simulating a Record from a list of key/value pairs
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">record</span><span class="p">:</span><span class="n">Record</span> <span class="p">=</span> <span class="n">RecordMap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ListMap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="m">1L</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;uuid&#34;</span><span class="p">,</span> <span class="s2">&#34;ABC&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">,</span> <span class="s2">&#34;kishore@abc.com&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;isActive&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;age&#34;</span><span class="p">,</span> <span class="m">35</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;status&#34;</span><span class="p">,</span> <span class="nc">Status</span><span class="p">.</span><span class="n">InActive</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;salary&#34;</span><span class="p">,</span> <span class="m">400.5</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;uid&#34;</span><span class="p">,</span> <span class="nc">UUID</span><span class="p">.</span><span class="n">fromString</span><span class="p">(</span><span class="s2">&#34;ad6ec896-bc1e-4430-b13c-88e3d4924a6a&#34;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;createdAt&#34;</span><span class="p">,</span> <span class="nc">DateTimes</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="m">2017</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">12</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// There are getX methods, getXOrNull, getXOrDefault
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s2">&#34;isActive&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBoolOrNull</span><span class="p">(</span><span class="s2">&#34;isActive&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBoolOrElse</span><span class="p">(</span><span class="s2">&#34;isActive&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// There are several methods for various types
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getBool</span><span class="p">(</span><span class="s2">&#34;isActive&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getInt</span><span class="p">(</span><span class="s2">&#34;age&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getDouble</span><span class="p">(</span><span class="s2">&#34;salary&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getUUID</span><span class="p">(</span><span class="s2">&#34;uuid&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="n">record</span><span class="p">.</span><span class="n">getZonedDateTime</span><span class="p">(</span><span class="s2">&#34;createdAt&#34;</span><span class="p">))</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="mappers">Mappers</h2>
-
 <p>A <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Mapper.kt" >Mapper</a> simply encodes/decodes a data model to/from records. The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Value.kt" >Values</a> is simply a container for key/value pairs representing all the fields on the field that can be persisted/saved to a database. You can simply implement the mapping yourself ( explicitly without any reflection ) or use the OrmMapper ( see ORM section ) along with a schema for the Model to leverage automatic mapping.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Mapper: manual field mapping
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">mapper</span> <span class="p">=</span> <span class="k">object</span><span class="p">:</span> <span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;</span> <span class="p">{</span>
-
-        <span class="k">override</span> <span class="k">fun</span> <span class="nf">encode</span><span class="p">(</span><span class="n">model</span><span class="p">:</span><span class="n">User</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">DataAction</span><span class="p">):</span> <span class="n">Values</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">listOf</span><span class="p">(</span>
-                    <span class="n">Value</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">id</span><span class="p">),</span>
-                    <span class="n">Value</span><span class="p">(</span><span class="s">&#34;firstname&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">firstName</span><span class="p">),</span>
-                    <span class="n">Value</span><span class="p">(</span><span class="s">&#34;lastname&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">lastName</span><span class="p">),</span>
-                    <span class="n">Value</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">email</span><span class="p">)</span>
-            <span class="p">)</span>
-        <span class="p">}</span>
-
-        <span class="k">override</span> <span class="k">fun</span> <span class="nf">decode</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="n">Record</span><span class="p">):</span> <span class="n">User</span><span class="p">?</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">User</span><span class="p">(</span>
-                    <span class="n">id</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s">&#34;id&#34;</span><span class="p">),</span>
-                    <span class="n">firstName</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;firstname&#34;</span><span class="p">),</span>
-                    <span class="n">lastName</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;lastname&#34;</span><span class="p">),</span>
-                    <span class="n">email</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">)</span>
-            <span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Mapper: manual field mapping
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">mapper</span> <span class="p">=</span> <span class="k">object</span><span class="p">:</span> <span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">fun</span> <span class="nf">encode</span><span class="p">(</span><span class="n">model</span><span class="p">:</span><span class="n">User</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="n">DataAction</span><span class="p">):</span> <span class="n">Values</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Value</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">id</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Value</span><span class="p">(</span><span class="s2">&#34;firstname&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">firstName</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Value</span><span class="p">(</span><span class="s2">&#34;lastname&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">lastName</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Value</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">email</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">fun</span> <span class="nf">decode</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="n">Record</span><span class="p">):</span> <span class="n">User</span><span class="p">?</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">User</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">id</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getLong</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">firstName</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;firstname&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">lastName</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;lastname&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">email</span> <span class="p">=</span> <span class="n">record</span><span class="p">.</span><span class="n">getString</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="repos">Repository</h2>
-
 <p>With the databases, records, mappers in place, the next step is to have a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/Repo.kt" >Repo</a> component that can handle the common <strong>CRUD</strong> operations on model. The implementations for these are <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/repos/SqlRepo.kt" >SqlRepo</a>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    
-    <span class="c1">// Setup: This is boiler-plate that can be moved
-</span><span class="c1"></span>    <span class="c1">// to a helper function/builder
-</span><span class="c1"></span>    <span class="c1">// 1. connection
-</span><span class="c1"></span>    <span class="c1">// 2. database
-</span><span class="c1"></span>    <span class="c1">// 3. mapper
-</span><span class="c1"></span>    <span class="c1">// 4. repo
-</span><span class="c1"></span>    <span class="c1">// 5. service
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">H2</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">mapper</span><span class="p">:</span><span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mapper</span><span class="p">()</span>
-    <span class="k">val</span> <span class="py">repo</span> <span class="p">=</span> <span class="n">Repo</span><span class="p">.</span><span class="n">h2</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">db</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
-
-    <span class="c1">// Common CRUD ( Create, Retrieve, Update, Delete ) operations available
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">city</span> <span class="p">=</span> <span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">,</span> <span class="s">&#34;bk&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Create
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;New York&#34;</span><span class="p">,</span> <span class="s">&#34;NYC&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Checks
-</span><span class="c1"></span>    <span class="n">repo</span><span class="p">.</span><span class="n">any</span><span class="p">()</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
-
-    <span class="c1">// Gets
-</span><span class="c1"></span>    <span class="n">repo</span><span class="p">.</span><span class="n">getAll</span><span class="p">()</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">getById</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">getByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">first</span><span class="p">()</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">last</span><span class="p">()</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">recent</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">oldest</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
-
-    <span class="c1">// Finds
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findOneByField</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">items2</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findByField</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;=&#34;</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">items3</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findByFields</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">)))</span>
-    <span class="k">val</span> <span class="py">items4</span><span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findIn</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;Queens&#34;</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">))</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">repo</span><span class="p">.</span><span class="n">query</span><span class="p">())</span>
-
-    <span class="c1">// Updates
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">updated</span> <span class="p">=</span> <span class="n">city</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Queens&#34;</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">updated</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">patch</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;Queens City&#34;</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;alias&#34;</span><span class="p">,</span> <span class="s">&#34;QCity&#34;</span><span class="p">)))</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">updateByField</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;Queens&#34;</span><span class="p">,</span> <span class="s">&#34;Queens City&#34;</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">updateField</span><span class="p">(</span><span class="s">&#34;tag&#34;</span><span class="p">,</span> <span class="s">&#34;test&#34;</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">updateByProc</span><span class="p">(</span><span class="s">&#34;update_alias&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">&#34;QCity&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Deletes
-</span><span class="c1"></span>    <span class="n">repo</span><span class="p">.</span><span class="n">deleteAll</span><span class="p">()</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">deleteById</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">deleteByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">deleteByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
-    <span class="n">repo</span><span class="p">.</span><span class="n">deleteByQuery</span><span class="p">(</span><span class="n">repo</span><span class="p">.</span><span class="n">query</span><span class="p">().</span><span class="k">where</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup: This is boiler-plate that can be moved
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// to a helper function/builder
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 2. database
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 3. mapper
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 4. repo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 5. service
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="n">H2</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="nc">Db</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">mapper</span><span class="p">:</span><span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mapper</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">repo</span> <span class="p">=</span> <span class="nc">Repo</span><span class="p">.</span><span class="n">h2</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">db</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Common CRUD ( Create, Retrieve, Update, Delete ) operations available
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">city</span> <span class="p">=</span> <span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">,</span> <span class="s2">&#34;bk&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s2">&#34;New York&#34;</span><span class="p">,</span> <span class="s2">&#34;NYC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Checks
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repo</span><span class="p">.</span><span class="n">any</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Gets
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repo</span><span class="p">.</span><span class="n">getAll</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">getById</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">getByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">first</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">last</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">recent</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">oldest</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Finds
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findOneByField</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;=&#34;</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items2</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findByField</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;=&#34;</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items3</span> <span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findByFields</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items4</span><span class="p">=</span> <span class="n">repo</span><span class="p">.</span><span class="n">findIn</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;Queens&#34;</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">repo</span><span class="p">.</span><span class="n">query</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Updates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">updated</span> <span class="p">=</span> <span class="n">city</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s2">&#34;Queens&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">updated</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">patch</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;Queens City&#34;</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;alias&#34;</span><span class="p">,</span> <span class="s2">&#34;QCity&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">updateByField</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;Queens&#34;</span><span class="p">,</span> <span class="s2">&#34;Queens City&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">updateField</span><span class="p">(</span><span class="s2">&#34;tag&#34;</span><span class="p">,</span> <span class="s2">&#34;test&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">updateByProc</span><span class="p">(</span><span class="s2">&#34;update_alias&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s2">&#34;QCity&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Deletes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repo</span><span class="p">.</span><span class="n">deleteAll</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">deleteById</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">deleteByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">deleteByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">repo</span><span class="p">.</span><span class="n">deleteByQuery</span><span class="p">(</span><span class="n">repo</span><span class="p">.</span><span class="n">query</span><span class="p">().</span><span class="k">where</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="services">Services</h2>
-
 <p>Entity Services expose CRUD operations on your data model in a &ldquo;managed way&rdquo; via Service layer. This is to avoid other code/services from directly modifying your models via the Repo/Repositories and for allow you to override various methods to add in your custom logic for CRUD operations. You can also pick and choose which features (Read only, Write only, full CRUD ) you want applicable for your service. This allows using Slate Kit for standardizing <strong>Repositories / Services</strong>
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Setup: This is boiler-plate that can be moved
-</span><span class="c1"></span>    <span class="c1">// to a helper function/builder
-</span><span class="c1"></span>    <span class="c1">// 1. connection
-</span><span class="c1"></span>    <span class="c1">// 2. database
-</span><span class="c1"></span>    <span class="c1">// 3. mapper
-</span><span class="c1"></span>    <span class="c1">// 4. repo
-</span><span class="c1"></span>    <span class="c1">// 5. service
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">H2</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">mapper</span><span class="p">:</span><span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mapper</span><span class="p">()</span>
-    <span class="k">val</span> <span class="py">repo</span> <span class="p">=</span> <span class="n">Repo</span><span class="p">.</span><span class="n">h2</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">db</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">service</span> <span class="p">=</span> <span class="n">EntityService</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">repo</span><span class="p">)</span>
-
-    <span class="c1">// CRUD operations
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">city</span> <span class="p">=</span> <span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">,</span> <span class="s">&#34;bk&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Create
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;New York&#34;</span><span class="p">,</span> <span class="s">&#34;NYC&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Checks
-</span><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">any</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
-
-    <span class="c1">// Gets
-</span><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">getAll</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">getById</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">getByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">first</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">last</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">recent</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">oldest</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
-
-    <span class="c1">// Finds
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findOneByField</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">email</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span><span class="s">&#34;Brooklyn&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">items2</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">items3</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findByFields</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">)))</span>
-    <span class="k">val</span> <span class="py">items4</span><span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findIn</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s">&#34;Queens&#34;</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">))</span>
-    <span class="k">val</span> <span class="py">items5</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findByQuery</span><span class="p">(</span><span class="n">Query</span><span class="p">().</span><span class="k">where</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="s">&#34;Brooklyn&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Updates
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">updated</span> <span class="p">=</span> <span class="n">city</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s">&#34;Queens&#34;</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">updated</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">patch</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">,</span> <span class="s">&#34;Queens City&#34;</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="s">&#34;alias&#34;</span><span class="p">,</span> <span class="s">&#34;QCity&#34;</span><span class="p">)))</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">updateByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="s">&#34;Queens&#34;</span><span class="p">,</span> <span class="s">&#34;Queens City&#34;</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">updateField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="s">&#34;test&#34;</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">updateByProc</span><span class="p">(</span><span class="s">&#34;update_alias&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s">&#34;QCity&#34;</span><span class="p">))</span>
-
-    <span class="c1">// Deletes
-</span><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">deleteAll</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">deleteById</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">deleteByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">deleteByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">deleteByQuery</span><span class="p">(</span><span class="n">Query</span><span class="p">().</span><span class="k">where</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Setup: This is boiler-plate that can be moved
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// to a helper function/builder
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 2. database
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 3. mapper
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 4. repo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 5. service
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="n">H2</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="nc">Db</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">mapper</span><span class="p">:</span><span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">mapper</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">repo</span> <span class="p">=</span> <span class="nc">Repo</span><span class="p">.</span><span class="n">h2</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">db</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">service</span> <span class="p">=</span> <span class="n">EntityService</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">repo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CRUD operations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">city</span> <span class="p">=</span> <span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">,</span> <span class="s2">&#34;bk&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Create
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">create</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s2">&#34;New York&#34;</span><span class="p">,</span> <span class="s2">&#34;NYC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Checks
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">any</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Gets
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">getAll</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">getById</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">getByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">first</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">last</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">recent</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">oldest</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Finds
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">item1</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findOneByField</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">email</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span><span class="s2">&#34;Brooklyn&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items2</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items3</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findByFields</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items4</span><span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findIn</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;Queens&#34;</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">items5</span> <span class="p">=</span> <span class="n">service</span><span class="p">.</span><span class="n">findByQuery</span><span class="p">(</span><span class="n">Query</span><span class="p">().</span><span class="k">where</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="s2">&#34;Brooklyn&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Updates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">updated</span> <span class="p">=</span> <span class="n">city</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">id</span> <span class="p">=</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span> <span class="p">=</span> <span class="s2">&#34;Queens&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">updated</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">patch</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;Queens City&#34;</span><span class="p">),</span> <span class="n">Pair</span><span class="p">(</span><span class="s2">&#34;alias&#34;</span><span class="p">,</span> <span class="s2">&#34;QCity&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">updateByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="s2">&#34;Queens&#34;</span><span class="p">,</span> <span class="s2">&#34;Queens City&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">updateField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">name</span><span class="p">,</span> <span class="s2">&#34;test&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">updateByProc</span><span class="p">(</span><span class="s2">&#34;update_alias&#34;</span><span class="p">,</span> <span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s2">&#34;QCity&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Deletes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">deleteAll</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="n">city</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">deleteById</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">deleteByIds</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">deleteByField</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">deleteByQuery</span><span class="p">(</span><span class="n">Query</span><span class="p">().</span><span class="k">where</span><span class="p">(</span><span class="n">City</span><span class="o">::</span><span class="n">id</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="nc">Op</span><span class="p">.</span><span class="n">Eq</span><span class="p">,</span> <span class="m">1</span><span class="p">))</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="schemas">Schemas</h2>
-
 <p>You can set up auto-mapping of models to/from records using the Slate Kit Model Schemas. This leverages Kotlins Property references for safely get the name/type information and stores the definition of a model. This model is then supplied to a Mapper to auto-map the model to Values for inserts/updates, and for mapping Records back to the instance. There are 2 ways set up the schema, either explicitly construction or with annotations.</p>
-
 <h3 id="construct">Construct</h3>
-
 <p>Explicitly setup of a Model/Schema
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">import</span> <span class="nn">slatekit.meta.Schema</span>
-
-    <span class="c1">// OPTION 1: Explicit Schema Setup
-</span><span class="c1"></span>    <span class="c1">// Uses property references for strongly typed setup
-</span><span class="c1"></span>    <span class="c1">// Also, can use KType to get if field is required ( via isMarkedNullabel )
-</span><span class="c1"></span>    <span class="k">object</span> <span class="nc">UserSchema</span> <span class="p">:</span> <span class="n">Schema</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="s">&#34;user&#34;</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">val</span> <span class="py">id</span>         <span class="p">=</span> <span class="n">id</span>    <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">id</span>        <span class="p">)</span>
-        <span class="k">val</span> <span class="py">email</span>      <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">email</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">,</span> <span class="n">indexed</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">first</span>      <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">first</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">last</span>       <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">last</span>      <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">age</span>        <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">age</span>       <span class="p">)</span>
-        <span class="k">val</span> <span class="py">salary</span>     <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">salary</span>    <span class="p">)</span>
-        <span class="k">val</span> <span class="py">active</span>     <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">active</span>    <span class="p">)</span>
-        <span class="k">val</span> <span class="py">registered</span> <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">registered</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">createdAt</span>  <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">updatedAt</span> <span class="p">,</span> <span class="n">category</span> <span class="p">=</span> <span class="n">FieldCategory</span><span class="p">.</span><span class="n">Meta</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">updatedAt</span>  <span class="p">=</span> <span class="n">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">updatedAt</span> <span class="p">,</span> <span class="n">category</span> <span class="p">=</span> <span class="n">FieldCategory</span><span class="p">.</span><span class="n">Meta</span><span class="p">)</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Access the model which stores all the fields
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="n">UserSchema</span><span class="p">.</span><span class="n">model</span>
-
-    <span class="c1">// Iterate over the models
-</span><span class="c1"></span>    <span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
-        <span class="n">println</span><span class="p">(</span><span class="s">&#34;field: name=${it.name}, ${it.storedName}, ${it.isRequired}, ${it.dataTpe}&#34;</span><span class="p">)</span>
-    <span class="p">}</span></code></pre></div></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.meta.Schema</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// OPTION 1: Explicit Schema Setup
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Uses property references for strongly typed setup
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Also, can use KType to get if field is required ( via isMarkedNullabel )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">object</span> <span class="nc">UserSchema</span> <span class="p">:</span> <span class="n">Schema</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;(</span><span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="s2">&#34;user&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">id</span>         <span class="p">=</span> <span class="n">id</span>    <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">id</span>        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">email</span>      <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">email</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">,</span> <span class="n">indexed</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">first</span>      <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">first</span>     <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">last</span>       <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">last</span>      <span class="p">,</span> <span class="n">min</span> <span class="p">=</span> <span class="m">10</span><span class="p">,</span> <span class="n">max</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">age</span>        <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">age</span>       <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">salary</span>     <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">salary</span>    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">active</span>     <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">active</span>    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">registered</span> <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">registered</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">createdAt</span>  <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">updatedAt</span> <span class="p">,</span> <span class="n">category</span> <span class="p">=</span> <span class="nc">FieldCategory</span><span class="p">.</span><span class="n">Meta</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">updatedAt</span>  <span class="p">=</span> <span class="k">field</span>  <span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="n">updatedAt</span> <span class="p">,</span> <span class="n">category</span> <span class="p">=</span> <span class="nc">FieldCategory</span><span class="p">.</span><span class="n">Meta</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Access the model which stores all the fields
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="nc">UserSchema</span><span class="p">.</span><span class="n">model</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Iterate over the models
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;field: name=</span><span class="si">${it.name}</span><span class="s2">, </span><span class="si">${it.storedName}</span><span class="s2">, </span><span class="si">${it.isRequired}</span><span class="s2">, </span><span class="si">${it.dataTpe}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
 <h3 id="annotations">Annotations</h3>
-
 <p>You can also use annotations at the source of the data model.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">     
-    <span class="k">data</span> <span class="k">class</span> <span class="nc">User</span><span class="p">(</span>
-        <span class="n">@property</span><span class="p">:</span><span class="n">Id</span><span class="p">()</span>
-        <span class="k">override</span> <span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">Long</span> <span class="p">=</span> <span class="m">0L</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">email</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">first</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
-        <span class="k">val</span> <span class="py">last</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
-        <span class="k">val</span> <span class="py">isMale</span><span class="p">:</span><span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
-        <span class="k">val</span> <span class="py">age</span><span class="p">:</span><span class="n">Int</span> <span class="p">=</span> <span class="m">35</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
-        <span class="k">val</span> <span class="py">active</span><span class="p">:</span><span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
-        <span class="k">val</span> <span class="py">salary</span><span class="p">:</span><span class="n">Double</span> <span class="p">=</span> <span class="m">100.00</span><span class="p">,</span>
-
-        <span class="n">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
-        <span class="k">val</span> <span class="py">registered</span><span class="p">:</span><span class="n">DateTime</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
-
-    <span class="p">)</span> <span class="p">:</span> <span class="n">EntityWithId</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">{</span>
-
-        <span class="k">override</span> <span class="k">fun</span> <span class="nf">isPersisted</span><span class="p">():</span> <span class="n">Boolean</span> <span class="p">=</span> <span class="n">id</span> <span class="p">&gt;</span> <span class="m">0</span>
-    <span class="p">}</span>
-
-    <span class="c1">// Access the model which stores all the fields
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="n">ModelMapper</span><span class="p">.</span><span class="n">loadSchema</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
-
-    <span class="c1">// Iterate over the models
-</span><span class="c1"></span>    <span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
-        <span class="n">println</span><span class="p">(</span><span class="s">&#34;field: name=${it.name}, ${it.storedName}, ${it.isRequired}, ${it.dataTpe}&#34;</span><span class="p">)</span>
-    <span class="p">}</span></code></pre></div></p>
-
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="k">data</span> <span class="k">class</span> <span class="nc">User</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Id</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">Long</span> <span class="p">=</span> <span class="m">0L</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">email</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">first</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">(</span><span class="n">length</span> <span class="p">=</span> <span class="m">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">last</span><span class="p">:</span><span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">isMale</span><span class="p">:</span><span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">age</span><span class="p">:</span><span class="n">Int</span> <span class="p">=</span> <span class="m">35</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">active</span><span class="p">:</span><span class="n">Boolean</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">salary</span><span class="p">:</span><span class="n">Double</span> <span class="p">=</span> <span class="m">100.00</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nd">@property</span><span class="p">:</span><span class="n">Field</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">val</span> <span class="py">registered</span><span class="p">:</span><span class="n">DateTime</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">)</span> <span class="p">:</span> <span class="n">EntityWithId</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">override</span> <span class="k">fun</span> <span class="nf">isPersisted</span><span class="p">():</span> <span class="n">Boolean</span> <span class="p">=</span> <span class="n">id</span> <span class="p">&gt;</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Access the model which stores all the fields
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="nc">ModelMapper</span><span class="p">.</span><span class="n">loadSchema</span><span class="p">(</span><span class="n">User</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Iterate over the models
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">model</span><span class="p">.</span><span class="n">fields</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;field: name=</span><span class="si">${it.name}</span><span class="s2">, </span><span class="si">${it.storedName}</span><span class="s2">, </span><span class="si">${it.isRequired}</span><span class="s2">, </span><span class="si">${it.dataTpe}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="orm">ORM</h2>
-
 <p>By having the models defined with a schema, we can then set up the auto-mapping of models. This builds the Entity Service using all the individual parts shown from prior examples.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// Setup: This is boiler-plate that can be moved
-</span><span class="c1"></span>    <span class="c1">// to a helper function/builder
-</span><span class="c1"></span>    <span class="c1">// 1. connection
-</span><span class="c1"></span>    <span class="c1">// 2. database
-</span><span class="c1"></span>    <span class="c1">// 3. mapper
-</span><span class="c1"></span>    <span class="c1">// 4. repo
-</span><span class="c1"></span>    <span class="c1">// 5. service
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="n">Vendor</span><span class="p">.</span><span class="n">H2</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s">&#34;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="n">UserSchema</span><span class="p">.</span><span class="n">model</span>
-    <span class="k">val</span> <span class="py">mapper</span><span class="p">:</span><span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">OrmMapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">model</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">City</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">repo</span> <span class="p">=</span> <span class="n">Repo</span><span class="p">.</span><span class="n">h2</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">db</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">service</span> <span class="p">=</span> <span class="n">EntityService</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">repo</span><span class="p">)</span>
-
-    <span class="n">service</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s">&#34;New York&#34;</span><span class="p">,</span> <span class="s">&#34;NYC&#34;</span><span class="p">))</span>
-
-    <span class="c1">// CRUD operations
-</span><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">any</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
-    <span class="n">service</span><span class="p">.</span><span class="n">getById</span><span class="p">(</span><span class="m">1</span><span class="p">)</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Setup: This is boiler-plate that can be moved
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// to a helper function/builder
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 2. database
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 3. mapper
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 4. repo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 5. service
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="n">H2</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:h2:mem:test;DB_CLOSE_DELAY=-1&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="nc">Db</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">model</span> <span class="p">=</span> <span class="nc">UserSchema</span><span class="p">.</span><span class="n">model</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">mapper</span><span class="p">:</span><span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">OrmMapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">model</span><span class="p">,</span> <span class="n">db</span><span class="p">,</span> <span class="n">Long</span><span class="o">::</span><span class="k">class</span><span class="p">,</span> <span class="n">City</span><span class="o">::</span><span class="k">class</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">repo</span> <span class="p">=</span> <span class="nc">Repo</span><span class="p">.</span><span class="n">h2</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">db</span><span class="p">,</span> <span class="n">mapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">service</span> <span class="p">=</span> <span class="n">EntityService</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">City</span><span class="p">&gt;(</span><span class="n">repo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">City</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="s2">&#34;New York&#34;</span><span class="p">,</span> <span class="s2">&#34;NYC&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CRUD operations
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">service</span><span class="p">.</span><span class="n">any</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">count</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">service</span><span class="p">.</span><span class="n">getById</span><span class="p">(</span><span class="m">1</span><span class="p">)</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="events">Events</h2>
-
 <p>Functionality available, docs coming soon.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// COMING SOON</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// COMING SOON</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <h2 id="migrations">Migrations</h2>
-
 <p>Functionality available, docs coming soon.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// COMING SOON</span></code></pre></div>
-
-
-
-<a href="arch/data#features" class="sk-back-to-details">Back to features</a>
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-
-<br/><br/><br/></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// COMING SOON</span></span></span></code></pre></div></p>
+<p><a href="arch/data#features" class="sk-back-to-details">Back to features</a>
+<a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
+<p><br/><br/><br/></p>
 <br/>
-
-<a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
+<p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <script>
     var archComponent = {
         name: "Data",

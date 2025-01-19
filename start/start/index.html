@@ -172,18 +172,12 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
+                <h1 id="overview">Overview</h1>
 <p><strong>Kiit</strong> is built in 100% Kotlin and depends on Java. The <strong>Kiit</strong> CLI generates new projects using the Gradle build tool. <br/>
 If you are new to Kotlin, refer to <strong><a class="url-ch" href="http://www.kotlinlang.org">Kotlin</a></strong> for more info.</p>
-
-<br/><br/>
-
+<p><br/><br/></p>
 <h1 id="required">Required</h1>
-
-<p><p>Installation of Java, Kotlin, Gradle and <strong>Kiit</strong> is fairly easy. We recommend the following installation steps and centralized location for simplicity.
+<p>Installation of Java, Kotlin, Gradle and <strong>Kiit</strong> is fairly easy. We recommend the following installation steps and centralized location for simplicity.
 </p>
 <table class="table table-bordered table-striped">
     <tr class="">
@@ -195,41 +189,38 @@ If you are new to Kotlin, refer to <strong><a class="url-ch" href="http://www.ko
     <tr>
         <td><a class="url-ch" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java</a></td>
         <td><strong>Required</strong></td>
-        <td>&gt;= 8</td>
-        <td><a href="https://www.java.com/en/download/help/download_options.html">https://www.java.com/en/download/help/download_options.html</a>
+        <td>>= 8</td>
+        <td>https://www.java.com/en/download/help/download_options.html
         </td>
     </tr>
     <tr>
         <td><a class="url-ch" href="https://gradle.org/install">Gradle</a></td>
         <td><strong>Required</strong></td>
-        <td>&gt;= 6.7</td>
-        <td><a href="https://gradle.org/install/">https://gradle.org/install/</a>
+        <td>>= 6.7</td>
+        <td>https://gradle.org/install/
         </td>
     </tr>
     <tr>
         <td><a class="url-ch" href="https://www.jetbrains.com/idea/">IntelliJ</a></td>
         <td>Recommended</td>
-        <td>&gt;= 2020.2</td>
-        <td><a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a>
+        <td>>= 2020.2</td>
+        <td>https://www.jetbrains.com/idea/
         </td>
     </tr>
-</table></p>
-
-<br/><br/>
-
+</table>
+<p><br/><br/></p>
 <h1 id="cli">CLI</h1>
-
 <p>The <strong>Kiit</strong> <strong>CLI</strong> is a command line tool ( based on <strong>HomeBrew on Mac OS</strong> ) that can be used to create projects
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">     
-    <span class="c1"># Note: install may take a while on Mac OS Catalina</span> 
-    <span class="c1"># See notes/issues below</span>
-
-    brew tap slatekit/kiit
-    brew install kiit
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="c1"># Note: install may take a while on Mac OS Catalina </span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># See notes/issues below</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    brew tap slatekit/kiit
+</span></span><span class="line"><span class="cl">    brew install kiit
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
 <div class="alert alert-warning" role="alert">
     You may experience some issues with the install, consider the following<br/>
-    <strong>1:</strong> Ensure System Preferences -&gt; security -&gt; privacy -&gt; full disk access -&gt; iterm2 ( of what ever terminal you use )<br/>
+    <strong>1:</strong> Ensure System Preferences -> security -> privacy -> full disk access -> iterm2 ( of what ever terminal you use )<br/>
     <strong>2:</strong> <a href="https://discussions.apple.com/thread/251258165">Slow HomeBrew post install on Mac OS Catalina ( based on thread below )</a><br/>
     <strong>3:</strong> <a href="https://discourse.brew.sh/t/brew-install-very-slow-pauses-for-long-period-while-executing-usr-bin-sandbox-exec-in-post-install/7423">The install may be very slow with MacOS Catalina</a>
 </div>
@@ -237,66 +228,52 @@ If you are new to Kotlin, refer to <strong><a class="url-ch" href="http://www.ko
   You can download the Slate Kit Project Generator at 
   <a href="https://github.com/slatekit/slatekit-cli" >slatekit-cli</a>. <br/>
   Install instructions located at <a href="start/generators" >Generators</a>. 
-</div></p>
-
-<br/><br/>
-
+</div>
+<p><br/><br/></p>
 <h1 id="create">Create</h1>
-
 <p>You can create your first app by running the command below which will create a new console application
 with support for :</p>
-
 <table class="table table-bordered table-striped">
-
-        <tr><td><strong>args</strong></td><td>command line args ( -env=dev )</td></tr>
-        <tr><td><strong>envs</strong></td><td>environments ( local, dev, qat, uat, pro )</td></tr>
-        <tr><td><strong>confs</strong></td><td>configuration files ( per environment and inheritable from a base config )</td></tr>
-        <tr><td><strong>logs</strong></td><td>logging support ( using logback )</td></tr>
-        <tr><td><strong>help</strong></td><td>help usage and more</td></tr>
-
+<pre><code>    &lt;tr&gt;&lt;td&gt;&lt;strong&gt;args&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;command line args ( -env=dev )&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;strong&gt;envs&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;environments ( local, dev, qat, uat, pro )&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;strong&gt;confs&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;configuration files ( per environment and inheritable from a base config )&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;strong&gt;logs&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;logging support ( using logback )&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;strong&gt;help&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;help usage and more&lt;/td&gt;&lt;/tr&gt;
+</code></pre>
 </table>
-
 <p>This is just 1 type of project you can create.</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    <span class="c1"># Generate new app ( into current directory )</span>
-    :&gt; kiit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
-
-    <span class="c1">#  navigate into the generated app</span> 
-    :&gt; <span class="nb">cd</span> Sample1
-
-    <span class="c1"># Build and run</span>
-    :&gt; gradle run
-    </code></pre></div>
-
-<br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Generate new app ( into current directory )</span>
+</span></span><span class="line"><span class="cl">    :&gt; kiit new app -name<span class="o">=</span><span class="s2">&#34;Sample1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;mycompany.apps&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#  navigate into the generated app </span>
+</span></span><span class="line"><span class="cl">    :&gt; <span class="nb">cd</span> Sample1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Build and run</span>
+</span></span><span class="line"><span class="cl">    :&gt; gradle run
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
+<p><br/><br/></p>
 <h1 id="generators">Generators</h1>
-
 <p>You can create several different project types using the generator, these include CLIs, APIs, Jobs, and more to come.
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">    
-    kiit new app -name<span class="o">=</span><span class="s2">&#34;SampleApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    kiit new api -name<span class="o">=</span><span class="s2">&#34;SampleAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
-    kiit new cli -name<span class="o">=</span><span class="s2">&#34;SampleCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    kiit new job -name<span class="o">=</span><span class="s2">&#34;SampleJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
-    kiit new env -name<span class="o">=</span><span class="s2">&#34;SampleApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    kiit new app -name<span class="o">=</span><span class="s2">&#34;SampleApp1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    kiit new api -name<span class="o">=</span><span class="s2">&#34;SampleAPI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apis&#34;</span>
+</span></span><span class="line"><span class="cl">    kiit new cli -name<span class="o">=</span><span class="s2">&#34;SampleCLI1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    kiit new job -name<span class="o">=</span><span class="s2">&#34;SampleJob1&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.jobs&#34;</span>
+</span></span><span class="line"><span class="cl">    kiit new env -name<span class="o">=</span><span class="s2">&#34;SampleApp2&#34;</span> -packageName<span class="o">=</span><span class="s2">&#34;company1.apps&#34;</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div></p>
 <div class="alert alert-warning" role="alert">
     <strong>Tip:</strong> See the <a href="/start/generators">Generators</a> page for more info on using the <strong>Kiit</strong> CLI tool and info on the project types.
 </div>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="samples">Samples</h1>
-
-<p>There are also several sample applications available in git at <a href="https://github.com/slatekit/slatekit/tree/master/src/apps/kotlin/slatekit-samples/src/main/kotlin/slatekit/samples" >Samples</a>
+<p>There are also several sample applications available in git at <a href="https://github.com/slatekit/slatekit/tree/master/src/apps/kotlin/slatekit-samples/src/main/kotlin/slatekit/samples" >Samples</a></p>
 <div class="alert alert-info" role="alert">
     The <a href="/start/generators">Generators</a> are based on these Sample projects which are kept up to date with latest releases.
 </div>
-<br/><br/></p>
-
+<br/><br/>
 <h1 id="apps">Apps</h1>
-
-<p>There are various runnable application types you can create with <strong>Kiit</strong>. See the links below for more docs and guides on how to get started with them.
+<p>There are various runnable application types you can create with <strong>Kiit</strong>. See the links below for more docs and guides on how to get started with them.</p>
 <table class="table table-bordered table-striped">
     <tr>
     <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
@@ -339,8 +316,7 @@ with support for :</p>
     <td>Pausable Background jobs/queues library</td>
   </tr>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <script>
     var archComponent = {
         name: "Start",

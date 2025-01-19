@@ -148,32 +148,23 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="overview">Overview</h1>
-
+        <h1 id="overview">Overview</h1>
 <p>Slate Kit <strong>Utilities</strong> supplement the existing Kotlin standard library by offering a powerful set of general purpose Kotlin components that can be used for any application. Many of these components are located in the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common" >slatekit-common</a> project. However, there are a few components located in other projects. Refer to each utility component for more info.
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
 <p>You can setup the slatekit.common project with the configuration below.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="p">{</span>
-        <span class="n">maven</span> <span class="p">{</span> <span class="n">url</span>  <span class="s">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="n">dependencies</span> <span class="p">{</span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="p">.</span><span class="n">slatekit</span><span class="p">:</span><span class="n">slatekit</span><span class="p">-</span><span class="n">common</span><span class="p">:</span><span class="m">2.0</span><span class="p">.</span><span class="m">0</span><span class="err">&#39;</span>
-    <span class="p">}</span></code></pre></div></p>
-
-<br/><br/>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="p">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="p">.</span><span class="n">slatekit</span><span class="p">:</span><span class="n">slatekit</span><span class="p">-</span><span class="n">common</span><span class="p">:</span><span class="m">2.0</span><span class="p">.</span><span class="m">0</span><span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div></p>
+<p><br/><br/></p>
 <h2 id="module">Module</h2>
-
-<p>Links to this modules info. Click on any component icon below for example on how to use it.
-
+<p>Links to this modules info. Click on any component icon below for example on how to use it.</p>
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -203,182 +194,181 @@
     <td><strong>Requires</strong></td>
     <td>See <a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin//build.gradle">build.gradle</a> for more info. </td>
   </tr>
-</table></p>
-
+</table>
 <section id="services" class="integration">
   <div class="container">
     <div class="heading text-center wow fadeInUp">
             <h2>Several Utilities</h2>
             <p>Many pre-built utilities to support your Server application or Android client.</p>
         </div>
-        
-      <div class="row text-center">
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/args"><img src="assets/media/img/white/gears.png" width="60" alt=""></a>         
-              <a href="utils/args"><h3>Args</h3></a>
-              <p>A lexical command line arguments parser</p>
-            </div>
-          </div>
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-                <a href="utils/auth"><img src="assets/media/img/white/male.png" width="60px" alt=""></a>            
-                <a href="utils/auth"><h3>Auth</h3></a>
-                <p>Easily access authentication information</p>
-            </div>
-          </div>
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/config"><img src="assets/media/img/white/settings.png" width="60px" alt=""></a>          
-              <a href="utils/config"><h3>Config</h3></a>
-              <p>Java props with types, lists, encryption, and more</p>
-            </div>
-          </div>
+<pre><code>  &lt;div class=&quot;row text-center&quot;&gt;
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/args&quot;&gt;&lt;img src=&quot;assets/media/img/white/gears.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;         
+          &lt;a href=&quot;utils/args&quot;&gt;&lt;h3&gt;Args&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;A lexical command line arguments parser&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+            &lt;a href=&quot;utils/auth&quot;&gt;&lt;img src=&quot;assets/media/img/white/male.png&quot; width=&quot;60px&quot; alt=&quot;&quot;&gt;&lt;/a&gt;            
+            &lt;a href=&quot;utils/auth&quot;&gt;&lt;h3&gt;Auth&lt;/h3&gt;&lt;/a&gt;
+            &lt;p&gt;Easily access authentication information&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/config&quot;&gt;&lt;img src=&quot;assets/media/img/white/settings.png&quot; width=&quot;60px&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/config&quot;&gt;&lt;h3&gt;Config&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Java props with types, lists, encryption, and more&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/console"><img src="assets/media/img/white/console.png" width="60" alt=""></a>          
-              <a href="utils/console"><h3>Console</h3></a>
-              <p>Console writer with semantics and colors</p>
-            </div>
-          </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/console&quot;&gt;&lt;img src=&quot;assets/media/img/white/console.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/console&quot;&gt;&lt;h3&gt;Console&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Console writer with semantics and colors&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/datetime"><img src="assets/media/img/white/calendar.PNG" width="60" alt=""></a>            
-              <a href="utils/datetime"><h3>DateTime</h3></a>
-              <p>Easier Java 8 DateTime and Timezone usage</p>
-            </div>
-          </div>
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/datetime&quot;&gt;&lt;img src=&quot;assets/media/img/white/calendar.PNG&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;            
+          &lt;a href=&quot;utils/datetime&quot;&gt;&lt;h3&gt;DateTime&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Easier Java 8 DateTime and Timezone usage&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/encrypt"><img src="assets/media/img/white/lock.png" width="60" alt=""></a>         
-              <a href="utils/encrypt"><h3>Encrypt</h3></a>
-              <p>AES encryption and decryption support and utilities</p>
-            </div>
-          </div>  
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/encrypt&quot;&gt;&lt;img src=&quot;assets/media/img/white/lock.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;         
+          &lt;a href=&quot;utils/encrypt&quot;&gt;&lt;h3&gt;Encrypt&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;AES encryption and decryption support and utilities&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;  
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/env"><img src="assets/media/img/white/nodes.png" width="60" alt=""></a>            
-              <a href="utils/env"><h3>Env</h3></a>
-              <p>Environment selector ( dev, qa, stg, prod )</p>
-            </div>
-          </div>   
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/env&quot;&gt;&lt;img src=&quot;assets/media/img/white/nodes.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;            
+          &lt;a href=&quot;utils/env&quot;&gt;&lt;h3&gt;Env&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Environment selector ( dev, qa, stg, prod )&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;   
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/folders"><img src="assets/media/img/white/folders.png" width="60" alt=""></a>          
-              <a href="utils/folders"><h3>Folders</h3></a>
-              <p>Standardized runtime app folders and structure.</p>
-            </div>
-          </div>             
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/folders&quot;&gt;&lt;img src=&quot;assets/media/img/white/folders.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/folders&quot;&gt;&lt;h3&gt;Folders&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Standardized runtime app folders and structure.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;             
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/info"><img src="assets/media/img/white/info.png" width="60" alt=""></a>            
-              <a href="utils/info"><h3>Info</h3></a>
-              <p>Useful information about app, host, runtime</p>
-            </div>
-          </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/info&quot;&gt;&lt;img src=&quot;assets/media/img/white/info.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;            
+          &lt;a href=&quot;utils/info&quot;&gt;&lt;h3&gt;Info&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Useful information about app, host, runtime&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/lex"><img src="assets/media/img/white/document.png" width="60" alt=""></a>         
-              <a href="utils/lex"><h3>Lex</h3></a>
-              <p>A light-weight lexer to parse text into tokens</p>
-            </div>
-          </div>            
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/lex&quot;&gt;&lt;img src=&quot;assets/media/img/white/document.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;         
+          &lt;a href=&quot;utils/lex&quot;&gt;&lt;h3&gt;Lex&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;A light-weight lexer to parse text into tokens&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;            
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/logger"><img src="assets/media/img/white/error.png" width="60" alt=""></a>         
-              <a href="utils/logger"><h3>Logs</h3></a>
-              <p>Simple, extensible, customizable logger</p>
-            </div>
-          </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/logger&quot;&gt;&lt;img src=&quot;assets/media/img/white/error.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;         
+          &lt;a href=&quot;utils/logger&quot;&gt;&lt;h3&gt;Logs&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Simple, extensible, customizable logger&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/model"><img src="assets/media/img/white/prototype.png" width="60" alt=""></a>          
-              <a href="utils/model"><h3>Model</h3></a>
-              <p>Builts schemas to map models and generate code</p>
-            </div>
-          </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/model&quot;&gt;&lt;img src=&quot;assets/media/img/white/prototype.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/model&quot;&gt;&lt;h3&gt;Model&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Builts schemas to map models and generate code&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/random"><img src="assets/media/img/white/question.png" width="60" alt=""></a>          
-              <a href="utils/random"><h3>Random</h3></a>
-              <p>Random generator for strings, numbers, alpha, guids</p>
-            </div>
-          </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/random&quot;&gt;&lt;img src=&quot;assets/media/img/white/question.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/random&quot;&gt;&lt;h3&gt;Random&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Random generator for strings, numbers, alpha, guids&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/request"><img src="assets/media/img/white/request.png" width="60" alt=""></a>          
-              <a href="utils/request"><h3>Request</h3></a>
-              <p>Abstracts and represents HTTP and CLI requests</p> 
-            </div>
-          </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/request&quot;&gt;&lt;img src=&quot;assets/media/img/white/request.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/request&quot;&gt;&lt;h3&gt;Request&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Abstracts and represents HTTP and CLI requests&lt;/p&gt; 
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/smartstrings"><img src="assets/media/img/white/print.png" width="60" alt=""></a>     
-              <a href="utils/smartstrings"><h3>Smart Strings</h3></a>
-              <p>Store, validate, describe strongly formatted strings</p>
-            </div>
-          </div>
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/smartstrings&quot;&gt;&lt;img src=&quot;assets/media/img/white/print.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;     
+          &lt;a href=&quot;utils/smartstrings&quot;&gt;&lt;h3&gt;Smart Strings&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Store, validate, describe strongly formatted strings&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/templates"><img src="assets/media/img/white/share.png" width="60" alt=""></a>          
-              <a href="utils/templates"><h3>Templates</h3></a>
-              <p>A micro templating system for emails, sms and short messages</p>
-            </div>
-          </div>
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/templates&quot;&gt;&lt;img src=&quot;assets/media/img/white/share.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/templates&quot;&gt;&lt;h3&gt;Templates&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;A micro templating system for emails, sms and short messages&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/todo"><img src="assets/media/img/white/notes.png" width="60" alt=""></a>           
-              <a href="utils/todo"><h3>Notes</h3></a>
-              <p>Typesafe, programmatic approach to marking Notes/Todos in code</p>
-            </div>
-          </div>
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/todo&quot;&gt;&lt;img src=&quot;assets/media/img/white/notes.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;           
+          &lt;a href=&quot;utils/todo&quot;&gt;&lt;h3&gt;Notes&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Typesafe, programmatic approach to marking Notes/Todos in code&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/utils"><img src="assets/media/img/white/settings2.png" width="60" alt=""></a>          
-              <a href="utils/utils"><h3>Utils</h3></a>
-              <p>Several other smaller utilities and components</p>
-            </div>
-          </div>
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/utils&quot;&gt;&lt;img src=&quot;assets/media/img/white/settings2.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;          
+          &lt;a href=&quot;utils/utils&quot;&gt;&lt;h3&gt;Utils&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Several other smaller utilities and components&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/validations"><img src="assets/media/img/white/checklist.png" width="60" alt=""></a>            
-              <a href="utils/validations"><h3>Validations</h3></a>
-              <p>Functional validation, RegEx patterns, and helpers</p>
-            </div>
-          </div>
-          
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/validations&quot;&gt;&lt;img src=&quot;assets/media/img/white/checklist.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;            
+          &lt;a href=&quot;utils/validations&quot;&gt;&lt;h3&gt;Validations&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Functional validation, RegEx patterns, and helpers&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="box text-center">
-              <a href="utils/extensions"><img src="assets/media/img/white/gears.png" width="60" alt=""></a>         
-              <a href="utils/extensions"><h3>Extensions</h3></a>
-              <p>Extension methods for various Kotlin types and classes</p>
-            </div>
-          </div>
-      </div>
+      &lt;div class=&quot;col-md-4 wow fadeInUp&quot;&gt;
+        &lt;div class=&quot;box text-center&quot;&gt;
+          &lt;a href=&quot;utils/extensions&quot;&gt;&lt;img src=&quot;assets/media/img/white/gears.png&quot; width=&quot;60&quot; alt=&quot;&quot;&gt;&lt;/a&gt;         
+          &lt;a href=&quot;utils/extensions&quot;&gt;&lt;h3&gt;Extensions&lt;/h3&gt;&lt;/a&gt;
+          &lt;p&gt;Extension methods for various Kotlin types and classes&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
   </div>
 </section>
 

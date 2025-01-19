@@ -175,15 +175,10 @@
                         </div>
                     </div>
                 </section>
-                
-
-<h1 id="overview">Overview</h1>
-
+                <h1 id="overview">Overview</h1>
 <p>The Email component is an abstraction of an Email Service with support for simple templates and a default implementation for sending emails using <strong>SendGrid</strong>.</p>
-
 <h1 id="status">Status</h1>
-
-<p>This component is currently <strong>stable</strong>. Following limitations, current work, planned features apply.
+<p>This component is currently <strong>stable</strong>. Following limitations, current work, planned features apply.</p>
 <table class="table table-bordered table-striped">
     <tr>
         <td><strong>Feature</strong></td>
@@ -191,46 +186,39 @@
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong>Templates</strong></td>
+        <td>**Templates**</td>
         <td>Upcoming</td>
         <td>Enhanced templating, possibly leveraging existing open-source templating systems.</td>
     </tr>
     <tr>
-        <td><strong>Attachments</strong></td>
+        <td>**Attachments**</td>
         <td>Upcoming</td>
         <td>Support for adding attachments</td>
     </tr>
     <tr>
-        <td><strong>HTML</strong></td>
+        <td>**HTML**</td>
         <td>Upcoming</td>
         <td>Improved HTML support</td>
     </tr>
 </table>
 <br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="install">Install</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy">    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="c1">// other repositories
-</span><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other dependencies ...
-</span><span class="c1"></span>
-        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-notifications:1.0.0&#39;</span>
-    <span class="o">}</span></code></pre></div>
-<br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-notifications:1.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="sources">Sources</h1>
-
-<p>
 <table class="table table-bordered table-striped">
   <tr>
     <td><strong>Jar</strong></td>
@@ -262,103 +250,90 @@
   </tr>
 </table>
 <br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
 <h1 id="imports">Imports</h1>
-
 <p>Refer to <a href="https://github.com/slatekit/slatekit/blob/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Email.kt" >Example_Email.kt</a> for all imports.
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">         
-    <span class="c1">// Required
-</span><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.notifications.email.EmailMessage</span>
-    <span class="k">import</span> <span class="nn">slatekit.notifications.email.EmailService</span>
-    <span class="k">import</span> <span class="nn">slatekit.notifications.email.SendGrid</span>
-
-    <span class="c1">// For Examples ( templated messages )
-</span><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.common.templates.Template</span>
-    <span class="k">import</span> <span class="nn">slatekit.common.templates.TemplatePart</span>
-    <span class="k">import</span> <span class="nn">slatekit.common.templates.Templates</span>
-     </code></pre></div></p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">         
+</span></span><span class="line"><span class="cl">    <span class="c1">// Required
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.notifications.email.EmailMessage</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.notifications.email.EmailService</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.notifications.email.SendGrid</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// For Examples ( templated messages )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">import</span> <span class="nn">slatekit.common.templates.Template</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.common.templates.TemplatePart</span>
+</span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.common.templates.Templates</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div></p>
 <br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="setup">Setup</h1>
-
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
-    <span class="c1">// Setup 1: Getting Api key/login info from config
-</span><span class="c1"></span>    <span class="c1">// Load the config file from slatekit directory in user_home directory
-</span><span class="c1"></span>    <span class="c1">// e.g. {user_home}/slatekit/conf/sms.conf
-</span><span class="c1"></span>    <span class="c1">// NOTE: It is safer/more secure to store config files there.
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">conf</span> <span class="p">=</span> <span class="n">Config</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s">&#34;~/.slatekit/conf/email.conf&#34;</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">apiKey1</span> <span class="p">=</span> <span class="n">conf</span><span class="p">.</span><span class="n">apiLogin</span><span class="p">(</span><span class="s">&#34;email&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Setup 2: Get the api key either through conf or explicitly
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">apiKey2</span> <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s">&#34;17181234567&#34;</span><span class="p">,</span> <span class="s">&#34;ABC1234567&#34;</span><span class="p">,</span> <span class="s">&#34;password&#34;</span><span class="p">,</span> <span class="s">&#34;dev&#34;</span><span class="p">,</span> <span class="s">&#34;sendgrid-email&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Setup 3a: Setup the email service ( basic ) with api key
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">apiKey</span> <span class="p">=</span> <span class="n">apiKey1</span> <span class="o">?:</span> <span class="n">apiKey2</span>
-    <span class="k">val</span> <span class="py">emailService1</span> <span class="p">=</span> <span class="n">SendGrid</span><span class="p">(</span><span class="n">apiKey</span><span class="p">.</span><span class="n">key</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">pass</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">account</span><span class="p">)</span>
-
-    <span class="c1">// Setup 3b: Setup the sms service with support for templates
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">templates</span> <span class="p">=</span> <span class="n">Templates</span><span class="p">.</span><span class="n">build</span><span class="p">(</span>
-                <span class="n">templates</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
-                        <span class="n">Template</span><span class="p">(</span><span class="s">&#34;email_welcome&#34;</span><span class="p">,</span> <span class="n">Uris</span><span class="p">.</span><span class="n">readText</span><span class="p">(</span><span class="s">&#34;~/slatekit/templates/email_welcome.txt&#34;</span><span class="p">)</span> <span class="o">?:</span> <span class="s">&#34;&#34;</span><span class="p">),</span>
-                        <span class="n">Template</span><span class="p">(</span><span class="s">&#34;email_pass&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;&#34;
-</span><span class="s">                         Hi @{user.name},
-</span><span class="s">
-</span><span class="s">                        &lt;p&gt;
-</span><span class="s">                        Your code for @{app.name} is @{app.code}.
-</span><span class="s">                        &lt;/p&gt;
-</span><span class="s">
-</span><span class="s">                        Regards,
-</span><span class="s">                        @{app.from}
-</span><span class="s">                        @{app.tagline}
-</span><span class="s">                     &#34;&#34;&#34;</span><span class="p">.</span><span class="n">trimIndent</span><span class="p">())</span>
-                <span class="p">),</span>
-                <span class="n">subs</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
-                        <span class="s">&#34;app.name&#34;</span> <span class="n">to</span> <span class="p">{</span> <span class="n">s</span><span class="p">:</span> <span class="n">TemplatePart</span> <span class="p">-&gt;</span> <span class="s">&#34;My App&#34;</span> <span class="p">},</span>
-                        <span class="s">&#34;app.from&#34;</span> <span class="n">to</span> <span class="p">{</span> <span class="n">s</span><span class="p">:</span> <span class="n">TemplatePart</span> <span class="p">-&gt;</span> <span class="s">&#34;My App Team&#34;</span> <span class="p">},</span>
-                        <span class="s">&#34;app.tagline&#34;</span> <span class="n">to</span> <span class="p">{</span> <span class="n">s</span><span class="p">:</span><span class="n">TemplatePart</span> <span class="p">-&gt;</span> <span class="s">&#34;My App tagline&#34;</span> <span class="p">}</span>
-                <span class="p">)</span>
-        <span class="p">)</span>
-    <span class="k">val</span> <span class="py">emailService2</span> <span class="p">=</span> <span class="n">SendGrid</span><span class="p">(</span><span class="n">apiKey</span><span class="p">.</span><span class="n">key</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">pass</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">account</span><span class="p">,</span> <span class="n">templates</span><span class="p">)</span>
-    <span class="k">val</span> <span class="py">email</span><span class="p">:</span> <span class="n">EmailService</span> <span class="p">=</span> <span class="n">emailService2</span></code></pre></div>
-
-<br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
-<br/><br/><br/><br/>
-
-<h1 id="usage">Usage</h1>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">        
-    <span class="c1">// Sample email ( loaded from environment variable for test/example purposes )
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">toAddress</span> <span class="p">=</span> <span class="s">&#34;SLATEKIT_EXAMPLE_EMAIL&#34;</span><span class="p">.</span><span class="n">env</span><span class="p">().</span><span class="n">orElse</span><span class="p">(</span><span class="s">&#34;user1@gmail.com&#34;</span><span class="p">)</span>
-
-    <span class="c1">// Use case 1: Send a confirmation code to the U.S. to verify a users phone number.
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result1</span> <span class="p">=</span> <span class="n">email</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">toAddress</span><span class="p">,</span> <span class="s">&#34;Welcome to MyApp.com 1&#34;</span><span class="p">,</span> <span class="s">&#34;showWelcome!&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
-
-    <span class="c1">// Use case 2: Send using a constructed message object
-</span><span class="c1"></span>    <span class="n">email</span><span class="p">.</span><span class="n">sendSync</span><span class="p">(</span><span class="n">EmailMessage</span><span class="p">(</span><span class="n">toAddress</span><span class="p">,</span> <span class="s">&#34;Welcome to MyApp.com 2&#34;</span><span class="p">,</span> <span class="s">&#34;showWelcome!&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">))</span>
-
-    <span class="c1">// Use case 3: Send message using one of the setup templates
-</span><span class="c1"></span>    <span class="k">val</span> <span class="py">result2</span> <span class="p">=</span> <span class="n">email</span><span class="p">.</span><span class="n">sendTemplate</span><span class="p">(</span><span class="s">&#34;email_welcome&#34;</span><span class="p">,</span> <span class="n">toAddress</span><span class="p">,</span> <span class="s">&#34;Welcome to MyApp.com 3&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span>
-            <span class="n">Vars</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
-                    <span class="s">&#34;app.confirmUrl&#34;</span> <span class="n">to</span> <span class="s">&#34;https://www.myapp.com/confirm?abc=123&#34;</span><span class="p">,</span>
-                    <span class="s">&#34;user.name&#34;</span> <span class="n">to</span> <span class="s">&#34;user1&#34;</span><span class="p">,</span>
-                    <span class="s">&#34;user.email&#34;</span> <span class="n">to</span> <span class="s">&#34;user1@gmail.com&#34;</span><span class="p">,</span>
-                    <span class="s">&#34;app.code&#34;</span> <span class="n">to</span> <span class="s">&#34;ABC123&#34;</span>
-            <span class="p">)))</span>
-     </code></pre></div>
-<br/>
-
-<a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
+<p><a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
-
+<h1 id="setup">Setup</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 1: Getting Api key/login info from config
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// Load the config file from slatekit directory in user_home directory
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// e.g. {user_home}/slatekit/conf/sms.conf
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// NOTE: It is safer/more secure to store config files there.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">conf</span> <span class="p">=</span> <span class="nc">Config</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="s2">&#34;~/.slatekit/conf/email.conf&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">apiKey1</span> <span class="p">=</span> <span class="n">conf</span><span class="p">.</span><span class="n">apiLogin</span><span class="p">(</span><span class="s2">&#34;email&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 2: Get the api key either through conf or explicitly
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">apiKey2</span> <span class="p">=</span> <span class="n">ApiLogin</span><span class="p">(</span><span class="s2">&#34;17181234567&#34;</span><span class="p">,</span> <span class="s2">&#34;ABC1234567&#34;</span><span class="p">,</span> <span class="s2">&#34;password&#34;</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">,</span> <span class="s2">&#34;sendgrid-email&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 3a: Setup the email service ( basic ) with api key
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">apiKey</span> <span class="p">=</span> <span class="n">apiKey1</span> <span class="o">?:</span> <span class="n">apiKey2</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">emailService1</span> <span class="p">=</span> <span class="n">SendGrid</span><span class="p">(</span><span class="n">apiKey</span><span class="p">.</span><span class="n">key</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">pass</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">account</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Setup 3b: Setup the sms service with support for templates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">templates</span> <span class="p">=</span> <span class="nc">Templates</span><span class="p">.</span><span class="n">build</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="n">templates</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">Template</span><span class="p">(</span><span class="s2">&#34;email_welcome&#34;</span><span class="p">,</span> <span class="nc">Uris</span><span class="p">.</span><span class="n">readText</span><span class="p">(</span><span class="s2">&#34;~/slatekit/templates/email_welcome.txt&#34;</span><span class="p">)</span> <span class="o">?:</span> <span class="s2">&#34;&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">Template</span><span class="p">(</span><span class="s2">&#34;email_pass&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">                         Hi @{user.name},
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">                        &lt;p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">                        Your code for @{app.name} is @{app.code}.
+</span></span></span><span class="line"><span class="cl"><span class="s">                        &lt;/p&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">                        Regards,
+</span></span></span><span class="line"><span class="cl"><span class="s">                        @{app.from}
+</span></span></span><span class="line"><span class="cl"><span class="s">                        @{app.tagline}
+</span></span></span><span class="line"><span class="cl"><span class="s">                     &#34;&#34;&#34;</span><span class="p">.</span><span class="n">trimIndent</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">                <span class="p">),</span>
+</span></span><span class="line"><span class="cl">                <span class="n">subs</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;app.name&#34;</span> <span class="n">to</span> <span class="p">{</span> <span class="n">s</span><span class="p">:</span> <span class="n">TemplatePart</span> <span class="o">-&gt;</span> <span class="s2">&#34;My App&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;app.from&#34;</span> <span class="n">to</span> <span class="p">{</span> <span class="n">s</span><span class="p">:</span> <span class="n">TemplatePart</span> <span class="o">-&gt;</span> <span class="s2">&#34;My App Team&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                        <span class="s2">&#34;app.tagline&#34;</span> <span class="n">to</span> <span class="p">{</span> <span class="n">s</span><span class="p">:</span><span class="n">TemplatePart</span> <span class="o">-&gt;</span> <span class="s2">&#34;My App tagline&#34;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">emailService2</span> <span class="p">=</span> <span class="n">SendGrid</span><span class="p">(</span><span class="n">apiKey</span><span class="p">.</span><span class="n">key</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">pass</span><span class="p">,</span> <span class="n">apiKey</span><span class="p">.</span><span class="n">account</span><span class="p">,</span> <span class="n">templates</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">email</span><span class="p">:</span> <span class="n">EmailService</span> <span class="p">=</span> <span class="n">emailService2</span></span></span></code></pre></div>
+<br/>
+<p><a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
+<h1 id="usage">Usage</h1>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="c1">// Sample email ( loaded from environment variable for test/example purposes )
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">toAddress</span> <span class="p">=</span> <span class="s2">&#34;SLATEKIT_EXAMPLE_EMAIL&#34;</span><span class="p">.</span><span class="n">env</span><span class="p">().</span><span class="n">orElse</span><span class="p">(</span><span class="s2">&#34;user1@gmail.com&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 1: Send a confirmation code to the U.S. to verify a users phone number.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result1</span> <span class="p">=</span> <span class="n">email</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">toAddress</span><span class="p">,</span> <span class="s2">&#34;Welcome to MyApp.com 1&#34;</span><span class="p">,</span> <span class="s2">&#34;showWelcome!&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 2: Send using a constructed message object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">email</span><span class="p">.</span><span class="n">sendSync</span><span class="p">(</span><span class="n">EmailMessage</span><span class="p">(</span><span class="n">toAddress</span><span class="p">,</span> <span class="s2">&#34;Welcome to MyApp.com 2&#34;</span><span class="p">,</span> <span class="s2">&#34;showWelcome!&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Use case 3: Send message using one of the setup templates
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">result2</span> <span class="p">=</span> <span class="n">email</span><span class="p">.</span><span class="n">sendTemplate</span><span class="p">(</span><span class="s2">&#34;email_welcome&#34;</span><span class="p">,</span> <span class="n">toAddress</span><span class="p">,</span> <span class="s2">&#34;Welcome to MyApp.com 3&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Vars</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;app.confirmUrl&#34;</span> <span class="n">to</span> <span class="s2">&#34;https://www.myapp.com/confirm?abc=123&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;user.name&#34;</span> <span class="n">to</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;user.email&#34;</span> <span class="n">to</span> <span class="s2">&#34;user1@gmail.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;app.code&#34;</span> <span class="n">to</span> <span class="s2">&#34;ABC123&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)))</span>
+</span></span><span class="line"><span class="cl">     </span></span></code></pre></div>
+<br/></p>
+<p><a href="arch/email#overview" class="sk-back-to-top">Back to top </a>
+<br/><br/><br/><br/></p>
 <script>
     var archComponent = {
         name: "Email",

@@ -148,11 +148,8 @@
     
     <section class="creative">
       <div class="container">
-        
-
-<h1 id="random">Random</h1>
-
-<p><table class="table table-striped table-bordered">
+        <h1 id="random">Random</h1>
+<table class="table table-striped table-bordered">
   <tbody>
     <tr>
       <td><strong>desc</strong></td>
@@ -192,129 +189,119 @@
     </tr>
   </tbody>
 </table>
-<br/><br/></p>
-
+<br/><br/>
 <h2 id="gradle">Gradle</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-gradle" data-lang="gradle">    <span class="c1">// other setup ...
-</span><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-    <span class="o">}</span>
-
-    <span class="n">dependencies</span> <span class="o">{</span>
-        <span class="c1">// other libraries
-</span><span class="c1"></span>
-        <span class="c1">// slatekit-common: Utilities for Android or Server
-</span><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
-    <span class="o">}</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    <span class="c1">// other setup ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;https://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// other libraries
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// slatekit-common: Utilities for Android or Server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-common:0.9.35&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="import">Import</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">// required 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alpha3</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alpha6</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaN</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaSym3</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaSym6</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaSymN</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.digits3</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.digits6</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.digitsN</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.string3</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.string6</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.uuid</span>
-<span class="k">import</span> <span class="nn">slatekit.common.utils.Random.stringN</span>
-
-
-
-<span class="c1">// optional 
-</span><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
-<span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Try</span>
-<span class="k">import</span> <span class="nn">slatekit.results.Success</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="c1">// required 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alpha3</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alpha6</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaN</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaSym3</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaSym6</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.alphaSymN</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.digits3</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.digits6</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.digitsN</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.string3</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.string6</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.uuid</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.common.utils.Random.stringN</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// optional 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">import</span> <span class="nn">slatekit.cmds.Command</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.cmds.CommandRequest</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Try</span>
+</span></span><span class="line"><span class="cl"><span class="k">import</span> <span class="nn">slatekit.results.Success</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="setup">Setup</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="n">n</span><span class="p">/</span><span class="n">a</span></code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl"><span class="n">n</span><span class="p">/</span><span class="n">a</span></span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="usage">Usage</h2>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="c1">// CASE 1: Create random strings ( characters only ) of different lengths
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;Random STRINGS - UPPER + lower case&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">string3</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">string6</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">()</span>
-
-    <span class="n">println</span><span class="p">(</span><span class="s">&#34;Random STRINGS - lower case only&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="n">allowUpper</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="n">allowUpper</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="n">allowUpper</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">()</span>
-
-    <span class="c1">// CASE 2: Create Guid
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;Random GUID&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;dashes - yes : &#34;</span> <span class="p">+</span> <span class="n">uuid</span><span class="p">()</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;dashes - no  : &#34;</span> <span class="p">+</span> <span class="n">uuid</span><span class="p">(</span><span class="n">includeDashes</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;casing - no  : &#34;</span> <span class="p">+</span> <span class="n">uuid</span><span class="p">(</span><span class="n">includeDashes</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span> <span class="n">upperCase</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">()</span>
-
-    <span class="c1">// CASE 3: Create numbers of different lengths
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;Random NUMBERS&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">digits3</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">digits6</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">digitsN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">()</span>
-
-    <span class="c1">// CASE 4: Create alpha-numeric strings ( chars + digits ) of different lengths
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;Random ALPHA-NUMERIC&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">alpha3</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">alpha6</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">alphaN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
-    <span class="n">println</span><span class="p">()</span>
-
-    <span class="c1">// CASE 5: Create alpha-numeric-symbol strings ( chars + digits + symbols ) of different lengths
-</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s">&#34;Random ALPHA-NUMERIC-SYMBOL&#34;</span><span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">alphaSym3</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">alphaSym6</span><span class="p">()</span>  <span class="p">)</span>
-    <span class="n">println</span><span class="p">(</span> <span class="s">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">alphaSymN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
-
-    </code></pre></div>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// CASE 1: Create random strings ( characters only ) of different lengths
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Random STRINGS - UPPER + lower case&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">string3</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">string6</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Random STRINGS - lower case only&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="n">allowUpper</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="n">allowUpper</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">stringN</span><span class="p">(</span><span class="m">9</span><span class="p">,</span> <span class="n">allowUpper</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 2: Create Guid
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Random GUID&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;dashes - yes : &#34;</span> <span class="p">+</span> <span class="n">uuid</span><span class="p">()</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;dashes - no  : &#34;</span> <span class="p">+</span> <span class="n">uuid</span><span class="p">(</span><span class="n">includeDashes</span> <span class="p">=</span> <span class="k">false</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;casing - no  : &#34;</span> <span class="p">+</span> <span class="n">uuid</span><span class="p">(</span><span class="n">includeDashes</span> <span class="p">=</span> <span class="k">false</span><span class="p">,</span> <span class="n">upperCase</span> <span class="p">=</span> <span class="k">true</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 3: Create numbers of different lengths
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Random NUMBERS&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">digits3</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">digits6</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">digitsN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 4: Create alpha-numeric strings ( chars + digits ) of different lengths
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Random ALPHA-NUMERIC&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">alpha3</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">alpha6</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">alphaN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// CASE 5: Create alpha-numeric-symbol strings ( chars + digits + symbols ) of different lengths
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Random ALPHA-NUMERIC-SYMBOL&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 3 : &#34;</span> <span class="p">+</span> <span class="n">alphaSym3</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len 6 : &#34;</span> <span class="p">+</span> <span class="n">alphaSym6</span><span class="p">()</span>  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">println</span><span class="p">(</span> <span class="s2">&#34;len n : &#34;</span> <span class="p">+</span> <span class="n">alphaSymN</span><span class="p">(</span><span class="m">9</span><span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 <br/><br/></p>
-
 <h2 id="output">Output</h2>
-
-<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="n">Random</span> <span class="n">STRINGS</span> <span class="p">-</span> <span class="n">UPPER</span> <span class="p">+</span> <span class="n">lower</span> <span class="n">case</span>
-  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">ndo</span>
-  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="n">mRqDIz</span>
-  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">mjTWZkARV</span>
-
-  <span class="n">Random</span> <span class="n">STRINGS</span> <span class="p">-</span> <span class="n">lower</span> <span class="n">case</span> <span class="n">only</span>
-  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">qdc</span>
-  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="n">hqqnab</span>
-  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">chnedbmlp</span>
-
-  <span class="n">Random</span> <span class="n">GUID</span>
-  <span class="n">dashes</span> <span class="p">-</span> <span class="n">yes</span> <span class="p">:</span> <span class="m">54</span><span class="n">E49A58</span><span class="p">-</span><span class="m">5</span><span class="n">A4E</span><span class="p">-</span><span class="m">45F2</span><span class="p">-</span><span class="m">994</span><span class="n">B</span><span class="p">-</span><span class="m">6</span><span class="n">E0D783B95E9</span>
-  <span class="n">dashes</span> <span class="p">-</span> <span class="n">no</span>  <span class="p">:</span> <span class="m">18496</span><span class="n">EC779EB48ABAC4B61B2DC4357F5</span>
-
-  <span class="n">Random</span> <span class="n">NUMBERS</span>
-  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="m">697</span>
-  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="m">909051</span>
-  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="m">181651948</span>
-
-  <span class="n">Random</span> <span class="n">ALPHA</span><span class="p">-</span><span class="n">NUMERIC</span>
-  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">ghs</span>
-  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="m">194</span><span class="n">cpb</span>
-  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">vw9upkh4p</span>
-
-  <span class="n">Random</span> <span class="n">ALPHA</span><span class="p">-</span><span class="n">NUMERIC</span><span class="p">-</span><span class="n">SYMBOL</span>
-  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">n0i</span>
-  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="n">m27h6h</span>
-  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">k</span><span class="p">}</span><span class="n">y</span><span class="p">!</span><span class="n">m</span><span class="p">+</span><span class="n">fz</span><span class="p">)</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">  <span class="n">Random</span> <span class="n">STRINGS</span> <span class="p">-</span> <span class="n">UPPER</span> <span class="p">+</span> <span class="n">lower</span> <span class="n">case</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">ndo</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="n">mRqDIz</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">mjTWZkARV</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Random</span> <span class="n">STRINGS</span> <span class="p">-</span> <span class="n">lower</span> <span class="n">case</span> <span class="n">only</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">qdc</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="n">hqqnab</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">chnedbmlp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Random</span> <span class="n">GUID</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dashes</span> <span class="p">-</span> <span class="n">yes</span> <span class="p">:</span> <span class="m">54</span><span class="n">E49A58</span><span class="p">-</span><span class="m">5</span><span class="n">A4E</span><span class="p">-</span><span class="m">45F2</span><span class="p">-</span><span class="m">994</span><span class="n">B</span><span class="p">-</span><span class="m">6</span><span class="n">E0D783B95E9</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dashes</span> <span class="p">-</span> <span class="n">no</span>  <span class="p">:</span> <span class="m">18496</span><span class="n">EC779EB48ABAC4B61B2DC4357F5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Random</span> <span class="n">NUMBERS</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="m">697</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="m">909051</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="m">181651948</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Random</span> <span class="n">ALPHA</span><span class="p">-</span><span class="n">NUMERIC</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">ghs</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="m">194</span><span class="n">cpb</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">vw9upkh4p</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">Random</span> <span class="n">ALPHA</span><span class="p">-</span><span class="n">NUMERIC</span><span class="p">-</span><span class="n">SYMBOL</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">3</span> <span class="p">:</span> <span class="n">n0i</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="m">6</span> <span class="p">:</span> <span class="n">m27h6h</span>
+</span></span><span class="line"><span class="cl">  <span class="n">len</span> <span class="n">n</span> <span class="p">:</span> <span class="n">k</span><span class="p">}</span><span class="n">y</span><span class="p">!</span><span class="n">m</span><span class="p">+</span><span class="n">fz</span><span class="p">)</span></span></span></code></pre></div>
 
       </div>
     </section>  
