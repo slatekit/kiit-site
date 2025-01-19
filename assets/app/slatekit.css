@@ -287,6 +287,13 @@ table tr td  {
 .navbar-classic .navbar-nav .nav-item .nav-link {
 	font-weight: bold;
 }
+
+pre {
+	border-radius: 10px;
+}
+.features .box {
+	border-radius: 8px;
+}
 /*
 table tr td  {
 	font-family: 'Open Sans', sans-serif;

@@ -121,13 +121,13 @@ Use the following settings in gradle for installing this component.
 # Sources {#sources}
 {{% sk-module 
     name="Results"
-    package="slatekit.results"
-    jar="slatekit.result.jar"
-    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results"
-    gitModule="slatekit-result"
+    package="kiit.results"
+    jar="kiit.result.jar"
+    git="https://github.com/slatekit/kiit/tree/master/src/common/result/src/main/kotlin/kiit/results"
+    gitModule="kiit-result"
     url="arch/results"
     uses="0 Dependencies"
-    bintray="slatekit-results"
+    bintray="kiit-results"
     exampleUrl="Example_Results.kt"
     exampleFileName="Example_Results.kt"
 %}}
