@@ -260,11 +260,11 @@
   </tr>
   <tr>
     <td><strong>Sources</strong></td>
-    <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs">slatekit-jobs</a></td>
+    <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-jobs">slatekit-jobs</a></td>
   </tr>
   <tr>
       <td><strong>Example</strong></td>
-      <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Jobs.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Jobs.kt</a></td>
   </tr>
   <tr>
     <td><strong>Requires</strong></td>
@@ -302,52 +302,52 @@
         <td><strong>Description</strong></td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Jobs.kt" >Jobs</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Jobs.kt" >Jobs</a></strong></td>
         <td>A registry of all the jobs being managed.</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Job.kt" >Job</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Job.kt" >Job</a></strong></td>
         <td>The main component managing work between workers, queues, tasks, and policies.</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/support/Coordinator.kt" >Coordinator</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/support/Coordinator.kt" >Coordinator</a></strong></td>
         <td>Responsible for coordinating requests on Workers ( by default using Channels )</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Workers.kt" >Workers</a></strong> </td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Workers.kt" >Workers</a></strong> </td>
         <td>A collection of 1 or more workers ( linked to job )</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Worker.kt" >Worker</a></strong> </td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Worker.kt" >Worker</a></strong> </td>
         <td>Performs the actual work (on a possible Task)</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/WorkState.kt" >WorkState</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/WorkState.kt" >WorkState</a></strong></td>
         <td>Represents the state of a single iteration of work done by a worker</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Task</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Task</a></strong></td>
         <td>A single work item that can be performed by a worker</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Queue.kt" >Queue</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Queue.kt" >Queue</a></strong></td>
         <td>Represents a queue of Tasks either in-memory or persisted ( AWS SQS )</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/JobAction.kt" >Action</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/JobAction.kt" >Action</a></strong></td>
         <td>The Action(s) that can be performed on a Job/Worker: Start, Stop, Pause, Resume, Control, Process, Delay
         </td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Priority.kt" >Priority</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Priority.kt" >Priority</a></strong></td>
         <td>The priority level of a Queue</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-functions/src/main/kotlin/slatekit/functions/policy/Policy.kt" >Policy</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-functions/src/main/kotlin/slatekit/functions/policy/Policy.kt" >Policy</a></strong></td>
         <td>A form of middleware to inject into a Job to adjust behaviour</td>
     </tr>
     <tr>
-        <td><strong><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Status.kt" >Status</a></strong></td>
+        <td><strong><a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/Status.kt" >Status</a></strong></td>
         <td>The status ( idle, running, paused, stopped, completed ) of a worker or job.</td>
     </tr>
 </table>
@@ -411,7 +411,7 @@
 <p><a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 <h2 id="identity">Identity</h2>
-<p>Every job must be set up with an <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Identity.kt" >Identity</a>. This identity is transfered down to all workers ( given a unique uuid per worker ) and is used to uniquely identity jobs and workers.</p>
+<p>Every job must be set up with an <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/Identity.kt" >Identity</a>. This identity is transfered down to all workers ( given a unique uuid per worker ) and is used to uniquely identity jobs and workers.</p>
 <p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl">    <span class="c1">// slatekit.common.Identity is used to identify the job.  
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s2">&#34;demo&#34;</span><span class="p">,</span> <span class="s2">&#34;newsletter&#34;</span><span class="p">,</span> <span class="nc">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">)</span>
@@ -439,7 +439,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
 <br/><br/></p>
 <h3 id="2-function-with-task">2. Function with Task</h3>
-<p>You can declare a simple 1 parameter that takes in a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Task</a> ( representing a unit of work ). This assumes you are sourcing the work from a Queue.
+<p>You can declare a simple 1 parameter that takes in a <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Task</a> ( representing a unit of work ). This assumes you are sourcing the work from a Queue.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetter</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">):</span><span class="n">WorkResult</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">println</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>    <span class="c1">// abc123 
@@ -453,7 +453,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">}</span></span></span></code></pre></div>
 <br/><br/></p>
 <h3 id="3-worker-class">3. Worker class</h3>
-<p>Finally, you can extend from the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Worker.kt" >Worker</a> class. This is the most comprehensive option as it gives you the ability to customize various life-cycel events ( see later section ). The life-cycle events go from <strong>init -&gt; work -&gt; done</strong>.</p>
+<p>Finally, you can extend from the <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Worker.kt" >Worker</a> class. This is the most comprehensive option as it gives you the ability to customize various life-cycel events ( see later section ). The life-cycle events go from <strong>init -&gt; work -&gt; done</strong>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl">    <span class="c1">// slatekit.common.Identity is used to identify the job.  
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s2">&#34;samples&#34;</span><span class="p">,</span> <span class="s2">&#34;newsletter&#34;</span><span class="p">,</span> <span class="nc">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">)</span>
@@ -591,7 +591,7 @@
 </span></span><span class="line"><span class="cl">     </span></span></code></pre></div>
 <br/><br/></p>
 <h3 id="2-status">2. Status</h3>
-<p>You can check the status of the job. The Status range are available in <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Status.kt" >Status</a></p>
+<p>You can check the status of the job. The Status range are available in <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/Status.kt" >Status</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="c1">// Get a job by its name
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">job</span> <span class="p">=</span> <span class="n">jobs</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="s2">&#34;samples.job1&#34;</span><span class="p">)</span>
@@ -651,7 +651,7 @@
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="types">Types</h2>
-<p>There are different types of jobs based on whether they run all their work in 1 go or perform work in batches/pages. This is <strong>(currently)</strong> not indicated explicitly at the function/worker level, but is based on what the function/work methods returns for the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/WorkState.kt" >WorkState</a>.
+<p>There are different types of jobs based on whether they run all their work in 1 go or perform work in batches/pages. This is <strong>(currently)</strong> not indicated explicitly at the function/worker level, but is based on what the function/work methods returns for the <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/WorkState.kt" >WorkState</a>.
 <br/><br/></p>
 <h3 id="1-onetime">1. OneTime</h3>
 <p>A one time worker simply performs the long-running operation and returns a WorkResult indicating it&rsquo;s done.
@@ -685,7 +685,7 @@
 </span></span><span class="line"><span class="cl">     </span></span></code></pre></div>
 <br/><br/></p>
 <h3 id="3-queued">3. Queued</h3>
-<p>A queued worker runs work via <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Tasks</a> from a Queue.
+<p>A queued worker runs work via <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Task.kt" >Tasks</a> from a Queue.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">suspend</span> <span class="k">fun</span> <span class="nf">sendNewsLetterFromQueue</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">):</span><span class="n">WorkResult</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
@@ -720,7 +720,7 @@
 <p><br/><br/><br/></p>
 <h2 id="policies">Policies</h2>
 <p>You can set up custom policies which essentially represent middleware functions to execute at various times and/or conditions of workers and jobs.
-Policies are available in the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-functions/src/main/kotlin/slatekit/functions/policy" >slatekit-functions</a> project ( not yet documented).
+Policies are available in the <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-functions/src/main/kotlin/slatekit/functions/policy" >slatekit-functions</a> project ( not yet documented).
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="c1">// There are 3 policies setup for this job:
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. Every: for every 10 items processed, call the function supplied
@@ -738,7 +738,7 @@ Policies are available in the <a href="https://github.com/slatekit/slatekit/tree
 <a href="arch/jobs#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="workers">Workers</h2>
-<p>A job internally holds a collection of workers via <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-jobs/src/main/kotlin/slatekit/jobs/Workers.kt" >Workers</a>. Each worker has an identity (based off the job&rsquo;s identity ) in order to uniquely identify it. You can get the ids of all the workers and get the worker context which holds various components like polices ( middleware ) and diagnostics/stats.
+<p>A job internally holds a collection of workers via <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-jobs/src/main/kotlin/slatekit/jobs/Workers.kt" >Workers</a>. Each worker has an identity (based off the job&rsquo;s identity ) in order to uniquely identify it. You can get the ids of all the workers and get the worker context which holds various components like polices ( middleware ) and diagnostics/stats.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="c1">// Get the workers collection ( Workers )
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">workers</span> <span class="p">=</span> <span class="n">job</span><span class="p">.</span><span class="n">workers</span>

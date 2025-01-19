@@ -274,11 +274,11 @@
   </tr>
   <tr>
     <td><strong>Sources</strong></td>
-    <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache">slatekit-cache</a></td>
+    <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-cache">slatekit-cache</a></td>
   </tr>
   <tr>
       <td><strong>Example</strong></td>
-      <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Cache.kt</a></td>
   </tr>
   <tr>
     <td><strong>Requires</strong></td>
@@ -470,7 +470,7 @@
 <a href="arch/cache#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="sync">Sync</h2>
-<p>Showing usage of a <strong>synchronous</strong> cache implementation <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. All operations on cache are using the <strong>@synchronized</strong> annotation on methods. Synchronouse caches are implemented using the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SyncCache.kt" >SyncCache</a> interface.
+<p>Showing usage of a <strong>synchronous</strong> cache implementation <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. All operations on cache are using the <strong>@synchronized</strong> annotation on methods. Synchronouse caches are implemented using the <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-cache/src/main/kotlin/slatekit/cache/SyncCache.kt" >SyncCache</a> interface.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// SimpleCache is the underlying Cache implementation
@@ -508,7 +508,7 @@
 <p><br/><br/><br/></p>
 <h2 id="async">Async</h2>
 <p>Async functionality is based on using Coroutines and Channels for writes.
-The <strong>async</strong> cache implementation is <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. Async caches are implemented using the <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/AsyncCache.kt" >AsyncCache</a> interface. In this approach, concurrent writes are handling by creating a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-cache/src/main/kotlin/slatekit/cache/CacheCommand.kt" >CacheCommand</a> representing the operation and sending them to a channel to be handled sequentially. Reads are handling by returning a kotlin <strong>Deferred[T]</strong>.
+The <strong>async</strong> cache implementation is <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-cache/src/main/kotlin/slatekit/cache/SimpleAsyncCache.kt" >SimpleAsyncCache</a>. Async caches are implemented using the <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-cache/src/main/kotlin/slatekit/cache/AsyncCache.kt" >AsyncCache</a> interface. In this approach, concurrent writes are handling by creating a <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-cache/src/main/kotlin/slatekit/cache/CacheCommand.kt" >CacheCommand</a> representing the operation and sending them to a channel to be handled sequentially. Reads are handling by returning a kotlin <strong>Deferred[T]</strong>.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">    <span class="k">import</span> <span class="nn">slatekit.cache.*</span>
 </span></span><span class="line"><span class="cl">

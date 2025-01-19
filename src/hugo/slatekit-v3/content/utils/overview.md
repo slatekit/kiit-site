@@ -3,7 +3,7 @@ title: "Utilities"
 date: 2019-03-17T14:30:52-04:00
 ---
 # Overview
-Slate Kit <strong>Utilities</strong> supplement the existing Kotlin standard library by offering a powerful set of general purpose Kotlin components that can be used for any application. Many of these components are located in the {{% sk-link-code component="common" filepath="common" name="slatekit-common" %}} project. However, there are a few components located in other projects. Refer to each utility component for more info.
+Kiit <strong>Utilities</strong> supplement the existing Kotlin standard library by offering a powerful set of general purpose Kotlin components that can be used for any application. Many of these components are located in the {{% sk-link-code component="common" filepath="common" name="kiit-common" %}} project. However, there are a few components located in other projects. Refer to each utility component for more info.
 {{% break %}}
 
 ## Setup
@@ -16,13 +16,13 @@ Slate Kit <strong>Utilities</strong> supplement the existing Kotlin standard lib
 Links to this modules info. Click on any component icon below for example on how to use it.
 {{% sk-module 
     name="Common"
-    package="slatekit.common"
-    jar="slatekit.common.jar"
-    git="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common"
-    gitAlias="slatekit-common"
+    package="kiit.common"
+    jar="kiit.common.jar"
+    gitModule="/src/common/common/"
+    gitAlias="kiit-common"
     url="utils/overview"
-    uses="slatekit-results"
-    bintray="slatekit-common"
+    uses="kiit-results"
+    bintray="kiit-common"
     license="Apache 2.0"
     exampleUrl=""
     exampleFileName="All Examples"

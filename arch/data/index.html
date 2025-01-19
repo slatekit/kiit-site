@@ -267,11 +267,11 @@ Future versions will include support for:</p>
   </tr>
   <tr>
     <td><strong>Sources</strong></td>
-    <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities">slatekit-entities</a></td>
+    <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-entities">slatekit-entities</a></td>
   </tr>
   <tr>
       <td><strong>Example</strong></td>
-      <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Entities.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_Entities.kt</a></td>
   </tr>
   <tr>
     <td><strong>Requires</strong></td>
@@ -355,7 +355,7 @@ Future versions will include support for:</p>
 <p><a href="arch/data#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 <h2 id="connections">Connections</h2>
-<p>You can setup connections different ways from explicit creation to loading from configuration settings. This uses <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/DbCon.kt" >DbCon</a>. The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/Connections.kt" >Connections</a> is used to store multiple connections by name.
+<p>You can setup connections different ways from explicit creation to loading from configuration settings. This uses <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/data/DbCon.kt" >DbCon</a>. The <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/data/Connections.kt" >Connections</a> is used to store multiple connections by name.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Connection
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 1. Explicit creation
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="nc">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span> <span class="s2">&#34;pswd3210&#34;</span><span class="p">)</span>
@@ -381,7 +381,7 @@ Future versions will include support for:</p>
 <a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="databases">Databases</h2>
-<p>The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/data/IDb.kt" >IDb</a> interface provides a thin abstraction over data access calls, particularly JDBC. This makes it useful for abstracting data access to both Server side database calls via JDBC and Android database calls to Sqlite. Another benefit is facilitating unit-testing/mocking of other data related components in Slate Kit. The interface and supporting implementation for JDBC <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/Db.kt" >Db</a> support the typical operations to perform <strong>execute, update, query, scalar, stored proc</strong> calls.
+<p>The <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/data/IDb.kt" >IDb</a> interface provides a thin abstraction over data access calls, particularly JDBC. This makes it useful for abstracting data access to both Server side database calls via JDBC and Android database calls to Sqlite. Another benefit is facilitating unit-testing/mocking of other data related components in Slate Kit. The interface and supporting implementation for JDBC <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-db/src/main/kotlin/slatekit/db/Db.kt" >Db</a> support the typical operations to perform <strong>execute, update, query, scalar, stored proc</strong> calls.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="nc">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span> <span class="s2">&#34;pswd3210&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">db</span> <span class="p">=</span> <span class="n">Db</span><span class="p">(</span><span class="n">con1</span><span class="p">)</span>
@@ -427,7 +427,7 @@ Future versions will include support for:</p>
 <a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="records">Records</h2>
-<p>Because the Database abstracts over JDBC, there is also a corresponding interface <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/Record.kt" >Record</a> to abstract over JDBC ResultSets ( this is particularly useful for Android ). The implementation for JDBC is <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-db/src/main/kotlin/slatekit/db/RecordSet.kt" >RecordSet</a>
+<p>Because the Database abstracts over JDBC, there is also a corresponding interface <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/Record.kt" >Record</a> to abstract over JDBC ResultSets ( this is particularly useful for Android ). The implementation for JDBC is <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-db/src/main/kotlin/slatekit/db/RecordSet.kt" >RecordSet</a>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">    <span class="c1">// Sample connection/DB
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">con1</span> <span class="p">=</span> <span class="n">DbConString</span><span class="p">(</span><span class="nc">Vendor</span><span class="p">.</span><span class="nc">MySql</span><span class="p">.</span><span class="n">driver</span><span class="p">,</span> <span class="s2">&#34;jdbc:mysql://localhost/default&#34;</span><span class="p">,</span> <span class="s2">&#34;user1&#34;</span><span class="p">,</span> <span class="s2">&#34;pswd3210&#34;</span><span class="p">)</span>
@@ -475,7 +475,7 @@ Future versions will include support for:</p>
 <a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="mappers">Mappers</h2>
-<p>A <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Mapper.kt" >Mapper</a> simply encodes/decodes a data model to/from records. The <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/db/Value.kt" >Values</a> is simply a container for key/value pairs representing all the fields on the field that can be persisted/saved to a database. You can simply implement the mapping yourself ( explicitly without any reflection ) or use the OrmMapper ( see ORM section ) along with a schema for the Model to leverage automatic mapping.
+<p>A <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/db/Mapper.kt" >Mapper</a> simply encodes/decodes a data model to/from records. The <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-common/src/main/kotlin/slatekit/common/db/Value.kt" >Values</a> is simply a container for key/value pairs representing all the fields on the field that can be persisted/saved to a database. You can simply implement the mapping yourself ( explicitly without any reflection ) or use the OrmMapper ( see ORM section ) along with a schema for the Model to leverage automatic mapping.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    <span class="c1">// Mapper: manual field mapping
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">val</span> <span class="py">mapper</span> <span class="p">=</span> <span class="k">object</span><span class="p">:</span> <span class="n">Mapper</span><span class="p">&lt;</span><span class="n">Long</span><span class="p">,</span> <span class="n">User</span><span class="p">&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">
@@ -501,7 +501,7 @@ Future versions will include support for:</p>
 <a href="arch/data#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="repos">Repository</h2>
-<p>With the databases, records, mappers in place, the next step is to have a <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/Repo.kt" >Repo</a> component that can handle the common <strong>CRUD</strong> operations on model. The implementations for these are <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-entities/src/main/kotlin/slatekit/entities/repos/SqlRepo.kt" >SqlRepo</a>
+<p>With the databases, records, mappers in place, the next step is to have a <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-entities/src/main/kotlin/slatekit/entities/Repo.kt" >Repo</a> component that can handle the common <strong>CRUD</strong> operations on model. The implementations for these are <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-entities/src/main/kotlin/slatekit/entities/repos/SqlRepo.kt" >SqlRepo</a>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="c1">// Setup: This is boiler-plate that can be moved
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// to a helper function/builder

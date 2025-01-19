@@ -229,11 +229,11 @@
   </tr>
   <tr>
     <td><strong>Sources</strong></td>
-    <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking">slatekit-tracking</a></td>
+    <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-tracking">slatekit-tracking</a></td>
   </tr>
   <tr>
       <td><strong>Example</strong></td>
-      <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Tracking.kt">Example_Tracking.kt</a></td>
+      <td><a class="url-ch" href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Tracking.kt">Example_Tracking.kt</a></td>
   </tr>
   <tr>
     <td><strong>Requires</strong></td>
@@ -267,12 +267,12 @@
     </tr>
     <tr>
         <td><strong>2. Counts</strong> </td>
-        <td>Tracks total successes and all error categories from <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td> 
+        <td>Tracks total successes and all error categories from <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td> 
         <td><a href="arch/tracking/#counts" class="more"><span class="btn btn-primary">more</span></a></td>                    
     </tr>
     <tr>
         <td><strong>3. Lasts</strong></td>
-        <td>Tracks the last request and response/result values grouped by <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
+        <td>Tracks the last request and response/result values grouped by <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
         <td><a href="arch/tracking/#lasts" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
@@ -282,7 +282,7 @@
     </tr>
     <tr>
         <td><strong>5. Events</strong></td>
-        <td>Event handler for handling/tracking results based on <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
+        <td>Event handler for handling/tracking results based on <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a></td>
         <td><a href="arch/tracking/#events" class="more"><span class="btn btn-primary">more</span></a></td>
     </tr>
     <tr>
@@ -300,7 +300,7 @@
 <p><a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 <h2 id="calls">Calls</h2>
-<p>This is a simple counter to keep track of the total times an operation is called / passed / failed. These can be integrated with more comprehensive Timers/Guages from such libraries as <strong>Micrometer</strong>. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Calls.kt" >Calls</a> for more info.
+<p>This is a simple counter to keep track of the total times an operation is called / passed / failed. These can be integrated with more comprehensive Timers/Guages from such libraries as <strong>Micrometer</strong>. See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Calls.kt" >Calls</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">id</span> <span class="p">=</span> <span class="n">SimpleIdentity</span><span class="p">(</span><span class="s2">&#34;beta&#34;</span><span class="p">,</span> <span class="s2">&#34;setup&#34;</span><span class="p">,</span> <span class="nc">Agent</span><span class="p">.</span><span class="n">Job</span><span class="p">,</span> <span class="s2">&#34;dev&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">calls</span> <span class="p">=</span> <span class="n">Calls</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
@@ -337,7 +337,7 @@
 <p><br/><br/><br/></p>
 <h2 id="counts">Counts</h2>
 <p>Counters count the totals across the logical errors groups from
-<a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a>. These can be integrated with more comprehensive Timers/Guages from such libraries as <strong>Micrometer</strong>. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Counters.kt" >Counters</a> for more info.
+<a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-result/src/main/kotlin/slatekit/results/Status.kt" >Status</a>. These can be integrated with more comprehensive Timers/Guages from such libraries as <strong>Micrometer</strong>. See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Counters.kt" >Counters</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl">    <span class="cm">/** 
 </span></span></span><span class="line"><span class="cl"><span class="cm">     * Slate Kit heavily uses logical success / failure categories @see[slatekit.results.Status]
@@ -386,7 +386,7 @@
 <a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="lasts">Lasts</h2>
-<p>Lasts track request and response/result values for <strong>inspecting</strong> values at runtime. These become useful during diagnosing specific requests/response that may match certain criteria and having access to the full object vs simply logging the data. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Lasts.kt" >Lasts</a> for more info.
+<p>Lasts track request and response/result values for <strong>inspecting</strong> values at runtime. These become useful during diagnosing specific requests/response that may match certain criteria and having access to the full object vs simply logging the data. See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Lasts.kt" >Lasts</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">    <span class="c1">// Lets setup some example request / result types
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserRequest</span><span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">action</span><span class="p">:</span><span class="n">String</span><span class="p">)</span>
@@ -418,7 +418,7 @@
 <a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="event">Event</h2>
-<p>The event model is a general purpose data structure to represent a past event with extensible fields. This model can then be used for structured logging, alerts, and analytics. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Event.kt" >Event</a> for more info.
+<p>The event model is a general purpose data structure to represent a past event with extensible fields. This model can then be used for structured logging, alerts, and analytics. See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Event.kt" >Event</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">event</span> <span class="p">=</span> <span class="n">Event</span><span class="p">(</span>
@@ -442,7 +442,7 @@
 <p><br/><br/><br/></p>
 <h2 id="events">Events</h2>
 <p>You have have to the logs/factory to create loggers.
-See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Events.kt" >Events</a> for more info.
+See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Events.kt" >Events</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">     
 </span></span><span class="line"><span class="cl">     <span class="c1">// Lets setup some example request / result types
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserRequest</span><span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">action</span><span class="p">:</span><span class="n">String</span><span class="p">)</span>
@@ -474,7 +474,7 @@ See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/sla
 <p><br/><br/><br/></p>
 <h2 id="recorder">Recorder</h2>
 <p>The recorder component is a combination of all the above and can be used to record a request / result across calls, counts, lasts, events, logs.
-See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Recorder.kt" >Recorder</a> for more info.
+See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Recorder.kt" >Recorder</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="k">val</span> <span class="py">recorder</span> <span class="p">=</span> <span class="n">Recorder</span><span class="p">&lt;</span><span class="n">UserRequest</span><span class="p">,</span> <span class="n">UserResult</span><span class="p">&gt;(</span><span class="nc">Identity</span><span class="p">.</span><span class="n">test</span><span class="p">(</span><span class="s2">&#34;job1&#34;</span><span class="p">),</span> <span class="n">LoggerConsole</span><span class="p">(),</span> <span class="n">calls</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">lasts</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
@@ -491,7 +491,7 @@ See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/sla
 <a href="arch/tracking#overview" class="sk-back-to-top">Back to top </a></p>
 <p><br/><br/><br/></p>
 <h2 id="updates">Updates</h2>
-<p>Updates track the initial creation time, update time, total updates of some value T. See <a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-tracking/src/main/kotlin/slatekit/tracking/Updates.kt" >Updates</a> for more info.
+<p>Updates track the initial creation time, update time, total updates of some value T. See <a href="https://github.com/slatekit/kiit/tree/master/src/lib/kotlin/kiit-tracking/src/main/kotlin/slatekit/tracking/Updates.kt" >Updates</a> for more info.
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="line"><span class="cl">      
 </span></span><span class="line"><span class="cl">    <span class="c1">// Initial settings
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">data</span> <span class="k">class</span> <span class="nc">UserSettings</span><span class="p">(</span><span class="k">val</span> <span class="py">userId</span><span class="p">:</span><span class="n">String</span><span class="p">,</span> <span class="k">val</span> <span class="py">isBetaTester</span><span class="p">:</span><span class="n">Boolean</span><span class="p">)</span>
