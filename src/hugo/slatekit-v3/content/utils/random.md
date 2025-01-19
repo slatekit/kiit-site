@@ -4,23 +4,23 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>A random generator for strings, guids, numbers, alpha-numeric, and alpha-numeric-symbols for various lengths</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
       <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
+      <td><strong>sources</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common</a></td>
     </tr>
     <tr>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Random.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Random.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,34 +41,27 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
+  
 // required 
-import slatekit.common.utils.Random.alpha3
-import slatekit.common.utils.Random.alpha6
-import slatekit.common.utils.Random.alphaN
-import slatekit.common.utils.Random.alphaSym3
-import slatekit.common.utils.Random.alphaSym6
-import slatekit.common.utils.Random.alphaSymN
-import slatekit.common.utils.Random.digits3
-import slatekit.common.utils.Random.digits6
-import slatekit.common.utils.Random.digitsN
-import slatekit.common.utils.Random.string3
-import slatekit.common.utils.Random.string6
-import slatekit.common.utils.Random.uuid
-import slatekit.common.utils.Random.stringN
-
+import kiit.common.utils.Random.alpha3
+import kiit.common.utils.Random.alpha6
+import kiit.common.utils.Random.alphaN
+import kiit.common.utils.Random.alphaSym3
+import kiit.common.utils.Random.alphaSym6
+import kiit.common.utils.Random.alphaSymN
+import kiit.common.utils.Random.digits3
+import kiit.common.utils.Random.digits6
+import kiit.common.utils.Random.digitsN
+import kiit.common.utils.Random.string3
+import kiit.common.utils.Random.string6
+import kiit.common.utils.Random.uuid
+import kiit.common.utils.Random.stringN
 
 
 // optional 
-import slatekit.cmds.Command
-import slatekit.cmds.CommandRequest
-import slatekit.results.Try
-import slatekit.results.Success
-
-
-
-
+import kiit.results.Try
+import kiit.results.Success
+  
 {{< /highlight >}}
 {{% break %}}
 

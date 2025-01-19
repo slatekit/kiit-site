@@ -216,17 +216,37 @@ A small future enhancement will add support for question and answer flow.
 <p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 <h1 id="install">Install</h1>
-<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-groovy" data-lang="groovy"><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// other repositories
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span>  <span class="s2">&#34;http://dl.bintray.com/codehelixinc/slatekit&#34;</span> <span class="o">}</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+<p>Use the following settings in gradle for installing this component.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gradle" data-lang="gradle"><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">buildscript</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Kotlin version currently being used
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">ext</span><span class="o">.</span><span class="na">kotlin_version</span> <span class="o">=</span> <span class="s1">&#39;1.8.22&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Reference version 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">ext</span><span class="o">.</span><span class="na">kiit_version</span> <span class="o">=</span> <span class="s1">&#39;3.1.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">repositories</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Currently stored in Git Hub Packages.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">maven</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">url</span> <span class="s2">&#34;https://maven.pkg.github.com/slatekit/kiit&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">credentials</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">username</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s1">&#39;GIT_PACKAGES_INSTALL_ACTOR&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">password</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getenv</span><span class="o">(</span><span class="s1">&#39;GIT_PACKAGES_INSTALL_TOKEN&#39;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">dependencies</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// other dependencies ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">        <span class="n">compile</span> <span class="s1">&#39;com.slatekit:slatekit-cli:1.0.0&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">}</span></span></span></code></pre></div>
-<br/></p>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Other dependencies ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">implementation</span> <span class="s2">&#34;dev.kiit:kiit-cli:$kiit_version&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></div><br/>
 <p><a href="arch/cli#overview" class="sk-back-to-top">Back to top </a>
 <br/><br/><br/><br/></p>
 <h1 id="sources">Sources</h1>
@@ -246,14 +266,6 @@ A small future enhancement will add support for question and answer flow.
   <tr>
       <td><strong>Example</strong></td>
       <td><a class="url-ch" href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/">Example_CLI.kt</a></td>
-  </tr>
-  <tr>
-    <td><strong>Version</strong></td>
-    <td><img src="https://api.bintray.com/packages/codehelixinc/slatekit/slatekit-cli/images/download.svg" /></td>
-  </tr>
-  <tr>
-    <td><strong>License</strong></td>
-    <td><img src="https://img.shields.io/badge/license-Apache-orange.svg?style=flat" /></td>
   </tr>
   <tr>
     <td><strong>Requires</strong></td>

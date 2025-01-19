@@ -10,13 +10,13 @@ Kiit offers <strong>several features</strong> as modular <strong>Architecture co
 and scalable applications on the JVM. Several of the modules can be used for both **Server and Android**. Click any of the modules below for more info.
 
  <div class="alert alert-info" role="alert">
-**TAGS**<br/>
-1. The <span class="badge badge-light">Server</span> tag indicates that the component is a runnable application and meant to be used on the **Server**.<br/>
-2. The <span class="badge badge-light">Android / Server</span> tag indicates that the component is a library and can be used for both **Android** and **Server**.<br/>
-3. The <span class="badge badge-success">Stable</span> tag indicates the module is a **stable** release. <br/>
-4. The <span class="badge badge-primary">Beta</span> tag indicates a module still in **Beta**, but soon to become a stable release.<br/>
+<strong>TAGS</strong>
+<br/>
+1. The <span class="badge badge-light">Server</span> tag indicates that the component is a runnable application and meant to be used on the <strong>Server</strong>.<br/>
+2. The <span class="badge badge-light">Full Stack</span> tag indicates that the component is a library and can be used for both <strong>Android</strong> and <strong>Server</strong>.<br/>
+3. The <span class="badge badge-success">Stable</span> tag indicates the module is a <strong>stable</strong> release. <br/>
+4. The <span class="badge badge-primary">Beta</span> tag indicates a module still in <strong>Beta</strong>, but soon to become a stable release.<br/>
 5. The <span class="badge badge-warning">Internal</span> tag indicates a module that is for internal use only <strong>( these may be replaced by other open-source libraries )</strong><br/>
-6. The <img src="https://img.shields.io/badge/2.8.0-version-blue" /> tag is a download link to **Github Packages** for the **gradle/maven** instructions on installing the package <br/>
 
 </a>
 </div>
@@ -41,18 +41,18 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/app"><h3>App</h3></a></div>
               <p>An general purpose <strong>App template</strong> with support for environments, logging, configs, diagnostics, help usage and more. See {{% sk-link-arch page="app" name="App" %}} 
               </p>
-              <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-primary">Beta</span>
+              <span class="badge badge-light">Server</span>
+              <span class="badge badge-success">Stable</span>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
             <div class="box text-center">
               <a href="arch/apis"><img src="assets/media/img/white/webapi.png" alt="" class="img-fluid"></a>
               <div><a href="arch/apis"><h3>APIs</h3></a></div>
-              <p>A simple, intuitive, <strong>protocol independent</strong> approach to building APIs in Slate so they run as Web APIs or on the CLI. See {{% sk-link-arch page="apis" name="APIs" %}} 
+              <p>A simple, intuitive, <strong>protocol independent</strong> approach to building APIs so they run as Web APIs or on the CLI. See {{% sk-link-arch page="apis" name="APIs" %}} 
               </p>
-              <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-warning">Internal use</span>
+              <span class="badge badge-light">Server</span>
+              <span class="badge badge-primary">Beta</span>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -72,7 +72,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/cli"><h3>CLI</h3></a></div>
               <p>Command line interface to handle actions in an interactive way. Has customization and formatting features. See {{% sk-link-arch page="cli" name="CLI" %}} </a>.
               </p>
-              <span class="badge badge-light">Full Stack</span>
+              <span class="badge badge-light">Server</span>
               <span class="badge badge-success">Stable</span>
             </div>
           </div>
@@ -135,7 +135,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <div><a href="arch/generators"><h3>Generator</h3></a></div>
               <p>Command Line Project generator with extensible templates to quickly create new or custom apps. See {{% sk-link-arch page="generators" name="Generators" %}} 
               </p>
-              <span class="badge badge-light">Full Stack</span>
+              <span class="badge badge-light">Server</span>
               <span class="badge badge-success">Stable</span>
             </div>
           </div>
@@ -157,7 +157,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>Send alerts, emails, sms, push messages with optional templates. Works with Slack, SendGrid, Twilio.
                  See samples for {{% sk-link-arch page="email" name="Email" %}} and {{% sk-link-arch page="sms" name="SMS" %}} 
               </p>
-              <span class="badge badge-light">Full Stack</span>
+              <span class="badge badge-light">Server</span>
               <span class="badge badge-success">Stable</span>
             </div>
           </div>
@@ -199,7 +199,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>A simple and thin HTTP library that is a wrapper on top of <strong>OkHTTP</strong> to make declaritive  RPC like calls over HTTP. For internal use only {{% sk-link-util page="overview" name="Utilities" %}} 
               </p>
               <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-success">Stable</span>
+              <span class="badge badge-warning">Internal use</span>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -209,7 +209,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>A collection of various Reflection and Meta programming utilites and components. Used to support other libraries in this tool set. {{% sk-link-util page="overview" name="Utilities" %}} 
               </p>
               <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-success">Stable</span>
+              <span class="badge badge-warning">Internal use</span>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -219,7 +219,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
               <p>Library for serialization of a single object or a set of values. Handles custom use-cases, but may be replaced by <strong>Mocha</strong> {{% sk-link-util page="overview" name="Utilities" %}} 
               </p>
               <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-success">Stable</span>
+              <span class="badge badge-warning">Internal use</span>
             </div>
           </div>
       </div>

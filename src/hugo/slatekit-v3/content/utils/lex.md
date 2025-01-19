@@ -9,11 +9,11 @@
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.lex</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.lex</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Lexer.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Lexer.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,23 +41,16 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
+  
 // required 
-import slatekit.common.lex.Lexer
-import slatekit.common.lex.Token
-import slatekit.common.lex.TokenType
-
+import kiit.common.lex.Lexer
+import kiit.common.lex.Token
+import kiit.common.lex.TokenType
 
 // optional 
-import slatekit.cmds.Command
-import slatekit.cmds.CommandRequest
-import slatekit.results.Try
-import slatekit.results.Success
-
-
-
-
+import kiit.results.Try
+import kiit.results.Success
+  
 {{< /highlight >}}
 {{% break %}}
 

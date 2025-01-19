@@ -16,7 +16,7 @@ Also refer to the {{% sk-link-example file="Example_App.kt" name="Example_App.kt
 
 {{< highlight bash >}}
     
-    slatekit new app -name="SampleApp" -package="mycompany.apps"
+    kiit new app -name="SampleApp" -package="mycompany.apps"
     
 {{< /highlight >}}
 {{% sk-link-cli %}}

@@ -13,10 +13,10 @@ section_header: Overview
 # Goals
 <p>
   The {{% sk-name %}} framework was originally designed for and extracted from a sizable and sophisticated production Mobile Startup with a Server backend. 
-  {{% sk-name %}} is a **Kotlin first** framework architected with the explicit goals and purposes below in mind:
+  {{% sk-name %}} is a <strong>Kotlin first</strong> framework architected with the explicit goals and purposes below in mind:
 </p>
 <table class="table table-bordered table-striped">
-    <tr><td><img src="assets/media/img/white/module.png"     width="50" /><td><strong>Simple</strong></td><td>Designed with simplicity in mind, <strong>modular and very light-weight</strong>.</td></tr>
+    <tr><td><img src="assets/media/img/white/module.png"     width="50" /><td><strong>Light</strong></td><td>Designed with simplicity in mind, <strong>modular components that are light-weight</strong>.</td></tr>
     <tr><td><img src="assets/media/img/ext/kotlin.jpeg"      width="50" /><td><strong>Kotlin</strong></td><td><strong>100% Kotlin</strong>, emphasis on functional, immutable code (pragmatic: without pure FP, no category-theory)</td></tr>
     <tr><td><img src="assets/media/img/white/share.png"      width="50" /><td><strong>Shared</strong></td><td>Full-Stack for <strong>Android and Server</strong>, resonably light-weight and suitable for both.</td></tr>
     <tr><td><img src="assets/media/img/white/nodes.png"      width="50" /><td><strong>Platforms</strong></td><td>Long-term goals of making this support Kotlin <strong>Multi-Platform</strong> ( Javascript, iOS )</td></tr>

@@ -9,18 +9,18 @@
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.info</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.info</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
       <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
+      <td><strong>sources</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/info" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/info</a></td>
     </tr>
     <tr>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Folders.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Folders.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,21 +41,15 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
-// required 
-import slatekit.common.info.Folders
-
-
-// optional 
-import slatekit.results.Try
-import slatekit.results.Success
-import slatekit.cmds.Command
-import slatekit.cmds.CommandRequest
-
-
-
-
+  
+ // required 
+ import kiit.common.info.Folders
+ 
+ 
+ // optional 
+ import kiit.results.Try
+ import kiit.results.Success
+  
 {{< /highlight >}}
 {{% break %}}
 

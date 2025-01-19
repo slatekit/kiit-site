@@ -4,23 +4,23 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>Various utilities available in the Slate library</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.utils</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.utils</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
       <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
+      <td><strong>sources</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/utils" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/utils</a></td>
     </tr>
     <tr>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Utils.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Utils.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,28 +41,23 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
+  
 // required 
-import slatekit.common.utils.Require.requireOneOf
-import slatekit.common.utils.Require.requireText
-import slatekit.common.utils.Require.requireValidIndex
-
-
-
+import kiit.common.utils.Require.requireOneOf
+import kiit.common.utils.Require.requireText
+import kiit.common.utils.Require.requireValidIndex
+  
+  
 // optional 
-import slatekit.cmds.Command
-import slatekit.common.data.DbConString
-import slatekit.common.info.ApiKey
-import slatekit.common.info.ApiLogin
-import slatekit.cmds.CommandRequest
-import slatekit.common.io.Uris
-import slatekit.results.Try
-import slatekit.results.Success
-
-
-
-
+import kiit.cmds.Command
+import kiit.common.data.DbConString
+import kiit.common.info.ApiKey
+import kiit.common.info.ApiLogin
+import kiit.cmds.CommandRequest
+import kiit.common.io.Uris
+import kiit.results.Try
+import kiit.results.Success
+  
 {{< /highlight >}}
 {{% break %}}
 

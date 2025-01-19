@@ -4,16 +4,16 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>Models and abstracts a send that can represent either an HTTP send or a send from the CLI ( Command line ).</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.requests</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.requests</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Request.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Request.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,24 +41,19 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
+  
 // required 
 import slatekit.apis.Verbs
-import slatekit.common.requests.InputArgs
-import slatekit.common.requests.Request
-import slatekit.common.CommonRequest
-import slatekit.common.Source
+import kiit.common.requests.InputArgs
+import kiit.common.requests.Request
+import kiit.common.CommonRequest
+import kiit.common.Source
 
 
 // optional 
-import slatekit.cmds.Command
-import slatekit.cmds.CommandRequest
-import slatekit.common.utils.Random
-import slatekit.results.Try
-import slatekit.results.Success
-
-
+import kiit.common.utils.Random
+import kiit.results.Try
+import kiit.results.Success
 
 {{< /highlight >}}
 {{% break %}}

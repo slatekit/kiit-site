@@ -4,23 +4,23 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>A set of validation related components, simple validation checks, RegEx checks, error collection and custom validators</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.validation</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.validation</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
       <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
+      <td><strong>sources</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/validation" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/validation</a></td>
     </tr>
     <tr>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Validation.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Validation.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,41 +41,35 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
+  
 // required 
-import slatekit.common.validations.ValidationFuncsExt
+import kiit.common.validations.ValidationFuncsExt
 
 
 // optional 
-import slatekit.cmds.Command
-import slatekit.results.Try
-import slatekit.results.Success
-import slatekit.common.validations.ValidationFuncs.isEmpty
-import slatekit.common.validations.ValidationFuncs.isNotEmpty
-import slatekit.common.validations.ValidationFuncs.isLength
-import slatekit.common.validations.ValidationFuncs.isMinLength
-import slatekit.common.validations.ValidationFuncs.isMaxLength
-import slatekit.common.validations.ValidationFuncs.isMinValue
-import slatekit.common.validations.ValidationFuncs.isMaxValue
-import slatekit.common.validations.ValidationFuncs.hasDigits
-import slatekit.common.validations.ValidationFuncs.hasCharsLCase
-import slatekit.common.validations.ValidationFuncs.hasCharsUCase
-import slatekit.common.validations.ValidationFuncs.hasSymbols
-import slatekit.common.validations.ValidationFuncs.isAlpha
-import slatekit.common.validations.ValidationFuncs.isAlphaLowerCase
-import slatekit.common.validations.ValidationFuncs.isAlphaNumeric
-import slatekit.common.validations.ValidationFuncs.isAlphaUpperCase
-import slatekit.common.validations.ValidationFuncs.isEmail
-import slatekit.common.validations.ValidationFuncs.isNumeric
-import slatekit.common.validations.ValidationFuncs.isPhoneUS
-import slatekit.common.validations.ValidationFuncs.isUrl
-import slatekit.common.validations.ValidationFuncs.isZipCodeUS
-import slatekit.cmds.CommandRequest
-
-
-
-
+import kiit.results.Try
+import kiit.results.Success
+import kiit.common.validations.ValidationFuncs.isEmpty
+import kiit.common.validations.ValidationFuncs.isNotEmpty
+import kiit.common.validations.ValidationFuncs.isLength
+import kiit.common.validations.ValidationFuncs.isMinLength
+import kiit.common.validations.ValidationFuncs.isMaxLength
+import kiit.common.validations.ValidationFuncs.isMinValue
+import kiit.common.validations.ValidationFuncs.isMaxValue
+import kiit.common.validations.ValidationFuncs.hasDigits
+import kiit.common.validations.ValidationFuncs.hasCharsLCase
+import kiit.common.validations.ValidationFuncs.hasCharsUCase
+import kiit.common.validations.ValidationFuncs.hasSymbols
+import kiit.common.validations.ValidationFuncs.isAlpha
+import kiit.common.validations.ValidationFuncs.isAlphaLowerCase
+import kiit.common.validations.ValidationFuncs.isAlphaNumeric
+import kiit.common.validations.ValidationFuncs.isAlphaUpperCase
+import kiit.common.validations.ValidationFuncs.isEmail
+import kiit.common.validations.ValidationFuncs.isNumeric
+import kiit.common.validations.ValidationFuncs.isPhoneUS
+import kiit.common.validations.ValidationFuncs.isUrl
+import kiit.common.validations.ValidationFuncs.isZipCodeUS
+  
 {{< /highlight >}}
 {{% break %}}
 

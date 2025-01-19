@@ -4,23 +4,23 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>A micro template system for processing text with variables, useful for generating dynamic emails/messages.</td>
     </tr>
     <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.templates</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.templates</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
       <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
+      <td><strong>sources</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/templates" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/templates</a></td>
     </tr>
     <tr>
@@ -28,8 +28,8 @@
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Templates.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Templates.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
@@ -41,26 +41,19 @@
 
 ## Import
 {{< highlight kotlin >}}
-
-
+  
 // required 
-import slatekit.common.templates.Template
-import slatekit.common.templates.TemplateConstants
-import slatekit.common.templates.TemplatePart
-import slatekit.common.templates.Templates
-
+import kiit.common.templates.Template
+import kiit.common.templates.TemplateConstants
+import kiit.common.templates.TemplatePart
+import kiit.common.templates.Templates
 
 
 // optional 
-import slatekit.cmds.Command
-import slatekit.common.utils.Random
-import slatekit.cmds.CommandRequest
-import slatekit.results.Try
-import slatekit.results.getOrElse
-
-
-
-
+import kiit.common.utils.Random
+import kiit.results.Try
+import kiit.results.getOrElse
+  
 {{< /highlight >}}
 {{% break %}}
 
