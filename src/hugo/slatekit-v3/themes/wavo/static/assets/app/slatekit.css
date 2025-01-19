@@ -297,6 +297,12 @@ pre {
 .features .box h3 {
 	font-weight: 700;
 }
+.integration .box {
+	border-radius: 8px;
+}
+.integration .box h3 {
+	font-weight: 700;
+}
 /*
 table tr td  {
 	font-family: 'Open Sans', sans-serif;
