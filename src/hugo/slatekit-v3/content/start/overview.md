@@ -137,7 +137,7 @@ The architecture of the {{% sk-name %}} can be visualized in this high-level dia
 <div class="container">
     <div class="row">
         <div class="col-lg-10 flex">
-            <img src="assets/app/media/arch/slatekit-overview.png" class="rounded mx-auto d-block img-fluid" />
+            <img src="assets/app/media/arch/kiit-overview.png" class="rounded mx-auto d-block img-fluid" />
         </div>
     </div>
 </div>

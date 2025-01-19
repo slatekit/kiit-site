@@ -63,7 +63,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
                 See {{% sk-link-arch page="actors" name="Actors" %}} 
               </p>
               <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-danger">Danger!</span>
+              <span class="badge badge-danger">To be removed!</span>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -147,7 +147,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
                 See {{% sk-link-arch page="jobs" name="Jobs" %}} 
               </p>
               <span class="badge badge-light">Full Stack</span>
-              <span class="badge badge-success">Stable</span>
+              <span class="badge badge-primary">Beta</span>
             </div>
           </div>
           <div class="col-md-4 wow fadeInUp">
@@ -226,7 +226,7 @@ and scalable applications on the JVM. Several of the modules can be used for bot
   </div>
 </section>
 <br/><br/>
-<img src="assets/app/media/arch/slatekit-overview.png" class="rounded mx-auto d-block img-fluid" />
+<img src="assets/app/media/arch/kiit-overview.png" class="rounded mx-auto d-block img-fluid" />
 
 
 
