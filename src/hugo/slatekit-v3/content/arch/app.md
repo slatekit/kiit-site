@@ -4,6 +4,7 @@ date: 2019-03-17T14:30:51-04:00
 section_header: App
 ---
 <br/>
+
 # Overview {#overview}
 The Slate App is a base application and template to build console, batch, cli and server applications.
 It has pre-built support for common features such as **command line args, environment selection, configs per environment, logging, life-cycle events, help text, diagnostics** and much more.

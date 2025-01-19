@@ -143,7 +143,9 @@ There are also several sample applications available in git at {{% sk-link-src c
 There are various runnable application types you can create with {{% sk-name %}}. See the links below for more docs and guides on how to get started with them.
 <table class="table table-bordered table-striped">
     <tr>
-    <td class="text-center"><a href="/arch/app"><img src="assets/media/img/white/desktop.png" width="40" alt="" /></a></td>
+    <td class="text-center">
+        {{% sk-icon name="desktop" %}}
+    </td>
     <td><strong><a class="url-ch" href="/arch/app">App</a></strong></td>
     <td><img src="https://img.shields.io/badge/2.8.0-version-blue" /></td>
     <td><span class="badge badge-light">Server</span></td>
