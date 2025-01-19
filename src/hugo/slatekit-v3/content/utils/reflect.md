@@ -8,14 +8,6 @@
       <td>Reflection helper to create instances, get methods, fields, annotations and more</td>
     </tr>
     <tr>
-      <td><strong>date</strong></td>
-      <td>{{% sk-version-date %}}</td>
-    </tr>
-    <tr>
-      <td><strong>version</strong></td>
-      <td>{{% sk-version-number %}}</td>
-    </tr>
-    <tr>
       <td><strong>jar</strong></td>
       <td>slatekit.common.jar</td>
     </tr>

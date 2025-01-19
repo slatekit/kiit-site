@@ -8,14 +8,6 @@
       <td>Lexer for parsing text into tokens</td>
     </tr>
     <tr>
-      <td><strong>date</strong></td>
-      <td>{{% sk-version-date %}}</td>
-    </tr>
-    <tr>
-      <td><strong>version</strong></td>
-      <td>{{% sk-version-number %}}</td>
-    </tr>
-    <tr>
       <td><strong>jar</strong></td>
       <td>slatekit.common.jar</td>
     </tr>
@@ -25,7 +17,7 @@
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
-      <td>com.slatekit:slatekit-common</td>
+      <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
       <td><strong>source folder</strong></td>
@@ -44,20 +36,7 @@
 {{% break %}}
 
 ## Gradle
-{{< highlight gradle >}}
-    // other setup ...
-    repositories {
-        maven { url  "https://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other libraries
-
-        // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.35'
-    }
-
-{{< /highlight >}}
+{{% sk-install name="kiit-common" %}}
 {{% break %}}
 
 ## Import

@@ -8,14 +8,6 @@
       <td>Models success / failures with status codes, message, and other fields. Compatible with http status codes.</td>
     </tr>
     <tr>
-      <td><strong>date</strong></td>
-      <td>{{% sk-version-date %}}</td>
-    </tr>
-    <tr>
-      <td><strong>version</strong></td>
-      <td>{{% sk-version-number %}}</td>
-    </tr>
-    <tr>
       <td><strong>jar</strong></td>
       <td>slatekit.common.jar</td>
     </tr>
