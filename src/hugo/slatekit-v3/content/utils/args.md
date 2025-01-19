@@ -4,81 +4,54 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>A lexical command line argument parser with optional support for allowing a route/method call in the beginning</td>
     </tr>
     <tr>
-      <td><strong>date</strong></td>
-      <td>{{% sk-version-date %}}</td>
-    </tr>
-    <tr>
-      <td><strong>version</strong></td>
-      <td>{{% sk-version-number %}}</td>
-    </tr>
-    <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common.args</td>
+      <td><strong>package</strong></td>
+      <td>kiit.common.args</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
-      <td>com.slatekit:slatekit-common</td>
+      <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
-      <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/args" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common/args</a></td>
+      <td><strong>sources</strong></td>
+      <td><a href="https://github.com/slatekit/kiit/tree/main/src/common/common/src/main/kotlin/kiit/common/args" class="url-ch">src/common/common/src/main/kotlin/kiit/common/args</a></td>
     </tr>
     <tr>
       <td><strong>example</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_Args.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_Args.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td>kiit-results</td>
     </tr>
   </tbody>
 </table>
 {{% break %}}
 
 ## Gradle
-{{< highlight gradle >}}
-    // other setup ...
-    repositories {
-        maven { url  "https://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other libraries
-
-        // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.35'
-    }
-
-{{< /highlight >}}
+{{% sk-install name="kiit-common" %}}
 {{% break %}}
 
 ## Import
 {{< highlight kotlin >}}
-
-
-// required 
-import slatekit.common.args.Args
-import slatekit.common.args.ArgsSchema
-
-
-// optional 
-import slatekit.cmds.Command
-import slatekit.cmds.CommandRequest
-import slatekit.results.Success
-import slatekit.results.Try
-import slatekit.results.getOrElse
-
-
-
-
+  
+ // required 
+ import kiit.common.args.Args
+ import kiit.common.args.ArgsSchema
+ 
+ 
+ // optional 
+ import kiit.results.Success
+ import kiit.results.Try
+ import kiit.results.getOrElse
+  
 {{< /highlight >}}
 {{% break %}}
 

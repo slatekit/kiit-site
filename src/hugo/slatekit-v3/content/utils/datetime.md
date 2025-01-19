@@ -4,84 +4,51 @@
 <table class="table table-striped table-bordered">
   <tbody>
     <tr>
-      <td><strong>desc</strong></td>
+      <td><strong>summary</strong></td>
       <td>DataTime wrapper around Java 8 LocalDateTime providing a simplified interface, some convenience, extra features.</td>
     </tr>
-    <tr>
-      <td><strong>date</strong></td>
-      <td>{{% sk-version-date %}}</td>
-    </tr>
-    <tr>
-      <td><strong>version</strong></td>
-      <td>{{% sk-version-number %}}</td>
-    </tr>
-    <tr>
       <td><strong>jar</strong></td>
-      <td>slatekit.common.jar</td>
+      <td>kiit.common.jar</td>
     </tr>
     <tr>
-      <td><strong>namespace</strong></td>
-      <td>slatekit.common</td>
+      <td><strong>pacakge</strong></td>
+      <td>kiit.common</td>
     </tr>
     <tr>
       <td><strong>artifact</strong></td>
-      <td>com.slatekit:slatekit-common</td>
+      <td><a href="https://github.com/orgs/slatekit/packages?q=dev.kiit.kiit-common">dev.kiit:kiit-common</a></td>
     </tr>
     <tr>
-      <td><strong>source folder</strong></td>
-      <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common" class="url-ch">src/lib/kotlin/slatekit-common/src/main/kotlin/slatekit/common</a></td>
+      <td><strong>sources</strong></td>
+      <td><a href="https://github.com/slatekit/kiit/tree/main/src/common/common/src/main/kotlin/kiit/common" class="url-ch">src/common/common/src/main/kotlin/kiit/common</a></td>
     </tr>
     <tr>
       <td><strong>example</strong></td>
       <td><a href="https://github.com/slatekit/slatekit/tree/master/src/lib/kotlin/slatekit-examples/src/main/kotlin/slatekit/examples/Example_DateTime.kt" class="url-ch">src/lib/kotlin/slate-examples/src/main/kotlin/slatekit/examples/Example_DateTime.kt</a></td>
     </tr>
     <tr>
-      <td><strong>depends on</strong></td>
-      <td> slatekit-results</td>
+      <td><strong>dependency</strong></td>
+      <td> kiit-results</td>
     </tr>
   </tbody>
 </table>
 {{% break %}}
 
 ## Gradle
-{{< highlight gradle >}}
-    // other setup ...
-    repositories {
-        maven { url  "https://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other libraries
-
-        // slatekit-common: Utilities for Android or Server
-        compile 'com.slatekit:slatekit-common:0.9.35'
-    }
-
-{{< /highlight >}}
+{{% sk-install name="kiit-common" %}}
 {{% break %}}
 
 ## Import
 {{< highlight kotlin >}}
-
-
-// required 
-import slatekit.common.DateTime
-import slatekit.common.DateTimes
-
-
-
-// optional 
-import slatekit.cmds.Command
-import slatekit.results.Try
-import slatekit.results.Success
-//import java.time.ZoneId
-import org.threeten.bp.*
-import slatekit.common.ext.*
-import slatekit.cmds.CommandRequest
-
-
-
-
+  
+ // required 
+ import kiit.common.DateTime
+ import kiit.common.DateTimes
+ 
+ 
+ // optional 
+ import kiit.common.ext.*
+  
 {{< /highlight >}}
 {{% break %}}
 
