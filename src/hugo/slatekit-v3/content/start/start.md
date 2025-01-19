@@ -75,13 +75,26 @@ with support for :
 
 
 <table class="table table-bordered table-striped">
-
-        <tr><td><strong>args</strong></td><td>command line args ( -env=dev )</td></tr>
-        <tr><td><strong>envs</strong></td><td>environments ( local, dev, qat, uat, pro )</td></tr>
-        <tr><td><strong>confs</strong></td><td>configuration files ( per environment and inheritable from a base config )</td></tr>
-        <tr><td><strong>logs</strong></td><td>logging support ( using logback )</td></tr>
-        <tr><td><strong>help</strong></td><td>help usage and more</td></tr>
-
+    <tr>
+        <td><strong>args</strong></td>
+        <td>command line args ( -env=dev )</td>
+    </tr>
+    <tr>
+        <td><strong>envs</strong></td>
+        <td>environments ( local, dev, qat, uat, pro )</td>
+    </tr>
+    <tr>
+        <td><strong>confs</strong></td>
+        <td>configuration files ( per environment and inheritable from a base config )</td>
+    </tr>
+    <tr>
+        <td><strong>logs</strong></td>
+        <td>logging support ( using logback )</td>
+    </tr>
+    <tr>
+        <td><strong>help</strong></td>
+        <td>help usage and more</td>
+    </tr>
 </table>
 
  This is just 1 type of project you can create.
