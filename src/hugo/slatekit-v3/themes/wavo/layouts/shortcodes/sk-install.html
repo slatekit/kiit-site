@@ -1,0 +1,33 @@
+Use the following settings in gradle for installing this component.
+
+```gradle
+    
+    buildscript {
+        // Kotlin version currently being used
+        ext.kotlin_version = '1.8.22'
+
+        // Reference version 
+        ext.kiit_version = '3.1.0'
+
+        // ...
+    }
+
+    repositories {
+        // Currently stored in Git Hub Packages.
+        maven {
+            url "https://maven.pkg.github.com/slatekit/kiit"
+            credentials {
+                username = System.getenv('GIT_PACKAGES_INSTALL_ACTOR')
+                password = System.getenv('GIT_PACKAGES_INSTALL_TOKEN')
+            }
+        }
+
+        // ...
+    }
+
+    dependencies {
+        // Other dependencies ...
+        implementation "dev.kiit:{{.Get "name" }}:$kiit_version"
+    }
+    
+```

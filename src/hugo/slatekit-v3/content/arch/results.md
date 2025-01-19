@@ -101,30 +101,17 @@ This component is currently stable, has 0 dependencies and can be used for both 
 {{% section-end mod="arch/results" %}}
 
 # Install
-Use the following settings in gradle for installing this component.
-{{< highlight groovy >}}
+{{% sk-install name="kiit-results" %}}
 
-    repositories {
-        // other repositories
-        maven { url  "http://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other dependencies ...
-
-        compile 'com.slatekit:slatekit-result:1.0.0'
-    }
-
-{{< /highlight >}}
 {{% section-end mod="arch/results" %}}
 
 # Sources {#sources}
 {{% sk-module 
     name="Results"
     package="kiit.results"
-    jar="kiit.result.jar"
+    jar="kiit.results.jar"
     git="https://github.com/slatekit/kiit/tree/master/src/common/result/src/main/kotlin/kiit/results"
-    gitModule="kiit-result"
+    gitModule="kiit-results"
     url="arch/results"
     uses="0 Dependencies"
     bintray="kiit-results"

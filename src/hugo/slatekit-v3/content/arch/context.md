@@ -40,20 +40,8 @@ This component is currently stable, has default implementations, and can be used
 {{% section-end mod="arch/context" %}}
 
 # Install
-{{< highlight groovy >}}
+{{% sk-install name="kiit-context" %}}
 
-    repositories {
-        // other repositories
-        maven { url  "http://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other dependencies ...
-
-        compile 'com.slatekit:slatekit-common:1.0.0'
-    }
-
-{{< /highlight >}}
 
 {{% section-end mod="arch/context" %}}
 

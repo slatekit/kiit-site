@@ -80,20 +80,8 @@ This component is currently stable and uses JetBrains **Ktor** as the underlying
 {{% section-end mod="arch/apis" %}}
 
 # Install
-{{< highlight groovy >}}
+{{% sk-install name="kiit-apis" %}}
 
-    repositories {
-        // other repositories
-        maven { url  "http://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other dependencies ...
-
-        compile 'com.slatekit:slatekit-apis:1.0.0'
-    }
-
-{{< /highlight >}}
 {{% section-end mod="arch/apis" %}}
 
 # Sources {#sources}

@@ -46,20 +46,8 @@ A small future enhancement will add support for question and answer flow.
 {{% section-end mod="arch/cli" %}}
 
 # Install
-{{< highlight groovy >}}
+{{% sk-install name="kiit-cli" %}}
 
-    repositories {
-        // other repositories
-        maven { url  "http://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other dependencies ...
-
-        compile 'com.slatekit:slatekit-cli:1.0.0'
-    }
-
-{{< /highlight >}}
 {{% section-end mod="arch/cli" %}}
 
 # Sources {#sources}

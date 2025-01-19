@@ -74,21 +74,8 @@ This component is currently stable and there is a project generator for it.
 {{% section-end mod="arch/app" %}}
 
 # Install {#install}
-Use the following settings in gradle for installing this component.
-{{< highlight groovy >}}
+{{% sk-install name="kiit-app" %}}
 
-    repositories {
-        // other repositories
-        maven { url  "http://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other dependencies ...
-
-        compile 'com.slatekit:slatekit-app:1.0.0'
-    }
-
-{{< /highlight >}}
 {{% section-end mod="arch/app" %}}
 
 # Sources {#sources}

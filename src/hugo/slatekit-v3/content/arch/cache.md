@@ -66,20 +66,8 @@ This component is currently stable. Future versions will include support for:
 {{% break %}}
 
 # Install
-{{< highlight groovy >}}
+{{% sk-install name="kiit-cache" %}}
 
-    repositories {
-        // other repositories
-        maven { url  "http://dl.bintray.com/codehelixinc/slatekit" }
-    }
-
-    dependencies {
-        // other dependencies ...
-
-        compile 'com.slatekit:slatekit-cache:1.0.0'
-    }
-
-{{< /highlight >}}
 {{% section-end mod="arch/cache" %}}
 
 # Sources {#sources}
